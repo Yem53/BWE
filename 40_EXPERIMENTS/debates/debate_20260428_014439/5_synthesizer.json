@@ -1,0 +1,259 @@
+{
+  "summary": "Round 4 Synthesizer accepted 15 of 18 (83%) — heavy emphasis on the starved exit pipeline (X127-X133) plus 4 entries filling cross-channel and contrarian-sentiment gaps. Three revisions correct semantic defects: a static-state exit firing wrong-sided, an unsigned-funding new-listing entry, and a universal risk gate that would null-compose with R6 by construction. Zero rejections — Devil's possibly_fail flags are monitoring concerns, not logical defects, and let paper-shadow be the second filter per Round 3+ inclusive posture.",
+  "accepted_archetypes": [
+    {
+      "id": "X127",
+      "type": "exit",
+      "archetype": "x_funding_flip_oi_decay",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "funding_rate<=0",
+        "oi_change_pct<=-2"
+      ],
+      "expected_distinct": true,
+      "notes": "Exit when funding flips against position AND OI starts decaying — orthogonal microstructure trigger before price reverses.",
+      "synthesizer_note": "Devil flagged funding 8h cadence (slow flip rate) — accept anyway as paper-shadow signal; Quant ample (~2400), Risk acceptable. First exit kernel pairing funding sign-flip with OI decay."
+    },
+    {
+      "id": "X128",
+      "type": "exit",
+      "archetype": "x_top_trader_reversal_exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "top_trader_position_ratio_dec"
+      ],
+      "expected_distinct": true,
+      "notes": "Exit position when smart-money top-trader position ratio enters decline regime — leading indicator of impending reversal.",
+      "synthesizer_note": "5min snapshot lag acceptable for >10min holds; Risk requires verification _dec resolves via backward-rolling slope only — flag in monitor not blocker."
+    },
+    {
+      "id": "X129",
+      "type": "exit",
+      "archetype": "x_premium_collapse_be_lock",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "premium_bps<=5",
+        "premium_bps>=-5"
+      ],
+      "expected_distinct": true,
+      "notes": "Lock breakeven when premium_bps collapses to neutral band — premium decay signals exhaustion of the futures-spot spread driver.",
+      "synthesizer_note": "Devil+Quant flag possible degeneracy (modal range for liquid perps); accept-with-watch — if >30% of fires are <30s post-entry, retune band to ±2 bps in R5."
+    },
+    {
+      "id": "X130",
+      "type": "exit",
+      "archetype": "x_basis_neutral_quick",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "basis_rate>=-0.01",
+        "basis_rate<=0.01"
+      ],
+      "expected_distinct": true,
+      "notes": "Quick exit when basis_rate normalizes to ±1% band — basis convergence often precedes mean reversion in perp markets.",
+      "synthesizer_note": "Scale ambiguity (decimal vs bps) must be resolved at data-loader before scoring; accept for paper-shadow with first-100-fires distribution dump as Devil suggested."
+    },
+    {
+      "id": "X131",
+      "type": "exit",
+      "archetype": "x_volume_decay_trail_tighten",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "volume_pct_below_p25"
+      ],
+      "expected_distinct": true,
+      "notes": "Tighten trailing stop when volume drops below p25 — momentum exhaustion signal that classical trail kernels ignore.",
+      "synthesizer_note": "Cleanest of the exit batch — Devil seems_ok, Quant ample (~1250), Risk acceptable pending p25 backward-rolling verification."
+    },
+    {
+      "id": "X132",
+      "type": "exit",
+      "archetype": "x_taker_inversion_exit_long",
+      "channel": "*",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m<=0.45"
+      ],
+      "expected_distinct": true,
+      "notes": "Close long when 5m taker buy ratio inverts below 0.45 — aggressive sellers taking control of order flow.",
+      "synthesizer_note": "Devil flags risk of early-exit on profitable pullbacks; pair with breakeven kernels (not trail) — paper-shadow must compare vs counterfactual fixed-TP hold."
+    },
+    {
+      "id": "X133",
+      "type": "exit",
+      "archetype": "x_session_aware_widen_us",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "session=US",
+        "hour_utc>=14"
+      ],
+      "expected_distinct": true,
+      "notes": "Widen TP and tighten SL during US session — different volatility regime than Asian; static exits underperform across sessions.",
+      "synthesizer_note": "session=US already binds the upper hour bound (canonically ≤21 UTC); engine-side TP/SL multipliers must actually deviate from baseline for this kernel to differentiate."
+    },
+    {
+      "id": "E330",
+      "type": "entry",
+      "archetype": "e_neg_funding_oi_squeeze_long",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "oi_change_pct>=15",
+        "funding<=-0.04",
+        "premium_bps<=-15"
+      ],
+      "expected_distinct": true,
+      "notes": "Long when OI surges with deeply negative funding AND discount premium — classic short-squeeze setup with three orthogonal confirmations.",
+      "synthesizer_note": "Quant estimates ~18 triggers/30d (too_few) — accept-with-watch; Risk caution on live BWE_OI_Price_monitor pump-long overlap, paper-shadow must enforce one-position-per-symbol cap across research+live pools."
+    },
+    {
+      "id": "E331",
+      "type": "entry",
+      "archetype": "e_top_trader_contrarian_pump_short",
+      "channel": "pricechange",
+      "side": "short",
+      "novel_dim": [
+        "top_trader_position_ratio_high",
+        "event_type=pump",
+        "volume_pct_top_decile"
+      ],
+      "expected_distinct": true,
+      "notes": "Short pump events when top-trader ratio is already crowded long — fade smart-money exhaustion with volume confirmation.",
+      "synthesizer_note": "Cleanest entry of the batch — Devil seems_ok, Quant tight (~62 triggers, adequate), Risk acceptable; 5min top_trader staleness is a known cross-batch caveat."
+    },
+    {
+      "id": "E332",
+      "type": "entry",
+      "archetype": "e_basis_extreme_premium_short",
+      "channel": "OI_Price",
+      "side": "short",
+      "novel_dim": [
+        "basis_rate>=0.05",
+        "premium_extreme",
+        "oi_change_pct>=10"
+      ],
+      "expected_distinct": true,
+      "notes": "Short when basis blows out >5% AND premium extreme AND OI surging — classic perp overheating, mean reversion setup.",
+      "synthesizer_note": "Sample ~8 (too_few) and basis_rate scale ambiguity (5% vs 5bps) flagged; accept for option value — high-conviction overheating signature, retune threshold after first run if zero triggers."
+    },
+    {
+      "id": "E333",
+      "type": "entry",
+      "archetype": "e_global_short_squeeze_volume_long",
+      "channel": "Reserved6",
+      "side": "long",
+      "novel_dim": [
+        "global_short_ratio_extreme",
+        "volume_pct_top_decile",
+        "event_type=crash"
+      ],
+      "expected_distinct": true,
+      "notes": "Long Reserved6 crashes when global retail is extremely short AND volume is top-decile — squeeze fuel meets capitulation.",
+      "synthesizer_note": "Sample ~6 (too_few) but R6/long is empirically alive (E316-E327 lift +0.343); accept for high-EV thin sample, enforce 1-position-per-symbol cap due to concentration risk."
+    },
+    {
+      "id": "F122",
+      "type": "filter",
+      "archetype": "f_midcap_us_session_gate",
+      "channel": "*",
+      "side": "NA",
+      "novel_dim": [
+        "marketcap_bucket=mid",
+        "session=US",
+        "quote_volume_24h>=20000000"
+      ],
+      "expected_distinct": true,
+      "notes": "Gate trades to mid-cap symbols during US session with healthy volume — best signal-to-noise band per session-cap analysis.",
+      "synthesizer_note": "Clean accept — first joint session × marketcap × volume filter in 121 filters; Devil seems_ok, Quant ample (~735), Risk acceptable pending quote_volume_24h trailing-window verification."
+    },
+    {
+      "id": "F123",
+      "type": "filter",
+      "archetype": "f_low_liq_funding_abs_only",
+      "channel": "*",
+      "side": "NA",
+      "novel_dim": [
+        "liquidity_bucket=low",
+        "funding_abs_extreme",
+        "listing_age_days>=90"
+      ],
+      "expected_distinct": true,
+      "notes": "Only allow trades on low-liquidity symbols with funding extreme but excluding ultra-new listings — wild-but-not-untested universe.",
+      "synthesizer_note": "Slippage divergence is the main concern (Devil+Risk both flag); MANDATE realistic-fill paper-shadow with ≥25% edge haircut before any combo using F123 is promoted to live."
+    },
+    {
+      "id": "C063",
+      "type": "cross_channel",
+      "archetype": "cc_oi_pc_synced_30s_long",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "oi_change_pct>=10",
+        "event_type=pump",
+        "taker_buy_ratio_5m>=0.55"
+      ],
+      "expected_distinct": true,
+      "notes": "Trigger long only when OI_Price pump AND pricechange pump fire within 30s of each other AND taker flow confirms — synchronous multi-channel agreement.",
+      "synthesizer_note": "30s sync constraint is descriptive, not parser-enforced — effective archetype is single-channel oi+pump+taker; Risk flags HIGH live conflict with BWE_OI_Price_monitor pump-long bot, paper-shadow must model combined-exposure cap."
+    },
+    {
+      "id": "C064",
+      "type": "cross_channel",
+      "archetype": "cc_oi_then_r6_lowliq_short",
+      "channel": "Reserved6",
+      "side": "short",
+      "novel_dim": [
+        "oi_change_pct>=15",
+        "liquidity_bucket=low",
+        "global_long_ratio_high"
+      ],
+      "expected_distinct": true,
+      "notes": "Short Reserved6 events when OI_Price already flagged within 60s AND symbol is low-liquidity AND retail is leaning long — liquidation cascade setup.",
+      "synthesizer_note": "Sample ~16 (too_few), tautology (OI→R6 may be same event) + low-liq slippage concerns; accept-with-watch — verify OI→R6 gap >5s in historical alerts, mandate ≥30% slippage haircut for shorts."
+    }
+  ],
+  "revised_archetypes": [
+    {
+      "original_archetype_ref": "x_global_long_normalize_short",
+      "revised_archetype": "x_global_short_flip_exit_short",
+      "revision_reason": "Devil+Quant both flag wrong-sided semantics: original novel_dim 'global_long_ratio_high' encodes a static state, which means 'exit short while crowd is long' — that is the OPPOSITE of taking profit on squeeze relief (crowd-long is the squeeze fuel you want to hold the short for). Without a transition operator in the DSL, reframed to use global_short_ratio_high as the 'crowd has flipped' positive-exit signal.",
+      "revised_novel_dim": [
+        "global_short_ratio_high"
+      ],
+      "revised_notes": "Close short when global short ratio rises to high — crowd has flipped from long-extreme to short-leaning, indicating the squeeze played out and profit-taking is appropriate. Channel=*, side=short. Sentiment-flip exit, orthogonal to all 5 price/time exit kernels."
+    },
+    {
+      "original_archetype_ref": "e_new_listing_funding_extreme_long",
+      "revised_archetype": "e_new_listing_neg_funding_long",
+      "revision_reason": "Devil flags that funding_abs_extreme is unsigned and could fire on highly POSITIVE funding (bearish for long) — original conditions are direction-blind for a directional long entry. Added explicit funding<=0 gate to enforce sign-awareness; conjunction now requires funding to be both extreme magnitude AND on the favorable side for longs.",
+      "revised_novel_dim": [
+        "listing_age_days<=30",
+        "funding<=0",
+        "funding_abs_extreme",
+        "liquidity_bucket=mid"
+      ],
+      "revised_notes": "Long new listings (≤30d) when funding is negative AND at extreme magnitude AND liquidity is mid — early-stage volatility with absorbable size; sign-aware funding gate ensures the extreme is on the favorable side for longs. Channel=pricechange, side=long."
+    },
+    {
+      "original_archetype_ref": "r_inverse_volatility_size",
+      "revised_archetype": "r_chase_prevention_size",
+      "revision_reason": "Devil+Quant+Risk all flag that move_pct<=3 EXCLUDES Reserved6 (defined as 8-15%/180s extreme moves) by construction; if synthesizer composes this risk archetype with any R6 entry the result is a structurally null combo (zero triggers). day_change_pct cap of ±10 also kills most pricechange-channel pump events on small caps. Thresholds relaxed so that R6 boundary moves and pricechange small-cap pumps can still compose with this gate while still capping out-of-bounds chases.",
+      "revised_novel_dim": [
+        "move_pct<=8",
+        "day_change_pct<=20",
+        "day_change_pct>=-20"
+      ],
+      "revised_notes": "Skip entries when symbol already moved >8% on the current bar OR >20% on the day — chase-prevention to protect against late-stage continuation traps; thresholds relaxed from R3 spec so R6 (8-15%/180s) and pricechange small-cap pumps can still compose. Channel=*, side=NA."
+    }
+  ],
+  "rejected_archetypes": [],
+  "next_round_focus": "Round 5 should pivot from individual archetype generation to entry × exit COMPOSITION — most R4 accepted units (X127-X133, E330-E333, F122-F123, C063-C064) are individually sound but unproven jointly. Propose 4-6 best-of-batch entry × exit candidate combos (e.g. E331 contrarian-pump-short × X132 taker-inversion-exit; E333 R6/long × X127 funding-flip-OI-decay) plus 2-3 transition-aware exit kernels now that x_global_long_normalize_short proved static-state exits can be silently wrong-sided.",
+  "_role": "synthesizer",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 299.64
+}

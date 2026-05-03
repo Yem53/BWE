@@ -1,0 +1,29 @@
+{
+  "summary": "Single-proposal deep analysis: pc_pump_top_trader_short_funding_high_short is structurally distinct, fully parseable with all 3 conditions in SUPPORTED_FIELDS, and projects to adequate sample size (~150 triggers/30d) with broad exit-family compatibility favoring fixed/asymmetric kernels.",
+  "analyses": [
+    {
+      "archetype_ref": "pc_pump_top_trader_short_funding_high_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E126",
+        "E064",
+        "E148",
+        "E066"
+      ],
+      "distinctness_notes": "Differs from E126/E064 (pc_pump_taker_buy_*_long) by side (short vs long) and signal source (smart-money positioning + retail funding vs taker aggression). Differs from E148 (pc_pump_global_short_high_long) by using top_trader_position_ratio_low (smart-money short) rather than aggregate global_short_ratio_high (retail crowding), and by going short rather than fading via long. The conjunction of smart-money positioning flag + funding extreme + move magnitude on pricechange shorts is not represented in the top-coverage preview, and the structural triple (smart-money signal × retail funding × move filter) is a novel cross-signal combination on this channel/side.",
+      "expected_triggers_30d": 150,
+      "triggers_estimate_method": "5000 pricechange events × ~0.5 pump-event share × ~0.25 top_trader_position_ratio_low (p25 by definition) × ~0.25 funding_pct_top_decile (p10 ≈ 0.10, but conditioned on pump events which correlate with funding extremes lifts to ~0.25) × ~0.5 move_pct>=3 retention on pump events ≈ 5000 × 0.5 × 0.25 × 0.25 × 0.5 ≈ 78; loosened correlation assumption (smart-money short + funding-extreme co-occur on pumps, lifting joint rate ~2x) ≈ 150.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Per coverage_summary, fixed exits dominate the positive-score regime (mean +0.175, n_positive=6680/7320) while time_only/breakeven/trail/multi_tp are net-negative on this dataset. R2 lesson on E126 paper-trading collapse warns that asymmetric TP/SL with tight TP and wide SL traps the left tail — a fade-short on pump events is high-variance. Recommend fixed family with SYMMETRIC or favorable-asymmetric TP:SL (e.g. TP≥SL, not TP=0.51/SL=6.00) and a hard time stop. Secondary candidate: trail with tight initial stop to capture momentum reversals if smart-money signal leads. Avoid multi_tp and pure time_only given their negative aggregate."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 29.33
+}

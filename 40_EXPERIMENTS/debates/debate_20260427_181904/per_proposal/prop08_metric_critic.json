@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "r6_bigmove_simple_long",
+  "predicted_tp_pct": 0.6,
+  "predicted_sl_pct": 1.5,
+  "predicted_tp_sl_ratio": 0.4,
+  "predicted_win_rate": 0.58,
+  "predicted_mean_per_trade_pct": 0.2,
+  "predicted_kelly_pct": 7.0,
+  "trap_risk": "low",
+  "trap_reasoning": "Reserved6 is a sparse big-move channel (~120 baseline triggers) with a single loose filter (taker_buy_ratio_5m>=0.55). Unlike pricechange/pump entries that fire on overshoot tops and require SL=5-12×TP to avoid reversal stop-outs (the E126 trap geometry), R6 fires on regime-level liquidity/imbalance shifts where moves tend to be more directional and symmetric. With only one mild novel_dim, win rate should be modest (~55-62%) rather than the 80%+ that compresses TP and inflates SL. The GPU optimizer is likely to converge near TP≈0.5-0.7%, SL≈1.2-1.8% (ratio ~0.35-0.45), giving a positive expectancy of ~0.15-0.25% per trade after 8bps cost. The asymmetric trap requires extreme W (>75%) paired with TP/SL <0.2 — neither is likely here. Main risk is sample sparsity (low trig count → high variance in OOS p25), not asymmetric tail. Moderate uncertainty on the exact win rate, but trap geometry is unlikely.",
+  "recommended_constraint": "force SL ≤ 3 × TP_pct in variant grid (defensive against optimizer finding a wide-SL local optimum on sparse R6 sample)",
+  "metric_score_estimate": 6.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 26.4
+}

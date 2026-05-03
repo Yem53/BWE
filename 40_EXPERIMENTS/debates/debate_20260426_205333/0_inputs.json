@@ -1,0 +1,59 @@
+{
+  "run_id": "debate_20260426_205333",
+  "trigger": "smoke_dry_run",
+  "registry_summary": {
+    "total": 520,
+    "by_type": {
+      "entry": 200,
+      "exit": 100,
+      "filter": 120,
+      "risk": 40,
+      "cross_channel": 60
+    },
+    "entry_by_channel": {
+      "OI_Price": 60,
+      "pricechange": 60,
+      "Reserved6": 35,
+      "*": 45
+    },
+    "entry_by_side": {
+      "short": 93,
+      "long": 94,
+      "both": 13
+    }
+  },
+  "results_summary": {
+    "total": 0,
+    "note": "results.tsv missing"
+  },
+  "recent_experiments": [],
+  "existing_archetype_ids_sample": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020"
+  ],
+  "models": {
+    "generator": "claude-sonnet-4-6",
+    "devil": "claude-opus-4-7",
+    "quant": "claude-sonnet-4-6",
+    "risk": "claude-opus-4-7",
+    "synthesizer": "claude-opus-4-7"
+  }
+}

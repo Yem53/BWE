@@ -1,0 +1,18 @@
+{
+  "summary": "Symmetric 0.5%/0.5% fixed exit is a structurally sound and directly motivated correction to the E126 asymmetric tail trap; only minor cost-sensitivity and regime caveats worth monitoring.",
+  "critiques": [
+    {
+      "archetype_ref": "X101_fixed_symmetric_tight",
+      "verdict": "seems_ok",
+      "concerns": [
+        "At 0.5% TP, 8–16 bps round-trip cost consumes 16–32% of gross edge per win; with realistic 3–5s execution latency on BWE signals (which already move fast), achieved TP may slip below 0.5% net, compressing expectancy toward zero.",
+        "Tight 0.5% SL is highly sensitive to micro-noise on volatile alts — risk of being whipsawed out of trades that would have recovered, especially on Reserved6 (180s 8–15% extreme moves) where 0.5% noise bands are routinely violated within seconds even on the 'correct' direction.",
+        "Symmetric 1:1 implies break-even at 50% win rate; if true hit rate on BWE entries is in the 45–55% band (typical for momentum signals), expectancy is razor-thin and dominated by cost/slippage rather than the entry edge — risks being a flat-line archetype rather than a winner."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log net-of-cost expectancy separately from gross to confirm 0.5% TP survives 8–16 bps; (2) bucket results by channel — expect Reserved6 (extreme regime) to underperform vs pricechange/OI_Price due to noise-vs-SL ratio; (3) track win-rate dispersion across symbols to detect outlier dependence; (4) compare kelly_capped and p25_capped_tail against E126 baseline to confirm the asymmetric-trap fix actually translates to better left-tail behavior, not just different shape."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 22.26
+}

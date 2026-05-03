@@ -1,0 +1,137 @@
+{
+  "summary": "After 20,000 results, only 7 keeps survive — all from the `fixed` exit family (mean +0.175, max +0.395), while `multi_tp`, `trail`, `time_only`, and `breakeven` families produced ZERO positives. Top entries cluster tightly in pricechange/long with taker_buy/liquidity/funding signals (E126, E064, E148, E051, E066), with E126 reaching +0.395 but already flagged as a paper-shadow trap (asymmetric TP/SL). Reserved6 channel and short-side archetypes are systematically failing (low triggers ~120 or crashes), and the X100 composite_exit_be_partial_runner sweep just confirmed breakeven/runner kernels under-perform fixed across the board.",
+  "dominant_themes": [
+    {
+      "theme": "pricechange_long_taker_buy_extreme",
+      "evidence": "E126 pc_pump_taker_buy_extreme_long +0.395 (lift +0.475, trig 3443); E064 taker_buy_dominant_long +0.357; E066 crash_taker_buy_long +0.339 — taker_buy_ratio_5m as the discriminating field consistently outperforms naked pricechange",
+      "expansion_idea": "Generate finer thresholds around taker_buy_ratio_5m (0.55/0.60/0.65/0.70) crossed with pump_pct buckets, and try mirror short variants on taker_sell extremes to test asymmetry"
+    },
+    {
+      "theme": "pricechange_long_high_liquidity_funding",
+      "evidence": "E051 pc_high_liquidity_long +0.347 (lift +0.427, trig 2157); E148 pc_pump_global_short_high_long +0.350 (trig only 988 — selective)",
+      "expansion_idea": "Combine high_liquidity gating with taker_buy_ratio (theme 1) — selective AND that may push lift above +0.50 without saturating triggers"
+    },
+    {
+      "theme": "first_signal_immediacy_long",
+      "evidence": "E036/E038/E039/E040/E041 all best=+0.290 lift=+0.370 trig=5000 — saturated trigger ceiling, identical scores across 0s/30s/1m/3m windows suggests channel/side baseline rather than novel signal",
+      "expansion_idea": "Treat these as the pricechange/long BASELINE; Generator should require lift > +0.40 over this baseline and stop generating bare 'first_signal' variants"
+    },
+    {
+      "theme": "fixed_exit_dominance",
+      "evidence": "Exit family fixed: n=7320, mean +0.175, n_positive=6680, max +0.395 — ALL 7 keeps are fixed-kernel; multi_tp/trail/time_only/breakeven have 0 positives across 10,889 results",
+      "expansion_idea": "Generator should pair new entries with fixed exits as baseline and only propose alternative kernels when a specific entry-side hypothesis (e.g. mean-reversion → time_only) is testable"
+    }
+  ],
+  "underexplored_themes": [
+    {
+      "theme": "short_side_anywhere",
+      "evidence": "Short side has 94 entries in registry but recent runs show E058 short -0.081 (trig 1443), E065 taker_sell_short -0.101 (trig 118), E063 oi_falling_short -0.08 (saturated 5000 baseline) — no short variant in top-10",
+      "why_underexplored": "Short variants either crash on triggers (Reserved6 shorts) or collapse to channel baseline; no short pattern has cleared 0.0",
+      "exploration_idea": "Propose shorts conditioned on funding extremes (positive funding > 0.05% + pump > X%) and taker_sell_ratio thresholds — mirror of theme 1 but with mean-reversion rather than continuation logic"
+    },
+    {
+      "theme": "OI_Price_channel",
+      "evidence": "61 OI_Price entries registered but only E101 oi_pump_taker_buy_extreme_long (-0.083, trig 611) appears in recent runs; channel absent from top-10",
+      "why_underexplored": "Despite largest channel allocation, no OI_Price archetype in keeps — Generator has been pricechange-biased",
+      "exploration_idea": "Port the winning pricechange templates (taker_buy_extreme, high_liquidity, global_short_high) to OI_Price channel; OI bursts may have different optimal TP/SL than pc bursts"
+    },
+    {
+      "theme": "X101+_exit_side_archetypes",
+      "evidence": "Synthesizer R2 self-flagged: exit pipeline starved relative to entry; only X100 composite_exit_be_partial_runner sweep visible in recent runs and it produces -0.08 floor",
+      "why_underexplored": "Generator focused on entries; exit kernels untested on top entries (E126/E064/E051) beyond fixed default",
+      "exploration_idea": "Hold top-5 entries fixed and sweep exit archetypes: time_only with quick-cut at 30s/60s, trail with 0.5%/1%/1.5% step, multi_tp with 50/30/20% ladders to find non-fixed wins"
+    }
+  ],
+  "trap_warnings": [
+    {
+      "pattern": "asymmetric_TP_SL_high_winrate",
+      "evidence": "E126 backtest +0.3946 with TP=0.51% SL=6.00% (12:1 ratio, 80% winrate) compounded to -13.5% on $1000 paper — left-tail dominates compounded outcome",
+      "avoid_or_mitigate": "Generator must include kelly_capped and p25_capped_tail in objective; reject any keep where SL/TP > 4 even if mean score is positive"
+    },
+    {
+      "pattern": "trigger_saturation_at_5000",
+      "evidence": "E036-E041, E053-E057, E062-E063, E067-E068, E091-E100 all hit trig=5000 with identical score -0.08 — these are the channel/side baseline floor, not real signals",
+      "avoid_or_mitigate": "Generator should treat any archetype with trig=5000 AND score within ±0.005 of channel baseline as a duplicate; require novel_dim that demonstrably reduces triggers below 4500"
+    },
+    {
+      "pattern": "composite_exit_be_partial_runner_floor",
+      "evidence": "X100 across E052-E100 produces -0.08 floor regardless of entry; the breakeven+runner kernel converges to same SL=1.95-2.22 best params",
+      "avoid_or_mitigate": "Stop pairing X100 with new entries until exit-side hypothesis is sharper; use fixed exit as default exit_id"
+    }
+  ],
+  "crash_hotspots": [
+    {
+      "entry_id_or_pattern": "E060/E061 pc_crash_*_funding_*",
+      "n_crashes": 2,
+      "likely_cause": "Funding-extreme filter on pricechange/crash subset has near-zero events in validation window",
+      "fix_suggestion": "Loosen funding threshold (|funding| > 0.02% instead of 0.05%) or widen lookback to 30m"
+    },
+    {
+      "entry_id_or_pattern": "E069/E070 pc_pump_market_cap_*",
+      "n_crashes": 2,
+      "likely_cause": "market_cap field likely outside SUPPORTED_FIELDS or unavailable in pricechange channel scope",
+      "fix_suggestion": "Verify field availability; if unsupported, replace market_cap proxy with quote_volume_5m bucket"
+    },
+    {
+      "entry_id_or_pattern": "E083/E085 r6_pump_(low_liq_avoid|premium_extreme_short)",
+      "n_crashes": 2,
+      "likely_cause": "Reserved6 channel + tight pump-premium filter — Reserved6 events are sparse (~120 trig baseline) and AND'd filter falls below 30 events",
+      "fix_suggestion": "Drop one filter dimension; try pure r6_pump_long without premium AND/OR widen premium threshold to 50th-pct"
+    },
+    {
+      "entry_id_or_pattern": "Reserved6_all",
+      "n_crashes": ">=4 in this slice",
+      "likely_cause": "R6 channel only emits ~120 events in window; any extra filter starves it",
+      "fix_suggestion": "Reduce filter count to ≤1 novel_dim per R6 entry, OR aggregate R6 across longer windows (4h/8h)"
+    }
+  ],
+  "exit_family_observations": [
+    {
+      "family": "fixed",
+      "best_entry_partners": [
+        "E126",
+        "E064",
+        "E148",
+        "E051",
+        "E066"
+      ],
+      "score_range": "+0.34 to +0.395",
+      "observation": "Only family with positive keeps; mean +0.175, n_positive=6680/7320 — current default and all wins"
+    },
+    {
+      "family": "multi_tp",
+      "best_entry_partners": [],
+      "score_range": "-0.28 median to -0.094 max",
+      "observation": "Zero positives across 3111 runs; ladder partials erode edge — Generator should not blindly pair multi_tp with high-winrate entries"
+    },
+    {
+      "family": "trail",
+      "best_entry_partners": [],
+      "score_range": "-0.153 median to -0.006 max",
+      "observation": "Zero positives but max approaches 0; suggests trail step size is wrong, not concept dead — try wider trail (1.5%-2.5%) on E126/E064"
+    },
+    {
+      "family": "time_only",
+      "best_entry_partners": [],
+      "score_range": "-0.695 median to -0.113 max",
+      "observation": "Worst family — long holds bleed; only viable if paired with quick-revert mean-reversion entry, none such tested"
+    },
+    {
+      "family": "breakeven",
+      "best_entry_partners": [],
+      "score_range": "-0.080 median to -0.080 max",
+      "observation": "Tightly clustered floor at -0.08 — kernel is being triggered at channel baseline (X100 composite); needs a stricter BE-trigger threshold to differentiate"
+    }
+  ],
+  "guidance_for_generator": [
+    "Concentrate next batch on EXIT-side variants (X101-X130) holding top-5 entries (E126/E064/E148/E051/E066) fixed: trail 1.5%-2.5%, time_only 30s/60s/120s, multi_tp 60/40 and 50/30/20 ladders — exit pipeline is starved and 4/5 families have zero positives so any non-fixed positive is high-leverage information.",
+    "Mirror dominant pricechange/long themes onto OI_Price channel (61 entries registered, zero in top-10): port taker_buy_extreme, high_liquidity, global_short_high templates to OI bursts — this is the largest underexplored region.",
+    "Reject any new pricechange/long 'first_signal' or 'pump_btc_*' archetypes that saturate trig=5000 at -0.08 baseline; require novel_dim that reduces triggers below 4500 AND adds lift > +0.40 over baseline.",
+    "For Reserved6, drop to ≤1 novel_dim per archetype or extend windows to 4h+ — current R6 archetypes crash or floor at -0.10 due to ~120-event baseline; sparse channel cannot support multi-filter AND.",
+    "Build short-side hypothesis explicitly: pair funding>0.05% + pump>X% with taker_sell_ratio and mean-reversion exits (time_only 30-60s) — current shorts collapse to channel baseline because they reuse continuation logic that only works for longs.",
+    "Hard-gate any new keep on kelly_capped and p25_capped_tail (not legacy p25 mean) and reject SL/TP > 4 to avoid the E126 asymmetric-TP/SL paper-shadow trap."
+  ],
+  "_role": "pattern_miner",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 79.56
+}

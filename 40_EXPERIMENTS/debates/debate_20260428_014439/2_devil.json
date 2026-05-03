@@ -1,0 +1,156 @@
+{
+  "summary": "Round 4 generator delivers solid orthogonal coverage especially for the starved exit pipeline, but several proposals carry concrete concerns around metric cadence (funding 8h, top_trader 5m), scale notation ambiguity (basis_rate / funding decimals), state-vs-transition mismatches, and at least one direct conflict with Reserved6 channel semantics — none are hard logical defects, all worth paper-shadow monitoring.",
+  "critiques": [
+    {
+      "archetype_ref": "x_funding_flip_oi_decay",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Binance perp funding settles every 8h and intra-period funding_rate moves slowly; for typical BWE event hold times (minutes to a few hours), 'flip' will rarely trigger except near settlement, drastically reducing the exit's sampling rate.",
+        "novel_dim is symmetric (channel='*', side='both') but funding-against-position semantics requires knowing position side — verify the engine resolves side correctly before applying."
+      ],
+      "monitoring_advice": "In paper-shadow, log the time from entry to first funding-flip+OI-decay co-occurrence; if median lag > position median hold time, the exit is effectively dead-letter."
+    },
+    {
+      "archetype_ref": "x_top_trader_reversal_exit",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "top_trader_position_ratio is published on Binance as ~5min snapshots; for trades shorter than 5–10min the regime tag will lag the price action it is supposed to lead.",
+        "'_dec' regime is undefined in novel_dim (slope window? threshold?) — risk of silent fall-through to baseline if SUPPORTED_FIELDS doesn't include the decline regime flag."
+      ],
+      "monitoring_advice": "Track exit-trigger latency vs position MFE; flag if >50% of triggers fire after price has already moved >0.5% adverse."
+    },
+    {
+      "archetype_ref": "x_premium_collapse_be_lock",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "premium_bps in [-5, +5] is a tight band that many liquid perps occupy continuously — the BE lock could trigger at or near entry, collapsing into 'immediate BE' equivalent to a degenerate fixed exit."
+      ],
+      "monitoring_advice": "Measure fraction of positions where premium_collapse fires within the first 30s post-entry; if >30%, this kernel is degenerate."
+    },
+    {
+      "archetype_ref": "x_basis_neutral_quick",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "basis_rate band [-0.01, +0.01] interpreted as ±1% is an order of magnitude wider than typical Binance perp basis (usually <0.1% absolute outside extremes); under that interpretation the quick exit is effectively always-on at entry.",
+        "If the field is in raw decimal (0.01 = 1%) vs basis-points-as-decimal, the trigger semantics flip — confirm scale before counting this as a real exit."
+      ],
+      "monitoring_advice": "On first 100 paper-shadow fires, dump basis_rate distribution at entry; if >70% already sit inside ±1% the kernel is degenerate and should be retuned to ±0.1%."
+    },
+    {
+      "archetype_ref": "x_volume_decay_trail_tighten",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Standard trail-tightening monitoring: confirm tightened stops do not increase whipsaw rate disproportionately versus baseline trail."
+    },
+    {
+      "archetype_ref": "x_taker_inversion_exit_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "taker_buy_ratio_5m frequently dips below 0.45 during normal uptrend pullbacks (intra-trend noise) — risks early-exit on profitable trades, especially on Reserved6 long crashes where post-flush taker flow is naturally seller-heavy briefly before squeeze."
+      ],
+      "monitoring_advice": "In paper-shadow, compare exit P&L vs counterfactual hold-to-fixed-TP; if the taker-inversion exit consistently caps gains short of TP, classify as too-tight."
+    },
+    {
+      "archetype_ref": "x_session_aware_widen_us",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Condition hour_utc>=14 is unbounded above and will keep matching through 23:59 UTC into the Asia overlap; US session is canonically ~14:00–21:00 UTC.",
+        "'Widen TP and tighten SL' simultaneously is internally consistent but doesn't specify magnitudes — without parameter binding the kernel may not differ from the static baseline."
+      ],
+      "monitoring_advice": "Add an upper hour_utc bound (<22) and verify TP/SL multipliers actually deviate from the non-US baseline in the run logs."
+    },
+    {
+      "archetype_ref": "x_global_long_normalize_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "The notes describe a transition ('fades from extreme to merely high') but novel_dim only encodes a static state ('global_long_ratio_high'); without a from→to comparator the trigger is just 'high', not 'normalizing'.",
+        "Static high state on a short position is the wrong-side condition for taking profit — should likely be exiting on transition AWAY from extreme, not on the high state itself."
+      ],
+      "monitoring_advice": "Confirm the engine resolves a transition predicate from the current state field; if not, this kernel reduces to 'always exit shorts when crowd is long', which is semantically backwards."
+    },
+    {
+      "archetype_ref": "e_neg_funding_oi_squeeze_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "funding<=-0.04 is ambiguous in scale: as decimal funding_rate (-4% per 8h) it is essentially never observed on Binance (cap is around ±0.75%/8h); as basis-points-as-decimal (-4 bps) it is mildly negative and very common — the conjunction's selectivity changes by orders of magnitude depending on interpretation.",
+        "Triple-condition conjunction (oi>=15%, funding extreme, premium discount) is genuine signal but historically produces tiny sample (single-digit triggers/30d) — may starve the GPU loop."
+      ],
+      "monitoring_advice": "Before promoting, dump the trigger count over the 30-day window; if <50 events, paper-shadow won't have power."
+    },
+    {
+      "archetype_ref": "e_top_trader_contrarian_pump_short",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Same top_trader 5min snapshot caveat as x_top_trader_reversal_exit — note the staleness when interpreting 'crowded long' at event time."
+    },
+    {
+      "archetype_ref": "e_basis_extreme_premium_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "basis_rate>=0.05 has the same scale ambiguity as x_basis_neutral_quick; if interpreted as 5% basis, the trigger is essentially never observed on Binance; if 0.05% (5bps), it is routine and not 'extreme'.",
+        "premium_extreme + basis_rate are highly correlated dimensions — the conjunction may not add real orthogonality beyond the existing premium_extreme entries."
+      ],
+      "monitoring_advice": "Reconcile basis_rate scale with the data loader; rerun trigger counts after fix."
+    },
+    {
+      "archetype_ref": "e_new_listing_funding_extreme_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "funding_abs_extreme is unsigned but the entry is directional long; for longs the favorable funding state is deeply negative, so an unsigned absolute condition would also fire on extremely positive funding (bearish for longs) — potential wrong-side firing.",
+        "Listing_age<=30d on Binance often coincides with margin/leverage caps and thin liquidity; even valid signals may be unfeasible in real $1000 sizing."
+      ],
+      "monitoring_advice": "Constrain to funding<=-X (sign-aware) OR add a cross-check that fires only when funding sign is favorable for the position side."
+    },
+    {
+      "archetype_ref": "e_global_short_squeeze_volume_long",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "R6 long is empirically alive (E316–E327 show best=+0.202, lift=+0.343 at trig=120) so the contrarian R6-long premise is supported; just monitor sample size when adding the global_short_ratio_extreme + top-decile-volume joint gate, which will narrow events significantly."
+    },
+    {
+      "archetype_ref": "f_midcap_us_session_gate",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Filter is conservative — track residual trigger count after gating; if it drops below ~30 events/30d, the resulting strategies will lack power."
+    },
+    {
+      "archetype_ref": "f_low_liq_funding_abs_only",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "liquidity_bucket=low + funding_abs_extreme is exactly the regime where backtest fills diverge most sharply from real fills (slippage, partial fills, taker-only at adverse premium); kernel-level metrics may look attractive while live P&L erodes 30–80%.",
+        "funding_abs_extreme is again unsigned and used here as a generic filter — fine for filter use, but downstream entries must apply sign-awareness."
+      ],
+      "monitoring_advice": "Mandatory paper-shadow comparison of in-bar fill price vs assumed mid-price for any combo gated by this filter; reject if shadow slippage >25% of expected edge."
+    },
+    {
+      "archetype_ref": "r_inverse_volatility_size",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "The risk gate caps move_pct<=3 and |day_change_pct|<=10, but Reserved6 is defined as 180s 8–15% extreme moves — applied as a universal risk filter this archetype EXCLUDES the entire R6 channel by construction, which conflicts with R6 entries the same generator batch is producing.",
+        "Day-change cap of ±10% will also eliminate most pricechange-channel pump events on small caps (where 10%+ daily moves are routine), starving the pricechange-long pipeline."
+      ],
+      "monitoring_advice": "Either restrict the risk archetype's channel scope to OI_Price/pricechange (excluding R6) or relax thresholds (move_pct<=8, day_change<=20) before letting the synthesizer compose with R6 entries."
+    },
+    {
+      "archetype_ref": "cc_oi_pc_synced_30s_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Timing window is 30s but the gate field taker_buy_ratio_5m is computed over a 5-minute lookback; ~9/10 of that window is pre-event data, so the gate measures pre-burst flow rather than the synchronous burst itself — likely diluted signal.",
+        "Sub-30s OI/pricechange synchronization is rare on the 30-day dataset; expect <100 triggers and verify before scoring."
+      ],
+      "monitoring_advice": "Replace taker_buy_ratio_5m with taker_buy_ratio_1m (if SUPPORTED) or accept that this kernel is gated by stale flow data."
+    },
+    {
+      "archetype_ref": "cc_oi_then_r6_lowliq_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "OI_Price alerts often auto-precede Reserved6 alerts on the same symbol because OI thresholds are easier to breach than the 8–15%/180s R6 trigger — the 'sequential confirmation' may be tautological detection of a single underlying event rather than two independent signals.",
+        "Adding low-liquidity gate to short entries amplifies execution risk: fills on low-liq shorts during cascade liquidations are notoriously bad; kernel may look great in backtest but lose 30%+ to slippage in paper-shadow."
+      ],
+      "monitoring_advice": "Validate that the OI_Price→R6 gap is >5s on the historical alerts; if median gap <2s the 'cross-channel' label is misleading. Also enforce strict slippage modeling for low-liq shorts."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 189.85
+}

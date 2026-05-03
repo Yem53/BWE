@@ -1,0 +1,26 @@
+{
+  "summary": "Proposal is structurally distinct and parseable but conditions are well-supported individually; cross-channel triple-alignment combined with narrow funding-neutral band makes triggers tight to too_few — recommend pairing with fixed exit family.",
+  "analyses": [
+    {
+      "archetype_ref": "cc_three_signal_funding_neutral_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "existing cc_* archetypes (60 cross_channel)"
+      ],
+      "distinctness_notes": "No existing cross_channel archetype conditions on a funding-neutral band (|funding|<=0.0001) AND requires taker_buy_ratio_5m>=0.60 AND liquidity_bucket=high simultaneously. The funding-neutral band is a novel filter dimension for cross-channel — most cc archetypes either ignore funding or use funding extremes. Combined with taker-buy dominance and high-liquidity gating, this carves out a distinct slice: aligned three-channel signal in a non-crowded funding regime with active aggressive-buy flow on liquid names. The 'avoid crowded-trade trap' thesis is structurally novel vs the existing 60 cc archetypes.",
+      "expected_triggers_30d": 60,
+      "triggers_estimate_method": "Cross-channel '*' with three-signal alignment baseline ~ min(OI_Price, pricechange, Reserved6) overlap ≈ 800 candidate alignment events × funding-neutral band (|funding|<=0.0001 is a tight ~p25-p40 window ≈ 0.20 retention) × taker_buy_ratio_5m>=0.60 (≈ 0.30 retention, top ~30% of taker imbalance) × liquidity_bucket=high (≈ 0.40 retention) × long-only (no further cut, side filter) = 800 × 0.20 × 0.30 × 0.40 ≈ 19. However, if 'three-signal' is interpreted as any-channel-with-confirmation rather than strict triple-overlap, baseline rises to ~3000 confirm-events × 0.20 × 0.30 × 0.40 ≈ 72. Conservative midpoint: ~60.",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 4,
+      "n_total_conditions": 4,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Given funding-neutral + aggressive taker buy + high liquidity long thesis, the move is expected to be momentum-continuation but without funding-driven squeeze fuel — implies modest, mean-reverting-prone targets. Coverage shows fixed is the ONLY exit family with positive mean (0.175) and 6680/7320 positive runs; multi_tp/trail/time_only/breakeven all negative across 20K results. Strongly recommend fixed exit with conservative TP (0.6-1.2%) and tight SL (0.8-1.5%) symmetric to avoid the E126 asymmetric-TP/SL trap. Avoid time_only and multi_tp entirely. Breakeven could be a secondary candidate for protecting the small expected edge but historical data shows it underperforms fixed."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 31.83
+}

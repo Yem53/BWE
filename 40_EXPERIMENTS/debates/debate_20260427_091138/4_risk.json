@@ -1,0 +1,92 @@
+{
+  "summary": "Moderate-to-high research-integrity risk: three proposals reference percentile/historical-rank fields whose point-in-time computation is unverified (textbook look-ahead leak risk), and four proposals overlap directly with the live BWE_OI_Price_monitor pump long universe — same-side concurrent positions on the same triggers will inflate effective leverage at $1000 capital × 5–10% sizing.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "pc_pump_oversold_bounce_taker_long",
+      "leakage_risk": "low",
+      "leakage_notes": "day_change_pct, event_type, and taker_buy_ratio_5m are all observable at T0; no forward-looking suffixes. Confirm day_change_pct is computed as (price_T0/price_at_session_open - 1) and not (price_T0/price_session_close - 1) where 'session_close' could be future-leaking.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "Same-side long pump on pricechange channel as the live BWE_OI_Price_monitor pump long; the day_change<=-5 gate selects a disjoint slice (already-down assets) so triggers should rarely overlap, but when they do they double-stack same-direction risk on one symbol.",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "acceptable",
+      "remediation": "Add a runtime guard that rejects entry if the live pump-long strategy already holds a position in the same symbol; verify day_change_pct definition is point-in-time."
+    },
+    {
+      "archetype_ref": "oi_pump_new_listing_taker_long",
+      "leakage_risk": "high",
+      "leakage_notes": "listing_age_days is suspect on two grounds: (a) Quant flagged it as absent from SUPPORTED_FIELDS so the condition silently falls through, meaning the archetype label misrepresents the actual filter — that is a research-integrity failure even if not technically leakage; (b) if the field IS later added, its values may be backfilled after symbol renames/re-listings and effectively encode post-T0 corporate actions. Survivorship bias compounds this: the historical 'new listing' cohort is conditioned on having survived to dataset assembly date.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "With listing_age_days inoperative the archetype collapses to oi_change>=15 + taker>=0.55 long, which is the live BWE_OI_Price_monitor pump long's exact universe — every trigger will be a redundant same-side stack on the live strategy, not orthogonal exposure.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "block",
+      "remediation": "(1) Verify listing_age_days is in SUPPORTED_FIELDS and populated point-in-time before considering registration; (2) confirm the field is not backfilled across symbol renames; (3) require a delisting-aware backtest universe to neutralize survivorship; (4) add explicit non-overlap guard with the live pump long. Until all four are satisfied, do not register."
+    },
+    {
+      "archetype_ref": "pc_pump_short_squeeze_oi_long",
+      "leakage_risk": "medium",
+      "leakage_notes": "global_short_ratio_high is a percentile/threshold flag — the percentile baseline must be computed on a strictly trailing window ending before T0. Devil's Advocate raised this concern and it is unresolved; if the percentile is fit on the full 30-day backtest window, the threshold itself encodes future information. Same concern applies if oi_change_pct>=10 is normalized cross-sectionally using future bars.",
+      "multitest_inflation_risk": "high",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "Long pump with OI growth on pricechange channel overlaps materially with live BWE_OI_Price_monitor pump long; squeeze setups will fire on the same symbols the live strategy targets, doubling exposure during the highest-volatility periods (squeeze cascades) when slippage is worst.",
+      "concentration_risk": "high",
+      "adversarial_risk": "medium",
+      "overall_severity": "caution",
+      "remediation": "Tag for deep-eval gate with explicit checks: (a) global_short_ratio_high baseline computed on trailing window only; (b) regime-segmented forward returns (verify edge survives outside any single squeeze cluster of 2–3 days); (c) live-strategy non-overlap guard."
+    },
+    {
+      "archetype_ref": "pc_pump_funding_negative_squeeze_long",
+      "leakage_risk": "medium",
+      "leakage_notes": "Funding rate is published in 8-hour intervals on most venues; if the dataset stores funding as the next-fixed value rather than the last-known-at-T0 value, funding<=-0.005 at trigger time secretly references a setting determined after T0 — classic temporal misalignment. Verify the field is the trailing realized funding, not the upcoming/scheduled funding.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "Long pump on pricechange channel overlaps with live BWE_OI_Price_monitor pump long universe; funding<=-0.005 narrows the slice but does not remove same-symbol same-side concurrency risk.",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "Confirm funding field semantics: must be last-realized-at-T0, not next-scheduled. Tag for deep-eval gate with explicit funding-staleness check (max age of funding observation at T0 reported in metadata)."
+    },
+    {
+      "archetype_ref": "oi_pump_premium_discount_long",
+      "leakage_risk": "low",
+      "leakage_notes": "premium_bps and oi_change_pct are spot/perp basis observables at T0 if computed from synchronized snapshots; verify the spot leg used to compute premium_bps comes from a venue and timestamp aligned with the perp T0, not a delayed reference price.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "high",
+      "live_conflict_notes": "OI_Price channel + oi_change_pct>=15 + long is structurally identical universe to live BWE_OI_Price_monitor pump long, with premium_bps<=-10 as the only narrowing gate. Whenever it fires, it fires on the live strategy's exact symbol-direction — same-side stacked exposure. At ~39 triggers/30d this is rare but each firing maximally concentrates with live capital.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "medium",
+      "overall_severity": "caution",
+      "remediation": "Hard gate: the runtime must skip entry if the live BWE_OI_Price_monitor pump long is already positioned in the same symbol at T0. Verify spot/perp timestamp alignment for premium_bps."
+    },
+    {
+      "archetype_ref": "pc_pump_small_cap_volume_surge_long",
+      "leakage_risk": "high",
+      "leakage_notes": "marketcap_bucket and volume_pct_top_decile are both cross-asset percentile-rank fields. Two distinct integrity hazards: (1) Quant flagged both as absent from SUPPORTED_FIELDS — the archetype label promises size/liquidity-burst conditioning but actually delivers plain pump+taker, so the registry record is misleading and any 'edge' attributed to the archetype mis-credits the wrong signal; (2) if added later, percentile rank fields are notorious leakage vectors — must be computed on trailing data only, never on the full backtest window.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "With novel dims inoperative collapses to event_type=pump + taker>=0.55 long on pricechange — the live BWE_OI_Price_monitor pump long universe; at ~1800 triggers/30d this would constantly stack same-side with live.",
+      "concentration_risk": "high",
+      "adversarial_risk": "high",
+      "overall_severity": "block",
+      "remediation": "Do not register: (a) verify marketcap_bucket and volume_pct_top_decile are in SUPPORTED_FIELDS AND computed strictly point-in-time on trailing data; (b) require realistic per-symbol spread cost (small-caps typically 30–80bps round-trip vs 8–16bps assumed); (c) live-strategy non-overlap guard. Adversarial: small-cap pump events are the canonical wash-trade venue — strategy can be intentionally triggered by manipulators if rule logic becomes inferable from order placements."
+    },
+    {
+      "archetype_ref": "pc_pump_oi_historically_extreme_long",
+      "leakage_risk": "high",
+      "leakage_notes": "oi_pct_top_decile is a per-asset historical OI percentile and is the single most leakage-prone field type in the proposal set. If the percentile is computed using the full 30-day dataset (rather than a strictly trailing window ending before T0), every trigger silently knows the asset's future-relative OI ranking. Quant also flagged the field as absent from SUPPORTED_FIELDS, meaning the archetype currently collapses to E051-equivalent — registering it would attribute future edge to a signal that is not actually being measured.",
+      "multitest_inflation_risk": "high",
+      "live_conflict_risk": "high",
+      "live_conflict_notes": "event_type=pump + taker + liquidity_bucket=high is exactly the live BWE_OI_Price_monitor pump long's high-quality slice; with oi_pct_top_decile inoperative this is functionally a near-duplicate that would fire on the live strategy's primary trigger universe ~1100 times in 30d, stacking same-side exposure constantly.",
+      "concentration_risk": "high",
+      "adversarial_risk": "medium",
+      "overall_severity": "block",
+      "remediation": "Do not register until: (a) oi_pct_top_decile is confirmed in SUPPORTED_FIELDS AND computed on a strictly trailing rolling window (e.g., trailing 60d excluding current bar); (b) regime-segmented forward returns show positive edge in BOTH uptrend and downtrend regimes (top-decile OI in downtrend is exhaustion, not squeeze setup); (c) explicit non-overlap guard with live pump long; (d) field name carries an explicit point-in-time suffix to make the trailing-window contract auditable."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 61.92
+}

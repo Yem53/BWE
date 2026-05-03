@@ -1,0 +1,6 @@
+role,model,elapsed_s,error
+generator,claude-sonnet-4-6,111.27,
+devil,claude-opus-4-7,73.65,
+quant,claude-sonnet-4-6,160.35,
+risk,claude-opus-4-7,61.92,
+synthesizer,claude-opus-4-7,64.27,no JSON in assistant text

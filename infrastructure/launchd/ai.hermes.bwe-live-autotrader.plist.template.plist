@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>ai.hermes.bwe-live-autotrader</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/ye/.hermes/scripts/run_bwe_live_autotrader_binance_expectancy.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/ye/.hermes/scripts</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/ye/.hermes/runtime-venv/bin:/Users/ye/.local/bin:/Users/ye/.bun/bin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>VIRTUAL_ENV</key>
+        <string>/Users/ye/.hermes/runtime-venv</string>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/ye/.hermes/research/bwe_live_autotrader_binance_expectancy_runtime/logs/autotrader.launchd.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/ye/.hermes/research/bwe_live_autotrader_binance_expectancy_runtime/logs/autotrader.launchd.error.log</string>
+</dict>
+</plist>

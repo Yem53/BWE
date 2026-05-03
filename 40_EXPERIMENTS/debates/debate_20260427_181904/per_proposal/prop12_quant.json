@@ -1,0 +1,29 @@
+{
+  "summary": "basis_curvature_pump_short is a structurally novel pricechange/short fade archetype with all three novel_dim conditions parseable; expected sample is tight but viable, and the asymmetric-tail lessons from R2 favor fixed/breakeven exits over multi_tp/trail/time_only.",
+  "analyses": [
+    {
+      "archetype_ref": "basis_curvature_pump_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E126",
+        "E064",
+        "E148",
+        "E051"
+      ],
+      "distinctness_notes": "Top pricechange/long winners key off taker_buy and global_short_ratio; this is short-side and conditions on a joint basis_rate × premium_bps dislocation plus a magnitude floor (move_pct>=3). No existing archetype in the preview combines basis_rate with premium_bps as a curvature gauge, and short-side pricechange archetypes are under-represented (only ~94 short total across all channels).",
+      "expected_triggers_30d": 120,
+      "triggers_estimate_method": "5000 pricechange events × ~0.40 pump-side (move_pct>=3 captures bulk of pricechange triggers which are by construction large moves) × ~0.20 basis_rate>=0.001 (moderate-to-extreme positive basis) × ~0.30 premium_bps>=20 conditional on positive basis (correlated, so not independent multiplicative) ≈ 120/30d. Conservative given correlation between basis_rate and premium_bps.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Dislocation-fade shorts on pump bursts revert quickly when basis snaps back; favor fixed (the only exit family with positive mean +0.175 across 7320 results) or breakeven for asymmetric tail control. Avoid multi_tp/trail/time_only — all three showed negative means in the coverage summary, and R2's E126 paper-trade trap (TP=0.51/SL=6.00 compounded to -13.5%) warns against asymmetric TP/SL on this kind of mean-reversion thesis. Recommend tight symmetric TP/SL grid with hard_stop."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.9
+}

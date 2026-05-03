@@ -1,0 +1,21 @@
+{
+  "archetype_ref": "r6_bigmove_simple_long",
+  "best_case_thesis": "Reserved6 is a sparse, high-signal channel where prior R3 multi-filter ANDs collapsed trigger counts to statistical noise — the explicit pattern_miner diagnostic shows this is an architectural mismatch, not a parameter problem. Adding a single taker_buy_ratio_5m>=0.55 filter on top of R6's already-selective base preserves the ~120-trigger sample while gating on aggressive-buyer dominance, the one microstructure dimension that has consistently topped Round 1–3 leaderboards (E126, E064, E066 all keyed on taker-buy extremes). This is the minimum-viable surgical correction: keep R6's intrinsic edge, layer one orthogonal confirmation, ship.",
+  "expected_alpha_source": "R6's sparse trigger pattern likely tags large-actor accumulation events; conditioning on 5m taker-buy dominance isolates the subset where retail/aggressive flow joins the move, producing a short-window momentum ignition with asymmetric upside.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-volatility trending regimes with active spot-perp basis activity, where aggressive taker flow precedes continuation rather than mean-reversion exhaustion.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E066",
+    "E051"
+  ],
+  "if_paper_works_likely_reason": "The single-filter design preserves enough triggers for the fixed-TP/SL kernel to harvest the right tail without the asymmetric TP/SL trap that killed E126's paper-shadow performance, and taker-buy confirmation filters out the noisy R6 triggers that previously caused crashes.",
+  "could_compound_with": "Any other R6 single-filter siblings in this batch (different novel_dim choices on Reserved6/long) — together they'd form a diversified R6 entry cluster that validates the 'sparse channel needs ≤1 filter' architectural thesis rather than betting it all on one feature.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 23.37
+}

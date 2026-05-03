@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "r_kelly_safe_size_filter",
+  "predicted_tp_pct": 0.6,
+  "predicted_sl_pct": 1.2,
+  "predicted_tp_sl_ratio": 0.5,
+  "predicted_win_rate": 0.58,
+  "predicted_mean_per_trade_pct": 0.0,
+  "predicted_kelly_pct": 2.0,
+  "trap_risk": "low",
+  "trap_reasoning": "This is a RISK archetype (sizing gate), not an entry — it does not itself dictate TP/SL geometry. The novel_dim (liquidity_bucket=high AND taker_buy_ratio_5m>=0.60) acts as an AND-gate that only allows full size when both confirmation signals fire. Because it is channel-agnostic (*) and side-agnostic (both), the underlying entries it gates will span the whole population, so the realized TP/SL will be the weighted average of the entries it admits. Empirically the fixed exit family in this run shows mean +0.175 and median +0.217 with 91% positive rate, so a sizing filter that further demands two confirmations (high liquidity + taker_buy ≥0.60) should bias toward symmetric-geometry winners (TP≈0.6, SL≈1.2 is typical for fixed exits in this regime) rather than the E126-style 0.51/6.00 asymmetric trap, since taker_buy_ratio≥0.60 already implies directional conviction with smaller required SL buffer. Trap risk is LOW because: (1) high-liquidity bucket reduces slippage/wick noise that forces wide SL, (2) taker_buy confirmation reduces fakeout rate, lifting win rate without needing a giant SL cushion, (3) as a RISK archetype its score is computed on size-adjusted PnL not raw, so even if a trap geometry slips through, kelly-cap and mean_net_pct will down-weight it. Main uncertainty: triggers will be much sparser (both AND conditions must fire), so n_trades may drop below the 200-trade significance floor, producing a noisy mean_net_pct estimate rather than a true trap.",
+  "recommended_constraint": "force SL ≤ 2 × TP_pct in variant grid AND require n_trades ≥ 200 for kelly_capped to be non-zero",
+  "metric_score_estimate": 3.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 33.73
+}

@@ -1,0 +1,106 @@
+# ==========================================================================
+# BWE .gitignore — keep repo lean (~1-3 GB) for fast Windows clone
+# ==========================================================================
+
+# === Sensitive (NEVER commit) ===
+*.env
+*.env.local
+.env
+.envrc
+secrets.env
+**/secrets/
+*credentials*
+*api_key*
+*api_secret*
+**/.aws/
+*.pem
+*.key
+id_rsa*
+*_rsa
+*_dsa
+*_ed25519
+
+# === Huge data dirs (regenerable from collectors) ===
+30_DATA/cache/
+30_DATA/reference/
+30_DATA/binance_collectors_runtime/
+30_DATA/bwe_logs/
+40_EXPERIMENTS/all_runs_archive/
+40_EXPERIMENTS/round*/runs/
+40_EXPERIMENTS/round*/stage*/
+40_EXPERIMENTS/round*/sweep*/
+40_EXPERIMENTS/round*/grid*/
+40_EXPERIMENTS/round*/paper_shadow/runtime*/
+40_EXPERIMENTS/round*/debates/
+
+# === DB files (live / mutable) ===
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*.db
+*.db-shm
+*.db-wal
+
+# === Logs / runtime state ===
+*.log
+**/logs/
+*.pid
+*.lock
+*.crash
+**/runtime/
+**/runtime_*/
+
+# === macOS exFAT AppleDouble metadata ===
+._*
+.DS_Store
+**/._*
+
+# === Backup / temp ===
+*.bak
+*.bak.*
+*.disabled
+*.disabled.*
+**/backup_*/
+**/_backup_*/
+*.tmp
+*.swp
+*~
+.DS_Store
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# === Obsidian per-machine state ===
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/cache/
+
+# === Claude Code per-machine ===
+.claude/scheduled_tasks.lock
+.claude/settings.local.json
+.claude_memory_shared/MEMORY.md.bak*
+
+# === Codex 大数据 (research output, regenerable) ===
+BWE_codex/codex_discovery/
+BWE_codex/paper_test/v6_multi_8/runtime/
+BWE_codex/paper_test/v6_multi_8/runtime/strict_replay_*/
+
+# === Windows-only / Mac-only ===
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# === Large analytics output ===
+50_ANALYSIS_REPORTS/*/data/
+50_ANALYSIS_REPORTS/*/raw/
+**/*.parquet
+**/*.h5
+**/*.npz
+
+# === Allow specific essential markdown / configs even if large path matches ===
+!.gitkeep
+!**/README.md
+!**/CLAUDE.md
+!**/AGENTS.md

@@ -1,0 +1,19 @@
+{
+  "summary": "Proposal is a sensible AND-stack of three independently-validated R2 winners; main risk is trigger sparsity from triple intersection eroding sample size and lift, plus correlation between taker_buy and high_liquidity reducing the marginal information of stacking.",
+  "critiques": [
+    {
+      "archetype_ref": "pc_pump_taker_buy_high_liq_global_short_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Trigger sparsity risk: E126 (taker_buy_extreme) had 3443 trig and E148 (global_short_high) had only 988 trig — the AND of all three components likely drops below ~300-500 triggers on 30 days, which is borderline for statistical reliability and makes the lift estimate sensitive to a handful of outlier symbols.",
+        "Component correlation: taker_buy_ratio_5m>=0.65 and liquidity_bucket=high are likely positively correlated during pump conditions on pricechange channel — stacking correlated conditions yields less marginal lift than a naive sum of individual lifts would suggest, so the +0.50 target from pattern_miner may be optimistic.",
+        "Asymmetric TP/SL trap reminder from R2 lesson: even if backtest p25/best score looks strong, this needs to be evaluated under the new mean/kelly_capped/p25_capped_tail metrics to avoid recreating the E126 -13.5% paper compounding outcome — a higher-selectivity entry doesn't fix a bad exit kernel.",
+        "global_short_ratio_high semantics: this is a regime/sentiment field that may be slow-moving and exhibit autocorrelation across nearby T0s, inflating apparent trigger count while delivering correlated (not independent) trades — risks overstating sample size."
+      ],
+      "monitoring_advice": "During paper-shadow track: (1) actual trigger count vs. predicted ~300-500 — if <200 flag as too sparse; (2) per-symbol concentration — if top 3 symbols account for >50% of triggers, lift is fragile; (3) overlap rate with E126/E051/E148 individually — if >80% of this archetype's fires also trigger one of the parents, marginal value is negligible; (4) evaluate ONLY with mean / kelly_capped / p25_capped_tail metrics, never legacy p25 alone; (5) cost stress test at 16bps round-trip to confirm edge survives."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.61
+}

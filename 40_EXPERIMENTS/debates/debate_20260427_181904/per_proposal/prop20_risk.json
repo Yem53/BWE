@@ -1,0 +1,20 @@
+{
+  "summary": "Single risk-archetype proposal r_kelly_safe_size_filter is research-integrity clean: novel_dim fields are T0-anchored (liquidity_bucket and trailing 5m taker_buy_ratio), and as a sizing gate at $1000 capital it carries no realistic concentration, leakage, or live-conflict blockers.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "r_kelly_safe_size_filter",
+      "leakage_risk": "none",
+      "leakage_notes": "Both novel_dim fields (liquidity_bucket=high, taker_buy_ratio_5m>=0.60) are computed from data available at-or-before T0: liquidity_bucket is a static/slow regime label, and taker_buy_ratio_5m is a trailing 5-minute window ending at T0. No forward_*, confirm_after_*, or post_event_* fields referenced. Caveat: implementation must ensure taker_buy_ratio_5m uses the [T0-5m, T0] window, not [T0, T0+5m] — name is unambiguous but worth a code-review check.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Risk-type archetype acts as a SIZING gate, not a directional entry — it only attenuates positions, so it cannot create opposite-side trades that conflict with the live BWE_OI_Price_monitor pump-long strategy. At worst it suppresses some entries the live system would also take, which is a coverage question for paper-shadow, not a research-integrity blocker.",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "acceptable",
+      "remediation": "None required for research integrity. Recommended (non-blocking) sanity checks at implementation time: (1) assert taker_buy_ratio_5m window is strictly trailing relative to T0; (2) confirm liquidity_bucket label is computed from a snapshot dated <= T0 (not a forward-looking liquidity regime); (3) during paper-shadow, log how often this gate fires alongside the live pump-long strategy to quantify coverage overlap."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.83
+}

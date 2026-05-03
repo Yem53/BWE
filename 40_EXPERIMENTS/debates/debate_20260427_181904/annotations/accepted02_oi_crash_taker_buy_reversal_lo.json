@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "oi_crash_taker_buy_reversal_long",
+  "expected_trades_per_day": 2.8,
+  "expected_trades_per_day_basis": "Synthesizer notes ~85 triggers in the ~30-day backtest window (85/30≈2.8); tight filter (OI -8% AND taker_buy>=0.60 AND high-liquidity) keeps frequency low vs E126's ~115/day.",
+  "regime_sensitivity": {
+    "best_in": [
+      "High-funding overheated shorts being squeezed (negative funding swing within 1h)",
+      "BTC-led recovery sessions where alts rebound after a coordinated OI flush",
+      "Asia/EU session opens where OI unwinds resolve into short-covers within 5-15m"
+    ],
+    "worst_in": [
+      "Strong sustained downtrends where OI -8% is just continuation selling (not capitulation)",
+      "Low-volatility chop where taker_buy_ratio>=0.60 is noise, not real bid",
+      "BTC dump regimes — alt rebounds get cut short by index drag"
+    ],
+    "explanation": "This is a counter-trend reversal entry on the OI_Price channel, which the registry shows is biased short — going long here only pays when the OI crash IS the capitulation, not the start. Taker buy dominance during OI reduction is the short-squeeze signature, so it works best when shorts are already crowded and fails when sellers still have ammo."
+  },
+  "live_readiness_caveats": [
+    "Counter-trend geometry: a single missed SL in a true continuation crash will erase 5-10 winners — execution latency >3s on entry will materially worsen fills since reversals snap fast",
+    "High-liquidity bucket filter helps slippage but concentrates trades in BTC/ETH/SOL/major alts where OI -8% is rarer and often news-driven — expect bursty distribution (0 trades for 2 days, then 4 in one hour)",
+    "OI data freshness matters: if the OI feed lags >30s the -8% threshold will fire AFTER the squeeze has already played out, killing edge"
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "live_win_rate_vs_backtest",
+      "alert_threshold": "drop >15pp below backtest win-rate within first 20 trades",
+      "rationale": "Reversal entries are fragile — win-rate is the first thing that breaks when the regime no longer supports short-squeezes"
+    },
+    {
+      "metric": "median_time_to_TP_vs_SL",
+      "alert_threshold": "if median time-to-SL < median time-to-TP, kill",
+      "rationale": "Healthy reversals resolve fast on the winning side; if losses come faster than wins, you're catching falling knives not squeezes"
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">=4 in a row",
+      "rationale": "Counter-trend strategies cluster losses in trending regimes; 4+ streak is the canary that the macro regime flipped against the setup"
+    },
+    {
+      "metric": "slippage_bps_on_entry",
+      "alert_threshold": ">15 bps avg over 10 trades",
+      "rationale": "OI crash + taker buy = thin book moment; slippage directly eats the tight TP this archetype needs (forced SL<=1.5x TP per synthesizer)"
+    },
+    {
+      "metric": "trades_per_day_actual_vs_2.8",
+      "alert_threshold": "<1.0 or >6.0 sustained for 3 days",
+      "rationale": "Far below predicts filter is too tight in current regime (no signal); far above means OI threshold is firing on a regime shift (overfit risk)"
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling expectancy turns negative AND BTC 7-day return < -5%",
+      "rationale": "Confirms the long-reversal thesis is broken in a sustained bear regime — this is exactly the regime an OI_Price short-biased channel exists for"
+    },
+    {
+      "condition": "3 consecutive trades hit full SL with zero TP touch",
+      "rationale": "Indicates OI -8% is signaling continuation not capitulation; the short-squeeze geometry has inverted and the edge is gone"
+    },
+    {
+      "condition": "Live mean trade % stays below 50% of backtest mean for 30+ trades",
+      "rationale": "E126 paper-shadow lesson: backtest score can compound to negative on small accounts — sustained underperformance vs backtest = the asymmetric tail (left side) is realizing live and the legacy metric was hiding it"
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 7.5,
+  "expected_max_dd_basis": "With ~2.8 trades/day × 30 days × 5-10% sizing and synthesizer-forced SL<=1.5x TP, a 4-loss streak (plausible on counter-trend) at 1.5x SL = ~6% account DD, padded to 7.5% for slippage and clustering during BTC drawdown days.",
+  "compare_to_existing": "E066 pc_crash_taker_buy_long (best=+0.339, trig=3684) — same crash+taker-buy reversal logic but on the pricechange channel with no OI gate; E204 should behave like a tighter, lower-frequency, higher-conviction sibling. Triangulate: if E066 is alive in paper-shadow and E204 underperforms it on per-trade mean, the OI gate is not adding edge and E204 should be retired.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 44.47
+}

@@ -1,0 +1,22 @@
+{
+  "archetype_ref": "pc_pump_taker_buy_high_liq_global_short_long",
+  "best_case_thesis": "This proposal targets a textbook short-squeeze ignition pattern: aggressive taker buying (taker_buy_ratio≥0.65) provides the proximate buy-side pressure, high liquidity bucket ensures the move is occurring on a venue where real size can transact (filtering away thin-book noise traps), and elevated global_short_ratio identifies the structural fuel — a crowded short cohort whose stops and forced liquidations become the next buyers. The triple-AND is not redundant stacking; each leg measures a distinct layer of the order book (immediate flow, market depth, positioning), so their intersection isolates the rare moment when all three squeeze preconditions co-occur.",
+  "expected_alpha_source": "Short-squeeze cascade ignition: aggressive taker flow into a crowded-short, deep-liquidity venue triggers stop-runs and liquidation feedback loops that mechanically extend the move beyond what raw momentum would predict.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Most effective in a recovering or sideways-to-up regime where bears have built persistent short positioning (negative funding skew, elevated global_short_ratio) and a sudden taker-buy surge can detonate accumulated stops.",
+  "complementary_exit_families": [
+    "fixed",
+    "multi_tp"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E051",
+    "E148",
+    "E064"
+  ],
+  "if_paper_works_likely_reason": "The triple intersection will fire rarely (low trig count) but on each fire it will catch the genuine squeeze ignition window where TP gets hit fast and the asymmetric TP/SL trap that killed E126 in paper does not have time to materialize.",
+  "could_compound_with": "Any exit-side proposal targeting fast-TP-on-cascade (e.g. tight fixed TP with short time-stop), since this entry's edge is concentrated in the first minutes of the squeeze rather than in sustained trend.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.66
+}

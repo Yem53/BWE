@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "r6_pump_high_liq_only_long",
+  "predicted_tp_pct": 0.45,
+  "predicted_sl_pct": 2.2,
+  "predicted_tp_sl_ratio": 0.205,
+  "predicted_win_rate": 0.72,
+  "predicted_mean_per_trade_pct": -0.014,
+  "predicted_kelly_pct": 0.0,
+  "trap_risk": "medium",
+  "trap_reasoning": "Reserved6 channel is a pump-style signal (analogous to pricechange pump archetypes like E126), and the only filter is liquidity_bucket=high — a single sparse-channel safety gate that does NOT constrain the directional thesis or post-entry volatility. High-liquidity pump entries on R6 have historically crashed in the existing R6 grid (per the proposal's own rationale: '2+ filters and crash'), suggesting GPU optimizer will face the same TP/SL asymmetry pressure as E126: pumps overshoot, so the optimizer is incentivized to widen SL to capture the high win-rate region while keeping TP tight. Predicted TP≈0.45%, SL≈2.2% (ratio 0.20), win≈72%. Expected per-trade = 0.72×0.45 − 0.28×2.2 − 0.08 = 0.324 − 0.616 − 0.08 = −0.37%... recomputing more carefully with cost in bps (0.08%): 0.324 − 0.616 − 0.08 = −0.372%. Slight negative expectancy → Kelly capped at 0. However uncertainty is high: a single high-liquidity gate could meaningfully tighten SL geometry (liquid markets mean revert faster), so true SL may land closer to 1.5×TP. Recommending a TP/SL ratio constraint is the safest hedge — it converts a likely trap into a structurally honest test of the sparse-channel hypothesis.",
+  "recommended_constraint": "force SL ≤ 2.5 × TP_pct in variant grid; also require min_trigger_count ≥ 200 to avoid R6 sparsity false-positives",
+  "metric_score_estimate": 1.2,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 23.53
+}

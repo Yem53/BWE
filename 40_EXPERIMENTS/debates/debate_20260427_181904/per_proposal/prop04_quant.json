@@ -1,0 +1,29 @@
+{
+  "summary": "Strong, fully parseable triple-AND of three R2 top-10 components; sample size adequate at the conservative end and structurally distinct from any single-component existing archetype.",
+  "analyses": [
+    {
+      "archetype_ref": "pc_pump_taker_buy_high_liq_global_short_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E126",
+        "E064",
+        "E051",
+        "E148"
+      ],
+      "distinctness_notes": "E126 is taker_buy_extreme alone, E064 is taker_buy_dominant alone, E051 is high_liquidity alone, E148 is global_short_high alone — all on pricechange/long. This proposal is the first triple intersection of taker_buy_ratio_5m>=0.65 ∧ liquidity_bucket=high ∧ global_short_ratio_high, materially narrower than any single-component archetype and not equivalent to any pairwise combo in registry.",
+      "expected_triggers_30d": 150,
+      "triggers_estimate_method": "5000 pricechange events × ~0.50 pump bias on long side baseline ≈ 2500 long-eligible. Apply taker_buy_ratio_5m>=0.65 cut (~0.40 of pump-side, by analogy to E126 trig=3443 / E064 trig=3619 representing looser thresholds; 0.65 is stricter, ~0.30 retained) ≈ 750. Apply liquidity_bucket=high (~0.40 of universe per E051 trig=2157/5000) → ~300. Apply global_short_ratio_high (p75 flag, ~0.25 of remaining, weakly correlated with the others) → ~75–150. Take upper end given mild positive correlation between taker-buy aggression and short-skew sentiment → 150.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Coverage summary shows fixed dominates positive scores (6680/7320 positive, max 0.395) while multi_tp/trail/time_only/breakeven are entirely non-positive in this dataset. A selective high-conviction long entry like this should pair best with fixed (tight TP, modest SL to avoid the asymmetric TP/SL trap flagged in R2 E126 paper-sim) and secondarily breakeven for tail protection. Recommend GPU sweep prioritize fixed family with TP/SL ratios that survive kelly_capped and p25_capped_tail metrics rather than legacy p25."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 29.61
+}

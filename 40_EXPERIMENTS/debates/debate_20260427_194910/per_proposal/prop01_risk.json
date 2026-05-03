@@ -1,0 +1,20 @@
+{
+  "summary": "X102_fixed_15x_balanced is a pure exit-kernel parameter (TP=1.0%, SL=1.5%) with no integrity, leakage, or sandbox concerns; only mild multi-test inflation in the fixed-exit family deserves note.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "X102_fixed_15x_balanced",
+      "leakage_risk": "none",
+      "leakage_notes": "novel_dim is purely post-T0 exit parameters (tp_pct, sl_pct) executed forward from entry; no future-snooping fields like forward_*, confirm_after_*, or post_event_* are referenced. Exit kernels by construction operate on prices after T0 within the trade horizon, which is legitimate, not leakage.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_notes": "Pure exit kernel; combined with any entry archetype it inherits that entry's side. Could overlap with the user's live BWE_OI_Price_monitor pump-long if paired with a long entry on the same symbol within the same window, but this is a paper-shadow monitoring concern, not an integrity blocker. Per Round 3+ posture, downgrade to caution-level monitoring rather than block.",
+      "live_conflict_risk": "low",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "acceptable",
+      "remediation": "None required. Optional monitoring: (1) when this exit is paired with a long entry on a symbol already held by the live BWE_OI_Price_monitor pump-long bot, log the overlap in paper-shadow rather than auto-promoting; (2) track family-wise FDR across the fixed-exit grid (now ~7320 combos) and report kelly_capped / p25_capped_tail alongside mean to keep the asymmetric-TP/SL trap (E126 lesson) from re-emerging at the 1.5x ratio."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 22.91
+}

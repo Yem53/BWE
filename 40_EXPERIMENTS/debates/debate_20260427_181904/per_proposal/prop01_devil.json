@@ -1,0 +1,19 @@
+{
+  "summary": "Single-proposal deep review: OI-channel port of E148 squeeze-fuel logic looks logically clean and worth testing, but trigger sparsity and channel-mapping assumptions warrant paper-shadow monitoring.",
+  "critiques": [
+    {
+      "archetype_ref": "oi_pump_global_short_high_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Trigger sparsity risk: source archetype E148 only fired 988 times on pricechange channel; porting to OI_Price with an additional oi_change_pct>=12 gate (stricter than typical OI burst thresholds) plus liquidity_bucket=high plus global_short_ratio_high is a 3-way conjunction that may drop trig count below statistical-significance threshold (~200-300 events) over the 30-day window.",
+        "Channel semantics mismatch: E148's edge on pricechange channel exploits squeeze fuel AT the moment of price-driven momentum; OI_Price channel fires on OI bursts which can occur WITHOUT immediate price movement (accumulation regime). Squeeze-fuel hypothesis assumes shorts are underwater — on a quiet OI burst with flat price, shorts are NOT yet pressured, so the squeeze-fuel mechanism may not transmit cleanly.",
+        "global_short_ratio staleness: global_short_ratio is typically published at 5min/15min cadence by exchanges. On an OI_Price T0 trigger, the most recent global_short_ratio reading could be up to ~5min old, meaning 'high' may already reflect post-squeeze positioning rather than pre-squeeze fuel. Worth verifying the field's update frequency in the feature store.",
+        "Cost sensitivity at high liquidity_bucket: filtering to high liquidity reduces slippage but also concentrates picks on majors (BTC/ETH/SOL) where 8-16bps round-trip is a larger fraction of typical OI-burst move magnitude than on mid-caps; net edge after costs may compress more than the lift_vs_median suggests."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log trig count daily and abort if <100 fires in first 7 days; (2) bucket fills by time-since-last-global_short_ratio-update and check if edge survives only on fresh (<60s) readings; (3) compare per-symbol concentration vs E148 — if >40% of fires come from <3 symbols, treat as overfit to recent squeeze episodes; (4) track left-tail (p25_capped_tail, kelly_capped) alongside mean to avoid the asymmetric TP/SL trap from R2's E126 lesson."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.79
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Proposal is structurally novel (weekday gate, unused in 121 existing filters) and fully computable, but multi-value OR semantics on a single field is non-standard for the parser and the trigger reduction (~5/7) yields a weak baseline-equivalent cut.",
+  "analyses": [
+    {
+      "archetype_ref": "weekday_weekend_avoid_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [],
+      "distinctness_notes": "No existing archetype slug uses `weekday` as a regime gate; 121 filters exist but none reference weekday per registry. Time-of-week is an orthogonal axis to liquidity/funding/taker-ratio dimensions already covered. Slug says `_long` but side=both — minor inconsistency, but archetype is structurally distinct.",
+      "expected_triggers_30d": 5000,
+      "triggers_estimate_method": "Total cross-channel events ~7200/30d (1400 OI + 5000 pc + 800 R6). Weekday cut keeps 5/7 of days = ~5143. Side=both, channel=* preserves all. Estimate ~5000 triggers.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [
+        "weekday=Mon (multi-value OR not standard — parser likely AND-conjuncts these into impossible 'weekday=Mon AND weekday=Tue AND...' = zero matches, OR uses last value only)"
+      ],
+      "n_supported_conditions": 5,
+      "n_total_conditions": 5,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Time-regime gate is exit-agnostic. Pairs best with `fixed` (only positive-mean family in coverage: mean=0.175, n_positive=6680/7320). Avoid time_only (mean=-0.73) and multi_tp (mean=-0.28). Caveat: filter is so loose it nearly equals channel=*/side=both baseline, so exit choice will dominate the score signal."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 30.95
+}

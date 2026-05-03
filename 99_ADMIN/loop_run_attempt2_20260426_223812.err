@@ -1,0 +1,6 @@
+object address  : 0000012677DF0700
+object refcount : 3
+object type     : 00007FFBF6B342B0
+object type name: OSError
+object repr     : OSError(9, '句柄无效。', None, 6, None)
+lost sys.stderr

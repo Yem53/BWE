@@ -1,0 +1,20 @@
+{
+  "summary": "Single counter-trend crash-long entry with capitulation filter — no leakage, low integrity risk, advisory caution on live conflict and concentration.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "pc_crash_oversold_global_long_extreme_long",
+      "leakage_risk": "none",
+      "leakage_notes": "All three novel_dim fields are T0-observable: global_long_ratio is a snapshot ratio at signal time, move_pct<=-4 is the triggering crash magnitude (not forward-looking), and taker_buy_ratio_5m>=0.55 references the trailing 5m window ending at T0 (standard rolling aggregate, not post-event). No forward_*, confirm_after_*, or post_event_* fields present.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "User runs 'BWE_OI_Price_monitor pump long' live; this is pricechange-channel CRASH-long (counter-trend bounce), so symbol overlap is possible but directional thesis differs (capitulation reversal vs. pump continuation). Concurrent same-symbol longs from different triggers could double exposure rather than conflict, but is an advisory monitoring item, not an integrity issue.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "acceptable",
+      "remediation": "None required for integrity. Advisory: in paper-shadow tracking, log per-symbol concurrency vs. the live pump-long strategy and flag any window where both fire on the same symbol within 5m; ensure taker_buy_ratio_5m is computed strictly on [T0-5m, T0] candles with no T0+ inclusion."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 19.63
+}

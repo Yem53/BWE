@@ -1,0 +1,20 @@
+{
+  "summary": "Session-gated pricechange long with taker_buy and liquidity AND-stack — no integrity issues; standard paper-shadow monitoring concerns only.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "hour_session_us_pump_long",
+      "leakage_risk": "none",
+      "leakage_notes": "All three novel_dim fields (session=US, taker_buy_ratio_5m, liquidity_bucket) are evaluable strictly at or before T0. `taker_buy_ratio_5m` references the trailing 5m window ending at T0, not a forward window; no `forward_*`, `confirm_after_*`, or `post_event_*` fields appear. Session is a deterministic clock-derived category. No future function detected.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Same channel (pricechange) and same side (long) as the live `BWE_OI_Price_monitor pump long` strategy, so paper signals will overlap rather than oppose live positions — concurrent same-side stacking on the same symbol is the realistic scenario, not opposite-side conflict. Monitor as paper-shadow only.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "acceptable",
+      "remediation": "None required for integrity. Advisory: in paper-shadow tracking, log per-symbol concurrency and family-wise lift dilution vs the 61 existing OI_Price + 60 pricechange entry archetypes (high US-session liquidity bucket likely concentrates on BTC/ETH/SOL); flag if >2 same-symbol concurrent paper entries within a 15m window or if session-gated lift collapses to channel/side baseline once stacked with E051 (pc_high_liquidity_long) and E126/E064 (taker_buy variants)."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 23.42
+}

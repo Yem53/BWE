@@ -1,0 +1,23 @@
+{
+  "archetype_ref": "x103_multi_tp_60_40_ladder_exit",
+  "best_case_thesis": "Front-loading 60% of size at a tight 0.5% TP exploits the well-documented mean-reversion that follows the initial impulse leg of a pricechange/taker-buy pump — most pumps in the registry's E126/E064/E066 cluster show their cleanest move in the first 30-90s before profit-takers fade the move. By harvesting the majority of size at the modal exit point and leaving only 40% to ride for the rarer 1.5% extension, this ladder converts an asymmetric, fat-left-tail return distribution into a more symmetric one — directly attacking the R2 trap where TP=0.51/SL=6.00 looked great on p25 but compounded to -13.5%. The 60/40 shape is structurally different from the failed 50/30/20 ladders because it eliminates the third tranche that statistically almost never fills and instead concentrates exit liquidity where the empirical hit-rate is highest.",
+  "expected_alpha_source": "Microstructure mean-reversion after taker-buy exhaustion: aggressive market-buy flow dries up within 1-2 minutes post-trigger, and the first 0.5% is where realized fill probability dramatically exceeds extension probability.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-frequency pump regimes with elevated taker_buy_ratio (>=0.60) where impulse legs are sharp but follow-through is weak — exactly the pricechange/long entry cluster dominating the top-10.",
+  "complementary_exit_families": [
+    "multi_tp",
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E148",
+    "E066",
+    "E051"
+  ],
+  "if_paper_works_likely_reason": "It will compress the left tail enough that mean and kelly_capped turn positive on the same E126-class entries that failed paper-shadow under fixed TP/SL, by realizing the 60% tranche before the cohort's modal reversal point.",
+  "could_compound_with": "Any other x10x exit proposal that pairs a tight breakeven-stop trigger with this ladder — moving SL to breakeven once the 60% TP1 fills would convert the remaining 40% runner into a free option, directly addressing the asymmetric-payoff trap identified in R2.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 30.55
+}

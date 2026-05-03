@@ -1,0 +1,21 @@
+{
+  "summary": "Single Reserved6 long entry with one supported filter (taker_buy_ratio_5m>=0.55); no integrity issues, low concentration risk given sparse R6 trigger baseline.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "r6_bigmove_simple_long",
+      "leakage_risk": "none",
+      "leakage_notes": "Sole novel_dim is taker_buy_ratio_5m>=0.55, a trailing 5-minute window evaluated at T0; no forward_/post_event_/confirm_after_ semantics. Field is in SUPPORTED_FIELDS per R1 fix.",
+      "multitest_inflation_risk": "low",
+      "multitest_inflation_notes": "Reserved6 channel is sparsely populated (35 entries vs 61 OI_Price, 60 pricechange) and this proposal uses a single threshold not heavily reused across the 523-archetype family; marginal FWER contribution.",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Live BWE_OI_Price_monitor pump long operates on OI_Price channel; this proposal targets Reserved6/long, so symbol-level same-side stacking is possible but channel-disjoint. Paper-shadow only — monitoring item, not a blocker.",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "acceptable",
+      "remediation": "None required. Recommend paper-shadow tracking for any symbol-level co-trigger with the live OI_Price pump-long strategy as a monitoring item only."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 21.49
+}

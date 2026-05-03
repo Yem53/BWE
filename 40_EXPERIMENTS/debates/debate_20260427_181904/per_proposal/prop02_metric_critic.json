@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "oi_crash_taker_buy_reversal_long",
+  "predicted_tp_pct": 0.8,
+  "predicted_sl_pct": 2.0,
+  "predicted_tp_sl_ratio": 0.4,
+  "predicted_win_rate": 0.58,
+  "predicted_mean_per_trade_pct": -0.46,
+  "predicted_kelly_pct": 0,
+  "trap_risk": "medium",
+  "trap_reasoning": "Reversal setups against a sharp OI crash (-8%) are inherently mean-reversion plays catching falling knives. The GPU optimizer will likely converge on tight TP (0.6-1.0%) because reversal bounces are short-lived before resumption of the dominant trend, while SL must be wide (1.8-2.5%) to survive the residual liquidation cascade volatility — a 2.5-3x SL/TP ratio is structurally typical for counter-trend longs. Win-rate is bounded by the 'taker_buy_ratio>=0.60' filter strength (genuine buy pressure is a real edge signal) but capped around 55-65% because OI -8% events often have continuation tails that stop reversals. With W=0.58, TP=0.8, SL=2.0: E[trade]=0.58*0.8-0.42*2.0-0.08=-0.38% — negative expectancy. Kelly returns 0. The high-liquidity filter helps execution but doesn't fix the asymmetry. This is a textbook E126-style trap candidate: median trade may look fine (small bounces hit TP) but the -2% losing tail eats the book. High uncertainty on win-rate — if the OI-divergence signal is genuinely stronger than I'm crediting, W could reach 0.70+ which flips expectancy positive.",
+  "recommended_constraint": "force SL <= 1.5 * TP_pct in variant grid; also require TP >= 0.6% to avoid degenerate scalp configs",
+  "metric_score_estimate": 1.8,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.7
+}

@@ -1,0 +1,8 @@
+The role file at `prompts/role_generator.md` already looks complete (84 lines, strict JSON output spec, Binance feature whitelist, anti-patterns). The orchestrator at `bwe_autoresearch/bwe_loop_llm_team.py:339-353` reads it via `_read_role_prompt("generator")` and feeds context as a JSON block.
+
+Your message is just the role header. What would you like me to do?
+
+1. **Execute the role** — act as the Generator and produce 5–10 new archetypes. I'd need the inputs block (registry summary, results summary, recent experiments) — or run a `--dry-run` first to see what `gather_context` produces.
+2. **Review/improve** `prompts/role_generator.md` — e.g., tighten the JSON schema, add coverage-gap heuristics, or align it with how the synthesizer scores proposals.
+3. **Smoke test the chain** — run `python -m bwe_autoresearch.bwe_loop_llm_team --reason "manual smoke" --dry-run` to verify context assembly, then a real call.
+4. Something else.

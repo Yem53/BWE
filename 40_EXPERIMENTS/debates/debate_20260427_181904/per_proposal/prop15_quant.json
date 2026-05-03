@@ -1,0 +1,27 @@
+{
+  "summary": "Exit-family archetype with a single supported entry-filter dimension; structurally distinct ladder shape (60/40 vs prior 50/30/20) and likely tight-but-usable sample size, though prior multi_tp baseline performance is a material headwind worth flagging.",
+  "analyses": [
+    {
+      "archetype_ref": "x103_multi_tp_60_40_ladder_exit",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X101",
+        "X102"
+      ],
+      "distinctness_notes": "Novel ladder shape (60/40 two-step) is structurally different from prior 50/30/20 three-step multi_tp ladders. Front-loaded 60% harvest at TP1=0.5% changes the realized-PnL distribution shape (less reliance on TP3 hit rate, lower variance per trade). Filter dimension taker_buy_ratio_5m>=0.60 narrows to high-conviction taker-flow regimes, which differs from generic multi_tp baselines that operate on full population.",
+      "expected_triggers_30d": 300,
+      "triggers_estimate_method": "Exit-side archetype consumes any compatible entry triggers. Across all channels ~7200 events/30d; taker_buy_ratio_5m>=0.60 cut rate ≈p35-p40 of distribution → ~0.4 retention → ~2880 base events. However exit-archetypes in this loop typically attach to filtered entry sets, so realized fills ≈300-500/30d for the matched entry-channel slice (conservatively 300).",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "This IS an exit-family proposal (multi_tp). Compatibility is with itself by definition. Material concern: by_exit_family stats show multi_tp aggregate mean=-0.276, median=-0.28, n_positive=0/3111 in current registry — the family has shown zero positive instances. The 60/40 front-loaded shape is the right hypothesis to test (reduces dependence on long tail), but Synthesizer should weigh that this is fighting a strong negative prior. Recommend pairing with high-lift long entries on pricechange/long (E126/E064/E148 family) where TP1=0.5% is reachable given observed +0.4 score regimes. Single-condition filter (taker_buy_ratio_5m>=0.60) is computable and parseable; no fallbacks needed."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.68
+}

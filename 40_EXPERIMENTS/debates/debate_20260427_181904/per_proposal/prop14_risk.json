@@ -1,0 +1,23 @@
+{
+  "summary": "Wide-trail exit variant on top entries — no leakage or integrity concerns; standard exit-family parameter sweep with one minor multi-test note.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "x102_wide_trail_2pct_exit",
+      "leakage_risk": "none",
+      "leakage_notes": "novel_dim is only liquidity_bucket=high, which is a snapshot/contextual filter computable at T0 from pre-event book depth. No forward_*, post_event_*, or confirm_after_* fields. Trail-step parameter (2.0%) is a path-dependent exit mechanic that walks forward from T0 — that is the intended causal direction, not leakage.",
+      "multitest_inflation_risk": "low",
+      "multitest_inflation_notes": "Trail family already has 3,111 results in the registry; adding another step-size variant marginally widens the sweep but is justified by the explicit pattern_miner recommendation that 1.5–2.5% has not yet been swept. Family-wise FDR is bounded because this is a single targeted point, not a fresh grid.",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "This is an EXIT archetype with channel=NA/side=NA — it does not itself open positions. If composed with long entries on OI_Price symbols, it could co-exist with the live BWE_OI_Price_monitor pump long strategy on the same symbol/side, but same-side overlap is not a conflict (no opposite-side cancellation). Paper-shadow only at this stage — caution-tier monitoring item, not a blocker.",
+      "concentration_risk": "low",
+      "concentration_notes": "Exit kernel has no entry-trigger logic and inherits trigger count from whichever entry it pairs with. At $1000 capital and 5–10% sizing the trail-step choice does not change concurrent-position count; it only changes per-trade hold duration. Mild caution that wider trails extend hold time and could marginally raise concurrent exposure, but well within paper-shadow tolerance.",
+      "adversarial_risk": "none",
+      "adversarial_notes": "Trail step is a private exit parameter not encoded in any externally-visible BWE message; nothing to front-run.",
+      "overall_severity": "acceptable",
+      "remediation": "None required. Recommend: (a) confirm liquidity_bucket=high is computed from pre-T0 order-book snapshot in the kernel, not a rolling window that includes the trigger bar; (b) when paper-shadowing, log realized hold-time distribution to verify the wider trail does not silently stack concurrent positions beyond intent."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 28.77
+}

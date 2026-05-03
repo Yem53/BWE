@@ -1,0 +1,31 @@
+entry_id,entry_archetype,channel,side,novel_dim,best_score,median_score,score_lift_vs_median,best_exit_id,best_exit_archetype,best_exit_family,best_tp,best_sl,triggers,n_exits_tested
+E126,pc_pump_taker_buy_extreme_long,pricechange,long,side_signal=pump; taker_buy_ratio_5m>=0.7,0.394617,-0.28,0.674617,X001,fixed_tp1_sl1_symmetric,fixed,0.51,6.0,3443,13
+E064,pc_pump_taker_buy_dominant_long,pricechange,long,side_signal=pump; taker_buy_ratio_5m>=0.6,0.357179,-0.28,0.637179,X001,fixed_tp1_sl1_symmetric,fixed,0.47,6.0,3619,14
+E148,pc_pump_global_short_high_long,pricechange,long,side_signal=pump; global_short_ratio_high,0.349617,-0.28,0.6296170000000001,X001,fixed_tp1_sl1_symmetric,fixed,0.47,6.0,988,13
+E051,pc_high_liquidity_long,pricechange,long,liquidity_bucket=high; side_signal=pump,0.347159,-0.28,0.627159,X001,fixed_tp1_sl1_symmetric,fixed,0.47,6.0,2157,14
+E066,pc_crash_taker_buy_long,pricechange,long,side_signal=crash; taker_buy_ratio_5m>=0.55,0.339337,-0.28,0.619337,X001,fixed_tp1_sl1_symmetric,fixed,0.43,6.0,3684,14
+E036,pc_first_signal_immediate_long,pricechange,long,delay_seconds=0; burst_count_5m=1; side_signal=pump,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E038,pc_first_signal_30s_long,pricechange,long,delay_seconds=30; burst_count_5m=1,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E039,pc_first_signal_1m_long,pricechange,long,delay_seconds=60; burst_count_5m=1,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E040,pc_first_signal_3m_long,pricechange,long,delay_seconds=180,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E041,pc_second_signal_cont_long,pricechange,long,burst_count_5m=2; side_signal=pump,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E046,pc_burst_seq_4plus_avoid,pricechange,both,burst_count_5m>=4,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E047,pc_pretrend_aligned_long,pricechange,long,pretrend_5m_pos; side_signal=pump,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E049,pc_pretrend_against_long,pricechange,long,pretrend_5m_pos; side_signal=crash,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E053,pc_btc_correlated_long,pricechange,long,btc_correlation_30d>=0.6; side_signal=pump,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E054,pc_low_btc_correl_long,pricechange,long,btc_correlation_30d<=0.3; side_signal=pump,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E055,pc_short_event_hold_1m_long,pricechange,long,fixed_hold_minutes=1,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E056,pc_short_event_hold_3m_long,pricechange,long,fixed_hold_minutes=3,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E057,pc_pump_low_premium_long,pricechange,long,side_signal=pump; premium_bps_in_-5_5,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E062,pc_pump_oi_rising_long,pricechange,long,side_signal=pump; oi_change_5m_pos,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E067,pc_pump_btc_bull_long,pricechange,long,side_signal=pump; btc_24h_pct>=0,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,14
+E129,pc_pump_basis_align_long,pricechange,long,side_signal=pump; basis_narrowing,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,13
+E131,pc_pump_4th_or_more_avoid,pricechange,both,burst_count_5m>=4,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,13
+E132,pc_pump_btc_extreme_correlated_long,pricechange,long,side_signal=pump; btc_correlation_30d>=0.8,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,13
+E133,pc_pump_btc_no_correlation_long,pricechange,long,side_signal=pump; btc_correlation_30d<=0.1,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,13
+E136,pc_pump_funding_resetting_long,pricechange,long,side_signal=pump; funding_just_reset,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,13
+E139,pc_pump_volume_5x_baseline_long,pricechange,long,side_signal=pump; volume_5x_baseline,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,13
+E144,pc_pump_macro_event_avoid,pricechange,both,near_macro_event,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,13
+E149,pc_pump_aggressive_buy_immediate_long,pricechange,long,side_signal=pump; aggressive_buy_5m,0.290282,-0.28,0.570282,X001,fixed_tp1_sl1_symmetric,fixed,0.39,6.0,5000,13
+E146,pc_pump_top_trader_short_long,pricechange,long,side_signal=pump; top_trader_position_ratio_dec,0.283357,-0.28,0.5633570000000001,X001,fixed_tp1_sl1_symmetric,fixed,0.39,5.81,989,13
+E127,pc_pump_taker_buy_extreme_against_pretrend_short,pricechange,short,side_signal=pump; taker_buy_ratio_5m>=0.7; pretrend_5m_neg,0.267755,-0.28,0.547755,X001,fixed_tp1_sl1_symmetric,fixed,0.36,6.0,3443,13

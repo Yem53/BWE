@@ -1,0 +1,26 @@
+{
+  "summary": "Proposal r6_pump_high_liq_only_long is mathematically healthy: single supported categorical filter, computable at T0, structurally distinct from existing multi-filter R6 archetypes, with adequate-to-ample expected sample size on the sparse R6 channel.",
+  "analyses": [
+    {
+      "archetype_ref": "r6_pump_high_liq_only_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "existing R6 long archetypes using 2+ filters (per rationale; all current R6 entries use multi-filter conjunctions)"
+      ],
+      "distinctness_notes": "Sparse-channel single-dimension adaptation: all existing R6 archetypes stack 2+ filters (which the registry note says crash on R6's ~800 base events). A single high-liquidity gate is structurally distinct — it represents the minimal-conjunction sparse-channel design pattern, not a verbatim duplicate of any existing slug.",
+      "expected_triggers_30d": 280,
+      "triggers_estimate_method": "R6 base ~800 events/30d × event_type=pump implicit (~0.5 of channel) × liquidity_bucket=high (~0.33 of universe assuming roughly equal low/mid/high split, likely higher since high-liq symbols dominate volume) × long side (already specified, no further cut) = 800 × 0.5 × 0.7 ≈ 280. Conservative midpoint; could be 200–400 depending on actual high-liq concentration in R6 triggers.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "With only 1 filter and ~280 expected triggers, this archetype has broad exit compatibility. Strongly favor `fixed` family (only positive-mean family in coverage: mean +0.175, median +0.217, 91% positive). Avoid time_only (mean -0.73) and multi_tp (mean -0.28) which dominate the negative tail. Given R2 lesson on E126 asymmetric TP/SL trap, recommend the GPU loop sweep tight TP/SL ratios (TP/SL ≥ 0.5) under fixed exits and validate with mean/kelly_capped metrics, not legacy p25."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 30.04
+}

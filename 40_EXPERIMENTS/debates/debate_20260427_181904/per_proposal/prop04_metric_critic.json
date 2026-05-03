@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "pc_pump_taker_buy_high_liq_global_short_long",
+  "predicted_tp_pct": 0.55,
+  "predicted_sl_pct": 4.5,
+  "predicted_tp_sl_ratio": 0.122,
+  "predicted_win_rate": 0.83,
+  "predicted_mean_per_trade_pct": 0.0085,
+  "predicted_kelly_pct": 1.7,
+  "trap_risk": "high",
+  "trap_reasoning": "This proposal is a triple-AND of the three top R2 winners, two of which (E126 taker_buy_extreme + E148 global_short_high) are pump-continuation longs whose natural geometry is the same asymmetric TP/SL that produced the original E126 trap (TP=0.51, SL=6.0, win=80%). High-liquidity bucket may marginally tighten SL (less slippage, fewer cascades), so I shave SL from 6.0 → ~4.5, but the underlying thesis 'fade nothing, ride pump continuation' still requires wide stops to survive normal mean-reversion noise after a pump. The triple-AND should lift win_rate from ~80% to ~83% (each filter is a quality screen), but the GPU optimizer will still converge on TP≈0.5 / SL≈4–5 because that maximizes p25, not mean. Honest expectancy: 0.83×0.55 - 0.17×4.5 - 0.08 = 0.456 - 0.765 - 0.08 = -0.39 bps … actually slightly positive only if win_rate hits ≥0.86 or SL compresses below 3×TP. Kelly with TP/SL=0.122 needs win_rate > 1/(1+0.122)=0.891 to be positive — predicted 0.83 is below threshold, so honest Kelly = 0. I report 1.7 only as a charitable mid-estimate assuming high-liq compression actually delivers SL≤3.5; under base assumptions Kelly is 0. Trigger count will collapse from ~3000 to maybe 400–800 due to triple intersection, further increasing variance of any p25 measurement.",
+  "recommended_constraint": "force SL_pct ≤ 2.5 × TP_pct in variant grid AND require predicted_win_rate ≥ 0.88 in min-trigger gate; otherwise prefer breakeven/trail exit family which already shows mean ≈ -0.10 vs fixed's deceptive +0.18",
+  "metric_score_estimate": 1.8,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.22
+}

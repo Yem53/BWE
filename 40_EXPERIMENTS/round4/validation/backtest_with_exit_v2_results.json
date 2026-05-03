@@ -1,0 +1,57 @@
+{
+  "summary": [
+    {
+      "strategy": "pc_pump_cont_long",
+      "n": 338,
+      "mean": -4.211000505216725,
+      "win_rate": 41.42011834319527,
+      "sum_raw": -1423.3181707632457,
+      "avg_hold_min": 54.60650887573964,
+      "reasons": {
+        "hard_stop": 198,
+        "trail_drawdown_exit": 140
+      }
+    },
+    {
+      "strategy": "reserved6_extreme_pump_fade_short",
+      "n": 51,
+      "mean": 7.539866987542711,
+      "win_rate": 78.43137254901961,
+      "sum_raw": 384.53321636467814,
+      "avg_hold_min": 576.2352941176471,
+      "reasons": {
+        "hard_stop": 11,
+        "trail_drawdown_exit": 36,
+        "end_of_data": 4
+      }
+    },
+    {
+      "strategy": "reserved6_extreme_dump_meanrevert_long",
+      "n": 43,
+      "mean": -4.304185557043695,
+      "win_rate": 53.48837209302325,
+      "sum_raw": -185.0799789528789,
+      "avg_hold_min": 328.16279069767444,
+      "reasons": {
+        "trail_drawdown_exit": 23,
+        "hard_stop": 19,
+        "catastrophe_stop": 1
+      }
+    },
+    {
+      "strategy": "oi_overcrowded_crash_follow_short",
+      "n": 26,
+      "mean": 4.95681777747759,
+      "win_rate": 69.23076923076923,
+      "sum_raw": 128.87726221441736,
+      "avg_hold_min": 513.0769230769231,
+      "reasons": {
+        "hard_stop": 8,
+        "trail_drawdown_exit": 17,
+        "end_of_data": 1
+      }
+    }
+  ],
+  "n_triggers": 464,
+  "n_simulated": 458
+}

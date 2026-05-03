@@ -1,0 +1,20 @@
+{
+  "summary": "Weekday filter using calendar-derived field; no leakage or integrity issues — purely a regime gate with low deployment risk.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "weekday_weekend_avoid_long",
+      "leakage_risk": "none",
+      "leakage_notes": "`weekday` is deterministic from event timestamp (T0 itself); no post-T0 fields, no forward_*, confirm_after_*, or post_event_* references. Calendar features cannot leak.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "none",
+      "live_conflict_notes": "As a filter (not entry), it only narrows when other archetypes fire; cannot create opposite-side trades against the live `BWE_OI_Price_monitor pump long` strategy. If anything, excluding weekends would reduce overlap with live trading windows.",
+      "concentration_risk": "low",
+      "adversarial_risk": "none",
+      "overall_severity": "acceptable",
+      "remediation": "None required. Suggest pairing with a binary `is_weekend` variant to reduce the 5-value dimensionality and keep multi-test footprint minimal; also confirm `weekday` is computed from event UTC timestamp (not ingestion time) in the supported-fields layer."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.43
+}

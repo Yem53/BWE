@@ -1,0 +1,19 @@
+{
+  "summary": "Single-filter R6 long gated by high liquidity is structurally reasonable as a sparse-channel adaptation; main concerns are sample size and whether 'high liquidity' alone provides directional edge on Reserved6 channel.",
+  "critiques": [
+    {
+      "archetype_ref": "r6_pump_high_liq_only_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Reserved6 channel has only 35 entry archetypes in registry vs 60-61 for pricechange/OI_Price — sparse channel may lack trigger volume; single high_liq filter could either over-fire (no directional gate) or under-fire (high_liq rare on R6) — unclear which without trig count.",
+        "'liquidity_bucket=high' alone has no directional bias for long vs short — high liquidity is a quality-of-fill filter, not an alpha signal. Without a pump/crash/taker_buy directional condition, this may regress to channel/side baseline (the exact R1 bug pattern flagged in lessons_from_r1_r2).",
+        "Cost sensitivity: if high_liq merely selects liquid symbols, edge per trade likely small (≤10 bps); 8-16 bps round-trip would consume most of it. Risk of being a 'liquid baseline' rather than an alpha archetype.",
+        "Regime dependence on R6: if Reserved6 channel itself only fires in specific BTC regimes (the reason all current R6 archetypes crash), high_liq won't rescue it — the channel signal may be the bottleneck, not the filter."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) compare trig count and mean return vs a hypothetical R6/long/no-filter baseline to confirm 'expected_distinct' — if returns within ±5 bps of baseline, archetype is degenerate per R1 lesson. (2) track left-tail (p25_capped_tail, kelly_capped) not just median — R2 E126 lesson. (3) log fill quality on high_liq trades vs non-high_liq R6 fires to verify the filter is doing real work. (4) watch crash_rate — if R6 high_liq still crashes like other R6 archetypes, channel-level issue dominates."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.93
+}

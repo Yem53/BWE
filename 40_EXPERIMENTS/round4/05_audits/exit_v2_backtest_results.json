@@ -1,0 +1,730 @@
+[
+  {
+    "label": "v2_baseline",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 150.66248735507705,
+          "delta_total": 216.56985866726714,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 65.4320987654321,
+          "n_improved": 40,
+          "n_worsened": 38,
+          "n_unchanged": 3
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 132.57421030611442,
+          "delta_total": 493.69217987498655,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 65.9090909090909,
+          "n_improved": 103,
+          "n_worsened": 72,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_g2_off",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "False",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 144.92335692029445,
+          "delta_total": 210.83072823248455,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 65.4320987654321,
+          "n_improved": 40,
+          "n_worsened": 38,
+          "n_unchanged": 3
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 132.57421030611442,
+          "delta_total": 493.69217987498655,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 65.9090909090909,
+          "n_improved": 103,
+          "n_worsened": 72,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_g2_threshold_15",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "15.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 150.66248735507705,
+          "delta_total": 216.56985866726714,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 65.4320987654321,
+          "n_improved": 40,
+          "n_worsened": 38,
+          "n_unchanged": 3
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 132.57421030611442,
+          "delta_total": 493.69217987498655,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 65.9090909090909,
+          "n_improved": 103,
+          "n_worsened": 72,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_g2_threshold_50",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "50.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 144.92335692029445,
+          "delta_total": 210.83072823248455,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 65.4320987654321,
+          "n_improved": 40,
+          "n_worsened": 38,
+          "n_unchanged": 3
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 132.57421030611442,
+          "delta_total": 493.69217987498655,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 65.9090909090909,
+          "n_improved": 103,
+          "n_worsened": 72,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_g2_age_5min",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "5.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 150.66248735507705,
+          "delta_total": 216.56985866726714,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 65.4320987654321,
+          "n_improved": 40,
+          "n_worsened": 38,
+          "n_unchanged": 3
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 132.57421030611442,
+          "delta_total": 493.69217987498655,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 65.9090909090909,
+          "n_improved": 103,
+          "n_worsened": 72,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_no_volume_confirm",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "False",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 142.52783082373864,
+          "delta_total": 208.43520213592873,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 64.19753086419753,
+          "n_improved": 40,
+          "n_worsened": 37,
+          "n_unchanged": 4
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 154.41885001360333,
+          "delta_total": 515.5368195824755,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 61.36363636363637,
+          "n_improved": 96,
+          "n_worsened": 79,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_volume_strict_2x",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "2.0",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 144.06563630418356,
+          "delta_total": 209.97300761637365,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 67.90123456790124,
+          "n_improved": 42,
+          "n_worsened": 38,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 22.810795328792,
+          "delta_total": 383.9287648976641,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 68.75,
+          "n_improved": 108,
+          "n_worsened": 68,
+          "n_unchanged": 0
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_tiers_tighter",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 3.0), (10.0, 5.0), (25.0, 8.0), (50.0, 12.0), (100.0, 18.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 109.9086095255109,
+          "delta_total": 175.81598083770098,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 66.66666666666666,
+          "n_improved": 41,
+          "n_worsened": 36,
+          "n_unchanged": 4
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 6.507967081071618,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 117.9062682501868,
+          "delta_total": 479.02423781905895,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 65.9090909090909,
+          "n_improved": 100,
+          "n_worsened": 74,
+          "n_unchanged": 2
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_tiers_wider",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 5.0), (10.0, 10.0), (25.0, 18.0), (50.0, 25.0), (100.0, 35.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 95.60598494863557,
+          "delta_total": 161.51335626082567,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 66.66666666666666,
+          "n_improved": 40,
+          "n_worsened": 38,
+          "n_unchanged": 3
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 10.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 98.53332184621954,
+          "delta_total": 459.6512914150917,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 65.9090909090909,
+          "n_improved": 98,
+          "n_worsened": 73,
+          "n_unchanged": 5
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_atr_off",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "0.0",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 117.69921297070388,
+          "delta_total": 183.60658428289398,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 62.96296296296296,
+          "n_improved": 40,
+          "n_worsened": 40,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 101.84825737160287,
+          "delta_total": 462.966226940475,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 63.06818181818182,
+          "n_improved": 99,
+          "n_worsened": 75,
+          "n_unchanged": 2
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_atr_aggressive",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "4.0",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 220.04285511800202,
+          "delta_total": 285.9502264301921,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 72.8395061728395,
+          "n_improved": 46,
+          "n_worsened": 34,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 79.50977500728857,
+          "delta_total": 440.6277445761607,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 69.88636363636364,
+          "n_improved": 109,
+          "n_worsened": 67,
+          "n_unchanged": 0
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v2_no_min_hold",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 4.0), (10.0, 7.0), (25.0, 12.0), (50.0, 18.0), (100.0, 25.0))",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "0.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "True",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 153.96514030580795,
+          "delta_total": 219.87251161799804,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 66.66666666666666,
+          "n_improved": 41,
+          "n_worsened": 38,
+          "n_unchanged": 2
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 13.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 143.49454527928737,
+          "delta_total": 504.6125148481595,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 65.3409090909091,
+          "n_improved": 101,
+          "n_worsened": 74,
+          "n_unchanged": 1
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  },
+  {
+    "label": "v1_static_5pct",
+    "config": {
+      "activation_delay_min": "5.0",
+      "trail_activate_pct": "5.0",
+      "trail_tiers": "((5.0, 5.0),)",
+      "hard_stop_min_pct": "5.0",
+      "hard_stop_atr_mult": "2.5",
+      "catastrophe_min_hold_min": "30.0",
+      "catastrophe_grace_multiplier": "2.0",
+      "catastrophe_pct": "12.0",
+      "volume_confirm_enabled": "True",
+      "volume_confirm_lookback_min": "5",
+      "volume_confirm_baseline_min": "30",
+      "volume_confirm_ratio": "1.5",
+      "tradoor_saver_enabled": "False",
+      "tradoor_saver_hw_threshold": "25.0",
+      "tradoor_saver_max_hw_age_min": "10.0",
+      "tradoor_saver_vol_ratio": "1.2",
+      "time_exit_at_hold_limit": "True"
+    },
+    "results": {
+      "LIVE": {
+        "agg": {
+          "n": 81,
+          "orig_total_pnl_raw": -65.9073713121901,
+          "new_total_pnl_raw": 138.01859962958653,
+          "delta_total": 203.92597094177663,
+          "orig_win_rate": 35.80246913580247,
+          "new_win_rate": 66.66666666666666,
+          "n_improved": 40,
+          "n_worsened": 38,
+          "n_unchanged": 3
+        },
+        "tradoor_orig_raw": 65.82034669935213,
+        "tradoor_new_raw": 15.08404832778848,
+        "tradoor_exit_reason": "trail_drawdown_exit"
+      },
+      "PAPER": {
+        "agg": {
+          "n": 176,
+          "orig_total_pnl_raw": -361.1179695688721,
+          "new_total_pnl_raw": 133.50499296771972,
+          "delta_total": 494.62296253659184,
+          "orig_win_rate": 21.59090909090909,
+          "new_win_rate": 65.9090909090909,
+          "n_improved": 102,
+          "n_worsened": 70,
+          "n_unchanged": 4
+        },
+        "tradoor_orig_raw": null,
+        "tradoor_new_raw": null,
+        "tradoor_exit_reason": null
+      }
+    }
+  }
+]

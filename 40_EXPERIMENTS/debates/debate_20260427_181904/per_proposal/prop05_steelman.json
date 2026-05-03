@@ -1,0 +1,21 @@
+{
+  "archetype_ref": "pc_pump_funding_positive_taker_sell_short",
+  "best_case_thesis": "This proposal targets a textbook crowded-long unwind: when funding has turned firmly positive (longs paying shorts) AND aggressive taker flow is already net-selling into a >=3% pump, the marginal long is paying carry to hold a position that smart flow is unloading into. That divergence between perp positioning (funding) and realized aggressor flow (taker_buy_ratio<=0.40) is one of the cleanest microstructure tells for an imminent long-side liquidation cascade, and the three signals are genuinely orthogonal — funding is a positioning state, taker ratio is a flow state, move_pct is the trigger — so it should not collapse to the pricechange/short baseline the way the existing 94 short entries did.",
+  "expected_alpha_source": "Funding-paid crowded longs being distributed into by aggressor sellers — a positioning/flow divergence that historically precedes long-liquidation cascades on perps.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-leverage retail-driven rallies in mid-cap perps where funding has gone positive but spot/aggressor flow is already rotating out — i.e. late-stage euphoric pumps, not trending bull regimes with healthy taker buys.",
+  "complementary_exit_families": [
+    "fixed",
+    "multi_tp"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E148"
+  ],
+  "if_paper_works_likely_reason": "The taker_buy_ratio<=0.40 filter is doing the heavy lifting — it screens out continuation pumps where aggressors are still buying, leaving only the subset where the pump is being SOLD INTO, which is the actual mean-reversion population.",
+  "could_compound_with": "Any short-side proposal in this batch that adds an OI-divergence or spot-vs-perp basis filter would stack cleanly — funding+taker_sell identifies the crowded long, OI/basis would confirm the unwind has started. Avoid pairing with other pure-pricechange shorts as they will share failure modes.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.16
+}

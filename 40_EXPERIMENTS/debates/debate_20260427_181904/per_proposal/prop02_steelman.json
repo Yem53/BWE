@@ -1,0 +1,21 @@
+{
+  "archetype_ref": "oi_crash_taker_buy_reversal_long",
+  "best_case_thesis": "This archetype targets a textbook short-squeeze reversal microstructure: open interest collapsing >=8% while taker-buy ratio sits above 60% is the signature of forced short covering — shorts are closing positions (OI down) by lifting offers (taker buy dominant). All 61 existing OI_Price longs assume continuation, so this is the first archetype in the registry hunting the OI-down + buy-pressure divergence, which is a structurally different trade from trend-following and tends to produce sharp, mean-reverting impulses rather than drift.",
+  "expected_alpha_source": "Forced short-covering cascades where deleveraging shorts must cross the spread to exit, creating temporary buy-side imbalance before liquidity re-prices.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Most effective in post-flush conditions after a coordinated short build-up, when funding has been negative and a local capitulation low triggers stop-driven covering — i.e. the tail-end of a downtrend rather than ranging chop.",
+  "complementary_exit_families": [
+    "fixed",
+    "multi_tp"
+  ],
+  "complementary_existing_archetypes": [
+    "E066",
+    "E126",
+    "E051"
+  ],
+  "if_paper_works_likely_reason": "The high-liquidity bucket filter ensures the OI-drop signal reflects genuine position unwinds rather than thin-book noise, so the taker-buy confirmation cleanly isolates real short-cover impulses from random reversals.",
+  "could_compound_with": "Any 'pc_crash_taker_buy_long' style proposal in this batch (e.g. E066 family extensions) — the price-channel crash signal and the OI-channel crash signal would cross-confirm the same underlying short-cover event, enabling a high-conviction cross-channel ensemble entry.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.22
+}

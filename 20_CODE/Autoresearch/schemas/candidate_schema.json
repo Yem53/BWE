@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BWE AutoResearch CandidateSpec",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "hypothesis",
+    "source_channel",
+    "family",
+    "discovery_layer",
+    "direction",
+    "entry_rule",
+    "filters",
+    "exit_rule",
+    "risk_rule",
+    "novelty_reason"
+  ],
+  "properties": {
+    "candidate_id": {"type": "string"},
+    "hypothesis": {"type": "string", "minLength": 12},
+    "source_channel": {
+      "type": "string",
+      "enum": ["BWE_OI_Price_monitor", "BWE_pricechange_monitor", "BWE_Reserved6"]
+    },
+    "family": {"type": "string"},
+    "discovery_layer": {
+      "type": "string",
+      "enum": ["known_family_refinement", "controlled_new_strategy_discovery", "contrarian_exploratory"]
+    },
+    "direction": {"type": "string", "enum": ["long", "short"]},
+    "entry_rule": {"type": "object"},
+    "filters": {"type": "object"},
+    "exit_rule": {
+      "type": "object",
+      "required": ["type", "entry_delay_s"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "fixed_horizon",
+            "fixed_tp_sl",
+            "short_event_hold",
+            "prove_then_exit",
+            "prove_then_runner",
+            "prove_then_hourly_state",
+            "partial_tp_runner",
+            "time_decay_target",
+            "ratchet_lock",
+            "volatility_adaptive_exit",
+            "channel_invalidated_exit",
+            "cross_confirm_hold_exit",
+            "left_tail_guard_exit"
+          ]
+        },
+        "entry_delay_s": {"type": "integer", "minimum": 0},
+        "holding_horizon_min": {"type": "integer", "minimum": 1},
+        "fallback_horizon_min": {"type": "integer", "minimum": 1}
+      }
+    },
+    "risk_rule": {"type": "object"},
+    "novelty_reason": {"type": "string", "minLength": 8}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,20 @@
+{
+  "summary": "Cross-channel 60s double-trigger long proposal uses only supported pre-T0 fields and presents no integrity blockers; standard live-overlap and FWER monitoring apply.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "cc_pc_oi_within_60s_double_long",
+      "leakage_risk": "low",
+      "leakage_notes": "novel_dim fields (taker_buy_ratio_5m, liquidity_bucket, oi_change_pct) are all in the SUPPORTED_FIELDS set used by E126 and prior keepers, and the 'within_60s' window is a backward co-occurrence constraint between two T0-or-earlier channel fires — no forward_*, post_event_*, or confirm_after_* references. Only residual concern: the '_5m' suffix on taker_buy_ratio must remain a trailing 5m lookback (as in R2 E126); if any future kernel rewires it as a forward window the leak would be invisible. No action needed at proposal stage.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "Long-side cross-channel rule on '*' channel will fire on the same symbols as the user's live BWE_OI_Price_monitor pump long — when both pricechange and OI_Price fire within 60s with oi_change_pct>=8, this is precisely the regime where the live strategy is also entering. Risk is duplicate same-side stacking (capital concentration on one symbol, not opposite-side conflict). Paper-shadow only per Round 3 posture; flag for monitoring, not blocking.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "In paper-shadow logs, tag any trigger that co-occurs (within ±60s, same symbol) with a live BWE_OI_Price pump-long entry, and track whether the cc_* archetype's marginal lift survives after deduplicating those overlap events. Also confirm in the kernel registry that taker_buy_ratio_5m is wired to the trailing-5m computation (not a forward window) before this archetype enters any keeper promotion."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 36.24
+}

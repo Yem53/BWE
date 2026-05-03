@@ -1,0 +1,22 @@
+{
+  "archetype_ref": "cc_three_signal_funding_neutral_long",
+  "best_case_thesis": "Three-channel alignment (OI_Price + pricechange + Reserved6 firing in concert) is already a high-conviction signal that real flow is moving the tape; gating it on funding-neutral (|funding| <= 1bp) surgically excludes the dominant failure mode of cross-channel longs — entering AFTER perp-driven crowded longs have inflated funding, where the move is mostly squeeze-exhaustion rather than spot-led demand. Combined with taker_buy_ratio_5m >= 0.60 and high-liquidity bucket, this isolates the rare regime where aggressive market-buy aggression coincides with NO crowded-perp-long premium — i.e. spot-led, organic momentum that has runway because shorts haven't been wiped yet and longs haven't paid up.",
+  "expected_alpha_source": "Funding-neutral filter eliminates the post-squeeze 'late-long' trap where cross-channel triple alignment is a coincident lagging indicator of an already-extended perp-crowded move; what remains is spot-flow-led continuation before perp positioning rebuilds.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Early-to-mid trend-day regimes where spot CVD is leading perps and funding hasn't yet repriced — typically the first 1-3 hours of a directional impulse, or post-deleveraging reset windows when funding has just normalized through zero.",
+  "complementary_exit_families": [
+    "fixed",
+    "trail"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E051",
+    "E148"
+  ],
+  "if_paper_works_likely_reason": "The funding-neutral gate will dramatically lower trigger count but raise per-trade quality because each surviving signal represents a structurally rare convergence (three-channel + aggressive taker flow + uncrowded perp book) that historically precedes multi-leg continuation rather than mean-reversion.",
+  "could_compound_with": "Any cross-channel SHORT proposal that conditions on funding>=+0.0003 (crowded-long exhaustion) — together they would partition the cc namespace by funding regime, giving the synthesizer a clean long/short funding-conditional pair instead of overlapping cc archetypes.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.73
+}

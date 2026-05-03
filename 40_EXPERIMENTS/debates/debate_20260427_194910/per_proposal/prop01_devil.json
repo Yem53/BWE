@@ -1,0 +1,18 @@
+{
+  "summary": "Single proposal X102_fixed_15x_balanced reviewed in depth — geometry is sound and fills a real gap, but TP=1.0% on BWE signals (which historically realize most of their edge in the first 30-90s) deserves monitoring for hit-rate erosion.",
+  "critiques": [
+    {
+      "archetype_ref": "X102_fixed_15x_balanced",
+      "verdict": "seems_ok",
+      "concerns": [
+        "TP=1.0% is ~5x larger than the best-performing fixed-exit TP (~0.20% per E126 R2 finding) — on BWE pricechange/long pumps, much of the edge realizes in the first 30-90s; a 1.0% TP may convert a high-frequency small-edge regime into a lower-hit-rate regime where the 1.5x SL ratio gets tested more often than the historical short-TP geometry would suggest.",
+        "SL=1.5% combined with 8-16 bps round-trip cost means roughly 1 stop ≈ 10-15 winning exits at TP=1.0% net of cost — sample size at 20K-loop scale should be fine, but on the live $1000 account with 5-10% sizing this geometry is more cost-sensitive than the existing TP=0.20%/SL=6.00% winners (which had 80% win rate masking left-tail risk; this one inverts that profile).",
+        "The proposal is exit-only (channel=NA, side=NA) so it will be paired against many entries — the 1.5x ratio's profitability is highly entry-dependent. It may shine on Reserved6 (extreme 8-15%/180s moves where 1.0% TP is easily reached) but underperform on OI_Price subtle drifts where 1.0% rarely triggers before time-stop or SL."
+      ],
+      "monitoring_advice": "During paper-shadow, segment results by entry channel — expect divergent behavior on Reserved6 (high TP hit rate, edge survives) vs OI_Price (low TP hit rate, edge eroded by SL touches). Also track time-to-TP distribution: if median time-to-TP > 5 min, the geometry is mismatched to BWE signal half-life. Verify kelly_capped and p25_capped_tail (the new R2 metrics) both stay positive — this is exactly the geometry those metrics were designed to honestly evaluate."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 33.12
+}

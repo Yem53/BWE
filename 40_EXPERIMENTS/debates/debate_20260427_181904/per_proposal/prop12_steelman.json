@@ -1,0 +1,20 @@
+{
+  "archetype_ref": "basis_curvature_pump_short",
+  "best_case_thesis": "During sharp pump events, retail-driven perp buying creates simultaneous basis blow-outs (perp > spot) and premium index spikes — when BOTH dislocations exceed thresholds at once, market makers and basis arbitrageurs are mechanically forced to short perp / long spot to capture the convergence, creating a structural mean-reversion pressure that a short entry can ride. The joint condition (basis_rate≥0.001 AND premium_bps≥20 AND move_pct≥3) filters for the rare moment where the dislocation is real and not just noise from a single noisy field, which is precisely when arb capital deploys most aggressively.",
+  "expected_alpha_source": "Forced cash-and-carry / basis-arb convergence flow: when perp-spot basis and premium index both blow out together during a pump, delta-neutral arbitrageurs short the perp to lock in the spread, mechanically capping further upside and producing a high-probability fade window.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-funding bull regimes with elevated retail leverage where perp price leads spot — exactly the conditions where basis dislocations are most violent and arb capacity most binding.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E148"
+  ],
+  "if_paper_works_likely_reason": "The joint basis+premium gate isolates a structurally bounded dislocation (arb caps the move), so the short fade has a tight, well-defined target — fixed TP/SL with modest TP captures the convergence before basis re-widens, and the R2 lesson about asymmetric TP/SL traps is naturally avoided because the move is mean-reverting not trending.",
+  "could_compound_with": "Any other short-side perp-dislocation fade proposal in this batch using funding_rate or OI divergence — stacking independent dislocation signals (basis, premium, funding, OI) would form an ensemble where each confirms the others' arb-pressure thesis, and a meta-filter requiring 2-of-N could materially raise precision.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 28.59
+}

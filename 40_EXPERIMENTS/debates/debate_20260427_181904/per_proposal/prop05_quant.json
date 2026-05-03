@@ -1,0 +1,29 @@
+{
+  "summary": "Single mean-reversion short proposal is structurally distinct, fully parseable against SUPPORTED_FIELDS, and projects to adequate sample size with broad exit-family compatibility.",
+  "analyses": [
+    {
+      "archetype_ref": "pc_pump_funding_positive_taker_sell_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E126",
+        "E064",
+        "E066",
+        "E148"
+      ],
+      "distinctness_notes": "Top pricechange winners (E126/E064/E066) are all LONG continuation entries keyed on taker-buy dominance; E148 is long with global_short_high. This proposal inverts the logic: SHORT side, taker-SELL dominance (taker_buy_ratio_5m<=0.40), positive funding (crowded-long fade), gated by move_pct>=3. The conjunction of (a) short-side, (b) taker-sell dominance, (c) positive-funding crowding, and (d) magnitude gate is not represented in the top-10 preview and is mechanically a mean-reversion fade rather than continuation — orthogonal to the dominant winning family. Across 94 existing shorts the slug is not a verbatim duplicate.",
+      "expected_triggers_30d": 225,
+      "triggers_estimate_method": "pricechange base ~5000 events/30d × move_pct>=3 retention ~0.50 (pump events skew toward larger moves) = 2500 × funding>=0.0005 (positive & non-trivial, ~p60-p70 on alts) ~0.30 = 750 × taker_buy_ratio_5m<=0.40 (taker-sell dominant, roughly bottom ~30% of distribution) ~0.30 = ~225. Conservative; conditions are partially correlated (pumps with positive funding often still see net taker-buy, which would *reduce* the joint), so true count could land 120–250.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Mean-reversion fade with natural symmetric TP/SL favors `fixed` (the only exit family with positive mean/median in coverage; max 0.395) and `breakeven` (caps left tail, useful given R2 E126 asymmetric-TP/SL trap lesson). `time_only` is a poor fit (worst mean -0.73) since fades need price-based exits. `trail` is plausible if the reversion extends but historically negative-mean here. `multi_tp` weakest. Recommend prioritizing fixed (tight TP ~0.4–0.8%, SL ~0.6–1.2%) and breakeven variants; deprioritize time_only/multi_tp."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 29.79
+}

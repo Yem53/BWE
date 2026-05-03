@@ -1,0 +1,24 @@
+{
+  "summary": "Exit-family archetype with computable filter and adequate sample base; structurally distinct from existing entry-heavy registry and well-targeted at the trail-family near-zero-max gap.",
+  "analyses": [
+    {
+      "archetype_ref": "x102_wide_trail_2pct_exit",
+      "distinct": true,
+      "distinct_from_existing_ids": [],
+      "distinctness_notes": "Exit-family archetype targeting trail kernel with widened 2.0% step parameter — addresses pattern_miner finding that trail family max ≈ -0.006 (parameter mis-tune, not dead concept). Existing registry has 101 exits but no swept wider-trail variant per R2 synthesizer's self-identified X101+ exit-side starvation gap. The liquidity_bucket=high filter further differentiates by restricting to deeper books where wider trails are more justifiable.",
+      "expected_triggers_30d": 300,
+      "triggers_estimate_method": "Exit archetype applies across all entry-matched triggers; with liquidity_bucket=high filter ≈ ~30% of universe. Across top entries (3000-5000 trig each) × 0.30 high-liquidity rate ≈ 900-1500 candidate trigger contexts; conservatively 300+ after entry-pairing constraints.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Explicitly targets the trail exit family. Note: trail step (2.0%) is an exit-kernel parameter, not a filter condition — it will be passed as exit-config to the GPU sweep, not parsed by bwe_loop_entry_filter. Proposal is well-formed: 1/1 supported filter conditions, exit param sits in the correct config slot. Strongly recommend pairing with high-lift long-side entries (E126, E064, E051) where wider trail can capture extended pump legs without premature stop-out."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.94
+}

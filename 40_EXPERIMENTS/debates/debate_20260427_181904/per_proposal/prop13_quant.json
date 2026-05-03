@@ -1,0 +1,24 @@
+{
+  "summary": "Exit archetype is structurally novel (first time_only attempt paired with a taker-buy gating filter) and parseable, but sample size is tight and exit-family base rate (0/2745 positives) warrants caution.",
+  "analyses": [
+    {
+      "archetype_ref": "x101_quick_cut_60s_time_exit",
+      "distinct": true,
+      "distinct_from_existing_ids": [],
+      "distinctness_notes": "No existing archetype in the preview combines a pure time_only 60s exit with a taker_buy_ratio_5m gating filter; prior time_only runs (n=2745) had 0 positives and pattern_miner flagged the mean-reversion pairing as untested. As an exit-side archetype with a quantitative entry gate it is materially different from the entry-heavy registry (X101+ pipeline was self-identified as starved in R2).",
+      "expected_triggers_30d": 420,
+      "triggers_estimate_method": "Channel-agnostic exit pairing: assume it attaches to pricechange-style high-conviction entries (~5000 events/30d baseline) × ~0.30 fraction with taker_buy_ratio_5m>=0.65 (extreme upper tail, between p70 and p80 by typical distribution) × ~0.28 surviving any side/event gate the entry imposes ≈ 420. Conservative variant on OI_Price (~1400×0.30) ≈ 420 also lands in the same band.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "By construction this is a time_only/60s exit — the entire archetype IS the exit family choice. Note the historical base rate: time_only had 0/2745 positives (mean -0.73). Mathematical health is OK (filter parses, sample is ample, distinctness real), but the Synthesizer should treat this as a deliberate hypothesis test of the pattern_miner conjecture rather than a high-prior winner. Recommend GPU loop pair it with quick-revert long entries on pricechange (E036/E038/E039 first-signal long families) where mean-reversion within 60s is most plausible; avoid pairing with momentum-continuation entries where 60s truncates the edge."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 26.12
+}

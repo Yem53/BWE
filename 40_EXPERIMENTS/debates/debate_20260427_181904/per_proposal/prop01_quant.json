@@ -1,0 +1,26 @@
+{
+  "summary": "Proposal is mathematically healthy: all 3 novel_dim conditions are parser-supported, structurally distinct from existing OI_Price archetypes, and expected sample size is adequate for Phase 3 evaluation with broad exit compatibility.",
+  "analyses": [
+    {
+      "archetype_ref": "oi_pump_global_short_high_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E148"
+      ],
+      "distinctness_notes": "E148 lives in pricechange channel; this proposal ports the global_short_high squeeze-fuel hypothesis to OI_Price channel where the trigger distribution is fundamentally different (OI bursts vs price moves). Additional liquidity_bucket=high and oi_change_pct>=12 narrowing makes the filter signature unique among the 61 existing OI_Price entry archetypes. Channel migration of a logic pattern is structural distinctness, not duplication — different event base rate, different entry timing, different microstructure.",
+      "expected_triggers_30d": 168,
+      "triggers_estimate_method": "OI_Price base ~1400 events × 0.6 (oi_change_pct>=12 — moderate threshold, ~60% of OI events meet 12% pump bar based on channel-typical magnitudes) × 0.25 (global_short_ratio_high = p75 flag, ~25% of universe) × 0.8 (liquidity_bucket=high, dominant bucket for OI-active names) ≈ 168",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Squeeze-fuel longs benefit most from `fixed` (the only family with positive mean +0.175 in coverage) and `multi_tp` ladders to capture asymmetric upside on short-squeeze impulses. `trail` is a reasonable secondary to ride extended squeezes. Avoid `time_only` (worst family, mean -0.73) and `breakeven` (mean -0.096) — both cut squeeze runners prematurely. Recommend Phase 3 grid prioritize fixed + multi_tp with TP-skewed ratios to avoid the E126 asymmetric-TP/SL trap flagged in R2 lessons."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 26.8
+}

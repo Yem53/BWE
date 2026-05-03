@@ -1,0 +1,21 @@
+{
+  "summary": "Single short-entry mean-reversion fade using funding, taker_buy_ratio_5m, and move_pct — all T0-observable supported fields with no leakage; advisory monitoring concerns only.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "pc_pump_funding_positive_taker_sell_short",
+      "leakage_risk": "none",
+      "leakage_notes": "All three novel_dim fields (funding, taker_buy_ratio_5m, move_pct) are point-in-time observables at T0. No forward_*, post_event_*, or confirm_after_* references. funding rates are published on a known schedule and taker_buy_ratio_5m is a trailing 5m window (backward-looking), not forward. move_pct is the trigger magnitude itself.",
+      "multitest_inflation_risk": "low",
+      "multitest_inflation_notes": "Among 94 existing short entries on pricechange channel, this is the first to combine funding sign with taker-flow imbalance as a crowding fade. Three orthogonal supported fields reduce family-wise overlap rather than inflate it.",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "User runs BWE_OI_Price_monitor pump long live. This proposal is a SHORT on pricechange pump events — opposite side. Symbol overlap is plausible during a pump that satisfies both channels' triggers, producing simultaneous long (live) and short (paper) positions on the same name. Paper-shadow only, so no real hedging conflict, but flag for monitoring.",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "Paper-shadow only; log any concurrent same-symbol overlap with the live pump-long strategy in the daily monitor so the user can eyeball cross-strategy correlation. No code change required."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 20.29
+}

@@ -1,0 +1,242 @@
+project: bwe_complete_strategy_v6_max_alpha
+mode: paper_research_only
+live_allowed: false
+paper_only: true
+
+data:
+  lookback_days: 30
+  required_input_manifest: manifests/data_manifest.json
+  path_resolution_priority:
+    - 1m_trade_kline
+    - 1m_mark
+    - 5m_stat_bucket
+  allow_missing_trade_kline: true
+  missing_trade_kline_policy: mark_path_fallback_with_flag
+  legacy_market_cache:
+    enabled: true
+    source_dir: /data/bwe/v6/reference/legacy_market_cache
+    normalize_before_medium: true
+    output_parquet: /data/bwe/v6/cache/normalized/legacy_trade_kline_1m_windows.parquet
+    required_audit_files:
+      - /data/bwe/v6/cache/normalized/legacy_market_cache_parse_audit.csv
+      - /data/bwe/v6/cache/normalized/legacy_market_cache_coverage_by_event.csv
+      - /data/bwe/v6/cache/normalized/legacy_market_cache_coverage_by_symbol.csv
+  trade_kline_coverage:
+    audit_before_medium: true
+    decide_path_resolution_before_max_alpha: true
+    output_event_windows: /data/bwe/v6/cache/normalized/trade_kline_1m_event_windows.parquet
+    required_reports:
+      - trade_kline_coverage_report.csv
+      - trade_kline_missing_events.csv
+      - trade_kline_path_resolution_decision.md
+    use_trade_kline_as_primary_if_event_coverage_gte_pct: 95
+    use_trade_kline_as_primary_if_minute_coverage_gte_pct: 98
+    use_trade_kline_as_sensitivity_if_event_coverage_gte_pct: 80
+    fallback_path_resolution: 1m_mark
+    first_touch_requires_coverage_report: true
+
+llm:
+  provider: codex_subscription
+  quality_priority: high
+  cost_priority: moderate
+  max_codex_calls_total: 220
+  target_codex_calls_total: 80-180
+  max_codex_calls_per_round: 18
+  target_codex_calls_per_round: 10-18
+  target_rounds: 5-10
+  read_mode: summaries_only
+  require_research_ledger: true
+  require_round_directive: true
+  require_mutation_log: true
+  require_risk_blockers: true
+  forbidden_reads:
+    - secrets
+    - live_trading_config
+    - private_keys
+  roles:
+    - meta_research_director
+    - strategy_architect
+    - experiment_mutator
+    - results_analyst
+    - risk_critic
+    - lead_synthesizer
+  call_priority:
+    - risk_critic
+    - results_analyst
+    - lead_synthesizer
+    - strategy_architect
+    - experiment_mutator
+    - meta_research_director
+  stop_rules:
+    no_top_score_improvement_rounds: 3
+    repeated_risk_blocker_rounds: 3
+    stop_if_sample_size_is_primary_bottleneck: true
+    stop_if_portfolio_replay_erases_edge: true
+
+validation_layers:
+  baseline_comparison:
+    required: true
+    baselines:
+      - message_only
+      - timing_t0
+      - timing_30s
+      - timing_1m
+      - timing_3m
+      - timing_5m
+      - simple_fixed_tp_sl
+      - simple_fixed_horizon
+      - current_live_bwe_oi_pump_long
+      - v5_paper_manifest_reference
+      - random_entry
+      - shuffled_timestamp
+      - shuffled_symbol
+    required_outputs:
+      - baseline_catalog.jsonl
+      - baseline_comparison.csv
+      - baseline_vs_strategy_lift.csv
+  execution_model:
+    required: true
+    fee_models: [base_taker, stressed_taker]
+    latency_seconds_grid: [0, 1, 3, 5, 10, 30]
+    slippage_models: [base, stressed, liquidity_aware]
+    entry_order_types: [market, limit_with_missed_fill, chase_with_max_offset]
+    required_outputs:
+      - execution_cost_model.json
+      - latency_stress_grid.json
+      - fee_slippage_latency_stress.csv
+      - missed_fill_simulation.csv
+  dedup_diversity:
+    required: true
+    max_manifest_per_similarity_cluster: 2
+    required_outputs:
+      - strategy_fingerprint.parquet
+      - strategy_similarity_clusters.csv
+      - strategy_dedup_leaderboard.csv
+      - manifest_diversity_report.csv
+  statistical_significance:
+    required: true
+    bootstrap_required: true
+    permutation_required: true
+    multiple_testing_penalty_required: true
+    effective_sample_size_required: true
+    required_outputs:
+      - bootstrap_confidence_intervals.csv
+      - permutation_test_results.csv
+      - multiple_testing_penalty.csv
+      - effective_sample_size_report.csv
+      - false_discovery_audit.md
+  paper_shadow_path:
+    required: true
+    live_allowed: false
+    required_outputs:
+      - paper_forward_plan.md
+      - paper_forward_signal_schema.json
+      - shadow_validation_plan.md
+      - promotion_gate_research_to_paper.csv
+
+search_budget:
+  smoke:
+    candidate_space_sample: 1000000
+    coarse_eval: 100000
+    medium_eval: 5000
+    deep_eval: 500
+    stress_eval: 100
+    portfolio_eval: 50
+  medium:
+    candidate_space_sample: 100000000
+    coarse_eval: 10000000
+    medium_eval: 200000
+    deep_eval: 10000
+    stress_eval: 1000
+    portfolio_eval: 300
+    prerequisites:
+      - legacy_market_cache_normalized
+      - trade_kline_coverage_report
+      - path_resolution_decision
+  max_alpha:
+    candidate_space_target: 500000000000
+    candidate_space_scale_label: 500B_complete_strategy_space
+    coarse_eval_min: 100000000
+    medium_eval_min: 1000000
+    medium_eval_target: 5000000
+    deep_eval_min: 50000
+    deep_eval_target: 200000
+    stress_eval_min: 5000
+    stress_eval_target: 20000
+    portfolio_eval_min: 500
+    portfolio_eval_target: 2000
+    prerequisites:
+      - path_resolution_decision
+      - trade_kline_or_mark_fallback_policy
+
+strategy_space:
+  target_complete_strategy_space: 500000000000
+  scale_policy: lazy_expand_then_stage_filter
+  expansion_notes:
+    - 500B is the searchable complete-strategy universe, not an instruction to materialize every candidate.
+    - Every candidate remains a complete strategy with trigger, trade/no_trade, side, timing, entry gates, risk, exit state machine, execution model, and portfolio rule.
+    - v5 paper strategies remain baselines/reference only and do not bound this universe.
+  sides: [long, short, no_trade]
+  entry_delays_seconds: [0, 30, 60, 180, 300]
+  horizons_minutes: [5, 10, 15, 30, 60, 120, 240]
+  threshold_grid_buckets: [q05, q10, q15, q20, q25, q30, q35, q40, q45, q50, q55, q60, q65, q70, q75, q80, q85, q90, q95]
+  condition_depth_grid: [0, 1, 2, 3, 4, 5, 6]
+  state_machine_variants_per_exit_family: 512
+  execution_model_variants: 96
+  portfolio_rule_variants: 288
+  exit_families:
+    - fixed_tp_sl
+    - multi_tp_sl
+    - partial_ladder
+    - trailing_stop
+    - runner_trail
+    - breakeven_ratchet
+    - time_decay
+    - prove_or_exit
+    - failed_continuation
+    - indicator_invalidation
+    - state_machine
+  feature_families:
+    - message_context
+    - oi_funding
+    - global_long_short
+    - top_trader_account
+    - top_trader_position
+    - taker_flow
+    - basis_premium_mark
+    - kline_structure
+    - btc_eth_regime
+    - liquidity_listing
+    - cross_channel_confirmation
+
+scoring:
+  priority:
+    - median_net_pct
+    - p25_net_pct
+    - p10_net_pct
+    - profit_factor
+    - max_drawdown_pct
+    - longest_losing_streak
+    - walk_forward_positive_rate_pct
+    - top1_removed_mean_net_pct
+    - remove_top_1pct_mean_net_pct
+    - mfe_capture_ratio
+    - giveback_ratio
+    - stress_fee_slippage_median_net_pct
+    - portfolio_drawdown_pct
+    - symbol_concentration
+    - complexity_penalty
+    - mean_net_pct
+  reject_if:
+    future_safety_violation: true
+    median_net_pct_lte: 0
+    stress_median_net_pct_lte: 0
+    sample_size_lt: 20
+    profit_factor_lt: 1.2
+
+portfolio:
+  max_concurrent_positions_grid: [1, 2, 3, 5, 8, 12]
+  same_symbol_cooldown_minutes_grid: [15, 30, 60, 120, 240]
+  daily_loss_stop_pct_grid: [2, 3, 5, 8]
+  losing_streak_pause_grid: [3, 5, 7]
+  one_position_per_symbol: true

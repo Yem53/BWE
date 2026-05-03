@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "pc_pump_funding_positive_taker_sell_short",
+  "predicted_tp_pct": 0.8,
+  "predicted_sl_pct": 1.6,
+  "predicted_tp_sl_ratio": 0.5,
+  "predicted_win_rate": 0.58,
+  "predicted_mean_per_trade_pct": -0.094,
+  "predicted_kelly_pct": 0.0,
+  "trap_risk": "medium",
+  "trap_reasoning": "This is a mean-reversion fade on a crowded-long pump (positive funding + taker SELL dominance + ≥3% move). Unlike E126 (continuation pump), the thesis here is symmetric: if the crowd is wrong, price reverts ~1-2% within minutes; if the pump continues, it typically extends another 1-3% before exhausting. So the natural TP/SL geometry is far more symmetric than E126's 0.51/6.00 trap — I'd expect GPU to converge near TP≈0.8%, SL≈1.5-2%, ratio ≈0.4-0.6. Win-rate prediction is moderate (~55-62%): three AND conditions are reasonably selective but funding≥5bps + taker_buy≤0.40 + move≥3% will still trigger meaningfully (estimate ~800-1500 triggers). The risk: shorts into pumps have fat right tails (squeeze risk), so even with symmetric TP/SL the realized SL hits may cluster on the worst pumps. Honest expectancy after 8bps cost: 0.58×0.8 − 0.42×1.6 − 0.08 = 0.464 − 0.672 − 0.08 = −0.288%; even at win=0.62 it's −0.06%. Kelly returns 0 for negative expectancy. Trap risk is MEDIUM not HIGH because the geometry is structurally symmetric (unlike E126), but the edge is not obvious — this depends heavily on whether the funding+taker_sell combo actually predicts reversion vs being a lagging confirmation of a pump that continues. Some uncertainty on win-rate; if true reversion edge exists it could hit 0.65+ and become positive expectancy.",
+  "recommended_constraint": "force SL ≤ 2 × TP_pct in variant grid to prevent GPU from drifting into asymmetric squeeze-protection geometry",
+  "metric_score_estimate": 1.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.94
+}

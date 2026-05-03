@@ -1,0 +1,59 @@
+{
+  "LIVE": {
+    "L2": {
+      "label": "L2",
+      "n_total": 82,
+      "n_traded": 82,
+      "n_skip": 0,
+      "trade_rate": 100.0,
+      "total_raw": 149.03564920896662,
+      "total_cap": 7.451782460448332,
+      "win_rate": 67.07317073170732,
+      "mean_raw": 1.8175079171825197,
+      "mean_cap": 0.09087539585912599,
+      "best": 47.79104477611939,
+      "worst": -17.49049429657795,
+      "big_wins_10pct": 11,
+      "catastrophes_15pct": 1
+    },
+    "L3": {
+      "label": "L3",
+      "n_total": 82,
+      "n_traded": 64,
+      "n_skip": 18,
+      "trade_rate": 78.04878048780488,
+      "total_raw": 143.88021793206727,
+      "total_cap": 7.194010896603364,
+      "win_rate": 68.75,
+      "mean_raw": 2.248128405188551,
+      "mean_cap": 0.11240642025942756,
+      "best": 47.79104477611939,
+      "worst": -12.96526211771859,
+      "big_wins_10pct": 9,
+      "catastrophes_15pct": 0
+    },
+    "L3.5": {
+      "label": "L3.5",
+      "n_total": 82,
+      "n_traded": 66,
+      "n_skip": 16,
+      "trade_rate": 80.48780487804879,
+      "total_raw": 121.36684113858207,
+      "total_cap": 5.1103261940862215,
+      "win_rate": 66.66666666666666,
+      "mean_raw": 1.8388915324027586,
+      "mean_cap": 0.07742918475888215,
+      "best": 47.79104477611939,
+      "worst": -14.593191879102427,
+      "big_wins_10pct": 9,
+      "catastrophes_15pct": 0
+    },
+    "rule_breakdown_l35": {
+      "A": 16,
+      "C": 8,
+      "G": 49,
+      "D": 3,
+      "B": 6
+    }
+  }
+}

@@ -1,0 +1,1316 @@
+[
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ADAUSDT",
+      1774119000000,
+      1774268999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ADAUSDT', 'startTime': 1774119000000, 'endTime': 1774268999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ADAUSDT&startTime=1774119000000&endTime=1774268999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ADAUSDT",
+      1774269000000,
+      1774418999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ADAUSDT', 'startTime': 1774269000000, 'endTime': 1774418999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ADAUSDT&startTime=1774269000000&endTime=1774418999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ADAUSDT",
+      1774419000000,
+      1774568999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ADAUSDT', 'startTime': 1774419000000, 'endTime': 1774568999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ADAUSDT&startTime=1774419000000&endTime=1774568999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AEROUSDT",
+      1774258500000,
+      1774265778000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AEROUSDT', 'startTime': 1774258500000, 'endTime': 1774265778000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AEROUSDT&startTime=1774258500000&endTime=1774265778000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AGTUSDT",
+      1774132800000,
+      1774282799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AGTUSDT', 'startTime': 1774132800000, 'endTime': 1774282799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AGTUSDT&startTime=1774132800000&endTime=1774282799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AGTUSDT",
+      1774282800000,
+      1774432799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AGTUSDT', 'startTime': 1774282800000, 'endTime': 1774432799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AGTUSDT&startTime=1774282800000&endTime=1774432799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AGTUSDT",
+      1774432800000,
+      1774582799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AGTUSDT', 'startTime': 1774432800000, 'endTime': 1774582799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AGTUSDT&startTime=1774432800000&endTime=1774582799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AIAUSDT",
+      1774119000000,
+      1774268999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AIAUSDT', 'startTime': 1774119000000, 'endTime': 1774268999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AIAUSDT&startTime=1774119000000&endTime=1774268999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AIAUSDT",
+      1774269000000,
+      1774418999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AIAUSDT', 'startTime': 1774269000000, 'endTime': 1774418999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AIAUSDT&startTime=1774269000000&endTime=1774418999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AIAUSDT",
+      1774419000000,
+      1774568999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AIAUSDT', 'startTime': 1774419000000, 'endTime': 1774568999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AIAUSDT&startTime=1774419000000&endTime=1774568999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AINUSDT",
+      1774190700000,
+      1774340699999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AINUSDT', 'startTime': 1774190700000, 'endTime': 1774340699999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AINUSDT&startTime=1774190700000&endTime=1774340699999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AINUSDT",
+      1774340700000,
+      1774490699999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AINUSDT', 'startTime': 1774340700000, 'endTime': 1774490699999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AINUSDT&startTime=1774340700000&endTime=1774490699999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ARIAUSDT",
+      1774182000000,
+      1774331999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ARIAUSDT', 'startTime': 1774182000000, 'endTime': 1774331999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ARIAUSDT&startTime=1774182000000&endTime=1774331999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ARIAUSDT",
+      1774332000000,
+      1774481999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ARIAUSDT', 'startTime': 1774332000000, 'endTime': 1774481999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ARIAUSDT&startTime=1774332000000&endTime=1774481999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ASTERUSDT",
+      1774119600000,
+      1774129151000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ASTERUSDT', 'startTime': 1774119600000, 'endTime': 1774129151000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ASTERUSDT&startTime=1774119600000&endTime=1774129151000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ATAUSDT",
+      1774380300000,
+      1774530299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ATAUSDT', 'startTime': 1774380300000, 'endTime': 1774530299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ATAUSDT&startTime=1774380300000&endTime=1774530299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "AXLUSDT",
+      1774378800000,
+      1774528799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'AXLUSDT', 'startTime': 1774378800000, 'endTime': 1774528799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=AXLUSDT&startTime=1774378800000&endTime=1774528799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BANANAS31USDT",
+      1774144200000,
+      1774181329000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BANANAS31USDT', 'startTime': 1774144200000, 'endTime': 1774181329000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BANANAS31USDT&startTime=1774144200000&endTime=1774181329000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BANUSDT",
+      1774206600000,
+      1774356599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BANUSDT', 'startTime': 1774206600000, 'endTime': 1774356599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BANUSDT&startTime=1774206600000&endTime=1774356599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BANUSDT",
+      1774356600000,
+      1774506599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BANUSDT', 'startTime': 1774356600000, 'endTime': 1774506599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BANUSDT&startTime=1774356600000&endTime=1774506599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BASUSDT",
+      1774182300000,
+      1774332299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BASUSDT', 'startTime': 1774182300000, 'endTime': 1774332299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BASUSDT&startTime=1774182300000&endTime=1774332299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BASUSDT",
+      1774332300000,
+      1774482299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BASUSDT', 'startTime': 1774332300000, 'endTime': 1774482299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BASUSDT&startTime=1774332300000&endTime=1774482299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BCHUSDT",
+      1774131900000,
+      1774281899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BCHUSDT', 'startTime': 1774131900000, 'endTime': 1774281899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BCHUSDT&startTime=1774131900000&endTime=1774281899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BCHUSDT",
+      1774281900000,
+      1774431899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BCHUSDT', 'startTime': 1774281900000, 'endTime': 1774431899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BCHUSDT&startTime=1774281900000&endTime=1774431899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BCHUSDT",
+      1774431900000,
+      1774497304000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BCHUSDT', 'startTime': 1774431900000, 'endTime': 1774497304000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BCHUSDT&startTime=1774431900000&endTime=1774497304000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BEATUSDT",
+      1774149600000,
+      1774299599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BEATUSDT', 'startTime': 1774149600000, 'endTime': 1774299599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BEATUSDT&startTime=1774149600000&endTime=1774299599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BEATUSDT",
+      1774299600000,
+      1774449599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BEATUSDT', 'startTime': 1774299600000, 'endTime': 1774449599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BEATUSDT&startTime=1774299600000&endTime=1774449599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BEATUSDT",
+      1774449600000,
+      1774599599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BEATUSDT', 'startTime': 1774449600000, 'endTime': 1774599599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BEATUSDT&startTime=1774449600000&endTime=1774599599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BLUAIUSDT",
+      1774177800000,
+      1774327799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BLUAIUSDT', 'startTime': 1774177800000, 'endTime': 1774327799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BLUAIUSDT&startTime=1774177800000&endTime=1774327799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BLUAIUSDT",
+      1774327800000,
+      1774477799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BLUAIUSDT', 'startTime': 1774327800000, 'endTime': 1774477799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BLUAIUSDT&startTime=1774327800000&endTime=1774477799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BNBUSDT",
+      1774246800000,
+      1774255814000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BNBUSDT', 'startTime': 1774246800000, 'endTime': 1774255814000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BNBUSDT&startTime=1774246800000&endTime=1774255814000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BOBUSDT",
+      1774113600000,
+      1774263599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BOBUSDT', 'startTime': 1774113600000, 'endTime': 1774263599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BOBUSDT&startTime=1774113600000&endTime=1774263599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BOBUSDT",
+      1774263600000,
+      1774413599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BOBUSDT', 'startTime': 1774263600000, 'endTime': 1774413599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BOBUSDT&startTime=1774263600000&endTime=1774413599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BOBUSDT",
+      1774413600000,
+      1774563599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BOBUSDT', 'startTime': 1774413600000, 'endTime': 1774563599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BOBUSDT&startTime=1774413600000&endTime=1774563599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BRUSDT",
+      1774294800000,
+      1774444799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BRUSDT', 'startTime': 1774294800000, 'endTime': 1774444799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BRUSDT&startTime=1774294800000&endTime=1774444799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BRUSDT",
+      1774144800000,
+      1774294799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BRUSDT', 'startTime': 1774144800000, 'endTime': 1774294799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BRUSDT&startTime=1774144800000&endTime=1774294799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BRUSDT",
+      1774444800000,
+      1774594799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BRUSDT', 'startTime': 1774444800000, 'endTime': 1774594799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BRUSDT&startTime=1774444800000&endTime=1774594799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BSBUSDT",
+      1774440900000,
+      1774590899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BSBUSDT', 'startTime': 1774440900000, 'endTime': 1774590899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BSBUSDT&startTime=1774440900000&endTime=1774590899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BTCUSDT",
+      1774395900000,
+      1774545899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BTCUSDT', 'startTime': 1774395900000, 'endTime': 1774545899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BTCUSDT&startTime=1774395900000&endTime=1774545899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BTCUSDT",
+      1774245900000,
+      1774395899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BTCUSDT', 'startTime': 1774245900000, 'endTime': 1774395899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BTCUSDT&startTime=1774245900000&endTime=1774395899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BTRUSDT",
+      1774297200000,
+      1774447199999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BTRUSDT', 'startTime': 1774297200000, 'endTime': 1774447199999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BTRUSDT&startTime=1774297200000&endTime=1774447199999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BTRUSDT",
+      1774147200000,
+      1774297199999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BTRUSDT', 'startTime': 1774147200000, 'endTime': 1774297199999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BTRUSDT&startTime=1774147200000&endTime=1774297199999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "BTRUSDT",
+      1774447200000,
+      1774597199999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'BTRUSDT', 'startTime': 1774447200000, 'endTime': 1774597199999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=BTRUSDT&startTime=1774447200000&endTime=1774597199999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "CYSUSDT",
+      1774144200000,
+      1774294199999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'CYSUSDT', 'startTime': 1774144200000, 'endTime': 1774294199999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=CYSUSDT&startTime=1774144200000&endTime=1774294199999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "CYSUSDT",
+      1774294200000,
+      1774444199999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'CYSUSDT', 'startTime': 1774294200000, 'endTime': 1774444199999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=CYSUSDT&startTime=1774294200000&endTime=1774444199999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "CYSUSDT",
+      1774444200000,
+      1774594199999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'CYSUSDT', 'startTime': 1774444200000, 'endTime': 1774594199999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=CYSUSDT&startTime=1774444200000&endTime=1774594199999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "DOGEUSDT",
+      1774119000000,
+      1774268999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'DOGEUSDT', 'startTime': 1774119000000, 'endTime': 1774268999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=DOGEUSDT&startTime=1774119000000&endTime=1774268999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "DOGEUSDT",
+      1774269000000,
+      1774418999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'DOGEUSDT', 'startTime': 1774269000000, 'endTime': 1774418999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=DOGEUSDT&startTime=1774269000000&endTime=1774418999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "DOGEUSDT",
+      1774419000000,
+      1774568999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'DOGEUSDT', 'startTime': 1774419000000, 'endTime': 1774568999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=DOGEUSDT&startTime=1774419000000&endTime=1774568999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "DUSKUSDT",
+      1774152300000,
+      1774302299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'DUSKUSDT', 'startTime': 1774152300000, 'endTime': 1774302299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=DUSKUSDT&startTime=1774152300000&endTime=1774302299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "DUSKUSDT",
+      1774302300000,
+      1774452299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'DUSKUSDT', 'startTime': 1774302300000, 'endTime': 1774452299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=DUSKUSDT&startTime=1774302300000&endTime=1774452299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "DUSKUSDT",
+      1774452300000,
+      1774602299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'DUSKUSDT', 'startTime': 1774452300000, 'endTime': 1774602299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=DUSKUSDT&startTime=1774452300000&endTime=1774602299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "DYDXUSDT",
+      1774440000000,
+      1774589999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'DYDXUSDT', 'startTime': 1774440000000, 'endTime': 1774589999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=DYDXUSDT&startTime=1774440000000&endTime=1774589999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "EDGEUSDT",
+      1774127400000,
+      1774277399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'EDGEUSDT', 'startTime': 1774127400000, 'endTime': 1774277399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=EDGEUSDT&startTime=1774127400000&endTime=1774277399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "EDGEUSDT",
+      1774277400000,
+      1774427399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'EDGEUSDT', 'startTime': 1774277400000, 'endTime': 1774427399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=EDGEUSDT&startTime=1774277400000&endTime=1774427399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "EDGEUSDT",
+      1774427400000,
+      1774577399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'EDGEUSDT', 'startTime': 1774427400000, 'endTime': 1774577399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=EDGEUSDT&startTime=1774427400000&endTime=1774577399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ESPORTSUSDT",
+      1774119600000,
+      1774269599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ESPORTSUSDT', 'startTime': 1774119600000, 'endTime': 1774269599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ESPORTSUSDT&startTime=1774119600000&endTime=1774269599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ESPORTSUSDT",
+      1774269600000,
+      1774419599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ESPORTSUSDT', 'startTime': 1774269600000, 'endTime': 1774419599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ESPORTSUSDT&startTime=1774269600000&endTime=1774419599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ESPORTSUSDT",
+      1774419600000,
+      1774569599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ESPORTSUSDT', 'startTime': 1774419600000, 'endTime': 1774569599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ESPORTSUSDT&startTime=1774419600000&endTime=1774569599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ETHUSDT",
+      1774119000000,
+      1774268999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ETHUSDT', 'startTime': 1774119000000, 'endTime': 1774268999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ETHUSDT&startTime=1774119000000&endTime=1774268999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ETHUSDT",
+      1774269000000,
+      1774418999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ETHUSDT', 'startTime': 1774269000000, 'endTime': 1774418999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ETHUSDT&startTime=1774269000000&endTime=1774418999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ETHUSDT",
+      1774419000000,
+      1774568999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ETHUSDT', 'startTime': 1774419000000, 'endTime': 1774568999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ETHUSDT&startTime=1774419000000&endTime=1774568999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "FIGHTUSDT",
+      1774229700000,
+      1774379699999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'FIGHTUSDT', 'startTime': 1774229700000, 'endTime': 1774379699999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=FIGHTUSDT&startTime=1774229700000&endTime=1774379699999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "FIGHTUSDT",
+      1774379700000,
+      1774529699999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'FIGHTUSDT', 'startTime': 1774379700000, 'endTime': 1774529699999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=FIGHTUSDT&startTime=1774379700000&endTime=1774529699999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "FILUSDT",
+      1774117500000,
+      1774267499999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'FILUSDT', 'startTime': 1774117500000, 'endTime': 1774267499999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=FILUSDT&startTime=1774117500000&endTime=1774267499999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "FILUSDT",
+      1774267500000,
+      1774417499999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'FILUSDT', 'startTime': 1774267500000, 'endTime': 1774417499999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=FILUSDT&startTime=1774267500000&endTime=1774417499999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "FILUSDT",
+      1774417500000,
+      1774567499999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'FILUSDT', 'startTime': 1774417500000, 'endTime': 1774567499999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=FILUSDT&startTime=1774417500000&endTime=1774567499999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "GASUSDT",
+      1774337400000,
+      1774344866000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'GASUSDT', 'startTime': 1774337400000, 'endTime': 1774344866000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=GASUSDT&startTime=1774337400000&endTime=1774344866000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "GRASSUSDT",
+      1774170000000,
+      1774319999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'GRASSUSDT', 'startTime': 1774170000000, 'endTime': 1774319999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=GRASSUSDT&startTime=1774170000000&endTime=1774319999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "GRASSUSDT",
+      1774320000000,
+      1774469999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'GRASSUSDT', 'startTime': 1774320000000, 'endTime': 1774469999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=GRASSUSDT&startTime=1774320000000&endTime=1774469999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "GUNUSDT",
+      1774200300000,
+      1774350299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'GUNUSDT', 'startTime': 1774200300000, 'endTime': 1774350299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=GUNUSDT&startTime=1774200300000&endTime=1774350299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "GUNUSDT",
+      1774350300000,
+      1774500299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'GUNUSDT', 'startTime': 1774350300000, 'endTime': 1774500299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=GUNUSDT&startTime=1774350300000&endTime=1774500299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "HANAUSDT",
+      1774191900000,
+      1774199230000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'HANAUSDT', 'startTime': 1774191900000, 'endTime': 1774199230000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=HANAUSDT&startTime=1774191900000&endTime=1774199230000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "IMXUSDT",
+      1774119600000,
+      1774269599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'IMXUSDT', 'startTime': 1774119600000, 'endTime': 1774269599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=IMXUSDT&startTime=1774119600000&endTime=1774269599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "IMXUSDT",
+      1774269600000,
+      1774419599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'IMXUSDT', 'startTime': 1774269600000, 'endTime': 1774419599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=IMXUSDT&startTime=1774269600000&endTime=1774419599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "IMXUSDT",
+      1774419600000,
+      1774569599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'IMXUSDT', 'startTime': 1774419600000, 'endTime': 1774569599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=IMXUSDT&startTime=1774419600000&endTime=1774569599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "IOTXUSDT",
+      1774319400000,
+      1774326679000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'IOTXUSDT', 'startTime': 1774319400000, 'endTime': 1774326679000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=IOTXUSDT&startTime=1774319400000&endTime=1774326679000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "IOTAUSDT",
+      1774119600000,
+      1774126920000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'IOTAUSDT', 'startTime': 1774119600000, 'endTime': 1774126920000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=IOTAUSDT&startTime=1774119600000&endTime=1774126920000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "IRYSUSDT",
+      1774300500000,
+      1774450499999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'IRYSUSDT', 'startTime': 1774300500000, 'endTime': 1774450499999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=IRYSUSDT&startTime=1774300500000&endTime=1774450499999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "IRYSUSDT",
+      1774450500000,
+      1774600499999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'IRYSUSDT', 'startTime': 1774450500000, 'endTime': 1774600499999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=IRYSUSDT&startTime=1774450500000&endTime=1774600499999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "JCTUSDT",
+      1774177800000,
+      1774327799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'JCTUSDT', 'startTime': 1774177800000, 'endTime': 1774327799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=JCTUSDT&startTime=1774177800000&endTime=1774327799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "JCTUSDT",
+      1774327800000,
+      1774477799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'JCTUSDT', 'startTime': 1774327800000, 'endTime': 1774477799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=JCTUSDT&startTime=1774327800000&endTime=1774477799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "JTOUSDT",
+      1774266300000,
+      1774416299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'JTOUSDT', 'startTime': 1774266300000, 'endTime': 1774416299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=JTOUSDT&startTime=1774266300000&endTime=1774416299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "JTOUSDT",
+      1774416300000,
+      1774566299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'JTOUSDT', 'startTime': 1774416300000, 'endTime': 1774566299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=JTOUSDT&startTime=1774416300000&endTime=1774566299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "KATUSDT",
+      1774139700000,
+      1774289699999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'KATUSDT', 'startTime': 1774139700000, 'endTime': 1774289699999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=KATUSDT&startTime=1774139700000&endTime=1774289699999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "KATUSDT",
+      1774289700000,
+      1774439699999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'KATUSDT', 'startTime': 1774289700000, 'endTime': 1774439699999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=KATUSDT&startTime=1774289700000&endTime=1774439699999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "KATUSDT",
+      1774439700000,
+      1774544534000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'KATUSDT', 'startTime': 1774439700000, 'endTime': 1774544534000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=KATUSDT&startTime=1774439700000&endTime=1774544534000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "LABUSDT",
+      1774190100000,
+      1774340099999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'LABUSDT', 'startTime': 1774190100000, 'endTime': 1774340099999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=LABUSDT&startTime=1774190100000&endTime=1774340099999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "LABUSDT",
+      1774340100000,
+      1774490099999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'LABUSDT', 'startTime': 1774340100000, 'endTime': 1774490099999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=LABUSDT&startTime=1774340100000&endTime=1774490099999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "LIGHTUSDT",
+      1774404900000,
+      1774554899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'LIGHTUSDT', 'startTime': 1774404900000, 'endTime': 1774554899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=LIGHTUSDT&startTime=1774404900000&endTime=1774554899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "LIGHTUSDT",
+      1774254900000,
+      1774404899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'LIGHTUSDT', 'startTime': 1774254900000, 'endTime': 1774404899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=LIGHTUSDT&startTime=1774254900000&endTime=1774404899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "LYNUSDT",
+      1774121400000,
+      1774271399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'LYNUSDT', 'startTime': 1774121400000, 'endTime': 1774271399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=LYNUSDT&startTime=1774121400000&endTime=1774271399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "LYNUSDT",
+      1774271400000,
+      1774421399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'LYNUSDT', 'startTime': 1774271400000, 'endTime': 1774421399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=LYNUSDT&startTime=1774271400000&endTime=1774421399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "LYNUSDT",
+      1774421400000,
+      1774571399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'LYNUSDT', 'startTime': 1774421400000, 'endTime': 1774571399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=LYNUSDT&startTime=1774421400000&endTime=1774571399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "MAGMAUSDT",
+      1774104900000,
+      1774254899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'MAGMAUSDT', 'startTime': 1774104900000, 'endTime': 1774254899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=MAGMAUSDT&startTime=1774104900000&endTime=1774254899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "MAGMAUSDT",
+      1774254900000,
+      1774404899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'MAGMAUSDT', 'startTime': 1774254900000, 'endTime': 1774404899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=MAGMAUSDT&startTime=1774254900000&endTime=1774404899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "MAGMAUSDT",
+      1774404900000,
+      1774554899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'MAGMAUSDT', 'startTime': 1774404900000, 'endTime': 1774554899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=MAGMAUSDT&startTime=1774404900000&endTime=1774554899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "MEWUSDT",
+      1774409100000,
+      1774416577000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'MEWUSDT', 'startTime': 1774409100000, 'endTime': 1774416577000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=MEWUSDT&startTime=1774409100000&endTime=1774416577000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "MONUSDT",
+      1774410300000,
+      1774560299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'MONUSDT', 'startTime': 1774410300000, 'endTime': 1774560299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=MONUSDT&startTime=1774410300000&endTime=1774560299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "NAORISUSDT",
+      1774452000000,
+      1774601999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'NAORISUSDT', 'startTime': 1774452000000, 'endTime': 1774601999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=NAORISUSDT&startTime=1774452000000&endTime=1774601999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "NAORISUSDT",
+      1774302000000,
+      1774451999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'NAORISUSDT', 'startTime': 1774302000000, 'endTime': 1774451999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=NAORISUSDT&startTime=1774302000000&endTime=1774451999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ONTUSDT",
+      1774329000000,
+      1774478999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ONTUSDT', 'startTime': 1774329000000, 'endTime': 1774478999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ONTUSDT&startTime=1774329000000&endTime=1774478999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "PIPPINUSDT",
+      1774108500000,
+      1774258499999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'PIPPINUSDT', 'startTime': 1774108500000, 'endTime': 1774258499999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=PIPPINUSDT&startTime=1774108500000&endTime=1774258499999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "PIPPINUSDT",
+      1774258500000,
+      1774408499999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'PIPPINUSDT', 'startTime': 1774258500000, 'endTime': 1774408499999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=PIPPINUSDT&startTime=1774258500000&endTime=1774408499999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "PIPPINUSDT",
+      1774408500000,
+      1774558499999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'PIPPINUSDT', 'startTime': 1774408500000, 'endTime': 1774558499999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=PIPPINUSDT&startTime=1774408500000&endTime=1774558499999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "PLAYUSDT",
+      1774184400000,
+      1774334399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'PLAYUSDT', 'startTime': 1774184400000, 'endTime': 1774334399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=PLAYUSDT&startTime=1774184400000&endTime=1774334399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "PLAYUSDT",
+      1774334400000,
+      1774484399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'PLAYUSDT', 'startTime': 1774334400000, 'endTime': 1774484399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=PLAYUSDT&startTime=1774334400000&endTime=1774484399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "POWERUSDT",
+      1774258800000,
+      1774408799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'POWERUSDT', 'startTime': 1774258800000, 'endTime': 1774408799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=POWERUSDT&startTime=1774258800000&endTime=1774408799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "POWERUSDT",
+      1774108800000,
+      1774258799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'POWERUSDT', 'startTime': 1774108800000, 'endTime': 1774258799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=POWERUSDT&startTime=1774108800000&endTime=1774258799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "POWERUSDT",
+      1774408800000,
+      1774558799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'POWERUSDT', 'startTime': 1774408800000, 'endTime': 1774558799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=POWERUSDT&startTime=1774408800000&endTime=1774558799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "PROVEUSDT",
+      1774456800000,
+      1774606799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'PROVEUSDT', 'startTime': 1774456800000, 'endTime': 1774606799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=PROVEUSDT&startTime=1774456800000&endTime=1774606799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "PTBUSDT",
+      1774208400000,
+      1774358399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'PTBUSDT', 'startTime': 1774208400000, 'endTime': 1774358399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=PTBUSDT&startTime=1774208400000&endTime=1774358399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "PTBUSDT",
+      1774358400000,
+      1774508399999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'PTBUSDT', 'startTime': 1774358400000, 'endTime': 1774508399999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=PTBUSDT&startTime=1774358400000&endTime=1774508399999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "RIVERUSDT",
+      1774105200000,
+      1774255199999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'RIVERUSDT', 'startTime': 1774105200000, 'endTime': 1774255199999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=RIVERUSDT&startTime=1774105200000&endTime=1774255199999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "RIVERUSDT",
+      1774255200000,
+      1774405199999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'RIVERUSDT', 'startTime': 1774255200000, 'endTime': 1774405199999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=RIVERUSDT&startTime=1774255200000&endTime=1774405199999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "RIVERUSDT",
+      1774405200000,
+      1774555199999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'RIVERUSDT', 'startTime': 1774405200000, 'endTime': 1774555199999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=RIVERUSDT&startTime=1774405200000&endTime=1774555199999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "SIRENUSDT",
+      1774127100000,
+      1774277099999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'SIRENUSDT', 'startTime': 1774127100000, 'endTime': 1774277099999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=SIRENUSDT&startTime=1774127100000&endTime=1774277099999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "SIRENUSDT",
+      1774277100000,
+      1774427099999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'SIRENUSDT', 'startTime': 1774277100000, 'endTime': 1774427099999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=SIRENUSDT&startTime=1774277100000&endTime=1774427099999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "SIRENUSDT",
+      1774427100000,
+      1774577099999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'SIRENUSDT', 'startTime': 1774427100000, 'endTime': 1774577099999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=SIRENUSDT&startTime=1774427100000&endTime=1774577099999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "SOLUSDT",
+      1774245900000,
+      1774395899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'SOLUSDT', 'startTime': 1774245900000, 'endTime': 1774395899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=SOLUSDT&startTime=1774245900000&endTime=1774395899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "SOLUSDT",
+      1774395900000,
+      1774545899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'SOLUSDT', 'startTime': 1774395900000, 'endTime': 1774545899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=SOLUSDT&startTime=1774395900000&endTime=1774545899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "STOUSDT",
+      1774180800000,
+      1774330799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'STOUSDT', 'startTime': 1774180800000, 'endTime': 1774330799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=STOUSDT&startTime=1774180800000&endTime=1774330799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "STOUSDT",
+      1774330800000,
+      1774480799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'STOUSDT', 'startTime': 1774330800000, 'endTime': 1774480799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=STOUSDT&startTime=1774330800000&endTime=1774480799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "SUIUSDT",
+      1774119600000,
+      1774269599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'SUIUSDT', 'startTime': 1774119600000, 'endTime': 1774269599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=SUIUSDT&startTime=1774119600000&endTime=1774269599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "SUIUSDT",
+      1774269600000,
+      1774419599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'SUIUSDT', 'startTime': 1774269600000, 'endTime': 1774419599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=SUIUSDT&startTime=1774269600000&endTime=1774419599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "SUIUSDT",
+      1774419600000,
+      1774569599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'SUIUSDT', 'startTime': 1774419600000, 'endTime': 1774569599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=SUIUSDT&startTime=1774419600000&endTime=1774569599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "SUPERUSDT",
+      1774467600000,
+      1774617599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'SUPERUSDT', 'startTime': 1774467600000, 'endTime': 1774617599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=SUPERUSDT&startTime=1774467600000&endTime=1774617599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "TAOUSDT",
+      1774422000000,
+      1774571999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'TAOUSDT', 'startTime': 1774422000000, 'endTime': 1774571999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=TAOUSDT&startTime=1774422000000&endTime=1774571999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "TAUSDT",
+      1774386900000,
+      1774536899999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'TAUSDT', 'startTime': 1774386900000, 'endTime': 1774536899999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=TAUSDT&startTime=1774386900000&endTime=1774536899999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "TRIAUSDT",
+      1774141800000,
+      1774291799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'TRIAUSDT', 'startTime': 1774141800000, 'endTime': 1774291799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=TRIAUSDT&startTime=1774141800000&endTime=1774291799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "TRIAUSDT",
+      1774291800000,
+      1774441799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'TRIAUSDT', 'startTime': 1774291800000, 'endTime': 1774441799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=TRIAUSDT&startTime=1774291800000&endTime=1774441799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "TRIAUSDT",
+      1774441800000,
+      1774591799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'TRIAUSDT', 'startTime': 1774441800000, 'endTime': 1774591799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=TRIAUSDT&startTime=1774441800000&endTime=1774591799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "TURBOUSDT",
+      1774107000000,
+      1774256999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'TURBOUSDT', 'startTime': 1774107000000, 'endTime': 1774256999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=TURBOUSDT&startTime=1774107000000&endTime=1774256999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "TURBOUSDT",
+      1774257000000,
+      1774406999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'TURBOUSDT', 'startTime': 1774257000000, 'endTime': 1774406999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=TURBOUSDT&startTime=1774257000000&endTime=1774406999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "TURBOUSDT",
+      1774407000000,
+      1774556999999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'TURBOUSDT', 'startTime': 1774407000000, 'endTime': 1774556999999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=TURBOUSDT&startTime=1774407000000&endTime=1774556999999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "UAIUSDT",
+      1774392600000,
+      1774542599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'UAIUSDT', 'startTime': 1774392600000, 'endTime': 1774542599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=UAIUSDT&startTime=1774392600000&endTime=1774542599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "UAIUSDT",
+      1774242600000,
+      1774392599999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'UAIUSDT', 'startTime': 1774242600000, 'endTime': 1774392599999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=UAIUSDT&startTime=1774242600000&endTime=1774392599999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "XLMUSDT",
+      1774179900000,
+      1774187239000
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'XLMUSDT', 'startTime': 1774179900000, 'endTime': 1774187239000, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=XLMUSDT&startTime=1774179900000&endTime=1774187239000&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "XNYUSDT",
+      1774223100000,
+      1774373099999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'XNYUSDT', 'startTime': 1774223100000, 'endTime': 1774373099999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=XNYUSDT&startTime=1774223100000&endTime=1774373099999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "XNYUSDT",
+      1774373100000,
+      1774523099999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'XNYUSDT', 'startTime': 1774373100000, 'endTime': 1774523099999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=XNYUSDT&startTime=1774373100000&endTime=1774523099999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "XRPUSDT",
+      1774119300000,
+      1774269299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'XRPUSDT', 'startTime': 1774119300000, 'endTime': 1774269299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=XRPUSDT&startTime=1774119300000&endTime=1774269299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "XRPUSDT",
+      1774269300000,
+      1774419299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'XRPUSDT', 'startTime': 1774269300000, 'endTime': 1774419299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=XRPUSDT&startTime=1774269300000&endTime=1774419299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "XRPUSDT",
+      1774419300000,
+      1774569299999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'XRPUSDT', 'startTime': 1774419300000, 'endTime': 1774569299999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=XRPUSDT&startTime=1774419300000&endTime=1774569299999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ZENUSDT",
+      1774111800000,
+      1774261799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ZENUSDT', 'startTime': 1774111800000, 'endTime': 1774261799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ZENUSDT&startTime=1774111800000&endTime=1774261799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ZENUSDT",
+      1774261800000,
+      1774411799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ZENUSDT', 'startTime': 1774261800000, 'endTime': 1774411799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ZENUSDT&startTime=1774261800000&endTime=1774411799999&period=5m&limit=500')\")"
+  },
+  {
+    "metric": "open_interest_hist",
+    "window": [
+      "ZENUSDT",
+      1774411800000,
+      1774561799999
+    ],
+    "error": "RuntimeError(\"GET /futures/data/openInterestHist failed after 5 retries params={'symbol': 'ZENUSDT', 'startTime': 1774411800000, 'endTime': 1774561799999, 'period': '5m', 'limit': 500}: HTTPError('400 Client Error:  for url: https://fapi.binance.com/futures/data/openInterestHist?symbol=ZENUSDT&startTime=1774411800000&endTime=1774561799999&period=5m&limit=500')\")"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "summary": "X101_fixed_symmetric_tight is a clean exit-side archetype with no research-integrity concerns; it directly addresses the E126 asymmetric-tail trap and introduces no leakage, credential, or sandbox-boundary risks.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "X101_fixed_symmetric_tight",
+      "leakage_risk": "none",
+      "leakage_notes": "novel_dim is only tp_pct=0.5 and sl_pct=0.5 — both are exit thresholds applied forward from T0 inside the simulator. No forward_*, confirm_after_*, post_event_*, or _after_event fields are referenced. Exit kernel is the existing 'fixed' family which is already T0-causal in the loop.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Exit archetype is channel=NA/side=NA, so it only activates when paired with an entry archetype during the joint search. It can pair with entries that overlap the live BWE_OI_Price_monitor pump long strategy, but this is paper-shadow / backtest only — no live-config write, no order routing. Standard paper-shadow monitoring item, not a blocker.",
+      "concentration_risk": "none",
+      "adversarial_risk": "low",
+      "overall_severity": "acceptable",
+      "remediation": "None required. Recommend the loop verifies tp_pct/sl_pct are consumed by the existing 'fixed' exit kernel only (no new code path), and that any pairing with entries currently mirrored to the live OI_Price long strategy is tagged 'live_overlap=true' in results.tsv for paper-shadow journal review — advisory only, do not block scoring."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 36.05
+}

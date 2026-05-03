@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "cc_three_signal_funding_neutral_long",
+  "predicted_tp_pct": 0.6,
+  "predicted_sl_pct": 1.5,
+  "predicted_tp_sl_ratio": 0.4,
+  "predicted_win_rate": 0.62,
+  "predicted_mean_per_trade_pct": 0.012,
+  "predicted_kelly_pct": 1.7,
+  "trap_risk": "low",
+  "trap_reasoning": "This is a tightly-filtered cross-channel long requiring three simultaneous conditions: funding in a narrow neutral band [-0.0001, 0.0001], taker_buy_ratio_5m >= 0.60, and high liquidity. The funding-neutral constraint is the structurally important one — it explicitly filters out crowded/funding-driven moves where overshoots and violent mean-reversions create the asymmetric TP/SL trap (the E126 pattern lived in heavy-funding pump regimes). With high liquidity + funding-neutral + buy-pressure confirmation, the realized move distribution should be tighter and more symmetric, so the GPU optimizer is unlikely to converge on a degenerate TP=0.5 / SL=6 geometry. I expect TP~0.6%, SL~1.5% (ratio ~0.4) with win-rate ~62% — modestly above breakeven but not heroic. Tight 4-condition AND filter likely yields low trigger count (estimate 200-600), which raises sample-size uncertainty more than trap-geometry uncertainty. Mean per-trade ~+1.2 bps after -8 bps cost is positive but thin; Kelly ~1.7% reflects the modest edge. Trap risk is LOW because the entry thesis itself rules out the regime that produced the trap, and the natural geometry is roughly symmetric.",
+  "recommended_constraint": "force SL <= 2.5 x TP_pct in variant grid to keep geometry symmetric and prevent optimizer drift toward asymmetric tail-eating configs",
+  "metric_score_estimate": 1.7,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 23.7
+}

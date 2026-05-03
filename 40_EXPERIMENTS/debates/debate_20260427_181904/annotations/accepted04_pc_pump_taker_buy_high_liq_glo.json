@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "pc_pump_taker_buy_high_liq_global_short_long",
+  "expected_trades_per_day": 1.5,
+  "expected_trades_per_day_basis": "Triple-AND of three filters whose individual triggers are 3443/2157/988 over the ~30d data window; intersection conservatively ~45 events / 30d ≈ 1.5/day, matching E148's 988-trig floor as the binding constraint.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC mild-up to sideways with elevated alt taker-buy aggression",
+      "high global short-ratio days (crowded shorts being squeezed)",
+      "high-liquidity majors during US/EU overlap when taker_buy_ratio_5m can sustain >=0.65"
+    ],
+    "worst_in": [
+      "broad risk-off / BTC dump days where pump signals fail and crowded shorts are correct",
+      "low-volatility chop where taker_buy_ratio_5m oscillates around 0.5 and triggers fire on noise",
+      "funding-flip-positive regimes where the short-squeeze fuel is already spent"
+    ],
+    "explanation": "All three parent components (E126, E051, E148) share pump-long geometry, so the archetype is structurally a long-squeeze hunter. It needs both directional fuel (taker buys) and crowded counter-positioning (global shorts) on a liquid book — remove any one and the asymmetric TP/SL trap from R2 dominates."
+  },
+  "live_readiness_caveats": [
+    "Triple-intersection means parent-overlap risk is high — if overlap_rate vs E126 exceeds 80% the archetype is just a thinner E126 and inherits the R2 paper trap (-13.5% on $1000 despite 80% win rate).",
+    "liquidity_bucket=high partially mitigates slippage, but taker_buy_ratio_5m>=0.65 is a momentum-chasing entry — expect 5-15bps adverse fill on market orders during the squeeze impulse, which compounds against the asymmetric TP/SL.",
+    "Trigger rate of ~1.5/day means single-symbol concurrent positions are unlikely, but cluster-fires across correlated alts (e.g. mid-cap L1s squeezing together) can produce 3-5 simultaneous longs — size at 5% not 10% per trade until confirmed."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "overlap_rate vs E126/E051/E148 (% of entries that also fire on any parent within ±60s)",
+      "alert_threshold": ">80% triggers archetype-kill; 60-80% requires kelly_capped re-justification",
+      "rationale": "Synthesizer's explicit watch condition — without marginal value over parents, this is dead weight."
+    },
+    {
+      "metric": "kelly_capped on rolling 14-day live window",
+      "alert_threshold": "<0 for 5 consecutive days",
+      "rationale": "R2 lesson: legacy p25 hid the asymmetric tail on E126. kelly_capped is the metric that caught the trap and is the one this archetype was conditionally accepted on."
+    },
+    {
+      "metric": "trades/day actual vs predicted 1.5",
+      "alert_threshold": "<0.5 or >4.0 sustained over 7 days",
+      "rationale": "Below 0.5 means the triple-AND is over-selective and sample is too thin to estimate edge; above 4.0 means a filter (likely global_short_ratio_high) is mis-thresholded and we're back to E126 geometry."
+    },
+    {
+      "metric": "realized median trade % vs backtest median",
+      "alert_threshold": "live median <50% of backtest median for 20+ trades",
+      "rationale": "Direct paper-shadow vs backtest divergence — the canonical test for whether the asymmetric TP/SL trap is materializing live."
+    },
+    {
+      "metric": "max consecutive losses",
+      "alert_threshold": ">=4 in a row",
+      "rationale": "Asymmetric TP/SL (parent E126 was TP=0.51 SL=6.00) means each loss is ~12x a win in magnitude; 4 consecutive losses ≈ 48x one win, which is the structural failure mode."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling kelly_capped <0 AND realized 7-day P&L <-3% on $1000",
+      "rationale": "Combines the metric that exposed the R2 trap with a hard capital-drawdown floor — this is the exact failure mode R2 found on E126 paper."
+    },
+    {
+      "condition": "overlap_rate vs E126 >80% confirmed over first 50 live triggers",
+      "rationale": "The archetype's only justification over its parents is marginal value from triple-intersection — if it's just a thinner E126, kill and trade E126 directly with the same SL discipline."
+    },
+    {
+      "condition": "2 or more single-trade losses exceeding -8% (i.e. SL hit deeper than backtest assumed)",
+      "rationale": "Indicates execution slippage on the SL side is materially worse than backtest, which against an asymmetric TP/SL geometry is unrecoverable — no amount of win-rate fixes a fat left tail."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 9.0,
+  "expected_max_dd_basis": "Inheriting E126's asymmetric TP=0.51/SL=6.00 geometry on 5% sizing, 4 consecutive SL hits (plausible at 1.5 trades/day over a 3-day adverse regime) yields ~9% account DD; high_liq filter trims tail vs raw E126 but triple-AND selectivity does not change loss magnitude per trade.",
+  "compare_to_existing": "E126 pc_pump_taker_buy_extreme_long — same pump-long geometry and the archetype this most directly extends; the R2 paper-shadow result on E126 (-13.5% on $1000 despite backtest 0.3946) is the single most relevant prior for what to expect here.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 52.71
+}

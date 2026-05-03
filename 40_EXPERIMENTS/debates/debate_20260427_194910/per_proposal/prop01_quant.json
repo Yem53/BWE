@@ -1,0 +1,26 @@
+{
+  "summary": "Well-formed exit archetype with parseable parameters and a structurally distinct 1.5x balanced TP/SL geometry that directly addresses the R2 asymmetric-trap finding; ample sample exposure expected across the fixed-exit pairing surface.",
+  "analyses": [
+    {
+      "archetype_ref": "X102_fixed_15x_balanced",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X101_*"
+      ],
+      "distinctness_notes": "Existing fixed-exit winners cluster at TP≈0.20% with SL≈1.95–6.00% (asymmetry ratio >4x, breakeven win-rate ≥85%). This proposal sits in a previously unexplored region of the TP/SL plane: high-TP (1.0%, ~5x the leader's TP) with moderate-SL (1.5%, lower than any keep-list SL) and bounded asymmetry (1.5x). Required win rate = SL/(TP+SL) = 1.5/2.5 = 60%, vs ~92% for E126's geometry — a fundamentally different operating point on the win-rate × payoff curve, not a perturbation of existing kernels.",
+      "expected_triggers_30d": 50000,
+      "triggers_estimate_method": "Exit archetype applies to every paired (entry × event) tuple. Fixed-family currently has n=7320 results across ~100 existing exit param combos ⇒ ~73 entry-pairings/exit. With pricechange/long flagship entries averaging 1000–5000 triggers each and OI_Price/Reserved6 adding a few hundred to ~1400 per entry, this single exit conservatively sees 30–50 entry pairings × ~1000–3000 triggers/pairing ≈ 30K–150K trade evaluations over the 20K-class loop horizon. Per individual entry pairing the exit still sees ample (>1K) events.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Self-defining: this archetype IS a fixed-exit kernel parameterization (tp_pct=1.0, sl_pct=1.5). Both fields are recognized exit-kernel parameters per SUPPORTED_FIELDS section E, consumed directly by the fixed-exit kernel — they are not entry-filter conditions and correctly should not be parsed by bwe_loop_entry_filter.py. Not portable to time_only/breakeven/trail/multi_tp families. Mathematical caveat for the Synthesizer: TP=1.0% is a meaningful threshold to clear in many BWE pricechange events (where 5m moves of 1%+ are common in pump signals) but may be too far for low-volatility OI_Price events; recommend prioritizing pairing with high-vol entries (E126/E064/E066 family on pricechange/long, and crash/short entries on Reserved6) and the new kelly_capped / p25_capped_tail metrics will correctly reward this balanced geometry over the asymmetric R2 winners that compounded negatively in paper shadow."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 61.09
+}

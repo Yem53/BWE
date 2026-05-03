@@ -1,0 +1,24 @@
+{
+  "summary": "Exit-family hybrid proposal is structurally novel relative to mono-family exits, but its single novel_dim filter is supported and yields adequate sample; flag that hybrid composition isn't a filter concern — execution will need kernel-level support.",
+  "analyses": [
+    {
+      "archetype_ref": "x105_hybrid_fixed_then_trail_exit",
+      "distinct": true,
+      "distinct_from_existing_ids": [],
+      "distinctness_notes": "Existing 101 exits are mono-family (fixed | time_only | breakeven | trail | multi_tp). This proposal composes fixed+trail with a 50/50 split — structurally a new exit family per R2 synthesizer's identified gap (X101+ exit-side starvation). The single novel_dim taker_buy_ratio_5m>=0.60 acts as an entry-side gate but the archetype's novelty is in the exit composition, not the filter.",
+      "expected_triggers_30d": 2000,
+      "triggers_estimate_method": "Exit archetypes are channel-agnostic (channel=NA), so denominator ≈ all events ~7200/30d. Filter taker_buy_ratio_5m>=0.60 is a moderate buy-side bias (roughly top ~30-40% of taker ratio distribution given crypto baseline ~0.50): 7200 × 0.30 ≈ 2160. Conservatively round to 2000.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Hybrid fixed+trail requires a NEW kernel — none of the 5 live exit kernels (fixed / time_only / breakeven / trail / multi_tp) natively support partial-fill TP then trail-on-remainder. multi_tp is closest (laddered TPs) but doesn't trail residual. Quant flag for Synthesizer: filter math is clean and sample is ample, but execution feasibility depends on whether a hybrid kernel exists or can be added. If forced into existing kernels, this collapses to either pure fixed or pure trail. Given R2's by_exit_family stats (fixed: mean +0.175, n_positive 6680/7320; trail: mean -0.150, all negative), a hybrid that captures fixed's left-tail protection while retaining trail's upside is theoretically attractive — but only if the kernel actually executes the composition. Recommend Synthesizer accept conditional on kernel availability; otherwise downgrade to multi_tp approximation."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 26.19
+}

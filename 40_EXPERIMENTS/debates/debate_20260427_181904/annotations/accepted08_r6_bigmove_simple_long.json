@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "r6_bigmove_simple_long",
+  "expected_trades_per_day": 4.0,
+  "expected_trades_per_day_basis": "R6 baseline ~120 events over 30-day window ÷ 30 = 4/day; taker_buy_ratio_5m>=0.55 filter retains roughly the long-biased subset which on R6 (180s 8-15% extreme moves) is typically 60-80% of events, so estimate stays close to 3-4/day net.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC trending up days with funding negative or near-zero",
+      "alt-led rally regimes where R6 fires on capitulation-short squeezes",
+      "sessions with rising taker-buy aggression (Asia→EU handoff, post-CPI relief rallies)"
+    ],
+    "worst_in": [
+      "BTC strong downtrend days where R6 8-15% spikes are predominantly down-side (long bias misaligned)",
+      "low-vol chop where R6 barely fires (sample drops to <1/day, statistics unreliable)",
+      "high-funding-positive regimes where taker buying is already crowded longs about to unwind"
+    ],
+    "explanation": "R6 geometry is more directional than the pump channels per metric_critic, and a long-only filter on taker_buy_ratio_5m>=0.55 captures genuine demand-led extreme moves. It will misfire badly when R6 fires are dominated by waterfall-down events with dead-cat-bounce taker buys, which is the structural failure mode."
+  },
+  "live_readiness_caveats": [
+    "R6 sparse trigger count (~120/30d baseline) means any single bad week of 5-10 trades materially shifts realized expectancy — do not compound size for at least 2 full paper-shadow windows.",
+    "taker_buy_ratio_5m is computed on Binance perp aggTrades; if your live feed lags >3s the 5m window slides and the filter no longer matches backtest — verify ratio computation parity before going live.",
+    "R6 events fire on micro-cap and mid-cap symbols in the 180s 8-15% band; expect 30-80bp slippage on entry market orders for the bottom 30% by ADV — paper-shadow MUST simulate slippage by ADV bucket."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "trades_per_day_actual_vs_predicted",
+      "alert_threshold": "actual <2.0 or >7.0 over rolling 7d",
+      "rationale": "R6 is sparse; if frequency drifts far from ~4/day, either the regime changed (R6 channel quieter) or the taker_buy_ratio_5m filter is computed differently in live than in backtest."
+    },
+    {
+      "metric": "median_trade_pct_net_of_fees",
+      "alert_threshold": "<+0.05% net over rolling 14d (vs backtest median 0.217%)",
+      "rationale": "E126's R2 paper-shadow trap (0.3946 backtest → -13.5% paper) was caught by median erosion; for R6 long the same erosion would be the earliest live signal of left-tail asymmetry."
+    },
+    {
+      "metric": "taker_buy_ratio_5m at fill time",
+      "alert_threshold": "distribution shifts so >20% of fills fire at ratio in [0.55, 0.58]",
+      "rationale": "If trades cluster at the filter boundary, the edge is marginal and feed-latency noise dominates — the archetype is no longer behaving as the backtest defined it."
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">=5 losses in a row",
+      "rationale": "At 4 trades/day, 5 consecutive losses is a ~1.25 day event; on a long-bias R6 strategy this is the signature of a BTC down-day regime mismatch and should pause sizing."
+    },
+    {
+      "metric": "left_tail_p25_capped_realized",
+      "alert_threshold": "realized p25_capped_tail more negative than backtest p25_capped_tail by >50%",
+      "rationale": "This is the metric the synthesizer added specifically to catch the E126-style asymmetric TP/SL trap — must be tracked live or the lesson is wasted."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling Sharpe < 0 AND median trade % flips negative for 3 consecutive days",
+      "rationale": "R6 long edge depends on R6 fires being demand-led; if both Sharpe and median go negative simultaneously, the channel mix has rotated to waterfall-down events and the long bias is structurally wrong, not just unlucky."
+    },
+    {
+      "condition": "Realized max drawdown on $1000 paper account exceeds 8% within first 2 paper-shadow weeks",
+      "rationale": "At 5-10% per-trade sizing, 8% DD ≈ 1.5-2 full losers concentrated; given R6 sparsity this is statistically loud and matches the E126 compounding-failure pattern user already paid to learn once."
+    },
+    {
+      "condition": "taker_buy_ratio_5m feed parity check fails (live vs backtest replay diverge by >5% on >10% of fills)",
+      "rationale": "If the filter itself is mis-computed in live, the strategy isn't this archetype anymore — kill until parity is restored, do not 'tune through' it."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 6.5,
+  "expected_max_dd_basis": "R6 long with ~4 trades/day at 5-10% sizing over a 14d paper window ≈ 56 trades; assuming win rate 55-65% (R6 directional) and TP/SL near 1:1 from fixed-exit family, a 4-5 trade losing cluster is ~1-in-15 probability and produces 6-7% account DD before recovery.",
+  "compare_to_existing": "Closest live/top archetype is E126 pc_pump_taker_buy_extreme_long (same taker_buy structural thesis, opposite channel) — triangulate by expecting r6_bigmove_simple_long to show LOWER backtest score but HIGHER paper-shadow realization rate, because R6 geometry is less prone to the asymmetric-TP/SL trap that destroyed E126's paper P&L.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 52.56
+}

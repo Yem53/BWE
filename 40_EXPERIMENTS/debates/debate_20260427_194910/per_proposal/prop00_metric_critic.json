@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "X101_fixed_symmetric_tight",
+  "predicted_tp_pct": 0.5,
+  "predicted_sl_pct": 0.5,
+  "predicted_tp_sl_ratio": 1.0,
+  "predicted_win_rate": 0.52,
+  "predicted_mean_per_trade_pct": -0.06,
+  "predicted_kelly_pct": 0.0,
+  "trap_risk": "low",
+  "trap_reasoning": "By construction, a 1:1 symmetric TP/SL geometry cannot produce the E126-style asymmetric tail trap (high p25, deeply negative mean) — the legacy p25 metric and the new mean_net_pct metric will agree by force, since both wins (+0.5) and losses (-0.5) are equal magnitude. However, this exit replaces the asymmetric trap with a different failure mode: a 'noise/cost trap'. Tight 0.5%/0.5% bands on crypto 1m kline are inside typical 1-2 minute realized vol envelopes for most pairs in the BWE universe, so TP/SL hits become near-random unless the entry has a strong directional edge inside the first ~2 minutes. After 8 bps round-trip cost, breakeven requires win_rate ≥ ~58%; the 80% win rates seen on E126/E064 were geometry artifacts (tiny TP, huge SL), not real directional edges, so dropping to symmetric TP/SL likely collapses W to ~50-55% on the same entries. Net: structurally trap-immune in the legacy sense, but expected per-trade likely slightly negative after costs, hence kelly_capped ≈ 0. Honest verdict: not a winner, but a clean baseline that the synthesizer should keep specifically because the metric panel will rank it consistently across all three v2 metrics — a useful 'control rod' archetype.",
+  "recommended_constraint": "Restrict pairings to entries with empirically demonstrated >55% directional bias in the 0-120s post-signal window (e.g. E126/E064/E148 pump_taker_buy variants on pricechange/long), and add a slippage-aware cost knob: skip backtest if pair's median 1m realized range > 0.6% (i.e. the 0.5%/0.5% band is inside one-bar noise).",
+  "metric_score_estimate": 1.0,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 55.36
+}

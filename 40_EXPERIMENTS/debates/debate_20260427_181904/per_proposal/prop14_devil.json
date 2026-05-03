@@ -1,0 +1,19 @@
+{
+  "summary": "Wider trail step is a reasonable, falsifiable hypothesis directly motivated by R2 trail-family results; default seems_ok with monitoring on whipsaw vs. stop-out tradeoff.",
+  "critiques": [
+    {
+      "archetype_ref": "x102_wide_trail_2pct_exit",
+      "verdict": "seems_ok",
+      "concerns": [
+        "Trail family currently has 0 positive results out of 3111 (max=-0.006); a 2.0% step may still be too tight if the underlying issue is activation latency rather than step width — i.e., the trail arms after price has already mean-reverted",
+        "novel_dim 'liquidity_bucket=high' on an exit kernel is unusual: liquidity buckets are typically entry filters, so unless the exit engine actually evaluates per-symbol liquidity at exit time this dimension may silently fall through (R1 bug pattern: unsupported field → archetype collapses to baseline)",
+        "2.0% trail step on a $1000 personal account with 8–16 bps round-trip cost means each whipsaw round-trip can cost ~2% + costs; if the underlying entries have mean adverse excursion >2% this exit will systematically lock in losses worse than fixed TP/SL",
+        "Combined with the R2 E126 lesson (asymmetric TP/SL trap, +0.39 score → -13.5% paper P&L), a wide trail can produce similar left-tail blow-ups not visible in p25 metric — make sure new mean/kelly_capped/p25_capped_tail metrics are applied"
+      ],
+      "monitoring_advice": "During paper-shadow: (1) verify liquidity_bucket=high actually filters at exit-evaluation time vs being a no-op; (2) compare 2.0% trail vs 1.5% and 2.5% steps side-by-side on identical entries to confirm step-size is the binding parameter; (3) track mean adverse excursion before trail arms — if MAE > 2% routinely, the concept (not step) is the issue; (4) report kelly_capped and p25_capped_tail alongside best score to avoid R2-style asymmetric trap; (5) check that on top entries (E126/E064/E148) the wider trail does not give back >50% of peak unrealized PnL relative to fixed TP."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.52
+}

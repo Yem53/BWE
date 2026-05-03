@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "x105_hybrid_fixed_then_trail_exit",
+  "predicted_tp_pct": 0.5,
+  "predicted_sl_pct": 1.0,
+  "predicted_tp_sl_ratio": 0.5,
+  "predicted_win_rate": 0.55,
+  "predicted_mean_per_trade_pct": 0.1,
+  "predicted_kelly_pct": 1.0,
+  "trap_risk": "low",
+  "trap_reasoning": "This is an EXIT archetype proposing a hybrid composition (50% fixed TP at 0.5%, 50% trailing with 1.5% step). Unlike entry archetypes that inherit GPU-optimized TP/SL geometry, this proposal explicitly DEFINES the exit geometry as approximately symmetric: half the position locks in a quick 0.5% gain, the other half rides with a 1.5% trailing stop. This caps left-tail blow-ups because the trailing stop on the remaining 50% prevents catastrophic single-trade losses (max loss ~1.5% on the trailing half, locked profit on the fixed half). The effective TP/SL ratio is roughly 0.5 (much healthier than E126's 0.085), so even at moderate win rates (~55%) the expectancy stays positive. Crucially, this is the OPPOSITE of the E126 trap: instead of asymmetric small-wins/big-losses, it builds in asymmetric small-locked-wins/bounded-losses. The taker_buy_ratio>=0.60 filter is mild and doesn't dramatically narrow triggers. Main uncertainty: 'hybrid' family does not yet exist in the 5 real exit kernels (fixed/time_only/breakeven/trail/multi_tp) — implementation must compose two kernels, which may not match any of the 3111 trail or 7320 fixed records cleanly. Worth flagging to the synthesizer that the 'expected_distinct=true' claim is correct (genuinely new family) but executability depends on whether the kernel grid supports 50/50 split sizing.",
+  "recommended_constraint": "In variant grid, force fixed_tp_pct ≤ trail_step_pct and require split_ratio in [0.3, 0.7] so neither leg dominates; also clamp fixed_tp_pct ≥ 0.3% to avoid degenerate scalp-half that taxes fees.",
+  "metric_score_estimate": 5.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.76
+}

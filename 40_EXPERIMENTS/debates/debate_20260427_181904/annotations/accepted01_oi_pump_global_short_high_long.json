@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "oi_pump_global_short_high_long",
+  "expected_trades_per_day": 2.4,
+  "expected_trades_per_day_basis": "Mirror archetype E148 (pricechange channel) had trig=988 over the ~30d window ≈33/day raw, but porting to OI_Price channel which has lower base frequency (~61 entries vs 60 share but OI_Price events are rarer per symbol) plus the dual filter (global_short_ratio_high AND oi_change_pct>=12 AND liquidity_bucket=high) should cut to ~5-8% of OI_Price events; estimating ~70-75 triggers/30d ≈ 2.4/day.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC choppy/range-bound days where alt OI builds without index trend",
+      "funding rate negative or rapidly turning negative on the symbol",
+      "post-crash recovery sessions (24-72h after a flush) when shorts crowd in"
+    ],
+    "worst_in": [
+      "strong sustained BTC downtrend where global short positioning is correct, not crowded",
+      "low-volatility weekends with thin OI changes (oi_change_pct>=12 rarely fires)",
+      "high-funding-positive regimes where shorts are already paying — squeeze fuel diluted"
+    ],
+    "explanation": "This is a contrarian squeeze-fuel setup: it needs shorts to be wrong and trapped. It performs best when crowd positioning is asymmetric vs realized direction. It fails when shorts are correctly positioned in a real downtrend, because the OI burst is fresh shorting that gets paid, not squeezed."
+  },
+  "live_readiness_caveats": [
+    "global_short_ratio data has 5min-1h staleness on Binance public endpoints — by entry time the ratio may have already mean-reverted; track time-since-funding-update and skip entries where stale > 30min.",
+    "liquidity_bucket=high filter still admits mid-cap alts where a 12% OI jump is one whale — concentration risk; cap per-symbol exposure and track top-3-symbol share of trades.",
+    "OI_Price channel triggers can fire near-simultaneously with pricechange channel on the same symbol — risk of double-sizing the same thesis; add cross-channel dedup window of 5-10min."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "live_median_trade_pct_per_5_trades",
+      "alert_threshold": "flips negative for 2 consecutive 5-trade windows",
+      "rationale": "E148 sibling backtested +0.350 — paper median should stay positive; rolling 5-trade window detects regime shift before equity damage compounds."
+    },
+    {
+      "metric": "trades_per_day_actual_vs_predicted",
+      "alert_threshold": "<1.0 or >5.0 sustained over 7 days",
+      "rationale": "If trigger count diverges from 2.4/day estimate, the global_short_ratio_high or oi_change_pct>=12 thresholds are mis-calibrated for current regime — strategy is silently off-distribution."
+    },
+    {
+      "metric": "per_symbol_concentration_top3_pct",
+      "alert_threshold": ">60% of trades in top-3 symbols",
+      "rationale": "Devil flagged channel-semantics mismatch; if one whale account on one symbol drives signal, edge is illusory."
+    },
+    {
+      "metric": "time_since_funding_update_at_entry_median",
+      "alert_threshold": ">20min median",
+      "rationale": "Synthesizer flagged funding-rate staleness — stale signal = squeeze thesis already priced in."
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">=5",
+      "rationale": "Long-side squeeze plays cluster their losses (failed squeezes happen in batches during real downtrends); 5+ consecutive flags regime mismatch."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling Sharpe < 0 AND trades_per_day actual is within predicted band",
+      "rationale": "Triggers firing as expected but losing means the squeeze-fuel thesis is invalidated for current market structure, not a sampling artifact."
+    },
+    {
+      "condition": "E126/E064 (sibling pricechange long entries) simultaneously degrade in paper-shadow",
+      "rationale": "This archetype is a channel-port of the same squeeze-fuel logic; if the parent family fails, the port has no independent edge."
+    },
+    {
+      "condition": "Realized max drawdown exceeds 8% on paper-shadow within first 30 trades",
+      "rationale": "R2 lesson: E126 backtested +0.3946 compounded to -13.5% live due to asymmetric TP/SL tail — early DD>8% means we're seeing the same left-tail trap."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 9.0,
+  "expected_max_dd_basis": "Sibling E148 backtest score 0.350 with similar long-squeeze profile; assuming Round 2 lesson (asymmetric TP/SL inflates score vs realized), realistic 30-day paper DD scales to ~2-3x the median trade %, plus squeeze-trap clustering during BTC downtrends → 8-10% range.",
+  "compare_to_existing": "E148 pc_pump_global_short_high_long (pricechange channel, long, best=+0.350, trig=988) — direct sibling, same novel_dim logic ported across channels; secondary triangulation against E126 pc_pump_taker_buy_extreme_long for left-tail behavior since both are crowded-short long-squeeze plays.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 46.04
+}

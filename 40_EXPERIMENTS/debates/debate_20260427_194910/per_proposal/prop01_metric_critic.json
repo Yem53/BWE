@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "X102_fixed_15x_balanced",
+  "predicted_tp_pct": 1.0,
+  "predicted_sl_pct": 1.5,
+  "predicted_tp_sl_ratio": 0.667,
+  "predicted_win_rate": 0.62,
+  "predicted_mean_per_trade_pct": -0.03,
+  "predicted_kelly_pct": 3.0,
+  "trap_risk": "low",
+  "trap_reasoning": "This is an EXIT archetype with FIXED TP=1.0% / SL=1.5% (TP/SL=0.667, SL only 1.5x TP). The E126 trap required SL≈12x TP — a structurally asymmetric payoff where the 25th percentile masked a fat left tail. Here the ratio is bounded by design: the worst-case loss is only 1.5x the win, so mean_net_pct and p25 will track each other closely and kelly_capped will not be fooled. Trap risk is low BY CONSTRUCTION. The real risk is the opposite — this archetype needs win_rate > 0.60 just to break even (Kelly breakeven at W = SL/(TP+SL) = 1.5/2.5 = 0.60). Existing fixed-exit winners on this corpus achieved their 0.39 score precisely because their tiny TP=0.20–0.51% was easy to hit (W≈80%) — but 1.0% TP is meaningfully harder, so realistic W likely lands 0.58–0.65. With cost (8bps), expectancy is marginal in many pairings; only when paired with the most selective entries (E126/E064/E148-class) will kelly clear ~5%. Honest verdict: bounded, not a trap, but also not a layup — fills a real gap in design space the Round 2 metrics demand.",
+  "recommended_constraint": "",
+  "metric_score_estimate": 4.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 64.04
+}

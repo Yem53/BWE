@@ -1,0 +1,2 @@
+H:\BWE\20_CODE\Autoresearch\bwe_autoresearch\bwe_loop.py:216: DeprecationWarning: the `streaming` parameter was deprecated in 1.25.0; use `engine` instead.
+  ]).collect(streaming=True)

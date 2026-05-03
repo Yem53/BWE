@@ -1,0 +1,6 @@
+role,model,elapsed_s,error
+generator,claude-opus-4-7,94.91,
+devil,claude-opus-4-7,89.16,
+quant,claude-opus-4-7,188.49,
+risk,claude-opus-4-7,99.15,
+synthesizer,claude-opus-4-7,212.02,

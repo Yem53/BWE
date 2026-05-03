@@ -1,0 +1,23 @@
+{
+  "archetype_ref": "x105_hybrid_fixed_then_trail_exit",
+  "best_case_thesis": "In pump regimes the price-action signature is a fast initial impulse followed by either a sharp mean-revert or a multi-leg continuation — a bimodal payoff that single-family exits cannot harvest. Locking 50% at a tight fixed TP monetizes the high-probability initial impulse (which paper-shadow on E126 showed materializes ~80% of the time) while trailing the remaining 50% with a wide step keeps a free option on the continuation tail, turning the asymmetric TP/SL trap that killed E126 paper-shadow into a structurally symmetric outcome. This directly addresses the R2 lesson: the failure was not entry edge but exit shape.",
+  "expected_alpha_source": "Bimodal post-impulse return distribution in taker-buy-driven pumps: a high-probability small-magnitude reversion mode plus a low-probability large-magnitude continuation mode that mono-family exits systematically misprice.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-volume pump regimes with elevated taker_buy_ratio_5m where initial impulse follow-through is bimodal — exactly the regime in which top entries (E126, E064, E148) trigger.",
+  "complementary_exit_families": [
+    "fixed",
+    "trail"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E148",
+    "E051",
+    "E066"
+  ],
+  "if_paper_works_likely_reason": "The 50% fixed leg locks realized PnL before the asymmetric SL can dominate, converting E126-class entries from negative-compounding p25 traps into positive-mean kelly-capped survivors.",
+  "could_compound_with": "Any other x10x exit-side proposal that introduces partial-fill or scale-out logic, plus any risk wrapper that caps per-trade SL — together they would form the missing exit-pipeline scaffold the R2 synthesizer flagged.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.02
+}

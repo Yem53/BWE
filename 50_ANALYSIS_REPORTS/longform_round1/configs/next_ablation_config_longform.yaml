@@ -1,0 +1,28 @@
+project: bwe_complete_strategy_v6
+mode: focused_ablation_before_paper_shadow
+paper_only: true
+live_allowed: false
+one_hypothesis_per_iteration: true
+first_hypothesis:
+  strategy_family: premium_basis_overheat
+  side: long
+  entry_timing: 30s
+  fixed_component: entry
+  mutate_component: exit
+  exit_families:
+    - indicator_invalidation
+    - breakeven_ratchet
+    - state_machine
+    - runner_trail
+    - fixed_tp_sl
+success_metrics:
+  stressed_median_positive: true
+  baseline_lift_positive: true
+  future_safety_pass: true
+  cluster_representative_positive: true
+  p10_not_materially_worse: true
+forbidden:
+  - production_orders
+  - credential_reads
+  - notifications
+  - scheduler_changes

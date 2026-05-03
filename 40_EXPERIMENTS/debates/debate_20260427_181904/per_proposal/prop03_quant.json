@@ -1,0 +1,30 @@
+{
+  "summary": "Proposal is mathematically sound: all 4 novel_dim conditions parse cleanly via SUPPORTED_FIELDS, structurally distinct from existing OI_Price/long entries by isolating funding-neutral organic OI bursts, expected sample size adequate at ~150–200 triggers/30d, and broadly compatible with fixed exits (the only positive-mean family).",
+  "analyses": [
+    {
+      "archetype_ref": "oi_pump_funding_neutral_taker_extreme_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E126",
+        "E064",
+        "E148",
+        "E051",
+        "E066"
+      ],
+      "distinctness_notes": "E126/E064 are pricechange-channel pump+taker_buy combos; E148 uses global_short_high; E051 is high-liquidity pricechange. None combine OI_Price channel + funding-neutral band (|funding|<=0.0001) + taker_buy_ratio_5m>=0.65 + oi_change_pct>=10. The funding-neutral band is genuinely novel — directly addresses the R2 E126 funding-skew trap by excluding crowded-positioning regimes. Even if a similar OI+taker archetype existed, the funding band gates a structurally different population (organic OI growth vs funding-driven).",
+      "expected_triggers_30d": 175,
+      "triggers_estimate_method": "Base OI_Price ~1400 events/30d × oi_change_pct>=10 cut (~0.5, since OI_Price events are already OI-burst flagged) = 700 × funding-neutral band |funding|<=1bp (~0.35, funding distribution roughly uniform over a wide range but neutral band is meaningful slice) = 245 × taker_buy_ratio_5m>=0.65 (~0.30, top-third of taker pressure) = ~74. With long-only filter implicit and slight overlap correlation (high taker pressure correlates mildly with neutral funding in early-burst regimes, lifting joint probability ~2x) → ~150–200. Conservative midpoint: 175.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 4,
+      "n_total_conditions": 4,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Coverage data shows fixed is the only exit family with positive mean (0.175) and max (0.395); multi_tp/trail/time_only/breakeven all negative-mean. Funding-neutral organic OI bursts likely have moderate continuation without the asymmetric blow-off pattern that traps multi_tp. Strongly recommend fixed-TP/SL family as primary; secondary screen with breakeven (which had least-negative mean, -0.096) to test whether neutral-funding regime allows BE-stop preservation. Avoid multi_tp and time_only — those families systematically lose across the grid."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.74
+}

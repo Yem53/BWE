@@ -1,0 +1,29 @@
+{
+  "summary": "Exit-family archetype with weak structural differentiation — the only filter dim is a generic liquidity bucket, and the proposal's actual differentiator (BE activation timing, trigger threshold) lives in exit parameters not in novel_dim. Filter parses cleanly and sample size is ample, but distinctness on the entry-filter side is shallow.",
+  "analyses": [
+    {
+      "archetype_ref": "x104_breakeven_strict_30s_exit",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X100",
+        "X101",
+        "X102",
+        "X103"
+      ],
+      "distinctness_notes": "Stated differentiator is exit-side (BE activation at 30s with stricter trigger threshold) which is exactly the gap R2 synthesizer flagged (X101+ exit-side pipeline starved). The novel_dim itself (liquidity_bucket=high) is not the distinguishing axis — the BE timing/threshold parameters are. Within the breakeven exit family (n=1923, currently capped at -0.08 floor), tightening BE activation is genuinely different exit logic and the GPU sweep over BE-trigger and BE-activation-delay surfaces will reveal whether it escapes the -0.08 cluster. Distinct from existing X100 BE floor since timing parameter differs; not a verbatim slug duplicate.",
+      "expected_triggers_30d": 2500,
+      "triggers_estimate_method": "Exit archetype applies across all entry triggers it is paired with. If paired with high-liquidity subset of any channel: ~7200 total events × ~0.35 high-liquidity rate ≈ 2520. If applied broadly without channel constraint, even higher. Conservative floor for any one channel pairing: 1400 OI × 0.35 ≈ 490; pricechange 5000 × 0.35 ≈ 1750.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "By construction this IS a breakeven exit-family archetype, so it lives in the breakeven kernel. Current breakeven family stats: n=1923, mean=-0.0956, median=-0.0805, max=-0.08, n_positive=0 — the entire family is stuck at the BE floor. A stricter BE trigger + 30s activation delay is exactly the lever that could push some configurations off that floor (delay BE-arming so winners aren't prematurely flattened to 0). High-liquidity filter is a sensible pairing because high-liquidity names have tighter spreads and cleaner BE behavior. Recommend Synthesizer pair this with proven long-side high-liquidity entries (E051 pc_high_liquidity_long, E126) where the BE timing change can demonstrably improve over the -0.08 floor. Caveat for Synthesizer: monitor that 'liquidity_bucket=high' alone is a thin novel_dim — if the BE-timing parameters are not exposed in the search grid, this archetype risks collapsing onto X100. Recommend ensuring be_trigger_pct and be_activation_seconds are both swept."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 29.78
+}

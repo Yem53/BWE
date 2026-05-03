@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "pc_pump_top_trader_short_funding_high_short",
+  "predicted_tp_pct": 0.45,
+  "predicted_sl_pct": 1.6,
+  "predicted_tp_sl_ratio": 0.281,
+  "predicted_win_rate": 0.68,
+  "predicted_mean_per_trade_pct": 0.078,
+  "predicted_kelly_pct": 3.4,
+  "trap_risk": "medium",
+  "trap_reasoning": "This is a fade-short on a pump signal — structurally the same family as the E126 trap (pricechange pump entries). The danger: a 'pump' move that keeps extending will hit a tight short SL hard, while reversion wins are typically modest mean-reverts of ~0.4-0.6%. However, this proposal has TWO genuine selectivity layers absent in E126: (a) top_trader_position_ratio_low confirms smart-money is actually positioned for the fade (not just retail-driven), and (b) funding_pct_top_decile means longs are paying premium — a classic squeeze setup. These constraints should compress the right-tail extension risk somewhat, allowing a tighter SL (~1.5-2%) rather than the 6% E126 needed. The triple-AND filter (top_trader + funding + move_pct≥3) will be tight — likely 400-1500 triggers, not 3000+. Win rate should land 65-72% given smart-money confirmation. The GPU optimizer will still be tempted toward TP≈0.4-0.5 / SL≈1.5-2 to maximize p25, giving TP/SL≈0.25-0.3. With W=0.68 and TP/SL=0.281, E[trade] = 0.68*0.45 - 0.32*1.6 - 0.08 = 0.306 - 0.512 - 0.08 ≈ -0.29% — that's actually negative! Recalibrating: realistic W=0.70 gives E = 0.315 - 0.48 - 0.08 = -0.245%. Need W≥0.78 OR TP/SL≥0.4 for positive expectancy. The smart-money filter MIGHT push W to 0.75-0.80 (similar to E126's 80%), but still vulnerable to the same trap geometry. Recommend forcing a TP/SL constraint to surface only positive-expectancy variants.",
+  "recommended_constraint": "force SL ≤ 2.5 × TP_pct in variant grid AND require kelly_capped_pct > 0 (not just p25) to pass keep-gate",
+  "metric_score_estimate": 2.8,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 23.69
+}

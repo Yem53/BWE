@@ -1,0 +1,88 @@
+{
+  "summary": "Moderate-low confidence: most proposals have plausible logic but suffer from look-ahead concerns, small-sample fragility on novel composite triggers, and untested cost/latency assumptions given only 2 prior experiments — joint-threshold entries especially risk overfitting to a 30-day window without regime validation.",
+  "critiques": [
+    {
+      "archetype_ref": "premium_funding_squeeze_short",
+      "verdict": "possibly_fail",
+      "failure_modes": [
+        "Triple-conjunction (premium_bps >2σ AND funding>0 AND OI rising) will fire too rarely to hit the 500-trigger sample floor — E001 hit 500 with a single-dim threshold; a 3-way joint will likely yield <100 triggers per 30-day window, killing statistical power.",
+        "Funding rate has 8h cadence but premium_bps and oi_change_pct are intra-minute — using 'funding already positive' at T0 risks staleness bias where the funding regime has already shifted by the next funding settlement, making the signal a coincident rather than leading indicator.",
+        "Crowded-short basis-mean-reversion is regime-dependent: works in range-bound BTC but fails catastrophically in trending bull regimes where premium can stay elevated for days (2021 Q1 pattern); 30-day val window almost certainly does not span both regimes."
+      ],
+      "min_evidence_needed": "Trigger count ≥300 across val window AND val_score stable when sliced by BTC 7d-trend tercile (top vs bottom)."
+    },
+    {
+      "archetype_ref": "smart_crowd_divergence_long",
+      "verdict": "likely_fail",
+      "failure_modes": [
+        "top_trader_position_ratio on Binance is a notoriously gamed/lagged feature — 'top traders' rebalance slowly and the ratio is published with delay; using it as a leading signal at T0 risks implicit look-ahead if the snapshot timestamp isn't strictly < T0.",
+        "Divergence definitions ('rising' vs 'falling') require a lookback window not specified — without a fixed window (5m? 30m?) the archetype is underdetermined and the optimizer will overfit the window to the 30-day data, then collapse OOS.",
+        "Long-side smart-money-follows in low-cap alts conflicts directly with the user's live BWE_OI_Price_monitor pump long strategy — overlapping triggers will double-size the same trade, inflating realized risk beyond intended position sizing."
+      ],
+      "min_evidence_needed": "Per-symbol overlap rate with live pump-long triggers <10% AND val_score robust across 3 random window-length choices for the 'rising/falling' definition."
+    },
+    {
+      "archetype_ref": "taker_thin_book_reversal_short",
+      "verdict": "possibly_fail",
+      "failure_modes": [
+        "Thin liquidity_bucket + low realized_vol = high spread/slippage regime; the 8–16 bps round-trip cost assumption likely understates true execution cost in this microstructure, and the assumed mean-reversion edge is plausibly <20 bps and gets fully eaten.",
+        "taker_buy_ratio_5m >0.7 in thin books is dominated by 1–2 outlier symbols per day (low-volume alts with single whale prints); val_score will be hostage to symbol concentration and fail symbol-jackknife robustness.",
+        "'Aggressive retail buying exhausts quickly' is a behavioral hypothesis with no causal mechanism distinguishing exhaustion from genuine breakout — in thin books these often resolve as continuation, not reversal, especially during low-vol Asian session."
+      ],
+      "min_evidence_needed": "Symbol-jackknife val_score variance <30% AND post-cost edge ≥15 bps using realistic thin-book slippage model (not flat 8 bps)."
+    },
+    {
+      "archetype_ref": "basis_normalization_exit",
+      "verdict": "possibly_fail",
+      "failure_modes": [
+        "Coupling exit to entry-condition feature (basis/premium that triggered entry) creates a tautological loop: if entry was on premium spike, the exit's 'reversion to 1σ of 30m mean' is partly mechanical, inflating apparent win rate without representing true alpha capture.",
+        "30m rolling mean of basis is itself contaminated by the entry-triggering spike — naive computation includes the spike in the rolling window, making 'reversion within 1σ' easier to satisfy artificially; requires causal/expanding-only window to avoid look-ahead.",
+        "Exit family must compose with all entry archetypes per registry pattern, but this exit is only meaningful for premium/OI-driven entries — pairing with pricechange or burst entries produces an undefined exit condition (basis didn't spike, so 'normalization' is meaningless)."
+      ],
+      "min_evidence_needed": "Exit logic uses strictly causal rolling stats (verify code), AND val_score when paired with non-basis entries shows graceful degradation (no NaN/default behavior)."
+    },
+    {
+      "archetype_ref": "realized_vol_expansion_filter",
+      "verdict": "seems_ok",
+      "failure_modes": [
+        "'Top tercile AND expanding' is a 2-condition filter that will reduce trigger count by ~70–85%; combined with downstream entry archetypes already at 500 triggers, post-filter samples may drop below sufficiency for TP/SL grid optimization.",
+        "realized_vol_30m terciles computed cross-sectionally vs. per-symbol matters hugely — cross-sectional terciles bias toward high-vol symbols (always pass), per-symbol terciles to recent-vol symbols (regime-following); spec is ambiguous and the choice changes the filter's character.",
+        "Vol-expansion regime gating helps momentum entries but actively hurts the OI-overcrowding mean-reversion archetype that just passed (E001) — applying this filter universally ('side: both') will degrade the one validated strategy."
+      ],
+      "min_evidence_needed": "Filter spec clarifies cross-sectional vs per-symbol tercile AND ablation shows E001 val_score does not degrade when this filter is applied."
+    },
+    {
+      "archetype_ref": "btc_decorrelation_alpha_filter",
+      "verdict": "possibly_fail",
+      "failure_modes": [
+        "btc_correlation_30d is a 30-day rolling stat — at the start of the val window, 30d of history may not be available for newly-listed symbols, causing systematic exclusion of exactly the high-edge new-listing universe; verify NaN handling.",
+        "Below-median correlation is a classification of half the universe — this filter retains 50% of triggers and contributes minimal selectivity; combined with market_cap_bucket gating, the residual edge attributable to this filter (vs. just the cap filter) will be statistically indistinguishable.",
+        "Decorrelated alts are decorrelated because they're illiquid/dead, not because they have idiosyncratic alpha — the filter likely selects for low-volume symbols where execution costs dominate any signal, conflating decorrelation with untradability."
+      ],
+      "min_evidence_needed": "Median-volume of post-filter symbol set ≥ universe median AND incremental val_score lift over market_cap_bucket-only filter ≥0.02."
+    },
+    {
+      "archetype_ref": "cross_channel_conflict_suppressor",
+      "verdict": "possibly_fail",
+      "failure_modes": [
+        "Suppression archetypes are negative-action: they cannot be A/B-tested via standard trigger→outcome scoring since the metric is 'avoided losses,' which requires counterfactual evaluation — does the harness support counterfactual val_score for suppressors?",
+        "Sub-2m window for 'opposing signals' assumes synchronized timestamps across channels, but channel-specific publish latencies (especially Reserved6 vs OI_Price) can differ by seconds, making 'within 90s' a function of latency artifacts rather than true conflict.",
+        "premium_bps spread between two channels is undefined — premium_bps is per-symbol, not per-channel; the rationale conflates channel-level signal conflict with symbol-level basis spread, suggesting the trigger logic is internally inconsistent."
+      ],
+      "min_evidence_needed": "Clarification of premium_bps semantics in cross-channel context AND harness support for counterfactual scoring of suppressor archetypes (avoided-loss metric)."
+    },
+    {
+      "archetype_ref": "burst_oi_momentum_long",
+      "verdict": "likely_fail",
+      "failure_modes": [
+        "Three-way long-side conjunction (burst >P80 AND oi_change_5m>0 AND pretrend bullish) directly overlaps the user's live BWE_OI_Price_monitor pump long strategy — high probability of co-firing on the same symbol/time, causing unintended position stacking.",
+        "burst_count_* 30m rolling P80 is highly autocorrelated — once a symbol enters a burst regime, it stays in P80 for extended periods, meaning triggers cluster temporally and the 500-trigger count overstates independent observations (effective sample size could be <50).",
+        "'Pretrend already bullish' is itself a bullish-regime confirmation; combined with burst momentum, this is essentially three correlated bull-momentum proxies — the joint signal has low information content beyond any single component, and val_score lift over a single-component baseline will be marginal."
+      ],
+      "min_evidence_needed": "Effective sample size (after temporal-cluster bootstrap) ≥150 AND incremental val_score over single-best component (burst alone OR oi_change_5m alone) ≥0.03."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 58.28
+}

@@ -1,0 +1,416 @@
+{
+  "run_id": "debate_20260427_091138",
+  "trigger": "round_2_with_2700_results_and_5_exit_kernels",
+  "registry_summary": {
+    "total": 523,
+    "by_type": {
+      "entry": 201,
+      "exit": 101,
+      "filter": 121,
+      "risk": 40,
+      "cross_channel": 60
+    },
+    "entry_by_channel": {
+      "OI_Price": 61,
+      "pricechange": 60,
+      "Reserved6": 35,
+      "*": 45
+    },
+    "entry_by_side": {
+      "short": 94,
+      "long": 94,
+      "both": 13
+    }
+  },
+  "results_summary": {
+    "total": 2803,
+    "by_status": {
+      "keep": 7,
+      "discard": 2544,
+      "crash": 252
+    },
+    "best_score": 0.394617,
+    "n_keeps": 7
+  },
+  "recent_experiments": [
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 1380,
+      "status": "discard",
+      "description": "E=E141/pc_pump_session_us_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.59 best_sl=0.20 elapsed=1.2s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 1370,
+      "status": "discard",
+      "description": "E=E142/pc_pump_session_asia_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.59 best_sl=0.20 elapsed=1.2s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E143/pc_pump_weekend_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.43 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E144/pc_pump_macro_event_avoid X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 991,
+      "status": "discard",
+      "description": "E=E145/pc_pump_top_trader_long_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.43 best_sl=0.20 elapsed=1.0s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 989,
+      "status": "discard",
+      "description": "E=E146/pc_pump_top_trader_short_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.71 best_sl=0.20 elapsed=1.0s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 986,
+      "status": "discard",
+      "description": "E=E147/pc_pump_global_long_high_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.39 best_sl=0.20 elapsed=1.0s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 988,
+      "status": "discard",
+      "description": "E=E148/pc_pump_global_short_high_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.63 best_sl=0.20 elapsed=1.0s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E149/pc_pump_aggressive_buy_immediate_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E150/pc_pump_aggressive_sell_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.43 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E151/r6_pump_2nd_in_2h_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=4.60 best_sl=0.20 elapsed=0.1s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.277012,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E152/r6_pump_3rd_or_more_avoid X=X014/ladder_volume_weighted | n_var=90000 best_tp=1.45 best_sl=0.20 elapsed=0.1s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 95,
+      "status": "discard",
+      "description": "E=E153/r6_pump_taker_extreme_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=4.21 best_sl=0.20 elapsed=0.1s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E154/r6_pump_funding_extreme_pos_short X=X014/ladder_volume_weighted | error=no_events_for_channel"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E155/r6_pump_funding_extreme_neg_long X=X014/ladder_volume_weighted | error=no_events_for_channel"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E156/r6_pump_basis_diverge_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=4.60 best_sl=0.20 elapsed=0.1s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.277012,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E157/r6_pump_basis_align_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=1.45 best_sl=0.20 elapsed=0.1s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E158/r6_pump_top_trader_long_short X=X014/ladder_volume_weighted | error=no_events_for_channel"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E159/r6_pump_global_long_extreme_short X=X014/ladder_volume_weighted | error=no_events_for_channel"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E160/r6_pump_global_short_extreme_long X=X014/ladder_volume_weighted | error=no_events_for_channel"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.139889,
+      "triggers": 49,
+      "status": "discard",
+      "description": "E=E161/r6_pump_session_us_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=2.92 best_sl=3.39 elapsed=0.1s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.278095,
+      "triggers": 39,
+      "status": "discard",
+      "description": "E=E162/r6_pump_session_asia_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=5.57 best_sl=0.20 elapsed=0.0s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E163/r6_pump_weekend_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=4.60 best_sl=0.20 elapsed=0.1s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.277012,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E164/r6_pump_macro_event_avoid X=X014/ladder_volume_weighted | n_var=90000 best_tp=1.45 best_sl=0.20 elapsed=0.1s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E165/r6_pump_pretrend_extreme_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=4.60 best_sl=0.20 elapsed=0.1s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E166/cc_pc_pump_oi_pump_5m_strong_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.4s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E167/cc_pc_crash_oi_crash_5m_strong_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.39 best_sl=0.20 elapsed=3.5s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E168/cc_pc_oi_misaligned_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.39 best_sl=0.20 elapsed=3.4s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E169/cc_pc_pump_then_oi_crash_3m_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.39 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E170/cc_oi_then_pc_30s_immediate_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E171/cc_oi_then_pc_2m_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E172/cc_oi_then_pc_5m_funding_align_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E173/cc_three_channel_2m_strong_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E174/cc_three_channel_3m_strong_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E175/cc_three_channel_pretrend_align_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E176/cc_pc_only_no_oi_5m_avoid X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E177/cc_oi_only_no_pc_5m_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E178/cc_r6_after_oi_pump_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E179/cc_r6_after_pc_pump_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.39 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E180/cc_pc_oi_taker_align_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E181/cc_pc_oi_premium_diverge_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.39 best_sl=0.20 elapsed=3.3s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E182/cc_pc_oi_funding_align_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.5s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E183/cc_pc_then_oi_burst_avoid X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.5s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E184/cc_oi_with_pc_burst_avoid X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.5s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E185/cc_three_channel_30s_window_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.5s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E186/cc_three_channel_60s_window_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.6s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E187/cc_pc_oi_basis_align_long X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.32 best_sl=0.20 elapsed=3.7s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E188/cc_pc_oi_basis_diverge_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.39 best_sl=0.20 elapsed=3.8s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E189/cc_pc_to_r6_chain_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.39 best_sl=0.20 elapsed=3.8s"
+    },
+    {
+      "commit": "f54b4c9",
+      "val_score": -0.28,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E190/cc_oi_to_r6_chain_short X=X014/ladder_volume_weighted | n_var=90000 best_tp=0.39 best_sl=0.20 elapsed=3.9s"
+    }
+  ],
+  "existing_archetype_ids_sample": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020"
+  ],
+  "models": {
+    "generator": "claude-sonnet-4-6",
+    "devil": "claude-opus-4-7",
+    "quant": "claude-sonnet-4-6",
+    "risk": "claude-opus-4-7",
+    "synthesizer": "claude-opus-4-7"
+  }
+}

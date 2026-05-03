@@ -1,0 +1,18 @@
+{
+  "summary": "Single-proposal deep review: funding-neutral cross-channel long is structurally sound but has specific monitoring concerns around funding field availability at T0 and trigger rarity.",
+  "critiques": [
+    {
+      "archetype_ref": "cc_three_signal_funding_neutral_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Funding rate is published on an 8-hour cycle on Binance perps — the 'funding' field at T0 is the last-settled rate, not a live instantaneous value. A funding-neutral band of [-0.0001, +0.0001] (±1bp per 8h) is extremely tight and most symbol-hours sit OUTSIDE this band during any directional regime, so trigger count may be very low (likely <300 across 30 days, risking the same small-sample fragility that hurt E148 at trig=988).",
+        "Cross-channel alignment ('three_signal') already implies a rare co-occurrence; stacking funding-neutral on top compounds rarity multiplicatively. If the three-channel base rate is ~1-2% of bars and funding-neutral is ~20-30% of bars, expected trigger rate is ~0.2-0.6% — borderline for stable estimation given 30-day window.",
+        "Funding-neutral + taker_buy_ratio_5m>=0.60 + liquidity_bucket=high is a LONG bias (taker buy dominance) with a regime filter that REMOVES the strongest long-funding tailwind cases. This may select for mean-reversion-style longs in calm regimes — the opposite micro-structure of E126/E064 winners which thrive on taker-buy extremes during directional moves. Worth confirming whether the proposal is hunting a different alpha source than the dominant pricechange/long cluster."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log actual trigger count per day — abort/flag if <5/day average. (2) Check whether funding field is being read as last-settled snapshot vs forward-looking estimate; if forward-looking, flag as potential look-ahead. (3) Compare hit-rate split by |funding| quartile within the neutral band — if all alpha concentrates at one edge of [-0.0001, +0.0001], the band is mis-specified. (4) Verify this archetype's winners do NOT overlap >70% with E126/E064 trigger times — if they do, it's not structurally distinct despite the novel_dim claim."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 26.04
+}

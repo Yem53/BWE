@@ -1,0 +1,92 @@
+{
+  "summary": "Eight proposals reviewed: three accepted (one entry, one exit, one filter) all targeting structural gaps confirmed by critics; two revised after Quant flagged uncomputable fields (liquidity_bucket and market_cap_bucket replaced with Binance-native proxies); three rejected — two for live-strategy conflict blocks from Risk and one suppressor that yields zero evaluable triggers under standard scoring. Coverage filled this round: first basis-mean-reversion exit family, first realized-vol regime filter, first joint premium×funding×OI short.",
+  "accepted_archetypes": [
+    {
+      "id": "E201",
+      "type": "entry",
+      "archetype": "premium_funding_squeeze_short",
+      "channel": "OI_Price",
+      "side": "short",
+      "novel_dim": [
+        "premium_bps",
+        "funding",
+        "oi_change_pct"
+      ],
+      "expected_distinct": true,
+      "notes": "Enter short when premium_bps spikes >2σ AND funding is already positive AND OI is rising — triple crowding confirmation that historically precedes basis mean-reversion. Pre-screen at premium_bps 1.5σ if 2σ trigger count <300 in val window. Funding observed at last 8h publish, treated as regime tag not real-time signal.",
+      "synthesizer_note": "Accepting despite Devil's regime-dependence concern and Quant's tight (90) trigger estimate — three orthogonal data sources combined for the first time on OI_Price short justify a Phase 3 sample; Risk caution-level only, with symbol-overlap monitoring vs live pump-long flagged as standard validation gate."
+    },
+    {
+      "id": "X101",
+      "type": "exit",
+      "archetype": "basis_normalization_exit",
+      "channel": "NA",
+      "side": "both",
+      "novel_dim": [
+        "basis",
+        "premium_bps"
+      ],
+      "expected_distinct": true,
+      "notes": "Exit when basis reverts within 1σ of its causal pre-entry 30m mean (rolling window strictly ends before entry timestamp; entry-triggering spike excluded from denominator). Restricted pairing: only premium/OI-spike entry archetypes (OI_Price family + E201). Fallback to fixed SL when basis was not anomalous at entry. First condition-based exit using market-state variable as primary trigger.",
+      "synthesizer_note": "Accepting with Risk's mandatory remediation baked into the spec: causal window and pairing restriction are now part of the archetype definition, not optional. Code review of the rolling-window implementation is required before deep eval — this is the gating condition for promoting from accepted to merged."
+    },
+    {
+      "id": "F121",
+      "type": "filter",
+      "archetype": "realized_vol_expansion_filter",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "realized_vol_30m",
+        "oi_change_5m"
+      ],
+      "expected_distinct": true,
+      "notes": "Pass only signals where per-symbol realized_vol_30m is in the top tercile (rolling pre-T0 window, NOT cross-sectional or full-eval-period) AND expanding versus the prior 30m window. Applicability metadata: exclude from E001 pairing to avoid degrading the validated mean-reversion short. First regime-direction filter — orthogonal to all session/macro/weekday filters.",
+      "synthesizer_note": "Accepting with Devil's E001-degradation concern resolved via explicit applicability exclusion. Per-symbol tercile and pre-T0 rolling computation now part of the spec, eliminating Quant's ambiguity flag and Risk's leakage caveat."
+    }
+  ],
+  "revised_archetypes": [
+    {
+      "original_archetype_ref": "taker_thin_book_reversal_short",
+      "revised_archetype": "taker_thin_depth_reversal_short",
+      "revision_reason": "Quant flagged liquidity_bucket as uncomputable (not a native Binance field). Replaced with Binance-native order-book depth proxy and added symbol-jackknife requirement per Devil's concentration concern.",
+      "revised_novel_dim": [
+        "taker_buy_ratio_5m",
+        "book_depth_1pct_30d_quintile",
+        "realized_vol_30m"
+      ],
+      "revised_notes": "Enter short when taker_buy_ratio_5m >0.7 in bottom-quintile book_depth_1pct (computed as 30d rolling quintile of total bid+ask notional within 1% of mid, per-symbol — Binance-native, no external data) during bottom-tercile realized_vol_30m. Phase 3 gate requires symbol-jackknife val_score variance <30% AND post-cost edge ≥15 bps using thin-book slippage model (not flat 8 bps). Pre-screen sample count; if <50, relax taker threshold to 0.65 before discarding."
+    },
+    {
+      "original_archetype_ref": "btc_decorrelation_alpha_filter",
+      "revised_archetype": "btc_decorrelation_low_volume_filter",
+      "revision_reason": "Quant flagged market_cap_bucket as uncomputable from Binance endpoints; Risk flagged as-of-T0 sourcing leakage risk for external cap data. Replaced with Binance-native 30d notional volume quintile per Risk's recommendation.",
+      "revised_novel_dim": [
+        "btc_correlation_30d",
+        "notional_volume_30d_quintile"
+      ],
+      "revised_notes": "Pass only signals on assets with btc_correlation_30d below the universe median AND notional_volume_30d_quintile in middle three quintiles (excludes top quintile = mega-cap correlated, and bottom quintile = untradable thin alts that conflate decorrelation with illiquidity per Devil's concern). NaN handling: symbols with <30d listed history excluded explicitly with metric counter, not silently dropped. All inputs Binance-native, fully causal."
+    }
+  ],
+  "rejected_archetypes": [
+    {
+      "archetype_ref": "smart_crowd_divergence_long",
+      "primary_reason": "Risk overall_severity=block: directly overlaps user's live BWE_OI_Price_monitor pump-long strategy (long, channel=*, OI-rising condition), and top_trader_position_ratio has documented publish-lag leakage. Co-firing on same symbol/time would breach 5–10% per-trade sizing at $1000 capital. Resubmit with hard exclusion rule and fixed pre-optimization lookback window.",
+      "primary_critic": "risk"
+    },
+    {
+      "archetype_ref": "cross_channel_conflict_suppressor",
+      "primary_reason": "Quant sample_size_verdict=too_few (zero evaluable triggers under standard harness scoring — suppressors require counterfactual evaluation infrastructure not confirmed available); plus wildcard burst_count_* and undefined cross-channel premium_bps semantics. Defer until harness counterfactual support is built.",
+      "primary_critic": "quant"
+    },
+    {
+      "archetype_ref": "burst_oi_momentum_long",
+      "primary_reason": "Risk overall_severity=block (live conflict with BWE_OI_Price_monitor pump-long, same long-momentum-OI signal family) compounded by Quant sample_size_verdict=too_few (effective n<12 after temporal-cluster correction) and uncomputable wildcard fields burst_count_* and pretrend_*. Multiple independent blockers.",
+      "primary_critic": "risk"
+    }
+  ],
+  "next_round_focus": "Generator should target (a) short-side or non-OI-channel proposals to avoid live-strategy conflict that blocked two long candidates this round, (b) suppressor/veto archetypes only after confirming harness counterfactual scoring exists, and (c) concrete Reserved6 field-resolved entries (no wildcards) that exploit message-burst signals without overlapping the live pump-long thesis.",
+  "_role": "synthesizer",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 59.61
+}

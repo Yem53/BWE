@@ -1,0 +1,21 @@
+{
+  "archetype_ref": "oi_pump_funding_neutral_taker_extreme_long",
+  "best_case_thesis": "OI bursts with neutral funding represent organic spot-driven leverage accumulation rather than crowded perp positioning — when taker_buy_ratio_5m>=0.65 confirms aggressive market-buy pressure simultaneously, you have spot demand pulling perps along WITHOUT the funding skew that traps E126-style setups. This is the cleanest possible OI_Price/long entry signature: real money lifting offers while perp shorts haven't yet capitulated (funding still neutral), meaning the squeeze fuel is loaded but unspent. The asymmetric TP/SL trap that killed E126 paper-shadow (-13.5% despite 0.39 score) is structurally avoided here because neutral funding implies left-tail mean-reversion risk is materially lower.",
+  "expected_alpha_source": "Pre-crowding OI expansion: taker-aggressive buyers establishing leveraged longs BEFORE funding repricing signals to the rest of the market, capturing the lag between organic OI growth and funding-rate diffusion.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Early-trend or breakout-initiation regimes where spot demand leads perp positioning — typically mid-cycle BTC/alt rotations or post-consolidation breakouts before funding has time to re-equilibrate.",
+  "complementary_exit_families": [
+    "fixed",
+    "trail"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E051"
+  ],
+  "if_paper_works_likely_reason": "The funding-neutral gate filters out the crowded-long left-tail scenarios that caused E126's paper-shadow blowup, leaving a cleaner P&L distribution where the realized win-rate translates to actual compounding rather than asymmetric TP/SL trap.",
+  "could_compound_with": "Any exit-side archetype using trail-after-1R or multi_tp with the first TP near 1R, since neutral-funding OI bursts tend to have extended runway once the funding-rate catch-up trade kicks in — also synergizes with E148-style global-short-high filters as a confirmation overlay.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 31.6
+}

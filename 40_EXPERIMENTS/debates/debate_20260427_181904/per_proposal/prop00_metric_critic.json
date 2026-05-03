@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "oi_pump_taker_buy_extreme_high_liq_long",
+  "predicted_tp_pct": 0.6,
+  "predicted_sl_pct": 4.5,
+  "predicted_tp_sl_ratio": 0.133,
+  "predicted_win_rate": 0.78,
+  "predicted_mean_per_trade_pct": -0.531,
+  "predicted_kelly_pct": 0.0,
+  "trap_risk": "high",
+  "trap_reasoning": "This is a structural port of the E126 template (pump + extreme taker buy) onto the OI_Price channel, and the underlying market microstructure that produced E126's asymmetric TP/SL geometry is the same here: aggressive taker buying into an OI burst tends to mark short-term local tops, so the GPU optimizer will likely converge on a tight TP (~0.5–0.7%) capturing frequent small mean-reversion bounces, paired with a wide SL (~4–6%) needed to survive the occasional violent continuation. The 'high liquidity' filter modestly tightens win-rate (slippage-tolerant names trend more cleanly post-pump) — I estimate W≈0.78 — but with TP/SL ≈ 1:7.5, expectancy is W·TP − (1−W)·SL ≈ 0.78·0.6 − 0.22·4.5 = 0.468 − 0.99 = −0.522%, minus 8 bps cost ≈ −0.60%. Kelly is 0 (negative expectancy). Legacy p25 will likely look strong (~+0.4) and rank near E126, but mean_net_pct and kelly_capped will correctly flag it. Moderate uncertainty on exact TP/SL — the OI_Price channel may converge slightly tighter on SL than pricechange did, but the asymmetry direction is robust.",
+  "recommended_constraint": "force SL ≤ 2 × TP_pct in variant grid; additionally require min TP ≥ 0.8% to prevent micro-TP noise harvesting",
+  "metric_score_estimate": 0.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 22.94
+}

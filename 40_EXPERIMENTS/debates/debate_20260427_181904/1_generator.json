@@ -1,0 +1,291 @@
+{
+  "summary": "Pattern_miner identifies starved exit pipeline (4/5 families zero-positive), dormant OI_Price channel (61 entries, none in top-10), and asymmetric TP/SL trap; this batch ports proven pricechange/long templates to OI_Price, proposes novel exit kernels with natural symmetry, and adds short-side mean-reversion hypotheses with kelly-safe TP/SL ratios.",
+  "proposals": [
+    {
+      "archetype": "oi_pump_taker_buy_extreme_high_liq_long",
+      "type": "entry",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.65",
+        "liquidity_bucket=high",
+        "oi_change_pct>=10"
+      ],
+      "notes": "OI burst with aggressive taker buying in high-liquidity names — port of E126 winning template to OI_Price channel where 61 archetypes registered but none in top-10.",
+      "rationale": "OI_Price channel is the largest underexplored region per pattern_miner; combining 3 orthogonal supported signals (taker_buy + liquidity + oi_change) on a non-pricechange channel is structurally distinct from any of the 61 existing OI_Price entries which lack this triple-AND.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "oi_pump_global_short_high_long",
+      "type": "entry",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "global_short_ratio_high",
+        "oi_change_pct>=12",
+        "liquidity_bucket=high"
+      ],
+      "notes": "OI burst on names where global short ratio is elevated — squeeze fuel hypothesis, mirrors E148 from pricechange to OI channel.",
+      "rationale": "E148 (global_short_high pricechange) scored +0.350 with only 988 trig (selective); porting the squeeze-fuel logic to OI_Price exploits a different event distribution and remains distinct from existing OI_Price archetypes.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "oi_crash_taker_buy_reversal_long",
+      "type": "entry",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.60",
+        "oi_change_pct<=-8",
+        "liquidity_bucket=high"
+      ],
+      "notes": "OI reduction with concurrent taker BUY pressure — short-cover reversal setup distinct from continuation longs.",
+      "rationale": "All existing OI_Price longs assume continuation; this archetype explicitly hunts OI-down + buy-pressure divergence, a novel cross-signal not covered in 61 existing OI_Price entries.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "oi_pump_funding_neutral_taker_extreme_long",
+      "type": "entry",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.65",
+        "funding>=-0.0001",
+        "funding<=0.0001",
+        "oi_change_pct>=10"
+      ],
+      "notes": "OI burst with neutral funding (no crowding) plus extreme taker buying — clean signal without funding skew.",
+      "rationale": "Funding-neutral filter on OI_Price has not been tested; isolates organic OI growth from funding-driven positioning to avoid the E126 funding-skew trap.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "pc_pump_taker_buy_high_liq_global_short_long",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.65",
+        "liquidity_bucket=high",
+        "global_short_ratio_high"
+      ],
+      "notes": "Triple-AND combining the three top R2 winners (taker_buy + high_liq + global_short_high) into one selective entry.",
+      "rationale": "Each component appears separately in top-10 (E126/E051/E148) but the triple intersection has not been tested; pattern_miner explicitly recommends this combination to push lift above +0.50 without saturating triggers.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "pc_pump_funding_positive_taker_sell_short",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "short",
+      "novel_dim": [
+        "funding>=0.0005",
+        "taker_buy_ratio_5m<=0.40",
+        "move_pct>=3"
+      ],
+      "notes": "Crowded-long pump with positive funding and taker SELL dominance — classic mean-reversion fade with natural SL=TP symmetry.",
+      "rationale": "Existing 94 short entries collapse to channel baseline because they reuse continuation logic; this is mean-reversion-on-crowding with three orthogonal supported signals, structurally novel.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "pc_pump_top_trader_short_funding_high_short",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "short",
+      "novel_dim": [
+        "top_trader_position_ratio_low",
+        "funding_pct_top_decile",
+        "move_pct>=3"
+      ],
+      "notes": "Smart money positioned short while retail funding extreme — high-conviction fade short.",
+      "rationale": "top_trader_position_ratio flag tokens have not been combined with funding extremes on pricechange shorts; novel cross-signal with smart-money confirmation.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "pc_crash_oversold_global_long_extreme_long",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "long",
+      "novel_dim": [
+        "global_long_ratio_extreme",
+        "move_pct<=-4",
+        "taker_buy_ratio_5m>=0.55"
+      ],
+      "notes": "Crash with retail capitulation extreme + early taker buy reversal — counter-trend bounce.",
+      "rationale": "Crash-long counter-trend with global_long_extreme as capitulation gauge has not been tested; pattern_miner notes E066 (crash_taker_buy_long) +0.339, this adds capitulation filter for higher selectivity.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "r6_bigmove_simple_long",
+      "type": "entry",
+      "channel": "Reserved6",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.55"
+      ],
+      "notes": "Single-filter Reserved6 long — minimal AND to preserve sparse R6 trigger count (~120 baseline).",
+      "rationale": "Pattern_miner explicit fix: R6 archetypes crash with multi-filter AND; reducing to ≤1 novel_dim is the corrective architecture, not a parameter tweak.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "r6_pump_high_liq_only_long",
+      "type": "entry",
+      "channel": "Reserved6",
+      "side": "long",
+      "novel_dim": [
+        "liquidity_bucket=high"
+      ],
+      "notes": "R6 long gated only by high liquidity — sparse-channel safe filter.",
+      "rationale": "All current R6 archetypes use 2+ filters and crash; single-dim high_liq is a structurally distinct sparse-channel adaptation per pattern_miner guidance.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "hour_session_us_pump_long",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "long",
+      "novel_dim": [
+        "session=US",
+        "taker_buy_ratio_5m>=0.60",
+        "liquidity_bucket=high"
+      ],
+      "notes": "Session-gated entry restricting pricechange longs to US trading hours — exploits liquidity regime.",
+      "rationale": "No existing archetype combines session= category with taker_buy + liquidity AND; novel regime gate using supported `session` field.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "weekday_weekend_avoid_long",
+      "type": "filter",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "weekday=Mon",
+        "weekday=Tue",
+        "weekday=Wed",
+        "weekday=Thu",
+        "weekday=Fri"
+      ],
+      "notes": "Filter excluding weekend events — addresses thin weekend liquidity bias.",
+      "rationale": "`weekday` field is supported but unused in 121 existing filters; structurally novel time-of-week regime gate.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "basis_curvature_pump_short",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "short",
+      "novel_dim": [
+        "basis_rate>=0.001",
+        "premium_bps>=20",
+        "move_pct>=3"
+      ],
+      "notes": "Pump with extreme basis AND premium — perp dislocation fade.",
+      "rationale": "basis_rate combined with premium_bps as joint dislocation gauge has not been used; novel cross-derivative signal distinct from single-field premium archetypes.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x101_quick_cut_60s_time_exit",
+      "type": "exit",
+      "channel": "NA",
+      "side": "NA",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.65"
+      ],
+      "notes": "Pure time_only 60s exit paired with high-conviction entries — quick mean-reversion harvest before drift.",
+      "rationale": "time_only family has 0 positives across 2745 runs but pattern_miner notes `only viable if paired with quick-revert mean-reversion entry, none such tested`; 60s window on high-taker entries is the untested combination.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x102_wide_trail_2pct_exit",
+      "type": "exit",
+      "channel": "NA",
+      "side": "NA",
+      "novel_dim": [
+        "liquidity_bucket=high"
+      ],
+      "notes": "Trail family with 2.0% step on top entries — wider trail to avoid premature stop-out.",
+      "rationale": "trail family max approaches 0 (-0.006) suggesting step size is wrong, not concept dead; pattern_miner explicitly recommends wider trail (1.5-2.5%) which has not been swept.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x103_multi_tp_60_40_ladder_exit",
+      "type": "exit",
+      "channel": "NA",
+      "side": "NA",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.60"
+      ],
+      "notes": "Two-step TP ladder 60/40 with first TP at 0.5% second at 1.5% — captures bulk early.",
+      "rationale": "multi_tp 50/30/20 ladders all failed; 60/40 with front-loaded harvest on high-conviction entries is novel ladder shape distinct from existing X-series.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x104_breakeven_strict_30s_exit",
+      "type": "exit",
+      "channel": "NA",
+      "side": "NA",
+      "novel_dim": [
+        "liquidity_bucket=high"
+      ],
+      "notes": "Breakeven kernel with stricter trigger threshold and 30s activation — differentiates from X100 floor.",
+      "rationale": "breakeven family clusters at -0.08 floor due to lax trigger; tightening BE activation timing is structurally different exit logic.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x105_hybrid_fixed_then_trail_exit",
+      "type": "exit",
+      "channel": "NA",
+      "side": "NA",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.60"
+      ],
+      "notes": "Hybrid: take 50% at fixed 0.5% TP, trail remaining 50% with 1.5% step — symmetric risk/reward.",
+      "rationale": "Hybrid composition combining fixed + trail families is a NEW exit family per quality bar #3; not present in 101 existing exits which are mono-family.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "cc_pc_oi_within_60s_double_long",
+      "type": "cross_channel",
+      "channel": "*",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.60",
+        "liquidity_bucket=high",
+        "oi_change_pct>=8"
+      ],
+      "notes": "Pricechange and OI_Price both fire within 60 seconds with taker_buy confirmation — tight double-channel timing window.",
+      "rationale": "60-channel cross_channel timing has not been tested with <2m windows per quality bar #4; existing cc_*_5m archetypes use looser windows that saturate at baseline.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "cc_three_signal_funding_neutral_long",
+      "type": "cross_channel",
+      "channel": "*",
+      "side": "long",
+      "novel_dim": [
+        "funding>=-0.0001",
+        "funding<=0.0001",
+        "taker_buy_ratio_5m>=0.60",
+        "liquidity_bucket=high"
+      ],
+      "notes": "Three-channel alignment requiring funding-neutral regime — avoids crowded-trade traps.",
+      "rationale": "Existing cc archetypes do not condition on funding-neutral; novel weighting that filters out funding-driven moves is structurally distinct.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "r_kelly_safe_size_filter",
+      "type": "risk",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "liquidity_bucket=high",
+        "taker_buy_ratio_5m>=0.60"
+      ],
+      "notes": "Risk archetype enforcing position size only when both liquidity and taker_buy confirm — kelly-safe sizing.",
+      "rationale": "Existing 40 risk archetypes don't combine liquidity + taker_buy as size-gating AND; novel sizing filter with natural TP/SL symmetry to dodge E126-style asymmetric trap.",
+      "expected_distinct": true
+    }
+  ],
+  "_role": "generator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 68.41
+}

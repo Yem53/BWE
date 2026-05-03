@@ -1,0 +1,332 @@
+{
+  "summary": "All 18 proposals pass the filter-DSL parseability check (zero fall-through conditions — a clean improvement over the R1 50% silent-skip rate); main mathematical concerns are sample-starvation on the triple-conditioned entry archetypes (~5 of 18 likely <30 triggers/30d) and scale-ambiguity on funding/basis_rate fields that the Devil flagged.",
+  "analyses": [
+    {
+      "archetype_ref": "x_funding_flip_oi_decay",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053-X082 series"
+      ],
+      "distinctness_notes": "First exit kernel combining funding sign-flip with OI decay; orthogonal to all 5 live exit kernels (fixed/time_only/breakeven/trail/multi_tp) which are price/time-based.",
+      "expected_triggers_30d": 2400,
+      "triggers_estimate_method": "As exit kernel applied across positions (~5000 universe per combo) × ~50% funding<=0 × ~10% oi_change_pct<=-2 co-occurrence ≈ 250 firings per typical entry pipeline",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Pairs naturally with breakeven (lock at funding flip) and trail (tighten on OI decay); least useful with time_only."
+    },
+    {
+      "archetype_ref": "x_top_trader_reversal_exit",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053-X082"
+      ],
+      "distinctness_notes": "First exit using top_trader_position_ratio_dec flag; structurally orthogonal to the 5 price/time exit kernels.",
+      "expected_triggers_30d": 1250,
+      "triggers_estimate_method": "Flag token _dec ≈ p25 regime → ~25% of position lifetimes fire this exit",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Best with breakeven and trail; weak with multi_tp (would short-circuit ladder)."
+    },
+    {
+      "archetype_ref": "x_premium_collapse_be_lock",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053-X082"
+      ],
+      "distinctness_notes": "First premium-aware breakeven kernel; orthogonal to time/price-based BE.",
+      "expected_triggers_30d": 3000,
+      "triggers_estimate_method": "premium_bps in [-5,+5] is the modal range for liquid perps → very high firing rate; degeneracy risk",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Breakeven family only; likely degenerate (Devil flag valid) — recommend tightening band to [-2,+2] bps before deep eval."
+    },
+    {
+      "archetype_ref": "x_basis_neutral_quick",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053-X082"
+      ],
+      "distinctness_notes": "First basis-convergence exit; orthogonal to existing exit kernels.",
+      "expected_triggers_30d": 2500,
+      "triggers_estimate_method": "Scale-dependent: if decimal (±1%) → ~80% always-on (degenerate); if interpreted as bps → ~50% activation",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Quick/time_only exit family; scale ambiguity on basis_rate must be resolved at data-loader level before scoring is meaningful."
+    },
+    {
+      "archetype_ref": "x_volume_decay_trail_tighten",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053-X082"
+      ],
+      "distinctness_notes": "First volume-conditioned trail kernel; existing trails use static ATR multiplier.",
+      "expected_triggers_30d": 1250,
+      "triggers_estimate_method": "volume_pct_below_p25 by construction fires on ~25% of position lifetimes",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Trail family only; cleanest pairing with X-series acceleration/decay variants."
+    },
+    {
+      "archetype_ref": "x_taker_inversion_exit_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053-X082"
+      ],
+      "distinctness_notes": "First order-flow-based exit; structurally distinct from price/time stops.",
+      "expected_triggers_30d": 1500,
+      "triggers_estimate_method": "taker_buy_ratio_5m<=0.45 fires roughly 30% of long-position bars",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Long-only; pair with breakeven for protection, avoid trail (Devil flag: early-exits during pullbacks)."
+    },
+    {
+      "archetype_ref": "x_session_aware_widen_us",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053-X082"
+      ],
+      "distinctness_notes": "First session-conditioned exit parameter selector; novel dimension among 126 existing exits.",
+      "expected_triggers_30d": 900,
+      "triggers_estimate_method": "hour_utc>=14 → ~42% of clock; session=US conjunction ≈ 30% of total positions",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Acts as parameter modulator; recommend bounding hour_utc<22 (Devil flag valid) and binding explicit TP/SL multipliers before scoring."
+    },
+    {
+      "archetype_ref": "x_global_long_normalize_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053-X082"
+      ],
+      "distinctness_notes": "First sentiment-state-based short exit; orthogonal to price kernels.",
+      "expected_triggers_30d": 1250,
+      "triggers_estimate_method": "global_long_ratio_high (≥p75) → ~25% of short-position bars",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Short-only; Devil flag valid — semantics are static-state not transition. Without _extreme→_high transition support, kernel is wrong-sided. Flag for synthesizer to either reframe as 'while crowd long, hold' or augment with transition logic."
+    },
+    {
+      "archetype_ref": "e_neg_funding_oi_squeeze_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E007-E327 OI long series"
+      ],
+      "distinctness_notes": "Triple orthogonal: OI surge + funding extreme + premium discount; existing OI/long archetypes use 1-2 of these conditions, not all 3 jointly.",
+      "expected_triggers_30d": 18,
+      "triggers_estimate_method": "1400 OI_Price events × 0.25 (oi>=15%) × 0.20 (funding<=-0.04 if interpreted as 4bp; ~1% if -4%) × 0.25 (premium<=-15bps) ≈ 18; Devil scale-ambiguity flag valid",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Squeeze setup → multi_tp ladder optimal; small sample but high-conviction — synthesizer may still keep for diversity even though stats power is weak."
+    },
+    {
+      "archetype_ref": "e_top_trader_contrarian_pump_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E001-E253 pricechange short series"
+      ],
+      "distinctness_notes": "First contrarian top_trader short on pricechange channel; combines crowdedness flag + event-type + volume gate.",
+      "expected_triggers_30d": 62,
+      "triggers_estimate_method": "5000 pricechange × 0.5 (pump events) × 0.25 (top_trader_high) × 0.10 (volume_top_decile) = 62",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Fade exhaustion → fixed or breakeven preferred; trail likely whipsaws during chop."
+    },
+    {
+      "archetype_ref": "e_basis_extreme_premium_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "OI_Price short series"
+      ],
+      "distinctness_notes": "First basis-rate-driven short on OI_Price; uses curvature dimension under-exploited in registry.",
+      "expected_triggers_30d": 8,
+      "triggers_estimate_method": "1400 OI_Price × 0.05 (basis>=0.05 — narrow under either scale) × 0.10 (premium_extreme) × 0.40 (oi>=10%) ≈ 3-15; Devil correlation flag valid (premium and basis correlate)",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Mean-reversion short → fixed/breakeven; basis_rate scale must be resolved before this is computable in practice."
+    },
+    {
+      "archetype_ref": "e_new_listing_funding_extreme_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "pricechange long series"
+      ],
+      "distinctness_notes": "Listing-age conditioning is rare in registry; combines with funding_abs_extreme + liquidity gate for fresh-token niche.",
+      "expected_triggers_30d": 17,
+      "triggers_estimate_method": "5000 pricechange × 0.10 (listing_age<=30d) × 0.10 (funding_abs_extreme) × 0.33 (liq=mid) ≈ 17",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Devil flag valid — funding_abs_extreme is unsigned and direction-agnostic; recommend synthesizer add explicit funding<=-X for long-side semantic safety."
+    },
+    {
+      "archetype_ref": "e_global_short_squeeze_volume_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E316-E327 r6_extreme_*_long"
+      ],
+      "distinctness_notes": "Existing R6 long archetypes use small-cap/low-liq filters; global_short_ratio_extreme as sentiment gate is novel for this channel.",
+      "expected_triggers_30d": 6,
+      "triggers_estimate_method": "800 R6 × 0.70 (crash events on R6) × 0.10 (global_short_extreme p90) × 0.10 (volume_top_decile) ≈ 6",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Squeeze fuel → multi_tp ladder; sample is thin but R6/long is empirically alive (E316-E327 lift +0.343), so even small-sample addition has option value."
+    },
+    {
+      "archetype_ref": "f_midcap_us_session_gate",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "F001-F121 filter series"
+      ],
+      "distinctness_notes": "First joint session × marketcap × volume filter in 121 existing filters.",
+      "expected_triggers_30d": 735,
+      "triggers_estimate_method": "7000 total events × 0.35 (mid-cap) × 0.30 (US session) × 0.50 (quote_vol>=20M) ≈ 735",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Universal filter; pairs with all 5 exit families."
+    },
+    {
+      "archetype_ref": "f_low_liq_funding_abs_only",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "F001-F121"
+      ],
+      "distinctness_notes": "Three-way liq × funding × listing-age filter not in registry.",
+      "expected_triggers_30d": 160,
+      "triggers_estimate_method": "7000 total × 0.33 (liq=low) × 0.10 (funding_abs_extreme) × 0.70 (listing>=90d) ≈ 160",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Low-liquidity universe — Devil's slippage flag is critical; recommend mandatory paper-shadow with realistic fills before any combo using this filter is promoted."
+    },
+    {
+      "archetype_ref": "r_inverse_volatility_size",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "R001-R041 risk series"
+      ],
+      "distinctness_notes": "First risk archetype using move_pct + day_change_pct as hard gate (existing risk archetypes use sizing scalars).",
+      "expected_triggers_30d": 4900,
+      "triggers_estimate_method": "7000 total × 0.70 (passes move_pct<=3 OR |day_change|<=10 except R6) ≈ 4900",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "CRITICAL — Devil flag valid: move_pct<=3 EXCLUDES Reserved6 (8-15%/180s by definition) by construction. Synthesizer must either scope channel to OI_Price/pricechange OR relax to move_pct<=8/day_change<=20 before composing with R6 entries."
+    },
+    {
+      "archetype_ref": "cc_oi_pc_synced_30s_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "CC001-CC062 cross_channel series"
+      ],
+      "distinctness_notes": "Existing cross_channels use sequential timing; synchronous (<30s) co-fire with taker-flow gate is structurally new at the parseable-fields level.",
+      "expected_triggers_30d": 112,
+      "triggers_estimate_method": "1400 OI_Price × 0.40 (oi>=10) × 0.50 (pump events) × 0.40 (taker>=0.55) ≈ 112; note synchronous-30s constraint not parseable, archetype matches single-channel conditions only",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Cross-channel timing in notes is descriptive; parser only enforces the 3 listed conditions. Synthesizer should be aware effective archetype is single-channel oi+pump+taker, not cross-confirmed."
+    },
+    {
+      "archetype_ref": "cc_oi_then_r6_lowliq_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "CC001-CC062, R6 short series"
+      ],
+      "distinctness_notes": "Joint conditioning of OI threshold + low_liq + sentiment lean is novel for R6/short pipeline.",
+      "expected_triggers_30d": 16,
+      "triggers_estimate_method": "800 R6 × 0.25 (oi>=15) × 0.33 (liq=low) × 0.25 (global_long_high) ≈ 16",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Cross-channel sequencing not parser-enforced (same caveat as #17). Devil's tautology flag valid — verify OI→R6 gap >5s in historical alerts. Low-liq short slippage modeling mandatory before promotion."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 172.6
+}

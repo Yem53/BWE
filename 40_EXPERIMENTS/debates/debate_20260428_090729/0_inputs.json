@@ -1,0 +1,343 @@
+{
+  "run_id": "debate_20260428_090729",
+  "trigger": "manual",
+  "registry_summary": {
+    "total": 652,
+    "by_type": {
+      "entry": 267,
+      "exit": 150,
+      "filter": 126,
+      "risk": 42,
+      "cross_channel": 67
+    },
+    "entry_by_channel": {
+      "OI_Price": 85,
+      "pricechange": 82,
+      "Reserved6": 53,
+      "*": 47
+    },
+    "entry_by_side": {
+      "short": 114,
+      "long": 140,
+      "both": 13
+    }
+  },
+  "coverage_summary": {
+    "n_total_results": 27797,
+    "top_entries_preview": [
+      "E328 pc_smallcap_pump_long ch=pricechange/long best=+0.189 lift_vs_median=+0.269 trig=5000",
+      "E329 pc_lowliq_pump_long ch=pricechange/long best=+0.189 lift_vs_median=+0.269 trig=5000",
+      "E330 e_neg_funding_oi_squeeze_long ch=OI_Price/long best=+0.189 lift_vs_median=+0.331 trig=5000",
+      "E331 e_top_trader_contrarian_pump_s ch=pricechange/short best=+0.189 lift_vs_median=+0.269 trig=5000",
+      "E332 e_basis_extreme_premium_short ch=OI_Price/short best=+0.189 lift_vs_median=+0.424 trig=5000",
+      "E333 e_global_short_squeeze_volume_ ch=Reserved6/long best=+0.189 lift_vs_median=+0.269 trig=5000",
+      "E334 e_oi_collapse_volume_meanrev_s ch=OI_Price/short best=+0.189 lift_vs_median=+0.424 trig=5000",
+      "E335 e_pc_neg_premium_neg_basis_arb ch=pricechange/long best=+0.189 lift_vs_median=+0.269 trig=5000",
+      "E337 e_oi_taker_buy_with_short_sque ch=OI_Price/long best=+0.189 lift_vs_median=+0.331 trig=5000",
+      "E338 e_pc_lowliq_smallcap_mean_reve ch=pricechange/long best=+0.189 lift_vs_median=+0.269 trig=5000"
+    ],
+    "by_exit_family": [
+      {
+        "exit_family": "fixed",
+        "n": 13148,
+        "mean": -0.022620544113173106,
+        "median": -0.045246,
+        "max": 0.188508,
+        "n_positive": 6048
+      },
+      {
+        "exit_family": "trail",
+        "n": 4454,
+        "mean": -1.0793282366412214,
+        "median": -1.098413,
+        "max": -0.721903,
+        "n_positive": 0
+      },
+      {
+        "exit_family": "multi_tp",
+        "n": 3899,
+        "mean": -0.5116589802513465,
+        "median": -0.518169,
+        "max": -0.356091,
+        "n_positive": 0
+      },
+      {
+        "exit_family": "breakeven",
+        "n": 3521,
+        "mean": -0.16919589747230898,
+        "median": -0.16654,
+        "max": -0.0802,
+        "n_positive": 0
+      },
+      {
+        "exit_family": "time_only",
+        "n": 2775,
+        "mean": -1.067570972972973,
+        "median": -1.045225,
+        "max": -0.703132,
+        "n_positive": 0
+      }
+    ],
+    "lessons_from_r1_r2": [
+      "R1 bug: ~50% of LLM-output novel_dim used unsupported fields (pretrend_*, burst_count_*, btc_*) — silently fell through filter, archetype became duplicate of channel/side baseline. FIXED by enforcing SUPPORTED_FIELDS.",
+      "R2 finding (E126 paper): backtest score 0.3946 on E126 pc_pump_taker_buy_extreme_long (TP=0.51 SL=6.00 win=80%) compounded to -13.5% on $1000 paper account. Asymmetric TP/SL TRAP: legacy p25 metric blind to left tail. New metrics (mean, kelly_capped, p25_capped_tail) correctly penalize.",
+      "R2 synthesizer self-identified gap: X101+ exit-side archetype pipeline starved relative to entry pipeline. Generator should propose more EXIT archetypes leveraging the 5 real exit kernels (fixed/time_only/breakeven/trail/multi_tp)."
+    ]
+  },
+  "results_summary": {
+    "total": 27797,
+    "by_status": {
+      "discard": 27797
+    },
+    "best_score": null,
+    "n_keeps": 0
+  },
+  "recent_experiments": [
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X317/multi_tp_10_50_ladder | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X318/multi_tp_10_100_ladder | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X319/multi_tp_5_50_ladder | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": 0.188508,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X001/fixed_tp1_sl1_symmetric | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": 0.188508,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X002/fixed_tp2_sl1_aggressive | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": 0.188508,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X003/fixed_tp3_sl1_runner | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": 0.188508,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X004/fixed_tp1_sl2_conservative | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": 0.188508,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X005/fixed_tp1_5_sl1_default | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X006/multi_tp_50at1_50at2_sl1 | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X007/multi_tp_33_33_33_at_1_2_3 | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X008/multi_tp_25_25_50_back_loaded | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X009/multi_tp_50at1_5_50at3_wide | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.0802,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X010/multi_tp_first_be_runner | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X011/ladder_5_steps_pct | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X012/ladder_3_steps_atr | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X013/ladder_fibonacci | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X014/ladder_volume_weighted | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X015/ladder_decay | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.497621,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X016/ladder_tight_then_wide | n_var=1440 best_tp=0.80 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X017/trail_atr_2 | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X018/trail_atr_3 | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X019/trail_pct_1 | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X020/trail_pct_2 | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X021/trail_chandelier | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X022/runner_50pct_trail2atr | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X023/runner_67pct_trail3atr | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X024/runner_fixed_then_trail_pct | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X025/runner_decay | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -1.098413,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X026/runner_premium_based | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    },
+    {
+      "commit": "0000000",
+      "val_score": -0.0802,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E132/pc_pump_btc_extreme_correlated_long X=X027/be_at_1r_then_hold | n_var=1440 best_tp=0.50 best_sl=10.00 elapsed=0.1s"
+    }
+  ],
+  "existing_archetype_ids_sample": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020"
+  ],
+  "models": {
+    "pattern_miner": "claude-opus-4-7",
+    "generator": "claude-opus-4-7",
+    "steelman": "claude-opus-4-7",
+    "devil": "claude-opus-4-7",
+    "quant": "claude-opus-4-7",
+    "risk": "claude-opus-4-7",
+    "metric_critic": "claude-opus-4-7",
+    "synthesizer": "claude-opus-4-7",
+    "self_reflection": "claude-opus-4-7",
+    "behavior_annotator": "claude-opus-4-7",
+    "cross_pair_recommender": "claude-opus-4-7"
+  },
+  "mode": "shallow"
+}

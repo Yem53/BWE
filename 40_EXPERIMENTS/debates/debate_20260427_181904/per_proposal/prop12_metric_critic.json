@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "basis_curvature_pump_short",
+  "predicted_tp_pct": 0.6,
+  "predicted_sl_pct": 1.5,
+  "predicted_tp_sl_ratio": 0.4,
+  "predicted_win_rate": 0.62,
+  "predicted_mean_per_trade_pct": 0.024,
+  "predicted_kelly_pct": 3.7,
+  "trap_risk": "low",
+  "trap_reasoning": "Shorting a pump with extreme basis AND premium dislocation is a mean-reversion fade thesis where the edge expresses quickly: once perp dislocation snaps back, gains are fast and bounded (TP ~0.4-0.8%), and the typical adverse excursion is a continuation squeeze that is itself bounded by funding/arb pressure rather than open-ended (SL ~1.2-2.0%). Unlike the E126 long-pump trap where SL had to be wide (6%) to survive continued momentum on the entry side, fading dislocation on the short side does not require a 5-10x SL/TP ratio because the dislocation itself is the bounded mispricing. With three AND conditions (basis≥0.001, premium≥20bps, move≥3%) the filter is fairly tight, supporting a 60-65% win rate on a small but real edge. The geometry is naturally near-symmetric (ratio ~0.3-0.5), so legacy p25 and kelly-capped should agree, and mean_per_trade is plausibly positive after 8bps cost. Main uncertainty: trigger count may be low (similar to E148's 988) which raises sampling noise on win-rate estimate.",
+  "recommended_constraint": "force SL ≤ 2.5 × TP_pct in variant grid to keep the natural mean-reversion geometry and prevent the optimizer from drifting into wide-SL configs that game p25",
+  "metric_score_estimate": 3.7,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 22.53
+}

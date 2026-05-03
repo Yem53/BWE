@@ -1,0 +1,248 @@
+{
+  "summary": "Round 4 generator targets the starved exit pipeline (8 of 18 proposals) with hybrid kernels triggered by funding/OI/premium/taker-flow signals, plus 5 multi-signal entries leveraging negative-funding squeeze, contrarian top-trader, and new-listing volatility — all using only validated SUPPORTED_FIELDS to avoid the R1 silent-skip bug.",
+  "proposals": [
+    {
+      "archetype": "x_funding_flip_oi_decay",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "funding_rate<=0",
+        "oi_change_pct<=-2"
+      ],
+      "notes": "Exit when funding flips against position AND OI starts decaying — orthogonal microstructure trigger before price reverses.",
+      "rationale": "None of the 5 exit kernels (fixed/time_only/breakeven/trail/multi_tp) currently combines real-time funding sign change with OI decay; this adds a market-structure exit independent of price path.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_top_trader_reversal_exit",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "top_trader_position_ratio_dec"
+      ],
+      "notes": "Exit position when smart-money top-trader position ratio enters decline regime — leading indicator of impending reversal.",
+      "rationale": "Existing exits are all price-based or time-based; using top_trader flag as exit trigger is structurally new and uses a real-time observable Binance metric.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_premium_collapse_be_lock",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "premium_bps<=5",
+        "premium_bps>=-5"
+      ],
+      "notes": "Lock breakeven when premium_bps collapses to neutral band — premium decay signals exhaustion of the futures-spot spread driver.",
+      "rationale": "X101+ exit family lacks premium-aware breakeven kernels; this fuses premium normalization with BE protection, distinct from time/price-based BE.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_basis_neutral_quick",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "basis_rate>=-0.01",
+        "basis_rate<=0.01"
+      ],
+      "notes": "Quick exit when basis_rate normalizes to ±1% band — basis convergence often precedes mean reversion in perp markets.",
+      "rationale": "No existing exit uses basis convergence as the primary trigger; orthogonal to price/funding/OI dimensions used by the 5 kernels.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_volume_decay_trail_tighten",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "volume_pct_below_p25"
+      ],
+      "notes": "Tighten trailing stop when volume drops below p25 — momentum exhaustion signal that classical trail kernels ignore.",
+      "rationale": "Current trail (X-series) uses fixed ATR multiplier irrespective of volume regime; volume-conditioned trail tightening is structurally new.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_taker_inversion_exit_long",
+      "type": "exit",
+      "channel": "*",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m<=0.45"
+      ],
+      "notes": "Close long when 5m taker buy ratio inverts below 0.45 — aggressive sellers taking control of order flow.",
+      "rationale": "Order-flow-based exit; existing exit kernels do not consume taker_buy_ratio as a stop trigger — purely orthogonal to TP/SL/trail logic.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_session_aware_widen_us",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "session=US",
+        "hour_utc>=14"
+      ],
+      "notes": "Widen TP and tighten SL during US session — different volatility regime than Asian; static exits underperform across sessions.",
+      "rationale": "None of the 126 existing exits is session-conditioned; using session as an exit-parameter selector is structurally new.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_global_long_normalize_short",
+      "type": "exit",
+      "channel": "*",
+      "side": "short",
+      "novel_dim": [
+        "global_long_ratio_high"
+      ],
+      "notes": "Close short when global long ratio fades from extreme to merely high — squeeze pressure relief, take profit on trend exhaustion.",
+      "rationale": "Sentiment-normalization exit; existing exits do not use global_long_ratio transitions, structurally distinct from price/time stops.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_neg_funding_oi_squeeze_long",
+      "type": "entry",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "oi_change_pct>=15",
+        "funding<=-0.04",
+        "premium_bps<=-15"
+      ],
+      "notes": "Long when OI surges with deeply negative funding AND discount premium — classic short-squeeze setup with three orthogonal confirmations.",
+      "rationale": "Triple-condition entry combining OI momentum + funding extreme + premium discount; existing OI_Price/long archetypes typically use 1-2 of these, not all three jointly.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_top_trader_contrarian_pump_short",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "short",
+      "novel_dim": [
+        "top_trader_position_ratio_high",
+        "event_type=pump",
+        "volume_pct_top_decile"
+      ],
+      "notes": "Short pump events when top-trader ratio is already crowded long — fade smart-money exhaustion with volume confirmation.",
+      "rationale": "Contrarian top-trader entry on pricechange channel is not in registry; combines crowdedness flag with event-type and volume gate, structurally novel.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_basis_extreme_premium_short",
+      "type": "entry",
+      "channel": "OI_Price",
+      "side": "short",
+      "novel_dim": [
+        "basis_rate>=0.05",
+        "premium_extreme",
+        "oi_change_pct>=10"
+      ],
+      "notes": "Short when basis blows out >5% AND premium extreme AND OI surging — classic perp overheating, mean reversion setup.",
+      "rationale": "Basis-rate-driven short entry combined with premium_extreme flag is not in 81 OI_Price archetypes; uses an under-exploited curvature dimension.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_new_listing_funding_extreme_long",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "long",
+      "novel_dim": [
+        "listing_age_days<=30",
+        "funding_abs_extreme",
+        "liquidity_bucket=mid"
+      ],
+      "notes": "Long new listings (≤30d) when funding is at extreme and liquidity is mid — early-stage volatility with absorbable size.",
+      "rationale": "Listing-age conditioning is rare in registry; combining with funding_abs_extreme + liquidity gate creates a fresh-token edge case not covered.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_global_short_squeeze_volume_long",
+      "type": "entry",
+      "channel": "Reserved6",
+      "side": "long",
+      "novel_dim": [
+        "global_short_ratio_extreme",
+        "volume_pct_top_decile",
+        "event_type=crash"
+      ],
+      "notes": "Long Reserved6 crashes when global retail is extremely short AND volume is top-decile — squeeze fuel meets capitulation.",
+      "rationale": "Existing R6 long archetypes mostly use small-cap/low-liq filters; using global_short_ratio_extreme as a sentiment gate on R6 is structurally distinct.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "f_midcap_us_session_gate",
+      "type": "filter",
+      "channel": "*",
+      "side": "NA",
+      "novel_dim": [
+        "marketcap_bucket=mid",
+        "session=US",
+        "quote_volume_24h>=20000000"
+      ],
+      "notes": "Gate trades to mid-cap symbols during US session with healthy volume — best signal-to-noise band per session-cap analysis.",
+      "rationale": "Session × marketcap_bucket × volume joint filter is not present in 121 filter archetypes; combines three orthogonal market-quality dims.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "f_low_liq_funding_abs_only",
+      "type": "filter",
+      "channel": "*",
+      "side": "NA",
+      "novel_dim": [
+        "liquidity_bucket=low",
+        "funding_abs_extreme",
+        "listing_age_days>=90"
+      ],
+      "notes": "Only allow trades on low-liquidity symbols with funding extreme but excluding ultra-new listings — wild-but-not-untested universe.",
+      "rationale": "Three-way liq × funding × listing-age filter is not in registry; isolates a specific risk-reward niche distinct from existing filters.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "r_inverse_volatility_size",
+      "type": "risk",
+      "channel": "*",
+      "side": "NA",
+      "novel_dim": [
+        "move_pct<=3",
+        "day_change_pct<=10",
+        "day_change_pct>=-10"
+      ],
+      "notes": "Skip entries when symbol already moved >3% on the bar OR >10% on the day — chase-prevention to protect against late-stage continuation traps.",
+      "rationale": "Existing risk archetypes use position sizing scalars; this one uses move_pct + day_change_pct as a hard gate, structurally distinct from sizing kernels.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "cc_oi_pc_synced_30s_long",
+      "type": "cross_channel",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "oi_change_pct>=10",
+        "event_type=pump",
+        "taker_buy_ratio_5m>=0.55"
+      ],
+      "notes": "Trigger long only when OI_Price pump AND pricechange pump fire within 30s of each other AND taker flow confirms — synchronous multi-channel agreement.",
+      "rationale": "Existing 62 cross_channel archetypes mostly use sequential timing; this requires synchronous (<30s) cross-confirmation with taker-flow gate, structurally new.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "cc_oi_then_r6_lowliq_short",
+      "type": "cross_channel",
+      "channel": "Reserved6",
+      "side": "short",
+      "novel_dim": [
+        "oi_change_pct>=15",
+        "liquidity_bucket=low",
+        "global_long_ratio_high"
+      ],
+      "notes": "Short Reserved6 events when OI_Price already flagged within 60s AND symbol is low-liquidity AND retail is leaning long — liquidation cascade setup.",
+      "rationale": "Combines cross-channel sequential timing with liquidity + sentiment gates; the joint conditioning isn't in current 49 R6/short archetypes.",
+      "expected_distinct": true
+    }
+  ],
+  "_role": "generator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 140.33
+}

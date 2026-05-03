@@ -1,0 +1,19 @@
+{
+  "summary": "Exit-family proposal targeting breakeven kernel; structurally sound but execution-timing and liquidity-filter assumptions need monitoring.",
+  "critiques": [
+    {
+      "archetype_ref": "x104_breakeven_strict_30s_exit",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "The novel_dim only specifies liquidity_bucket=high but the notes/rationale describe a 30s BE activation timer — the actual trigger-tightening parameter is not encoded in novel_dim, so the kernel may collapse back to the X100 breakeven floor (-0.08 cluster) if the liquidity filter alone is the only differentiator.",
+        "30s activation window is shorter than the 3–5s execution latency stack-up (signal → fill → BE re-arm), meaning many trades will hit BE stop on noise before the position has had time to develop — this systematically converts small winners into scratches and inflates the -0.08 floor rather than escaping it.",
+        "liquidity_bucket=high filter likely correlates with BTC/ETH-dominant subset; combined with breakeven-after-30s the archetype may overfit to a narrow symbol slice and fail the 'sensitive to one or two outlier symbols' fragility test.",
+        "Breakeven family in coverage shows max=-0.08 across 1923 results with n_positive=0 — the floor is structural to the kernel, not to trigger laxness. Tightening trigger timing alone (without changing the BE offset or adding a partial-TP leg) has weak prior for breaking through that ceiling."
+      ],
+      "monitoring_advice": "During paper-shadow track: (1) BE-hit rate within first 30s vs after — if >60% of exits fire in the first window, the timer is too tight; (2) per-symbol P&L concentration (Herfindahl on top-3 symbols) to catch high-liquidity overfit; (3) compare realized score against X100 baseline on the SAME entry — if delta < +0.02 the differentiation claim fails."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.42
+}

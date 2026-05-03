@@ -1,0 +1,20 @@
+{
+  "archetype_ref": "oi_pump_taker_buy_extreme_high_liq_long",
+  "best_case_thesis": "This proposal targets a textbook smart-money footprint: a sharp OI expansion (≥10%) accompanied by aggressive taker-buy dominance (≥0.65) in high-liquidity names is the signature of informed leveraged longs being opened against passive sellers, not retail FOMO chasing thin books. The triple-AND filter forces all three conditions to align simultaneously, which historically marks the early phase of a directional repricing rather than a noise burst — exactly the structural setup that drove E126 to top of leaderboard, but now ported to a channel (OI_Price) where the signal-to-noise on OI deltas is native rather than derived.",
+  "expected_alpha_source": "Informed-flow leverage initiation: new OI being aggressively lifted at the offer in deep books reveals positioning by participants willing to pay the spread, which precedes price discovery before passive market-makers reprice their quotes.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Trending or regime-transition markets with rising aggregate OI — specifically post-consolidation breakouts where leverage is being rebuilt after a deleveraging event, and high-liquidity names lead the move before alts catch up.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E051"
+  ],
+  "if_paper_works_likely_reason": "The OI_Price channel provides an earlier trigger than pricechange-based E126 because OI moves frequently lead price in leverage-driven markets, so the same taker-buy + liquidity edge fires with better entry timing and lower slippage in deep books.",
+  "could_compound_with": "Any exit-side archetype that uses OI-decay or taker-flow-reversal as a stop signal would synergize, since the same channel that generated the entry can detect when the informed flow has exhausted — closing the loop on a single-channel thesis rather than cross-channel mismatch.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.09
+}

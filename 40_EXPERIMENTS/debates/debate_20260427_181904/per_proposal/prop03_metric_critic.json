@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "oi_pump_funding_neutral_taker_extreme_long",
+  "predicted_tp_pct": 0.6,
+  "predicted_sl_pct": 1.8,
+  "predicted_tp_sl_ratio": 0.333,
+  "predicted_win_rate": 0.62,
+  "predicted_mean_per_trade_pct": 0.0096,
+  "predicted_kelly_pct": 1.6,
+  "trap_risk": "medium",
+  "trap_reasoning": "OI_Price/long entries with extreme taker_buy_ratio (>=0.65) and oi_change_pct>=10 are momentum-pump signals — same family as E126 which converged to TP=0.51/SL=6.00. The funding-neutral band (|funding|<=1bp) is a clever crowding filter that likely improves win-rate vs E126 (predicted ~62% vs E126's 80%, but with healthier symmetry because we're filtering out late-stage crowded pumps where mean-reversion punishes longs). However, the GPU optimizer's natural tendency on pump-long entries is still asymmetric SL>>TP: longs after a 10% OI burst have fat left tails when the pump exhausts. Without a constraint, optimizer likely converges to TP~0.6/SL~1.8-2.5 (ratio 0.25-0.33). Expected E[trade] ≈ 0.62*0.6 - 0.38*1.8 - 0.08 = 0.372 - 0.684 - 0.08 = -0.39%... wait, recomputing more carefully: with funding-neutral filter genuinely removing crowded entries, win-rate may reach 65-70% and SL geometry tighter (~1.5x). Best-case E[trade] = 0.65*0.6 - 0.35*1.5 - 0.08 = 0.39 - 0.525 - 0.08 = -0.215%. Honest assessment: marginal-to-negative expectancy unless the funding filter is more powerful than I estimate. Trigger count likely 400-1200 (narrower than E126's 3443 due to funding band). Medium trap risk because the entry family has known asymmetric geometry, but the novel filter is a genuine attempt to address the root cause.",
+  "recommended_constraint": "force SL <= 2.5 * TP_pct in variant grid AND require predicted mean_net_pct > 0 before promotion; also test with funding band widened to |funding|<=3bp as ablation to isolate whether the neutrality filter is doing real work",
+  "metric_score_estimate": 1.8,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.61
+}

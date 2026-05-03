@@ -1,0 +1,20 @@
+{
+  "summary": "Cross-channel 60s double-fire long with 3-way filter conjunction is worth testing but carries concrete sample-size, regime, and live-strategy-overlap risks.",
+  "critiques": [
+    {
+      "archetype_ref": "cc_pc_oi_within_60s_double_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Sample-size fragility: 4-way conjunction (cross-channel 60s coincidence AND taker_buy_ratio_5m>=0.60 AND liquidity_bucket=high AND oi_change_pct>=8) is highly restrictive — likely trigger count well below the ~1000 baseline seen in E148. Coverage preview shows top entries at trig=988–5000; tightening the cross-channel window from cc_*_5m to <60s on top of three filters could collapse triggers under any minimum-sample threshold and produce noisy score estimates.",
+        "Overlap with live BWE_OI_Price_monitor pump long: this archetype fires precisely when OI_Price + pricechange both confirm with taker_buy + high liquidity — i.e. exactly the conditions under which the user's existing pump-long is most likely already active. Risk of unintentional position doubling / correlated drawdown rather than orthogonal alpha.",
+        "Asymmetric TP/SL trap echo (R2 lesson on E126): this is structurally a confirmed-pump long (high taker_buy, high liquidity, rising OI) — the same setup family that compounded to -13.5% on $1000 paper despite 80% win rate. Strong setups that win small and lose big are exactly where legacy p25 lies. Must be scored under mean / kelly_capped / p25_capped_tail, not legacy p25.",
+        "Regime dependence: taker_buy_ratio_5m>=0.60 + oi_change_pct>=8 is a strongly directional bullish-confirmation gate; 30-day backtest window may not contain a meaningful BTC chop/down regime, so the edge could be regime-fitted rather than robust.",
+        "Possible filter redundancy: OI_Price channel firing already implies an OI move; layering oi_change_pct>=8 on top may either be no-op (channel trigger threshold already exceeds 8) or shrink triggers further with little new information — worth measuring marginal trigger reduction from this filter alone."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) report raw trigger count and discard if <300 over 30d; (2) track overlap-rate with live BWE_OI_Price_monitor pump-long fires (timestamp intersection) and flag if >40% co-fire; (3) require kelly_capped and p25_capped_tail to both be positive — do not promote on mean alone given R2 E126 precedent; (4) split metrics by BTC regime bucket if available to test regime-fitting; (5) ablate oi_change_pct>=8 to confirm it adds marginal lift rather than just reducing N."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 55.65
+}

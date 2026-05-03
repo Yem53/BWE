@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "hour_session_us_pump_long",
+  "expected_trades_per_day": 11.3,
+  "expected_trades_per_day_basis": "Estimated ~340 filtered events over 30d window (synthesizer note) ≈ 11.3 trades/day; but US-session gating (8h of 24h) plus taker_buy>=0.60 plus high-liquidity bucket likely compresses to 3-5/day in practice — using midpoint of declared sample.",
+  "regime_sensitivity": {
+    "best_in": [
+      "US equity-market open hours (13:30-20:00 UTC) with rising BTC trend",
+      "high-liquidity majors (BTC/ETH/SOL/top-20) during NY session overlap",
+      "positive funding regime where taker-buy aggression aligns with spot bid"
+    ],
+    "worst_in": [
+      "Asia-only or low-volume weekend sessions (filter excludes by design but edge cases of DST/holiday US closures)",
+      "BTC range-bound chop with taker_buy print noise (false-positive aggression)",
+      "macro-event days (CPI/FOMC) where 5m taker_buy spikes are reactive, not directional"
+    ],
+    "explanation": "The strategy explicitly conditions on US session liquidity + sustained taker-buy aggression on a pricechange long signal, so it harvests momentum continuation when NY desks are active and majors have tight spreads. It degrades when taker-buy ratio is noisy from thin books or when macro prints cause whipsaw aggression that reverts within the holding window."
+  },
+  "live_readiness_caveats": [
+    "Restrict to top-20 USDT-perp symbols only — high-liquidity bucket must be enforced live by a hard symbol whitelist or rolling-volume filter, otherwise mid-cap fills will slip and erase the session edge",
+    "Devil flag is real: 30d window contains ~22 US sessions, so a single macro-event cluster (e.g. one FOMC week) can dominate the 340-event sample — require sub-window stability check (split into 3x10d) before promoting beyond paper",
+    "Session boundary handling: entries fired in the last 15min of US session may hold past close into Asia thin-book — cap entry cutoff at session_end - holding_period or skip late-session triggers"
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "trades_per_day_actual vs predicted (11.3)",
+      "alert_threshold": "<3 or >20 sustained 5d",
+      "rationale": "Frequency drift signals filter degradation — taker_buy_ratio_5m threshold may be too loose/tight in live data vs backtest snapshot"
+    },
+    {
+      "metric": "median_trade_pct by US-session-third (open/mid/close)",
+      "alert_threshold": "close-third median flips negative for >5 sessions",
+      "rationale": "Distinguishes genuine session edge from open-only momentum; close-third decay is the most likely failure mode given Devil's macro-overfit flag"
+    },
+    {
+      "metric": "fill_slippage_bps on entry (limit-vs-mid)",
+      "alert_threshold": ">8 bps median over 7d",
+      "rationale": "Pump+taker_buy entries chase momentum; high slippage directly eats the +0.43 lift this archetype claims vs median"
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">6 in a row",
+      "rationale": "E126 paper-shadow precedent: high backtest scores compounded to -13.5%; consecutive-loss runs are the practical signature of left-tail risk"
+    },
+    {
+      "metric": "BTC-1h trend correlation of returns",
+      "alert_threshold": "|corr| > 0.7 over 14d",
+      "rationale": "If the edge collapses to 'long when BTC is up', the session/taker_buy/liquidity stack is decorative — kill and replace with a simpler BTC-trend filter"
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling kelly_capped <= 0 with >=15 trades sampled",
+      "rationale": "Matches the v2 metric framework that flagged E126's asymmetric TP/SL trap; kelly_capped is the canonical live-readiness gate per R2 lessons"
+    },
+    {
+      "condition": "Sub-window split (last 10d vs prior 20d) shows median trade_pct sign-flip",
+      "rationale": "Directly addresses Devil's macro-overfit concern — non-stationary edge is the dominant failure mode for session-gated strategies"
+    },
+    {
+      "condition": "3 consecutive US sessions with zero qualifying triggers",
+      "rationale": "Indicates the taker_buy_ratio_5m>=0.60 + high_liquidity intersection has shifted out of distribution; either market regime changed or data pipeline broke — investigate before continuing"
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 9.5,
+  "expected_max_dd_basis": "Long-only pricechange-channel entries historically run 8-12% paper DD in 30d windows (cf. E126's -13.5% compounded path); session gating should reduce variance modestly but high-volatility US opens can cluster losses, so 9.5% is a midpoint estimate at 5-10% sizing.",
+  "compare_to_existing": "Closest sibling is E051 pc_high_liquidity_long (best=+0.347, trig=2157) — same channel/side/liquidity bucket but unsessioned; E212 should outperform E051 during US hours and underperform outside them. Triangulate by running both in paper-shadow concurrently and comparing US-session-only return distributions.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 49.72
+}

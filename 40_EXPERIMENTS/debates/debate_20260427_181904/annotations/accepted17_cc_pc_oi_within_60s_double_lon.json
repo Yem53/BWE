@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "cc_pc_oi_within_60s_double_long",
+  "expected_trades_per_day": 1.8,
+  "expected_trades_per_day_basis": "Cross-channel 60s double-fire is rare; pricechange-channel long triggers run ~120-170/30d at high-liquidity+taker_buy>=0.60 (cf. E051 trig=2157 unfiltered → ~30% pass triple-AND ≈ 650/30d, then ~8-10% co-fire with OI_Price within 60s → ~55/30d ≈ 1.8/day).",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC trending up with positive funding flips",
+      "Mid-cap alt rotations where OI builds then price extends within minutes",
+      "Sessions with elevated taker-buy aggression (Asia open, US open)"
+    ],
+    "worst_in": [
+      "Low-vol chop where OI drifts without price follow-through (60s window misses)",
+      "BTC sharp-down regimes — long bias gets run over despite double confirmation",
+      "Weekend/illiquid hours where OI_Price fires lag pricechange by >60s"
+    ],
+    "explanation": "The double-channel timing window selects for genuine momentum confluence — both order-flow (pricechange + taker_buy) and positioning (OI build) agreeing within a minute. This works when directional conviction is real, but in chop the 60s window either fails to align or aligns on noise that mean-reverts before the fixed exit triggers."
+  },
+  "live_readiness_caveats": [
+    "60s temporal join is NOT expressible in the filter DSL — backtest score depends entirely on correct event-pairing implementation at kernel level; verify pairing logic before trusting any score, otherwise this collapses to a 3-condition AND filter and becomes a duplicate of E051-class archetypes.",
+    "High-liquidity bucket gates symbol set tightly (likely BTC/ETH/SOL/major alts) — at $1000 capital with 5-10% sizing, slippage should be negligible, but expect long dry spells (1.8 trades/day average means multi-day gaps are normal).",
+    "Asymmetric TP/SL trap risk per R2 lesson: even if mean score looks positive, must verify on kelly_capped + p25_capped_tail metrics before paper-shadow — legacy p25 missed the E126 -13.5% compounding blowup."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "event_pairing_rate (pct of pricechange-long fires that find an OI_Price co-fire within 60s)",
+      "alert_threshold": "< 5% or > 20% deviation from backtest",
+      "rationale": "This is the load-bearing assumption of the archetype — if live pairing rate diverges from backtest, the strategy is silently a different strategy."
+    },
+    {
+      "metric": "trades_per_day_live vs 1.8 predicted",
+      "alert_threshold": "< 0.5 or > 4.0 sustained over 7 days",
+      "rationale": "Below 0.5 means the 60s window is too tight in current regime (no statistical power); above 4.0 means filter is leaking and edge will dilute."
+    },
+    {
+      "metric": "median_trade_pct (live)",
+      "alert_threshold": "flips negative for 3 consecutive days",
+      "rationale": "Cross-channel confluence should produce a clearly positive median if the edge is real; flip indicates either regime mismatch or pairing bug."
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">= 5",
+      "rationale": "At 1.8 trades/day, 5-loss streak ≈ 3 days — anything more suggests the long bias is fighting a BTC down-regime and this archetype should pause."
+    },
+    {
+      "metric": "latency_from_second_signal_to_fill_ms",
+      "alert_threshold": "> 3000ms p95",
+      "rationale": "60s pairing window is the alpha — execution latency >3s eats meaningful fraction of the timing edge that justifies this archetype's existence over single-channel E051."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling Sharpe < 0 AND event_pairing_rate within ±20% of backtest",
+      "rationale": "Pairing logic is correct but the edge isn't there in current regime — kill rather than hope for mean reversion."
+    },
+    {
+      "condition": "Live max drawdown exceeds 8% on $1000 paper account within first 30 trades",
+      "rationale": "R2 E126 lesson: a +0.39 backtest compounded to -13.5% live; same asymmetric-tail risk applies here. 8% DD on small sample is a structural warning, not noise."
+    },
+    {
+      "condition": "event_pairing_rate < 30% of backtest expectation for 5+ consecutive days",
+      "rationale": "Indicates the kernel-level temporal join is either buggy in production or the regime no longer produces the confluence pattern — both invalidate the archetype's premise."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 6.5,
+  "expected_max_dd_basis": "Triple-AND filter on long-side in pricechange family historically shows ~5-7% peak-to-trough on 30-trade windows (cf. E051/E064 cluster); cross-channel timing reduces sample size which widens the confidence band, so I round up to 6.5% rather than the 5% baseline.",
+  "compare_to_existing": "E051 pc_high_liquidity_long (best=+0.347, lift=+0.427, trig=2157) — same liquidity bucket and long bias; this archetype is essentially E051 + taker_buy_ratio>=0.60 + oi_change_pct>=8 + 60s OI_Price co-fire constraint. If the temporal join is implemented correctly, expect higher per-trade quality but ~3-5% the trigger count, making it a precision-over-recall variant of E051 for paper-shadow triangulation.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 47.27
+}

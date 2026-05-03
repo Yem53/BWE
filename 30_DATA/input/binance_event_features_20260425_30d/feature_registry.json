@@ -1,0 +1,52 @@
+{
+  "schema": "bwe_binance_event_features_v1",
+  "rule": "Only fields marked allowed_for_entry=true may be used by entry rules. Future returns, MFE, MAE, and labels are excluded.",
+  "features": {
+    "open_interest_hist": {
+      "source": "/futures/data/openInterestHist",
+      "period": "5m",
+      "known_at": "latest_binance_bucket_before_message_ts",
+      "allowed_for_entry": true
+    },
+    "global_long_short_account_ratio": {
+      "source": "/futures/data/globalLongShortAccountRatio",
+      "period": "5m",
+      "known_at": "latest_binance_bucket_before_message_ts",
+      "allowed_for_entry": true
+    },
+    "top_trader_long_short_account_ratio": {
+      "source": "/futures/data/topLongShortAccountRatio",
+      "period": "5m",
+      "known_at": "latest_binance_bucket_before_message_ts",
+      "allowed_for_entry": true
+    },
+    "top_trader_long_short_position_ratio": {
+      "source": "/futures/data/topLongShortPositionRatio",
+      "period": "5m",
+      "known_at": "latest_binance_bucket_before_message_ts",
+      "allowed_for_entry": true
+    },
+    "taker_buy_sell_volume": {
+      "source": "/futures/data/takerlongshortRatio",
+      "period": "5m",
+      "known_at": "latest_binance_bucket_before_message_ts",
+      "allowed_for_entry": true
+    },
+    "basis_perpetual": {
+      "source": "/futures/data/basis",
+      "period": "5m",
+      "known_at": "latest_binance_bucket_before_message_ts",
+      "allowed_for_entry": true
+    },
+    "funding_rate": {
+      "source": "/fapi/v1/fundingRate",
+      "known_at": "latest_funding_before_message_ts",
+      "allowed_for_entry": true
+    },
+    "kline_1m_*": {
+      "source": "local binance_futures_1m.sqlite3",
+      "known_at": "latest_local_1m_kline_before_message_ts",
+      "allowed_for_entry": true
+    }
+  }
+}

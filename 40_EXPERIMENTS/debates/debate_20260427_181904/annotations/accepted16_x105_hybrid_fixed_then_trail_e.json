@@ -1,0 +1,67 @@
+{
+  "archetype_ref": "x105_hybrid_fixed_then_trail_exit",
+  "expected_trades_per_day": 4.2,
+  "expected_trades_per_day_basis": "Trigger frequency depends on paired entry, but with taker_buy_ratio_5m>=0.60 filter on pricechange/long entries (typical trig ~2000-3000 over 30d window), expect ~70-130 raw triggers/day, dedupe + symbol cooldown brings to ~4-5/day actually executable.",
+  "regime_sensitivity": {
+    "best_in": [
+      "Trending up days where initial 0.5% pop sustains into 2-5% continuation (BTC daily range >2%)",
+      "High taker-buy aggression regimes (funding flipping positive, perp basis widening)"
+    ],
+    "worst_in": [
+      "Choppy ranges where 0.5% TP fills then trail-stop on remaining 50% gets whipsawed",
+      "Low-vol weekend periods where neither leg gets meaningful follow-through"
+    ],
+    "explanation": "The hybrid only outperforms a pure fixed-TP when the trail leg captures meaningful continuation beyond 0.5%; in chop, the trail leg systematically underperforms an all-fixed exit because the 1.5% step is wider than typical post-entry pullback. Expect this archetype to shine in BTC-led directional days and bleed in compressed vol."
+  },
+  "live_readiness_caveats": [
+    "Kernel composition not natively supported — synthesizer flagged downgrade to multi_tp approximation, which historically scored mean=-0.276 and ZERO positive instances in R3, so the 'paper' version may be substantially worse than the design intent.",
+    "Partial-fill accounting: 50% TP at 0.5% requires precise position sizing on both legs; on micro-cap symbols with min-notional limits, the trail leg may end up with dust positions that incur disproportionate fees."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "trail_leg_realized_pct vs fixed_leg_realized_pct",
+      "alert_threshold": "trail leg < +0.3% mean over rolling 20 trades",
+      "rationale": "If the trail half doesn't materially beat the fixed half's 0.5%, the hybrid is just a worse pure-fixed (added complexity, same edge) — kill it."
+    },
+    {
+      "metric": "hybrid_vs_pure_fixed_shadow_diff",
+      "alert_threshold": "diff < +0.05% per trade over 50 trades",
+      "rationale": "Shadow-trade a pure fixed-TP-only twin in parallel; if hybrid doesn't beat it by a clear margin, the trail leg is pure cost."
+    },
+    {
+      "metric": "trail_step_hit_rate",
+      "alert_threshold": "<25% of trail legs convert to >0.5% realized",
+      "rationale": "Confirms whether 1.5% step is correctly sized for actual post-pump continuation distribution on pricechange channel."
+    },
+    {
+      "metric": "per_trade_fee_drag_pct",
+      "alert_threshold": ">0.08% combined both legs",
+      "rationale": "Two exit fills doubles maker/taker fees vs single-exit families; on $1000 capital with 5-10% sizing, fees can erase the marginal trail edge."
+    },
+    {
+      "metric": "observed_trades_per_day",
+      "alert_threshold": "<2 or >8",
+      "rationale": "Diverging from the 4.2 estimate signals either filter mismatch (taker_buy_ratio_5m calculation drift) or upstream entry behavior change."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling mean per-trade return < pure-fixed-twin's mean for 2 consecutive 7-day windows",
+      "rationale": "Hybrid only justifies its complexity if it beats the simpler twin; sustained underperformance means the trail leg is structurally a tax, not an edge."
+    },
+    {
+      "condition": "Max drawdown on the trail-leg sub-PnL exceeds -3% within first 30 trades",
+      "rationale": "R2 E126 lesson — asymmetric exits with long-tail downside can compound to large account drawdowns even when win-rate looks healthy; trail leg has the heavier tail and must be policed."
+    },
+    {
+      "condition": "kernel composition was downgraded to multi_tp approximation AND first 25 trades show median < 0",
+      "rationale": "Synthesizer's fallback path is the same family that scored zero positives in R3; if the approximation version doesn't beat coin-flip in 25 trades, the design intent is unrecoverable in current kernel set."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 4.5,
+  "expected_max_dd_basis": "Symmetric design (50% at +0.5%, 50% trailing with 1.5% step) bounds per-trade left tail tighter than E126's TP=0.51/SL=6.00 trap — but the trail leg adds variance; on 5-10% sizing with ~120 trades over 30d paper window and assumed 60% win rate at +0.4% mean / 40% loss at -1.0% mean, monte-carlo style worst-case rolling DD lands ~4-5%.",
+  "compare_to_existing": "Most resembles the fixed-exit family (mean +0.175, median +0.217, 91% positive rate in R3) blended with a small dose of multi_tp behavior (mean -0.276, 0% positive) — net expectation is fixed-family-dominant but with a meaningful drag from the trail leg unless market regime is strongly trending.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 45.85
+}

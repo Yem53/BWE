@@ -1,0 +1,18 @@
+{
+  "summary": "Single-filter Reserved6 long with taker_buy_ratio_5m>=0.55 is a sensible corrective to R6 multi-filter sparsity; worth testing with monitoring on threshold sensitivity and channel-baseline distinctness.",
+  "critiques": [
+    {
+      "archetype_ref": "r6_bigmove_simple_long",
+      "verdict": "seems_ok",
+      "concerns": [
+        "taker_buy_ratio_5m>=0.55 is only marginally above the neutral 0.50 mark — on Reserved6's already-sparse ~120 baseline triggers, this filter may remove too few events to create meaningful distinction from the channel/side baseline (risk of becoming a near-duplicate of plain Reserved6/long, echoing the R1 silent-fallthrough failure mode).",
+        "Reserved6 channel semantics differ from pricechange/OI_Price; taker_buy_ratio is a flow proxy that may behave differently when R6's own trigger condition is what selects the event — possible confounding where taker_buy_ratio is mechanically elevated at R6 firing time, weakening the filter's discriminative power.",
+        "No exit pairing specified in the proposal — given R2's E126 lesson (asymmetric TP/SL trap with 0.3946 score compounding to -13.5%), this entry's realized edge will depend heavily on which exit family it gets paired with downstream; fixed-family pairing is the only positive-mean family in the coverage summary."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log trigger_count vs the plain Reserved6/long baseline to confirm the 0.55 threshold actually filters meaningfully (target: ≥20% reduction, ≤80% reduction); (2) compute lift_vs_median against Reserved6/long baseline specifically, not global median, to detect silent-fallthrough; (3) track left-tail (p25_capped_tail, kelly_capped) not just mean/best — flag if the entry only looks good under fixed exits but collapses under trail/breakeven; (4) sweep threshold at 0.50/0.55/0.60 to verify edge isn't a knife-edge fit at exactly 0.55."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.76
+}

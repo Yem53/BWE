@@ -1,0 +1,19 @@
+{
+  "summary": "Single proposal looks structurally sound and worth testing; main concerns are sample-size depth on the triple-AND and BTC-regime dependence of the E126 template port.",
+  "critiques": [
+    {
+      "archetype_ref": "oi_pump_taker_buy_extreme_high_liq_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Triple-AND of taker_buy_ratio_5m>=0.65, liquidity_bucket=high, and oi_change_pct>=10 may be statistically fragile on a 30-day window — E148 (pc_pump_global_short_high) already shows trig=988 vs trig=3443 for E126, and stacking a third filter on the smaller OI_Price channel could drop trigger count below the threshold where mean/kelly_capped is stable.",
+        "Template was discovered on pricechange channel (E126); OI_Price has different microstructure — OI burst >=10% in high-liquidity names is rarer and often coincides with funding/liquidation cascades that flip direction within seconds, so the long-side bias of E126 may not transfer.",
+        "'liquidity_bucket=high' may correlate with BTC/ETH/SOL majors where OI moves are dominated by perp-funding arbitrage rather than directional taker flow — risk that the edge is concentrated in 1-2 symbols and disappears under symbol-stratified evaluation.",
+        "R2 lesson: legacy p25 metric was blind to asymmetric TP/SL left tail (E126 paper compounded to -13.5% on $1000). A direct port carries the same risk — the entry quality must be judged by mean/kelly_capped/p25_capped_tail, not best-score lift."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) track per-symbol contribution — flag if >40% of triggers come from a single symbol; (2) compare trigger count vs E126 baseline — if <500 over 30d the triple-AND is too tight; (3) split performance by BTC 1h regime (trend/chop/down) to detect regime dependence; (4) require kelly_capped and p25_capped_tail to clear thresholds, not just mean lift; (5) verify oi_change_pct and taker_buy_ratio_5m are computed from T0-closed bars only (no look-ahead from the in-progress 5m window)."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.72
+}

@@ -1,0 +1,21 @@
+{
+  "archetype_ref": "oi_pump_global_short_high_long",
+  "best_case_thesis": "This proposal targets the canonical short-squeeze fuel mechanism but routes it through the OI_Price channel rather than pure pricechange — meaning it fires when open interest is genuinely expanding (new positioning, not just liquidation noise) on names where global short ratio is already elevated. That combination is the textbook setup for forced-cover cascades: shorts add to losing positions as OI climbs, and any upward impulse triggers stop-driven buying that compounds because borrow is concentrated. The OI confirmation filter is what distinguishes a real squeeze from a fake breakout, which is precisely why E148's pricechange-only version scored +0.350 with only 988 triggers (high selectivity).",
+  "expected_alpha_source": "Forced short-cover cascades on names with elevated short interest where rising OI confirms fresh positioning rather than mere liquidation churn.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-dispersion alt regimes with elevated funding skew and concentrated short positioning — typically late-cycle accumulation or post-capitulation rebound phases where shorts are crowded.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E148",
+    "E126",
+    "E064",
+    "E051"
+  ],
+  "if_paper_works_likely_reason": "The OI confirmation filter materially reduces false-positive squeezes versus the pricechange-only E148, so the win rate holds while the asymmetric-TP/SL trap (R2 lesson) is mitigated by the rarer, higher-conviction trigger distribution.",
+  "could_compound_with": "Any sibling proposal that adds a taker-buy-dominance filter on the OI channel (mirroring E126→OI port) — stacking 'fresh OI + crowded shorts + aggressive taker buying' would isolate the strongest squeeze-fuel subset and likely lift edge into exceptional territory.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.84
+}

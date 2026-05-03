@@ -1,0 +1,355 @@
+{
+  "summary": "Filter-parseability is clean across all 18 proposals (every novel_dim token resolves to SUPPORTED_FIELDS, so no R1-style silent fall-through), but ~7 proposals stack 3-4 narrow gates against thin base channels and land in too_few territory; the exit batch is structurally novel but several exits encode state-transition semantics not natively expressible by the 5 live kernels (fixed/time_only/breakeven/trail/multi_tp) — those need monitoring for silent baseline collapse separate from filter parseability.",
+  "analyses": [
+    {
+      "archetype_ref": "x_exit_on_premium_extreme_flip",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X033",
+        "X034",
+        "X035"
+      ],
+      "distinctness_notes": "No exit in the 142-exit registry uses premium_extreme deactivation; X034 watches premium normalize via different threshold/semantics.",
+      "expected_triggers_30d": 1200,
+      "triggers_estimate_method": "Exit applies on top of any entry; effective coverage = entries × P(premium ever in extreme). For broad pairing assume ~50% of paired-entry trades enter during premium_extreme regime; if base entry batch fires ~2400 trades/30d, ~1200 see this exit logic.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "State-transition exit — does not map to fixed/time/be/trail/multi_tp natively; risk of silent fall-through to baseline if loop has no premium-flip kernel hook."
+    },
+    {
+      "archetype_ref": "x_exit_on_top_trader_dec_flip",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X033",
+        "X034",
+        "X036"
+      ],
+      "distinctness_notes": "No existing exit references top_trader_position_ratio crossover.",
+      "expected_triggers_30d": 600,
+      "triggers_estimate_method": "Top-trader data updates ~5min cadence; flip events are rare (~25% of trades that enter at _dec see _dec→neutral within typical hold). For ~2400 paired entries × 0.25 ≈ 600 flips.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Custom flip kernel needed; cadence lag (5m) means realized exits are structurally late vs. price."
+    },
+    {
+      "archetype_ref": "x_exit_on_funding_pct_top_decile_decay",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X033",
+        "X034"
+      ],
+      "distinctness_notes": "No exit decays out of funding top decile; X033 watches funding sign normalize, not decile threshold.",
+      "expected_triggers_30d": 300,
+      "triggers_estimate_method": "Funding settles every 8h. For OI_Price/short entries ~600/30d, P(entry in funding top decile that decays during hold) ≈ 0.5 → 300.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Funding-decile decay maps poorly to native kernels; requires explicit decile-tracking exit logic."
+    },
+    {
+      "archetype_ref": "x_exit_hybrid_be_then_top_trader_trail",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053",
+        "X056"
+      ],
+      "distinctness_notes": "Existing breakeven family (X053, X056) uses price-only BE; this composes BE with smart-money invalidation as the trail trigger.",
+      "expected_triggers_30d": 2400,
+      "triggers_estimate_method": "Applies broadly to any paired entry that takes BE-eligible profit (~+0.3%); ~50% of trades reach BE → ~2400 if paired across full entry batch (~4800 trades).",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "BE half maps to breakeven kernel; trail-on-flip half is custom — partial fall-through risk where BE fires but smart-money trail silently degrades to time-out."
+    },
+    {
+      "archetype_ref": "x_exit_on_global_long_short_extreme_flip",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X033",
+        "X034",
+        "X035"
+      ],
+      "distinctness_notes": "No exit uses global_long_ratio or global_short_ratio.",
+      "expected_triggers_30d": 300,
+      "triggers_estimate_method": "Retail-extreme bucket is rare (~10% of trades enter during extreme); P(flip during hold) ≈ 0.3. For ~10000 trades → ~300 flips. Many trades will fall through to default exit.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Mostly relevant to entries already gated on retail-extreme; if not paired carefully, exit fires <15% of the time and degrades to time_only baseline."
+    },
+    {
+      "archetype_ref": "x_exit_session_rollover_partial",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X053",
+        "X056",
+        "X057"
+      ],
+      "distinctness_notes": "Session as exit-trigger is novel; existing partials are price-ladder based.",
+      "expected_triggers_30d": 2000,
+      "triggers_estimate_method": "~3 session boundaries/day × 30 = 90 boundaries; trades active across boundaries depend on hold time. For median 30m hold, ~25% of trades cross a session boundary → ~2000 of ~8000 trades.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "50%-partial-then-trail composition not in 5 native kernels; high silent-fall-through risk — if val_score equals channel/side baseline it's the R1 bug pattern."
+    },
+    {
+      "archetype_ref": "x_exit_on_taker_buy_ratio_flip_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X033",
+        "X034",
+        "X035"
+      ],
+      "distinctness_notes": "No exit uses taker_buy_ratio_5m crossover; existing exits are price/volume/funding only.",
+      "expected_triggers_30d": 500,
+      "triggers_estimate_method": "For OI_Price/short entries ~600/30d, P(taker_buy_ratio_5m crosses 0.4→0.6 during hold) ≈ 0.85 (noisy 5m series flips often) → ~500.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Aggressor-flip exit; not in native kernels. Watch for noise — flip-then-reflip can fire prematurely without a hold-N-windows guard."
+    },
+    {
+      "archetype_ref": "x_exit_oi_collapse_runner",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "X061",
+        "X062",
+        "X057"
+      ],
+      "distinctness_notes": "OI-as-runner-condition novel; existing trail/runner kernels (X061, X062) are price/ATR based.",
+      "expected_triggers_30d": 250,
+      "triggers_estimate_method": "OI_Price/short ~600/30d × P(OI cascade ≥10% during hold) ~0.4 → ~250.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Closest fit to trail family but with OI gate instead of price; cleanest of the exit batch — mathematically well-posed for cascade tail-capture."
+    },
+    {
+      "archetype_ref": "e_pc_lowliq_smallcap_mean_revert_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E328",
+        "E329",
+        "E036"
+      ],
+      "distinctness_notes": "E328/E329 are smallcap/lowliq pumps; this is mean-revert on dumps with retail-short-extreme gate — opposite move direction + retail-flow filter.",
+      "expected_triggers_30d": 15,
+      "triggers_estimate_method": "5000 pc events × P(lowliq)~0.30 × P(smallcap)~0.40 × P(move<=-8)~0.10 × P(short_ratio_high)~0.25 ≈ 15.",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 4,
+      "n_total_conditions": 4,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Mean-reversion → fixed family with symmetric TP/SL; multi_tp also fits. Avoid trail (no trend)."
+    },
+    {
+      "archetype_ref": "e_r6_extreme_pump_top_trader_short_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E332",
+        "E334"
+      ],
+      "distinctness_notes": "Reserved6 channel + top_trader_low + oi_pct_top_decile + premium_bps gate is structurally novel; E332/E334 are OI_Price-channel premium/OI plays.",
+      "expected_triggers_30d": 3,
+      "triggers_estimate_method": "800 R6 events × P(top_trader_low)~0.25 × P(oi_pct_top_decile)~0.10 × P(premium_bps>=15)~0.13 ≈ 2.6.",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Fade-extreme-pump → multi_tp or fixed with tight TP. Sample too thin to meaningfully test exit surface."
+    },
+    {
+      "archetype_ref": "e_r6_pump_funding_neg_short_squeeze_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E330",
+        "E333"
+      ],
+      "distinctness_notes": "Reserved6 contrarian-long with deep-negative funding + retail-extreme-short triple-gate not in registry.",
+      "expected_triggers_30d": 4,
+      "triggers_estimate_method": "800 R6 events × P(funding<=-0.0005)~0.05 × P(funding_abs_high)~1 (redundant) × P(short_ratio_extreme)~0.10 ≈ 4. funding_abs_high redundant with deeply-negative funding — effectively 2 independent gates.",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Squeeze continuation → trail or multi_tp with wide TP. Fragile sample — flag for caution."
+    },
+    {
+      "archetype_ref": "e_pc_session_asian_smallcap_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E331",
+        "E329"
+      ],
+      "distinctness_notes": "Session+marketcap+liquidity+move composite on short side not present in existing pricechange/short.",
+      "expected_triggers_30d": 45,
+      "triggers_estimate_method": "5000 pc × P(session=Asian)~0.30 × P(smallcap)~0.40 × P(lowliq)~0.30 × P(move>=5)~0.25 ≈ 45.",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 4,
+      "n_total_conditions": 4,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Asian thin-book pump fade → fixed (tight TP/SL) or multi_tp scales well. Slippage risk in lowliq."
+    },
+    {
+      "archetype_ref": "e_oi_basis_curvature_arb_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E332",
+        "E335",
+        "E330"
+      ],
+      "distinctness_notes": "4-extreme composite distinct from existing 2-3 condition OI_Price/short entries.",
+      "expected_triggers_30d": 2,
+      "triggers_estimate_method": "1400 OI events × P(basis>=0.005)~0.10 × P(premium>=25bps)~0.10 (highly correlated with basis, treat as ~1.0 conditional) × P(oi_change>=20)~0.15 × P(funding_top_decile)~0.10 ≈ 2.1. Basis/premium correlation makes this effectively a 3-gate composite.",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 4,
+      "n_total_conditions": 4,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Overcrowding fade → fixed with TP at basis-mean-reversion target. Recommend Synthesizer relax basis OR premium to top-quartile to lift sample."
+    },
+    {
+      "archetype_ref": "e_pc_volume_decile_above_p75_neg_funding_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E330",
+        "E337"
+      ],
+      "distinctness_notes": "volume_pct_above_p75 (not top_decile) + neg funding + retail-short-high triplet differs from typical top-decile-volume gates in existing pc/long entries.",
+      "expected_triggers_30d": 31,
+      "triggers_estimate_method": "5000 pc × P(volume_above_p75)~0.25 × P(funding<=-0.0003)~0.10 × P(short_ratio_high)~0.25 ≈ 31.",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Pre-squeeze flow setup → fits trail (squeeze runner) and multi_tp; fixed acceptable."
+    },
+    {
+      "archetype_ref": "e_oi_hour_utc_us_close_pump_short",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E332",
+        "E337"
+      ],
+      "distinctness_notes": "hour_utc time-bucket gating absent from existing OI_Price/short entries.",
+      "expected_triggers_30d": 12,
+      "triggers_estimate_method": "1400 OI × P(hour 20-22)~0.125 × P(oi_change>=12)~0.27 × P(top_trader_dec)~0.25 ≈ 11.8.",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 4,
+      "n_total_conditions": 4,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "End-of-day positioning fade → fixed with quick TP. Recommend Synthesizer widen hour band 19-23 if accepted."
+    },
+    {
+      "archetype_ref": "e_pc_weekday_friday_short_squeeze_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E333",
+        "E330"
+      ],
+      "distinctness_notes": "weekday=Fri restriction novel for pricechange/long.",
+      "expected_triggers_30d": 2,
+      "triggers_estimate_method": "5000 pc × P(weekday=Fri)~0.14 × P(funding<=-0.0004)~0.06 × P(short_ratio_extreme)~0.10 × P(midliq)~0.40 ≈ 1.7.",
+      "sample_size_verdict": "too_few",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 4,
+      "n_total_conditions": 4,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Sample is so thin any positive score is overfitting noise — recommend dropping weekday gate as A/B baseline."
+    },
+    {
+      "archetype_ref": "f_filter_session_us_premium_extreme",
+      "distinct": true,
+      "distinct_from_existing_ids": [],
+      "distinctness_notes": "Triple-AND filter session+premium_extreme+funding_abs_high not in 125 existing filters.",
+      "expected_triggers_30d": 50,
+      "triggers_estimate_method": "Filter cut rate = P(session=US)~0.40 × P(premium_extreme)~0.10 × P(funding_abs_high)~0.25 ≈ 1%. Applied to 5000 pc events → 50; applied to 1400 OI → 14.",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Filter is restrictive — track per-entry trigger when applied; if any gated entry drops below 30 triggers, filter is too tight."
+    },
+    {
+      "archetype_ref": "cc_pricechange_then_oi_within_60s_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E330",
+        "E337"
+      ],
+      "distinctness_notes": "Sequential-confirmation cross-channel timing window not in 66 existing cross_channel entries.",
+      "expected_triggers_30d": 40,
+      "triggers_estimate_method": "Filter parser only sees 3 supported conditions (volume_top_decile + oi_change>=10 + funding<=-0.0002); the 'within_60s' temporal join is descriptive, not in novel_dim. Without join: 5000 pc × 0.10 × 0.15 × 0.12 ≈ 9. With actual cross-channel join (if loop supports): widening to ~180s window OI confirmations within 5min of pc → ~40.",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Cross-channel temporal join primitive must exist in loop; if absent the 'within_60s' clause is silently dropped and archetype reduces to 3-gate pc/long entry. Synthesizer should verify loop primitive before treating as cross_channel."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 188.49
+}

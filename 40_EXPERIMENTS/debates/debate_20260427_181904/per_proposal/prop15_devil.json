@@ -1,0 +1,20 @@
+{
+  "summary": "Single proposal review: x103_multi_tp_60_40_ladder_exit is a reasonable novel ladder shape worth testing, but inherits the structural weaknesses that have made the entire multi_tp family produce zero positive results in the registry, and the novel_dim field is mismatched with an exit archetype.",
+  "critiques": [
+    {
+      "archetype_ref": "x103_multi_tp_60_40_ladder_exit",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "novel_dim mismatch: `taker_buy_ratio_5m>=0.60` is an entry-side filter, not an exit kernel parameter — for an exit archetype this field is logically misplaced and may either be ignored by the exit kernel or cause silent fall-through (same class of bug as R1 unsupported-field issue).",
+        "Multi_tp family prior: by_exit_family shows multi_tp n=3111, mean=-0.276, max=-0.094, n_positive=0 — every multi_tp ladder tested so far has lost money. A 60/40 reshape is a small perturbation of a structurally failing family; risk it inherits the same failure mode (TP1 hit, residual 40% trails into SL on reversal).",
+        "Asymmetric harvest tail risk (R2 E126 lesson): front-loading 60% at 0.5% TP locks tiny gains while leaving 40% exposed to a full SL, which is exactly the asymmetric TP/SL shape that compounded to -13.5% on paper despite high win rate. Need mean / kelly_capped / p25_capped_tail metrics, not legacy p25, to judge it.",
+        "Cost sensitivity: 0.5% first TP is ~50 bps gross; with 8–16 bps round-trip cost the realized harvest on the 60% leg is materially smaller than headline, and on the 40% leg the second TP at 1.5% must carry the whole P&L — the math is tight against fees alone.",
+        "TP1 selection bias: a 0.5% first TP will hit on most pump entries (taker_buy/extreme long entries already triggered ≥3000+ times in top entries preview), inflating win rate while truncating right tail; the strategy will look great on win% but poor on mean — same trap as R2."
+      ],
+      "monitoring_advice": "During paper-shadow, track (a) mean P&L and kelly_capped (NOT win_rate or p25) of the 40% residual leg in isolation — it is where all the tail risk lives; (b) hit-rate of TP1 vs TP2 vs SL conditional on TP1 having fired; (c) net-of-fees P&L at 8 bps and 16 bps cost assumptions; (d) verify the registry actually treats `taker_buy_ratio_5m>=0.60` as a supported entry-coupling filter for this exit, not a silently-dropped field — if it falls through, this archetype collapses to a plain 60/40 multi_tp and joins the n_positive=0 cohort."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.3
+}

@@ -1,0 +1,3502 @@
+[
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18141523.00000000",
+    "sumOpenInterestValue": "12491459.22758398",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777606800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18139642.00000000",
+    "sumOpenInterestValue": "12523608.83680000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777607100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18124902.00000000",
+    "sumOpenInterestValue": "12479435.28086958",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777607400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18118445.00000000",
+    "sumOpenInterestValue": "12512598.11700000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777607700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18126160.00000000",
+    "sumOpenInterestValue": "12447722.20948880",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777608000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18125784.00000000",
+    "sumOpenInterestValue": "12451778.29927080",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777608300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18124233.00000000",
+    "sumOpenInterestValue": "12394577.35473177",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777608600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18117859.00000000",
+    "sumOpenInterestValue": "12410733.41500000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777608900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18112644.00000000",
+    "sumOpenInterestValue": "12435996.46924800",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777609200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18115581.00000000",
+    "sumOpenInterestValue": "12384624.01771947",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777609500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18120805.00000000",
+    "sumOpenInterestValue": "12436308.47150000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777609800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18123762.00000000",
+    "sumOpenInterestValue": "12411828.77763546",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777610100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18123941.00000000",
+    "sumOpenInterestValue": "12425773.94960000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777610400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18118669.00000000",
+    "sumOpenInterestValue": "12446356.04291605",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777610700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18122492.00000000",
+    "sumOpenInterestValue": "12475420.91949528",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777611000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18121581.00000000",
+    "sumOpenInterestValue": "12460399.09560000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777611300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18121410.00000000",
+    "sumOpenInterestValue": "12401693.36654310",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777611600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18118701.00000000",
+    "sumOpenInterestValue": "12344270.99130000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777611900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18115515.00000000",
+    "sumOpenInterestValue": "12377883.58396920",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777612200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18116555.00000000",
+    "sumOpenInterestValue": "12386288.65350000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777612500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18116886.00000000",
+    "sumOpenInterestValue": "12361151.31780000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777612800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18116872.00000000",
+    "sumOpenInterestValue": "12343756.27172264",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777613100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18116368.00000000",
+    "sumOpenInterestValue": "12308260.41920000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777613400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18114975.00000000",
+    "sumOpenInterestValue": "12350789.95500000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777613700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18111584.00000000",
+    "sumOpenInterestValue": "12281465.11040000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777614000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18108951.00000000",
+    "sumOpenInterestValue": "12248862.58464624",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777614300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18110532.00000000",
+    "sumOpenInterestValue": "12262641.21720000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777614600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18104123.00000000",
+    "sumOpenInterestValue": "12303720.40187625",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777614900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18108729.00000000",
+    "sumOpenInterestValue": "12392343.80026065",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777615200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18106165.00000000",
+    "sumOpenInterestValue": "12413586.72400000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777615500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18094488.00000000",
+    "sumOpenInterestValue": "12388850.80919520",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777615800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18095351.00000000",
+    "sumOpenInterestValue": "12417029.85620000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777616100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18092616.00000000",
+    "sumOpenInterestValue": "12348210.42000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777616400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18095555.00000000",
+    "sumOpenInterestValue": "12326692.06600000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777616700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18093439.00000000",
+    "sumOpenInterestValue": "12298158.25497896",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777617000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18096656.00000000",
+    "sumOpenInterestValue": "12325632.40160000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777617300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18095247.00000000",
+    "sumOpenInterestValue": "12314171.15510355",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777617600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18098481.00000000",
+    "sumOpenInterestValue": "12348219.85266735",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777617900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18104253.00000000",
+    "sumOpenInterestValue": "12342864.69392559",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777618200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18105068.00000000",
+    "sumOpenInterestValue": "12321985.20008280",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777618500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18106218.00000000",
+    "sumOpenInterestValue": "12257909.58600000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777618800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18106641.00000000",
+    "sumOpenInterestValue": "12259490.03863227",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777619100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18107413.00000000",
+    "sumOpenInterestValue": "12269583.04880000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777619400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18102844.00000000",
+    "sumOpenInterestValue": "12261001.38958268",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777619700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18100566.00000000",
+    "sumOpenInterestValue": "12254073.22668870",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777620000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18110636.00000000",
+    "sumOpenInterestValue": "12233734.61800000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777620300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18103000.00000000",
+    "sumOpenInterestValue": "12234007.40000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777620600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18100250.00000000",
+    "sumOpenInterestValue": "12207083.54279750",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777620900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18107740.00000000",
+    "sumOpenInterestValue": "12214380.63448540",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777621200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18101776.00000000",
+    "sumOpenInterestValue": "12207837.73440000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777621500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18102508.00000000",
+    "sumOpenInterestValue": "12194709.80100524",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777621800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18100687.00000000",
+    "sumOpenInterestValue": "12170804.01408333",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777622100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18100503.00000000",
+    "sumOpenInterestValue": "12181638.51900000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777622400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18118200.00000000",
+    "sumOpenInterestValue": "12278704.14000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777622700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18115599.00000000",
+    "sumOpenInterestValue": "12340346.03880000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777623000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18137628.00000000",
+    "sumOpenInterestValue": "12270457.57473576",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777623300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18145363.00000000",
+    "sumOpenInterestValue": "12300741.57770000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777623600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18146268.00000000",
+    "sumOpenInterestValue": "12362915.20261392",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777623900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18147417.00000000",
+    "sumOpenInterestValue": "12327540.36810000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777624200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18152440.00000000",
+    "sumOpenInterestValue": "12394486.03200000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777624500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18175463.00000000",
+    "sumOpenInterestValue": "12435651.78460000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777624800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18179911.00000000",
+    "sumOpenInterestValue": "12449603.05280000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777625100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18185913.00000000",
+    "sumOpenInterestValue": "12439635.14342844",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777625400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18186974.00000000",
+    "sumOpenInterestValue": "12472711.88423832",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777625700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18194937.00000000",
+    "sumOpenInterestValue": "12596354.88510000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777626000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18195158.00000000",
+    "sumOpenInterestValue": "12576757.58524574",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777626300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18199983.00000000",
+    "sumOpenInterestValue": "12516128.30910000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777626600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18199987.00000000",
+    "sumOpenInterestValue": "12468628.72983026",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777626900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18198181.00000000",
+    "sumOpenInterestValue": "12467525.94188397",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777627200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18193968.00000000",
+    "sumOpenInterestValue": "12431697.99208272",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777627500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18194127.00000000",
+    "sumOpenInterestValue": "12480775.94556156",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777627800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18195252.00000000",
+    "sumOpenInterestValue": "12491040.49800000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777628100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18198101.00000000",
+    "sumOpenInterestValue": "12558509.50010000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777628400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18194467.00000000",
+    "sumOpenInterestValue": "12532285.37091017",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777628700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18205033.00000000",
+    "sumOpenInterestValue": "12499049.53234630",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777629000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18209454.00000000",
+    "sumOpenInterestValue": "12480759.77160000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777629300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18208591.00000000",
+    "sumOpenInterestValue": "12489802.07272628",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777629600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18213969.00000000",
+    "sumOpenInterestValue": "12569460.00690000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777629900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18199205.00000000",
+    "sumOpenInterestValue": "12484472.09197385",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777630200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18198807.00000000",
+    "sumOpenInterestValue": "12462543.03360000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777630500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18203727.00000000",
+    "sumOpenInterestValue": "12484115.97660000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777630800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18205668.00000000",
+    "sumOpenInterestValue": "12554352.10870308",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777631100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18207618.00000000",
+    "sumOpenInterestValue": "12601492.41780000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777631400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18217566.00000000",
+    "sumOpenInterestValue": "12775979.03580000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777631700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18230335.00000000",
+    "sumOpenInterestValue": "12860758.27404540",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777632000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18211359.00000000",
+    "sumOpenInterestValue": "12808048.78470000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777632300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18210781.00000000",
+    "sumOpenInterestValue": "12890615.87666249",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777632600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18214207.00000000",
+    "sumOpenInterestValue": "12817345.11586694",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777632900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18214226.00000000",
+    "sumOpenInterestValue": "12775458.11640000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777633200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18200779.00000000",
+    "sumOpenInterestValue": "12824046.28787283",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777633500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18191515.00000000",
+    "sumOpenInterestValue": "12874135.16550000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777633800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18186740.00000000",
+    "sumOpenInterestValue": "12920883.82759460",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777634100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18178221.00000000",
+    "sumOpenInterestValue": "12873502.71966996",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777634400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18156109.00000000",
+    "sumOpenInterestValue": "12674779.69290000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777634700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18158500.00000000",
+    "sumOpenInterestValue": "12643763.55000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777635000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18157026.00000000",
+    "sumOpenInterestValue": "12609467.17720890",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777635300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18159863.00000000",
+    "sumOpenInterestValue": "12666504.44250000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777635600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18161069.00000000",
+    "sumOpenInterestValue": "12661608.90902428",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777635900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18186673.00000000",
+    "sumOpenInterestValue": "12656105.74070000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777636200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18183655.00000000",
+    "sumOpenInterestValue": "12690362.82348975",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777636500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18183573.00000000",
+    "sumOpenInterestValue": "12689338.77515844",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777636800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18173146.00000000",
+    "sumOpenInterestValue": "12730016.53927292",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777637100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18168226.00000000",
+    "sumOpenInterestValue": "12798257.24903176",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777637400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18177343.00000000",
+    "sumOpenInterestValue": "12700509.55410000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777637700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18176235.00000000",
+    "sumOpenInterestValue": "12699735.39450000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777638000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18181783.00000000",
+    "sumOpenInterestValue": "12819975.19330000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777638300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18178158.00000000",
+    "sumOpenInterestValue": "12808604.43520422",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777638600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18176517.00000000",
+    "sumOpenInterestValue": "12821715.09180000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777638900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18182113.00000000",
+    "sumOpenInterestValue": "12758388.69210000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777639200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18178208.00000000",
+    "sumOpenInterestValue": "12705952.24144128",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777639500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18172740.00000000",
+    "sumOpenInterestValue": "12662391.96392040",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777639800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18172704.00000000",
+    "sumOpenInterestValue": "12666016.86745824",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777640100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18166799.00000000",
+    "sumOpenInterestValue": "12644092.10400000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777640400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18193157.00000000",
+    "sumOpenInterestValue": "12676693.24789363",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777640700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18196716.00000000",
+    "sumOpenInterestValue": "12740849.59580232",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777641000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18201590.00000000",
+    "sumOpenInterestValue": "12813919.36000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777641300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18199011.00000000",
+    "sumOpenInterestValue": "12729770.87226567",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777641600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18199376.00000000",
+    "sumOpenInterestValue": "12674045.44640000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777641900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18202290.00000000",
+    "sumOpenInterestValue": "12716836.96422600",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777642200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18206941.00000000",
+    "sumOpenInterestValue": "12681134.40650000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777642500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18211815.00000000",
+    "sumOpenInterestValue": "12715028.47408050",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777642800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18215665.00000000",
+    "sumOpenInterestValue": "12729106.70200000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777643100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18218287.00000000",
+    "sumOpenInterestValue": "12820870.97881532",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777643400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18210209.00000000",
+    "sumOpenInterestValue": "12900112.05560000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777643700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18199588.00000000",
+    "sumOpenInterestValue": "12865381.21110704",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777644000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18196790.00000000",
+    "sumOpenInterestValue": "12881506.91312840",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777644300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18180837.00000000",
+    "sumOpenInterestValue": "12863656.50258573",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777644600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18177135.00000000",
+    "sumOpenInterestValue": "12823968.74250000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777644900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18177828.00000000",
+    "sumOpenInterestValue": "12888222.56617152",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777645200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18190709.00000000",
+    "sumOpenInterestValue": "12877202.90110000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777645500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18198964.00000000",
+    "sumOpenInterestValue": "12893965.99400000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777645800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18218188.00000000",
+    "sumOpenInterestValue": "12974032.66636488",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777646100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18216320.00000000",
+    "sumOpenInterestValue": "12942695.36000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777646400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18217119.00000000",
+    "sumOpenInterestValue": "12917759.08290000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777646700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18213235.00000000",
+    "sumOpenInterestValue": "12894970.38000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777647000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18211701.00000000",
+    "sumOpenInterestValue": "12932128.88010000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777647300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18213076.00000000",
+    "sumOpenInterestValue": "12927641.34480000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777647600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18211014.00000000",
+    "sumOpenInterestValue": "12952650.17770110",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777647900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18208330.00000000",
+    "sumOpenInterestValue": "12920331.25888820",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777648200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18204470.00000000",
+    "sumOpenInterestValue": "12872380.73700000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777648500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18203021.00000000",
+    "sumOpenInterestValue": "12859144.47043194",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777648800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18189148.00000000",
+    "sumOpenInterestValue": "12783333.21440000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777649100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18171304.00000000",
+    "sumOpenInterestValue": "12715220.24245504",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777649400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18169797.00000000",
+    "sumOpenInterestValue": "12686152.26540000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777649700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18161690.00000000",
+    "sumOpenInterestValue": "12660514.09900000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777650000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18149954.00000000",
+    "sumOpenInterestValue": "12640551.25375998",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777650300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18151081.00000000",
+    "sumOpenInterestValue": "12671269.64610000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777650600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18151993.00000000",
+    "sumOpenInterestValue": "12650123.92170000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777650900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18153055.00000000",
+    "sumOpenInterestValue": "12634526.28000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777651200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18152746.00000000",
+    "sumOpenInterestValue": "12608678.26795578",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777651500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18145404.00000000",
+    "sumOpenInterestValue": "12567506.81040000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777651800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18137442.00000000",
+    "sumOpenInterestValue": "12529719.47177730",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777652100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18136716.00000000",
+    "sumOpenInterestValue": "12543352.78560000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777652400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18132672.00000000",
+    "sumOpenInterestValue": "12491597.74080000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777652700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18133508.00000000",
+    "sumOpenInterestValue": "12471581.24951520",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777653000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18130628.00000000",
+    "sumOpenInterestValue": "12477498.18960000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777653300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18127879.00000000",
+    "sumOpenInterestValue": "12482857.47940000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777653600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18129181.00000000",
+    "sumOpenInterestValue": "12442056.92030000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777653900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18139415.00000000",
+    "sumOpenInterestValue": "12476809.69402805",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777654200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18143286.00000000",
+    "sumOpenInterestValue": "12432047.72496708",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777654500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18138738.00000000",
+    "sumOpenInterestValue": "12446802.01560000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777654800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18133151.00000000",
+    "sumOpenInterestValue": "12398834.12131261",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777655100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18132456.00000000",
+    "sumOpenInterestValue": "12398973.41280000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777655400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18138485.00000000",
+    "sumOpenInterestValue": "12452069.95250000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777655700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18133285.00000000",
+    "sumOpenInterestValue": "12397726.95450000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777656000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18141757.00000000",
+    "sumOpenInterestValue": "12394448.38240000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777656300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18143421.00000000",
+    "sumOpenInterestValue": "12424614.70080000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777656600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18140255.00000000",
+    "sumOpenInterestValue": "12364397.80800000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777656900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18148140.00000000",
+    "sumOpenInterestValue": "12442784.73195960",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777657200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18153033.00000000",
+    "sumOpenInterestValue": "12460241.85120000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777657500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18155575.00000000",
+    "sumOpenInterestValue": "12491035.60000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777657800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18156181.00000000",
+    "sumOpenInterestValue": "12486005.67370000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777658100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18154879.00000000",
+    "sumOpenInterestValue": "12497818.70360000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777658400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18151010.00000000",
+    "sumOpenInterestValue": "12587725.43500000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777658700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18144504.00000000",
+    "sumOpenInterestValue": "12492992.15520048",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777659000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18144618.00000000",
+    "sumOpenInterestValue": "12467167.02780000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777659300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18144089.00000000",
+    "sumOpenInterestValue": "12512163.77440000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777659600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18151570.00000000",
+    "sumOpenInterestValue": "12617065.54915000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777659900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18141028.00000000",
+    "sumOpenInterestValue": "12527370.87835964",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777660200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18168797.00000000",
+    "sumOpenInterestValue": "12645808.66021818",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777660500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18329706.00000000",
+    "sumOpenInterestValue": "13085577.11340000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777660800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18324769.00000000",
+    "sumOpenInterestValue": "13122488.75736616",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777661100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18316999.00000000",
+    "sumOpenInterestValue": "13169922.28100000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777661400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18305215.00000000",
+    "sumOpenInterestValue": "13091889.76800000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777661700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18300585.00000000",
+    "sumOpenInterestValue": "13084997.88254475",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777662000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18300038.00000000",
+    "sumOpenInterestValue": "13143087.29160000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777662300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18294927.00000000",
+    "sumOpenInterestValue": "13230891.20640000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777662600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18289344.00000000",
+    "sumOpenInterestValue": "13204906.36800000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777662900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18351193.00000000",
+    "sumOpenInterestValue": "13502807.80940000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777663200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18375353.00000000",
+    "sumOpenInterestValue": "13660237.42020000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777663500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18498878.00000000",
+    "sumOpenInterestValue": "14055447.50440000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777663800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18665826.00000000",
+    "sumOpenInterestValue": "14548144.78440000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777664100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18931925.00000000",
+    "sumOpenInterestValue": "15225249.46246600",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777664400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18718938.00000000",
+    "sumOpenInterestValue": "14388952.63013712",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777664700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "18982577.00000000",
+    "sumOpenInterestValue": "15155689.47680000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777665000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "19232115.00000000",
+    "sumOpenInterestValue": "16003042.89150000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777665300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "19420620.00000000",
+    "sumOpenInterestValue": "15828310.81873860",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777665600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "19612476.00000000",
+    "sumOpenInterestValue": "16125498.97230168",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777665900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "19856218.00000000",
+    "sumOpenInterestValue": "17014220.94799724",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777666200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20269619.00000000",
+    "sumOpenInterestValue": "17532699.91118408",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777666500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20345798.00000000",
+    "sumOpenInterestValue": "17328516.15660000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777666800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20199118.00000000",
+    "sumOpenInterestValue": "16957159.56100000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777667100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20184748.00000000",
+    "sumOpenInterestValue": "17503230.87206736",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777667400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20063041.00000000",
+    "sumOpenInterestValue": "16593638.63192295",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777667700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "19970919.00000000",
+    "sumOpenInterestValue": "17072431.28314902",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777668000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20511345.00000000",
+    "sumOpenInterestValue": "18405793.90171500",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777668300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20842189.00000000",
+    "sumOpenInterestValue": "19008490.91913921",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777668600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21478924.00000000",
+    "sumOpenInterestValue": "20304026.85720000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777668900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21264709.00000000",
+    "sumOpenInterestValue": "19238182.23230000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777669200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21111313.00000000",
+    "sumOpenInterestValue": "18774290.65090000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777669500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21087981.00000000",
+    "sumOpenInterestValue": "18440628.12987093",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777669800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21020565.00000000",
+    "sumOpenInterestValue": "18451687.78638735",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777670100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20882105.00000000",
+    "sumOpenInterestValue": "18232165.87550000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777670400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20731944.00000000",
+    "sumOpenInterestValue": "17877155.31120000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777670700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20520210.00000000",
+    "sumOpenInterestValue": "17236442.87454000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777671000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20336593.00000000",
+    "sumOpenInterestValue": "17294971.41464579",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777671300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20281339.00000000",
+    "sumOpenInterestValue": "17511026.73843315",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777671600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20310780.00000000",
+    "sumOpenInterestValue": "17628632.02589580",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777671900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20339774.00000000",
+    "sumOpenInterestValue": "17801370.20480000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777672200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20377969.00000000",
+    "sumOpenInterestValue": "18042653.75260000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777672500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20436467.00000000",
+    "sumOpenInterestValue": "18314984.13250177",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777672800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20495879.00000000",
+    "sumOpenInterestValue": "18227060.20961714",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777673100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20530822.00000000",
+    "sumOpenInterestValue": "18483163.01663130",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777673400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20441322.00000000",
+    "sumOpenInterestValue": "18311154.31983420",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777673700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20417340.00000000",
+    "sumOpenInterestValue": "18532084.08541320",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777674000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20457253.00000000",
+    "sumOpenInterestValue": "18877953.06840000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777674300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20627524.00000000",
+    "sumOpenInterestValue": "19272612.09941816",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777674600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20697912.00000000",
+    "sumOpenInterestValue": "19365106.59206424",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777674900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20784978.00000000",
+    "sumOpenInterestValue": "19919804.53784868",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777675200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "20892899.00000000",
+    "sumOpenInterestValue": "20068950.33857478",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777675500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21025427.00000000",
+    "sumOpenInterestValue": "20356818.42140000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777675800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21068708.00000000",
+    "sumOpenInterestValue": "20246840.45512464",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777676100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21189892.00000000",
+    "sumOpenInterestValue": "20619169.80583960",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777676400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21358187.00000000",
+    "sumOpenInterestValue": "21253531.88370000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777676700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "21743820.00000000",
+    "sumOpenInterestValue": "22385641.68478260",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777677000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "22056361.00000000",
+    "sumOpenInterestValue": "23127881.95599544",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777677300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "22154328.00000000",
+    "sumOpenInterestValue": "23327062.70027112",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777677600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "22424896.00000000",
+    "sumOpenInterestValue": "24332849.20748032",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777677900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "22713479.00000000",
+    "sumOpenInterestValue": "24798576.37220000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777678200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "22745049.00000000",
+    "sumOpenInterestValue": "24380244.25092564",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777678500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23157120.00000000",
+    "sumOpenInterestValue": "24213084.67200000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777678800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23055177.00000000",
+    "sumOpenInterestValue": "26141039.35653891",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777679100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23091533.00000000",
+    "sumOpenInterestValue": "27922281.70360000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777679400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23178146.00000000",
+    "sumOpenInterestValue": "28305151.89520000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777679700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23281515.00000000",
+    "sumOpenInterestValue": "28459323.93600000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777680000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23449976.00000000",
+    "sumOpenInterestValue": "28529240.80160000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777680300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23621962.00000000",
+    "sumOpenInterestValue": "28492810.56440000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777680600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23682511.00000000",
+    "sumOpenInterestValue": "28055087.84266476",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777680900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23681107.00000000",
+    "sumOpenInterestValue": "30373387.83820000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777681200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23651839.00000000",
+    "sumOpenInterestValue": "30376056.82770000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777681500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23820135.00000000",
+    "sumOpenInterestValue": "30406035.49742100",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777681800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24130835.00000000",
+    "sumOpenInterestValue": "31195830.94906460",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777682100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24245607.00000000",
+    "sumOpenInterestValue": "29669349.28590000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777682400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24325230.00000000",
+    "sumOpenInterestValue": "31220506.64349390",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777682700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24528837.00000000",
+    "sumOpenInterestValue": "31705516.50752484",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777683000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24604686.00000000",
+    "sumOpenInterestValue": "30925460.06106660",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777683300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24750524.00000000",
+    "sumOpenInterestValue": "30896079.10920000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777683600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24933776.00000000",
+    "sumOpenInterestValue": "31468918.68960000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777683900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24995725.00000000",
+    "sumOpenInterestValue": "31084683.61000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777684200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25213018.00000000",
+    "sumOpenInterestValue": "31758292.25978200",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777684500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25319479.00000000",
+    "sumOpenInterestValue": "32330794.92905289",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777684800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25487414.00000000",
+    "sumOpenInterestValue": "33016396.09560000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777685100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25703002.00000000",
+    "sumOpenInterestValue": "33904876.46063362",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777685400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25663873.00000000",
+    "sumOpenInterestValue": "33136701.09779332",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777685700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25387313.00000000",
+    "sumOpenInterestValue": "31198756.83782942",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777686000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25390388.00000000",
+    "sumOpenInterestValue": "30015217.46744604",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777686300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25270637.00000000",
+    "sumOpenInterestValue": "30620430.85290000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777686600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24962454.00000000",
+    "sumOpenInterestValue": "29001970.41773526",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777686900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24700759.00000000",
+    "sumOpenInterestValue": "28793674.76630000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777687200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24589622.00000000",
+    "sumOpenInterestValue": "28000202.57140000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777687500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24104092.00000000",
+    "sumOpenInterestValue": "26874695.15486084",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777687800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24047875.00000000",
+    "sumOpenInterestValue": "26067896.50000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777688100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24027311.00000000",
+    "sumOpenInterestValue": "27229177.72938517",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777688400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24078589.00000000",
+    "sumOpenInterestValue": "27144819.60916318",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777688700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24164591.00000000",
+    "sumOpenInterestValue": "28185578.94240000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777689000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24143815.00000000",
+    "sumOpenInterestValue": "28615249.53800000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777689300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24142723.00000000",
+    "sumOpenInterestValue": "29279177.37060679",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777689600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24156959.00000000",
+    "sumOpenInterestValue": "29365199.36040000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777689900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24303610.00000000",
+    "sumOpenInterestValue": "30087869.18000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777690200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24250238.00000000",
+    "sumOpenInterestValue": "29597670.34900138",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777690500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24297473.00000000",
+    "sumOpenInterestValue": "30554072.29750000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777690800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24348892.00000000",
+    "sumOpenInterestValue": "31194774.85506896",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777691100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24430308.00000000",
+    "sumOpenInterestValue": "31099782.08400000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777691400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24493448.00000000",
+    "sumOpenInterestValue": "30645068.82576104",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777691700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24615029.00000000",
+    "sumOpenInterestValue": "32085690.30150000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777692000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24771878.00000000",
+    "sumOpenInterestValue": "32882490.10148624",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777692300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24763859.00000000",
+    "sumOpenInterestValue": "33810096.69270000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777692600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24982425.00000000",
+    "sumOpenInterestValue": "34053543.51750000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777692900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25048591.00000000",
+    "sumOpenInterestValue": "34571022.27487076",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777693200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25137497.00000000",
+    "sumOpenInterestValue": "35830412.57511870",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777693500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25264659.00000000",
+    "sumOpenInterestValue": "36206782.81290000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777693800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25452411.00000000",
+    "sumOpenInterestValue": "36256864.27748286",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777694100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25580985.00000000",
+    "sumOpenInterestValue": "36844292.69550000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777694400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25578478.00000000",
+    "sumOpenInterestValue": "37401073.57592816",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777694700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25692692.00000000",
+    "sumOpenInterestValue": "37855612.39280000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777695000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25836738.00000000",
+    "sumOpenInterestValue": "39072898.87740000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777695300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25987512.00000000",
+    "sumOpenInterestValue": "38972776.58045400",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777695600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26090203.00000000",
+    "sumOpenInterestValue": "40146175.93778575",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777695900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26175736.00000000",
+    "sumOpenInterestValue": "41245107.21520000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777696200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26242587.00000000",
+    "sumOpenInterestValue": "42434957.55785202",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777696500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26227774.00000000",
+    "sumOpenInterestValue": "42895093.71695092",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777696800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26255788.00000000",
+    "sumOpenInterestValue": "43844540.38120000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777697100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26268182.00000000",
+    "sumOpenInterestValue": "45866363.77551466",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777697400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26360325.00000000",
+    "sumOpenInterestValue": "46025602.46305650",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777697700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26473383.00000000",
+    "sumOpenInterestValue": "46889655.96960000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777698000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26554961.00000000",
+    "sumOpenInterestValue": "48595697.33067567",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777698300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26422162.00000000",
+    "sumOpenInterestValue": "50989488.22760000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777698600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26729258.00000000",
+    "sumOpenInterestValue": "51634200.57280946",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777698900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25860237.00000000",
+    "sumOpenInterestValue": "44032225.53990000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777699200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26343539.00000000",
+    "sumOpenInterestValue": "44882446.03568421",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777699500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26476069.00000000",
+    "sumOpenInterestValue": "48077893.69710000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777699800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26612969.00000000",
+    "sumOpenInterestValue": "47072381.38820338",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777700100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26365794.00000000",
+    "sumOpenInterestValue": "45968761.83900000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777700400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26231266.00000000",
+    "sumOpenInterestValue": "47784712.69503394",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777700700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26165286.00000000",
+    "sumOpenInterestValue": "54984350.54776104",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777701000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26160912.00000000",
+    "sumOpenInterestValue": "59556895.24064832",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777701300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25781500.00000000",
+    "sumOpenInterestValue": "52598915.62327000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777701600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25818941.00000000",
+    "sumOpenInterestValue": "53040375.13718112",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777701900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25594829.00000000",
+    "sumOpenInterestValue": "50181221.73740000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777702200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25668641.00000000",
+    "sumOpenInterestValue": "48477348.50156019",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777702500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25588913.00000000",
+    "sumOpenInterestValue": "47958740.74460000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777702800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25208728.00000000",
+    "sumOpenInterestValue": "43473379.87345224",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777703100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24811164.00000000",
+    "sumOpenInterestValue": "42930651.62175300",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777703400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24720638.00000000",
+    "sumOpenInterestValue": "41944220.92103820",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777703700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24560060.00000000",
+    "sumOpenInterestValue": "38606720.90386300",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777704000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25141817.00000000",
+    "sumOpenInterestValue": "38583461.29390649",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777704300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25803366.00000000",
+    "sumOpenInterestValue": "37550289.53982552",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777704600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25852972.00000000",
+    "sumOpenInterestValue": "41594846.65080000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777704900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26162409.00000000",
+    "sumOpenInterestValue": "43840348.76130000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777705200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26309200.00000000",
+    "sumOpenInterestValue": "45885586.84498400",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777705500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25882635.00000000",
+    "sumOpenInterestValue": "39957611.91300000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777705800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26043522.00000000",
+    "sumOpenInterestValue": "37524275.04193422",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777706100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25990360.00000000",
+    "sumOpenInterestValue": "40830855.56000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777706400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25783472.00000000",
+    "sumOpenInterestValue": "39490376.44590896",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777706700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25671867.00000000",
+    "sumOpenInterestValue": "41521677.68580000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777707000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25513573.00000000",
+    "sumOpenInterestValue": "42342325.75080000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777707300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25394332.00000000",
+    "sumOpenInterestValue": "43942678.40996620",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777707600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25359061.00000000",
+    "sumOpenInterestValue": "44766350.38330000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777707900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25322658.00000000",
+    "sumOpenInterestValue": "44057496.10961130",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777708200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25420354.00000000",
+    "sumOpenInterestValue": "45279411.23462348",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777708500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25645058.00000000",
+    "sumOpenInterestValue": "46850956.46020000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777708800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25916832.00000000",
+    "sumOpenInterestValue": "48855820.00320000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777709100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26130494.00000000",
+    "sumOpenInterestValue": "49509446.98180000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777709400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26220090.00000000",
+    "sumOpenInterestValue": "48006362.78100000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777709700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26346240.00000000",
+    "sumOpenInterestValue": "50313940.39895040",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777710000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26524133.00000000",
+    "sumOpenInterestValue": "50542866.68577245",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777710300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26615111.00000000",
+    "sumOpenInterestValue": "50998760.25889799",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777710600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26626372.00000000",
+    "sumOpenInterestValue": "52092037.87254580",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777710900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26037058.00000000",
+    "sumOpenInterestValue": "46913424.51576346",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777711200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26313598.00000000",
+    "sumOpenInterestValue": "47814438.92580000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777711500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26406020.00000000",
+    "sumOpenInterestValue": "47230518.75017880",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777711800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26324022.00000000",
+    "sumOpenInterestValue": "44709078.55094052",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777712100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26432176.00000000",
+    "sumOpenInterestValue": "45640438.29920000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777712400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26418231.00000000",
+    "sumOpenInterestValue": "47666459.10429270",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777712700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26563177.00000000",
+    "sumOpenInterestValue": "48775424.07916942",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777713000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26549058.00000000",
+    "sumOpenInterestValue": "50031551.65725636",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777713300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26656996.00000000",
+    "sumOpenInterestValue": "52776553.90596496",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777713600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26748772.00000000",
+    "sumOpenInterestValue": "54579386.58156804",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777713900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26729151.00000000",
+    "sumOpenInterestValue": "53517751.64119665",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777714200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26860487.00000000",
+    "sumOpenInterestValue": "55648712.20428385",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777714500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26781985.00000000",
+    "sumOpenInterestValue": "54971945.55210390",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777714800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26844921.00000000",
+    "sumOpenInterestValue": "56647322.51769189",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777715100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26878017.00000000",
+    "sumOpenInterestValue": "56441147.89830000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777715400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26735330.00000000",
+    "sumOpenInterestValue": "53892241.66552430",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777715700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26895887.00000000",
+    "sumOpenInterestValue": "55618004.72730000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777716000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26981304.00000000",
+    "sumOpenInterestValue": "57539644.66453056",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777716300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26936522.00000000",
+    "sumOpenInterestValue": "56201292.85128730",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777716600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27039511.00000000",
+    "sumOpenInterestValue": "56950618.06820000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777716900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27163097.00000000",
+    "sumOpenInterestValue": "59193820.98240000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777717200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27217044.00000000",
+    "sumOpenInterestValue": "58546758.62616336",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777717500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27265073.00000000",
+    "sumOpenInterestValue": "58685343.12520000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777717800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27315019.00000000",
+    "sumOpenInterestValue": "59096043.60650000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777718100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27424984.00000000",
+    "sumOpenInterestValue": "58705164.64359112",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777718400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27449242.00000000",
+    "sumOpenInterestValue": "58326165.54842490",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777718700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27423292.00000000",
+    "sumOpenInterestValue": "57235152.73320000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777719000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27263040.00000000",
+    "sumOpenInterestValue": "56455420.45476480",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777719300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27275641.00000000",
+    "sumOpenInterestValue": "58266687.17182777",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777719600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27353755.00000000",
+    "sumOpenInterestValue": "58132200.12600000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777719900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27346518.00000000",
+    "sumOpenInterestValue": "57415786.32190122",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777720200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27396213.00000000",
+    "sumOpenInterestValue": "57630673.66680000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777720500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27460088.00000000",
+    "sumOpenInterestValue": "57128913.89903424",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777720800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27550017.00000000",
+    "sumOpenInterestValue": "57700755.60480000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777721100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27500634.00000000",
+    "sumOpenInterestValue": "58290467.57925300",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777721400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27348902.00000000",
+    "sumOpenInterestValue": "56166440.03740000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777721700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27535894.00000000",
+    "sumOpenInterestValue": "57067318.09320516",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777722000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27647289.00000000",
+    "sumOpenInterestValue": "59477612.82570000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777722300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27282156.00000000",
+    "sumOpenInterestValue": "58322223.28154376",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777722600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27403822.00000000",
+    "sumOpenInterestValue": "58959323.03300000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777722900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27486250.00000000",
+    "sumOpenInterestValue": "58738477.96905000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777723200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27474286.00000000",
+    "sumOpenInterestValue": "57915729.22445646",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777723500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27628813.00000000",
+    "sumOpenInterestValue": "59862831.08685625",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777723800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27758931.00000000",
+    "sumOpenInterestValue": "61325030.36520000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777724100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27766845.00000000",
+    "sumOpenInterestValue": "62886040.95567825",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777724400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27735003.00000000",
+    "sumOpenInterestValue": "61463540.14830000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777724700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27696130.00000000",
+    "sumOpenInterestValue": "61362902.52386140",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777725000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27697262.00000000",
+    "sumOpenInterestValue": "61387994.07329330",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777725300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27684826.00000000",
+    "sumOpenInterestValue": "59655263.06480000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777725600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27835888.00000000",
+    "sumOpenInterestValue": "60374179.68616944",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777725900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27889315.00000000",
+    "sumOpenInterestValue": "60383699.19035620",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777726200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27768562.00000000",
+    "sumOpenInterestValue": "60858770.63976732",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777726500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27818868.00000000",
+    "sumOpenInterestValue": "59777183.55840000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777726800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27846046.00000000",
+    "sumOpenInterestValue": "60301637.34749280",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777727100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27933666.00000000",
+    "sumOpenInterestValue": "60191497.01719920",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777727400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27961748.00000000",
+    "sumOpenInterestValue": "61096419.38000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777727700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27963365.00000000",
+    "sumOpenInterestValue": "61071989.16000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777728000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27934409.00000000",
+    "sumOpenInterestValue": "61651878.40555747",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777728300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "28020983.00000000",
+    "sumOpenInterestValue": "63356383.50760914",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777728600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "28213773.00000000",
+    "sumOpenInterestValue": "63190553.84936070",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777728900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "28268291.00000000",
+    "sumOpenInterestValue": "64813537.60480000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777729200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "28339790.00000000",
+    "sumOpenInterestValue": "64804597.79300000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777729500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "28316794.00000000",
+    "sumOpenInterestValue": "63975844.41923708",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777729800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "28290175.00000000",
+    "sumOpenInterestValue": "63864404.39468225",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777730100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "28264019.00000000",
+    "sumOpenInterestValue": "64913972.43730000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777730400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "28083247.00000000",
+    "sumOpenInterestValue": "67189168.44750000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777730700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "28119996.00000000",
+    "sumOpenInterestValue": "65896398.62640000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777731000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27811204.00000000",
+    "sumOpenInterestValue": "69361142.77600000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777731300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27833856.00000000",
+    "sumOpenInterestValue": "74128820.10269184",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777731600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27749369.00000000",
+    "sumOpenInterestValue": "74806069.64564689",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777731900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27554225.00000000",
+    "sumOpenInterestValue": "72491332.08013350",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777732200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27363646.00000000",
+    "sumOpenInterestValue": "73672675.94270308",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777732500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27411664.00000000",
+    "sumOpenInterestValue": "73197366.37920000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777732800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27706378.00000000",
+    "sumOpenInterestValue": "74757349.11960000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777733100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27698465.00000000",
+    "sumOpenInterestValue": "73467408.56600000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777733400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27729144.00000000",
+    "sumOpenInterestValue": "73484480.98816128",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777733700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27466471.00000000",
+    "sumOpenInterestValue": "74848880.12210000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777734000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27582385.00000000",
+    "sumOpenInterestValue": "75451614.16750000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777734300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27605301.00000000",
+    "sumOpenInterestValue": "74913149.90747835",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777734600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27650340.00000000",
+    "sumOpenInterestValue": "75265095.63619980",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777734900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27612232.00000000",
+    "sumOpenInterestValue": "74544278.29265776",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777735200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27529129.00000000",
+    "sumOpenInterestValue": "75795299.81179915",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777735500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27329771.00000000",
+    "sumOpenInterestValue": "77381513.60940000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777735800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27163172.00000000",
+    "sumOpenInterestValue": "77728309.80309536",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777736100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27186669.00000000",
+    "sumOpenInterestValue": "76486974.56460000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777736400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27123547.00000000",
+    "sumOpenInterestValue": "74506394.36806302",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777736700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27025633.00000000",
+    "sumOpenInterestValue": "76482541.39000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777737000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27075762.00000000",
+    "sumOpenInterestValue": "76467739.87364274",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777737300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27092165.00000000",
+    "sumOpenInterestValue": "75614232.51500000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777737600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27041645.00000000",
+    "sumOpenInterestValue": "78954112.59391855",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777737900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "27076174.00000000",
+    "sumOpenInterestValue": "78921631.97520000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777738200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26786038.00000000",
+    "sumOpenInterestValue": "84506550.74177780",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777738500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26519322.00000000",
+    "sumOpenInterestValue": "86826194.81253990",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777738800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "26230205.00000000",
+    "sumOpenInterestValue": "88400821.54101695",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777739100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25752618.00000000",
+    "sumOpenInterestValue": "77932572.59160000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777739400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25896394.00000000",
+    "sumOpenInterestValue": "79750534.96240000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777739700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25947131.00000000",
+    "sumOpenInterestValue": "81988250.76232581",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777740000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25914160.00000000",
+    "sumOpenInterestValue": "85001036.21600000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777740300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25934481.00000000",
+    "sumOpenInterestValue": "85471300.11948983",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777740600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25817845.00000000",
+    "sumOpenInterestValue": "81377847.44000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777740900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25809159.00000000",
+    "sumOpenInterestValue": "83548873.45856757",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777741200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25841039.00000000",
+    "sumOpenInterestValue": "79980494.89428166",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777741500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25718989.00000000",
+    "sumOpenInterestValue": "78567334.37399651",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777741800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25793958.00000000",
+    "sumOpenInterestValue": "78336460.92469728",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777742100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25821734.00000000",
+    "sumOpenInterestValue": "80587268.35068698",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777742400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25722173.00000000",
+    "sumOpenInterestValue": "81528999.54080000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777742700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25760815.00000000",
+    "sumOpenInterestValue": "79389679.66700000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777743000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25752950.00000000",
+    "sumOpenInterestValue": "75280850.12264650",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777743300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25118028.00000000",
+    "sumOpenInterestValue": "69265474.01280000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777743600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24688489.00000000",
+    "sumOpenInterestValue": "61246990.94330971",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777743900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24362751.00000000",
+    "sumOpenInterestValue": "64883307.00399009",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777744200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24422426.00000000",
+    "sumOpenInterestValue": "60364910.34420000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777744500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24265607.00000000",
+    "sumOpenInterestValue": "54374372.16560000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777744800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24801029.00000000",
+    "sumOpenInterestValue": "51453615.77352821",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777745100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24883421.00000000",
+    "sumOpenInterestValue": "53665153.13528879",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777745400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24348607.00000000",
+    "sumOpenInterestValue": "59463851.72699507",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777745700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24500417.00000000",
+    "sumOpenInterestValue": "54141021.48660000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777746000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24657211.00000000",
+    "sumOpenInterestValue": "46185703.75602173",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777746300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25045603.00000000",
+    "sumOpenInterestValue": "47469252.20007443",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777746600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25322108.00000000",
+    "sumOpenInterestValue": "46206332.73449592",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777746900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25244068.00000000",
+    "sumOpenInterestValue": "46181497.99920000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777747200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25107384.00000000",
+    "sumOpenInterestValue": "40712189.82965688",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777747500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25962610.00000000",
+    "sumOpenInterestValue": "43746997.85000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777747800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25965633.00000000",
+    "sumOpenInterestValue": "43818108.18827718",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777748100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "25286809.00000000",
+    "sumOpenInterestValue": "45065050.77074041",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777748400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24752728.00000000",
+    "sumOpenInterestValue": "47153946.84000000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777748700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24679999.00000000",
+    "sumOpenInterestValue": "48059362.05270000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777749000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24545154.00000000",
+    "sumOpenInterestValue": "43986525.39374778",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777749300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24591299.00000000",
+    "sumOpenInterestValue": "41456196.04302951",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777749600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24437335.00000000",
+    "sumOpenInterestValue": "45666047.91450000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777749900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24210824.00000000",
+    "sumOpenInterestValue": "41456193.93520000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777750200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24299124.00000000",
+    "sumOpenInterestValue": "42731478.19305456",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777750500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24378815.00000000",
+    "sumOpenInterestValue": "43729577.17466985",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777750800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24167893.00000000",
+    "sumOpenInterestValue": "46075483.56549607",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777751100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24313533.00000000",
+    "sumOpenInterestValue": "47598603.55410000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777751400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "24141054.00000000",
+    "sumOpenInterestValue": "49814611.31859534",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777751700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23890980.00000000",
+    "sumOpenInterestValue": "50950746.34395480",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777752000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23548744.00000000",
+    "sumOpenInterestValue": "50592121.60960000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777752300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23238485.00000000",
+    "sumOpenInterestValue": "50355473.14650000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777752600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23221271.00000000",
+    "sumOpenInterestValue": "48913285.23440000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777752900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23380307.00000000",
+    "sumOpenInterestValue": "51088308.82570000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777753200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23400348.00000000",
+    "sumOpenInterestValue": "52360618.68480000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777753500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23423663.00000000",
+    "sumOpenInterestValue": "56380756.84100000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777753800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23472850.00000000",
+    "sumOpenInterestValue": "58764279.97500000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777754100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23728831.00000000",
+    "sumOpenInterestValue": "59212924.87740000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777754400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23413421.00000000",
+    "sumOpenInterestValue": "63853081.75120000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777754700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23352050.00000000",
+    "sumOpenInterestValue": "63557274.48500000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777755000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23021156.00000000",
+    "sumOpenInterestValue": "60119963.91159704",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777755300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "22711785.00000000",
+    "sumOpenInterestValue": "59041556.28600000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777755600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "22929419.00000000",
+    "sumOpenInterestValue": "64576122.72970000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777755900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23199276.00000000",
+    "sumOpenInterestValue": "64921080.15134100",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777756200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "sumOpenInterest": "23179556.00000000",
+    "sumOpenInterestValue": "67427010.44840000",
+    "CMCCirculatingSupply": "230400000.00000000",
+    "timestamp": 1777756500000
+  }
+]

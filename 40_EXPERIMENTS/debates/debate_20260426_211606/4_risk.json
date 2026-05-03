@@ -1,0 +1,104 @@
+{
+  "summary": "Two proposals warrant block (smart_crowd_divergence_long for live-conflict with the user's pump-long strategy, burst_oi_momentum_long for the same conflict plus wildcard fields); basis_normalization_exit and cross_channel_conflict_suppressor have material leakage/causality risks requiring strict causal windowing before acceptance; the rest are acceptable with standard validation.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "premium_funding_squeeze_short",
+      "leakage_risk": "low",
+      "leakage_notes": "All three fields (premium_bps, funding, oi_change_pct) are observable at T0. Mild staleness concern on funding (8h cadence) but funding 'already positive' uses past-published rate, not future settlement — not look-ahead, just lower information density.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Short side on OI_Price, opposite direction from user's live BWE_OI_Price_monitor pump long — could open opposing positions on same symbol simultaneously, partially netting exposure rather than stacking. Worth flagging but not catastrophic.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "Add registry tag for symbol-overlap monitoring with live pump-long; require symbol-jackknife stability check in deep eval gate."
+    },
+    {
+      "archetype_ref": "smart_crowd_divergence_long",
+      "leakage_risk": "high",
+      "leakage_notes": "top_trader_position_ratio on Binance is published with non-trivial publish lag and snapshot timestamps frequently exceed T0 in naive joins — implicit forward-leak unless snapshot_ts < T0 is enforced strictly. Also 'rising/falling' lookback window is unspecified, which lets the optimizer pick a window that peeks at favorable history.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "high",
+      "live_conflict_notes": "Long-side, channel='*', OI-rising condition directly overlaps the user's live BWE_OI_Price_monitor pump long strategy. Devil flagged this and quant did not block. Co-firing on same symbol/time will double position size, breaching the 5–10% per-trade sizing assumption and effective leverage limits at $1000 capital.",
+      "concentration_risk": "high",
+      "adversarial_risk": "medium",
+      "overall_severity": "block",
+      "remediation": "Required before unblock: (1) enforce strictly causal snapshot_ts < T0 on top_trader_position_ratio with verified timestamp source, (2) fix lookback window for rising/falling pre-optimization (e.g., 15m delta) outside optimizer search space, (3) add hard exclusion rule preventing co-firing with live BWE_OI_Price_monitor pump long on same symbol within a configurable cooldown, and (4) cap concurrent long-side positions across this archetype + live strategy at portfolio level."
+    },
+    {
+      "archetype_ref": "taker_thin_book_reversal_short",
+      "leakage_risk": "low",
+      "leakage_notes": "taker_buy_ratio_5m, liquidity_bucket, realized_vol_30m all backward-looking by construction. Verify liquidity_bucket is computed from pre-T0 order-book snapshot, not the event-time book.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "none",
+      "live_conflict_notes": "Short side on pricechange channel; live strategy is OI_Price long. No directional or channel overlap.",
+      "concentration_risk": "high",
+      "adversarial_risk": "medium",
+      "overall_severity": "caution",
+      "remediation": "Tag for symbol-jackknife in deep eval (Devil correctly flagged 1–2 symbol concentration in thin-book taker spikes); require post-cost edge ≥15 bps with realistic thin-book slippage model, not flat 8 bps."
+    },
+    {
+      "archetype_ref": "basis_normalization_exit",
+      "leakage_risk": "high",
+      "leakage_notes": "30m rolling mean of basis as written includes the entry-triggering spike in the denominator, which mechanically inflates apparent reversion. This is a classic look-ahead-via-window-contamination pattern that taints exit timing invisibly. Quant correctly flagged 'must use strictly causal window' but listed exit as acceptable — the leakage risk persists until verified in code.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Exit-side archetype, no direct entry conflict. Pairing with non-basis entries produces undefined behavior — could exit prematurely or never on pricechange/Reserved6 entries.",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "Mandatory before deep eval: (1) implement strictly causal expanding window or window ending strictly before entry timestamp, with code review verifying spike is excluded from rolling stats, (2) add registry pairing constraint restricting this exit to premium/basis-spike entry archetypes only, (3) define explicit fallback (e.g., fixed SL) when basis was not anomalous at entry. If causal-window code is verified, downgrade to acceptable."
+    },
+    {
+      "archetype_ref": "realized_vol_expansion_filter",
+      "leakage_risk": "low",
+      "leakage_notes": "realized_vol_30m and the prior-window comparison are both backward-looking. Confirm tercile boundaries are computed from a rolling pre-T0 window, not from the full eval-period distribution (the latter would be cross-validation leakage).",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "none",
+      "live_conflict_notes": "Filter archetype, no direct position-creating logic, no conflict with live strategy.",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "Disambiguate cross-sectional vs per-symbol tercile in spec; require tercile thresholds computed from expanding pre-T0 window only; add applicability metadata so this filter does not silently degrade E001 (the one validated keep)."
+    },
+    {
+      "archetype_ref": "btc_decorrelation_alpha_filter",
+      "leakage_risk": "medium",
+      "leakage_notes": "btc_correlation_30d is computable at T0 from price returns, but market_cap_bucket sourcing is unspecified — if pulled from CMC/CoinGecko snapshot at backtest time rather than as-of T0, the cap classification is post-T0 and constitutes data leakage. This is a subtle but real risk.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Filter only; could systematically exclude high-correlation symbols where live pump-long operates, indirectly altering the live strategy's effective universe if applied universally — minor.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "Require market_cap_bucket sourced from a strictly as-of-T0 snapshot (or replace with Binance-native 30d notional volume quintile to eliminate external dependency entirely); verify NaN handling for newly-listed symbols does not systematically bias the eligible universe."
+    },
+    {
+      "archetype_ref": "cross_channel_conflict_suppressor",
+      "leakage_risk": "medium",
+      "leakage_notes": "Wildcard burst_count_* and undefined cross-channel premium_bps spread create implementation ambiguity that can hide forward-looking joins. 90s window across channels with differing publish latencies (especially Reserved6 vs OI_Price) means 'concurrent' is ill-defined and a naive implementation may match a Reserved6 event published after T0 against an earlier OI_Price event.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "Suppressor could silently veto live pump-long triggers if applied universally without applicability scoping — directly affecting a running live strategy.",
+      "concentration_risk": "low",
+      "adversarial_risk": "medium",
+      "overall_severity": "caution",
+      "remediation": "Defer until: (1) burst_count_* and pretrend_* wildcards resolved to concrete fields, (2) premium_bps cross-channel semantics formally defined, (3) channel timestamp normalization implemented, (4) explicit scoping metadata prevents this suppressor from vetoing live-strategy triggers, and (5) harness counterfactual scoring confirmed. Quant already flagged for rejection on triggers=0 grounds; concur."
+    },
+    {
+      "archetype_ref": "burst_oi_momentum_long",
+      "leakage_risk": "medium",
+      "leakage_notes": "burst_count_* and pretrend_* wildcards prevent leakage audit — concrete field names with defined windows must be resolved before T0-causality can be verified. pretrend_* in particular is suspicious: 'pretrend' could plausibly be defined with a forward component depending on implementation.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "high",
+      "live_conflict_notes": "Long side, OI-rising, momentum-confirmation conjunction is essentially the same signal family as the user's live BWE_OI_Price_monitor pump long — though on Reserved6 channel rather than OI_Price, symbol overlap is highly likely and co-firing will stack positions on the same name in the same window.",
+      "concentration_risk": "high",
+      "adversarial_risk": "medium",
+      "overall_severity": "block",
+      "remediation": "Required before unblock: (1) resolve burst_count_* and pretrend_* to concrete field names with documented window definitions and verify all are strictly pre-T0, (2) demonstrate effective sample size (after temporal-cluster bootstrap) ≥150, (3) add hard exclusion preventing co-firing with live BWE_OI_Price_monitor pump long on same symbol within a cooldown window, and (4) demonstrate incremental val_score over single-best component ≥0.03 to justify the conjunction. Quant already rejected on too_few/wildcard grounds; this block is reinforcing on live-conflict grounds."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 57.14
+}

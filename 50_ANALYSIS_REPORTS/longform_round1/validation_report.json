@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-04-26T14:12:39",
+  "errors": [],
+  "expected": [
+    "00_long_form_method.md",
+    "tables/cluster_rep_top.csv",
+    "tables/high_conf_cluster_rep_top.csv",
+    "tables/ablation_matrix.csv",
+    "tables/risk_register.csv",
+    "role_memos/01_meta_research_director.md",
+    "role_memos/02_strategy_architect.md",
+    "role_memos/03_experiment_mutator.md",
+    "role_memos/04_results_analyst.md",
+    "role_memos/05_risk_critic.md",
+    "role_memos/06_statistical_skeptic.md",
+    "role_memos/07_execution_paper_architect.md",
+    "role_memos/08_lead_synthesizer.md",
+    "cross_exam/01_questions_and_answers.md",
+    "cross_exam/02_revised_findings.md",
+    "red_team/overfit_bias_audit.md",
+    "red_team/execution_path_audit.md",
+    "final/final_verdict_zh.md",
+    "final/paper_gate_longform.md",
+    "configs/next_ablation_config_longform.yaml"
+  ],
+  "file_count": 28,
+  "out_dir": "H:\\data\\bwe\\v6\\runs\\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115\\llm_round_notes\\deep_round1_longform_20260426_141234",
+  "passes": true
+}

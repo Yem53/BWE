@@ -1,0 +1,11 @@
+﻿{
+    "curated_root":  "H:\\BWE",
+    "original_project_package":  "H:\\BWE_autoresearch",
+    "v6_workspace":  "H:\\data\\bwe\\v6",
+    "current_code":  "H:\\data\\bwe\\v6\\code\\Autoresearch",
+    "canonical_runs":  "H:\\data\\bwe\\v6\\runs",
+    "gpu_fused_strong_run":  "H:\\data\\bwe\\v6\\runs\\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115",
+    "autoresearch_expanded_round1":  "H:\\data\\bwe\\v6\\runs\\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115\\llm_round_notes\\deep_round1_autoresearch_expanded_20260426_134801",
+    "true_deep_round1":  "H:\\data\\bwe\\v6\\runs\\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115\\llm_round_notes\\deep_round1_true_llm_20260426_140354",
+    "longform_round1":  "H:\\data\\bwe\\v6\\runs\\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115\\llm_round_notes\\deep_round1_longform_20260426_141234"
+}

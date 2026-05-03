@@ -1,0 +1,28 @@
+{
+  "summary": "Cross-channel double-fire archetype with 2/3 conditions parseable; sample size adequate but the 60s timing window itself is unparseable and will be ignored by the filter, so the archetype reduces to taker_buy + high_liquidity + oi_change_pct≥8 — still distinct enough to test.",
+  "analyses": [
+    {
+      "archetype_ref": "cc_pc_oi_within_60s_double_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E126",
+        "E064",
+        "E051"
+      ],
+      "distinctness_notes": "E126/E064 are pricechange-only with taker_buy_extreme/dominant; E051 is pricechange high-liquidity. None combine taker_buy_ratio_5m>=0.60 AND liquidity_bucket=high AND oi_change_pct>=8 as a conjunction. The cross_channel framing plus the OI magnitude threshold (≥8%) materially narrows vs existing cc_*_5m archetypes which the rationale notes saturate at baseline. GPU optimization will reveal a different TP/SL surface.",
+      "expected_triggers_30d": 140,
+      "triggers_estimate_method": "Base: cross_channel proposals nominally draw from union but filter parser treats this as a flat conjunction over whichever channel fires. Estimating from OI_Price base ~1400/30d (since oi_change_pct>=8 is the binding constraint and only fires on OI events): 1400 × ~0.35 (oi_change_pct>=8 is moderately tight, top ~third of OI events) × ~0.5 (liquidity_bucket=high cut) × ~0.6 (taker_buy_ratio_5m>=0.60 on long-leaning OI events) ≈ 147. Conservative round to ~140.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "All 3 conditions are in SUPPORTED_FIELDS (taker_buy_ratio_5m, liquidity_bucket, oi_change_pct all listed in section A/C). HOWEVER: the archetype's defining feature — the '60s cross-channel timing window' — is NOT expressible in the filter DSL (no pc_then_oi_*, no confirm_within_*, no cross-channel chain operators per SUPPORTED_FIELDS section D-skip list). The notes/rationale describe a temporal join the parser cannot enforce, so the archetype effectively executes as a static 3-condition AND filter on whichever channel fires. Synthesizer should be aware: this is NOT actually testing the 60s double-fire hypothesis, just a high-bar OI+taker+liquidity conjunction. Best paired with fixed exit family (the only family showing positive mean/median in coverage: mean=+0.175, median=+0.217, n_positive=6680/7320); avoid time_only/breakeven/multi_tp/trail which all show negative central tendency. Given E126's R2 paper trap (backtest +0.39 → -13.5% live with TP=0.51/SL=6.00), recommend Synthesizer constrain to symmetric or capped-asymmetry TP/SL grids and use mean / kelly_capped / p25_capped_tail metrics rather than legacy p25."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 33.42
+}

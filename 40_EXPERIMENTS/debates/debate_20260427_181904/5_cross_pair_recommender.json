@@ -1,0 +1,186 @@
+{
+  "summary": "Top-10 prioritizes diversifying the existing live BWE_OI_Price pump-long by adding short-side fades (E207/E208/E213), porting the winning taker-buy template to OI_Price (E202/E205) and Reserved6 (E210), and pairing high-conviction entries with the new exit families (X102 time, X103 trail, X105 BE, X106 hybrid) to attack R2's asymmetric TP/SL trap; fast-test priorities concentrate on funding-neutral and symmetric-geometry pairs that explicitly avoid the E126 paper failure mode.",
+  "top_pairs": [
+    {
+      "rank": 1,
+      "entry_id": "E207",
+      "entry_archetype": "pc_pump_funding_positive_taker_sell_short",
+      "exit_id": "X101",
+      "exit_archetype": "composite_exit_be_partial_runner",
+      "exit_family": "breakeven",
+      "thesis": "First true mean-reversion short on pricechange with structurally symmetric TP=SL geometry — directly fills the largest gap (existing 94 shorts collapsed to baseline reusing continuation logic). Lowest trap risk among shorts per metric_critic, and the live system has zero short coverage today.",
+      "diversity_role": "fills short-side gap on pricechange with mean-reversion thesis (not continuation)",
+      "expected_paper_lift_vs_legacy_p25_alone": "+0.10 to +0.20 net of fees (symmetric geometry, no left-tail trap)",
+      "test_priority": "fast"
+    },
+    {
+      "rank": 2,
+      "entry_id": "E205",
+      "entry_archetype": "oi_pump_funding_neutral_taker_extreme_long",
+      "exit_id": "X101",
+      "exit_archetype": "composite_exit_be_partial_runner",
+      "exit_family": "breakeven",
+      "thesis": "Cleanest direct attack on the R2 E126 funding-skew trap — funding-neutral gate explicitly excludes the crowded-long regime that compounded -13.5% on paper. Ports the winning taker-buy template to the OI_Price channel where 61 archetypes registered but none cracked top-10.",
+      "diversity_role": "fills OI_Price top-10 gap with E126-trap-resistant funding gate",
+      "expected_paper_lift_vs_legacy_p25_alone": "+0.15 to +0.25 (funding-neutral filter strips out the asymmetric tail)",
+      "test_priority": "fast"
+    },
+    {
+      "rank": 3,
+      "entry_id": "E213",
+      "entry_archetype": "basis_curvature_pump_short",
+      "exit_id": "X101",
+      "exit_archetype": "composite_exit_be_partial_runner",
+      "exit_family": "breakeven",
+      "thesis": "Lowest trap risk among shorts per metric_critic — bounded perp-spot dislocation thesis with naturally symmetric geometry and mechanical funding-driven mean reversion. Adds basis/premium signal kernel currently absent from the registry.",
+      "diversity_role": "adds basis/premium short kernel — orthogonal to taker-flow shorts",
+      "expected_paper_lift_vs_legacy_p25_alone": "+0.08 to +0.18 (mechanical mean-reversion, bounded payoff)",
+      "test_priority": "fast"
+    },
+    {
+      "rank": 4,
+      "entry_id": "E126",
+      "entry_archetype": "pc_pump_taker_buy_extreme_long",
+      "exit_id": "X102",
+      "exit_archetype": "x101_quick_cut_60s_time_exit",
+      "exit_family": "time_only",
+      "thesis": "Direct hypothesis test: pattern_miner flagged that E126's edge is front-loaded and the asymmetric TP/SL trap lives in the long-tail wait. Pure 60s time exit on the strongest entry isolates whether the edge is real and harvestable before drift kills it.",
+      "diversity_role": "adds time_only exit family (0/2745 prior positives) on highest-conviction entry — falsification test",
+      "expected_paper_lift_vs_legacy_p25_alone": "-0.05 to +0.10 (deliberate hypothesis test, not a deploy candidate)",
+      "test_priority": "standard"
+    },
+    {
+      "rank": 5,
+      "entry_id": "E202",
+      "entry_archetype": "oi_pump_taker_buy_extreme_high_liq_long",
+      "exit_id": "X103",
+      "exit_archetype": "x102_wide_trail_2pct_exit",
+      "exit_family": "trail",
+      "thesis": "Ports E126 winning template to OI_Price channel paired with wider 2% trail to test whether trail family's prior failure (max≈-0.006) was parameter mis-tune. High-liquidity gate caps slippage; trail captures continuation that fixed-TP would clip.",
+      "diversity_role": "adds trail exit family on OI_Price long — second channel-port for diversification",
+      "expected_paper_lift_vs_legacy_p25_alone": "+0.05 to +0.15 (if trail mis-tune hypothesis correct)",
+      "test_priority": "standard"
+    },
+    {
+      "rank": 6,
+      "entry_id": "E210",
+      "entry_archetype": "r6_bigmove_simple_long",
+      "exit_id": "X101",
+      "exit_archetype": "composite_exit_be_partial_runner",
+      "exit_family": "breakeven",
+      "thesis": "Reserved6 architectural fix — R6 channel under-represented in top entries due to over-specification. Single-filter design preserves sparse trigger count (~120/30d). Lowest trap risk in batch per metric_critic since R6 geometry is more directional than pump channels.",
+      "diversity_role": "adds Reserved6 channel coverage (currently zero in top-10)",
+      "expected_paper_lift_vs_legacy_p25_alone": "+0.05 to +0.12 (R6 directional geometry favors realization)",
+      "test_priority": "fast"
+    },
+    {
+      "rank": 7,
+      "entry_id": "E126",
+      "entry_archetype": "pc_pump_taker_buy_extreme_long",
+      "exit_id": "X106",
+      "exit_archetype": "x105_hybrid_fixed_then_trail_exit",
+      "exit_family": "multi_tp",
+      "thesis": "Direct attack on the R2 E126 paper-trap: 50% at fixed 0.5% TP banks the front-loaded edge, remaining 50% trails 1.5% to capture continuation. Symmetric risk/reward profile structurally eliminates the asymmetric TP/SL trap that drove -13.5% paper compounding.",
+      "diversity_role": "adds hybrid fixed+trail exit family — direct E126 trap remediation",
+      "expected_paper_lift_vs_legacy_p25_alone": "+0.10 to +0.20 (if kernel composition supported, otherwise downgrade to multi_tp approximation)",
+      "test_priority": "standard"
+    },
+    {
+      "rank": 8,
+      "entry_id": "E208",
+      "entry_archetype": "pc_pump_top_trader_short_funding_high_short",
+      "exit_id": "X101",
+      "exit_archetype": "composite_exit_be_partial_runner",
+      "exit_family": "breakeven",
+      "thesis": "Smart-money + funding-extreme cross-signal is a novel high-conviction short. Adds positioning-data dimension (top_trader_position_ratio) absent from current top entries. Complements E207 by capturing crowded-long fades on a different feature axis.",
+      "diversity_role": "adds smart-money positioning short — second short on different feature axis",
+      "expected_paper_lift_vs_legacy_p25_alone": "+0.06 to +0.14 (cross-signal novelty premium)",
+      "test_priority": "standard"
+    },
+    {
+      "rank": 9,
+      "entry_id": "C062",
+      "entry_archetype": "cc_three_signal_funding_neutral_long",
+      "exit_id": "X101",
+      "exit_archetype": "composite_exit_be_partial_runner",
+      "exit_family": "breakeven",
+      "thesis": "First cross-channel archetype with funding-neutral gate — explicitly excludes the regime that produced the E126 trap. Three-channel alignment selects for genuine confluence; sparse triggers (~60/30d) but high precision per metric_critic.",
+      "diversity_role": "adds cross-channel (*) coverage with funding-trap immunity",
+      "expected_paper_lift_vs_legacy_p25_alone": "+0.08 to +0.18 (precision-over-recall variant)",
+      "test_priority": "exploratory"
+    },
+    {
+      "rank": 10,
+      "entry_id": "E212",
+      "entry_archetype": "hour_session_us_pump_long",
+      "exit_id": "X105",
+      "exit_archetype": "x104_breakeven_strict_30s_exit",
+      "exit_family": "breakeven",
+      "thesis": "First archetype using the supported `session` field — exploits US-session liquidity regime. Paired with strict 30s breakeven exit to differentiate from X100 floor; high-liquidity filter aligns the regime assumption with the exit's microstructure dependency.",
+      "diversity_role": "adds session-gated entry + strict BE exit variant",
+      "expected_paper_lift_vs_legacy_p25_alone": "+0.04 to +0.12 (session edge net of macro-overfit risk)",
+      "test_priority": "exploratory"
+    }
+  ],
+  "synergy_combinations": [
+    {
+      "pair_ids": [
+        "E207+X101",
+        "E126+X001"
+      ],
+      "synergy_thesis": "E207 short fades the same crowded-long pumps that E126 long rides — running both creates a natural hedge: when funding is positive and taker-buy decays mid-pump (E207 fires), E126's asymmetric tail risk is highest. The pair acts as a self-balancing book."
+    },
+    {
+      "pair_ids": [
+        "E205+X101",
+        "E202+X103"
+      ],
+      "synergy_thesis": "Both port the E126 template to OI_Price but attack different failure modes — E205 strips the funding-skew trap via gating, E202 strips the asymmetric exit via trail. Joint paper-shadow isolates whether the channel-port or the trap-fix is doing the work."
+    },
+    {
+      "pair_ids": [
+        "E213+X101",
+        "E208+X101"
+      ],
+      "synergy_thesis": "Two structurally different shorts (basis/premium dislocation vs smart-money + funding) on the same channel — uncorrelated alpha sources hedge regime risk: basis fades win when funding mechanics dominate, smart-money shorts win when positioning-flow dominates."
+    },
+    {
+      "pair_ids": [
+        "E210+X101",
+        "E126+X102"
+      ],
+      "synergy_thesis": "E210 (R6 directional) pairs naturally with E126+X102 (60s time-only on pricechange long) — different channels, different exit families, opposite trade durations. Diversifies both signal source and holding-time risk."
+    }
+  ],
+  "diversity_audit": {
+    "by_channel": {
+      "OI_Price": 2,
+      "pricechange": 6,
+      "Reserved6": 1,
+      "*": 1
+    },
+    "by_side": {
+      "long": 7,
+      "short": 3,
+      "both": 0
+    },
+    "by_exit_family": {
+      "fixed": 0,
+      "time_only": 1,
+      "breakeven": 6,
+      "trail": 1,
+      "multi_tp": 2
+    },
+    "diversity_assessment": "Top-10 covers all 4 channels and 4 of 5 exit families (fixed deliberately omitted since X101 composite already encodes BE+partial-runner and the user's live system runs fixed-style exits). Long-side still dominates 7-3, but this is the correct posture for the registry's accepted archetype mix; further short additions would require new archetype generation in Round 4."
+  },
+  "next_round_seeds": [
+    "short-side cross-channel archetype combining E207's funding+taker-sell logic with OI_Price OI-divergence — currently zero crowded-long fades on OI channel",
+    "Reserved6 short-side mean-reversion entries — R6 channel still skews long despite its 180s extreme-move definition typically favoring shorts",
+    "fixed-family exit variants paired with E207/E213 to validate that symmetric-geometry shorts dominate fixed-TP family's mean (+0.175) when applied to short side",
+    "kernel-level temporal join implementation for cc_pc_oi_within_60s pattern — currently bottlenecked at filter DSL, blocking C061's true edge measurement",
+    "Asia-session and EU-session variants of E212 to triangulate whether US-session edge is structural or macro-event-overfit"
+  ],
+  "_role": "cross_pair_recommender",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 75.92
+}

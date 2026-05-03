@@ -1,0 +1,19 @@
+entry_id,archetype,channel,n_crashes,novel_dim,sample_desc
+E019,oi_crash_high_funding_long,OI_Price,14,oi_change_pct<=-8; funding>=0.02pct,E=E019/oi_crash_high_funding_long X=X001/fixed_tp1_sl1_symmetric | error=no_even
+E020,oi_crash_negative_funding_short,OI_Price,14,oi_change_pct<=-8; funding<=-0.05pct,E=E020/oi_crash_negative_funding_short X=X001/fixed_tp1_sl1_symmetric | error=no
+E060,pc_crash_high_funding_long,pricechange,13,side_signal=crash; funding>=0.02pct,E=E060/pc_crash_high_funding_long X=X001/fixed_tp1_sl1_symmetric | error=no_even
+E061,pc_crash_negative_funding_short,pricechange,13,side_signal=crash; funding<=-0.05pct,E=E061/pc_crash_negative_funding_short X=X001/fixed_tp1_sl1_symmetric | error=no
+E069,pc_pump_market_cap_small_long,pricechange,13,side_signal=pump; market_cap_bucket=small,E=E069/pc_pump_market_cap_small_long X=X001/fixed_tp1_sl1_symmetric | error=no_e
+E070,pc_pump_market_cap_large_long,pricechange,13,side_signal=pump; market_cap_bucket=large,E=E070/pc_pump_market_cap_large_long X=X001/fixed_tp1_sl1_symmetric | error=no_e
+E083,r6_pump_low_liq_avoid,Reserved6,13,liquidity_bucket=low,E=E083/r6_pump_low_liq_avoid X=X001/fixed_tp1_sl1_symmetric | error=no_events_fo
+E085,r6_pump_premium_extreme_short,Reserved6,13,side_event=pump; premium_bps>=50,E=E085/r6_pump_premium_extreme_short X=X001/fixed_tp1_sl1_symmetric | error=no_e
+E112,oi_pump_funding_extreme_pos_short,OI_Price,13,oi_change_pct>=8; funding>=0.1pct,E=E112/oi_pump_funding_extreme_pos_short X=X001/fixed_tp1_sl1_symmetric | error=
+E113,oi_pump_funding_extreme_neg_long,OI_Price,13,oi_change_pct>=8; funding<=-0.1pct,E=E113/oi_pump_funding_extreme_neg_long X=X001/fixed_tp1_sl1_symmetric | error=n
+E122,oi_pump_volume_pct_ranked_long,OI_Price,13,oi_change_pct>=8; volume_pct_top_decile,E=E122/oi_pump_volume_pct_ranked_long X=X001/fixed_tp1_sl1_symmetric | error=no_
+E137,pc_pump_funding_extreme_pos_short,pricechange,13,side_signal=pump; funding>=0.1pct,E=E137/pc_pump_funding_extreme_pos_short X=X001/fixed_tp1_sl1_symmetric | error=
+E138,pc_pump_funding_extreme_neg_long,pricechange,13,side_signal=pump; funding<=-0.1pct,E=E138/pc_pump_funding_extreme_neg_long X=X001/fixed_tp1_sl1_symmetric | error=n
+E154,r6_pump_funding_extreme_pos_short,Reserved6,13,side_event=pump; funding>=0.1pct,E=E154/r6_pump_funding_extreme_pos_short X=X001/fixed_tp1_sl1_symmetric | error=
+E155,r6_pump_funding_extreme_neg_long,Reserved6,13,side_event=pump; funding<=-0.1pct,E=E155/r6_pump_funding_extreme_neg_long X=X001/fixed_tp1_sl1_symmetric | error=n
+E158,r6_pump_top_trader_long_short,Reserved6,13,side_event=pump; top_trader_position_ratio_high,E=E158/r6_pump_top_trader_long_short X=X001/fixed_tp1_sl1_symmetric | error=no_e
+E159,r6_pump_global_long_extreme_short,Reserved6,13,side_event=pump; global_long_ratio_extreme,E=E159/r6_pump_global_long_extreme_short X=X001/fixed_tp1_sl1_symmetric | error=
+E160,r6_pump_global_short_extreme_long,Reserved6,13,side_event=pump; global_short_ratio_extreme,E=E160/r6_pump_global_short_extreme_long X=X001/fixed_tp1_sl1_symmetric | error=

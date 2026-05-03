@@ -1,0 +1,485 @@
+{
+  "run_id": "debate_20260427_181904",
+  "trigger": "round_3_full_grid_complete",
+  "registry_summary": {
+    "total": 523,
+    "by_type": {
+      "entry": 201,
+      "exit": 101,
+      "filter": 121,
+      "risk": 40,
+      "cross_channel": 60
+    },
+    "entry_by_channel": {
+      "OI_Price": 61,
+      "pricechange": 60,
+      "Reserved6": 35,
+      "*": 45
+    },
+    "entry_by_side": {
+      "short": 94,
+      "long": 94,
+      "both": 13
+    }
+  },
+  "coverage_summary": {
+    "n_total_results": 20000,
+    "top_entries_preview": [
+      "E126 pc_pump_taker_buy_extreme_long ch=pricechange/long best=+0.395 lift_vs_median=+0.475 trig=3443",
+      "E064 pc_pump_taker_buy_dominant_lon ch=pricechange/long best=+0.357 lift_vs_median=+0.437 trig=3619",
+      "E148 pc_pump_global_short_high_long ch=pricechange/long best=+0.350 lift_vs_median=+0.430 trig=988",
+      "E051 pc_high_liquidity_long ch=pricechange/long best=+0.347 lift_vs_median=+0.427 trig=2157",
+      "E066 pc_crash_taker_buy_long ch=pricechange/long best=+0.339 lift_vs_median=+0.419 trig=3684",
+      "E036 pc_first_signal_immediate_long ch=pricechange/long best=+0.290 lift_vs_median=+0.370 trig=5000",
+      "E038 pc_first_signal_30s_long ch=pricechange/long best=+0.290 lift_vs_median=+0.370 trig=5000",
+      "E039 pc_first_signal_1m_long ch=pricechange/long best=+0.290 lift_vs_median=+0.370 trig=5000",
+      "E040 pc_first_signal_3m_long ch=pricechange/long best=+0.290 lift_vs_median=+0.370 trig=5000",
+      "E041 pc_second_signal_cont_long ch=pricechange/long best=+0.290 lift_vs_median=+0.370 trig=5000"
+    ],
+    "by_exit_family": [
+      {
+        "exit_family": "fixed",
+        "n": 7320,
+        "mean": 0.1754687431693989,
+        "median": 0.217159,
+        "max": 0.394617,
+        "n_positive": 6680
+      },
+      {
+        "exit_family": "multi_tp",
+        "n": 3111,
+        "mean": -0.2755747650273224,
+        "median": -0.28,
+        "max": -0.093675,
+        "n_positive": 0
+      },
+      {
+        "exit_family": "trail",
+        "n": 3111,
+        "mean": -0.14962595081967214,
+        "median": -0.152779,
+        "max": -0.006153,
+        "n_positive": 0
+      },
+      {
+        "exit_family": "time_only",
+        "n": 2745,
+        "mean": -0.7307784426229508,
+        "median": -0.695212,
+        "max": -0.113322,
+        "n_positive": 0
+      },
+      {
+        "exit_family": "breakeven",
+        "n": 1923,
+        "mean": -0.09564514248569943,
+        "median": -0.080519,
+        "max": -0.08,
+        "n_positive": 0
+      }
+    ],
+    "lessons_from_r1_r2": [
+      "R1 bug: ~50% of LLM-output novel_dim used unsupported fields (pretrend_*, burst_count_*, btc_*) — silently fell through filter, archetype became duplicate of channel/side baseline. FIXED by enforcing SUPPORTED_FIELDS.",
+      "R2 finding (E126 paper): backtest score 0.3946 on E126 pc_pump_taker_buy_extreme_long (TP=0.51 SL=6.00 win=80%) compounded to -13.5% on $1000 paper account. Asymmetric TP/SL TRAP: legacy p25 metric blind to left tail. New metrics (mean, kelly_capped, p25_capped_tail) correctly penalize.",
+      "R2 synthesizer self-identified gap: X101+ exit-side archetype pipeline starved relative to entry pipeline. Generator should propose more EXIT archetypes leveraging the 5 real exit kernels (fixed/time_only/breakeven/trail/multi_tp)."
+    ]
+  },
+  "results_summary": {
+    "total": 20000,
+    "by_status": {
+      "keep": 7,
+      "discard": 18203,
+      "crash": 1790
+    },
+    "best_score": 0.394617,
+    "n_keeps": 7
+  },
+  "recent_experiments": [
+    {
+      "commit": "d4e9905",
+      "val_score": -0.086795,
+      "triggers": 739,
+      "status": "discard",
+      "description": "E=E052/pc_low_liquidity_avoid X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=4.13 elapsed=0.4s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E053/pc_btc_correlated_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.95 elapsed=3.4s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E054/pc_low_btc_correl_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.95 elapsed=3.6s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E055/pc_short_event_hold_1m_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.95 elapsed=3.6s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E056/pc_short_event_hold_3m_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.95 elapsed=3.4s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E057/pc_pump_low_premium_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.95 elapsed=3.2s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.081177,
+      "triggers": 1443,
+      "status": "discard",
+      "description": "E=E058/pc_pump_high_premium_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=1.2s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E059/pc_crash_low_premium_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=2.22 elapsed=3.2s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E060/pc_crash_high_funding_long X=X100/composite_exit_be_partial_runner | error=no_events_for_channel"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E061/pc_crash_negative_funding_short X=X100/composite_exit_be_partial_runner | error=no_events_for_channel"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E062/pc_pump_oi_rising_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.95 elapsed=3.3s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E063/pc_pump_oi_falling_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=2.22 elapsed=3.2s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 3619,
+      "status": "discard",
+      "description": "E=E064/pc_pump_taker_buy_dominant_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.95 elapsed=2.5s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.100725,
+      "triggers": 118,
+      "status": "discard",
+      "description": "E=E065/pc_pump_taker_sell_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.72 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 3684,
+      "status": "discard",
+      "description": "E=E066/pc_crash_taker_buy_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=2.15 elapsed=2.5s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E067/pc_pump_btc_bull_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.95 elapsed=3.2s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E068/pc_pump_btc_bear_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=2.22 elapsed=3.5s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E069/pc_pump_market_cap_small_long X=X100/composite_exit_be_partial_runner | error=no_events_for_channel"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E070/pc_pump_market_cap_large_long X=X100/composite_exit_be_partial_runner | error=no_events_for_channel"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.106067,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E071/r6_bigmove_pump_immediate_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.106067,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E072/r6_bigmove_pump_30s_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.106067,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E073/r6_bigmove_pump_1m_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.106067,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E074/r6_bigmove_crash_immediate_short_cont X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.097282,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E075/r6_bigmove_crash_30s_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=4.83 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.097282,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E076/r6_bigmove_crash_1m_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=4.83 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.097282,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E077/r6_pump_btc_bull_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=4.83 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.106067,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E078/r6_pump_btc_bear_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.097282,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E079/r6_crash_oversold_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=4.83 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.097282,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E080/r6_pump_oi_confirms_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=4.83 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.106067,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E081/r6_pump_oi_rejects_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.125165,
+      "triggers": 102,
+      "status": "discard",
+      "description": "E=E082/r6_pump_taker_buy_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=3.47 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E083/r6_pump_low_liq_avoid X=X100/composite_exit_be_partial_runner | error=no_events_for_channel"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.137756,
+      "triggers": 92,
+      "status": "discard",
+      "description": "E=E084/r6_pump_high_liq_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=2.81 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": 0.0,
+      "triggers": 0,
+      "status": "crash",
+      "description": "E=E085/r6_pump_premium_extreme_short X=X100/composite_exit_be_partial_runner | error=no_events_for_channel"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.106067,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E086/r6_pump_funding_extreme_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.097282,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E087/r6_first_in_2h_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=4.83 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.106067,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E088/r6_after_pricechange_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.097282,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E089/r6_after_oi_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=4.83 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.106067,
+      "triggers": 120,
+      "status": "discard",
+      "description": "E=E090/r6_short_event_hold_5m X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=5.73 elapsed=0.1s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E091/cc_pc_then_oi_5m_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.6s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E092/cc_oi_then_pc_5m_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.6s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E093/cc_r6_after_burst_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.4s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E094/cc_oi_pc_simultaneous_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.3s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E095/cc_three_channel_within_5m_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.2s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E096/cc_pc_oi_diverge_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.4s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E097/cc_oi_r6_align_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.6s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E098/cc_pc_pump_no_oi_5m_short X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.6s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E099/cc_pc_crash_no_r6_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.3s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.08,
+      "triggers": 5000,
+      "status": "discard",
+      "description": "E=E100/cc_pc_then_oi_funding_align_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=1.99 elapsed=3.6s"
+    },
+    {
+      "commit": "d4e9905",
+      "val_score": -0.083109,
+      "triggers": 611,
+      "status": "discard",
+      "description": "E=E101/oi_pump_taker_buy_extreme_long X=X100/composite_exit_be_partial_runner | n_var=90000 best_tp=0.20 best_sl=4.48 elapsed=0.4s"
+    }
+  ],
+  "existing_archetype_ids_sample": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020"
+  ],
+  "models": {
+    "pattern_miner": "claude-opus-4-7",
+    "generator": "claude-opus-4-7",
+    "steelman": "claude-opus-4-7",
+    "devil": "claude-opus-4-7",
+    "quant": "claude-opus-4-7",
+    "risk": "claude-opus-4-7",
+    "metric_critic": "claude-opus-4-7",
+    "synthesizer": "claude-opus-4-7",
+    "self_reflection": "claude-opus-4-7",
+    "behavior_annotator": "claude-opus-4-7",
+    "cross_pair_recommender": "claude-opus-4-7"
+  },
+  "mode": "deep"
+}

@@ -1,0 +1,19 @@
+{
+  "summary": "Single proposal review: weekday filter is structurally novel and low-risk, but inverted relative to common crypto liquidity patterns and may not be the right cut.",
+  "critiques": [
+    {
+      "archetype_ref": "weekday_weekend_avoid_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Inversion risk: the notes claim 'thin weekend liquidity bias' but in crypto perps weekends often show LOWER taker aggression and thinner books that AMPLIFY pump-channel edges rather than erode them — excluding Sat/Sun may discard the highest-lift sub-regime (E126/E064 pc_pump_taker_buy_* are exactly the kind of taker-imbalance signals that fire on thin books).",
+        "Sample-size fragility on a 30-day window: filtering to Mon–Fri leaves only ~22 weekdays, and combined with rare entries (E148 trig=988, ~33/day) some entry×weekday cells will have <10 triggers — verdict will be dominated by 1-2 outlier days.",
+        "Side='both' + channel='*' is over-broad for a calendar gate: weekend behavior likely differs by side (shorts often work better on illiquid weekend dumps; longs on Monday-open gaps), so a single both/* mask conflates two opposite regimes and will look mediocre in aggregate even if one side benefits.",
+        "BTC-regime confound: the 30-day window may have had a directional weekend (e.g. one weekend crash or Sunday gap) that makes 'avoid weekend' look good ex-post — classic overfit to calendar coincidence rather than a structural effect."
+      ],
+      "monitoring_advice": "In paper-shadow, log weekend vs weekday performance SEPARATELY for long and short sides on the top-5 entries (E126/E064/E148/E051/E066) before applying as a filter; only enable the gate if weekend mean PnL is negative on BOTH sides AND remains negative when one outlier weekend is removed. Also test the inverse filter (weekend-only) as a sanity check — if it's symmetrically bad, the signal is noise."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 28.08
+}

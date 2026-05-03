@@ -1,0 +1,90 @@
+{
+  "project": "bwe_complete_strategy_v6_max_alpha",
+  "machine": "DESKTOP-U9E44D5",
+  "created_at": "2026-04-26T03:28:55+00:00",
+  "paper_only": true,
+  "live_allowed": false,
+  "paths": {
+    "repo": "/data/bwe/v6/code/Autoresearch",
+    "feature_dir_30d": "/data/bwe/v6/input/binance_event_features_20260425_30d",
+    "v5_reference_dir": "/data/bwe/v6/reference/bwe_autoresearch_entry_v5_20260425",
+    "v5_package_dir": "/data/bwe/v6/reference/bwe_entry_research_v5_package",
+    "legacy_market_cache_dir": "/data/bwe/v6/reference/legacy_market_cache",
+    "normalized_trade_kline_dir": "/data/bwe/v6/cache/normalized",
+    "run_root": "/data/bwe/v6/runs",
+    "cache_root": "/data/bwe/v6/cache",
+    "llm_prompts": "/data/bwe/v6/prompts"
+  },
+  "required_files": {
+    "events_base": "bwe_events_recent_base.parquet",
+    "events_features": "bwe_events_recent_binance_features.parquet",
+    "forward_merged": "bwe_forward_recent_binance_features_merged.parquet",
+    "coverage_report_json": "coverage_report.json",
+    "feature_registry": "feature_registry.json",
+    "raw_mark_1m": "raw/mark_price_1m.parquet",
+    "raw_premium_1m": "raw/premium_index_1m.parquet",
+    "raw_open_interest_hist": "raw/open_interest_hist.parquet",
+    "raw_funding_rate": "raw/funding_rate.parquet",
+    "raw_global_long_short": "raw/global_long_short_account_ratio.parquet",
+    "raw_top_trader_account": "raw/top_trader_long_short_account_ratio.parquet",
+    "raw_top_trader_position": "raw/top_trader_long_short_position_ratio.parquet",
+    "raw_taker_buy_sell": "raw/taker_buy_sell_volume.parquet",
+    "raw_basis": "raw/basis_perpetual.parquet",
+    "raw_exchange_info": "raw/exchange_info.parquet"
+  },
+  "derived_required_before_medium": {
+    "legacy_trade_kline_1m_windows": "/data/bwe/v6/cache/normalized/legacy_trade_kline_1m_windows.parquet",
+    "legacy_market_cache_parse_audit": "/data/bwe/v6/cache/normalized/legacy_market_cache_parse_audit.csv",
+    "trade_kline_coverage_report": "/data/bwe/v6/runs/current/trade_kline_coverage_report.csv",
+    "trade_kline_missing_events": "/data/bwe/v6/runs/current/trade_kline_missing_events.csv",
+    "trade_kline_path_resolution_decision": "/data/bwe/v6/runs/current/trade_kline_path_resolution_decision.md"
+  },
+  "known_current_counts_from_macmini": {
+    "events_base_rows": 7353,
+    "events_features_rows": 7317,
+    "forward_merged_rows": 73170,
+    "mark_price_1m_rows": 4068517,
+    "premium_index_1m_rows": 4068517,
+    "open_interest_hist_rows": 746037,
+    "global_long_short_rows": 746041,
+    "top_trader_account_rows": 745035,
+    "top_trader_position_rows": 744535,
+    "taker_buy_sell_rows": 744417,
+    "basis_rows": 796406,
+    "funding_rate_rows": 19050,
+    "exchange_info_rows": 716,
+    "local_kline_1m_event_window_rows": 0
+  },
+  "notes": [
+    "local trade kline is currently missing and must be marked as missing or re-collected.",
+    "legacy_market_cache is included as supplemental cache and must be normalized before use.",
+    "medium/max_alpha must include trade kline coverage audit and explicit path resolution decision.",
+    "v5 results are reference baselines only, not v6 candidate limits.",
+    "do not connect to live trading or secrets during v6 research."
+  ],
+  "resolved_paths": {
+    "root": "H:\\data\\bwe\\v6",
+    "repo": "H:\\data\\bwe\\v6\\code\\Autoresearch",
+    "feature_dir_30d": "H:\\data\\bwe\\v6\\input\\binance_event_features_20260425_30d",
+    "v5_reference_dir": "H:\\data\\bwe\\v6\\reference\\bwe_autoresearch_entry_v5_20260425",
+    "v5_package_dir": "H:\\data\\bwe\\v6\\reference\\bwe_entry_research_v5_package",
+    "legacy_market_cache_dir": "H:\\data\\bwe\\v6\\reference\\legacy_market_cache",
+    "normalized_trade_kline_dir": "H:\\data\\bwe\\v6\\cache\\normalized",
+    "run_root": "H:\\data\\bwe\\v6\\runs"
+  },
+  "gpu": {
+    "torch_available": true,
+    "cuda_available": true,
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 5090",
+    "torch_version": "2.11.0+cu128",
+    "cuda_version": "12.8",
+    "vram_total_bytes": 34190458880
+  },
+  "source_path_check": {
+    "requested_t9_path": "/Volumes/T9/BWE_autoresearch",
+    "requested_t9_exists": false,
+    "windows_source_fallback": "H:/BWE_autoresearch",
+    "windows_source_fallback_exists": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "summary": "Proposal uses two snapshot dislocation fields plus a magnitude gate at T0; no leakage detected and risk profile is acceptable with standard monitoring.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "basis_curvature_pump_short",
+      "leakage_risk": "none",
+      "leakage_notes": "basis_rate, premium_bps, and move_pct are all observable at/before T0 — no forward_*, confirm_after_*, or post_event_* fields present. The pump conditioning (move_pct>=3) is a contemporaneous magnitude gate, not a forward return.",
+      "multitest_inflation_risk": "low",
+      "multitest_inflation_notes": "With 60 pricechange entries and 94 short entries already in registry, basis_rate × premium_bps as a joint dislocation gauge is genuinely novel; single new combination does not materially inflate FWER beyond the existing grid.",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "User's live strategy is OI_Price pump LONG; this proposal is pricechange pump SHORT. Different channel and opposite side — could create offsetting exposure if both fire on the same symbol within a window, but this is paper-shadow monitoring, not a blocker.",
+      "concentration_risk": "caution",
+      "concentration_notes": "Joint gates (basis>=0.001 AND premium_bps>=20 AND move_pct>=3) tend to cluster on a handful of high-basis perps (often the same 2–3 alts during pump regimes); at 5–10% per trade on $1000 capital, simultaneous fires on correlated dislocated names could exceed effective leverage. Monitor trigger symbol distribution.",
+      "adversarial_risk": "low",
+      "adversarial_notes": "basis_rate and premium_bps are public derivative quotes; anyone watching the same perp-spot dislocation can act on it. Not a BWE-stream front-run vector specifically.",
+      "overall_severity": "acceptable",
+      "remediation": "None required. Recommended monitoring during paper shadow: (a) symbol-concentration histogram of triggers, (b) co-fire log against live OI_Price pump-long to catch same-symbol opposite-side exposure, (c) confirm basis_rate and premium_bps are sourced from the T0 snapshot, not a delayed feed."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.95
+}

@@ -1,0 +1,39 @@
+{
+  "n_waves": 1407,
+  "baseline_fade_win": 78.96233120113718,
+  "baseline_follow_win": 58.35110163468372,
+  "single_fade": [
+    {
+      "rule": "lifecycle == 'single_burst'",
+      "n": 7,
+      "win_rate": 100.0,
+      "mean_pnl": 3.956876085453294,
+      "lift": 1.2664266426642663,
+      "delta_winrate_vs_baseline": 21.037668798862825
+    },
+    {
+      "rule": "lifecycle == 'sustained'",
+      "n": 610,
+      "win_rate": 81.31147540983606,
+      "mean_pnl": 3.646642628912057,
+      "lift": 1.0297501881335673,
+      "delta_winrate_vs_baseline": 2.3491442086988883
+    },
+    {
+      "rule": "lifecycle == 'late_burst'",
+      "n": 441,
+      "win_rate": 77.55102040816327,
+      "mean_pnl": 2.4024366774013544,
+      "lift": 0.9821267841069821,
+      "delta_winrate_vs_baseline": -1.4113107929739073
+    },
+    {
+      "rule": "lifecycle == 'spike_decay'",
+      "n": 349,
+      "win_rate": 76.21776504297995,
+      "mean_pnl": 2.087922628688681,
+      "lift": 0.9652420829475498,
+      "delta_winrate_vs_baseline": -2.7445661581572267
+    }
+  ]
+}

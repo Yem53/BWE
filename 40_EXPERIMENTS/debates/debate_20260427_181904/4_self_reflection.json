@@ -1,0 +1,9 @@
+{
+  "summary": "Synthesizer rejected zero archetypes outright (all 21 proposals were accepted, 1 revised due to parser limitation), so there are no candidates to promote back. Sole revised item (weekday_weekend_avoid_long → weekday_midweek_wed_filter) was a legitimate parser-level fix not a rejection, and the user's intent (test weekday surface) is preserved with a Round 4 follow-up path.",
+  "promotions": [],
+  "no_promotions_for": [],
+  "reflection_notes": "Synthesizer's batch was uniformly inclusive — every proposal accepted, many with explicit watch-flags rather than rejection, which matches the 'don't miss alpha' posture exactly. The one revision (weekday multi-value OR → single Wed gate) is a sound parser-correctness fix, not a covert reject; the original intent is preserved as a Round 4 follow-up to probe Tue/Thu/Fri individually. Meta-observation: the synthesizer correctly used watch-flags + constraint recommendations (SL<=2x TP, kelly_capped validation, overlap-rate checks) as inclusive alternatives to rejection on trap-geometry concerns, which is the right tool for the E126-trap risk class — no inclusive-direction promotions are needed.",
+  "_role": "self_reflection",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 22.69
+}

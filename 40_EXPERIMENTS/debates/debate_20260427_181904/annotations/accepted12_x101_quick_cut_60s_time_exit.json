@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "x101_quick_cut_60s_time_exit",
+  "expected_trades_per_day": 12.0,
+  "expected_trades_per_day_basis": "Pairs with high-conviction entries (E126/E064/E066-class trig≈3.4-3.7K over 30d ≈115/day per entry); novel_dim taker_buy_ratio_5m>=0.65 filters ~30% leaving ~35/day; conservatively assume ~3 entries qualify and dedup overlap → ~12/day.",
+  "regime_sensitivity": {
+    "best_in": [
+      "high-volume pricechange-channel pump bursts where taker_buy_ratio_5m>=0.65 confirms aggressive-buy continuation",
+      "fast mean-reverting alt regimes (BTC range-bound, ATR/price 5m > 0.4%) where 60s is enough to capture the post-signal snapback",
+      "sessions with funding flat-to-slightly-positive (no forced-unwind tail risk inside 60s)"
+    ],
+    "worst_in": [
+      "trending-breakout regimes where price keeps running past 60s — exit cuts winners and locks in entry slippage",
+      "low-vol consolidation (ATR/price 5m < 0.15%) where 60s captures only fee + spread noise",
+      "BTC sharp-move minutes (|ret_btc_1m|>0.3%) — correlated tape dominates and 60s lands mid-impulse"
+    ],
+    "explanation": "Time_only 60s is a bet that the entry's edge is front-loaded and decays fast; it wins only when post-signal drift reverts or pauses inside one minute. The taker_buy_ratio_5m>=0.65 gate biases toward continuation tape, which makes the 60s clock a race between continuation drift and microstructure mean-reversion — profitable only when vol is high enough that 60s of move > round-trip cost."
+  },
+  "live_readiness_caveats": [
+    "time_only family is 0/2745 positive in R1/R2 — treat as a falsification test, not a deploy candidate; do NOT scale size above 2% even if early paper looks green",
+    "60s holding window makes fees+slippage dominant: at ~12 trades/day on $1000 with 5-10% sizing, a 4bps round-trip × 12 ≈ 0.48%/day drag — paper-shadow MUST use realistic taker fees and 1-tick slippage",
+    "entry stack overlaps heavily (E036-E041 are first/second-signal variants on the same event); without dedup you will double-count one BWE message as 3-4 trades — enforce per-symbol cooldown ≥60s or per-event-id dedup before live"
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "mean_return_per_trade_bps_net_of_fees",
+      "alert_threshold": "<0 bps over any 200-trade rolling window",
+      "rationale": "Time_only with no SL/TP relies on positive mean drift in 60s; if mean net flips negative, the entry-edge hypothesis is dead for this exit and continuing will compound losses"
+    },
+    {
+      "metric": "p25_capped_tail (left-tail per R2 metric)",
+      "alert_threshold": "<-0.4% per trade",
+      "rationale": "R2 E126 lesson: asymmetric payoff trap — a positive mean can mask a fat left tail. Synthesizer explicitly required p25_capped_tail>0 before keep-promotion"
+    },
+    {
+      "metric": "realized_trades_per_day vs predicted (12/day)",
+      "alert_threshold": "deviation >2x in either direction over 3-day window",
+      "rationale": "2x high → entry dedup is broken (same event firing multiple times); 2x low → taker_buy_ratio_5m gate or entry trigger drifted, edge sample is no longer the tested one"
+    },
+    {
+      "metric": "median_holding_seconds_actual",
+      "alert_threshold": "any value !=60s ±2s",
+      "rationale": "Time_only is the entire identity of this exit; if execution latency or partial-fill logic drifts the clock, the archetype is no longer what was backtested"
+    },
+    {
+      "metric": "fill_rate_at_signal (market-order taker fills within 1s)",
+      "alert_threshold": "<95%",
+      "rationale": "60s window leaves no room for slow fills; if entry fills late, exit clock starts late and the front-loaded edge is gone before the position opens"
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "mean_return_per_trade_net of fees < 0 across rolling 100 trades AND p25_capped_tail < -0.3%",
+      "rationale": "This is the exact failure mode R2 surfaced (positive backtest, negative live compounding); both metrics negative means the asymmetric-tail trap has materialized and there is no recovery without a new exit"
+    },
+    {
+      "condition": "3 consecutive paper-shadow days with realized PnL diverging from backtest predicted PnL by >1.5% absolute",
+      "rationale": "Backtest-to-live divergence at this exit speed is almost always microstructure (fees/slippage/latency) — and microstructure does not self-correct, it only compounds"
+    },
+    {
+      "condition": "max consecutive losing trades >= 15",
+      "rationale": "With no SL the only protection is the 60s clock; a 15-loss streak under time_only means the entry's directional drift assumption is broken in the current regime, not just unlucky"
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 8.5,
+  "expected_max_dd_basis": "Time_only has no SL so single-trade left tail is bounded only by 60s realized vol (~0.6-1.2% on liquid alts in fast tape); at 5% sizing, a 5-loss cluster of -1% trades ≈ -2.5% account, plus fee drag ~0.5%/day × ~7d worst stretch ≈ -3.5%, plus one BTC-correlated cluster ≈ -2.5% → ~8.5% peak-to-trough across a 30-day paper window.",
+  "compare_to_existing": "Closest live/top reference is E126 pc_pump_taker_buy_extreme_long paired with its native fixed exit (TP=0.51/SL=6.00) — same entry-class universe but X102 strips SL/TP for a pure 60s clock. Triangulation: if X102 mean_return tracks E126's first-60s realized return, the entry edge is real and front-loaded; if X102 underperforms E126's 60s mark-to-market by >0.1%, the taker_buy_ratio_5m gate is removing more edge than noise.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 59.43
+}

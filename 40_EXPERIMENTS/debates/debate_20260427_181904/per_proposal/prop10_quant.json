@@ -1,0 +1,28 @@
+{
+  "summary": "Mathematically healthy proposal — all three filter conditions parse cleanly via supported fields, structurally distinct from existing taker_buy/liquidity archetypes by adding a session gate, with adequate sample size for Phase 3 evaluation.",
+  "analyses": [
+    {
+      "archetype_ref": "hour_session_us_pump_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E126",
+        "E064",
+        "E051"
+      ],
+      "distinctness_notes": "E126/E064 use taker_buy alone, E051 uses high_liquidity alone; no existing archetype combines session=US with taker_buy_ratio_5m AND liquidity_bucket. The session gate is a genuinely novel regime conditioner — even if taker_buy/liquidity overlap with prior archetypes, the US-hours restriction will materially shift the trigger set and TP/SL surface.",
+      "expected_triggers_30d": 340,
+      "triggers_estimate_method": "5000 pricechange events × ~0.33 (US session ~8h of 24h, but US hours have above-avg activity so use 0.33 vs naive 0.33) × ~0.35 (taker_buy_ratio_5m>=0.60 is moderately selective, roughly upper third) × ~0.55 (high liquidity bucket fraction, biased high since US-hour high-volume names dominate) ≈ 5000 × 0.33 × 0.35 × 0.55 ≈ 318. Round to ~340 given US-hour event clustering.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Coverage summary shows fixed-exit family is the ONLY positive-mean family (mean +0.175, max +0.395, 6680/7320 positive); multi_tp/trail/time_only/breakeven all negative-mean. This long-side pricechange pump archetype should pair best with `fixed` (small TP, wide SL avoided per E126 asymmetric-trap lesson) — recommend testing with TP in 0.3–1.0% range and SL ≤2× TP to avoid the R2 left-tail compounding trap. Breakeven family worth a secondary screen since high-liquidity US-hour entries may benefit from quick risk-off, but expect lower expectancy than fixed."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.88
+}

@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "cc_pc_oi_within_60s_double_long",
+  "predicted_tp_pct": 0.7,
+  "predicted_sl_pct": 2.1,
+  "predicted_tp_sl_ratio": 0.33,
+  "predicted_win_rate": 0.68,
+  "predicted_mean_per_trade_pct": -0.28,
+  "predicted_kelly_pct": 0.0,
+  "trap_risk": "medium",
+  "trap_reasoning": "Cross-channel confluence (PC + OI within 60s + taker_buy>=0.60 + high_liq + oi_change>=8) is a genuinely selective filter and likely produces above-baseline win rate (~0.66-0.70). However, this is exactly the regime where the GPU optimizer historically converges on asymmetric geometry: a long entry on a confirmed pump tends to give back small wins quickly while the occasional adverse move runs to a wide SL (the same dynamic that produced the E126 trap at TP=0.51/SL=6.00, W=80%). My base TP/SL prediction of 0.7/2.1 (ratio 0.33) yields E[trade] = 0.68*0.7 - 0.32*2.1 - 0.08 = -0.276%, i.e. negative expectancy despite high win rate — classic p25-positive / mean-negative trap shape. The confluence quality is real, but only the optimizer's geometry choice determines whether that alpha is captured. Uncertainty on win-rate is moderate (±0.05) and on SL is high (±0.6); if optimizer lands at SL≤1.4×TP the proposal can flip positive. Without a ratio constraint, expected kelly_capped score is ~0; with constraint, expected ~3-4.",
+  "recommended_constraint": "force SL_pct <= 1.5 * TP_pct in variant grid; also require TP_pct between 0.6 and 1.5 to keep geometry symmetric and prevent optimizer from chasing W>=0.78 via wide SL",
+  "metric_score_estimate": 2.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 64.04
+}

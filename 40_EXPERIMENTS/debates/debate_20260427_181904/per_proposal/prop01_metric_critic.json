@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "oi_pump_global_short_high_long",
+  "predicted_tp_pct": 0.65,
+  "predicted_sl_pct": 2.6,
+  "predicted_tp_sl_ratio": 0.25,
+  "predicted_win_rate": 0.72,
+  "predicted_mean_per_trade_pct": 0.07,
+  "predicted_kelly_pct": 3.2,
+  "trap_risk": "medium",
+  "trap_reasoning": "This is a long-side squeeze-fuel thesis on the OI_Price channel: OI burst + elevated global short ratio + high liquidity. The setup is asymmetric by nature — squeeze pops are sharp but mean-revert quickly, and the GPU optimizer has historically converged on TP≈0.5–0.8% with SL≈2.5–6% on similar pump-type long entries (E126, E148 family). Selectivity is moderate-to-high (3 ANDs, with global_short_ratio_high and oi_change_pct>=12 both being narrow gates), so I expect win-rate in the 0.68–0.76 band — high enough to look great on legacy p25 but only marginally positive in expectancy once an SL≥4×TP geometry is applied. With cost -8 bps, E[trade] is plausibly +0.05 to +0.10% if the optimizer holds SL near 2.5×TP, but flips negative (full E126-style trap) if SL drifts to 4–5×TP. Reference E148 itself only had 988 triggers and scored +0.350 on legacy metric — under the new mean/kelly metrics it would likely look much weaker. Trap risk is medium, not high, because the high-liquidity gate should reduce slippage-driven SL blowouts vs. E126's no-liquidity-filter version, but the squeeze-fuel thesis structurally invites asymmetric geometry. Uncertainty on win-rate is ±5pp.",
+  "recommended_constraint": "force SL ≤ 2.5 × TP_pct in the variant grid, and require min_triggers ≥ 800 to avoid overfit on a thin OI_Price slice",
+  "metric_score_estimate": 3.2,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 22.7
+}

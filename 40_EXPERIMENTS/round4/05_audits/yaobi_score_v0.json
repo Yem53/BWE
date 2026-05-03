@@ -1,0 +1,4826 @@
+{
+  "weights": {
+    "big_moves_5min": 35,
+    "max_daily_range": 25,
+    "avg_atr": 25,
+    "low_volume_bonus": 15
+  },
+  "n_symbols": 535,
+  "ranked": [
+    {
+      "symbol": "TRADOORUSDT",
+      "big_moves_5min_8pct": 86,
+      "max_daily_range_pct": 112.81036344008635,
+      "avg_atr_pct": 0.9791134478302689,
+      "quote_vol_24h_usd": 30606099.4956,
+      "n_bars": 8147,
+      "yaobi_score": 85.4812734082397
+    },
+    {
+      "symbol": "DAMUSDT",
+      "big_moves_5min_8pct": 95,
+      "max_daily_range_pct": 273.13499111900535,
+      "avg_atr_pct": 0.9459322736846429,
+      "quote_vol_24h_usd": 294935218.35254,
+      "n_bars": 8147,
+      "yaobi_score": 85.21535580524345
+    },
+    {
+      "symbol": "QUSDT",
+      "big_moves_5min_8pct": 42,
+      "max_daily_range_pct": 52.552051304577,
+      "avg_atr_pct": 0.5113890697898096,
+      "quote_vol_24h_usd": 3511601.890272,
+      "n_bars": 8147,
+      "yaobi_score": 83.30898876404495
+    },
+    {
+      "symbol": "ZKJUSDT",
+      "big_moves_5min_8pct": 79,
+      "max_daily_range_pct": 235.3898305084746,
+      "avg_atr_pct": 0.7263064171323123,
+      "quote_vol_24h_usd": 430699552.319663,
+      "n_bars": 8147,
+      "yaobi_score": 82.38576779026216
+    },
+    {
+      "symbol": "AGTUSDT",
+      "big_moves_5min_8pct": 73,
+      "max_daily_range_pct": 86.11473677667973,
+      "avg_atr_pct": 0.784434914640739,
+      "quote_vol_24h_usd": 40621794.230544,
+      "n_bars": 8147,
+      "yaobi_score": 82.29588014981275
+    },
+    {
+      "symbol": "BSBUSDT",
+      "big_moves_5min_8pct": 66,
+      "max_daily_range_pct": 85.17767501669181,
+      "avg_atr_pct": 1.238836845400678,
+      "quote_vol_24h_usd": 230530617.44035,
+      "n_bars": 8147,
+      "yaobi_score": 80.38014981273409
+    },
+    {
+      "symbol": "DUSDT",
+      "big_moves_5min_8pct": 34,
+      "max_daily_range_pct": 61.583896790238605,
+      "avg_atr_pct": 0.590164469770796,
+      "quote_vol_24h_usd": 9229279.45759,
+      "n_bars": 8147,
+      "yaobi_score": 79.69850187265918
+    },
+    {
+      "symbol": "LABUSDT",
+      "big_moves_5min_8pct": 44,
+      "max_daily_range_pct": 47.7685273645421,
+      "avg_atr_pct": 0.884697136658126,
+      "quote_vol_24h_usd": 46299329.8737,
+      "n_bars": 8147,
+      "yaobi_score": 78.94194756554309
+    },
+    {
+      "symbol": "APEUSDT",
+      "big_moves_5min_8pct": 42,
+      "max_daily_range_pct": 173.20902845927378,
+      "avg_atr_pct": 0.5588324739520182,
+      "quote_vol_24h_usd": 261731713.9589,
+      "n_bars": 8147,
+      "yaobi_score": 77.4756554307116
+    },
+    {
+      "symbol": "UBUSDT",
+      "big_moves_5min_8pct": 27,
+      "max_daily_range_pct": 38.20041506077676,
+      "avg_atr_pct": 0.683265779592764,
+      "quote_vol_24h_usd": 10093876.87575,
+      "n_bars": 8147,
+      "yaobi_score": 76.05430711610487
+    },
+    {
+      "symbol": "IRUSDT",
+      "big_moves_5min_8pct": 28,
+      "max_daily_range_pct": 89.16867885477751,
+      "avg_atr_pct": 0.56139439012183,
+      "quote_vol_24h_usd": 44749844.677,
+      "n_bars": 8147,
+      "yaobi_score": 75.87265917602996
+    },
+    {
+      "symbol": "BULLAUSDT",
+      "big_moves_5min_8pct": 20,
+      "max_daily_range_pct": 48.50456399300835,
+      "avg_atr_pct": 0.3859223111329133,
+      "quote_vol_24h_usd": 4731247.202626,
+      "n_bars": 8147,
+      "yaobi_score": 72.74531835205994
+    },
+    {
+      "symbol": "RAVEUSDT",
+      "big_moves_5min_8pct": 25,
+      "max_daily_range_pct": 45.57233971131252,
+      "avg_atr_pct": 0.6498471651344387,
+      "quote_vol_24h_usd": 76248776.6102,
+      "n_bars": 8147,
+      "yaobi_score": 72.15355805243445
+    },
+    {
+      "symbol": "PRLUSDT",
+      "big_moves_5min_8pct": 24,
+      "max_daily_range_pct": 67.01451905626135,
+      "avg_atr_pct": 0.5720552113426827,
+      "quote_vol_24h_usd": 376228931.7259,
+      "n_bars": 8147,
+      "yaobi_score": 71.10861423220973
+    },
+    {
+      "symbol": "PLAYUSDT",
+      "big_moves_5min_8pct": 18,
+      "max_daily_range_pct": 48.92535579436538,
+      "avg_atr_pct": 0.49736498371047255,
+      "quote_vol_24h_usd": 13480994.9726,
+      "n_bars": 8147,
+      "yaobi_score": 70.09925093632958
+    },
+    {
+      "symbol": "OPGUSDT",
+      "big_moves_5min_8pct": 21,
+      "max_daily_range_pct": 39.08015768725362,
+      "avg_atr_pct": 0.6908145405826822,
+      "quote_vol_24h_usd": 43094792.3399,
+      "n_bars": 8147,
+      "yaobi_score": 69.81086142322097
+    },
+    {
+      "symbol": "KATUSDT",
+      "big_moves_5min_8pct": 18,
+      "max_daily_range_pct": 119.7724039829303,
+      "avg_atr_pct": 0.7457589299972983,
+      "quote_vol_24h_usd": 53586299.0235,
+      "n_bars": 8147,
+      "yaobi_score": 69.26591760299625
+    },
+    {
+      "symbol": "BASUSDT",
+      "big_moves_5min_8pct": 15,
+      "max_daily_range_pct": 49.69800216818955,
+      "avg_atr_pct": 0.7100338765661994,
+      "quote_vol_24h_usd": 10890642.947579,
+      "n_bars": 8147,
+      "yaobi_score": 68.86142322097378
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "big_moves_5min_8pct": 18,
+      "max_daily_range_pct": 73.31557134399053,
+      "avg_atr_pct": 0.8392051411173157,
+      "quote_vol_24h_usd": 390139549.18389,
+      "n_bars": 8147,
+      "yaobi_score": 68.20786516853933
+    },
+    {
+      "symbol": "1000RATSUSDT",
+      "big_moves_5min_8pct": 14,
+      "max_daily_range_pct": 37.4659400544959,
+      "avg_atr_pct": 0.26764910666596564,
+      "quote_vol_24h_usd": 2481957.41585,
+      "n_bars": 8153,
+      "yaobi_score": 67.10486891385767
+    },
+    {
+      "symbol": "ORCAUSDT",
+      "big_moves_5min_8pct": 17,
+      "max_daily_range_pct": 62.07207207207207,
+      "avg_atr_pct": 0.5316259064616496,
+      "quote_vol_24h_usd": 716386289.3989,
+      "n_bars": 8147,
+      "yaobi_score": 65.99250936329588
+    },
+    {
+      "symbol": "PUMPBTCUSDT",
+      "big_moves_5min_8pct": 6,
+      "max_daily_range_pct": 67.23672367236723,
+      "avg_atr_pct": 0.415116770861813,
+      "quote_vol_24h_usd": 1633918.86677,
+      "n_bars": 8147,
+      "yaobi_score": 65.70786516853933
+    },
+    {
+      "symbol": "HIGHUSDT",
+      "big_moves_5min_8pct": 15,
+      "max_daily_range_pct": 43.08281474389661,
+      "avg_atr_pct": 0.39883619002906107,
+      "quote_vol_24h_usd": 21301580.17772,
+      "n_bars": 8147,
+      "yaobi_score": 65.55617977528091
+    },
+    {
+      "symbol": "BUSDT",
+      "big_moves_5min_8pct": 11,
+      "max_daily_range_pct": 45.049504950495034,
+      "avg_atr_pct": 0.3617088251263801,
+      "quote_vol_24h_usd": 4989737.7399,
+      "n_bars": 8147,
+      "yaobi_score": 64.82771535580524
+    },
+    {
+      "symbol": "AIOTUSDT",
+      "big_moves_5min_8pct": 12,
+      "max_daily_range_pct": 49.22480620155038,
+      "avg_atr_pct": 0.8065884284599631,
+      "quote_vol_24h_usd": 125932299.91916,
+      "n_bars": 8147,
+      "yaobi_score": 63.325842696629216
+    },
+    {
+      "symbol": "ESPORTSUSDT",
+      "big_moves_5min_8pct": 7,
+      "max_daily_range_pct": 47.42532005689901,
+      "avg_atr_pct": 0.3220377863654761,
+      "quote_vol_24h_usd": 2114854.2767,
+      "n_bars": 8147,
+      "yaobi_score": 63.11048689138577
+    },
+    {
+      "symbol": "MAGMAUSDT",
+      "big_moves_5min_8pct": 6,
+      "max_daily_range_pct": 47.83953747844609,
+      "avg_atr_pct": 0.434619770920258,
+      "quote_vol_24h_usd": 2576136.46474,
+      "n_bars": 8147,
+      "yaobi_score": 63.076779026217224
+    },
+    {
+      "symbol": "AKEUSDT",
+      "big_moves_5min_8pct": 4,
+      "max_daily_range_pct": 32.63816475495308,
+      "avg_atr_pct": 0.4136661363303966,
+      "quote_vol_24h_usd": 1098954.8113887,
+      "n_bars": 8147,
+      "yaobi_score": 62.95318352059925
+    },
+    {
+      "symbol": "SPKUSDT",
+      "big_moves_5min_8pct": 10,
+      "max_daily_range_pct": 70.16487830410887,
+      "avg_atr_pct": 0.43151206817416066,
+      "quote_vol_24h_usd": 22709112.09307,
+      "n_bars": 8147,
+      "yaobi_score": 62.21910112359551
+    },
+    {
+      "symbol": "MOVRUSDT",
+      "big_moves_5min_8pct": 9,
+      "max_daily_range_pct": 104.35308343409915,
+      "avg_atr_pct": 0.5094800396846769,
+      "quote_vol_24h_usd": 19546791.61789,
+      "n_bars": 8147,
+      "yaobi_score": 62.147940074906366
+    },
+    {
+      "symbol": "TAKEUSDT",
+      "big_moves_5min_8pct": 8,
+      "max_daily_range_pct": 39.8671096345515,
+      "avg_atr_pct": 0.353120605093343,
+      "quote_vol_24h_usd": 3649000.27287,
+      "n_bars": 8147,
+      "yaobi_score": 61.87078651685394
+    },
+    {
+      "symbol": "ONUSDT",
+      "big_moves_5min_8pct": 6,
+      "max_daily_range_pct": 40.45816221765913,
+      "avg_atr_pct": 0.41044728601904484,
+      "quote_vol_24h_usd": 2960831.4651,
+      "n_bars": 8147,
+      "yaobi_score": 61.48501872659176
+    },
+    {
+      "symbol": "HYPERUSDT",
+      "big_moves_5min_8pct": 9,
+      "max_daily_range_pct": 83.89076403804849,
+      "avg_atr_pct": 0.3457948568482058,
+      "quote_vol_24h_usd": 19760080.41089,
+      "n_bars": 8147,
+      "yaobi_score": 60.153558052434455
+    },
+    {
+      "symbol": "MEGAUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 34.130213631739586,
+      "avg_atr_pct": 0.36445473309929594,
+      "quote_vol_24h_usd": 2454117.74209,
+      "n_bars": 8147,
+      "yaobi_score": 59.962546816479396
+    },
+    {
+      "symbol": "DODOXUSDT",
+      "big_moves_5min_8pct": 3,
+      "max_daily_range_pct": 31.927371151460456,
+      "avg_atr_pct": 0.21897843195542618,
+      "quote_vol_24h_usd": 562828.72216,
+      "n_bars": 8147,
+      "yaobi_score": 58.528089887640455
+    },
+    {
+      "symbol": "NOTUSDT",
+      "big_moves_5min_8pct": 10,
+      "max_daily_range_pct": 64.86164122137404,
+      "avg_atr_pct": 0.2011122060951013,
+      "quote_vol_24h_usd": 6560783.4631149,
+      "n_bars": 8147,
+      "yaobi_score": 58.333333333333336
+    },
+    {
+      "symbol": "SIRENUSDT",
+      "big_moves_5min_8pct": 11,
+      "max_daily_range_pct": 26.660748631454346,
+      "avg_atr_pct": 0.3771995662426513,
+      "quote_vol_24h_usd": 55546323.4309,
+      "n_bars": 8147,
+      "yaobi_score": 58.067415730337075
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "big_moves_5min_8pct": 8,
+      "max_daily_range_pct": 46.15521379678194,
+      "avg_atr_pct": 0.619904872761758,
+      "quote_vol_24h_usd": 191508466.75894,
+      "n_bars": 8147,
+      "yaobi_score": 57.816479400749074
+    },
+    {
+      "symbol": "B2USDT",
+      "big_moves_5min_8pct": 10,
+      "max_daily_range_pct": 33.7879727216367,
+      "avg_atr_pct": 0.25474218349246125,
+      "quote_vol_24h_usd": 10589043.5887,
+      "n_bars": 8147,
+      "yaobi_score": 57.80898876404495
+    },
+    {
+      "symbol": "SAPIENUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 29.40470998691671,
+      "avg_atr_pct": 0.22120281551875567,
+      "quote_vol_24h_usd": 1526271.83465,
+      "n_bars": 8147,
+      "yaobi_score": 57.312734082397
+    },
+    {
+      "symbol": "FOLKSUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 25.76419213973798,
+      "avg_atr_pct": 0.335402026963824,
+      "quote_vol_24h_usd": 3433409.4788,
+      "n_bars": 8147,
+      "yaobi_score": 56.10486891385768
+    },
+    {
+      "symbol": "SPORTFUNUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 32.519685039370074,
+      "avg_atr_pct": 0.40570361503006697,
+      "quote_vol_24h_usd": 1792450.58699,
+      "n_bars": 8147,
+      "yaobi_score": 55.88014981273409
+    },
+    {
+      "symbol": "XNYUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 20.594451783355343,
+      "avg_atr_pct": 0.35011103236823415,
+      "quote_vol_24h_usd": 3142864.716449,
+      "n_bars": 8147,
+      "yaobi_score": 55.62734082397003
+    },
+    {
+      "symbol": "GTCUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 23.02795698924731,
+      "avg_atr_pct": 0.23272662887138043,
+      "quote_vol_24h_usd": 1747772.034455,
+      "n_bars": 8147,
+      "yaobi_score": 55.41198501872658
+    },
+    {
+      "symbol": "COLLECTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 28.953016932983537,
+      "avg_atr_pct": 0.4095830544284959,
+      "quote_vol_24h_usd": 2089525.06557,
+      "n_bars": 8147,
+      "yaobi_score": 54.68164794007491
+    },
+    {
+      "symbol": "SOMIUSDT",
+      "big_moves_5min_8pct": 8,
+      "max_daily_range_pct": 42.31194690265488,
+      "avg_atr_pct": 0.21618914965392175,
+      "quote_vol_24h_usd": 11249119.1932,
+      "n_bars": 8147,
+      "yaobi_score": 54.63295880149812
+    },
+    {
+      "symbol": "STOUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 36.80008994827973,
+      "avg_atr_pct": 0.3535433392915092,
+      "quote_vol_24h_usd": 16638319.32036,
+      "n_bars": 8147,
+      "yaobi_score": 54.23220973782771
+    },
+    {
+      "symbol": "DEGENUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 23.678282761362127,
+      "avg_atr_pct": 0.2058195606475265,
+      "quote_vol_24h_usd": 1856917.1836331,
+      "n_bars": 7713,
+      "yaobi_score": 54.11048689138576
+    },
+    {
+      "symbol": "VINEUSDT",
+      "big_moves_5min_8pct": 7,
+      "max_daily_range_pct": 25.128998968008247,
+      "avg_atr_pct": 0.26079541055956174,
+      "quote_vol_24h_usd": 7704724.5464,
+      "n_bars": 7780,
+      "yaobi_score": 53.634831460674164
+    },
+    {
+      "symbol": "SWARMSUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 50.04066583527626,
+      "avg_atr_pct": 0.39832963124802695,
+      "quote_vol_24h_usd": 160904076.807998,
+      "n_bars": 8147,
+      "yaobi_score": 53.52996254681648
+    },
+    {
+      "symbol": "CROSSUSDT",
+      "big_moves_5min_8pct": 1,
+      "max_daily_range_pct": 27.56420113793634,
+      "avg_atr_pct": 0.31806795129502535,
+      "quote_vol_24h_usd": 2225375.60824,
+      "n_bars": 8147,
+      "yaobi_score": 53.40449438202247
+    },
+    {
+      "symbol": "BANUSDT",
+      "big_moves_5min_8pct": 3,
+      "max_daily_range_pct": 30.358974358974365,
+      "avg_atr_pct": 0.33857079882478835,
+      "quote_vol_24h_usd": 4860878.11779,
+      "n_bars": 8147,
+      "yaobi_score": 53.32209737827715
+    },
+    {
+      "symbol": "SKRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 44.45312500000001,
+      "avg_atr_pct": 0.31905084570134445,
+      "quote_vol_24h_usd": 3123026.615396,
+      "n_bars": 8147,
+      "yaobi_score": 52.84644194756554
+    },
+    {
+      "symbol": "GPSUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 38.084077925882525,
+      "avg_atr_pct": 0.29191346896438986,
+      "quote_vol_24h_usd": 16418722.053997,
+      "n_bars": 8147,
+      "yaobi_score": 52.79026217228464
+    },
+    {
+      "symbol": "LYNUSDT",
+      "big_moves_5min_8pct": 4,
+      "max_daily_range_pct": 35.978068053539744,
+      "avg_atr_pct": 0.38114984278205083,
+      "quote_vol_24h_usd": 30550312.80137,
+      "n_bars": 8147,
+      "yaobi_score": 52.063670411985015
+    },
+    {
+      "symbol": "BLUAIUSDT",
+      "big_moves_5min_8pct": 4,
+      "max_daily_range_pct": 23.141272676003375,
+      "avg_atr_pct": 0.2614761178286811,
+      "quote_vol_24h_usd": 3956211.667895,
+      "n_bars": 8147,
+      "yaobi_score": 51.69850187265917
+    },
+    {
+      "symbol": "CYSUSDT",
+      "big_moves_5min_8pct": 2,
+      "max_daily_range_pct": 25.748971999216753,
+      "avg_atr_pct": 0.4267025223680375,
+      "quote_vol_24h_usd": 7435780.4692,
+      "n_bars": 8147,
+      "yaobi_score": 51.6498127340824
+    },
+    {
+      "symbol": "NAORISUSDT",
+      "big_moves_5min_8pct": 3,
+      "max_daily_range_pct": 37.20998531571219,
+      "avg_atr_pct": 0.46819263372673636,
+      "quote_vol_24h_usd": 39415392.2013,
+      "n_bars": 8147,
+      "yaobi_score": 51.552434456928836
+    },
+    {
+      "symbol": "VELVETUSDT",
+      "big_moves_5min_8pct": 1,
+      "max_daily_range_pct": 40.55668244309219,
+      "avg_atr_pct": 0.4760970537459156,
+      "quote_vol_24h_usd": 15181068.98651,
+      "n_bars": 8147,
+      "yaobi_score": 51.50374531835206
+    },
+    {
+      "symbol": "SLPUSDT",
+      "big_moves_5min_8pct": 1,
+      "max_daily_range_pct": 36.850601702377475,
+      "avg_atr_pct": 0.20926197509205635,
+      "quote_vol_24h_usd": 2064118.9123092,
+      "n_bars": 8147,
+      "yaobi_score": 51.34456928838951
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "big_moves_5min_8pct": 5,
+      "max_daily_range_pct": 28.993736951983294,
+      "avg_atr_pct": 0.28777669666013084,
+      "quote_vol_24h_usd": 22685444.16566,
+      "n_bars": 8147,
+      "yaobi_score": 50.749063670411985
+    },
+    {
+      "symbol": "SONICUSDT",
+      "big_moves_5min_8pct": 4,
+      "max_daily_range_pct": 25.9855189058729,
+      "avg_atr_pct": 0.2562221568178011,
+      "quote_vol_24h_usd": 6724043.608083,
+      "n_bars": 8147,
+      "yaobi_score": 50.734082397003746
+    },
+    {
+      "symbol": "BBUSDT",
+      "big_moves_5min_8pct": 4,
+      "max_daily_range_pct": 33.283075763286845,
+      "avg_atr_pct": 0.26623093175068324,
+      "quote_vol_24h_usd": 14113468.67501,
+      "n_bars": 8147,
+      "yaobi_score": 50.62172284644195
+    },
+    {
+      "symbol": "AINUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 37.84039036675587,
+      "avg_atr_pct": 0.38378764373748675,
+      "quote_vol_24h_usd": 7615787.72374,
+      "n_bars": 8147,
+      "yaobi_score": 50.55243445692884
+    },
+    {
+      "symbol": "STABLEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 48.46743295019156,
+      "avg_atr_pct": 0.34924286919727543,
+      "quote_vol_24h_usd": 8833547.34142,
+      "n_bars": 8147,
+      "yaobi_score": 50.533707865168545
+    },
+    {
+      "symbol": "AIAUSDT",
+      "big_moves_5min_8pct": 2,
+      "max_daily_range_pct": 24.859813084112144,
+      "avg_atr_pct": 0.34940174717258354,
+      "quote_vol_24h_usd": 6976760.40076,
+      "n_bars": 8147,
+      "yaobi_score": 50.441947565543074
+    },
+    {
+      "symbol": "INXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 30.462710941752857,
+      "avg_atr_pct": 0.28843447311906956,
+      "quote_vol_24h_usd": 3167960.671488,
+      "n_bars": 8147,
+      "yaobi_score": 50.39325842696629
+    },
+    {
+      "symbol": "RAREUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 31.50183150183151,
+      "avg_atr_pct": 0.18973244452386676,
+      "quote_vol_24h_usd": 1417843.1187,
+      "n_bars": 8147,
+      "yaobi_score": 50.1123595505618
+    },
+    {
+      "symbol": "FIGHTUSDT",
+      "big_moves_5min_8pct": 1,
+      "max_daily_range_pct": 21.385692846423197,
+      "avg_atr_pct": 0.32735398283059614,
+      "quote_vol_24h_usd": 3510356.122284,
+      "n_bars": 8147,
+      "yaobi_score": 50.043071161048694
+    },
+    {
+      "symbol": "KGENUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 19.842500155019533,
+      "avg_atr_pct": 0.24523625327945037,
+      "quote_vol_24h_usd": 1471331.02396,
+      "n_bars": 8147,
+      "yaobi_score": 49.97191011235955
+    },
+    {
+      "symbol": "AEVOUSDT",
+      "big_moves_5min_8pct": 2,
+      "max_daily_range_pct": 33.30754352030947,
+      "avg_atr_pct": 0.15993030246223996,
+      "quote_vol_24h_usd": 1243027.768696,
+      "n_bars": 8147,
+      "yaobi_score": 49.84269662921348
+    },
+    {
+      "symbol": "TREEUSDT",
+      "big_moves_5min_8pct": 2,
+      "max_daily_range_pct": 29.6687400549689,
+      "avg_atr_pct": 0.19853500158164722,
+      "quote_vol_24h_usd": 2679171.58316,
+      "n_bars": 8147,
+      "yaobi_score": 49.758426966292134
+    },
+    {
+      "symbol": "FHEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.98901098901099,
+      "avg_atr_pct": 0.2132372333568073,
+      "quote_vol_24h_usd": 1267897.85297,
+      "n_bars": 8147,
+      "yaobi_score": 49.559925093632955
+    },
+    {
+      "symbol": "BIOUSDT",
+      "big_moves_5min_8pct": 4,
+      "max_daily_range_pct": 34.523396880415945,
+      "avg_atr_pct": 0.30978795435466416,
+      "quote_vol_24h_usd": 61008353.74569,
+      "n_bars": 8147,
+      "yaobi_score": 49.348314606741575
+    },
+    {
+      "symbol": "EVAAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 25.971432959606823,
+      "avg_atr_pct": 0.3375375102901629,
+      "quote_vol_24h_usd": 4559039.53766,
+      "n_bars": 8147,
+      "yaobi_score": 49.335205992509366
+    },
+    {
+      "symbol": "LUMIAUSDT",
+      "big_moves_5min_8pct": 2,
+      "max_daily_range_pct": 29.99932097507978,
+      "avg_atr_pct": 0.38320501765575715,
+      "quote_vol_24h_usd": 32971656.122605,
+      "n_bars": 8147,
+      "yaobi_score": 48.87827715355805
+    },
+    {
+      "symbol": "PTBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.93238608525234,
+      "avg_atr_pct": 0.24960016553684702,
+      "quote_vol_24h_usd": 1593259.106463,
+      "n_bars": 8147,
+      "yaobi_score": 48.86704119850187
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 45.43364681295715,
+      "avg_atr_pct": 0.41797732668386745,
+      "quote_vol_24h_usd": 32850075.40792,
+      "n_bars": 8147,
+      "yaobi_score": 48.82022471910112
+    },
+    {
+      "symbol": "4USDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.068882062738524,
+      "avg_atr_pct": 0.29140021708224517,
+      "quote_vol_24h_usd": 2509267.516344,
+      "n_bars": 8153,
+      "yaobi_score": 48.79213483146067
+    },
+    {
+      "symbol": "NFPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.511140235910887,
+      "avg_atr_pct": 0.19461898962527557,
+      "quote_vol_24h_usd": 1125462.630403,
+      "n_bars": 8147,
+      "yaobi_score": 48.79213483146067
+    },
+    {
+      "symbol": "TACUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 39.71762692527096,
+      "avg_atr_pct": 0.4786947567720525,
+      "quote_vol_24h_usd": 32493497.821244,
+      "n_bars": 8147,
+      "yaobi_score": 48.76404494382023
+    },
+    {
+      "symbol": "\u9f99\u867eUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 21.96015571330432,
+      "avg_atr_pct": 0.31104849602378626,
+      "quote_vol_24h_usd": 3256316.856557,
+      "n_bars": 8147,
+      "yaobi_score": 48.735955056179776
+    },
+    {
+      "symbol": "BRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.180118298034714,
+      "avg_atr_pct": 0.27885504316302956,
+      "quote_vol_24h_usd": 1621941.66053,
+      "n_bars": 8147,
+      "yaobi_score": 48.670411985018724
+    },
+    {
+      "symbol": "AIOUSDT",
+      "big_moves_5min_8pct": 1,
+      "max_daily_range_pct": 24.846091299802524,
+      "avg_atr_pct": 0.3150533593369427,
+      "quote_vol_24h_usd": 5911598.17831,
+      "n_bars": 8147,
+      "yaobi_score": 48.62921348314607
+    },
+    {
+      "symbol": "ENSOUSDT",
+      "big_moves_5min_8pct": 2,
+      "max_daily_range_pct": 40.859733572148215,
+      "avg_atr_pct": 0.31845936182291307,
+      "quote_vol_24h_usd": 43725277.8734,
+      "n_bars": 8147,
+      "yaobi_score": 48.40074906367042
+    },
+    {
+      "symbol": "BLESSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.565761664769948,
+      "avg_atr_pct": 0.3044565457321955,
+      "quote_vol_24h_usd": 3233559.132681,
+      "n_bars": 8147,
+      "yaobi_score": 48.20224719101124
+    },
+    {
+      "symbol": "ZEREBROUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 25.368156073001884,
+      "avg_atr_pct": 0.43705917720611165,
+      "quote_vol_24h_usd": 12232590.567947,
+      "n_bars": 8147,
+      "yaobi_score": 48.19288389513108
+    },
+    {
+      "symbol": "GRIFFAINUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 32.280861734868346,
+      "avg_atr_pct": 0.22832409178200522,
+      "quote_vol_24h_usd": 3357403.48521,
+      "n_bars": 8147,
+      "yaobi_score": 48.18352059925094
+    },
+    {
+      "symbol": "KOMAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 19.7604093975343,
+      "avg_atr_pct": 0.1745696447251259,
+      "quote_vol_24h_usd": 694270.627976,
+      "n_bars": 8147,
+      "yaobi_score": 48.12734082397004
+    },
+    {
+      "symbol": "SAFEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 30.77966101694915,
+      "avg_atr_pct": 0.20580048332280834,
+      "quote_vol_24h_usd": 2631346.4923,
+      "n_bars": 8147,
+      "yaobi_score": 48.014981273408246
+    },
+    {
+      "symbol": "MASKUSDT",
+      "big_moves_5min_8pct": 4,
+      "max_daily_range_pct": 33.12440645773979,
+      "avg_atr_pct": 0.20375090421429543,
+      "quote_vol_24h_usd": 11307043.6092,
+      "n_bars": 8147,
+      "yaobi_score": 47.97191011235955
+    },
+    {
+      "symbol": "OPNUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 28.547486033519558,
+      "avg_atr_pct": 0.27749777595261527,
+      "quote_vol_24h_usd": 4848767.1865,
+      "n_bars": 8147,
+      "yaobi_score": 47.88389513108614
+    },
+    {
+      "symbol": "HEMIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 24.513757115749517,
+      "avg_atr_pct": 0.32977207812784,
+      "quote_vol_24h_usd": 6272748.142507,
+      "n_bars": 8147,
+      "yaobi_score": 47.865168539325836
+    },
+    {
+      "symbol": "HAEDALUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.56450635978196,
+      "avg_atr_pct": 0.22227607788623055,
+      "quote_vol_24h_usd": 1685550.8733,
+      "n_bars": 8147,
+      "yaobi_score": 47.846441947565545
+    },
+    {
+      "symbol": "\u6211\u8e0f\u9a6c\u6765\u4e86USDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 21.979923849082716,
+      "avg_atr_pct": 0.2815296132046915,
+      "quote_vol_24h_usd": 3694336.873994,
+      "n_bars": 8147,
+      "yaobi_score": 47.471910112359545
+    },
+    {
+      "symbol": "API3USDT",
+      "big_moves_5min_8pct": 1,
+      "max_daily_range_pct": 42.98515821898629,
+      "avg_atr_pct": 0.3023418195476072,
+      "quote_vol_24h_usd": 30577646.50717,
+      "n_bars": 8147,
+      "yaobi_score": 47.458801498127336
+    },
+    {
+      "symbol": "PHBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.334261838440113,
+      "avg_atr_pct": 0.24977122755916337,
+      "quote_vol_24h_usd": 2917092.1602,
+      "n_bars": 8147,
+      "yaobi_score": 47.265917602996254
+    },
+    {
+      "symbol": "ALICEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 28.945601074546673,
+      "avg_atr_pct": 0.2481847401714781,
+      "quote_vol_24h_usd": 4649994.39183,
+      "n_bars": 8147,
+      "yaobi_score": 47.256554307116104
+    },
+    {
+      "symbol": "JCTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.116318850496064,
+      "avg_atr_pct": 0.31953044652630275,
+      "quote_vol_24h_usd": 4428948.881933,
+      "n_bars": 8147,
+      "yaobi_score": 47.17228464419476
+    },
+    {
+      "symbol": "SKYAIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 57.292414453218484,
+      "avg_atr_pct": 0.26108112709124565,
+      "quote_vol_24h_usd": 18699681.84952,
+      "n_bars": 8147,
+      "yaobi_score": 47.125468164794015
+    },
+    {
+      "symbol": "EULUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.39712412772257,
+      "avg_atr_pct": 0.22371099688037901,
+      "quote_vol_24h_usd": 1895765.27582,
+      "n_bars": 8147,
+      "yaobi_score": 47.12546816479401
+    },
+    {
+      "symbol": "AXSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 57.50883392226147,
+      "avg_atr_pct": 0.33744892631711726,
+      "quote_vol_24h_usd": 74800121.972,
+      "n_bars": 8147,
+      "yaobi_score": 47.022471910112365
+    },
+    {
+      "symbol": "B3USDT",
+      "big_moves_5min_8pct": 3,
+      "max_daily_range_pct": 16.25801584307807,
+      "avg_atr_pct": 0.1956329933872501,
+      "quote_vol_24h_usd": 2311456.9835841,
+      "n_bars": 7713,
+      "yaobi_score": 47.01123595505618
+    },
+    {
+      "symbol": "ENJUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 36.071781363187355,
+      "avg_atr_pct": 0.3000619913340822,
+      "quote_vol_24h_usd": 15638672.61176,
+      "n_bars": 8147,
+      "yaobi_score": 46.79775280898876
+    },
+    {
+      "symbol": "CLOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.606400898371717,
+      "avg_atr_pct": 0.31743121777752514,
+      "quote_vol_24h_usd": 5210621.72312,
+      "n_bars": 8147,
+      "yaobi_score": 46.78838951310861
+    },
+    {
+      "symbol": "AVAAIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.092024539877306,
+      "avg_atr_pct": 0.22979543195990515,
+      "quote_vol_24h_usd": 1569207.714531,
+      "n_bars": 8147,
+      "yaobi_score": 46.52621722846442
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "big_moves_5min_8pct": 1,
+      "max_daily_range_pct": 26.198194026394994,
+      "avg_atr_pct": 0.18547833842745207,
+      "quote_vol_24h_usd": 2942455.87564,
+      "n_bars": 8147,
+      "yaobi_score": 46.47565543071161
+    },
+    {
+      "symbol": "CUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.229010200650148,
+      "avg_atr_pct": 0.2668228375345165,
+      "quote_vol_24h_usd": 2821989.1328,
+      "n_bars": 8147,
+      "yaobi_score": 46.44194756554307
+    },
+    {
+      "symbol": "MERLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.8218793828892,
+      "avg_atr_pct": 0.27326550757562273,
+      "quote_vol_24h_usd": 3446417.17328,
+      "n_bars": 8147,
+      "yaobi_score": 46.357677902621724
+    },
+    {
+      "symbol": "DOGSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.281250000000005,
+      "avg_atr_pct": 0.2577768992041452,
+      "quote_vol_24h_usd": 1460811.94106433,
+      "n_bars": 8147,
+      "yaobi_score": 46.348314606741575
+    },
+    {
+      "symbol": "RONINUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.962888665997998,
+      "avg_atr_pct": 0.18884860748526885,
+      "quote_vol_24h_usd": 1874586.08202,
+      "n_bars": 8147,
+      "yaobi_score": 46.30149812734082
+    },
+    {
+      "symbol": "BOBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.40512022141498,
+      "avg_atr_pct": 0.2334588664450038,
+      "quote_vol_24h_usd": 2439589.553544,
+      "n_bars": 7713,
+      "yaobi_score": 46.29213483146067
+    },
+    {
+      "symbol": "DYMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 24.137931034482747,
+      "avg_atr_pct": 0.23227233286811408,
+      "quote_vol_24h_usd": 3646820.23392,
+      "n_bars": 8147,
+      "yaobi_score": 46.29213483146067
+    },
+    {
+      "symbol": "BICOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 23.05118768819002,
+      "avg_atr_pct": 0.26145389492721227,
+      "quote_vol_24h_usd": 4807750.91213,
+      "n_bars": 8147,
+      "yaobi_score": 46.20786516853932
+    },
+    {
+      "symbol": "BASEDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 26.425954997383577,
+      "avg_atr_pct": 0.43780346002896686,
+      "quote_vol_24h_usd": 48707345.69067,
+      "n_bars": 8147,
+      "yaobi_score": 46.18913857677902
+    },
+    {
+      "symbol": "UAIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 25.535420098846796,
+      "avg_atr_pct": 0.36995625712163144,
+      "quote_vol_24h_usd": 23341661.2209,
+      "n_bars": 8147,
+      "yaobi_score": 46.142322097378276
+    },
+    {
+      "symbol": "AIUSDT",
+      "big_moves_5min_8pct": 4,
+      "max_daily_range_pct": 18.032786885245894,
+      "avg_atr_pct": 0.19340307777117588,
+      "quote_vol_24h_usd": 4105756.20218,
+      "n_bars": 7780,
+      "yaobi_score": 46.117977528089895
+    },
+    {
+      "symbol": "XANUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.921750377236478,
+      "avg_atr_pct": 0.23856781568238355,
+      "quote_vol_24h_usd": 2350013.480175,
+      "n_bars": 8147,
+      "yaobi_score": 46.048689138576776
+    },
+    {
+      "symbol": "USUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.944971999026045,
+      "avg_atr_pct": 0.19824934015424747,
+      "quote_vol_24h_usd": 1647678.134579,
+      "n_bars": 8147,
+      "yaobi_score": 45.88951310861423
+    },
+    {
+      "symbol": "CETUSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.578295155839275,
+      "avg_atr_pct": 0.24807931538443134,
+      "quote_vol_24h_usd": 3729514.32102,
+      "n_bars": 8147,
+      "yaobi_score": 45.889513108614224
+    },
+    {
+      "symbol": "SOONUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 40.03387916431394,
+      "avg_atr_pct": 0.3269557333861386,
+      "quote_vol_24h_usd": 57089151.1553,
+      "n_bars": 8147,
+      "yaobi_score": 45.88014981273408
+    },
+    {
+      "symbol": "PIPPINUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 24.215720831864637,
+      "avg_atr_pct": 0.3543267064453508,
+      "quote_vol_24h_usd": 21843575.78848,
+      "n_bars": 8147,
+      "yaobi_score": 45.79588014981274
+    },
+    {
+      "symbol": "ACUUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.24859579779489,
+      "avg_atr_pct": 0.17330316351813552,
+      "quote_vol_24h_usd": 712764.34395,
+      "n_bars": 8147,
+      "yaobi_score": 45.73033707865169
+    },
+    {
+      "symbol": "FLUXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.300339283080085,
+      "avg_atr_pct": 0.17202896626535114,
+      "quote_vol_24h_usd": 845040.4119,
+      "n_bars": 8147,
+      "yaobi_score": 45.674157303370784
+    },
+    {
+      "symbol": "ELSAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.65068302202398,
+      "avg_atr_pct": 0.16159693642318185,
+      "quote_vol_24h_usd": 846899.82516,
+      "n_bars": 8147,
+      "yaobi_score": 45.59925093632959
+    },
+    {
+      "symbol": "BTRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.858841010401191,
+      "avg_atr_pct": 0.23892352293414978,
+      "quote_vol_24h_usd": 1985409.08297,
+      "n_bars": 8147,
+      "yaobi_score": 45.57116104868914
+    },
+    {
+      "symbol": "HUMAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 19.930914088325977,
+      "avg_atr_pct": 0.34315071393877544,
+      "quote_vol_24h_usd": 10126386.395978,
+      "n_bars": 8147,
+      "yaobi_score": 45.3183520599251
+    },
+    {
+      "symbol": "GRASSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 21.064301552106436,
+      "avg_atr_pct": 0.2393043678195366,
+      "quote_vol_24h_usd": 4730808.16333,
+      "n_bars": 8147,
+      "yaobi_score": 45.02808988764045
+    },
+    {
+      "symbol": "ROBOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 22.43346007604562,
+      "avg_atr_pct": 0.26078609732449587,
+      "quote_vol_24h_usd": 6770260.18827,
+      "n_bars": 8147,
+      "yaobi_score": 44.9812734082397
+    },
+    {
+      "symbol": "PIEVERSEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 23.25534893021396,
+      "avg_atr_pct": 0.3044317152095554,
+      "quote_vol_24h_usd": 13638474.1386,
+      "n_bars": 8147,
+      "yaobi_score": 44.91573033707866
+    },
+    {
+      "symbol": "SPACEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.643805993203593,
+      "avg_atr_pct": 0.2798394746483331,
+      "quote_vol_24h_usd": 5564240.322896,
+      "n_bars": 8147,
+      "yaobi_score": 44.7940074906367
+    },
+    {
+      "symbol": "HUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 25.610789436520264,
+      "avg_atr_pct": 0.34704625796680993,
+      "quote_vol_24h_usd": 41398267.29103,
+      "n_bars": 8147,
+      "yaobi_score": 44.6816479400749
+    },
+    {
+      "symbol": "TAGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.449860928121794,
+      "avg_atr_pct": 0.2412644898879278,
+      "quote_vol_24h_usd": 3381378.3757788,
+      "n_bars": 8147,
+      "yaobi_score": 44.59737827715356
+    },
+    {
+      "symbol": "BIRBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.018878400888386,
+      "avg_atr_pct": 0.17897413443463436,
+      "quote_vol_24h_usd": 1440486.54865,
+      "n_bars": 8147,
+      "yaobi_score": 44.325842696629216
+    },
+    {
+      "symbol": "GENIUSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.06872959104338,
+      "avg_atr_pct": 0.34321197188737224,
+      "quote_vol_24h_usd": 11850249.84,
+      "n_bars": 8147,
+      "yaobi_score": 44.250936329588015
+    },
+    {
+      "symbol": "PROMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 19.118375433382866,
+      "avg_atr_pct": 0.3087593698270253,
+      "quote_vol_24h_usd": 10392375.3173,
+      "n_bars": 8147,
+      "yaobi_score": 43.97003745318352
+    },
+    {
+      "symbol": "MAVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.152317880794705,
+      "avg_atr_pct": 0.14473403615987193,
+      "quote_vol_24h_usd": 587589.59395,
+      "n_bars": 8147,
+      "yaobi_score": 43.91385767790262
+    },
+    {
+      "symbol": "\u5e01\u5b89\u4eba\u751fUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 22.162557969245803,
+      "avg_atr_pct": 0.38491809746564637,
+      "quote_vol_24h_usd": 66553311.65737,
+      "n_bars": 8147,
+      "yaobi_score": 43.89513108614232
+    },
+    {
+      "symbol": "POWERUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.48658260588425,
+      "avg_atr_pct": 0.2457885796346041,
+      "quote_vol_24h_usd": 3304709.34496,
+      "n_bars": 8147,
+      "yaobi_score": 43.87640449438202
+    },
+    {
+      "symbol": "RIVERUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 23.41708542713569,
+      "avg_atr_pct": 0.3270291933862697,
+      "quote_vol_24h_usd": 37307246.8512,
+      "n_bars": 8147,
+      "yaobi_score": 43.857677902621724
+    },
+    {
+      "symbol": "CTSIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.676646706586828,
+      "avg_atr_pct": 0.3585856157661972,
+      "quote_vol_24h_usd": 3218275.3901,
+      "n_bars": 8147,
+      "yaobi_score": 43.82958801498127
+    },
+    {
+      "symbol": "SENTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 25.778546712802775,
+      "avg_atr_pct": 0.1899788696655414,
+      "quote_vol_24h_usd": 4507421.55101,
+      "n_bars": 8147,
+      "yaobi_score": 43.82022471910112
+    },
+    {
+      "symbol": "BANANAS31USDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 27.573730950553667,
+      "avg_atr_pct": 0.23539105465347593,
+      "quote_vol_24h_usd": 14955425.955144,
+      "n_bars": 8147,
+      "yaobi_score": 43.764044943820224
+    },
+    {
+      "symbol": "COAIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.66186220812915,
+      "avg_atr_pct": 0.204052985349244,
+      "quote_vol_24h_usd": 2559063.9268,
+      "n_bars": 8147,
+      "yaobi_score": 43.632958801498134
+    },
+    {
+      "symbol": "BEATUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.498135984377768,
+      "avg_atr_pct": 0.31641292593519993,
+      "quote_vol_24h_usd": 12022577.8962,
+      "n_bars": 8147,
+      "yaobi_score": 43.614232209737835
+    },
+    {
+      "symbol": "FLOCKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.837947223571314,
+      "avg_atr_pct": 0.18794454571621766,
+      "quote_vol_24h_usd": 1081581.35062,
+      "n_bars": 8147,
+      "yaobi_score": 43.567415730337075
+    },
+    {
+      "symbol": "IRYSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.551391862955022,
+      "avg_atr_pct": 0.27723621371658486,
+      "quote_vol_24h_usd": 4620455.20297,
+      "n_bars": 8147,
+      "yaobi_score": 43.40823970037453
+    },
+    {
+      "symbol": "REDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 19.999999999999993,
+      "avg_atr_pct": 0.2102583833058912,
+      "quote_vol_24h_usd": 4029909.3167,
+      "n_bars": 8147,
+      "yaobi_score": 43.40823970037453
+    },
+    {
+      "symbol": "ARIAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.40941512125534,
+      "avg_atr_pct": 0.3142068493316883,
+      "quote_vol_24h_usd": 3738404.5266,
+      "n_bars": 8147,
+      "yaobi_score": 43.09925093632959
+    },
+    {
+      "symbol": "RECALLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.287081339712923,
+      "avg_atr_pct": 0.21370123488639353,
+      "quote_vol_24h_usd": 1607484.48849,
+      "n_bars": 8147,
+      "yaobi_score": 43.04307116104869
+    },
+    {
+      "symbol": "ACEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.814465408805015,
+      "avg_atr_pct": 0.18069215251902201,
+      "quote_vol_24h_usd": 1033015.958813,
+      "n_bars": 8153,
+      "yaobi_score": 43.00561797752809
+    },
+    {
+      "symbol": "HANAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.925704313138873,
+      "avg_atr_pct": 0.16231686027399103,
+      "quote_vol_24h_usd": 1575128.53555,
+      "n_bars": 8147,
+      "yaobi_score": 42.98689138576779
+    },
+    {
+      "symbol": "ETHWUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.677874915938144,
+      "avg_atr_pct": 0.15700948115587252,
+      "quote_vol_24h_usd": 1137668.6867,
+      "n_bars": 8147,
+      "yaobi_score": 42.930711610486895
+    },
+    {
+      "symbol": "EDENUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.591128802957064,
+      "avg_atr_pct": 0.17657167531476264,
+      "quote_vol_24h_usd": 1174831.48107,
+      "n_bars": 8147,
+      "yaobi_score": 42.79026217228465
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.056497175141256,
+      "avg_atr_pct": 0.2155173352780667,
+      "quote_vol_24h_usd": 6230283.13962,
+      "n_bars": 8147,
+      "yaobi_score": 42.649812734082396
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.097871013023473,
+      "avg_atr_pct": 0.18453833971733144,
+      "quote_vol_24h_usd": 1951681.24379,
+      "n_bars": 8147,
+      "yaobi_score": 42.5374531835206
+    },
+    {
+      "symbol": "1000LUNCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 22.78554778554778,
+      "avg_atr_pct": 0.3230238969119393,
+      "quote_vol_24h_usd": 135103344.92137,
+      "n_bars": 8153,
+      "yaobi_score": 42.434456928838955
+    },
+    {
+      "symbol": "GUAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.106732348111663,
+      "avg_atr_pct": 0.3019990073617126,
+      "quote_vol_24h_usd": 7780017.2856,
+      "n_bars": 8147,
+      "yaobi_score": 42.350187265917604
+    },
+    {
+      "symbol": "ICNTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.417266187050354,
+      "avg_atr_pct": 0.19283740688937484,
+      "quote_vol_24h_usd": 2103960.0307,
+      "n_bars": 8147,
+      "yaobi_score": 42.331460674157306
+    },
+    {
+      "symbol": "RAYSOLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 28.322186682175047,
+      "avg_atr_pct": 0.20104680057166097,
+      "quote_vol_24h_usd": 13579672.57996,
+      "n_bars": 8147,
+      "yaobi_score": 42.18164794007491
+    },
+    {
+      "symbol": "XPINUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.122681883024239,
+      "avg_atr_pct": 0.24295230860634034,
+      "quote_vol_24h_usd": 3590980.454887,
+      "n_bars": 8147,
+      "yaobi_score": 42.16292134831461
+    },
+    {
+      "symbol": "USTCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.412969283276453,
+      "avg_atr_pct": 0.2344638732233629,
+      "quote_vol_24h_usd": 7958593.610096,
+      "n_bars": 8147,
+      "yaobi_score": 42.05992509363296
+    },
+    {
+      "symbol": "MYXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 18.552732871439556,
+      "avg_atr_pct": 0.29575510013781015,
+      "quote_vol_24h_usd": 22031248.5616,
+      "n_bars": 8147,
+      "yaobi_score": 42.02247191011236
+    },
+    {
+      "symbol": "TRIAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.7820039738859,
+      "avg_atr_pct": 0.2803656432580586,
+      "quote_vol_24h_usd": 9782794.10455,
+      "n_bars": 8147,
+      "yaobi_score": 41.919475655430716
+    },
+    {
+      "symbol": "CGPTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.789473684210527,
+      "avg_atr_pct": 0.23748373680095536,
+      "quote_vol_24h_usd": 5445793.94101,
+      "n_bars": 8147,
+      "yaobi_score": 41.88202247191011
+    },
+    {
+      "symbol": "LDOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 28.132514026182193,
+      "avg_atr_pct": 0.22511875126072803,
+      "quote_vol_24h_usd": 35313427.3572,
+      "n_bars": 8147,
+      "yaobi_score": 41.835205992509366
+    },
+    {
+      "symbol": "SOLVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.908193484698907,
+      "avg_atr_pct": 0.21786180561370708,
+      "quote_vol_24h_usd": 1595314.41587,
+      "n_bars": 8147,
+      "yaobi_score": 41.72284644194757
+    },
+    {
+      "symbol": "CHILLGUYUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.158333333333335,
+      "avg_atr_pct": 0.21736205849774703,
+      "quote_vol_24h_usd": 2141980.832796,
+      "n_bars": 8147,
+      "yaobi_score": 41.70411985018727
+    },
+    {
+      "symbol": "ZKPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 25.095433338046092,
+      "avg_atr_pct": 0.2213726031353794,
+      "quote_vol_24h_usd": 23384289.67152,
+      "n_bars": 8147,
+      "yaobi_score": 41.666666666666664
+    },
+    {
+      "symbol": "GALAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.931888544891638,
+      "avg_atr_pct": 0.399122881602315,
+      "quote_vol_24h_usd": 20644861.61438,
+      "n_bars": 8147,
+      "yaobi_score": 41.65730337078652
+    },
+    {
+      "symbol": "FUSDT",
+      "big_moves_5min_8pct": 4,
+      "max_daily_range_pct": 19.345238095238095,
+      "avg_atr_pct": 0.10814158845418959,
+      "quote_vol_24h_usd": 1055415.506026,
+      "n_bars": 8147,
+      "yaobi_score": 41.54868913857678
+    },
+    {
+      "symbol": "IOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.654205607476642,
+      "avg_atr_pct": 0.1629988424008767,
+      "quote_vol_24h_usd": 1670100.0096,
+      "n_bars": 8147,
+      "yaobi_score": 41.46067415730337
+    },
+    {
+      "symbol": "TURTLEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 21.039854339469958,
+      "avg_atr_pct": 0.2632763257364488,
+      "quote_vol_24h_usd": 39518533.67379,
+      "n_bars": 8147,
+      "yaobi_score": 41.37640449438202
+    },
+    {
+      "symbol": "AVNTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 22.41029113067027,
+      "avg_atr_pct": 0.20871753949854052,
+      "quote_vol_24h_usd": 12188834.4253,
+      "n_bars": 8147,
+      "yaobi_score": 41.33895131086142
+    },
+    {
+      "symbol": "MUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.547468354430368,
+      "avg_atr_pct": 0.34674472323211813,
+      "quote_vol_24h_usd": 61506223.584,
+      "n_bars": 8147,
+      "yaobi_score": 41.28277153558052
+    },
+    {
+      "symbol": "SSVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.43973815941471,
+      "avg_atr_pct": 0.18520023854338546,
+      "quote_vol_24h_usd": 2362983.42231,
+      "n_bars": 8147,
+      "yaobi_score": 41.14232209737828
+    },
+    {
+      "symbol": "SCRTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.653492244325646,
+      "avg_atr_pct": 0.17739573704886463,
+      "quote_vol_24h_usd": 1827656.40274,
+      "n_bars": 8147,
+      "yaobi_score": 41.07677902621723
+    },
+    {
+      "symbol": "METISUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.911276473955349,
+      "avg_atr_pct": 0.16018527259538734,
+      "quote_vol_24h_usd": 1582456.76381,
+      "n_bars": 8147,
+      "yaobi_score": 40.89887640449438
+    },
+    {
+      "symbol": "CHRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.260328742780976,
+      "avg_atr_pct": 0.17533916630397467,
+      "quote_vol_24h_usd": 2072856.27884,
+      "n_bars": 8147,
+      "yaobi_score": 40.80524344569289
+    },
+    {
+      "symbol": "MBOXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.263318112633183,
+      "avg_atr_pct": 0.1690135722091529,
+      "quote_vol_24h_usd": 868785.30436,
+      "n_bars": 8147,
+      "yaobi_score": 40.767790262172284
+    },
+    {
+      "symbol": "SAHARAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 22.681359044995407,
+      "avg_atr_pct": 0.18836258200864656,
+      "quote_vol_24h_usd": 8804540.09103,
+      "n_bars": 8147,
+      "yaobi_score": 40.73033707865169
+    },
+    {
+      "symbol": "EPICUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.856000000000002,
+      "avg_atr_pct": 0.16484137215091638,
+      "quote_vol_24h_usd": 1603312.97827,
+      "n_bars": 8147,
+      "yaobi_score": 40.63670411985019
+    },
+    {
+      "symbol": "ARCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 23.60365588277962,
+      "avg_atr_pct": 0.20707162323892708,
+      "quote_vol_24h_usd": 26166506.25834,
+      "n_bars": 8147,
+      "yaobi_score": 40.262172284644194
+    },
+    {
+      "symbol": "1000000BOBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.034843205574903,
+      "avg_atr_pct": 0.16937408122356287,
+      "quote_vol_24h_usd": 632558.84283,
+      "n_bars": 8153,
+      "yaobi_score": 40.1310861423221
+    },
+    {
+      "symbol": "TOWNSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.174105823233813,
+      "avg_atr_pct": 0.15520412228663846,
+      "quote_vol_24h_usd": 2068706.965918,
+      "n_bars": 8147,
+      "yaobi_score": 40.1310861423221
+    },
+    {
+      "symbol": "SAGAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.408759124087593,
+      "avg_atr_pct": 0.2133159758536115,
+      "quote_vol_24h_usd": 3009405.249954,
+      "n_bars": 8147,
+      "yaobi_score": 40.10299625468165
+    },
+    {
+      "symbol": "MAVIAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.682074408117236,
+      "avg_atr_pct": 0.17364045470822803,
+      "quote_vol_24h_usd": 1104544.42376,
+      "n_bars": 8147,
+      "yaobi_score": 39.9063670411985
+    },
+    {
+      "symbol": "ILVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.343051713130455,
+      "avg_atr_pct": 0.16399144316075323,
+      "quote_vol_24h_usd": 1454683.3193,
+      "n_bars": 8147,
+      "yaobi_score": 39.756554307116104
+    },
+    {
+      "symbol": "ACTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.586206896551733,
+      "avg_atr_pct": 0.1710276246952814,
+      "quote_vol_24h_usd": 2034198.69213,
+      "n_bars": 8147,
+      "yaobi_score": 39.70037453183521
+    },
+    {
+      "symbol": "MITOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.621090721116577,
+      "avg_atr_pct": 0.21142685090874053,
+      "quote_vol_24h_usd": 4098243.90819,
+      "n_bars": 8147,
+      "yaobi_score": 39.55992509363296
+    },
+    {
+      "symbol": "PARTIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.46749521988528,
+      "avg_atr_pct": 0.160075370655431,
+      "quote_vol_24h_usd": 2495780.39418,
+      "n_bars": 8147,
+      "yaobi_score": 39.550561797752806
+    },
+    {
+      "symbol": "PLUMEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.844315713251266,
+      "avg_atr_pct": 0.21707210758557322,
+      "quote_vol_24h_usd": 7111029.53793,
+      "n_bars": 8147,
+      "yaobi_score": 39.485018726591754
+    },
+    {
+      "symbol": "1000SATSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.163265306122463,
+      "avg_atr_pct": 0.5517542272339166,
+      "quote_vol_24h_usd": 3718827.95911105,
+      "n_bars": 8153,
+      "yaobi_score": 39.26966292134832
+    },
+    {
+      "symbol": "EDGEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.166701468643417,
+      "avg_atr_pct": 0.2376352738375609,
+      "quote_vol_24h_usd": 14245160.868,
+      "n_bars": 8147,
+      "yaobi_score": 39.23220973782771
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.035087719298236,
+      "avg_atr_pct": 0.24385621643122496,
+      "quote_vol_24h_usd": 10115587.35286,
+      "n_bars": 8147,
+      "yaobi_score": 39.21348314606742
+    },
+    {
+      "symbol": "ESPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.25016767270288,
+      "avg_atr_pct": 0.1519107945513445,
+      "quote_vol_24h_usd": 2390878.77707,
+      "n_bars": 8147,
+      "yaobi_score": 39.166666666666664
+    },
+    {
+      "symbol": "TRUTHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.266475056456578,
+      "avg_atr_pct": 0.14683981238356208,
+      "quote_vol_24h_usd": 913808.381446,
+      "n_bars": 8147,
+      "yaobi_score": 39.11048689138577
+    },
+    {
+      "symbol": "BROCCOLI714USDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.75046324891909,
+      "avg_atr_pct": 0.18988664460821705,
+      "quote_vol_24h_usd": 6574150.78207,
+      "n_bars": 8147,
+      "yaobi_score": 38.67977528089887
+    },
+    {
+      "symbol": "FLUIDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.625450180072022,
+      "avg_atr_pct": 0.1470980465134221,
+      "quote_vol_24h_usd": 1520527.6023,
+      "n_bars": 8147,
+      "yaobi_score": 38.61423220973782
+    },
+    {
+      "symbol": "METUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.363143631436312,
+      "avg_atr_pct": 0.16042360822718388,
+      "quote_vol_24h_usd": 2311605.975,
+      "n_bars": 8147,
+      "yaobi_score": 38.61423220973782
+    },
+    {
+      "symbol": "SKLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.831241283124125,
+      "avg_atr_pct": 0.16209675174437724,
+      "quote_vol_24h_usd": 1863199.24297,
+      "n_bars": 8147,
+      "yaobi_score": 38.60486891385768
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 17.531305903398923,
+      "avg_atr_pct": 0.26581005338826136,
+      "quote_vol_24h_usd": 269646009.129082,
+      "n_bars": 8147,
+      "yaobi_score": 38.539325842696634
+    },
+    {
+      "symbol": "FRAXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.590748807301386,
+      "avg_atr_pct": 0.1523369569139078,
+      "quote_vol_24h_usd": 1368259.1517,
+      "n_bars": 8147,
+      "yaobi_score": 38.47378277153558
+    },
+    {
+      "symbol": "ERAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.682281059063143,
+      "avg_atr_pct": 0.14083059327406006,
+      "quote_vol_24h_usd": 1710744.5722,
+      "n_bars": 8147,
+      "yaobi_score": 38.39887640449438
+    },
+    {
+      "symbol": "INITUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.863593603010361,
+      "avg_atr_pct": 0.1886799115694825,
+      "quote_vol_24h_usd": 5603976.0472,
+      "n_bars": 8147,
+      "yaobi_score": 38.35205992509363
+    },
+    {
+      "symbol": "TSTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.705830544301573,
+      "avg_atr_pct": 0.1702882418265112,
+      "quote_vol_24h_usd": 1044971.566366,
+      "n_bars": 8147,
+      "yaobi_score": 38.267790262172284
+    },
+    {
+      "symbol": "HOTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.29493087557604,
+      "avg_atr_pct": 0.19330131709279488,
+      "quote_vol_24h_usd": 973589.146328,
+      "n_bars": 8147,
+      "yaobi_score": 38.071161048689135
+    },
+    {
+      "symbol": "TRUSTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.675443617630217,
+      "avg_atr_pct": 0.18275103934287482,
+      "quote_vol_24h_usd": 1975187.68316,
+      "n_bars": 8147,
+      "yaobi_score": 38.01498127340824
+    },
+    {
+      "symbol": "WCTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.070019096117123,
+      "avg_atr_pct": 0.15850196118146437,
+      "quote_vol_24h_usd": 2699133.60287,
+      "n_bars": 8147,
+      "yaobi_score": 37.95880149812734
+    },
+    {
+      "symbol": "USELESSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.896091284292291,
+      "avg_atr_pct": 0.1885439428867445,
+      "quote_vol_24h_usd": 2998849.97828,
+      "n_bars": 8147,
+      "yaobi_score": 37.93071161048689
+    },
+    {
+      "symbol": "STRKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 19.502074688796682,
+      "avg_atr_pct": 0.16317617577046356,
+      "quote_vol_24h_usd": 6685835.52034,
+      "n_bars": 8147,
+      "yaobi_score": 37.90262172284644
+    },
+    {
+      "symbol": "PROMPTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.145165784341053,
+      "avg_atr_pct": 0.13493322500215116,
+      "quote_vol_24h_usd": 482347.78556,
+      "n_bars": 8147,
+      "yaobi_score": 37.79962546816479
+    },
+    {
+      "symbol": "STBLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.629921259842517,
+      "avg_atr_pct": 0.16102750613620284,
+      "quote_vol_24h_usd": 1235047.0197,
+      "n_bars": 8147,
+      "yaobi_score": 37.70599250936329
+    },
+    {
+      "symbol": "CFGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.698630136986301,
+      "avg_atr_pct": 0.20513716552628652,
+      "quote_vol_24h_usd": 7153371.3464,
+      "n_bars": 8147,
+      "yaobi_score": 37.67790262172284
+    },
+    {
+      "symbol": "OPENUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.88908450704225,
+      "avg_atr_pct": 0.2129277730253987,
+      "quote_vol_24h_usd": 21601170.1156,
+      "n_bars": 8147,
+      "yaobi_score": 37.67790262172284
+    },
+    {
+      "symbol": "YBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.785407725321894,
+      "avg_atr_pct": 0.17113024999375373,
+      "quote_vol_24h_usd": 1366293.7715,
+      "n_bars": 8147,
+      "yaobi_score": 37.565543071161045
+    },
+    {
+      "symbol": "PORTALUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.355692850838484,
+      "avg_atr_pct": 0.21542435640614102,
+      "quote_vol_24h_usd": 2351121.909563,
+      "n_bars": 8147,
+      "yaobi_score": 37.546816479400746
+    },
+    {
+      "symbol": "WUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.65495432185524,
+      "avg_atr_pct": 0.1728941075652961,
+      "quote_vol_24h_usd": 6739760.217746,
+      "n_bars": 8147,
+      "yaobi_score": 37.5187265917603
+    },
+    {
+      "symbol": "DRIFTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.290780141843966,
+      "avg_atr_pct": 0.18548471429347674,
+      "quote_vol_24h_usd": 2871959.35829,
+      "n_bars": 8147,
+      "yaobi_score": 37.331460674157306
+    },
+    {
+      "symbol": "RVNUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.067114093959727,
+      "avg_atr_pct": 0.1603337310105915,
+      "quote_vol_24h_usd": 1144693.90288,
+      "n_bars": 8147,
+      "yaobi_score": 37.331460674157306
+    },
+    {
+      "symbol": "JELLYJELLYUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 15.719342077868001,
+      "avg_atr_pct": 0.1774145136050065,
+      "quote_vol_24h_usd": 7029514.753,
+      "n_bars": 8147,
+      "yaobi_score": 37.312734082397
+    },
+    {
+      "symbol": "BANKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.779901693063891,
+      "avg_atr_pct": 0.16724668710667928,
+      "quote_vol_24h_usd": 2740699.09673,
+      "n_bars": 8147,
+      "yaobi_score": 37.2940074906367
+    },
+    {
+      "symbol": "AVAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.923694779116477,
+      "avg_atr_pct": 0.1356477352462566,
+      "quote_vol_24h_usd": 614459.89605,
+      "n_bars": 8147,
+      "yaobi_score": 37.04119850187266
+    },
+    {
+      "symbol": "GUNUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.498622589531681,
+      "avg_atr_pct": 0.24576776328968408,
+      "quote_vol_24h_usd": 24492029.65973,
+      "n_bars": 8147,
+      "yaobi_score": 36.947565543071164
+    },
+    {
+      "symbol": "AXLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.785129847029525,
+      "avg_atr_pct": 0.18676927398846785,
+      "quote_vol_24h_usd": 5983155.83799,
+      "n_bars": 8147,
+      "yaobi_score": 36.94756554307116
+    },
+    {
+      "symbol": "AZTECUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.631076783280326,
+      "avg_atr_pct": 0.1386918359405345,
+      "quote_vol_24h_usd": 1007627.83877,
+      "n_bars": 8147,
+      "yaobi_score": 36.92883895131086
+    },
+    {
+      "symbol": "BLURUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.20269836170896,
+      "avg_atr_pct": 0.22024155355752653,
+      "quote_vol_24h_usd": 13984676.2806,
+      "n_bars": 8147,
+      "yaobi_score": 36.760299625468164
+    },
+    {
+      "symbol": "NILUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.902560616360748,
+      "avg_atr_pct": 0.17226300439816358,
+      "quote_vol_24h_usd": 1692116.285201,
+      "n_bars": 8147,
+      "yaobi_score": 36.72284644194757
+    },
+    {
+      "symbol": "SPXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.215559576117856,
+      "avg_atr_pct": 0.17703214804908904,
+      "quote_vol_24h_usd": 5547559.3567,
+      "n_bars": 8147,
+      "yaobi_score": 36.67602996254682
+    },
+    {
+      "symbol": "1000CHEEMSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.89467333218411,
+      "avg_atr_pct": 0.17135489465715453,
+      "quote_vol_24h_usd": 2116252.9666036,
+      "n_bars": 8153,
+      "yaobi_score": 36.65730337078652
+    },
+    {
+      "symbol": "RESOLVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.268907563025213,
+      "avg_atr_pct": 0.1905821203225713,
+      "quote_vol_24h_usd": 5304108.8026,
+      "n_bars": 8147,
+      "yaobi_score": 36.36704119850187
+    },
+    {
+      "symbol": "SYSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.853118712273648,
+      "avg_atr_pct": 0.15518555809553877,
+      "quote_vol_24h_usd": 528694.82039,
+      "n_bars": 8147,
+      "yaobi_score": 36.357677902621724
+    },
+    {
+      "symbol": "TAIKOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.437908496732037,
+      "avg_atr_pct": 0.12283753255142266,
+      "quote_vol_24h_usd": 448577.2754,
+      "n_bars": 8147,
+      "yaobi_score": 36.357677902621724
+    },
+    {
+      "symbol": "1000000MOGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.57854406130269,
+      "avg_atr_pct": 0.1626517090860412,
+      "quote_vol_24h_usd": 1382941.95059,
+      "n_bars": 8153,
+      "yaobi_score": 36.28277153558052
+    },
+    {
+      "symbol": "LIGHTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.064516129032242,
+      "avg_atr_pct": 0.1682689092233187,
+      "quote_vol_24h_usd": 1887463.2977,
+      "n_bars": 8147,
+      "yaobi_score": 36.161048689138575
+    },
+    {
+      "symbol": "ALCHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.845659163987134,
+      "avg_atr_pct": 0.14931264015609402,
+      "quote_vol_24h_usd": 1830364.07281,
+      "n_bars": 8147,
+      "yaobi_score": 36.13295880149813
+    },
+    {
+      "symbol": "RSRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.17050691244239,
+      "avg_atr_pct": 0.14581713203440236,
+      "quote_vol_24h_usd": 2743954.653614,
+      "n_bars": 8147,
+      "yaobi_score": 36.00187265917603
+    },
+    {
+      "symbol": "ICXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.020942408376954,
+      "avg_atr_pct": 0.21446477209164033,
+      "quote_vol_24h_usd": 777508.1437,
+      "n_bars": 8147,
+      "yaobi_score": 35.92696629213483
+    },
+    {
+      "symbol": "SPELLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.243961352657006,
+      "avg_atr_pct": 0.18145356578036334,
+      "quote_vol_24h_usd": 20069003.7016416,
+      "n_bars": 8147,
+      "yaobi_score": 35.90823970037454
+    },
+    {
+      "symbol": "CKBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.473684210526311,
+      "avg_atr_pct": 0.13537293108543905,
+      "quote_vol_24h_usd": 2174772.555167,
+      "n_bars": 8147,
+      "yaobi_score": 35.81460674157303
+    },
+    {
+      "symbol": "MEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.933458294283028,
+      "avg_atr_pct": 0.1443128419542066,
+      "quote_vol_24h_usd": 2275603.59396,
+      "n_bars": 8147,
+      "yaobi_score": 35.65543071161049
+    },
+    {
+      "symbol": "TUTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.975521305530384,
+      "avg_atr_pct": 0.1649280591511348,
+      "quote_vol_24h_usd": 1515887.64799,
+      "n_bars": 8147,
+      "yaobi_score": 35.27153558052435
+    },
+    {
+      "symbol": "PHAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.456964006259795,
+      "avg_atr_pct": 0.142178125193277,
+      "quote_vol_24h_usd": 2092641.53759,
+      "n_bars": 8147,
+      "yaobi_score": 35.19662921348314
+    },
+    {
+      "symbol": "LQTYUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.362148002619518,
+      "avg_atr_pct": 0.13443548653732265,
+      "quote_vol_24h_usd": 1250967.70962,
+      "n_bars": 8147,
+      "yaobi_score": 35.168539325842694
+    },
+    {
+      "symbol": "NEIROUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.70502890803971,
+      "avg_atr_pct": 0.2042211656758397,
+      "quote_vol_24h_usd": 9529394.86383182,
+      "n_bars": 8147,
+      "yaobi_score": 35.1123595505618
+    },
+    {
+      "symbol": "AIXBTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.958836053938969,
+      "avg_atr_pct": 0.15702286215254263,
+      "quote_vol_24h_usd": 2717266.82837,
+      "n_bars": 8147,
+      "yaobi_score": 35.0749063670412
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.320104666375935,
+      "avg_atr_pct": 0.2333692762965587,
+      "quote_vol_24h_usd": 30031691.5525,
+      "n_bars": 8147,
+      "yaobi_score": 35.04681647940075
+    },
+    {
+      "symbol": "BREVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.532738095238086,
+      "avg_atr_pct": 0.16063861694345638,
+      "quote_vol_24h_usd": 2948134.8831,
+      "n_bars": 8147,
+      "yaobi_score": 34.84082397003745
+    },
+    {
+      "symbol": "IOTXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.079664570230615,
+      "avg_atr_pct": 0.18170715789790529,
+      "quote_vol_24h_usd": 522897.94773,
+      "n_bars": 8147,
+      "yaobi_score": 34.72846441947566
+    },
+    {
+      "symbol": "JOEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.110400929692045,
+      "avg_atr_pct": 0.13455388527455278,
+      "quote_vol_24h_usd": 998041.92651,
+      "n_bars": 8147,
+      "yaobi_score": 34.61610486891385
+    },
+    {
+      "symbol": "INUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.733727810650892,
+      "avg_atr_pct": 0.1673744131367828,
+      "quote_vol_24h_usd": 2346832.28407,
+      "n_bars": 8147,
+      "yaobi_score": 34.559925093632955
+    },
+    {
+      "symbol": "DOODUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.29733046946916,
+      "avg_atr_pct": 0.14367271250291644,
+      "quote_vol_24h_usd": 1067215.22824,
+      "n_bars": 8147,
+      "yaobi_score": 34.419475655430716
+    },
+    {
+      "symbol": "SCRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.265765765765764,
+      "avg_atr_pct": 0.14302780110612456,
+      "quote_vol_24h_usd": 623194.55534,
+      "n_bars": 8147,
+      "yaobi_score": 34.12921348314607
+    },
+    {
+      "symbol": "XAIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.960232783705132,
+      "avg_atr_pct": 0.162002856306074,
+      "quote_vol_24h_usd": 2955948.53838,
+      "n_bars": 8147,
+      "yaobi_score": 34.12921348314607
+    },
+    {
+      "symbol": "BIGTIMEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.982658959537565,
+      "avg_atr_pct": 0.13220621577786396,
+      "quote_vol_24h_usd": 1363970.07295,
+      "n_bars": 8147,
+      "yaobi_score": 33.98876404494382
+    },
+    {
+      "symbol": "CARVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.930046067224033,
+      "avg_atr_pct": 0.13012517841738538,
+      "quote_vol_24h_usd": 828550.9972,
+      "n_bars": 8147,
+      "yaobi_score": 33.96067415730337
+    },
+    {
+      "symbol": "LISTAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.349335819156373,
+      "avg_atr_pct": 0.1598638990631263,
+      "quote_vol_24h_usd": 3278672.69926,
+      "n_bars": 8147,
+      "yaobi_score": 33.77340823970037
+    },
+    {
+      "symbol": "KITEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.81567300182245,
+      "avg_atr_pct": 0.18716399839513057,
+      "quote_vol_24h_usd": 18616721.44846,
+      "n_bars": 8147,
+      "yaobi_score": 33.764044943820224
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 16.277074844520694,
+      "avg_atr_pct": 0.13166501256385355,
+      "quote_vol_24h_usd": 3771321.335,
+      "n_bars": 8147,
+      "yaobi_score": 33.754681647940075
+    },
+    {
+      "symbol": "TLMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.381663113006393,
+      "avg_atr_pct": 0.13070962295567481,
+      "quote_vol_24h_usd": 751103.022647,
+      "n_bars": 8147,
+      "yaobi_score": 33.67041198501873
+    },
+    {
+      "symbol": "BMTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.077844311377252,
+      "avg_atr_pct": 0.11790138330722187,
+      "quote_vol_24h_usd": 742648.20571,
+      "n_bars": 8147,
+      "yaobi_score": 33.651685393258425
+    },
+    {
+      "symbol": "HFTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.854860186418106,
+      "avg_atr_pct": 0.16075622566635211,
+      "quote_vol_24h_usd": 1609110.27051,
+      "n_bars": 8147,
+      "yaobi_score": 33.60486891385768
+    },
+    {
+      "symbol": "MELANIAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.209964412811388,
+      "avg_atr_pct": 0.12790925361672845,
+      "quote_vol_24h_usd": 1370025.900073,
+      "n_bars": 8147,
+      "yaobi_score": 33.57677902621723
+    },
+    {
+      "symbol": "LINEAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.05741766248907,
+      "avg_atr_pct": 0.16510570178395115,
+      "quote_vol_24h_usd": 8653133.367244,
+      "n_bars": 8147,
+      "yaobi_score": 33.51123595505618
+    },
+    {
+      "symbol": "DOLOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.221691066626832,
+      "avg_atr_pct": 0.15693776078581323,
+      "quote_vol_24h_usd": 7242864.99211,
+      "n_bars": 8147,
+      "yaobi_score": 33.40823970037454
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.104715248009782,
+      "avg_atr_pct": 0.20841193010506795,
+      "quote_vol_24h_usd": 64777180.6507,
+      "n_bars": 8147,
+      "yaobi_score": 33.38951310861423
+    },
+    {
+      "symbol": "MOODENGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.074888354517338,
+      "avg_atr_pct": 0.16680879778146293,
+      "quote_vol_24h_usd": 6481972.3996,
+      "n_bars": 8147,
+      "yaobi_score": 33.380149812734075
+    },
+    {
+      "symbol": "WOOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.178748758689174,
+      "avg_atr_pct": 0.136288873595807,
+      "quote_vol_24h_usd": 1557201.97057,
+      "n_bars": 8147,
+      "yaobi_score": 33.258426966292134
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "big_moves_5min_8pct": 1,
+      "max_daily_range_pct": 17.99861014593467,
+      "avg_atr_pct": 0.15862339006533188,
+      "quote_vol_24h_usd": 79716604.97215,
+      "n_bars": 8147,
+      "yaobi_score": 33.10486891385768
+    },
+    {
+      "symbol": "AEROUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.03423848878395,
+      "avg_atr_pct": 0.16491471150056256,
+      "quote_vol_24h_usd": 10045792.47523,
+      "n_bars": 8147,
+      "yaobi_score": 33.08988764044944
+    },
+    {
+      "symbol": "BROCCOLIF3BUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.516261141893514,
+      "avg_atr_pct": 0.14157552967967518,
+      "quote_vol_24h_usd": 421172.234361,
+      "n_bars": 8147,
+      "yaobi_score": 33.061797752808985
+    },
+    {
+      "symbol": "ATUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 20.08302749533722,
+      "avg_atr_pct": 0.1271400141602436,
+      "quote_vol_24h_usd": 7186974.09255,
+      "n_bars": 8147,
+      "yaobi_score": 32.96816479400749
+    },
+    {
+      "symbol": "AWEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.263565891472865,
+      "avg_atr_pct": 0.13597412865024067,
+      "quote_vol_24h_usd": 4043806.29711,
+      "n_bars": 8147,
+      "yaobi_score": 32.752808988764045
+    },
+    {
+      "symbol": "HOLOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.535885167464112,
+      "avg_atr_pct": 0.13911253291093412,
+      "quote_vol_24h_usd": 3331678.07023,
+      "n_bars": 8147,
+      "yaobi_score": 32.49063670411985
+    },
+    {
+      "symbol": "GMTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.937716262975787,
+      "avg_atr_pct": 0.1413737661003521,
+      "quote_vol_24h_usd": 3166456.12913,
+      "n_bars": 8147,
+      "yaobi_score": 32.39700374531835
+    },
+    {
+      "symbol": "VELODROMEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.455838767042094,
+      "avg_atr_pct": 0.1447760701194015,
+      "quote_vol_24h_usd": 5699474.22798,
+      "n_bars": 8147,
+      "yaobi_score": 32.28464419475655
+    },
+    {
+      "symbol": "0GUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 19.405689436492114,
+      "avg_atr_pct": 0.14166464584568297,
+      "quote_vol_24h_usd": 27190602.2793,
+      "n_bars": 8153,
+      "yaobi_score": 32.144194756554306
+    },
+    {
+      "symbol": "KERNELUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.093716392687059,
+      "avg_atr_pct": 0.14410860048393787,
+      "quote_vol_24h_usd": 2406648.14082,
+      "n_bars": 8147,
+      "yaobi_score": 32.13483146067416
+    },
+    {
+      "symbol": "SANTOSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.61618411284334,
+      "avg_atr_pct": 0.15608932162358008,
+      "quote_vol_24h_usd": 3400478.5818,
+      "n_bars": 8147,
+      "yaobi_score": 32.04119850187266
+    },
+    {
+      "symbol": "NOMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.42215679057785,
+      "avg_atr_pct": 0.17937646326160722,
+      "quote_vol_24h_usd": 4738330.691696,
+      "n_bars": 8147,
+      "yaobi_score": 32.00374531835206
+    },
+    {
+      "symbol": "REZUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.83640303358614,
+      "avg_atr_pct": 0.1479995487415537,
+      "quote_vol_24h_usd": 4534376.760465,
+      "n_bars": 8147,
+      "yaobi_score": 31.760299625468164
+    },
+    {
+      "symbol": "IMXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.821222606689735,
+      "avg_atr_pct": 0.1291927984374854,
+      "quote_vol_24h_usd": 4235020.7813,
+      "n_bars": 8147,
+      "yaobi_score": 31.70411985018727
+    },
+    {
+      "symbol": "STGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.078998073217724,
+      "avg_atr_pct": 0.1436149445068666,
+      "quote_vol_24h_usd": 3336912.1951,
+      "n_bars": 8147,
+      "yaobi_score": 31.666666666666664
+    },
+    {
+      "symbol": "XPLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.547263681592039,
+      "avg_atr_pct": 0.20603700908685796,
+      "quote_vol_24h_usd": 28540783.4173,
+      "n_bars": 8147,
+      "yaobi_score": 31.63857677902622
+    },
+    {
+      "symbol": "CELRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.33104631217839,
+      "avg_atr_pct": 0.11715830634900691,
+      "quote_vol_24h_usd": 625724.016127,
+      "n_bars": 8147,
+      "yaobi_score": 31.47940074906367
+    },
+    {
+      "symbol": "ACHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.760946928670895,
+      "avg_atr_pct": 0.14911380755221065,
+      "quote_vol_24h_usd": 17272512.999537,
+      "n_bars": 8153,
+      "yaobi_score": 31.441947565543074
+    },
+    {
+      "symbol": "KAVAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.16000000000001,
+      "avg_atr_pct": 0.159497589992097,
+      "quote_vol_24h_usd": 1893904.33011,
+      "n_bars": 8147,
+      "yaobi_score": 31.42322097378277
+    },
+    {
+      "symbol": "SFPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.823163138231648,
+      "avg_atr_pct": 0.13027900495831538,
+      "quote_vol_24h_usd": 3981477.0927,
+      "n_bars": 8147,
+      "yaobi_score": 31.41385767790262
+    },
+    {
+      "symbol": "VVVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.879362750235828,
+      "avg_atr_pct": 0.17897944392434914,
+      "quote_vol_24h_usd": 12964444.80552,
+      "n_bars": 8147,
+      "yaobi_score": 31.40449438202247
+    },
+    {
+      "symbol": "PIXELUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.367859862909379,
+      "avg_atr_pct": 0.19987707136383706,
+      "quote_vol_24h_usd": 11151123.198538,
+      "n_bars": 8147,
+      "yaobi_score": 31.357677902621724
+    },
+    {
+      "symbol": "MOCAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.2553931802366,
+      "avg_atr_pct": 0.12209000464341047,
+      "quote_vol_24h_usd": 869180.91293,
+      "n_bars": 8147,
+      "yaobi_score": 31.282771535580522
+    },
+    {
+      "symbol": "EDUUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.02222222222221,
+      "avg_atr_pct": 0.1938300385242174,
+      "quote_vol_24h_usd": 7882801.94294,
+      "n_bars": 8147,
+      "yaobi_score": 31.273408239700373
+    },
+    {
+      "symbol": "SXTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.035419126328218,
+      "avg_atr_pct": 0.11713872355780985,
+      "quote_vol_24h_usd": 986554.94147,
+      "n_bars": 8147,
+      "yaobi_score": 31.226591760299627
+    },
+    {
+      "symbol": "ZILUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.515587529976023,
+      "avg_atr_pct": 0.19847270224809266,
+      "quote_vol_24h_usd": 1618856.17419,
+      "n_bars": 8147,
+      "yaobi_score": 31.189138576779026
+    },
+    {
+      "symbol": "LUNA2USDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.180635600197602,
+      "avg_atr_pct": 0.18095432989013557,
+      "quote_vol_24h_usd": 22640962.44989,
+      "n_bars": 8147,
+      "yaobi_score": 31.132958801498127
+    },
+    {
+      "symbol": "APRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.421232876712335,
+      "avg_atr_pct": 0.18687742944846217,
+      "quote_vol_24h_usd": 2091288.43803,
+      "n_bars": 8147,
+      "yaobi_score": 30.91760299625468
+    },
+    {
+      "symbol": "INJUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 14.45919231855408,
+      "avg_atr_pct": 0.1464280424103153,
+      "quote_vol_24h_usd": 19220506.4535,
+      "n_bars": 8147,
+      "yaobi_score": 30.88951310861423
+    },
+    {
+      "symbol": "BRETTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.047286711294682,
+      "avg_atr_pct": 0.15791231749356502,
+      "quote_vol_24h_usd": 1945143.064773,
+      "n_bars": 8147,
+      "yaobi_score": 30.861423220973784
+    },
+    {
+      "symbol": "ORDERUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.837599293909974,
+      "avg_atr_pct": 0.13362996193574803,
+      "quote_vol_24h_usd": 817751.31486,
+      "n_bars": 8147,
+      "yaobi_score": 30.852059925093634
+    },
+    {
+      "symbol": "MONUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.482059282371303,
+      "avg_atr_pct": 0.17733468264710456,
+      "quote_vol_24h_usd": 26167466.94258,
+      "n_bars": 8147,
+      "yaobi_score": 30.823970037453186
+    },
+    {
+      "symbol": "ZRXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.967391304347819,
+      "avg_atr_pct": 0.12081125678777326,
+      "quote_vol_24h_usd": 807730.85626,
+      "n_bars": 8147,
+      "yaobi_score": 30.795880149812735
+    },
+    {
+      "symbol": "MEWUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.512696102215763,
+      "avg_atr_pct": 0.11346608247638724,
+      "quote_vol_24h_usd": 1172994.8334721,
+      "n_bars": 8147,
+      "yaobi_score": 30.50561797752809
+    },
+    {
+      "symbol": "YGGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.883305548940227,
+      "avg_atr_pct": 0.13347463306418775,
+      "quote_vol_24h_usd": 2179724.75385,
+      "n_bars": 8147,
+      "yaobi_score": 30.355805243445694
+    },
+    {
+      "symbol": "KMNOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.058157488419956,
+      "avg_atr_pct": 0.12470680222106671,
+      "quote_vol_24h_usd": 1285643.67701,
+      "n_bars": 8147,
+      "yaobi_score": 30.1498127340824
+    },
+    {
+      "symbol": "HEIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.25570228091236,
+      "avg_atr_pct": 0.1132259325310193,
+      "quote_vol_24h_usd": 728269.581456,
+      "n_bars": 8147,
+      "yaobi_score": 30.149812734082396
+    },
+    {
+      "symbol": "CHZUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.596806387225554,
+      "avg_atr_pct": 0.1734733450592867,
+      "quote_vol_24h_usd": 37008101.34453,
+      "n_bars": 8147,
+      "yaobi_score": 30.0749063670412
+    },
+    {
+      "symbol": "CRVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.086956521739124,
+      "avg_atr_pct": 0.49348187397348625,
+      "quote_vol_24h_usd": 32565792.1185,
+      "n_bars": 8147,
+      "yaobi_score": 30.0561797752809
+    },
+    {
+      "symbol": "RIFUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.9152731326644465,
+      "avg_atr_pct": 0.1545370190578058,
+      "quote_vol_24h_usd": 2059391.58263,
+      "n_bars": 8147,
+      "yaobi_score": 30.028089887640448
+    },
+    {
+      "symbol": "ZETAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.062025092772565,
+      "avg_atr_pct": 0.1270683570064713,
+      "quote_vol_24h_usd": 2789870.25228,
+      "n_bars": 8147,
+      "yaobi_score": 29.831460674157306
+    },
+    {
+      "symbol": "CELOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.269907044461863,
+      "avg_atr_pct": 0.1206973588662164,
+      "quote_vol_24h_usd": 1738188.294298,
+      "n_bars": 8147,
+      "yaobi_score": 29.803370786516854
+    },
+    {
+      "symbol": "CATIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.4058127018299365,
+      "avg_atr_pct": 0.1320366465454532,
+      "quote_vol_24h_usd": 856116.98248,
+      "n_bars": 8147,
+      "yaobi_score": 29.747191011235955
+    },
+    {
+      "symbol": "MAGICUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.036845983787783,
+      "avg_atr_pct": 0.11508331662101141,
+      "quote_vol_24h_usd": 1332942.489906,
+      "n_bars": 8147,
+      "yaobi_score": 29.719101123595507
+    },
+    {
+      "symbol": "MINAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.489266260813837,
+      "avg_atr_pct": 0.10767464451531004,
+      "quote_vol_24h_usd": 2278745.83142,
+      "n_bars": 8147,
+      "yaobi_score": 29.634831460674157
+    },
+    {
+      "symbol": "DIAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.168276563294343,
+      "avg_atr_pct": 0.1260678273307512,
+      "quote_vol_24h_usd": 571583.2697,
+      "n_bars": 8147,
+      "yaobi_score": 29.57865168539326
+    },
+    {
+      "symbol": "ONTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.147174770039419,
+      "avg_atr_pct": 0.19655790242515184,
+      "quote_vol_24h_usd": 8579342.12651,
+      "n_bars": 8147,
+      "yaobi_score": 29.559925093632955
+    },
+    {
+      "symbol": "IDOLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.128295254833045,
+      "avg_atr_pct": 0.12068895324312638,
+      "quote_vol_24h_usd": 715120.48494,
+      "n_bars": 8147,
+      "yaobi_score": 29.45692883895131
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.618343195266269,
+      "avg_atr_pct": 0.14150881378042296,
+      "quote_vol_24h_usd": 1538922.15368,
+      "n_bars": 8147,
+      "yaobi_score": 29.40074906367041
+    },
+    {
+      "symbol": "ATAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.133267522211267,
+      "avg_atr_pct": 0.15040689404897334,
+      "quote_vol_24h_usd": 601696.86495,
+      "n_bars": 8147,
+      "yaobi_score": 29.325842696629216
+    },
+    {
+      "symbol": "UMAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.707724425887273,
+      "avg_atr_pct": 0.11547730045706406,
+      "quote_vol_24h_usd": 1382640.1633,
+      "n_bars": 8147,
+      "yaobi_score": 29.194756554307116
+    },
+    {
+      "symbol": "GOATUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.167165967645296,
+      "avg_atr_pct": 0.1554755626436843,
+      "quote_vol_24h_usd": 3982436.08111,
+      "n_bars": 8147,
+      "yaobi_score": 29.138576779026216
+    },
+    {
+      "symbol": "DEEPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.390283664819044,
+      "avg_atr_pct": 0.10836010653778297,
+      "quote_vol_24h_usd": 908235.5651,
+      "n_bars": 8147,
+      "yaobi_score": 29.10112359550562
+    },
+    {
+      "symbol": "MMTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.78477306002929,
+      "avg_atr_pct": 0.1406153656163343,
+      "quote_vol_24h_usd": 2374444.2119,
+      "n_bars": 8147,
+      "yaobi_score": 28.941947565543067
+    },
+    {
+      "symbol": "NEWTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.943101711983901,
+      "avg_atr_pct": 0.1419772654875585,
+      "quote_vol_24h_usd": 2013456.51015,
+      "n_bars": 8147,
+      "yaobi_score": 28.941947565543067
+    },
+    {
+      "symbol": "COOKIEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.095209217707707,
+      "avg_atr_pct": 0.13531173141202968,
+      "quote_vol_24h_usd": 1150784.88097,
+      "n_bars": 8147,
+      "yaobi_score": 28.848314606741575
+    },
+    {
+      "symbol": "OGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.770056854074542,
+      "avg_atr_pct": 0.12993905501989625,
+      "quote_vol_24h_usd": 1179277.5352,
+      "n_bars": 8147,
+      "yaobi_score": 28.80149812734082
+    },
+    {
+      "symbol": "MLNUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.379368849677644,
+      "avg_atr_pct": 0.12856307741983938,
+      "quote_vol_24h_usd": 499184.52636,
+      "n_bars": 8147,
+      "yaobi_score": 28.773408239700373
+    },
+    {
+      "symbol": "2ZUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.55978260869565,
+      "avg_atr_pct": 0.11719430326351264,
+      "quote_vol_24h_usd": 1029532.49629,
+      "n_bars": 8153,
+      "yaobi_score": 28.61423220973783
+    },
+    {
+      "symbol": "DUSKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.896875458412794,
+      "avg_atr_pct": 0.14236638725212344,
+      "quote_vol_24h_usd": 3028494.97479,
+      "n_bars": 8147,
+      "yaobi_score": 28.60486891385768
+    },
+    {
+      "symbol": "ZKCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.57767722473605,
+      "avg_atr_pct": 0.13046023602523948,
+      "quote_vol_24h_usd": 2761456.50583,
+      "n_bars": 8147,
+      "yaobi_score": 28.576779026217228
+    },
+    {
+      "symbol": "ARKMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.921330089213308,
+      "avg_atr_pct": 0.14027833465314182,
+      "quote_vol_24h_usd": 2798136.8513,
+      "n_bars": 8147,
+      "yaobi_score": 28.539325842696627
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.223744292237441,
+      "avg_atr_pct": 0.1804009516482548,
+      "quote_vol_24h_usd": 19050786.58762,
+      "n_bars": 8147,
+      "yaobi_score": 28.529962546816478
+    },
+    {
+      "symbol": "USUALUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.027681660899653,
+      "avg_atr_pct": 0.12559641076937775,
+      "quote_vol_24h_usd": 1234741.42875,
+      "n_bars": 8147,
+      "yaobi_score": 28.51123595505618
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.159924296191152,
+      "avg_atr_pct": 0.13084825328523986,
+      "quote_vol_24h_usd": 6839713.49253,
+      "n_bars": 8147,
+      "yaobi_score": 28.426966292134832
+    },
+    {
+      "symbol": "SHELLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.1751582755501975,
+      "avg_atr_pct": 0.15922410817192664,
+      "quote_vol_24h_usd": 2467963.2535,
+      "n_bars": 8147,
+      "yaobi_score": 28.323970037453186
+    },
+    {
+      "symbol": "ONEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.73655913978494,
+      "avg_atr_pct": 0.11012249337705009,
+      "quote_vol_24h_usd": 816738.87642,
+      "n_bars": 8147,
+      "yaobi_score": 28.258426966292134
+    },
+    {
+      "symbol": "SYNUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.163000564015793,
+      "avg_atr_pct": 0.11830183414950508,
+      "quote_vol_24h_usd": 518655.60401,
+      "n_bars": 8147,
+      "yaobi_score": 28.249063670411985
+    },
+    {
+      "symbol": "FLOWUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.110294117647056,
+      "avg_atr_pct": 0.13007971432699714,
+      "quote_vol_24h_usd": 3352663.496544,
+      "n_bars": 8147,
+      "yaobi_score": 28.220973782771537
+    },
+    {
+      "symbol": "RLCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.353699177960445,
+      "avg_atr_pct": 0.1116319471219428,
+      "quote_vol_24h_usd": 754291.38387,
+      "n_bars": 8147,
+      "yaobi_score": 28.211610486891388
+    },
+    {
+      "symbol": "ZECUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.066403162055343,
+      "avg_atr_pct": 0.16473247912785338,
+      "quote_vol_24h_usd": 383222470.34464,
+      "n_bars": 8147,
+      "yaobi_score": 28.12734082397004
+    },
+    {
+      "symbol": "SUPERUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.43091334894615,
+      "avg_atr_pct": 0.1427315333049808,
+      "quote_vol_24h_usd": 2876722.4245,
+      "n_bars": 8147,
+      "yaobi_score": 28.127340823970037
+    },
+    {
+      "symbol": "POPCATUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.99453902987472,
+      "avg_atr_pct": 0.15476828583006033,
+      "quote_vol_24h_usd": 5202934.91802,
+      "n_bars": 8147,
+      "yaobi_score": 27.99625468164794
+    },
+    {
+      "symbol": "ATHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.037344398340245,
+      "avg_atr_pct": 0.12336292088738855,
+      "quote_vol_24h_usd": 3515553.702796,
+      "n_bars": 8147,
+      "yaobi_score": 27.940074906367045
+    },
+    {
+      "symbol": "THEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.4856046065259125,
+      "avg_atr_pct": 0.13741926167968624,
+      "quote_vol_24h_usd": 1752382.73842,
+      "n_bars": 8147,
+      "yaobi_score": 27.893258426966295
+    },
+    {
+      "symbol": "FARTCOINUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.470701248799239,
+      "avg_atr_pct": 0.17023651016207583,
+      "quote_vol_24h_usd": 39972732.49911,
+      "n_bars": 8147,
+      "yaobi_score": 27.883895131086142
+    },
+    {
+      "symbol": "BELUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.678700361010834,
+      "avg_atr_pct": 0.12179152517548873,
+      "quote_vol_24h_usd": 602194.7273,
+      "n_bars": 8147,
+      "yaobi_score": 27.846441947565545
+    },
+    {
+      "symbol": "VANAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 13.898540653231406,
+      "avg_atr_pct": 0.1338808451254117,
+      "quote_vol_24h_usd": 24333654.9331,
+      "n_bars": 8147,
+      "yaobi_score": 27.846441947565545
+    },
+    {
+      "symbol": "PEOPLEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.9427083333333375,
+      "avg_atr_pct": 0.1412408332948121,
+      "quote_vol_24h_usd": 2357978.02305,
+      "n_bars": 8147,
+      "yaobi_score": 27.827715355805246
+    },
+    {
+      "symbol": "RPLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.665603402445496,
+      "avg_atr_pct": 0.11041595578333097,
+      "quote_vol_24h_usd": 953451.4,
+      "n_bars": 8147,
+      "yaobi_score": 27.762172284644194
+    },
+    {
+      "symbol": "TWTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.46987951807229,
+      "avg_atr_pct": 0.08929172483499603,
+      "quote_vol_24h_usd": 759471.676,
+      "n_bars": 8147,
+      "yaobi_score": 27.762172284644194
+    },
+    {
+      "symbol": "ANIMEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.993433594577427,
+      "avg_atr_pct": 0.1039564208478053,
+      "quote_vol_24h_usd": 1891000.300449,
+      "n_bars": 8147,
+      "yaobi_score": 27.56554307116105
+    },
+    {
+      "symbol": "TOSHIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.319827120475416,
+      "avg_atr_pct": 0.11558721804531334,
+      "quote_vol_24h_usd": 1175549.6721331,
+      "n_bars": 8147,
+      "yaobi_score": 27.4063670411985
+    },
+    {
+      "symbol": "FOGOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.069792802617243,
+      "avg_atr_pct": 0.1270085180852009,
+      "quote_vol_24h_usd": 1748971.63372,
+      "n_bars": 8147,
+      "yaobi_score": 27.312734082397004
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.877814691768165,
+      "avg_atr_pct": 0.1531589580184063,
+      "quote_vol_24h_usd": 5499451.5252362,
+      "n_bars": 8147,
+      "yaobi_score": 27.294007490636705
+    },
+    {
+      "symbol": "JSTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.904342353681552,
+      "avg_atr_pct": 0.15341410444881154,
+      "quote_vol_24h_usd": 3656189.52571,
+      "n_bars": 8147,
+      "yaobi_score": 27.041198501872657
+    },
+    {
+      "symbol": "FIDAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.877990430622,
+      "avg_atr_pct": 0.1414411132827462,
+      "quote_vol_24h_usd": 1925868.73221,
+      "n_bars": 8147,
+      "yaobi_score": 26.95692883895131
+    },
+    {
+      "symbol": "AGLDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.829802775748719,
+      "avg_atr_pct": 0.1217473544542112,
+      "quote_vol_24h_usd": 968281.244,
+      "n_bars": 8147,
+      "yaobi_score": 26.722846441947564
+    },
+    {
+      "symbol": "BARDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.107470511140248,
+      "avg_atr_pct": 0.12564702784296228,
+      "quote_vol_24h_usd": 6379032.2902999995,
+      "n_bars": 8147,
+      "yaobi_score": 26.629213483146067
+    },
+    {
+      "symbol": "LITUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.42362480824019,
+      "avg_atr_pct": 0.14914586421174433,
+      "quote_vol_24h_usd": 11168197.97541,
+      "n_bars": 8147,
+      "yaobi_score": 26.507490636704116
+    },
+    {
+      "symbol": "NMRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.561681523054919,
+      "avg_atr_pct": 0.11317721412276026,
+      "quote_vol_24h_usd": 1459180.6227,
+      "n_bars": 8147,
+      "yaobi_score": 26.47940074906367
+    },
+    {
+      "symbol": "WETUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.84671230035262,
+      "avg_atr_pct": 0.140447627623277,
+      "quote_vol_24h_usd": 4006711.07741,
+      "n_bars": 8147,
+      "yaobi_score": 26.441947565543067
+    },
+    {
+      "symbol": "KSMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.782608695652174,
+      "avg_atr_pct": 0.10320527908223989,
+      "quote_vol_24h_usd": 1646702.9175,
+      "n_bars": 8147,
+      "yaobi_score": 26.348314606741575
+    },
+    {
+      "symbol": "1000CATUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.142857142857138,
+      "avg_atr_pct": 0.12265282892107149,
+      "quote_vol_24h_usd": 1351120.18049,
+      "n_bars": 8153,
+      "yaobi_score": 26.245318352059925
+    },
+    {
+      "symbol": "ALPINEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.7146282973621085,
+      "avg_atr_pct": 0.11209093164112162,
+      "quote_vol_24h_usd": 585642.15552,
+      "n_bars": 8147,
+      "yaobi_score": 26.245318352059925
+    },
+    {
+      "symbol": "PNUTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.53159851301116,
+      "avg_atr_pct": 0.16375872832437385,
+      "quote_vol_24h_usd": 13275066.62482,
+      "n_bars": 8147,
+      "yaobi_score": 26.226591760299623
+    },
+    {
+      "symbol": "SANDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.52564753682073,
+      "avg_atr_pct": 0.1367719708813186,
+      "quote_vol_24h_usd": 11614320.32164,
+      "n_bars": 8147,
+      "yaobi_score": 26.142322097378276
+    },
+    {
+      "symbol": "TNSRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.960750431992103,
+      "avg_atr_pct": 0.1370369845613339,
+      "quote_vol_24h_usd": 4647673.810283,
+      "n_bars": 8147,
+      "yaobi_score": 26.123595505617978
+    },
+    {
+      "symbol": "SIGNUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.294922989161451,
+      "avg_atr_pct": 0.1266954508916033,
+      "quote_vol_24h_usd": 9076892.04803,
+      "n_bars": 8147,
+      "yaobi_score": 26.11423220973783
+    },
+    {
+      "symbol": "SNXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 12.42255266418836,
+      "avg_atr_pct": 0.10861218104541409,
+      "quote_vol_24h_usd": 4348930.67581,
+      "n_bars": 8147,
+      "yaobi_score": 26.11423220973783
+    },
+    {
+      "symbol": "TAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 11.423806545757763,
+      "avg_atr_pct": 0.11786717589548547,
+      "quote_vol_24h_usd": 5341034.72224,
+      "n_bars": 8147,
+      "yaobi_score": 25.94569288389513
+    },
+    {
+      "symbol": "MANAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.676130389064144,
+      "avg_atr_pct": 0.14673853724876612,
+      "quote_vol_24h_usd": 3899784.3485,
+      "n_bars": 8147,
+      "yaobi_score": 25.852059925093634
+    },
+    {
+      "symbol": "VICUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.2607795791652325,
+      "avg_atr_pct": 0.11387872793414301,
+      "quote_vol_24h_usd": 505544.40325,
+      "n_bars": 8147,
+      "yaobi_score": 25.795880149812735
+    },
+    {
+      "symbol": "JTOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.005783689994207,
+      "avg_atr_pct": 0.11649252023525018,
+      "quote_vol_24h_usd": 3212760.9509,
+      "n_bars": 8147,
+      "yaobi_score": 25.786516853932586
+    },
+    {
+      "symbol": "CYBERUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.697268165768435,
+      "avg_atr_pct": 0.10589383072058724,
+      "quote_vol_24h_usd": 1483841.40309,
+      "n_bars": 8147,
+      "yaobi_score": 25.47752808988764
+    },
+    {
+      "symbol": "OPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.11455847255369,
+      "avg_atr_pct": 0.16472263595060815,
+      "quote_vol_24h_usd": 18428277.57866,
+      "n_bars": 8147,
+      "yaobi_score": 25.1310861423221
+    },
+    {
+      "symbol": "COSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.04255319148937,
+      "avg_atr_pct": 0.11620217353931486,
+      "quote_vol_24h_usd": 644483.945356,
+      "n_bars": 8147,
+      "yaobi_score": 25.121722846441948
+    },
+    {
+      "symbol": "ZROUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.531736835328955,
+      "avg_atr_pct": 0.13401663746764425,
+      "quote_vol_24h_usd": 18064454.83506,
+      "n_bars": 8147,
+      "yaobi_score": 25.04681647940075
+    },
+    {
+      "symbol": "CTKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.943653955606141,
+      "avg_atr_pct": 0.11507885138279446,
+      "quote_vol_24h_usd": 1146005.5408,
+      "n_bars": 8147,
+      "yaobi_score": 24.803370786516854
+    },
+    {
+      "symbol": "LAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.710605152786092,
+      "avg_atr_pct": 0.12074714200308789,
+      "quote_vol_24h_usd": 1485721.30256,
+      "n_bars": 8147,
+      "yaobi_score": 24.60674157303371
+    },
+    {
+      "symbol": "CFXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.956973045370848,
+      "avg_atr_pct": 0.11836698631224397,
+      "quote_vol_24h_usd": 3112997.26446,
+      "n_bars": 8147,
+      "yaobi_score": 24.59737827715356
+    },
+    {
+      "symbol": "GMXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.998104127169315,
+      "avg_atr_pct": 0.11077223259880865,
+      "quote_vol_24h_usd": 2465369.25762,
+      "n_bars": 8147,
+      "yaobi_score": 24.51310861423221
+    },
+    {
+      "symbol": "JUPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 10.246575342465752,
+      "avg_atr_pct": 0.130962105400292,
+      "quote_vol_24h_usd": 16446487.088,
+      "n_bars": 8147,
+      "yaobi_score": 24.503745318352056
+    },
+    {
+      "symbol": "ZORAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.45659844742413,
+      "avg_atr_pct": 0.1164073853278316,
+      "quote_vol_24h_usd": 3619389.1187,
+      "n_bars": 8147,
+      "yaobi_score": 24.438202247191008
+    },
+    {
+      "symbol": "AKTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.793991416309006,
+      "avg_atr_pct": 0.12104252693846317,
+      "quote_vol_24h_usd": 934347.11273,
+      "n_bars": 8147,
+      "yaobi_score": 24.419475655430713
+    },
+    {
+      "symbol": "BANANAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.888748419721867,
+      "avg_atr_pct": 0.09608414012431442,
+      "quote_vol_24h_usd": 1037994.2457,
+      "n_bars": 8147,
+      "yaobi_score": 24.29775280898876
+    },
+    {
+      "symbol": "C98USDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.50259801606046,
+      "avg_atr_pct": 0.12101382088472445,
+      "quote_vol_24h_usd": 2950201.37141,
+      "n_bars": 8147,
+      "yaobi_score": 24.279026217228463
+    },
+    {
+      "symbol": "XVGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.5969195001453,
+      "avg_atr_pct": 0.1250758064183805,
+      "quote_vol_24h_usd": 1775783.165748,
+      "n_bars": 8147,
+      "yaobi_score": 24.213483146067414
+    },
+    {
+      "symbol": "COMPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.455719557195575,
+      "avg_atr_pct": 0.129856085011463,
+      "quote_vol_24h_usd": 8687851.26808,
+      "n_bars": 8147,
+      "yaobi_score": 24.09176029962547
+    },
+    {
+      "symbol": "LAYERUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.599056060780482,
+      "avg_atr_pct": 0.10133509308683543,
+      "quote_vol_24h_usd": 1601369.079114,
+      "n_bars": 8147,
+      "yaobi_score": 24.09176029962547
+    },
+    {
+      "symbol": "ZKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.919597989949745,
+      "avg_atr_pct": 0.1303211988250233,
+      "quote_vol_24h_usd": 6390245.59758,
+      "n_bars": 8147,
+      "yaobi_score": 24.073033707865168
+    },
+    {
+      "symbol": "COTIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.954102920723221,
+      "avg_atr_pct": 0.1043586450967955,
+      "quote_vol_24h_usd": 917542.10722,
+      "n_bars": 8147,
+      "yaobi_score": 24.054307116104873
+    },
+    {
+      "symbol": "CVCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.023917650620646,
+      "avg_atr_pct": 0.07928446560167937,
+      "quote_vol_24h_usd": 487936.8281,
+      "n_bars": 8147,
+      "yaobi_score": 23.41760299625468
+    },
+    {
+      "symbol": "HMSTRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.774111675126906,
+      "avg_atr_pct": 0.11239513327388914,
+      "quote_vol_24h_usd": 794039.9108281,
+      "n_bars": 8147,
+      "yaobi_score": 23.267790262172284
+    },
+    {
+      "symbol": "IDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.221206581352825,
+      "avg_atr_pct": 0.12169033841983329,
+      "quote_vol_24h_usd": 2564155.90039,
+      "n_bars": 8147,
+      "yaobi_score": 23.05243445692884
+    },
+    {
+      "symbol": "CLANKERUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.823693657758266,
+      "avg_atr_pct": 0.10941552223611332,
+      "quote_vol_24h_usd": 806655.3398,
+      "n_bars": 8147,
+      "yaobi_score": 23.052434456928836
+    },
+    {
+      "symbol": "VANRYUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.770648967551621,
+      "avg_atr_pct": 0.11518915729857114,
+      "quote_vol_24h_usd": 981983.4962159999,
+      "n_bars": 8147,
+      "yaobi_score": 22.968164794007492
+    },
+    {
+      "symbol": "PROVEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.775628626692459,
+      "avg_atr_pct": 0.08733420725348218,
+      "quote_vol_24h_usd": 1227263.8703,
+      "n_bars": 8147,
+      "yaobi_score": 22.743445692883896
+    },
+    {
+      "symbol": "SQDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.160879260911129,
+      "avg_atr_pct": 0.11460834771130513,
+      "quote_vol_24h_usd": 783328.28478,
+      "n_bars": 8147,
+      "yaobi_score": 22.715355805243448
+    },
+    {
+      "symbol": "ARBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.501933488012363,
+      "avg_atr_pct": 0.1618256398676117,
+      "quote_vol_24h_usd": 28465106.76667,
+      "n_bars": 8147,
+      "yaobi_score": 22.7059925093633
+    },
+    {
+      "symbol": "SUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.34153565732513,
+      "avg_atr_pct": 0.12078847108890131,
+      "quote_vol_24h_usd": 7404131.63281,
+      "n_bars": 8147,
+      "yaobi_score": 22.565543071161052
+    },
+    {
+      "symbol": "IOTAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.210526315789473,
+      "avg_atr_pct": 0.14302324631570898,
+      "quote_vol_24h_usd": 1918914.42202,
+      "n_bars": 8147,
+      "yaobi_score": 22.49063670411985
+    },
+    {
+      "symbol": "ALTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.672541860757912,
+      "avg_atr_pct": 0.10860002373781114,
+      "quote_vol_24h_usd": 1506282.787615,
+      "n_bars": 8147,
+      "yaobi_score": 22.378277153558052
+    },
+    {
+      "symbol": "IPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.486033519553074,
+      "avg_atr_pct": 0.1422448140166057,
+      "quote_vol_24h_usd": 10277129.75532,
+      "n_bars": 8147,
+      "yaobi_score": 22.228464419475653
+    },
+    {
+      "symbol": "1000FLOKIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.874458874458867,
+      "avg_atr_pct": 0.12155771067930603,
+      "quote_vol_24h_usd": 6537107.77869,
+      "n_bars": 8153,
+      "yaobi_score": 22.20973782771535
+    },
+    {
+      "symbol": "AUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.457743261763356,
+      "avg_atr_pct": 0.12212081661476974,
+      "quote_vol_24h_usd": 3528067.79238,
+      "n_bars": 8147,
+      "yaobi_score": 21.966292134831463
+    },
+    {
+      "symbol": "COWUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.365614798694241,
+      "avg_atr_pct": 0.0847097393659225,
+      "quote_vol_24h_usd": 677137.5381,
+      "n_bars": 8147,
+      "yaobi_score": 21.94756554307116
+    },
+    {
+      "symbol": "BANDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.428571428571426,
+      "avg_atr_pct": 0.09527686849302075,
+      "quote_vol_24h_usd": 965864.54563,
+      "n_bars": 8147,
+      "yaobi_score": 21.928838951310862
+    },
+    {
+      "symbol": "1000XECUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.938115330520392,
+      "avg_atr_pct": 0.11522493851467103,
+      "quote_vol_24h_usd": 523908.37829,
+      "n_bars": 8153,
+      "yaobi_score": 21.872659176029963
+    },
+    {
+      "symbol": "CVXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.169377453729675,
+      "avg_atr_pct": 0.08617596943485614,
+      "quote_vol_24h_usd": 622854.2118,
+      "n_bars": 8147,
+      "yaobi_score": 21.844569288389515
+    },
+    {
+      "symbol": "EIGENUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.874449339207036,
+      "avg_atr_pct": 0.12492291122219702,
+      "quote_vol_24h_usd": 4829991.76647,
+      "n_bars": 8147,
+      "yaobi_score": 21.788389513108612
+    },
+    {
+      "symbol": "BEAMXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.343656343656341,
+      "avg_atr_pct": 0.08551924064326216,
+      "quote_vol_24h_usd": 734540.945415,
+      "n_bars": 8147,
+      "yaobi_score": 21.647940074906366
+    },
+    {
+      "symbol": "IOSTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.927985414767557,
+      "avg_atr_pct": 0.10109274567811867,
+      "quote_vol_24h_usd": 1520865.684759,
+      "n_bars": 8147,
+      "yaobi_score": 21.451310861423224
+    },
+    {
+      "symbol": "TURBOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.671441892006449,
+      "avg_atr_pct": 0.11885828361416699,
+      "quote_vol_24h_usd": 3875407.988637,
+      "n_bars": 8147,
+      "yaobi_score": 21.198501872659175
+    },
+    {
+      "symbol": "ASTRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.260514299447256,
+      "avg_atr_pct": 0.07588548409740498,
+      "quote_vol_24h_usd": 646614.508135,
+      "n_bars": 8147,
+      "yaobi_score": 20.926966292134832
+    },
+    {
+      "symbol": "ARPAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.81064483111566,
+      "avg_atr_pct": 0.11566547244627466,
+      "quote_vol_24h_usd": 1201601.93005,
+      "n_bars": 8147,
+      "yaobi_score": 20.92696629213483
+    },
+    {
+      "symbol": "ARUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.022900763358784,
+      "avg_atr_pct": 0.12467109527691164,
+      "quote_vol_24h_usd": 4289096.8146,
+      "n_bars": 8147,
+      "yaobi_score": 20.814606741573034
+    },
+    {
+      "symbol": "POWRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.802047781569955,
+      "avg_atr_pct": 0.0846391463963998,
+      "quote_vol_24h_usd": 685688.09233,
+      "n_bars": 8147,
+      "yaobi_score": 20.674157303370784
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.103811936605189,
+      "avg_atr_pct": 0.09772353274082125,
+      "quote_vol_24h_usd": 1215347.917542,
+      "n_bars": 8147,
+      "yaobi_score": 20.47752808988764
+    },
+    {
+      "symbol": "FORMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.3903950426026395,
+      "avg_atr_pct": 0.10186239844746373,
+      "quote_vol_24h_usd": 1588146.68494,
+      "n_bars": 8147,
+      "yaobi_score": 20.45880149812734
+    },
+    {
+      "symbol": "ROSEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.795768169273217,
+      "avg_atr_pct": 0.12640192278104845,
+      "quote_vol_24h_usd": 2956360.64464,
+      "n_bars": 8147,
+      "yaobi_score": 20.383895131086142
+    },
+    {
+      "symbol": "MANTAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.307132910413102,
+      "avg_atr_pct": 0.09543077858244473,
+      "quote_vol_24h_usd": 815530.855367,
+      "n_bars": 8147,
+      "yaobi_score": 20.327715355805243
+    },
+    {
+      "symbol": "SOPHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.280976558280232,
+      "avg_atr_pct": 0.10639703681216163,
+      "quote_vol_24h_usd": 2616796.853972,
+      "n_bars": 8147,
+      "yaobi_score": 20.327715355805243
+    },
+    {
+      "symbol": "SUSHIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.294011706438538,
+      "avg_atr_pct": 0.10025712597507605,
+      "quote_vol_24h_usd": 2161914.5757,
+      "n_bars": 8147,
+      "yaobi_score": 20.1123595505618
+    },
+    {
+      "symbol": "SYRUPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.630142719625006,
+      "avg_atr_pct": 0.10240306556650403,
+      "quote_vol_24h_usd": 3830414.13726,
+      "n_bars": 8147,
+      "yaobi_score": 20.0561797752809
+    },
+    {
+      "symbol": "WIFUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.651715039577843,
+      "avg_atr_pct": 0.1363813247887686,
+      "quote_vol_24h_usd": 23000698.15011,
+      "n_bars": 8147,
+      "yaobi_score": 20.04681647940075
+    },
+    {
+      "symbol": "PUNDIXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.059920106524631,
+      "avg_atr_pct": 0.08089801969006112,
+      "quote_vol_24h_usd": 357529.6568,
+      "n_bars": 8147,
+      "yaobi_score": 20.028089887640448
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.939919893190915,
+      "avg_atr_pct": 0.1777799455080622,
+      "quote_vol_24h_usd": 25221924.654600002,
+      "n_bars": 8147,
+      "yaobi_score": 20.0187265917603
+    },
+    {
+      "symbol": "DASHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.533112582781468,
+      "avg_atr_pct": 0.12972471669405058,
+      "quote_vol_24h_usd": 11838512.87267,
+      "n_bars": 8147,
+      "yaobi_score": 19.8876404494382
+    },
+    {
+      "symbol": "STORJUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.901960784313716,
+      "avg_atr_pct": 0.09569953296719555,
+      "quote_vol_24h_usd": 780528.2869,
+      "n_bars": 8147,
+      "yaobi_score": 19.747191011235955
+    },
+    {
+      "symbol": "LPTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.473804100227788,
+      "avg_atr_pct": 0.10082043974054819,
+      "quote_vol_24h_usd": 3631999.5177,
+      "n_bars": 8147,
+      "yaobi_score": 19.728464419475657
+    },
+    {
+      "symbol": "BERAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.811515620965656,
+      "avg_atr_pct": 0.10029373823935626,
+      "quote_vol_24h_usd": 8545237.74126,
+      "n_bars": 8147,
+      "yaobi_score": 19.662921348314605
+    },
+    {
+      "symbol": "EGLDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.8763258858045635,
+      "avg_atr_pct": 0.09336309375435126,
+      "quote_vol_24h_usd": 2933646.0077,
+      "n_bars": 8147,
+      "yaobi_score": 19.382022471910112
+    },
+    {
+      "symbol": "MOVEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.827476038338653,
+      "avg_atr_pct": 0.1022378910317074,
+      "quote_vol_24h_usd": 3312328.94726,
+      "n_bars": 8147,
+      "yaobi_score": 19.316479400749067
+    },
+    {
+      "symbol": "FILUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.362672322375391,
+      "avg_atr_pct": 0.16004344177642077,
+      "quote_vol_24h_usd": 53266406.2492,
+      "n_bars": 8147,
+      "yaobi_score": 19.166666666666664
+    },
+    {
+      "symbol": "THETAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.235458352722207,
+      "avg_atr_pct": 0.11995566167276127,
+      "quote_vol_24h_usd": 3506867.10308,
+      "n_bars": 8147,
+      "yaobi_score": 19.129213483146067
+    },
+    {
+      "symbol": "ACXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.827904827904831,
+      "avg_atr_pct": 0.07598909174580172,
+      "quote_vol_24h_usd": 486199.096578,
+      "n_bars": 8147,
+      "yaobi_score": 18.99812734082397
+    },
+    {
+      "symbol": "ENAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.88868546320029,
+      "avg_atr_pct": 0.1251566809184492,
+      "quote_vol_24h_usd": 56783402.34025,
+      "n_bars": 8147,
+      "yaobi_score": 18.848314606741575
+    },
+    {
+      "symbol": "BNTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.169230769230781,
+      "avg_atr_pct": 0.06352641175272626,
+      "quote_vol_24h_usd": 350685.9317,
+      "n_bars": 8147,
+      "yaobi_score": 18.83895131086142
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.902217168845936,
+      "avg_atr_pct": 0.1326343925944874,
+      "quote_vol_24h_usd": 42320245.9311,
+      "n_bars": 8147,
+      "yaobi_score": 18.810861423220977
+    },
+    {
+      "symbol": "ONGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.913550782285873,
+      "avg_atr_pct": 0.10187684022283836,
+      "quote_vol_24h_usd": 1818286.65558,
+      "n_bars": 8147,
+      "yaobi_score": 18.773408239700373
+    },
+    {
+      "symbol": "FFUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.50050381459622,
+      "avg_atr_pct": 0.09081824671760035,
+      "quote_vol_24h_usd": 9286071.15588,
+      "n_bars": 8147,
+      "yaobi_score": 18.520599250936332
+    },
+    {
+      "symbol": "XMRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 9.28374138532084,
+      "avg_atr_pct": 0.11658205997171206,
+      "quote_vol_24h_usd": 39764162.59008,
+      "n_bars": 8147,
+      "yaobi_score": 18.45505617977528
+    },
+    {
+      "symbol": "1MBABYDOGEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.619047619047624,
+      "avg_atr_pct": 0.09036010915397648,
+      "quote_vol_24h_usd": 2151755.1967924,
+      "n_bars": 8153,
+      "yaobi_score": 18.314606741573037
+    },
+    {
+      "symbol": "HIVEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.31920359666024,
+      "avg_atr_pct": 0.07742665963004355,
+      "quote_vol_24h_usd": 452895.3112,
+      "n_bars": 8147,
+      "yaobi_score": 18.258426966292134
+    },
+    {
+      "symbol": "MANTRAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.9051306873185005,
+      "avg_atr_pct": 0.1325522487177179,
+      "quote_vol_24h_usd": 8519648.42338,
+      "n_bars": 8147,
+      "yaobi_score": 18.239700374531836
+    },
+    {
+      "symbol": "ASRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.849175176747835,
+      "avg_atr_pct": 0.11061910238164571,
+      "quote_vol_24h_usd": 1349776.8767,
+      "n_bars": 8147,
+      "yaobi_score": 18.220973782771537
+    },
+    {
+      "symbol": "NIGHTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.620922384701924,
+      "avg_atr_pct": 0.10847529655171326,
+      "quote_vol_24h_usd": 5788260.88269,
+      "n_bars": 8147,
+      "yaobi_score": 18.089887640449437
+    },
+    {
+      "symbol": "GLMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.961890243902429,
+      "avg_atr_pct": 0.07940179198229091,
+      "quote_vol_24h_usd": 911569.94166,
+      "n_bars": 8147,
+      "yaobi_score": 17.97752808988764
+    },
+    {
+      "symbol": "LSKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.344453064391008,
+      "avg_atr_pct": 0.0873176692882789,
+      "quote_vol_24h_usd": 791682.2699,
+      "n_bars": 8147,
+      "yaobi_score": 17.958801498127343
+    },
+    {
+      "symbol": "MEMEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.249999999999992,
+      "avg_atr_pct": 0.10373721408981937,
+      "quote_vol_24h_usd": 2768660.2088234,
+      "n_bars": 8147,
+      "yaobi_score": 17.780898876404493
+    },
+    {
+      "symbol": "TUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.660474055092882,
+      "avg_atr_pct": 0.06778365526298007,
+      "quote_vol_24h_usd": 581162.468382,
+      "n_bars": 8147,
+      "yaobi_score": 17.752808988764045
+    },
+    {
+      "symbol": "WALUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.158552806597493,
+      "avg_atr_pct": 0.08878867168704126,
+      "quote_vol_24h_usd": 2001592.57596,
+      "n_bars": 8147,
+      "yaobi_score": 17.640449438202246
+    },
+    {
+      "symbol": "BATUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.476190476190473,
+      "avg_atr_pct": 0.1035994644916943,
+      "quote_vol_24h_usd": 1482460.96906,
+      "n_bars": 8147,
+      "yaobi_score": 17.5936329588015
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.964880249167647,
+      "avg_atr_pct": 0.10639856914304353,
+      "quote_vol_24h_usd": 4304970.76211,
+      "n_bars": 8147,
+      "yaobi_score": 17.5561797752809
+    },
+    {
+      "symbol": "AERGOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.060155697098363,
+      "avg_atr_pct": 0.08164448442158712,
+      "quote_vol_24h_usd": 1175768.71501,
+      "n_bars": 8147,
+      "yaobi_score": 17.453183520599254
+    },
+    {
+      "symbol": "WAXPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.532965437118795,
+      "avg_atr_pct": 0.06070169200457285,
+      "quote_vol_24h_usd": 934225.985128,
+      "n_bars": 8147,
+      "yaobi_score": 17.331460674157302
+    },
+    {
+      "symbol": "BABYUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.7958522359040785,
+      "avg_atr_pct": 0.10767096642724425,
+      "quote_vol_24h_usd": 1916056.16749,
+      "n_bars": 8147,
+      "yaobi_score": 17.322097378277153
+    },
+    {
+      "symbol": "POLYXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.395330586619585,
+      "avg_atr_pct": 0.07485261696284143,
+      "quote_vol_24h_usd": 1228626.15391,
+      "n_bars": 8147,
+      "yaobi_score": 17.237827715355806
+    },
+    {
+      "symbol": "QTUMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.520396912899673,
+      "avg_atr_pct": 0.0893091484198984,
+      "quote_vol_24h_usd": 1196875.473,
+      "n_bars": 8147,
+      "yaobi_score": 17.209737827715355
+    },
+    {
+      "symbol": "NXPCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.403794037940383,
+      "avg_atr_pct": 0.06940409361048902,
+      "quote_vol_24h_usd": 669136.4354,
+      "n_bars": 8147,
+      "yaobi_score": 17.10674157303371
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.528874525783348,
+      "avg_atr_pct": 0.10835436956496014,
+      "quote_vol_24h_usd": 19022446.07212,
+      "n_bars": 8147,
+      "yaobi_score": 16.99438202247191
+    },
+    {
+      "symbol": "TRBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.1166353130878885,
+      "avg_atr_pct": 0.10370822435620515,
+      "quote_vol_24h_usd": 3135790.9396,
+      "n_bars": 8147,
+      "yaobi_score": 16.816479400749067
+    },
+    {
+      "symbol": "SKYUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.696533836359355,
+      "avg_atr_pct": 0.11092760239573254,
+      "quote_vol_24h_usd": 6477614.88183,
+      "n_bars": 8147,
+      "yaobi_score": 16.741573033707866
+    },
+    {
+      "symbol": "PENDLEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.592337623466015,
+      "avg_atr_pct": 0.11534993976877206,
+      "quote_vol_24h_usd": 8452966.0346,
+      "n_bars": 8147,
+      "yaobi_score": 16.42322097378277
+    },
+    {
+      "symbol": "GUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.906357161698759,
+      "avg_atr_pct": 0.058802065229930874,
+      "quote_vol_24h_usd": 842940.75829,
+      "n_bars": 8147,
+      "yaobi_score": 16.376404494382022
+    },
+    {
+      "symbol": "SEIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 8.250988142292478,
+      "avg_atr_pct": 0.10564256869821174,
+      "quote_vol_24h_usd": 18387263.54333,
+      "n_bars": 8147,
+      "yaobi_score": 16.357677902621724
+    },
+    {
+      "symbol": "WLDUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.357473035439139,
+      "avg_atr_pct": 0.12206135458784026,
+      "quote_vol_24h_usd": 37381081.3446,
+      "n_bars": 8147,
+      "yaobi_score": 16.254681647940075
+    },
+    {
+      "symbol": "XVSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.904473085670971,
+      "avg_atr_pct": 0.07590763478226653,
+      "quote_vol_24h_usd": 843451.513,
+      "n_bars": 8147,
+      "yaobi_score": 16.11423220973783
+    },
+    {
+      "symbol": "VTHOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.0375426621160404,
+      "avg_atr_pct": 0.06391887034819659,
+      "quote_vol_24h_usd": 559013.8808552,
+      "n_bars": 8147,
+      "yaobi_score": 16.01123595505618
+    },
+    {
+      "symbol": "ALLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.1049437801177975,
+      "avg_atr_pct": 0.05968167048054886,
+      "quote_vol_24h_usd": 630256.1425,
+      "n_bars": 8147,
+      "yaobi_score": 15.955056179775282
+    },
+    {
+      "symbol": "ARKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.228172293364385,
+      "avg_atr_pct": 0.08736976324459246,
+      "quote_vol_24h_usd": 2937316.5878,
+      "n_bars": 8147,
+      "yaobi_score": 15.936329588014981
+    },
+    {
+      "symbol": "STEEMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.4753086419753,
+      "avg_atr_pct": 0.04312642511101544,
+      "quote_vol_24h_usd": 684517.16856,
+      "n_bars": 8147,
+      "yaobi_score": 15.926966292134832
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.371262458471755,
+      "avg_atr_pct": 0.0942538974713415,
+      "quote_vol_24h_usd": 5724726.7571,
+      "n_bars": 8147,
+      "yaobi_score": 15.917602996254683
+    },
+    {
+      "symbol": "TIAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.376404494382022,
+      "avg_atr_pct": 0.12268290393445579,
+      "quote_vol_24h_usd": 21149460.6806,
+      "n_bars": 8147,
+      "yaobi_score": 15.805243445692883
+    },
+    {
+      "symbol": "ZENUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.450556647020305,
+      "avg_atr_pct": 0.10757089982080167,
+      "quote_vol_24h_usd": 6015973.1744,
+      "n_bars": 8147,
+      "yaobi_score": 15.758426966292134
+    },
+    {
+      "symbol": "OGNUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.106014712245783,
+      "avg_atr_pct": 0.07950720816842363,
+      "quote_vol_24h_usd": 1697134.73136,
+      "n_bars": 8147,
+      "yaobi_score": 15.627340823970037
+    },
+    {
+      "symbol": "QNTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.669400027333619,
+      "avg_atr_pct": 0.0661228529194864,
+      "quote_vol_24h_usd": 2535910.735,
+      "n_bars": 8147,
+      "yaobi_score": 15.571161048689138
+    },
+    {
+      "symbol": "GASUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.347826086956519,
+      "avg_atr_pct": 0.07016841630243956,
+      "quote_vol_24h_usd": 1118245.5377,
+      "n_bars": 8147,
+      "yaobi_score": 15.533707865168541
+    },
+    {
+      "symbol": "ENSUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.680651928352424,
+      "avg_atr_pct": 0.09051294342064164,
+      "quote_vol_24h_usd": 4127045.1241,
+      "n_bars": 8147,
+      "yaobi_score": 15.486891385767791
+    },
+    {
+      "symbol": "MTLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.540701522170743,
+      "avg_atr_pct": 0.06105197254537245,
+      "quote_vol_24h_usd": 724466.5676,
+      "n_bars": 8147,
+      "yaobi_score": 15.337078651685394
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.813186813186819,
+      "avg_atr_pct": 0.11278022523933454,
+      "quote_vol_24h_usd": 14834554.1982,
+      "n_bars": 8147,
+      "yaobi_score": 15.234082397003744
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 7.2086233999550915,
+      "avg_atr_pct": 0.10058858425735732,
+      "quote_vol_24h_usd": 8465765.87023,
+      "n_bars": 8147,
+      "yaobi_score": 15.177902621722847
+    },
+    {
+      "symbol": "BSVUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.443053817271594,
+      "avg_atr_pct": 0.06537354801363754,
+      "quote_vol_24h_usd": 1232995.577,
+      "n_bars": 8147,
+      "yaobi_score": 14.822097378277153
+    },
+    {
+      "symbol": "SUNUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 2.5029541304114176,
+      "avg_atr_pct": 0.051676375416682685,
+      "quote_vol_24h_usd": 708601.283226,
+      "n_bars": 8147,
+      "yaobi_score": 14.625468164794006
+    },
+    {
+      "symbol": "STXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.225680933852138,
+      "avg_atr_pct": 0.0796435127737771,
+      "quote_vol_24h_usd": 3298349.7485,
+      "n_bars": 8147,
+      "yaobi_score": 14.59737827715356
+    },
+    {
+      "symbol": "DOTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.192761605035392,
+      "avg_atr_pct": 0.1378463736438525,
+      "quote_vol_24h_usd": 44995315.8256,
+      "n_bars": 8147,
+      "yaobi_score": 14.597378277153556
+    },
+    {
+      "symbol": "KNCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.274702172389625,
+      "avg_atr_pct": 0.07612257540773155,
+      "quote_vol_24h_usd": 1592779.4618,
+      "n_bars": 8147,
+      "yaobi_score": 14.297752808988765
+    },
+    {
+      "symbol": "AUCTIONUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.108196054504779,
+      "avg_atr_pct": 0.05707601273574968,
+      "quote_vol_24h_usd": 1133841.20804,
+      "n_bars": 8147,
+      "yaobi_score": 14.119850187265918
+    },
+    {
+      "symbol": "ANKRUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.244548286604351,
+      "avg_atr_pct": 0.06387053416447785,
+      "quote_vol_24h_usd": 1325486.130417,
+      "n_bars": 8147,
+      "yaobi_score": 14.063670411985019
+    },
+    {
+      "symbol": "KASUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.113804315696135,
+      "avg_atr_pct": 0.07880274795950021,
+      "quote_vol_24h_usd": 2400253.98167,
+      "n_bars": 8147,
+      "yaobi_score": 13.857677902621724
+    },
+    {
+      "symbol": "KAIAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.482544928733729,
+      "avg_atr_pct": 0.06504076509917396,
+      "quote_vol_24h_usd": 1640277.17911,
+      "n_bars": 8147,
+      "yaobi_score": 13.54868913857678
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.900041476565738,
+      "avg_atr_pct": 0.12623996231041779,
+      "quote_vol_24h_usd": 87928006.415,
+      "n_bars": 8153,
+      "yaobi_score": 13.323970037453183
+    },
+    {
+      "symbol": "1INCHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.347826086956517,
+      "avg_atr_pct": 0.08387728681691194,
+      "quote_vol_24h_usd": 2235955.0381,
+      "n_bars": 8153,
+      "yaobi_score": 13.305243445692884
+    },
+    {
+      "symbol": "FETUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.857345299952761,
+      "avg_atr_pct": 0.12064729589767514,
+      "quote_vol_24h_usd": 29141566.1186,
+      "n_bars": 8147,
+      "yaobi_score": 13.211610486891386
+    },
+    {
+      "symbol": "GRTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.874151018777463,
+      "avg_atr_pct": 0.08239757318590939,
+      "quote_vol_24h_usd": 2912022.92453,
+      "n_bars": 8147,
+      "yaobi_score": 13.071161048689138
+    },
+    {
+      "symbol": "XTZUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.9679849340866244,
+      "avg_atr_pct": 0.07927959101423694,
+      "quote_vol_24h_usd": 8662477.15266,
+      "n_bars": 8147,
+      "yaobi_score": 12.883895131086142
+    },
+    {
+      "symbol": "VETUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.8724597056762455,
+      "avg_atr_pct": 0.07336493571069697,
+      "quote_vol_24h_usd": 3707101.738311,
+      "n_bars": 8147,
+      "yaobi_score": 12.612359550561798
+    },
+    {
+      "symbol": "1000BONKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.531066264102971,
+      "avg_atr_pct": 0.10493260835993844,
+      "quote_vol_24h_usd": 24192880.298053,
+      "n_bars": 8153,
+      "yaobi_score": 12.5187265917603
+    },
+    {
+      "symbol": "JASMYUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.979035639412992,
+      "avg_atr_pct": 0.08985285034131088,
+      "quote_vol_24h_usd": 4423070.598532,
+      "n_bars": 8147,
+      "yaobi_score": 12.04119850187266
+    },
+    {
+      "symbol": "NEARUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.3084648493543805,
+      "avg_atr_pct": 0.12110217944235593,
+      "quote_vol_24h_usd": 51427389.495000005,
+      "n_bars": 8147,
+      "yaobi_score": 11.891385767790261
+    },
+    {
+      "symbol": "YFIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.369565217391304,
+      "avg_atr_pct": 0.06900029648924519,
+      "quote_vol_24h_usd": 2020289.208,
+      "n_bars": 8147,
+      "yaobi_score": 11.779026217228463
+    },
+    {
+      "symbol": "NEOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.042480301473103,
+      "avg_atr_pct": 0.06561473696254623,
+      "quote_vol_24h_usd": 2141167.09169,
+      "n_bars": 8147,
+      "yaobi_score": 11.676029962546817
+    },
+    {
+      "symbol": "1000PEPEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.700051361068324,
+      "avg_atr_pct": 0.1091691696658879,
+      "quote_vol_24h_usd": 252793090.1514993,
+      "n_bars": 8153,
+      "yaobi_score": 11.676029962546815
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 6.144623454477321,
+      "avg_atr_pct": 0.10312607181316989,
+      "quote_vol_24h_usd": 21257478.08992,
+      "n_bars": 8147,
+      "yaobi_score": 11.610486891385767
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.709576138147571,
+      "avg_atr_pct": 0.10390482368734302,
+      "quote_vol_24h_usd": 13915289.100920001,
+      "n_bars": 8147,
+      "yaobi_score": 10.149812734082396
+    },
+    {
+      "symbol": "APTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.699165479340518,
+      "avg_atr_pct": 0.10310807430414451,
+      "quote_vol_24h_usd": 30052938.63701,
+      "n_bars": 8147,
+      "yaobi_score": 9.9250936329588
+    },
+    {
+      "symbol": "UNIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.729960377933549,
+      "avg_atr_pct": 0.09249267078117311,
+      "quote_vol_24h_usd": 28490707.464,
+      "n_bars": 8147,
+      "yaobi_score": 9.194756554307116
+    },
+    {
+      "symbol": "ICPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.830126893164156,
+      "avg_atr_pct": 0.08719610508543087,
+      "quote_vol_24h_usd": 11020900.719,
+      "n_bars": 8147,
+      "yaobi_score": 9.05430711610487
+    },
+    {
+      "symbol": "POLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.389735881468768,
+      "avg_atr_pct": 0.07132357418738539,
+      "quote_vol_24h_usd": 10230347.73697,
+      "n_bars": 8147,
+      "yaobi_score": 8.913857677902623
+    },
+    {
+      "symbol": "USDCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 0.015412638363456783,
+      "avg_atr_pct": 0.00010307593506144308,
+      "quote_vol_24h_usd": 2679855.020096,
+      "n_bars": 8147,
+      "yaobi_score": 8.53932584269663
+    },
+    {
+      "symbol": "TAOUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.266587919025705,
+      "avg_atr_pct": 0.10494013522510721,
+      "quote_vol_24h_usd": 101211049.72559,
+      "n_bars": 8147,
+      "yaobi_score": 8.511235955056181
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.075891396794244,
+      "avg_atr_pct": 0.050577313139650464,
+      "quote_vol_24h_usd": 4328138.4611,
+      "n_bars": 8147,
+      "yaobi_score": 7.602996254681648
+    },
+    {
+      "symbol": "CCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.6227111052562093,
+      "avg_atr_pct": 0.06159129951074273,
+      "quote_vol_24h_usd": 4644337.75631,
+      "n_bars": 8147,
+      "yaobi_score": 7.5655430711610485
+    },
+    {
+      "symbol": "ADAUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.279872965462487,
+      "avg_atr_pct": 0.09630682934702288,
+      "quote_vol_24h_usd": 127882238.5029,
+      "n_bars": 8147,
+      "yaobi_score": 7.443820224719101
+    },
+    {
+      "symbol": "BTCDOMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 2.2790913305516853,
+      "avg_atr_pct": 0.01946441761836791,
+      "quote_vol_24h_usd": 3386919.1015,
+      "n_bars": 8147,
+      "yaobi_score": 7.397003745318352
+    },
+    {
+      "symbol": "XLMUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.476483336261933,
+      "avg_atr_pct": 0.07482117222332738,
+      "quote_vol_24h_usd": 26984444.6977,
+      "n_bars": 8147,
+      "yaobi_score": 7.312734082397005
+    },
+    {
+      "symbol": "TONUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.588809613218187,
+      "avg_atr_pct": 0.0840356253806003,
+      "quote_vol_24h_usd": 20651530.2368,
+      "n_bars": 8147,
+      "yaobi_score": 7.172284644194757
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.613335575144725,
+      "avg_atr_pct": 0.08720231211123296,
+      "quote_vol_24h_usd": 343661783.89619,
+      "n_bars": 8147,
+      "yaobi_score": 6.7415730337078665
+    },
+    {
+      "symbol": "SUIUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.417989417989421,
+      "avg_atr_pct": 0.07971337041694478,
+      "quote_vol_24h_usd": 97858040.37248,
+      "n_bars": 8147,
+      "yaobi_score": 6.432584269662921
+    },
+    {
+      "symbol": "ETCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.681450193593816,
+      "avg_atr_pct": 0.06515403465091983,
+      "quote_vol_24h_usd": 17149619.78889,
+      "n_bars": 8147,
+      "yaobi_score": 6.235955056179774
+    },
+    {
+      "symbol": "HBARUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.650910667823072,
+      "avg_atr_pct": 0.06917095283765672,
+      "quote_vol_24h_usd": 20258672.69146,
+      "n_bars": 8147,
+      "yaobi_score": 6.058052434456929
+    },
+    {
+      "symbol": "1000SHIBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.688255195746731,
+      "avg_atr_pct": 0.07249507946391934,
+      "quote_vol_24h_usd": 26691766.301143,
+      "n_bars": 8153,
+      "yaobi_score": 5.889513108614232
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.624718764061794,
+      "avg_atr_pct": 0.059480141232193556,
+      "quote_vol_24h_usd": 42331572.4425,
+      "n_bars": 8147,
+      "yaobi_score": 5.486891385767791
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.121151200931118,
+      "avg_atr_pct": 0.07094715789511831,
+      "quote_vol_24h_usd": 93052934.177,
+      "n_bars": 8147,
+      "yaobi_score": 5.056179775280898
+    },
+    {
+      "symbol": "ETHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.9160079718956755,
+      "avg_atr_pct": 0.060401086228338105,
+      "quote_vol_24h_usd": 6435382503.12021,
+      "n_bars": 8147,
+      "yaobi_score": 4.943820224719101
+    },
+    {
+      "symbol": "SOLUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 5.202578268876607,
+      "avg_atr_pct": 0.0670118222487103,
+      "quote_vol_24h_usd": 1163858964.9351,
+      "n_bars": 8147,
+      "yaobi_score": 4.363295880149813
+    },
+    {
+      "symbol": "LINKUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.662447257383949,
+      "avg_atr_pct": 0.06311785246413955,
+      "quote_vol_24h_usd": 69075134.72242,
+      "n_bars": 8147,
+      "yaobi_score": 3.6516853932584272
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.013715207745056,
+      "avg_atr_pct": 0.07619414951373696,
+      "quote_vol_24h_usd": 574857830.87649,
+      "n_bars": 8147,
+      "yaobi_score": 3.0617977528089892
+    },
+    {
+      "symbol": "LTCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.324444444444453,
+      "avg_atr_pct": 0.05155969427826891,
+      "quote_vol_24h_usd": 37652982.156,
+      "n_bars": 8147,
+      "yaobi_score": 2.387640449438203
+    },
+    {
+      "symbol": "TRXUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.1070265664465464,
+      "avg_atr_pct": 0.022142874250894135,
+      "quote_vol_24h_usd": 35604078.415529996,
+      "n_bars": 8147,
+      "yaobi_score": 2.153558052434458
+    },
+    {
+      "symbol": "XRPUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 4.439938470144028,
+      "avg_atr_pct": 0.053049028267570714,
+      "quote_vol_24h_usd": 400993972.49841,
+      "n_bars": 8147,
+      "yaobi_score": 2.1348314606741576
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 2.973579102501127,
+      "avg_atr_pct": 0.01984286397503183,
+      "quote_vol_24h_usd": 32800989.72164,
+      "n_bars": 8147,
+      "yaobi_score": 2.078651685393258
+    },
+    {
+      "symbol": "BCHUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 2.595117659995604,
+      "avg_atr_pct": 0.0419658703460886,
+      "quote_vol_24h_usd": 37419013.77363,
+      "n_bars": 8147,
+      "yaobi_score": 1.9943820224719107
+    },
+    {
+      "symbol": "BNBUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.3984092552422283,
+      "avg_atr_pct": 0.03727616551454348,
+      "quote_vol_24h_usd": 167982000.3408,
+      "n_bars": 8147,
+      "yaobi_score": 1.179775280898876
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 2.9879350238970592,
+      "avg_atr_pct": 0.022247921787469604,
+      "quote_vol_24h_usd": 118625513.55245,
+      "n_bars": 8147,
+      "yaobi_score": 1.0393258426966292
+    },
+    {
+      "symbol": "BTCUSDT",
+      "big_moves_5min_8pct": 0,
+      "max_daily_range_pct": 3.8860564985549724,
+      "avg_atr_pct": 0.0490713874837634,
+      "quote_vol_24h_usd": 9047497882.5859,
+      "n_bars": 8147,
+      "yaobi_score": 1.0299625468164795
+    }
+  ]
+}

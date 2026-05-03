@@ -1,0 +1,19 @@
+{
+  "summary": "Single-proposal deep review of X103_fixed_2x_long_favored — a bounded 2x asymmetric fixed exit (TP=1.5%, SL=3.0%); proposal is logically coherent and worth testing, with a few concrete monitoring concerns around left-tail erosion and cost sensitivity.",
+  "critiques": [
+    {
+      "archetype_ref": "X103_fixed_2x_long_favored",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Asymmetric TP<SL geometry (1.5%/3.0%) is the exact shape that produced the R2 E126 trap — high win-rate but compounded -13.5% on paper. At 2x ratio with these absolute sizes, a single SL hit erases two TP wins, so break-even win rate is ~66.7%; needs to be evaluated under mean / kelly_capped / p25_capped_tail, NOT legacy p25 alone.",
+        "Cost sensitivity is sharp at TP=1.5%: at 8–16 bps round-trip, net TP becomes ~1.34–1.42% while SL widens to ~3.08–3.16% — effective payoff ratio degrades from 0.50 to ~0.42–0.45, eroding edge faster than the symmetric or wider-TP siblings.",
+        "SL=3.0% is tight relative to BWE intrabar volatility on Reserved6/extreme-move signals (180s 8–15% moves) — risk of premature stop-out on entries from that channel where the move's natural noise band exceeds 3%. Per by_exit_family stats, fixed family already dominates (mean +0.175, median +0.217), so the marginal question is whether 1.5/3.0 is the right point on that surface, not whether fixed works.",
+        "Slug encodes 'long_favored' but novel_dim only specifies tp/sl with no side/channel binding — relies on downstream pairing. If paired with short-side entries (e.g. OI_Price short archetypes that dominate that channel), the geometric assumption (favoring upside drift) inverts; verify the Synthesizer pins this to long-side entries only, otherwise it becomes a duplicate of a generic 1.5/3.0 fixed exit."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) track win rate vs. the 66.7% break-even threshold and report mean / kelly_capped / p25_capped_tail alongside best score — flag if best score is high but mean ≤ 0; (2) log per-channel breakdown, especially Reserved6 stop-out frequency, to confirm SL=3.0% isn't being knifed by extreme-alert noise; (3) re-run net-of-cost at 8 and 16 bps and compare to the cost-free score to size the cost haircut; (4) confirm pairing in Synthesizer output binds this exit to long-side entries only — if it shows up paired with short entries, treat as registry collision with X10x symmetric/wide variants."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 37.58
+}

@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "x101_quick_cut_60s_time_exit",
+  "predicted_tp_pct": 0.0,
+  "predicted_sl_pct": 0.0,
+  "predicted_tp_sl_ratio": 0.0,
+  "predicted_win_rate": 0.48,
+  "predicted_mean_per_trade_pct": -0.12,
+  "predicted_kelly_pct": 0.0,
+  "trap_risk": "medium",
+  "trap_reasoning": "This is a pure time_only exit (no TP, no SL) — the 'TP/SL geometry' is degenerate: exit at t+60s regardless of price. Across 2745 prior time_only runs the family has ZERO positives (mean -0.73%, best -0.11%), which is a brutal prior. The proposal's thesis — 60s is short enough to harvest mean-reversion before drift dominates — is plausible IF paired with a high-conviction quick-revert entry (taker_buy_ratio_5m>=0.65 is a reasonable proxy for short-term overshoot exhaustion on long side, or capitulation on short side). But the filter alone doesn't define entry direction, and on a 60s horizon the per-trade outcome is dominated by microstructure noise + 8 bps cost. Honest expectancy: roughly symmetric ±0.3% move distribution at 60s, win rate ~48% after costs, mean ~-0.12% per trade. Not a CLASSIC asymmetric TP/SL trap (no fat-left-tail SL hit), but a 'cost-bleed trap' under the new metrics: mean_net_pct slightly negative → kelly_capped=0. Could surprise to the upside if the entry pairing is genuinely a sharp revert signal, but base rate from 2745 prior runs says no.",
+  "recommended_constraint": "require pairing with an entry archetype having documented mean-reversion edge (e.g. pc_crash_* or extreme-quantile entries); also test 30s and 90s variants in grid to map the time-decay curve rather than committing to 60s",
+  "metric_score_estimate": 0.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 23.24
+}

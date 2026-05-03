@@ -1,0 +1,22 @@
+{
+  "archetype_ref": "weekday_weekend_avoid_long",
+  "best_case_thesis": "Crypto markets exhibit well-documented weekend microstructure degradation: institutional desks (CME, prop shops, market makers with TradFi hedges) reduce participation Sat-Sun, leaving order books thinner and dominated by retail/Asia-retail flow. This means weekend pump signals on the pricechange channel are mechanically more likely to be liquidity-driven noise rather than informed flow, while weekday signals are more likely backed by real positioning. A weekday-only gate is therefore a regime filter that selectively keeps the high-information-density subset of triggers without touching entry logic — pure signal-to-noise upgrade for the dominant E126/E064 pricechange/long stack.",
+  "expected_alpha_source": "Weekend liquidity vacuum causes pricechange-channel pumps to revert more often (false breakouts from thin-book retail squeezes), while weekday pumps are more frequently confirmed by institutional follow-through.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Maximally effective during periods when CME BTC futures are the marginal price-setter and weekend basis dislocations are common — i.e. trending-but-choppy macro regimes where weekday institutional flow dominates direction.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E148",
+    "E051",
+    "E066"
+  ],
+  "if_paper_works_likely_reason": "Removing weekend triggers will disproportionately drop the left-tail losers (thin-book pump-and-dumps that round-tripped) while preserving most of the weekday winners, cleaning up the asymmetric TP/SL trap identified in R2.",
+  "could_compound_with": "Any session-of-day or funding-window filter in this batch — stacking weekday-gate with a US/EU-session gate would isolate the highest-institutional-density window and likely amplify edge multiplicatively rather than additively.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.59
+}

@@ -1,0 +1,22 @@
+{
+  "base_url": "https://fapi.binance.com",
+  "runtime_dir": "/Volumes/T9/BWE/30_DATA/binance_collectors_runtime",
+  "db_path": "/Volumes/T9/BWE/30_DATA/binance_collectors_runtime/binance_futures_1m.sqlite3",
+  "interval": "3m",
+  "quote_asset": "USDT",
+  "contract_type": "PERPETUAL",
+  "symbol_status": "TRADING",
+  "fetch_limit": 500,
+  "max_batches_per_symbol": 3,
+  "request_sleep_seconds": 0.08,
+  "poll_seconds": 180.0,
+  "symbol_refresh_seconds": 3600,
+  "bootstrap_backfill_days_new_symbol": 3,
+  "bootstrap_backfill_days_existing_symbol": 30,
+  "close_lag_ms": 2000,
+  "request_timeout_seconds": 20,
+  "request_retries": 3,
+  "request_backoff_seconds": 1.0,
+  "https_proxy": "http://127.0.0.1:7897",
+  "user_agent": "Hermes-BWE-binance-futures-3m-collector/1.0"
+}

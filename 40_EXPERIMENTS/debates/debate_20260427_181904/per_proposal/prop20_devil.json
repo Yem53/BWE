@@ -1,0 +1,19 @@
+{
+  "summary": "Proposal is logically coherent and addresses the R2 asymmetric-trap lesson, but its 'risk' typing is ambiguous and the AND-gate on two correlated bullish signals likely biases it toward long-only regimes despite side=both.",
+  "critiques": [
+    {
+      "archetype_ref": "r_kelly_safe_size_filter",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Type=risk with novel_dim that are entry-condition fields (liquidity_bucket, taker_buy_ratio_5m) — risk kernel typically governs sizing/SL, not entry gating; if the loop interprets these as entry filters the archetype collapses into a duplicate of existing E051 (pc_high_liquidity_long) ∩ E064 (pc_pump_taker_buy_dominant) rather than a distinct risk dimension.",
+        "side=both with taker_buy_ratio_5m>=0.60 is asymmetric: top entries E126/E064/E148 show taker-buy-dominant conditions cluster on long/pump regimes; the same 0.60 threshold applied to shorts will fire rarely or only in counter-trend traps, so 'both' coverage is nominal not real.",
+        "liquidity_bucket=high AND taker_buy_ratio_5m>=0.60 are positively correlated in pump regimes — the AND-gate may not reduce trigger count enough to deliver the kelly-safe property; need to verify post-filter trigger count is materially below the ~3000-5000 range seen on E064/E126 before claiming it dodges asymmetric tails.",
+        "'Natural TP/SL symmetry' is asserted in notes but not encoded in novel_dim — symmetry must come from the paired exit kernel choice (fixed with TP≈SL), not from the entry/risk filter itself. If downstream pairs this with the same asymmetric TP=0.51/SL=6.00 family that trapped E126, the filter doesn't help."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log per-side trigger counts to confirm short-side actually fires, (2) compare p25_capped_tail and kelly_capped against E051/E064 baselines to verify the AND-gate adds incremental left-tail protection rather than just intersecting two known-good entry filters, (3) only pair with symmetric fixed-exit kernels (TP/SL ratio within 1.5x) to preserve the stated kelly-safe intent."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.08
+}

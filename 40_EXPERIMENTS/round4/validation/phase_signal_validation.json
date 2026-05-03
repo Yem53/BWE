@@ -1,0 +1,127 @@
+{
+  "n_events": 320,
+  "signal_alphas": {
+    "basis_perp": {
+      "n_high": 158,
+      "mean_high": -1.9041122135923718,
+      "n_low": 160,
+      "mean_low": 1.54110008845618,
+      "spread": -3.445212302048552
+    },
+    "funding_flip": {
+      "n_high": 32,
+      "mean_high": 0.6991652107663111,
+      "n_low": 287,
+      "mean_low": -0.2718306504071967,
+      "spread": 0.9709958611735078
+    },
+    "funding_rate": {
+      "n_high": 144,
+      "mean_high": 0.09324837449373374,
+      "n_low": 175,
+      "mean_low": -0.3946850048539495,
+      "spread": 0.4879333793476832
+    },
+    "ls_global": {
+      "n_high": 129,
+      "mean_high": -2.1578340259364435,
+      "n_low": 130,
+      "mean_low": 1.1721947205845062,
+      "spread": -3.3300287465209495
+    },
+    "ls_global_extreme": {
+      "n_high": 128,
+      "mean_high": -0.08598086407112557,
+      "n_low": 131,
+      "mean_low": -0.8776314890741321,
+      "spread": 0.7916506250030065
+    },
+    "ls_top_trader": {
+      "n_high": 128,
+      "mean_high": 0.9097547457945739,
+      "n_low": 131,
+      "mean_low": -1.8505639933703881,
+      "spread": 2.760318739164962
+    },
+    "ls_top_trader_diverge": {
+      "n_high": 129,
+      "mean_high": 1.4457210864999295,
+      "n_low": 130,
+      "mean_low": -2.4036407371408175,
+      "spread": 3.8493618236407467
+    },
+    "mark_price_diverge": {
+      "n_high": 99,
+      "mean_high": -0.9322999949836926,
+      "n_low": 100,
+      "mean_low": 1.9184885535053298,
+      "spread": -2.8507885484890223
+    },
+    "oi_change_5m": {
+      "n_high": 128,
+      "mean_high": 0.945817236897294,
+      "n_low": 129,
+      "mean_low": -1.8654100743737285,
+      "spread": 2.8112273112710224
+    },
+    "premium_index_extreme": {
+      "n_high": 99,
+      "mean_high": 1.0010214471478138,
+      "n_low": 100,
+      "mean_low": 0.004500325795138464,
+      "spread": 0.9965211213526753
+    },
+    "taker_buy_ratio": {
+      "n_high": 129,
+      "mean_high": 0.4029249876042298,
+      "n_low": 130,
+      "mean_low": -1.3688661466981618,
+      "spread": 1.7717911343023915
+    },
+    "vol_spike": {
+      "n_high": 159,
+      "mean_high": 0.005437084182900765,
+      "n_low": 161,
+      "mean_low": -0.3678516877136827,
+      "spread": 0.3732887718965835
+    }
+  },
+  "useful_signals": [
+    "basis_perp",
+    "funding_flip",
+    "ls_global",
+    "ls_global_extreme",
+    "ls_top_trader",
+    "ls_top_trader_diverge",
+    "mark_price_diverge",
+    "oi_change_5m",
+    "premium_index_extreme",
+    "taker_buy_ratio"
+  ],
+  "phase_results": {
+    "1": {
+      "total_alpha": 6.345664931749928,
+      "useful_signals": 4,
+      "total_signals": 4,
+      "alpha_per_signal": 1.586416232937482
+    },
+    "2": {
+      "total_alpha": 13.640239057439228,
+      "useful_signals": 6,
+      "total_signals": 6,
+      "alpha_per_signal": 2.2733731762398715
+    },
+    "3": {
+      "total_alpha": 17.487548727280924,
+      "useful_signals": 8,
+      "total_signals": 9,
+      "alpha_per_signal": 1.9430609696978804
+    }
+  },
+  "overall": {
+    "mean_outcome": -0.1823738291775678,
+    "win_rate_pct": 54.37499999999999,
+    "n_pump": 163,
+    "n_dump": 157
+  }
+}

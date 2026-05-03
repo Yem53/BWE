@@ -1,0 +1,20 @@
+{
+  "archetype_ref": "pc_crash_oversold_global_long_extreme_long",
+  "best_case_thesis": "During sharp crashes (move_pct<=-4), the global_long_ratio extreme reading is a direct capitulation gauge: over-leveraged retail longs are being force-liquidated, creating a transient liquidity vacuum where price overshoots fundamental value. The taker_buy_ratio_5m>=0.55 confirms that aggressive buyers (typically smart money / market makers) are already stepping in to absorb the forced selling — this is the classic 'liquidation wick' setup where the bounce is mechanical, not discretionary. Stacking capitulation-extreme on top of E066's base pattern adds a precision filter that should elevate hit-rate at the cost of trigger frequency.",
+  "expected_alpha_source": "Forced-liquidation overshoot: cascading long liquidations create temporary price dislocations below fair value, and the bounce captures the mean-reversion as MM/arb desks refill the order book.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-volatility deleveraging events in over-leveraged altcoin markets where retail long positioning was crowded heading into the crash — maximally effective during cascade liquidation windows, not in slow grinding downtrends.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E066",
+    "E126",
+    "E051"
+  ],
+  "if_paper_works_likely_reason": "The capitulation filter sharpens E066's edge by isolating the subset of crash-with-taker-buy events that are genuine forced-liquidation reversals rather than continuation-of-decline traps, producing a tighter, higher-quality TP distribution.",
+  "could_compound_with": "Any proposal pairing this entry with a tight fixed TP and asymmetric-aware SL (post-R2 trap lessons) — and any EXIT-side archetype that reads a fading taker_buy_ratio as the bounce-exhaustion exit signal would form a complete crash-bounce kernel.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.1
+}

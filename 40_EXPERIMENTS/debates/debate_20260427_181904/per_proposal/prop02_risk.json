@@ -1,0 +1,20 @@
+{
+  "summary": "Single OI_Price reversal-long proposal with no integrity issues — fields are at-T0 measurable, no leakage, no live conflict, paper-shadow monitoring posture applies.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "oi_crash_taker_buy_reversal_long",
+      "leakage_risk": "none",
+      "leakage_notes": "All three novel_dim fields are at-T0 observables: taker_buy_ratio_5m is a backward-looking 5m window (trailing, not forward), oi_change_pct is a point-in-time delta against a prior anchor, and liquidity_bucket is a static classification. No forward_*, post_event_*, confirm_after_*, or _after_event suffixes present. No future-snooping detected.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "caution",
+      "live_conflict_notes": "Live BWE_OI_Price_monitor pump-long strategy targets OI-up + price-up continuation. This proposal targets OI-down + taker-buy reversal — same channel, same side (long), but orthogonal trigger conditions (oi_change_pct<=-8 vs pump). Concurrent same-symbol same-side longs would compound exposure rather than offset; not an opposite-side conflict. Paper-shadow only — flag for monitoring, not blocking.",
+      "concentration_risk": "caution",
+      "adversarial_risk": "caution",
+      "overall_severity": "acceptable",
+      "remediation": "None required for integrity. For paper-shadow deployment: (1) tag this archetype as reversal-family in registry so position-sizing layer can detect co-firing with live pump-long and cap aggregate same-symbol long exposure; (2) confirm taker_buy_ratio_5m is computed from the trailing 5m ending at T0 (not centered or forward) in the feature pipeline."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 19.61
+}

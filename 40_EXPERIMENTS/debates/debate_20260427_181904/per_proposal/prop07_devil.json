@@ -1,0 +1,19 @@
+{
+  "summary": "Single-proposal deep review: counter-trend crash-long with capitulation filter is conceptually sound but has selectivity and execution concerns worth monitoring.",
+  "critiques": [
+    {
+      "archetype_ref": "pc_crash_oversold_global_long_extreme_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Composite filter stacking (global_long_ratio_extreme + move_pct<=-4 + taker_buy_ratio_5m>=0.55) on the pricechange/long channel risks driving trigger count well below E066's 3684 — could land in the <500 trig regime where score variance dominates and a single outlier symbol drives the lift.",
+        "Counter-trend long into a -4% crash candle has high adverse-excursion risk in the first 30-90s; with the asymmetric TP/SL trap lesson from R2 (E126), even an 80% win rate could compound negative on $1000 paper if SL is ≥3x TP. Pair this entry with symmetric or trail/breakeven exits, not aggressive multi_tp.",
+        "'global_long_ratio_extreme' as a capitulation proxy is regime-dependent: in a sustained downtrend BTC regime, 'extreme long ratio' is structural (perma-bulls trapped) rather than a capitulation signal — bounce thesis weakens. Only 30-day data may not span enough regime variation to detect this.",
+        "taker_buy_ratio_5m>=0.55 measured at T0 during an active -4% crash may be measuring the very tick that defined the local low — borderline look-ahead if the 5m window includes the trigger bar's close rather than ending at T0-1."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log trigger count per day — flag if <30/day total or concentrated in <5 symbols; (2) track max adverse excursion in first 60s separately from final P&L; (3) bucket results by BTC 4h regime (uptrend/range/downtrend) and reject if downtrend bucket is net negative; (4) verify taker_buy_ratio_5m feature is computed strictly on data ending at T0-1, not T0-inclusive; (5) prefer pairing with breakeven or trail exits over fixed asymmetric TP/SL given counter-trend nature."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 26.86
+}

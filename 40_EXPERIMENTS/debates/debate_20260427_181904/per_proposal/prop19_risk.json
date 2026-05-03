@@ -1,0 +1,21 @@
+{
+  "summary": "Single cross-channel funding-neutral long proposal with no integrity issues; standard advisory monitoring applies.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "cc_three_signal_funding_neutral_long",
+      "leakage_risk": "none",
+      "leakage_notes": "All four novel_dim fields (funding band, taker_buy_ratio_5m, liquidity_bucket) are point-in-time at T0 with no forward_*, post_event_*, or confirm_after_* references. taker_buy_ratio_5m is a trailing 5m window ending at T0, not a forward window — clean.",
+      "multitest_inflation_risk": "low",
+      "multitest_inflation_notes": "60 cross_channel archetypes already exist, but funding-neutral conditioning is structurally novel within that family; marginal FWER contribution is small relative to the 523-archetype registry.",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Long-side cross-channel rule could co-fire with the user's live BWE_OI_Price_monitor pump-long strategy on the same symbol, stacking exposure rather than opposing it. At 5–10% sizing this is a position-sizing/concentration concern, not a hedge conflict — paper-shadow monitoring item.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "Advisory only: during paper-shadow, log overlap windows with live pump-long strategy and cap aggregate same-symbol exposure; verify funding/taker_buy/liquidity snapshots are sourced from T0-or-earlier bars in the kernel, not the post-event window."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 22.85
+}

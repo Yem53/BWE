@@ -1,0 +1,28 @@
+{
+  "summary": "Single proposal pc_crash_oversold_global_long_extreme_long is mathematically healthy: all 3 novel_dim conditions parse against SUPPORTED_FIELDS, structurally distinct from E066 via capitulation gauge, but conjunction of p90 + crash + taker filter yields tight sample around ~45 triggers — still worth Phase 3 entry, pair with fixed exit family.",
+  "analyses": [
+    {
+      "archetype_ref": "pc_crash_oversold_global_long_extreme_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E066",
+        "E126",
+        "E064"
+      ],
+      "distinctness_notes": "E066 (pc_crash_taker_buy_long, +0.339) is closest cousin: crash + taker_buy_ratio + long, but uses no magnitude floor and no sentiment-extreme filter. This proposal adds (a) move_pct<=-4 crash-magnitude floor (sharper crash, not mild dips) and (b) global_long_ratio_extreme (≥p90 retail-long capitulation/euphoria gauge) — a counter-trend capitulation thesis distinct from generic crash-bounce. Also distinct from E126/E064 which are pc_PUMP archetypes (opposite event_type). The 3-way conjunction on crash×taker_strength×retail-extreme is not represented in the top entries preview or known registry.",
+      "expected_triggers_30d": 45,
+      "triggers_estimate_method": "~5000 pricechange events × ~0.25 move_pct<=-4 (crash with ≥4% magnitude is roughly upper-mid crash bucket; raw crashes ~50%, but the -4% floor is tighter) × ~0.35 taker_buy_ratio_5m>=0.55 (bullish taker pressure during crash is moderately rare) × ~0.10 global_long_ratio_extreme (p90 by definition) ≈ 5000 × 0.25 × 0.35 × 0.10 ≈ 44. Conservative; could be lower if conditions are correlated negatively (extreme retail-long during sharp crash + bullish taker reversal is a specific capitulation moment).",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Pair with FIXED exit family — coverage_summary shows fixed is the only exit family with positive mean (0.175) and 6680/7320 positive results; multi_tp/trail/time_only/breakeven all negative across the board. For a counter-trend bounce thesis, prefer tight TP (0.5–1.5%) with moderate-to-wide SL since crash-bounces are quick mean-reversion plays — but heed the R2 E126 paper trap: avoid asymmetric TP/SL like 0.51/6.00 even if backtest score looks high. Recommend GPU surface explore tp∈[0.5,2.0], sl∈[1.0,3.0] keeping TP/SL ratio ≥ 0.3 to avoid left-tail blowups."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 41.08
+}

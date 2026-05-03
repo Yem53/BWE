@@ -1,0 +1,20 @@
+{
+  "summary": "Single proposal review: pure 60s time-only exit on high taker_buy_ratio entries — concept is testable but family-level evidence (0/2745 positives) and lack of any directional confirmation in the exit itself warrant cautious monitoring.",
+  "critiques": [
+    {
+      "archetype_ref": "x101_quick_cut_60s_time_exit",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "time_only exit family shows 0 positives across 2745 runs (mean -0.73, median -0.70); a 60s window does not by itself address why the family loses — without an SL, a single adverse 60s tick at 8–16 bps round-trip cost likely keeps expectancy negative even when paired with high-taker entries.",
+        "novel_dim `taker_buy_ratio_5m>=0.65` is an entry-side filter, not an exit condition — as an exit archetype it does not actually constrain when the position closes; the 60s clock fires regardless of taker flow at T+60s, so the 'quick mean-reversion harvest' hypothesis is not encoded in the exit logic itself.",
+        "60s is shorter than the typical 3–5s execution latency budget × multiple fills; on $1000 personal sizing, slippage on forced market exit at a fixed 60s mark can dominate the small mean-reversion edge being harvested.",
+        "Pairing assumption ('only viable if paired with quick-revert mean-reversion entry') is asserted but not enforced — the archetype as written is exit-only and will be combined with whatever entries the grid pairs it with, including momentum-continuation entries (E126/E064 pump_taker_buy) where 60s is mid-trend, not post-revert.",
+        "Risk of repeating the R2 E126 trap in reverse: a time-only exit has no left-tail protection, so a single -2% adverse 60s window inside the sample can swamp many small +0.1% wins; mean / kelly_capped / p25_capped_tail metrics should catch this but it is the dominant failure mode to watch."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) bucket results by paired-entry archetype and check whether any entry × 60s-time combo shows positive mean AND positive p25_capped_tail, not just positive median; (2) compute realized hit-rate of mean-reversion within 60s on triggered samples (price at T+60s vs T+0 sign-flip rate) — if <55%, kill the family rather than tuning; (3) track worst single-trade drawdown vs mean win to confirm the asymmetric-tail trap from R2 is not recurring; (4) explicitly compare against a 60s time-exit + tight SL variant to isolate whether the loss is the clock or the missing stop."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 29.42
+}

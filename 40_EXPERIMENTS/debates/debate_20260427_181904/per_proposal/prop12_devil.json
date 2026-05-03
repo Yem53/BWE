@@ -1,0 +1,18 @@
+{
+  "summary": "Single-proposal deep review: basis_curvature_pump_short is a logically coherent dislocation-fade idea worth testing, with two specific monitoring concerns around field co-occurrence frequency and short-side cost asymmetry.",
+  "critiques": [
+    {
+      "archetype_ref": "basis_curvature_pump_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Joint-condition rarity: requiring basis_rate>=0.001 AND premium_bps>=20 AND move_pct>=3 simultaneously may produce too few triggers for statistical significance over a 30-day window — the top E148 entry already drops to trig=988 with looser conditions, so a triple-AND on rarer fields could fall below the ~500-trigger reliability floor and yield a sample dominated by 1-2 outlier symbols.",
+        "Short-side cost asymmetry on pricechange/pump: the pricechange channel's top performers are overwhelmingly LONG (10/10 in preview are *_long); shorting a pump means paying funding to the long-biased crowd plus borrow/perp funding drag, which combined with 8-16 bps round-trip can erode the dislocation-fade edge faster than the symmetric backtest assumes.",
+        "Basis/premium co-movement redundancy: basis_rate and premium_bps are mechanically correlated (both measure perp-vs-spot dislocation via different lenses), so the 'joint dislocation gauge' may collapse to a single-factor signal in practice rather than the cross-derivative novelty claimed — risk of being a duplicate of existing premium-only archetypes once filter fires."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log trigger count per day and abort the archetype if <30 triggers in first 7 days; (2) track realized funding cost per short trade separately from price PnL to confirm the dislocation edge survives short-side carry; (3) compute Spearman correlation between basis_rate and premium_bps on actual trigger samples — if >0.85, flag as effectively single-factor and compare hit rate vs. existing premium_bps>=20 short archetypes to confirm distinct behavior."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 30.01
+}

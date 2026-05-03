@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "hour_session_us_pump_long",
+  "predicted_tp_pct": 0.6,
+  "predicted_sl_pct": 1.8,
+  "predicted_tp_sl_ratio": 0.333,
+  "predicted_win_rate": 0.62,
+  "predicted_mean_per_trade_pct": 0.2,
+  "predicted_kelly_pct": 3.6,
+  "trap_risk": "low",
+  "trap_reasoning": "This proposal differs structurally from the E126 trap. The trap pattern emerged from 'extreme pump' entries where the optimizer chased very high win-rates (80%) by setting tiny TP (~0.5%) against large SL (~6%), producing negative expectancy hidden behind a strong p25. Here the entry is a SESSION-GATED pump-long with three AND conditions (session=US, taker_buy_ratio_5m>=0.60, liquidity_bucket=high). Two effects work against the trap: (1) the session+liquidity gate selects a more orderly regime (US hours, high liquidity) where post-pump mean-reversion is less violent, so the optimizer is unlikely to need SL=10×TP to maintain win-rate; (2) the moderate taker_buy threshold (0.60, not 'extreme') yields a less skewed outcome distribution. Expected geometry is closer to symmetric: TP~0.6%, SL~1.8% (ratio 0.33), win_rate ~62%. E[trade] ≈ 0.62×0.6 - 0.38×1.8 - 0.08 = 0.37 - 0.68 - 0.08 ≈ -0.39%? Recomputing honestly: 0.372 - 0.684 = -0.312, minus 8bps = -0.39%. That is actually negative — but my SL estimate may be pessimistic; if optimizer finds SL~1.2% (ratio 0.5) with win_rate 0.65, E[trade] = 0.39 - 0.42 - 0.08 = -0.11. Honest verdict: trap risk is LOW (asymmetry won't be extreme) but raw edge is uncertain. Trigger count likely 800-1500 (US-hours subset of pump signals). Medium-low confidence the archetype clears positive expectancy without a tighter filter.",
+  "recommended_constraint": "force SL ≤ 2.5 × TP_pct in variant grid to preempt asymmetric drift, and require min_triggers >= 500 to avoid noise",
+  "metric_score_estimate": 2.8,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.62
+}

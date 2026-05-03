@@ -1,0 +1,20 @@
+{
+  "summary": "Single-proposal deep analysis: smart-money + funding fade short concept is logically sound but has specific concerns around field availability, sample size, and asymmetric risk that warrant monitoring.",
+  "critiques": [
+    {
+      "archetype_ref": "pc_pump_top_trader_short_funding_high_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Field availability risk: novel_dim references 'top_trader_position_ratio_low' and 'funding_pct_top_decile' — must verify both are in SUPPORTED_FIELDS post-R1 fix; if either silently falls through, archetype degenerates into the pricechange/short baseline (R1 bug pattern recurrence).",
+        "Sample size fragility: requiring (a) pricechange pump signal + (b) top_trader_ratio in low decile + (c) funding in top decile + (d) move_pct>=3 is a 4-way intersection. Compare to E148 (988 triggers) which is already on the low end; this proposal likely yields <500 triggers over 30 days, risking statistical noise dominating any edge.",
+        "Funding update latency: funding rate updates every 8h on Binance perps. 'funding_pct_top_decile' at T0 may reflect stale conviction from up to 8h ago, not current positioning — the 'extreme' may have already mean-reverted by entry time. Falsifiable: check funding-snapshot timestamp vs entry timestamp distribution.",
+        "Asymmetric short risk on pump signals: shorting into pricechange pumps with move_pct>=3 already in the move means the SL has to absorb continuation. Per R2 lesson on E126, asymmetric TP/SL combos with high win-rate can still compound negatively. fixed exits with tight TP / wide SL must be flagged.",
+        "Top-trader-ratio ambiguity: the field measures position ratio on Binance top accounts, but 'low' could mean (i) smart money is short OR (ii) smart money has exited longs — these are very different signals. Without disambiguation the rationale 'smart money positioned short' may be overclaiming."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log raw trigger count — if <300 over 30d, statistical edge is unreliable; (2) compute mean and p25_capped_tail (not just p25/median) per R2 lesson to catch asymmetric-TP traps; (3) bucket trades by funding-snapshot age (0-2h, 2-4h, 4-8h) to test funding staleness hypothesis; (4) compare realized score against pricechange/short baseline — if delta < +0.05 lift, archetype is not adding signal beyond channel/side defaults and should be pruned; (5) flag any overlap with live BWE_OI_Price_monitor pump long entries (this is short, so direct conflict unlikely, but watch for same-symbol opposite-direction whipsaws)."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 30.34
+}

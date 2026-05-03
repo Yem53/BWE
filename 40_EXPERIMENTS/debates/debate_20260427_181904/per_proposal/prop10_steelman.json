@@ -1,0 +1,21 @@
+{
+  "archetype_ref": "hour_session_us_pump_long",
+  "best_case_thesis": "This proposal exploits a well-documented intraday liquidity asymmetry: US cash session overlap (13:30-20:00 UTC) concentrates institutional flow, tighter spreads, and the highest taker-buy aggression on crypto perps as TradFi desks hedge/rotate into BTC/ETH alongside equity risk-on. By gating pricechange longs on session=US AND taker_buy_ratio_5m≥0.60 AND high liquidity, it filters out the thin-book Asia/EU pumps that account for most asymmetric-TP/SL traps that burned R2 paper-shadow on E126 — only firing when aggressive buying coincides with deep books that can absorb the trail without violent mean-reversion.",
+  "expected_alpha_source": "Session-conditional taker-buy aggression: institutional US-hours flow generates more persistent directional moves than retail-driven off-hours pumps, because deep liquidity dampens the mean-reversion that traps off-hours longs.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Risk-on macro days where US equity open drives crypto correlation higher and taker-buy aggression sustains rather than fades — i.e. trend-day microstructure within the US session window.",
+  "complementary_exit_families": [
+    "trail",
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E051"
+  ],
+  "if_paper_works_likely_reason": "The session filter strips the off-hours thin-liquidity pumps that create the left-tail SL hits which destroyed E126's paper compounding, leaving a cleaner subset where TP/SL asymmetry is genuinely earned rather than survivor-biased.",
+  "could_compound_with": "Any other session-gated or liquidity-conditional proposal in this batch — particularly an exit-side archetype that widens trail during US hours, since the R2 lesson flagged exit-pipeline starvation and this entry's edge degrades without a session-aware exit wrapper.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 30.21
+}

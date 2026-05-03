@@ -1,0 +1,23 @@
+{
+  "summary": "Single-filter high-liquidity gate on R6 long is structurally clean with no leakage or integrity issues; only minor advisory monitoring around live overlap and concentration applies.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "r6_pump_high_liq_only_long",
+      "leakage_risk": "none",
+      "leakage_notes": "novel_dim is solely liquidity_bucket=high, a contemporaneous (T0) liquidity-regime classifier with no forward_*, confirm_after_*, or post-event fields. No future function detected.",
+      "multitest_inflation_risk": "low",
+      "multitest_inflation_notes": "R6/Reserved6 channel currently has 35 entries and most use 2+ filters; a single-dim high_liq gate is structurally distinct from the existing multi-filter R6 family, so family-wise FDR contribution is marginal.",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Long-side R6 entry could co-fire with the existing 'BWE_OI_Price_monitor pump long' on overlapping symbols in pump regimes, stacking same-side exposure rather than opposing it — paper-shadow monitoring item, not a true conflict.",
+      "concentration_risk": "low",
+      "concentration_notes": "high-liquidity bucket biases triggers toward a small set of top-tier symbols (BTC/ETH/SOL etc.); at 5–10% per trade on $1000 capital, concurrent fills in a pump window could briefly approach effective leverage limits but stays within paper-shadow tolerance.",
+      "adversarial_risk": "low",
+      "adversarial_notes": "BWE Reserved6 stream is observable; a participant seeing the signal could front-run, but $1000 notional makes this economically irrelevant and is a generic monitoring concern, not specific to this rule.",
+      "overall_severity": "acceptable",
+      "remediation": "None required. For paper-shadow tracking only: tag fills with the live OI_Price pump-long strategy to detect same-symbol same-side stacking, and verify liquidity_bucket classifier uses only data available at or before T0."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 30.95
+}

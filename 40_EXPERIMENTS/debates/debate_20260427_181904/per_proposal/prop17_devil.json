@@ -1,0 +1,19 @@
+{
+  "summary": "Hybrid fixed+trail exit is conceptually novel but the proposed parameterization combined with an entry-side filter on an exit archetype raises specific concerns worth monitoring.",
+  "critiques": [
+    {
+      "archetype_ref": "x105_hybrid_fixed_then_trail_exit",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "novel_dim 'taker_buy_ratio_5m>=0.60' is an entry-side condition embedded in an exit archetype — semantically mismatched: an exit kernel evaluates after entry has fired, so this filter either (a) reapplies at exit time (likely no-op or look-ahead-ish if it inspects future ticks) or (b) gets silently coerced as an entry filter, collapsing this back into a duplicate of an entry baseline (same R1 bug class noted in lessons_from_r1_r2).",
+        "Asymmetric TP/SL trap risk: 0.5% fixed TP on 50% + trailing 1.5% step on remainder is implicitly asymmetric vs whatever stop-loss is paired downstream — R2 already documented E126's TP=0.51/SL=6.00 compounding to -13.5% despite +0.3946 score. Without an explicit SL bound in the proposal, mean/kelly_capped metrics could still mask left-tail blowups.",
+        "by_exit_family table shows trail family mean=-0.150, multi_tp mean=-0.276 — both currently unprofitable on their own across 6,222 results. Hybridizing two losing families does not automatically yield a winner; needs evidence that the 50/50 split materially changes the trade distribution rather than averaging two negative expectancies.",
+        "Trail step of 1.5% on the remaining 50% is large relative to a 0.5% first-leg TP — for a $1000 account at modest leverage, a 1.5% adverse move post-first-TP can wipe the locked-in gain net of 8–16 bps round-trip costs, leaving the hybrid statistically indistinguishable from fixed-only at 0.5%."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) verify the taker_buy_ratio_5m>=0.60 filter is actually being evaluated at the exit kernel and not silently dropped — log filter-hit rate; (2) track the second-leg (trailing 50%) PnL distribution separately from the first-leg fixed TP, and confirm the trail leg has positive expectancy on its own — if not, the hybrid degrades to fixed-only-with-overhead; (3) compute mean, kelly_capped, and p25_capped_tail (per R2 lesson) — do not rely on median/p25 alone; (4) compare against a pure fixed-0.5%-TP baseline on the same trigger set to confirm the trail leg adds rather than subtracts edge."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 32.77
+}

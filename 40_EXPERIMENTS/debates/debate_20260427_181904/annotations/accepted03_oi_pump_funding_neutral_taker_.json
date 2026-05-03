@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "oi_pump_funding_neutral_taker_extreme_long",
+  "expected_trades_per_day": 1.8,
+  "expected_trades_per_day_basis": "OI_Price channel typically fires ~80-120 events/day; gating on oi_change_pct>=10 (top quintile) ~= 25%, taker_buy_ratio_5m>=0.65 (top quartile) ~= 25%, |funding|<=1bp (narrow neutral band) ~= 25%; joint independent estimate ~1.5%, applied to ~120 daily OI_Price events => ~1.8 trades/day, consistent with synthesizer's 'narrow band' caveat.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC ranging or mild uptrend with funding pinned near zero",
+      "Post-deleveraging windows where funding has reset to neutral but spot demand returns",
+      "Mid-cap alts with active OI but no crowded perp positioning"
+    ],
+    "worst_in": [
+      "Strong directional trends where funding has drifted >+5bp or <-5bp (filter never triggers)",
+      "Low-volatility weekends with no OI bursts",
+      "Macro risk-off events where taker buy ratio collapses across the board"
+    ],
+    "explanation": "The funding-neutral band is the entire edge — it filters out crowded longs that doomed E126. This means the strategy is structurally rare (few trades) but should fire precisely when OI is rising from genuine new positioning rather than chase-buying. Expect long dry spells in trending regimes."
+  },
+  "live_readiness_caveats": [
+    "Funding snapshot timing matters: Binance funding updates every 8h but predicted-funding ticks each minute — confirm which field the live engine reads, since stale 8h funding could let crowded setups slip through the |funding|<=1bp gate.",
+    "oi_change_pct>=10 on low-liquidity symbols will produce false positives from a single large position open — enforce minimum 24h notional volume (e.g. >=$50M) or this strategy will leak edge to slippage on micro-caps.",
+    "Narrow funding band (~25% of OI events) means trade count is volatile week-to-week; do not panic-kill after a 3-day drought, this is expected behavior."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "trades_per_day_7d_rolling",
+      "alert_threshold": "<0.5 or >4.0",
+      "rationale": "Predicted ~1.8/day; sustained drift outside this band signals either funding regime shift (edge gone) or filter leakage (gates too loose)."
+    },
+    {
+      "metric": "median_funding_at_entry_bps",
+      "alert_threshold": "abs > 1.5bp",
+      "rationale": "Direct sanity check that the funding-neutral gate is actually being applied at execution time, not just in backtest."
+    },
+    {
+      "metric": "live_median_trade_pct_vs_backtest_0.395",
+      "alert_threshold": "live median < +0.10% over 30+ trades",
+      "rationale": "Backtest best=+0.395 is fixed-exit family; meaningful slippage from ~0.4% to <0.1% indicates the funding-neutral edge does not survive execution latency or fee drag."
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">=6",
+      "rationale": "This archetype's selection criteria are conjunctive and rare — a streak of 6 losses on supposedly clean signals means the underlying microstructure assumption (neutral funding = no crowding) has broken."
+    },
+    {
+      "metric": "taker_buy_ratio_at_entry_distribution",
+      "alert_threshold": "p50 < 0.65",
+      "rationale": "Confirms the extreme-taker-buy gate is firing as designed; p50 below the threshold means the live data feed is noisier than the backtest snapshot."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling Sharpe < 0 AND >=10 trades observed in window",
+      "rationale": "Funding-neutral edge is structural; if it fails to produce positive risk-adjusted return over a meaningful sample, the regime that made R2's funding-skew trap visible has likely closed."
+    },
+    {
+      "condition": "Cumulative paper-shadow PnL < -8% on $1000 sim over the validation window",
+      "rationale": "This was the exact failure mode of E126 (compounded -13.5%); hitting -8% means the funding-neutral fix did not actually solve the asymmetric TP/SL left-tail problem."
+    },
+    {
+      "condition": "Median funding at entry drifts > 2bp absolute for 3+ consecutive days",
+      "rationale": "Indicates either a feed/timing bug or that the 'neutral funding' regime itself has vanished from the market — either way, the archetype's premise is invalidated until investigated."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 6.5,
+  "expected_max_dd_basis": "At ~1.8 trades/day over a 30-day paper window (~54 trades), with backtest win rate ~60-65% inferred from lift_vs_median pattern in OI long entries and asymmetric fixed-exit (TP small, SL large per R2 lessons), worst plausible streak of 5-6 losses at ~1.5% per loss compounds to ~6-7% DD before the funding-neutral filter is expected to gate out the next bad setup.",
+  "compare_to_existing": "E126 pc_pump_taker_buy_extreme_long (R2 paper-shadow loser at -13.5% live despite 0.395 backtest) — same taker-buy-extreme structure but on pricechange channel without funding-neutral gate. E205 is explicitly the funding-skew-fix variant; paper-shadow comparison should be run side-by-side with E126 to isolate whether the funding gate alone recovers the lost edge.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 46.74
+}

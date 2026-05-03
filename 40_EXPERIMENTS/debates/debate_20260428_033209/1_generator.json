@@ -1,0 +1,261 @@
+{
+  "summary": "Round 4 lessons combine two gaps: exit-side pipeline is starved (only fixed family has positive trades; trail/multi_tp/breakeven/time_only all -ve median) and existing entries lean toward asymmetric TP/SL traps; this batch proposes 8 exit archetypes leveraging supported real-time signals as decay/flip watchdogs, plus naturally-symmetric mean-reversion entries and conflict/confirm cross-channel logic.",
+  "proposals": [
+    {
+      "archetype": "x_exit_on_top_trader_position_dec",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "top_trader_position_ratio_dec"
+      ],
+      "notes": "Exit when smart-money top-trader position ratio drops post-entry — they are unwinding before retail catches the reversal.",
+      "rationale": "None of the 133 existing exits use top_trader_position_ratio_dec as the trigger condition; this is a smart-money-exit family distinct from fixed/trail/multi_tp/breakeven/time_only kernels.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_exit_funding_normalize_meanrev",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "funding_abs_high"
+      ],
+      "notes": "Exit when funding rate has crossed back into normal band from extreme — extreme-funding alpha is gone.",
+      "rationale": "Existing exits are PnL-shape-based (TP/SL/trail). This exits on a fundamentals state change (funding mean-reversion) regardless of PnL position.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_exit_global_long_ratio_collapse",
+      "type": "exit",
+      "channel": "*",
+      "side": "long",
+      "novel_dim": [
+        "global_long_ratio_high"
+      ],
+      "notes": "For long entries — exit when global_long_ratio decays out of the high band, signaling crowd flip.",
+      "rationale": "Sentiment-flip exit using global_long_ratio_high as the regime gate; not present in current 133 exits which are all price/time based.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_exit_premium_decay_watchdog",
+      "type": "exit",
+      "channel": "*",
+      "side": "long",
+      "novel_dim": [
+        "premium_extreme"
+      ],
+      "notes": "Long exit watchdog — close when premium falls out of the extreme band, removing the premium-squeeze rationale.",
+      "rationale": "Premium-state-change exit kernel; orthogonal to TP/SL/trail families. Targets the case where price holds but the perp-spot dislocation closes.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_exit_session_boundary_close",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "session=US"
+      ],
+      "notes": "Force-close any open position at session boundary (e.g. exit before US session opens to avoid macro shock).",
+      "rationale": "Session-aware exit; existing time_only family uses absolute durations, not calendar session boundaries. Distinct kernel.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_hybrid_time_then_premium_watchdog",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "premium_extreme"
+      ],
+      "notes": "Hold for fixed time window unless premium crosses into the opposite extreme — then early exit; combines time + state-change.",
+      "rationale": "Hybrid composition: time_only baseline overlaid with premium watchdog. None of the 5 existing exit kernels mix time-stop with a premium-state failsafe.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_hybrid_breakeven_then_funding_flip",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "funding_pct_top_decile"
+      ],
+      "notes": "Breakeven once unrealized hits TP/2, then add a funding-flip rip-cord — exits if the funding regime inverts.",
+      "rationale": "Composition of breakeven + funding-flip exit; current breakeven kernel only ladders on price, not on funding regime change.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_exit_volume_exhaustion",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "volume_pct_below_p25"
+      ],
+      "notes": "Exit once realized volume in the post-entry window drops into the bottom quartile — momentum has died.",
+      "rationale": "Volume-state-driven exit; current exit families don't gate on a post-entry volume bucket flip into below_p25.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_oi_collapse_volume_meanrev_short",
+      "type": "entry",
+      "channel": "OI_Price",
+      "side": "short",
+      "novel_dim": [
+        "oi_change_pct<=-15",
+        "volume_pct_top_decile",
+        "liquidity_bucket=high"
+      ],
+      "notes": "Short when OI collapses sharply with high volume on a liquid pair — leveraged longs being flushed, expect mean reversion.",
+      "rationale": "Negative oi_change_pct threshold (collapse) is rarely used in existing 257 entries which mostly use positive thresholds; combined with high-decile volume creates a distinct setup with naturally symmetric TP/SL profile.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_pc_neg_premium_neg_basis_arb_long",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "long",
+      "novel_dim": [
+        "premium_bps<=-20",
+        "basis<=-0.3",
+        "liquidity_bucket=high"
+      ],
+      "notes": "Long when both premium and basis are deeply negative — perp under-priced relative to spot, structural arbitrage support.",
+      "rationale": "Combines two negative-side numeric thresholds (premium_bps + basis) with liquidity gate; this two-leg negative-dislocation entry is not in the current set which mostly hunts positive premium/funding extremes.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_r6_us_session_largecap_only_short",
+      "type": "entry",
+      "channel": "Reserved6",
+      "side": "short",
+      "novel_dim": [
+        "session=US",
+        "marketcap_bucket=large",
+        "hour_utc>=14",
+        "hour_utc<=20"
+      ],
+      "notes": "R6 extreme-move short, restricted to US session and large-cap only — best execution venue, lowest slippage tail.",
+      "rationale": "R6 channel currently has 50 entry archetypes but the registry preview shows them duplicating identical scores; adding session+marketcap dual-gate yields a structurally distinct subset that the parser can actually differentiate.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_oi_taker_buy_with_short_squeeze_long",
+      "type": "entry",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.65",
+        "global_short_ratio_extreme",
+        "funding<=0"
+      ],
+      "notes": "Long on OI_Price when aggressive buying meets crowded shorts AND funding is non-positive — squeeze fuel without paying funding tax.",
+      "rationale": "Triple-orthogonal-confirmation entry combining flow (taker_buy), crowd (global_short_ratio_extreme), and cost (funding<=0); this specific 3-way combination is absent from the current OI_Price/long roster.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "e_pc_pump_smart_money_neutral_short",
+      "type": "entry",
+      "channel": "pricechange",
+      "side": "short",
+      "novel_dim": [
+        "event_type=pump",
+        "top_trader_position_ratio_dec",
+        "premium_bps>=20"
+      ],
+      "notes": "Pump event short — fade when top traders are decreasing position AND premium is hot; retail-driven exhaustion setup.",
+      "rationale": "Smart-money-fade entry using top_trader_position_ratio_dec as a confirmation signal; existing fade entries don't condition on top-trader direction this way.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "f_weekday_only_skip_weekend",
+      "type": "filter",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "weekday=Mon"
+      ],
+      "notes": "Skip weekend windows (low liquidity, unreliable funding, wider spreads); active weekdays only.",
+      "rationale": "Calendar-based liquidity filter; no current filter archetype gates on weekday categorical alone for global skip.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "r_low_liquidity_size_dampener",
+      "type": "risk",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "liquidity_bucket=low"
+      ],
+      "notes": "Risk archetype that down-sizes by 50% on low-liquidity bucket trades to keep slippage tail bounded under compound replay.",
+      "rationale": "Risk family currently has 41 archetypes; an explicit liquidity-bucket dampener tied to slippage realism is the kind of metric-conscious sizing rule the new mean/Kelly metrics will reward.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "f_stretched_market_funding_and_premium",
+      "type": "filter",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "funding_abs_high",
+        "premium_extreme"
+      ],
+      "notes": "Skip entries when BOTH funding-abs and premium are in their extreme bands — over-stretched market, mean-reversion risk to existing positions.",
+      "rationale": "Two-flag composite filter; current filter set tends to use single flags, so the AND-composite over funding_abs_high + premium_extreme is structurally distinct.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "cc_conflict_oi_pc_opposite_side_skip",
+      "type": "cross_channel",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "session=US"
+      ],
+      "notes": "Cross-channel veto — when OI_Price and pricechange fire on the same symbol with opposite sides within 90s, skip both (signal is ambiguous).",
+      "rationale": "Conflict-resolution cross-channel rule; existing cross-channel archetypes mostly compose confirmations, not conflicts.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "cc_confirm_pc_r6_same_dir_size_boost",
+      "type": "cross_channel",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "session=US",
+        "liquidity_bucket=high"
+      ],
+      "notes": "When pricechange and Reserved6 fire same direction within 120s on a high-liquidity name, size-boost x1.5; double-channel confirmation = high-quality.",
+      "rationale": "Confirmation-boost cross-channel that gates on liquidity for execution quality; existing 64 cross-channel rows don't combine pc+R6 timing window with liquidity gating.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "f_listing_age_minimum_180d",
+      "type": "filter",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "listing_age_days>=180"
+      ],
+      "notes": "Filter out symbols listed under 180 days — avoid new-listing volatility regime where historical kline patterns are unreliable.",
+      "rationale": "Age-based filter; current filter set uses marketcap/liquidity buckets but no explicit listing_age_days gate.",
+      "expected_distinct": true
+    },
+    {
+      "archetype": "x_exit_basis_invert",
+      "type": "exit",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "basis<=0"
+      ],
+      "notes": "Exit when basis crosses through zero (positive→negative or vice versa); structural regime flip indicates the carry rationale is gone.",
+      "rationale": "Basis-inversion exit; current exit kernels don't use basis sign change as the trigger.",
+      "expected_distinct": true
+    }
+  ],
+  "_role": "generator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 135.35
+}

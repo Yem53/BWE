@@ -1,0 +1,154 @@
+{
+  "summary": "Mostly clean batch with healthy push toward exit-side coverage, but three exit archetypes (x_premium_revert, x_top_trader_flip, x_funding_flip) have AND-coded novel_dim that can never co-fire as point-in-time conjunctions — same R1 silent-passthrough bug pattern; flag a few sample-size and momentum-fade concerns elsewhere.",
+  "critiques": [
+    {
+      "archetype_ref": "e_asia_global_short_extreme_squeeze_long",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Three-way intersection (session=Asian × global_short_ratio_extreme × liquidity_bucket=low) — report n_triggers per 30d; if <100, relax liquidity gate first."
+    },
+    {
+      "archetype_ref": "e_monday_oi_collapse_neg_premium_short",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Track distribution of fires within Monday — early-Monday continuation thesis weakens past the first ~4h after weekend reopen."
+    },
+    {
+      "archetype_ref": "e_top_trader_capitulation_neg_funding_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Triple-extreme stack (low top_trader_ratio AND funding<=-0.0005 AND premium_bps<=-15) likely collapses to <50 triggers per 30d — below useful sample size for the v2 mean/kelly metrics."
+      ],
+      "monitoring_advice": "Report n_triggers explicitly; if <100, relax to 2-of-3 extremes via OR."
+    },
+    {
+      "archetype_ref": "e_us_open_extreme_taker_buy_extended_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Shorting at hour_utc=14 with day_change_pct>=15 AND taker_buy_ratio_5m>=0.65 fades the historically strongest US-open continuation hour — left-tail risk of another 5–10% extension is the dominant failure mode here.",
+        "Entry slippage will be material when taker_buy_ratio is that elevated (offer-side thinning) — 8–16bps round-trip assumption may understate cost on this archetype specifically."
+      ],
+      "monitoring_advice": "In paper-shadow track max-adverse-excursion within first 30 min and rerun under 16bps cost; if mean drops by >50%, edge is cost-driven."
+    },
+    {
+      "archetype_ref": "e_new_listing_oi_extreme_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "New listings (<=30d) historically exhibit asymmetric upside continuation under top-decile OI prior to first major flush — shorting into new-listing pump has poor R:R; this is the same asymmetric TP/SL trap shape that bit E126.",
+        "listing_age_days population in 30d BWE window is small — likely <40 triggers across all symbols."
+      ],
+      "monitoring_advice": "Bucket results by listing_age_days (0–7 / 8–14 / 15–30); if young bucket is the loser, gate higher; verify p25_capped_tail not just mean."
+    },
+    {
+      "archetype_ref": "e_midcap_premium_basis_divergence_long",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Confirm basis_rate unit (annualized vs periodic) matches the <=-0.001 threshold semantics — mis-scaled threshold would silently filter to ~empty set."
+    },
+    {
+      "archetype_ref": "e_global_long_overcrowded_funding_top_premium_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Three top-decile/extreme flags ANDed (global_long_ratio_extreme × funding_pct_top_decile × premium_extreme) will fire on a tiny joint tail — sample starvation (<30 triggers/30d) is likely."
+      ],
+      "monitoring_advice": "Report n_triggers; if too few, drop to any-2-of-3 OR-of-extremes form."
+    },
+    {
+      "archetype_ref": "e_european_session_oi_ratio_burst_lowliq_long",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Compare lift vs the *-session OI burst baseline — if European-session adds <0.05 lift, the calendar gate is dead weight."
+    },
+    {
+      "archetype_ref": "e_pre_us_open_taker_buy_oi_top_long",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Single-hour gate (hour_utc=13) cuts sample by ~24x; verify trigger count meets minimum before scoring as keep."
+    },
+    {
+      "archetype_ref": "x_funding_flip_accelerated_trail",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "novel_dim mixes two distinct field tokens (funding_rate>=0 and funding<=-0.0001) — if these resolve to the same underlying funding field they are mutually contradictory as a point-in-time AND; if different fields the schema is not clear from notes and the loop may silently fall through (R1-class bug).",
+        "Binance perp funding only updates every 8h — a 'funding-flip accelerated trail' lacks intra-hold granularity to act before standard TP/SL kernels fire."
+      ],
+      "monitoring_advice": "Synthesizer: clarify whether this is a state-transition (cross-zero event with prev/next snapshot) vs an AND-conjunction; reject if it would silently fall through SUPPORTED_FIELDS."
+    },
+    {
+      "archetype_ref": "x_premium_revert_to_neutral_exit",
+      "verdict": "likely_fail",
+      "concerns": [
+        "novel_dim [premium_bps<=0, premium_bps>=0] is only co-satisfiable at premium_bps==0 exactly — read as AND-conjunction (the standard novel_dim semantics) it will essentially never fire and silently degrade to the channel/side baseline, exactly the R1 silent-passthrough bug.",
+        "Intended semantics ('cross-zero') requires a state-transition encoding the exit kernel framework must explicitly support; existing 5 kernels (fixed/time_only/breakeven/trail/multi_tp) do not."
+      ],
+      "monitoring_advice": "Synthesizer: rewrite as a band trigger (premium_bps in [-2,+2]) OR a verified cross event; otherwise exclude before scoring to avoid polluting results.tsv with a duplicate baseline."
+    },
+    {
+      "archetype_ref": "x_top_trader_sentiment_flip_exit",
+      "verdict": "likely_fail",
+      "concerns": [
+        "novel_dim stacks top_trader_position_ratio_low AND top_trader_position_ratio_high — these are mutually exclusive flag tokens at any single timestamp; AND-conjunction is unsatisfiable and will silently fall through to baseline (R1 bug pattern).",
+        "'Flip' semantics requires comparing two consecutive snapshots; the present exit kernel framework does not appear to expose prev-state, so this archetype likely has no valid implementation path."
+      ],
+      "monitoring_advice": "Synthesizer: either rewrite as a state-transition primitive (prev_low AND curr_high) once the loop supports it, or exclude this archetype outright."
+    },
+    {
+      "archetype_ref": "x_basis_normalize_take_profit",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Band [-5bps,+5bps] is consistent — confirm basis_rate poll cadence matches the exit-kernel evaluation tick to avoid missed crossings."
+    },
+    {
+      "archetype_ref": "x_oi_unwind_protective_long_exit",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "novel_dim [oi_change_pct<=-5, oi_change_pct<=-10] is redundant — effective threshold is -10; synthesizer should collapse to a single bound and clarify the OI delta window (post-entry vs trailing)."
+    },
+    {
+      "archetype_ref": "x_volume_decay_exhaustion_exit",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Define p25 reference window length explicitly (e.g., last 60 min vs trailing 24h) — without it the trigger is not reproducible."
+    },
+    {
+      "archetype_ref": "f_overheated_state_block_entries",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "funding_pct_top_decile and funding_abs_extreme are highly correlated — ANDing both adds minimal marginal selectivity over either alone; report filter-on vs filter-off keep-rate to confirm the filter actually subtracts losers."
+    },
+    {
+      "archetype_ref": "f_marketcap_liquidity_minimum_quality",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Notes say 'mid+ marketcap OR high liquidity OR 10M+ quote_volume_24h' (OR), but novel_dim is a flat list typically interpreted as AND — encoding mismatch will produce a much stricter filter than described and silently discard usable signals."
+      ],
+      "monitoring_advice": "Synthesizer: explicitly state OR vs AND in the produced rule and default to OR to match the quality-floor intent; verify the loop's filter combinator semantics first."
+    },
+    {
+      "archetype_ref": "r_funding_abs_extreme_half_size",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "funding_abs_extreme already implies funding_abs_high — listing both as AND is redundant; synthesizer should collapse to single flag, or build a tiered scaler (high=70%, extreme=50%) to actually use both bins."
+    },
+    {
+      "archetype_ref": "cc_oi_pricechange_consensus_120s_amplify",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Cross-channel consensus within 120s AND taker_buy_ratio_5m>=0.6 AND oi_change_pct>=10 is a compound AND likely to yield <50 triggers per 30d.",
+        "Cross-channel join with directional consensus must be implemented as a real pairing; if the loop currently treats novel_dim as a per-event filter only, this archetype will silently fall through to baseline."
+      ],
+      "monitoring_advice": "Track raw n_pairs found before micro-signal filtering; if <50, drop one micro-signal gate, and verify cross-channel pairing is actually wired before scoring."
+    },
+    {
+      "archetype_ref": "cc_reserved6_then_pricechange_180s_fade_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Ordered-pair (Reserved6 → pricechange within 180s) requires sequence-aware cross-channel logic; if the framework only supports unordered co-occurrence, this archetype collapses to a duplicate of an existing within-window pair and silently falls through (R1 bug pattern)."
+      ],
+      "monitoring_advice": "Synthesizer: confirm whether ordering is honored; if not, either declare equivalence to an unordered cross-channel and exclude, or defer until ordered-join is added to the loop."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 207.29
+}

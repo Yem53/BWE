@@ -1,0 +1,19 @@
+{
+  "summary": "Single-proposal deep review: OI-crash + taker-buy reversal long is logically coherent and channel-novel; main concern is statistical fragility of the -8% OI threshold over 30 days plus possible regime dependence.",
+  "critiques": [
+    {
+      "archetype_ref": "oi_crash_taker_buy_reversal_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Threshold fragility: oi_change_pct<=-8 on the OI_Price channel is a fairly extreme cut — over a 30-day window this co-occurring with taker_buy_ratio_5m>=0.60 AND liquidity_bucket=high may yield very few triggers (<500), risking that the score is driven by 1–2 symbols/events rather than a generalizable edge.",
+        "Semantic ambiguity of 'oi_change_pct': if it is measured over the same/overlapping window as the OI_Price channel trigger itself, the -8% condition may be partially co-determined by the channel firing (OI_Price already implies a notable OI move). Verify the lookback window is independent of the channel trigger to avoid implicit redundancy / mild look-ahead.",
+        "Regime dependence: short-cover reversal longs are a known pattern in BTC-led capitulation flushes but degrade in trending bear regimes where OI-down + taker-buy is just bear-flag distribution. Edge may be concentrated in specific BTC regimes within the 30-day sample.",
+        "Cost sensitivity on reversal entries: reversal longs typically need a wider initial SL than continuation longs, so the 8–16 bps round-trip cost plus 3–5s execution latency on a fast bounce can disproportionately erode mean PnL — especially under multi_tp/trail exits which already showed negative means in coverage_summary."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log trigger count and unique-symbol count — flag if <300 triggers or top-3 symbols contribute >60% of PnL; (2) tag each trigger with concurrent BTC regime and check edge persists across at least 2 regimes; (3) compare mean and p25_capped_tail (not just best score) against the OI_Price/long continuation baseline to confirm this is genuinely additive rather than a re-slice; (4) given the R2 E126 lesson, enforce symmetric TP/SL evaluation and flag if the winning exit pairing has TP/SL ratio <0.2."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.66
+}

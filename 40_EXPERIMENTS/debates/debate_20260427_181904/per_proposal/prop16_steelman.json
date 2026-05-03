@@ -1,0 +1,22 @@
+{
+  "archetype_ref": "x104_breakeven_strict_30s_exit",
+  "best_case_thesis": "The breakeven family's -0.08 floor in R2 isn't a sign of fundamental weakness — it's the signature of a LAX activation rule that lets BE trigger before the entry edge has had time to express, converting winning setups into scratches. A 30s activation gate combined with a stricter trigger threshold lets the entry's alpha fingerprint (the first leg of a pump_taker_buy or liquidity_bucket=high move) actually develop before the stop ratchets up, capturing the asymmetric upside while still cutting the left tail that destroyed E126's paper-shadow run. This is exactly the exit-side innovation the R2 synthesizer flagged as missing.",
+  "expected_alpha_source": "Mean-reversion-of-noise within the first 30s of high-liquidity entries: most adverse excursions in pump-taker setups are microstructure noise that resolves within ~30s, so deferring BE activation past that window preserves the trade's true edge instead of stopping out on liquidity-driven wicks.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-liquidity, high-volatility regimes (pricechange/OI_Price pump channels) where initial post-entry chop is large but mean-reverts quickly — exactly the regime where E126-class entries fire and where naive BE exits leak the most edge.",
+  "complementary_exit_families": [
+    "breakeven",
+    "trail"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E066",
+    "E051"
+  ],
+  "if_paper_works_likely_reason": "The 30s activation window will be shown to defer BE past the typical adverse-excursion half-life of pump-taker entries, lifting realized win-rate-conditional-on-survival enough to push the breakeven family above its current -0.08 ceiling on the kelly_capped / p25_capped_tail metrics.",
+  "could_compound_with": "Any companion proposal that pairs a tightened BE activation with a partial-trail handoff after the 30s window — combining x104's left-tail protection with trail's right-tail capture would directly attack the asymmetric TP/SL trap that broke E126 in paper-shadow.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 26.03
+}

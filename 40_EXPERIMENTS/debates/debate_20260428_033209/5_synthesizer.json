@@ -1,0 +1,281 @@
+{
+  "summary": "Round 4 Generator delivered the requested exit-side surge (9 of 20 proposals are exits, addressing the X101+ pipeline starvation lesson) plus naturally symmetric mean-reversion entries and conflict/confirm cross-channel logic. Default-accept posture honored: 19 accepted (12 clean, 7 accept-with-watch), 1 revised for clear dim/notes contradiction, 0 rejected. No concrete post-T0 leakage and no kernel-blocking duplicate slugs were found.",
+  "accepted_archetypes": [
+    {
+      "id": "X134",
+      "type": "exit",
+      "archetype": "x_exit_on_top_trader_position_dec",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "top_trader_position_ratio_dec"
+      ],
+      "expected_distinct": true,
+      "notes": "Exit when smart-money top-trader position ratio drops post-entry — they are unwinding before retail catches the reversal.",
+      "synthesizer_note": "Clean smart-money rip-cord; orthogonal to X083 (delta-event) by using state-flag semantics."
+    },
+    {
+      "id": "X135",
+      "type": "exit",
+      "archetype": "x_exit_funding_normalize_meanrev",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "funding_abs_high"
+      ],
+      "expected_distinct": true,
+      "notes": "Exit when funding rate has crossed back into normal band from extreme — extreme-funding alpha is gone.",
+      "synthesizer_note": "Differs from X080 flip; mean-reversion regime exit. Devil's 8h-cadence note is monitoring guidance, not a blocker."
+    },
+    {
+      "id": "X136",
+      "type": "exit",
+      "archetype": "x_exit_global_long_ratio_collapse",
+      "channel": "*",
+      "side": "long",
+      "novel_dim": [
+        "global_long_ratio_high"
+      ],
+      "expected_distinct": true,
+      "notes": "For long entries — exit when global_long_ratio decays out of the high band, signaling crowd flip.",
+      "synthesizer_note": "First sentiment-flip exit family; pairs with crowd-condition long entries."
+    },
+    {
+      "id": "X137",
+      "type": "exit",
+      "archetype": "x_exit_premium_decay_watchdog",
+      "channel": "*",
+      "side": "long",
+      "novel_dim": [
+        "premium_extreme"
+      ],
+      "expected_distinct": true,
+      "notes": "Long exit watchdog — close when premium falls out of the extreme band, removing the premium-squeeze rationale.",
+      "synthesizer_note": "Direction-distinct from X081 (entry-into vs leave-of premium-extreme)."
+    },
+    {
+      "id": "X138",
+      "type": "exit",
+      "archetype": "x_exit_session_boundary_close",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "session=US"
+      ],
+      "expected_distinct": true,
+      "notes": "Force-close any open position at US-session END (literal reading of session=US dim — i.e. trades held during US session get closed at session boundary).",
+      "synthesizer_note": "Devil flagged dim/notes-direction mismatch; resolved by adopting literal-dim reading (close at end of US session, not before US open) and rewording notes accordingly."
+    },
+    {
+      "id": "X139",
+      "type": "exit",
+      "archetype": "x_hybrid_time_then_premium_watchdog",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "premium_extreme"
+      ],
+      "expected_distinct": true,
+      "notes": "Hold for fixed time window unless premium crosses into the opposite extreme — then early exit; combines time + state-change.",
+      "synthesizer_note": "Hybrid time+state composition not present in the 5 base kernels."
+    },
+    {
+      "id": "X140",
+      "type": "exit",
+      "archetype": "x_hybrid_breakeven_then_funding_flip",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "funding_pct_top_decile"
+      ],
+      "expected_distinct": true,
+      "notes": "Breakeven once unrealized hits TP/2, then add a funding-flip rip-cord — exits if the funding regime inverts.",
+      "synthesizer_note": "Devil's flag-vs-event note: kernel must read the transition OUT of top decile as trigger; verify in paper-shadow."
+    },
+    {
+      "id": "X141",
+      "type": "exit",
+      "archetype": "x_exit_volume_exhaustion",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "volume_pct_below_p25"
+      ],
+      "expected_distinct": true,
+      "notes": "Exit once realized volume in the post-entry window drops into the bottom quartile — momentum has died. Trigger window must be ≥90s post-entry to avoid clipping R6 structural post-event volume collapse.",
+      "synthesizer_note": "Inverse of X079; Devil's R6-clipping concern absorbed into notes as ≥90s guard."
+    },
+    {
+      "id": "E334",
+      "type": "entry",
+      "archetype": "e_oi_collapse_volume_meanrev_short",
+      "channel": "OI_Price",
+      "side": "short",
+      "novel_dim": [
+        "oi_change_pct<=-15",
+        "volume_pct_top_decile",
+        "liquidity_bucket=high"
+      ],
+      "expected_distinct": true,
+      "notes": "Short when OI collapses sharply with high volume on a liquid pair — leveraged longs being flushed, expect mean reversion.",
+      "synthesizer_note": "Quant ~7 triggers/30d (too_few) — accept-with-watch; if first GPU pass shows <30 triggers, relax liquidity_bucket gate. Risk caution on live-overlap with OI_Price pump-long: log same-symbol collisions before any promotion."
+    },
+    {
+      "id": "E335",
+      "type": "entry",
+      "archetype": "e_pc_neg_premium_neg_basis_arb_long",
+      "channel": "pricechange",
+      "side": "long",
+      "novel_dim": [
+        "premium_bps<=-20",
+        "basis<=-0.3",
+        "liquidity_bucket=high"
+      ],
+      "expected_distinct": true,
+      "notes": "Long when both premium and basis are deeply negative — perp under-priced relative to spot, structural arbitrage support.",
+      "synthesizer_note": "Quant ~12 triggers/30d (too_few) — accept-with-watch; track realized round-trip cost, abandon if mean cost >25bps per Devil."
+    },
+    {
+      "id": "E336",
+      "type": "entry",
+      "archetype": "e_r6_us_session_largecap_only_short",
+      "channel": "Reserved6",
+      "side": "short",
+      "novel_dim": [
+        "session=US",
+        "marketcap_bucket=large",
+        "hour_utc>=14",
+        "hour_utc<=20"
+      ],
+      "expected_distinct": true,
+      "notes": "R6 extreme-move short, restricted to US session and large-cap only — best execution venue, lowest slippage tail.",
+      "synthesizer_note": "First R6 archetype with real trigger-set narrowing vs the duplicate-score E316–E333 set; per Risk caution, monitor symbol-level distribution and add per-symbol throttle if >50% land on 1-2 names."
+    },
+    {
+      "id": "E337",
+      "type": "entry",
+      "archetype": "e_oi_taker_buy_with_short_squeeze_long",
+      "channel": "OI_Price",
+      "side": "long",
+      "novel_dim": [
+        "taker_buy_ratio_5m>=0.65",
+        "global_short_ratio_extreme",
+        "funding<=0"
+      ],
+      "expected_distinct": true,
+      "notes": "Long on OI_Price when aggressive buying meets crowded shorts AND funding is non-positive — squeeze fuel without paying funding tax.",
+      "synthesizer_note": "Quant ~28 triggers/30d (too_few) and Risk HIGH live-conflict with existing OI_Price pump-long live strategy. Accept-with-watch ONLY for backtest/paper; before any live promotion, gate with ±5min same-symbol live-overlap skip per Risk remediation."
+    },
+    {
+      "id": "E338",
+      "type": "entry",
+      "archetype": "e_pc_pump_smart_money_neutral_short",
+      "channel": "pricechange",
+      "side": "short",
+      "novel_dim": [
+        "event_type=pump",
+        "top_trader_position_ratio_dec",
+        "premium_bps>=20"
+      ],
+      "expected_distinct": true,
+      "notes": "Pump event short — fade when top traders are decreasing position AND premium is hot; retail-driven exhaustion setup.",
+      "synthesizer_note": "Smart-money-fade entry adequate sample (~125). Risk caution on top_trader_position_ratio_dec window semantics — verify SUPPORTED_FIELDS interprets it as trailing, not forward; downgrade to exit-only if forward."
+    },
+    {
+      "id": "R042",
+      "type": "risk",
+      "archetype": "r_low_liquidity_size_dampener",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "liquidity_bucket=low"
+      ],
+      "expected_distinct": true,
+      "notes": "Risk archetype that down-sizes by 50% on low-liquidity bucket trades to keep slippage tail bounded under compound replay.",
+      "synthesizer_note": "Directly addresses R2 E126 paper-bleed lesson; new mean/Kelly metrics will reward left-tail compression."
+    },
+    {
+      "id": "F124",
+      "type": "filter",
+      "archetype": "f_stretched_market_funding_and_premium",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "funding_abs_high",
+        "premium_extreme"
+      ],
+      "expected_distinct": true,
+      "notes": "Skip entries when BOTH funding-abs and premium are in their extreme bands — over-stretched market, mean-reversion risk to existing positions.",
+      "synthesizer_note": "AND-composite distinct from existing single-flag filters; ~200 skips/30d is fine for a SKIP filter."
+    },
+    {
+      "id": "C065",
+      "type": "cross_channel",
+      "archetype": "cc_conflict_oi_pc_opposite_side_skip",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "session=US"
+      ],
+      "expected_distinct": true,
+      "notes": "Cross-channel veto — when OI_Price and pricechange fire on the same symbol with opposite sides within 90s, skip both. session=US gate restricts to high-liquidity hours.",
+      "synthesizer_note": "Quant flagged temporal/cross-channel logic is NOT in SUPPORTED_FIELDS — kernel must consume type=cross_channel metadata for conflict-skip to actually fire; verify in paper-shadow before promotion."
+    },
+    {
+      "id": "C066",
+      "type": "cross_channel",
+      "archetype": "cc_confirm_pc_r6_same_dir_size_boost",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "session=US",
+        "liquidity_bucket=high"
+      ],
+      "expected_distinct": true,
+      "notes": "When pricechange and Reserved6 fire same direction within 120s on a high-liquidity name, size-boost x1.5; double-channel confirmation = high-quality. Boost capped so post-boost notional ≤12% of capital, and forbidden when another open BWE position exists on same symbol.",
+      "synthesizer_note": "Risk HIGH concentration on 1.5x boost over 5-10% base — incorporated 12% notional cap and same-symbol veto into notes per Risk remediation. Same CC-kernel verification caveat as C065."
+    },
+    {
+      "id": "F125",
+      "type": "filter",
+      "archetype": "f_listing_age_minimum_180d",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "listing_age_days>=180"
+      ],
+      "expected_distinct": true,
+      "notes": "Filter out symbols listed under 180 days — avoid new-listing volatility regime where historical kline patterns are unreliable.",
+      "synthesizer_note": "First age-based filter; supports historical pattern validity for the entire entry roster."
+    },
+    {
+      "id": "X142",
+      "type": "exit",
+      "archetype": "x_exit_basis_invert",
+      "channel": "*",
+      "side": "both",
+      "novel_dim": [
+        "basis<=0"
+      ],
+      "expected_distinct": true,
+      "notes": "Exit when basis is in the non-positive regime post-entry; structural carry rationale removed. State-predicate reading — for entries already in basis≤0, exit will fire near T0+ε which the GPU loop will surface in time-to-exit distribution.",
+      "synthesizer_note": "Quant flagged near-name overlap with X084 (exit_on_basis_invert) — accept anyway because the supported-field encoding (basis<=0 state) differs from X084's transition semantics; let GPU/paper-shadow distinguish via TP/SL surface and time-to-exit mode."
+    }
+  ],
+  "revised_archetypes": [
+    {
+      "original_archetype_ref": "f_weekday_only_skip_weekend",
+      "revised_archetype": "f_monday_only_setup",
+      "revision_reason": "Devil + Quant flagged clear logical defect: novel_dim weekday=Mon contradicts stated 'skip weekend' (Mon-Fri) intent. SUPPORTED_FIELDS uses single-value categorical equality, so an AND of weekday=Mon..Fri is impossible (weekday is a single value per row), and there is no negation predicate to encode 'skip Sat/Sun'. Revised by aligning slug+notes to the literal dim (Monday-only setup) — the user can later request a true Mon-Fri filter if the parser is extended to support categorical IN-lists.",
+      "revised_novel_dim": [
+        "weekday=Mon"
+      ],
+      "revised_notes": "Monday-only setup gate — focuses on Asian + early-US weekly-open liquidity regime. NOTE: this is NOT the originally-intended weekend-skip filter; SUPPORTED_FIELDS lacks the IN-list / negation needed for that semantic. If a Mon-Fri inclusion gate is desired, request a parser extension to weekday=Mon|Tue|Wed|Thu|Fri or weekday!=Sat,Sun."
+    }
+  ],
+  "rejected_archetypes": [],
+  "next_round_focus": "Round 5 should (a) verify whether the loop's cross-channel kernel actually consumes type=cross_channel metadata for temporal conflict/confirm logic — if not, propose a parser extension before more CC archetypes; (b) extend the parser to support categorical IN-lists / negation so weekday-skip and similar filters can be specified honestly; and (c) propose more naturally-symmetric mean-reversion entries on OI_Price (negative-side oi_change_pct is under-explored) plus exits keyed on basis-transition and funding-decile transition events rather than state predicates.",
+  "_role": "synthesizer",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 169.19
+}

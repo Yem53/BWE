@@ -1,0 +1,42 @@
+project: bwe_complete_strategy_v6
+round: 2
+mode: focused_ablation_before_paper_shadow
+source_pack: 'H:\data\bwe\v6\runs\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115\llm_round_notes\deep_round1_true_llm_20260426_140354\true_deep_round1_source_pack.json'
+paper_only: true
+live_allowed: false
+policy:
+  one_hypothesis_per_iteration: true
+  baseline_first: true
+  reject_log_driven: true
+  stability_first: true
+  sample_gt15_included: true
+  sample_size_alone_reject_allowed: false
+first_hypothesis:
+  entry_family: premium_basis_overheat
+  side: long
+  entry_timing: 30s
+  action: swap_exit_families_with_entry_fixed
+  exits_to_compare:
+    - indicator_invalidation
+    - breakeven_ratchet
+    - state_machine
+    - runner_trail
+    - fixed_tp_sl
+controls:
+  keep_fee_stress: true
+  keep_slippage_stress: true
+  keep_latency_stress: true
+  keep_missed_fill_stress: true
+  de_duplicate_by_cluster: true
+  compare_to_baselines: true
+  enforce_future_safety: true
+next_hypotheses:
+  - freshness_strict_confirmation_30s_breakeven_ratchet_long
+  - oi_funding_continuation_1m_breakeven_ratchet_long
+  - breakeven_ratchet_exit_module_ablation
+  - short_side_balanced_probe
+forbidden:
+  - production_orders
+  - credential_reads
+  - notifications
+  - scheduler_changes

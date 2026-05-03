@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "pc_pump_top_trader_short_funding_high_short",
+  "expected_trades_per_day": 1.8,
+  "expected_trades_per_day_basis": "pricechange channel emits ~60 raw triggers/day; conjunction of top-trader-ratio-low (≈top quartile of snapshots) × funding top decile × move≥3% filters to ~3% of base flow → ~1.8/day, matching r1/r2 trigger counts in the 900-1500 range over ~30d windows.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC range-bound or down days with positive perp funding skew (>0.05% 8h)",
+      "altseason late-stage where retail crowds long while smart money rotates flat",
+      "post-listing pump candles on mid-cap symbols with fresh funding reset"
+    ],
+    "worst_in": [
+      "Strong BTC trend-up days where short-squeeze risk dominates regardless of positioning",
+      "Low-funding regimes (|funding|<0.01%) where the funding-extreme leg can't fire and the remaining signal degenerates to baseline pump-short",
+      "Stale top-trader-ratio snapshots near 8h funding boundary — signal is a lagged echo, not a live read"
+    ],
+    "explanation": "The edge is a crowded-long fade: it needs (a) retail visibly paying to be long via funding and (b) smart accounts already net-short in the position-ratio feed. When funding is flat or BTC is squeezing higher, both legs lose their meaning and the trade becomes a naive pump-short with negative expectancy."
+  },
+  "live_readiness_caveats": [
+    "Funding rate snapshot is 8h-cyclical — a trigger fired 30min before funding settlement uses near-realtime data, but one fired 7h after uses stale data; bucket and tag every paper-shadow fill by snapshot_age_minutes or the post-mortem will be uninterpretable.",
+    "Top-trader-position-ratio is a Binance-only proxy for smart money and is gameable + symbol-coverage-uneven; restrict live universe to symbols with continuous ratio history >30d and OI > $50M USDT to avoid micro-cap manipulation prints.",
+    "Short-side fills on pump candles routinely slip 0.05-0.15% on market orders; with TP=0.51 family from R2 lessons, a 10bps slip cuts edge by ~20% — require limit-or-better entries and reject fills slipped >0.10% from signal price."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "trades_per_day_actual_vs_predicted",
+      "alert_threshold": "sustained <0.8 or >3.5 over 7d",
+      "rationale": "Frequency drift signals either a regime where one leg stops firing (under) or the funding/ratio thresholds are too loose under current vol (over) — both invalidate the backtest distribution."
+    },
+    {
+      "metric": "median_trade_pct_by_funding_snapshot_age_bucket",
+      "alert_threshold": "buckets >4h showing median <0 while <2h buckets stay positive",
+      "rationale": "Directly tests Devil's staleness flag from synthesizer; if true, the live edge lives only in the fresh-snapshot subset and the strategy needs a hard age filter."
+    },
+    {
+      "metric": "realized_slippage_bps_per_fill",
+      "alert_threshold": "7d mean >12bps or any single fill >25bps",
+      "rationale": "R2 E126 paper showed asymmetric TP/SL turning a +0.39 backtest into -13.5% live — slippage is the dominant erosion vector for short-pump fades."
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">5 in a row",
+      "rationale": "Backtest Kelly-capped sizing assumes loss runs ≤4; a longer streak indicates the smart-money signal is no longer leading retail and the fade has inverted."
+    },
+    {
+      "metric": "7d_rolling_pnl_vs_btc_1d_return_corr",
+      "alert_threshold": "|corr|>0.5",
+      "rationale": "Edge should be position-ratio-driven, not BTC-beta; high correlation means we're just shorting alts in BTC up days, which is a known loser."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling Sharpe < 0 AND median trade % < 0 simultaneously for 3 consecutive days",
+      "rationale": "Confirms both central tendency and risk-adjusted return have flipped, not just a tail-driven dip — the cross-signal has lost predictive power."
+    },
+    {
+      "condition": "Cumulative paper PnL < -8% on $1000 notional with 5-10% sizing",
+      "rationale": "Mirrors R2 E126 -13.5% disaster threshold one stop earlier; given Kelly-capped sizing, an 8% drawdown means ~3-4 outsized losses, indicating the left tail is fatter than the backtest implied."
+    },
+    {
+      "condition": "Top-trader-ratio data feed gap >2h OR funding rate API returns stale (last_update > 1h old) for >20% of would-be triggers in a day",
+      "rationale": "Both inputs are load-bearing; if either feed degrades, the strategy is operating blind and any fills are noise, not signal."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 7.5,
+  "expected_max_dd_basis": "R2 E126 (similar long-side pc_pump cross-signal, TP=0.51/SL=6.0) hit -13.5% on $1000 paper; this short-side variant has tighter trigger count (~1.8/d vs 5/d) and an extra confirming leg (top-trader-ratio), so expect ~55% of E126's drawdown ≈ 7.5% over a 30d shadow window.",
+  "compare_to_existing": "E126 pc_pump_taker_buy_extreme_long (mirror long-side cross-signal, same channel, same pump-taker-flow family) — use as the triangulation benchmark: this archetype should show *opposite* sign PnL on BTC-up days and *correlated* drawdown profile on funding-flat days; if it tracks E126 directionally instead of inversely, the smart-money leg is not actually informative.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 54.03
+}

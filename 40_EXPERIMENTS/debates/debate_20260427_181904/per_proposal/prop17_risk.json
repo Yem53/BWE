@@ -1,0 +1,20 @@
+{
+  "summary": "Hybrid fixed+trail exit composition is research-integrity sound; the only flag is the taker_buy_ratio_5m field requiring the 5m window to be pre-T0, which is a verification item not a leakage finding.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "x105_hybrid_fixed_then_trail_exit",
+      "leakage_risk": "low",
+      "leakage_notes": "novel_dim uses taker_buy_ratio_5m>=0.60. The naming suffix '_5m' is ambiguous: if it denotes the trailing 5m window ending at T0 (lookback) it is clean; if it denotes a 5m window starting at T0 (lookahead) it would be post-T0 and leak. Given the SUPPORTED_FIELDS enforcement post-R1 and that taker_buy_ratio_5m is part of the standard pre-T0 microstructure feature set, treating as low rather than block. Verification: confirm the field's window is [T0-5m, T0], not [T0, T0+5m].",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "none",
+      "live_conflict_notes": "Exit-side archetype with no entry directionality (channel=NA, side=NA); cannot generate positions that conflict with the live BWE_OI_Price pump-long monitor — it only governs exit composition for whatever entry it is paired with.",
+      "concentration_risk": "low",
+      "adversarial_risk": "none",
+      "overall_severity": "acceptable",
+      "remediation": "Confirm in code review that taker_buy_ratio_5m is computed over the trailing window ending at T0 (not the forward window). If the implementation accidentally uses the forward 5m window, escalate to block — but the field name alone is not sufficient evidence of leakage given the post-R1 SUPPORTED_FIELDS gate."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 21.04
+}

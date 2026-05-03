@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "oi_pump_taker_buy_extreme_high_liq_long",
+  "expected_trades_per_day": 2.0,
+  "expected_trades_per_day_basis": "OI_Price channel typically fires ~60 events/day across all symbols; intersecting taker_buy_ratio_5m>=0.65 (~25% of bursts), liquidity_bucket=high (~30% of symbols), and oi_change_pct>=10 (~40% of OI bursts) yields ~60*0.25*0.30*0.40 ≈ 1.8/day, rounded to 2.0.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC trending up with rising aggregate OI",
+      "mid-cap alt rotation days where taker buy dominance persists >5min",
+      "funding rate near zero or slightly negative on the symbol"
+    ],
+    "worst_in": [
+      "BTC chop / range-bound days where OI pumps fade within 60s",
+      "high-funding (>0.05%/8h) regimes where longs are already crowded",
+      "post-CPI / FOMC liquidation cascades where high-liq names whipsaw"
+    ],
+    "explanation": "This is a momentum-continuation long on aggressive OI buildup — it needs follow-through, which only materializes when the broader tape supports longs and shorts are not already trapped. In chop or crowded-long regimes, the OI pump itself marks the local top and the high-liq filter ironically gives the best fills for adverse fills."
+  },
+  "live_readiness_caveats": [
+    "E126-family asymmetric TP/SL geometry (TP=0.51%, SL=6.00%, 80% win) is fragile: a single 6% loss erases ~12 winners. Synthesizer flagged this — enforce SL<=2.5x TP in the GPU sweep and reject configs where kelly_capped or p25_capped_tail is negative even when mean is positive.",
+    "High-liquidity bucket means competing with HFT on entry; expect 3-8 bps slippage on market-in and partial fills on limit-in within the OI burst window. Latency >2s from BWE message to order will materially erode edge given the 5min taker-buy-ratio lookback already lags the move.",
+    "OI_Price channel has 61 archetypes registered but ZERO in top-10 — this is either a real channel-quality gap or a feature-encoding gap. Treat the first 100 paper trades as channel validation, not archetype validation; do not scale size until OI_Price proves it can produce ANY positive archetype in paper."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "live median trade % vs backtest median (0.217%)",
+      "alert_threshold": "live median <50% of backtest median over rolling 30 trades",
+      "rationale": "E126 paper-shadow showed +0.3946 backtest compounding to -13.5% live — the asymmetric geometry hides left-tail in the median. Tracking median delta is the earliest signal that the trap is materializing."
+    },
+    {
+      "metric": "max consecutive losses (count and cumulative %)",
+      "alert_threshold": ">3 consecutive losses OR cumulative drawdown >12% within any 20-trade window",
+      "rationale": "With 80% modeled win rate and 6% SL, the geometric expectation of 3 consecutive losses is ~0.8% probability — observing it means the win rate has decayed below ~63%, which inverts kelly_capped."
+    },
+    {
+      "metric": "fill rate on TP=0.51% limit exits",
+      "alert_threshold": "<70% of expected TP touches actually fill",
+      "rationale": "On high-liq pumps, the 0.51% TP often prints but doesn't fill the full size due to queue position; missed TPs convert to time/SL exits which is the catastrophic path for this geometry."
+    },
+    {
+      "metric": "trades/day vs prediction (2.0)",
+      "alert_threshold": "<1.0 or >4.0/day sustained for 5 days",
+      "rationale": "Below 1/day means the triple-filter is over-restrictive and stats won't accumulate; above 4/day means either OI_Price firing has structurally shifted or one of the thresholds is being mis-applied — both invalidate the backtest baseline."
+    },
+    {
+      "metric": "taker_buy_ratio_5m at fill time vs at signal time",
+      "alert_threshold": "ratio drops >0.10 between signal and fill",
+      "rationale": "This archetype's edge is conditioned on persistent taker buy dominance; if it decays during the 5min lookback-to-fill window, the entry is into a fading move and SL probability spikes."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling Sharpe < 0 OR 7-day P&L below -8% on this archetype's allocation",
+      "rationale": "Given $1000 capital and 5-10% sizing, -8% on the strategy's slice means ~3 max-SL events compounded — well beyond the backtest's worst observable run, indicating the edge has flipped or the asymmetric geometry has detonated."
+    },
+    {
+      "condition": "win rate over trailing 25 trades drops below 65%",
+      "rationale": "Backtest implies 80% win rate; below 65% with TP=0.51%/SL=6.00% gives negative expectancy under any sane kelly_capped — the trap has materialized and additional trades only deepen the hole."
+    },
+    {
+      "condition": "two consecutive 6% SL hits within the same UTC day",
+      "rationale": "This is a 0.04^2 = 0.16% event under the backtest distribution; observing it means the conditional independence assumption between OI bursts has broken (likely correlated alt liquidations) and the archetype's risk model no longer applies."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 14.0,
+  "expected_max_dd_basis": "E126 (parent template) compounded to -13.5% on $1000 paper despite +0.3946 backtest score; porting to OI_Price channel where no archetype has yet ranked top-10 should be assumed at-least-as-bad until proven otherwise, so 14% is the floor expectation over a 30-day paper window with 5-10% sizing.",
+  "compare_to_existing": "E126 pc_pump_taker_buy_extreme_long — same taker-buy-extreme + long template, same asymmetric TP/SL family, just ported from pricechange to OI_Price channel. E126's paper-shadow result (+0.3946 backtest → -13.5% live) is the direct triangulation point and the strongest prior on what to expect.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 54.88
+}

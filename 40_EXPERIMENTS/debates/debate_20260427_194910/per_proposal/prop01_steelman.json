@@ -1,0 +1,23 @@
+{
+  "archetype_ref": "X102_fixed_15x_balanced",
+  "best_case_thesis": "This proposal directly attacks the asymmetric TP/SL trap exposed by E126's paper-shadow blowup: a 1.5x SL/TP ratio forces win rates above ~60% to be genuinely profitable rather than masking a fat left tail behind a high p25. The 1.0% TP is wide enough to capture the median follow-through on BWE pricechange/OI signals (which typically extend 0.8-2% in the first 60-180s after a taker-buy extreme), while the 1.5% SL is tight enough that a single adverse tick doesn't compound into the -6% catastrophes that wrecked the legacy fixed family. This is exactly the 'missing point' in the fixed-exit design space the synthesizer flagged in R2.",
+  "expected_alpha_source": "Bounded-geometry tail control on Telegram-driven momentum bursts: by capping max loss near the typical signal noise floor (~1.5%), the strategy converts BWE alerts from a high-win/fat-tail bet into a balanced-Kelly bet that survives the kelly_capped and p25_capped_tail metrics that correctly penalized E126.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Moderate-volatility trending regimes where BWE signals fire on continuation moves (taker-buy dominant, OI rising with price) — where 1.0% TP is reachable within the typical 1-5min momentum window but tail risk is contained because the underlying move has directional conviction rather than being a liquidity vacuum spike.",
+  "complementary_exit_families": [
+    "fixed",
+    "breakeven"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E148",
+    "E066",
+    "E036"
+  ],
+  "if_paper_works_likely_reason": "The 1.5x ratio survives the asymmetric-TP/SL trap by requiring genuine directional edge (>60% win rate) rather than hiding tail risk, so paper-shadow compounding will track backtest mean closely instead of diverging negatively like E126's 0.39→-13.5% blowup.",
+  "could_compound_with": "Pairs naturally with any X10x sibling proposing breakeven-stop overlays (e.g. move SL to entry after +0.5% MFE) — that combination would tighten the effective SL even further on winners while preserving the 1.5% hard floor on losers, directly improving p25_capped_tail.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.25
+}

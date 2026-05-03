@@ -1,0 +1,28 @@
+{
+  "summary": "Strong proposal: all 3 novel_dim conditions parse cleanly via supported fields, structurally distinct from existing OI_Price entries, and triggers estimate lands in the adequate-to-tight range with broad exit compatibility skewed toward fixed.",
+  "analyses": [
+    {
+      "archetype_ref": "oi_pump_taker_buy_extreme_high_liq_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E126",
+        "E064",
+        "E051"
+      ],
+      "distinctness_notes": "E126/E064 are the winning taker_buy templates but on pricechange channel; E051 uses high_liquidity on pricechange. No existing OI_Price entry combines taker_buy_ratio_5m + liquidity_bucket=high + oi_change_pct threshold as a triple-AND. The 61 OI_Price archetypes appear to focus on OI/funding/global_ratio dimensions, not taker-flow + liquidity. Cross-channel port of a proven pricechange template to OI_Price is structurally novel and tests whether the taker-buy edge generalizes beyond pricechange.",
+      "expected_triggers_30d": 105,
+      "triggers_estimate_method": "1400 OI_Price events × 0.30 (oi_change_pct>=10 is moderately common on OI_Price by construction) × 0.50 (high_liquidity bucket ~top tercile) × 0.50 (taker_buy_ratio_5m>=0.65 is roughly p70-p75 in pump regimes) ≈ 105",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Coverage table shows fixed dominates (mean +0.175, median +0.217, 6680/7320 positive) while multi_tp/trail/time_only/breakeven all have median<0 and zero positives — strongly recommend prioritizing fixed exits. Given E126's R2 paper-trade trap (TP=0.51/SL=6.00 asymmetry compounded to -13.5%), pair with symmetric or capped-asymmetry fixed grids and validate on mean/kelly_capped/p25_capped_tail rather than legacy p25. Breakeven could be a secondary screen to neutralize left-tail risk on this template."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.93
+}

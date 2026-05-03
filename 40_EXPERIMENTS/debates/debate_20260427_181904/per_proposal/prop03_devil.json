@@ -1,0 +1,16 @@
+{
+  "summary": "Single proposal looks reasonable with one specific concern about taker buy ratio threshold sensitivity in funding-neutral regimes.",
+  "critiques": [
+    {
+      "archetype_ref": "oi_pump_funding_neutral_taker_extreme_long",
+      "verdict": "seems_ok",
+      "concerns": [
+        "Funding-neutral window [-0.0001, 0.0001] is very narrow — at typical 5m sampling, instantaneous funding rarely sits exactly in this band during an active OI pump (+10%) since aggressive long taker buying usually pushes funding positive within minutes. Risk: trigger count may be very low and concentrated in transition moments, which could be a feature (catches early phase) or fragility (sample size too small to validate)."
+      ],
+      "monitoring_advice": "Track trigger count vs E126 baseline; if trig<500 over 30d, flag as too rare. Also log the funding trajectory in the 5m AFTER trigger — if funding rapidly skews positive post-entry, the 'organic' premise holds; if it stays neutral, may indicate weak conviction move that fails to follow through."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 15.05
+}

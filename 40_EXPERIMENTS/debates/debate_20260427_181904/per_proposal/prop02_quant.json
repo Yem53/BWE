@@ -1,0 +1,28 @@
+{
+  "summary": "Proposal is mathematically healthy — all 3 conditions parse via SUPPORTED_FIELDS, structurally distinct from continuation-only OI_Price longs, sample size adequate; best paired with fixed/breakeven exits given reversal thesis.",
+  "analyses": [
+    {
+      "archetype_ref": "oi_crash_taker_buy_reversal_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E066",
+        "E126",
+        "E051"
+      ],
+      "distinctness_notes": "Existing OI_Price longs in the registry are continuation-biased (OI-up + price-up + buy pressure). This archetype inverts the OI dimension (oi_change_pct<=-8, i.e. OI reduction / short-cover) while keeping taker buy pressure high — a divergence/reversal thesis not represented in the 61 existing OI_Price entries. E066 (pc_crash_taker_buy_long) is the closest cousin but lives on the pricechange channel and conditions on event_type=crash, not on OI reduction. Filter values + channel + signal logic are all materially different.",
+      "expected_triggers_30d": 85,
+      "triggers_estimate_method": "Base OI_Price events ~1400/30d. oi_change_pct<=-8 is a meaningful left-tail OI move — empirically ~25–30% of OI_Price triggers (call it 0.28). taker_buy_ratio_5m>=0.60 conditional on OI-down is a divergence signal — roughly 35% of OI-down events show contrarian buy pressure (0.35). liquidity_bucket=high cuts to ~60% of universe (0.60). 1400 × 0.28 × 0.35 × 0.60 ≈ 82. Conservative estimate: 85.",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Reversal/short-cover setups are mean-reverting in nature — they tend to pop quickly then fade, which favors fixed (with tight TP, modest SL) and breakeven kernels. Multi_tp could ladder out the initial cover bounce. Trail is risky here because reversal moves often retrace before extending, triggering premature stop-out. Time_only is poorly suited (whole exit family showed mean -0.73 in coverage_summary; reversal trades especially need a price-based exit). Recommend fixed + breakeven as primary, multi_tp as secondary; avoid trail and time_only."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.95
+}

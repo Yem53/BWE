@@ -1,0 +1,26 @@
+{
+  "summary": "X101_fixed_symmetric_tight is a structurally distinct, fully parameter-only exit archetype that bypasses filter-DSL parseability concerns entirely; sample size is inherited from whatever entry it pairs with, and the symmetric 1:1 TP/SL directly addresses the E126 asymmetric-tail trap.",
+  "analyses": [
+    {
+      "archetype_ref": "X101_fixed_symmetric_tight",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "all 106 existing exits — none documented as 1:1 symmetric pure-fixed at 0.5/0.5"
+      ],
+      "distinctness_notes": "This is an exit-side archetype defined purely by tp_pct=0.5 and sl_pct=0.5 (1:1 symmetric, no trail/BE/time/multi-TP overlay). The R2 lessons explicitly flag that asymmetric TP/SL (e.g. E126 TP=0.51/SL=6.00) was the structural failure mode; a symmetric fixed kernel at tight 0.5%/0.5% is documented as structurally absent in the current 5-kernel exit family. Even if other fixed-family exits exist, none combine (a) 1:1 ratio AND (b) tight 50bps width AND (c) no auxiliary stop logic — the GPU loop will still differentiate via paired entry surfaces.",
+      "expected_triggers_30d": null,
+      "triggers_estimate_method": "N/A — this is a pure exit archetype with no entry filter conditions of its own. Trigger count is inherited from whichever entry archetype it is paired with during exit×entry combinatorial expansion. Reference base rates from coverage: fixed-family currently has n=7320 evaluated combos with mean=+0.175 and 6680 positives, indicating exit-side fixed kernels are paired broadly across the 213 entry archetypes.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 2,
+      "exit_compatibility": "specific",
+      "exit_compatibility_notes": "Belongs unambiguously to the `fixed` exit family. Both novel_dim entries (tp_pct=0.5, sl_pct=0.5) are exit-kernel parameters per Section E of SUPPORTED_FIELDS — they are correctly skipped by the entry filter parser and consumed by the exit kernel, which is exactly the intended behavior for an exit archetype. Pairing recommendation: best fit with high-frequency entry archetypes that already show positive lift under fixed exits (e.g. pc_pump_taker_buy_extreme_long, pc_first_signal_* family) where the 1:1 symmetric kernel will most cleanly test whether tail symmetry alone (independent of TP/SL magnitude) recovers the lost E126 paper expectancy. Caution for Synthesizer: 50bps TP is tight relative to typical BWE move magnitudes (Reserved6 events are 8-15% in 180s) — recommend the Generator also queue X102/X103 variants at 1.0/1.0 and 1.5/1.5 to sweep the symmetric width axis rather than testing only one width point."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 28.38
+}

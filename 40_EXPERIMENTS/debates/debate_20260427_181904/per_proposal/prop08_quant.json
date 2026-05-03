@@ -1,0 +1,24 @@
+{
+  "summary": "Single Reserved6 long proposal with one parseable filter; computable at T0 with adequate-to-tight expected sample size and broad exit compatibility.",
+  "analyses": [
+    {
+      "archetype_ref": "r6_bigmove_simple_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [],
+      "distinctness_notes": "No existing archetype slug matches 'r6_bigmove_simple_long' in the preview. Reserved6 channel is underrepresented (35 entries) and a single-condition taker_buy_ratio_5m≥0.55 long filter on R6 is structurally unique versus the pricechange-dominated top entries. The minimal-AND design is a deliberate architectural pivot per pattern_miner, not a value tweak of an existing R6 archetype.",
+      "expected_triggers_30d": 120,
+      "triggers_estimate_method": "Reserved6 base ~800 events / 30d × ~0.50 long-side share × ~0.30 taker_buy_ratio_5m≥0.55 cut rate (moderately permissive threshold, slightly above neutral 0.5) ≈ 120. Conservative given pattern_miner notes baseline R6 trigger count ~120.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 1,
+      "n_total_conditions": 1,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "With only one filter and a broad taker-buy bias signal, fixed exits dominate per coverage_summary (fixed: median +0.217, only positive family). Recommend fixed TP/SL as primary; breakeven as secondary if early-move stickiness emerges. Avoid multi_tp and time_only (universally negative in R2 grid). Trail is marginal but worth including given long-momentum thesis."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 20.36
+}

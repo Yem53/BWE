@@ -1,0 +1,79 @@
+{
+  "run_id": "debate_20260426_211606",
+  "trigger": "first_real_debate",
+  "registry_summary": {
+    "total": 520,
+    "by_type": {
+      "entry": 200,
+      "exit": 100,
+      "filter": 120,
+      "risk": 40,
+      "cross_channel": 60
+    },
+    "entry_by_channel": {
+      "OI_Price": 60,
+      "pricechange": 60,
+      "Reserved6": 35,
+      "*": 45
+    },
+    "entry_by_side": {
+      "short": 93,
+      "long": 94,
+      "both": 13
+    }
+  },
+  "results_summary": {
+    "total": 2,
+    "by_status": {
+      "keep": 1,
+      "discard": 1
+    },
+    "best_score": 0.192241,
+    "n_keeps": 1
+  },
+  "recent_experiments": [
+    {
+      "commit": "7b6c21d",
+      "val_score": 0.192241,
+      "triggers": 500,
+      "status": "keep",
+      "description": "E=E001/oi_overcrowded_continuation_short X=X001/fixed_tp1_sl1_symmetric | n_var=10000 best_tp=0.44 best_sl=3.15 elapsed=8.8s"
+    },
+    {
+      "commit": "7b6c21d",
+      "val_score": 0.192241,
+      "triggers": 500,
+      "status": "discard",
+      "description": "[SMOKE] E=E001/oi_overcrowded_continuation_short X=X001/fixed_tp1_sl1_symmetric synthetic=True rate=574,577"
+    }
+  ],
+  "existing_archetype_ids_sample": [
+    "E001",
+    "E002",
+    "E003",
+    "E004",
+    "E005",
+    "E006",
+    "E007",
+    "E008",
+    "E009",
+    "E010",
+    "E011",
+    "E012",
+    "E013",
+    "E014",
+    "E015",
+    "E016",
+    "E017",
+    "E018",
+    "E019",
+    "E020"
+  ],
+  "models": {
+    "generator": "claude-sonnet-4-6",
+    "devil": "claude-opus-4-7",
+    "quant": "claude-sonnet-4-6",
+    "risk": "claude-opus-4-7",
+    "synthesizer": "claude-opus-4-7"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "archetype_ref": "cc_pc_oi_within_60s_double_long",
+  "best_case_thesis": "When pricechange and OI_Price both fire within a 60-second window with taker_buy_ratio_5m>=0.60, you are observing simultaneous spot-driven price impulse AND derivatives-side new-position accumulation — that is the signature of fresh leveraged longs piling onto a spot-led move, not stale carry. Existing cc_*_5m archetypes saturate at baseline precisely because a 5-minute window pools together causally-unrelated fires; tightening to 60s isolates the rare regime where both books agree in real time, which historically front-runs continuation legs before late longs and shorts-getting-squeezed amplify the move.",
+  "expected_alpha_source": "Real-time agreement between spot-flow (taker buy dominance) and derivatives positioning (OI expansion) within a sub-minute window — a microstructure signature of conviction-driven entry that precedes momentum ignition, distinct from passive carry or mean-reversion noise that dominates wider windows.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-liquidity trending or breakout regimes where derivatives lead/confirm spot impulses; maximally effective when funding is neutral-to-slightly-positive (room for short squeeze) and BTC is not in macro distribution.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E051",
+    "E064"
+  ],
+  "if_paper_works_likely_reason": "The 60s tight-window filter successfully isolates the subset of cross-channel fires where both books are causally linked rather than coincident, producing a higher-conviction entry trigger than any single-channel pump signal alone.",
+  "could_compound_with": "Any proposal that adds a liquidation-cascade or short-squeeze confirmation layer on top would compound — the dual-channel timing identifies conviction; a squeeze-fuel filter would identify when that conviction meets forced-buying tailwind.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.06
+}

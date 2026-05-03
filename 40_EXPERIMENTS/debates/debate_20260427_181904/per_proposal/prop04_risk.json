@@ -1,0 +1,20 @@
+{
+  "summary": "Triple-AND of taker_buy_5m, high_liq, and global_short_high is a paper-shadow monitoring item with no integrity issues; all three component fields are pre-T0 and supported.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "pc_pump_taker_buy_high_liq_global_short_long",
+      "leakage_risk": "none",
+      "leakage_notes": "taker_buy_ratio_5m is a trailing 5-minute window measured at/before T0 (not post-T0 like a forward_* or confirm_after_* field); liquidity_bucket is a static/contemporaneous classification; global_short_ratio_high is a snapshot ratio observable at T0. None of the three novel_dim fields reference forward, post_event, or confirm_after semantics, and all are in the SUPPORTED_FIELDS set per R1 lesson.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Side=long on pricechange channel aligns directionally with the live BWE_OI_Price_monitor pump long strategy rather than opposing it; the conflict is overlap (double-allocation on same symbol/window) rather than opposite-side. At $1000 capital and triple-AND selectivity, expected concurrent overlap is small but should be paper-shadow monitored before any live promotion.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "Not a blocker. For paper-shadow monitoring: (1) report family-wise lift after Bonferroni/BH correction across the E051/E064/E126/E148 family since this proposal shares parameters with all four; (2) log per-symbol trigger distribution and flag if >50% of triggers concentrate in 1–2 symbols (single-point-failure check); (3) tag overlap windows with the live pump-long strategy in the shadow ledger so combined exposure can be observed before any future live consideration."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.0
+}

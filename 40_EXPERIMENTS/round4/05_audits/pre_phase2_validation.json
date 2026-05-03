@@ -1,0 +1,117 @@
+{
+  "T39": {
+    "none (lifecycle-aware)": {
+      "total_raw": 144.14595614480893,
+      "total_cap": 7.207297807240447,
+      "n_traded": 210,
+      "config_labels_used": {
+        "wider": 154,
+        "tighter": 11,
+        "baseline": 45
+      }
+    },
+    "baseline (force L2-base)": {
+      "total_raw": 131.94046903071103,
+      "total_cap": 6.597023451535552,
+      "n_traded": 210,
+      "config_labels_used": {
+        "baseline": 210
+      }
+    },
+    "wider (force L2-wide)": {
+      "total_raw": 84.00593132814002,
+      "total_cap": 4.200296566407001,
+      "n_traded": 210,
+      "config_labels_used": {
+        "wider": 210
+      }
+    },
+    "tighter (force L2-tight)": {
+      "total_raw": 128.47870790658,
+      "total_cap": 6.423935395329001,
+      "n_traded": 210,
+      "config_labels_used": {
+        "tighter": 210
+      }
+    }
+  },
+  "T40": {
+    "accepted": 154,
+    "rejected_total_cap": 45,
+    "rejected_tier": 11,
+    "accepted_at_8": 8,
+    "accepted_at_12": 0
+  },
+  "T41": [
+    {
+      "scenario": "BWE PAPER L2-per-lifecycle",
+      "pre_fee_cap": 7.21,
+      "post_fee_cap": 5.32,
+      "fee_impact": 1.8900000000000001,
+      "erosion_pct": 26.213592233009702
+    },
+    {
+      "scenario": "BWE LIVE L2-per-lifecycle",
+      "pre_fee_cap": 5.07,
+      "post_fee_cap": 4.332000000000001,
+      "fee_impact": 0.738,
+      "erosion_pct": 14.556213017751467
+    },
+    {
+      "scenario": "Broader L4-tier",
+      "pre_fee_cap": 89.7,
+      "post_fee_cap": 79.6317,
+      "fee_impact": 10.0683,
+      "erosion_pct": 11.224414715719073
+    }
+  ],
+  "T42": {
+    "soft_pass": true,
+    "strict_pass": true,
+    "metrics": {
+      "n_trades": 50,
+      "total_raw": 121.89841957265538,
+      "max_drawdown_pct_raw": 55.10416204352781,
+      "max_drawdown_pct_capital": 2.7552081021763906,
+      "position_pct": 5,
+      "sharpe_like": 2.074648471320093
+    },
+    "failed_criterion": null
+  },
+  "T43": {
+    "healthy_check": {
+      "regression": false,
+      "regressed_metrics": [],
+      "current": {
+        "total_raw": 1100.0,
+        "total_cap": 85.0
+      },
+      "baseline": {
+        "total_raw": 1147.6,
+        "total_cap": 89.7,
+        "win_rate": 66.9,
+        "mean_cap": 0.088,
+        "n_trades": 1017
+      }
+    },
+    "degraded_check": {
+      "regression": true,
+      "regressed_metrics": [
+        "total_raw",
+        "total_cap"
+      ],
+      "current": {
+        "total_raw": 800.0,
+        "total_cap": 60.0
+      },
+      "baseline": {
+        "total_raw": 1147.6,
+        "total_cap": 89.7,
+        "win_rate": 66.9,
+        "mean_cap": 0.088,
+        "n_trades": 1017
+      }
+    },
+    "alert": "REGRESSION DETECTED: broader_l4_tier \u2014 metrics=['total_cap'] drift=33.0% above threshold (current=60.00% vs baseline=89.70%)"
+  }
+}

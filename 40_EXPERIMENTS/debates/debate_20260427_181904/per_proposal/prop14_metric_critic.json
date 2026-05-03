@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "x102_wide_trail_2pct_exit",
+  "predicted_tp_pct": 2.8,
+  "predicted_sl_pct": 2.2,
+  "predicted_tp_sl_ratio": 1.27,
+  "predicted_win_rate": 0.48,
+  "predicted_mean_per_trade_pct": 0.12,
+  "predicted_kelly_pct": 3.0,
+  "trap_risk": "low",
+  "trap_reasoning": "Trail-family geometry is intrinsically near-symmetric: a 2.0% trail-back from peak produces an effective give-back comparable to the initial hard stop (~2.0-2.5%), so the asymmetric TP<<SL pattern that defined the E126 trap is structurally unlikely here. Captured winners on a 2% trail tend to be 2.5-3.5% (the trail only triggers after a meaningful run), so TP/SL ratio sits near 1.0-1.3 rather than the 0.08 ratio that broke E126. The real risk is NOT the trap (mean<<p25); it is flat-out negative expectancy: the entire trail family in R3 had n_positive=0 and max=-0.006, so the prior is that wider step does not rescue it. High uncertainty on whether 2.0% step crosses zero — pattern_miner's 1.5-2.5% recommendation is plausible (current sweeps appear too tight, causing premature stops on noise), but no R1/R2 evidence confirms break-even is reachable. Honest call: expectancy ~0±0.3% per trade, probably barely positive on the strongest entries and flat-to-negative elsewhere.",
+  "recommended_constraint": "pair the 2.0% trail with an initial hard SL ≤ 2.5% to bound first-bar adverse moves before trail activates; in the variant grid, sweep trail_step ∈ {1.5, 2.0, 2.5}% × activation_threshold ∈ {0.5, 1.0}% so the trail only arms after a confirmed move (prevents trail-step itself acting as a tight symmetric stop on noise).",
+  "metric_score_estimate": 2.0,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 50.62
+}

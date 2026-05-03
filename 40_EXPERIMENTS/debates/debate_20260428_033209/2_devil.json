@@ -1,0 +1,141 @@
+{
+  "summary": "Generator batch is mostly sound with strong exit-side coverage and naturally-symmetric mean-reversion entries; main concerns are a few novel_dim/notes mismatches, sample-size starvation on triple-AND entries, and one filter with contradictory weekday spec.",
+  "critiques": [
+    {
+      "archetype_ref": "x_exit_on_top_trader_position_dec",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "During paper-shadow, log how often top_trader_position_ratio_dec flips post-entry — if <5% trigger rate, the exit is effectively dormant."
+    },
+    {
+      "archetype_ref": "x_exit_funding_normalize_meanrev",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "Funding updates are 8h-cadenced on Binance — verify the exit polling resolution is fine enough that normalize crossings aren't missed mid-bucket."
+    },
+    {
+      "archetype_ref": "x_exit_global_long_ratio_collapse",
+      "verdict": "seems_ok",
+      "concerns": []
+    },
+    {
+      "archetype_ref": "x_exit_premium_decay_watchdog",
+      "verdict": "seems_ok",
+      "concerns": []
+    },
+    {
+      "archetype_ref": "x_exit_session_boundary_close",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "novel_dim is `session=US` but notes describe exiting BEFORE US session opens — the dim gates on being IN the US session, which contradicts a pre-US-session exit. Either the dim should be `session!=US` plus a boundary-time predicate, or notes should be 'exit at end of US session'."
+      ],
+      "monitoring_advice": "Check first-day paper-shadow firings: if the exit only fires on positions opened during US session, the registered behavior matches the dim, not the notes."
+    },
+    {
+      "archetype_ref": "x_hybrid_time_then_premium_watchdog",
+      "verdict": "seems_ok",
+      "concerns": []
+    },
+    {
+      "archetype_ref": "x_hybrid_breakeven_then_funding_flip",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "funding_pct_top_decile is a state flag, not a flip event — confirm the kernel interprets a transition out of that decile as the rip-cord, not just being in it."
+    },
+    {
+      "archetype_ref": "x_exit_volume_exhaustion",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "On Reserved6 extreme-event entries, post-entry volume often collapses within 60s by design — risk of premature exits cutting genuine moves; verify trigger window is >=90s post-entry."
+    },
+    {
+      "archetype_ref": "e_oi_collapse_volume_meanrev_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "OI_Price channel preview shows entries dominated by positive OI surges; oi_change_pct<=-15 may be very rare on this channel (sample-size starvation risk).",
+        "Combining oi_change_pct<=-15 with volume_pct_top_decile AND liquidity_bucket=high is a triple AND on rare conditions — could yield <50 triggers in 30 days."
+      ],
+      "monitoring_advice": "After first GPU pass, check trigger count; if <100, relax to two of the three dims or drop liquidity gate."
+    },
+    {
+      "archetype_ref": "e_pc_neg_premium_neg_basis_arb_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "premium_bps<=-20 AND basis<=-0.3 simultaneously is a rare double-negative dislocation; expect very low trigger count.",
+        "Negative premium + negative basis is often a symptom of stale or thin perp book on a mid-liquidity pair, even with liquidity_bucket=high — slippage tail may eat the structural arbitrage edge."
+      ],
+      "monitoring_advice": "Track realized round-trip cost per trigger; if mean cost > 25bps the structural-arb thesis is dead."
+    },
+    {
+      "archetype_ref": "e_r6_us_session_largecap_only_short",
+      "verdict": "seems_ok",
+      "concerns": [],
+      "monitoring_advice": "R6 channel preview shows 50 entries already collapsing to identical scores — verify session+marketcap dual-gate actually differentiates triggers from baseline R6/short."
+    },
+    {
+      "archetype_ref": "e_oi_taker_buy_with_short_squeeze_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Triple-AND on taker_buy_ratio_5m>=0.65, global_short_ratio_extreme, funding<=0 is structurally restrictive; in pump regimes funding rapidly turns positive so the funding<=0 gate likely vetoes most squeeze candidates."
+      ],
+      "monitoring_advice": "If trigger count <200 over 30d, consider relaxing funding<=0 to funding<=fund_p50."
+    },
+    {
+      "archetype_ref": "e_pc_pump_smart_money_neutral_short",
+      "verdict": "seems_ok",
+      "concerns": []
+    },
+    {
+      "archetype_ref": "f_weekday_only_skip_weekend",
+      "verdict": "likely_fail",
+      "concerns": [
+        "novel_dim is `weekday=Mon` but notes describe skipping weekends (i.e. allow Mon-Fri). The dim as specified will only allow Mondays, vetoing Tue-Sun including all the working weekdays the notes intend to keep. Clear logical defect between dim and stated intent — fix dim to enumerate Mon-Fri or use a `weekday!=Sat,Sun` form."
+      ],
+      "monitoring_advice": "After parser run, count distinct weekdays in fired triggers — if only Monday appears, dim is wrong, not parser."
+    },
+    {
+      "archetype_ref": "r_low_liquidity_size_dampener",
+      "verdict": "seems_ok",
+      "concerns": []
+    },
+    {
+      "archetype_ref": "f_stretched_market_funding_and_premium",
+      "verdict": "seems_ok",
+      "concerns": []
+    },
+    {
+      "archetype_ref": "cc_conflict_oi_pc_opposite_side_skip",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "novel_dim only specifies `session=US`; the cross-channel conflict logic (opposite-side OI vs pricechange within 90s) is not represented in any supported field. Risk that the kernel cannot encode the temporal+side conflict and falls back to baseline."
+      ],
+      "monitoring_advice": "Verify the kernel parser actually reads cross-channel timing windows; if not, this archetype will degenerate to a session=US filter."
+    },
+    {
+      "archetype_ref": "cc_confirm_pc_r6_same_dir_size_boost",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Same parser concern as conflict variant — temporal co-firing window (120s) and same-direction logic aren't in novel_dim, only session=US + liquidity_bucket=high.",
+        "Restricting to US session AND high liquidity will additionally compress already-rare pc+r6 co-firings; expect very few size-boost events."
+      ],
+      "monitoring_advice": "Log pc+r6 same-direction co-fire count over 30d before and after session+liquidity gates to confirm enough sample remains for size-boost to matter."
+    },
+    {
+      "archetype_ref": "f_listing_age_minimum_180d",
+      "verdict": "seems_ok",
+      "concerns": []
+    },
+    {
+      "archetype_ref": "x_exit_basis_invert",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "novel_dim is `basis<=0` which is a state predicate, not an inversion event. If entry already had basis<=0 (common in deep pumps with negative carry), this exits at T0+epsilon for zero edge.",
+        "Need a transition predicate (basis_sign_change_since_entry) to capture inversion semantics; current flag is ambiguous."
+      ],
+      "monitoring_advice": "Track time-to-exit distribution; if mode <5s, exit is firing on entry-time state, not crossings."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 116.13
+}

@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "x103_multi_tp_60_40_ladder_exit",
+  "predicted_tp_pct": 0.5,
+  "predicted_sl_pct": 2.5,
+  "predicted_tp_sl_ratio": 0.2,
+  "predicted_win_rate": 0.55,
+  "predicted_mean_per_trade_pct": -0.43,
+  "predicted_kelly_pct": 0.0,
+  "trap_risk": "high",
+  "trap_reasoning": "This is an EXIT archetype proposing a 60/40 multi_tp ladder (TP1=0.5%, TP2=1.5%) — but the coverage_summary shows the entire multi_tp exit family has n=3111, mean=-0.276, median=-0.28, max=-0.094, and ZERO positive results across the whole grid. Every multi_tp variant tried so far has lost money. The proposed 60/40 split front-loads harvest at TP1=0.5%, meaning 60% of the position exits at a tiny +0.5% gain, while the residual 40% must reach +1.5% OR get stopped out at SL (likely 2-3%). With effective avg-win ~0.9% (0.6×0.5 + 0.4×1.5 assuming both TPs hit, but TP2 hit-rate is much lower — realistically blended win ~0.6-0.7%) against SL ~2.5%, you need win_rate >~0.78 just to break even before costs. The novel_dim filter taker_buy_ratio_5m>=0.60 adds modest selectivity but won't lift win-rate to that bar. The structural problem: multi_tp exits leave residual exposure that defeats the early-harvest advantage. High trap risk both via negative expectancy AND via the legacy-p25 illusion (60% of trades closing at +0.5% looks great in p25 but the residual 40% bleeds the mean negative). Note: this is also classified as type=exit but novel_dim is an entry-side filter (taker_buy_ratio), suggesting confused archetype design.",
+  "recommended_constraint": "Constrain TP2 ≤ 2×TP1 AND force SL ≤ 1.5×TP2 in variant grid; also require the entry-side filter to be applied at trigger time, not as exit gate. Better: skip this and propose a multi_tp variant where residual leg uses trail-stop instead of fixed TP2, since pure fixed-TP ladders have 0/3111 positive history.",
+  "metric_score_estimate": 0.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.81
+}

@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "pc_crash_oversold_global_long_extreme_long",
+  "expected_trades_per_day": 1.5,
+  "expected_trades_per_day_basis": "Synthesizer note flags ~45 triggers per quantile cut on pricechange channel; over a 30-day window that yields ~1.5 trades/day; further regime gating (extreme global_long + early taker reversal) likely halves it to ~0.7-1.5/day depending on month.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC dominance flat or rising while alts cascade -4% within 1m (broad crash, not idiosyncratic dump)",
+      "Funding negative or rapidly flipping negative on the symbol at trigger time",
+      "High-liquidity majors/large-caps where taker_buy_ratio is informative (BTC, ETH, SOL, top-30 perps)"
+    ],
+    "worst_in": [
+      "Sustained downtrend regimes where global_long_ratio stays elevated for hours (capitulation never resolves; longs keep getting flushed)",
+      "Low-volatility chop where -4% moves are rare and triggered ones are usually news-driven idiosyncratic dumps",
+      "Micro-cap / low-liquidity symbols where taker_buy_ratio_5m is dominated by 1-2 whales and gives false reversal signal"
+    ],
+    "explanation": "This is a counter-trend mean-reversion long into a crash, conditioned on extreme retail-long capitulation plus early aggressive buying. It works when the crash is a forced-liquidation flush in an otherwise neutral tape, and fails when -4% is the start of a sustained leg down — global_long_ratio extreme can persist for hours in a real bear leg, turning the 'reversal' signal into knife-catching."
+  },
+  "live_readiness_caveats": [
+    "Counter-trend longs into -4% crashes structurally invite SL>>TP asymmetry — even with synthesizer's SL<=2xTP and TP>=0.8% guard, expect occasional -1.6% full SL hits that wipe 4-5 winning trades; one bad week can compound to -10%+ on $1000 if sizing isn't held to 5%",
+    "Entry timing is fragile: taker_buy_ratio_5m>=0.55 measured AT trigger can decay within seconds; >2-3s execution latency from BWE message → order may catch the second leg down instead of the bounce, especially on micro-caps",
+    "global_long_ratio data freshness matters — most providers update this on 5m cadence; 'extreme' reading at trigger may already be stale by 1-3 minutes, masking the real positioning picture"
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "trades/day vs 1.5 prediction (rolling 7d)",
+      "alert_threshold": "<0.5 or >4 sustained for 7d",
+      "rationale": "Crash-conditioned archetypes are regime-dependent; large drift means the regime filter is no longer doing its job and the strategy is either silent or over-firing in the wrong tape"
+    },
+    {
+      "metric": "realized TP-hit rate",
+      "alert_threshold": "<55% over 20+ trades",
+      "rationale": "Backtest implies high win rate is the only thing that makes a tight-TP/wide-SL counter-trend long net positive; a drop below ~55% means asymmetric losses are no longer covered"
+    },
+    {
+      "metric": "average loss size / average win size ratio",
+      "alert_threshold": ">2.5x",
+      "rationale": "Direct measurement of the asymmetric-tail trap that killed E126 in paper-shadow; if losses are >2.5x wins live, expectancy is almost certainly negative even at 70% win rate"
+    },
+    {
+      "metric": "slippage at fill vs trigger price (bps)",
+      "alert_threshold": ">15 bps median or >50 bps p95",
+      "rationale": "On crash entries the book is one-sided; chasing into a -4% candle can give terrible fills that single-handedly invert backtest edge"
+    },
+    {
+      "metric": "max consecutive losses",
+      "alert_threshold": ">=4",
+      "rationale": "With ~1.5 trades/day and asymmetric SL, 4 in a row would be the canonical sign that 'crash' has become 'sustained downtrend' and the regime assumption broke"
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling P&L on $1000 paper account drops below -8%",
+      "rationale": "Mirrors the E126 failure mode: backtest looked positive but real compounding turned -13.5%; an 8% paper drawdown with only ~10 trades means asymmetric tail is already manifesting and the archetype's edge is illusory"
+    },
+    {
+      "condition": "Median trade % flips negative for 3 consecutive days OR realized win rate <50% over last 20 trades",
+      "rationale": "This strategy's entire thesis is high-win-rate/tight-TP; once median goes red or win rate cracks 50%, the asymmetric SL math guarantees negative expectancy and the regime has shifted out of mean-reversion"
+    },
+    {
+      "condition": "Two SL hits within the same 30-minute window on different symbols",
+      "rationale": "Indicates broad-market sustained sell-off (not isolated flushes) — exactly the 'worst regime' for counter-trend longs; pause until a green BTC day confirms regime reset"
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 12.0,
+  "expected_max_dd_basis": "Backtest best score +0.395 on the parent E126 family compounded to -13.5% in real paper-shadow (R2 lesson); this is a stricter, lower-trigger variant with explicit asymmetry guards (SL<=2xTP, TP>=0.8%), so DD should be modestly contained vs E126 — estimate ~10-12% max DD on a 30-day paper window assuming 5% sizing.",
+  "compare_to_existing": "E126 pc_pump_taker_buy_extreme_long — same channel, same taker_buy_ratio_5m reversal mechanic, same asymmetric-TP/SL trap shape; E126 is the canonical 'looked great in backtest, lost 13.5% in paper' cautionary case and this archetype is its mirror-image (crash-long instead of pump-long), so it should be triangulated trade-by-trade against E126's paper-shadow log.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 50.87
+}

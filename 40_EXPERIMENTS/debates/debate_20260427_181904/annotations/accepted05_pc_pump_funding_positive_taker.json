@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "pc_pump_funding_positive_taker_sell_short",
+  "expected_trades_per_day": 1.8,
+  "expected_trades_per_day_basis": "Reference E148 pc_pump_global_short_high_long fired 988 times (~33/day across 30d); this archetype adds two simultaneous filters (funding>=0.0005 AND taker_buy_ratio_5m<=0.40) on top of the pump>=3% gate, each cutting ~70-80%, yielding ~50-60 events / 30 days ≈ 1.8/day.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC choppy/range days with elevated funding (>0.05% 8h) on alts",
+      "post-news euphoric pump bars where price spikes >3% but spot CVD/taker-buy ratio stays <0.40 (futures-led, no spot follow-through)",
+      "crowded-long phases identified by funding top-decile across the futures board"
+    ],
+    "worst_in": [
+      "Strong BTC trend-up days where alt pumps continue for 30-60m past entry",
+      "low-funding regimes (funding<0.01%) where the crowded-long premise is absent — signal degrades to a pure momentum fade",
+      "exchange-listing / unlock catalyst pumps where flow is one-directional despite negative tape internals"
+    ],
+    "explanation": "The edge is structural: positive funding + taker-sell dominance during a pump means longs are paying to hold while aggressive flow is exiting, a textbook reversion setup. It fails when the pump is genuinely catalyst-driven, because internals lag price and the fade gets run over."
+  },
+  "live_readiness_caveats": [
+    "Funding rate must be sampled at entry from the SAME timestamp the bar closes — using a stale 8h-old funding snapshot will misclassify ~25% of triggers and is the most likely live/backtest divergence.",
+    "taker_buy_ratio_5m is computed on aggregated trades; on low-volume symbols (<$5M 5m volume) this metric is noisy and can flip sign within seconds — restrict to symbols with >$10M 5m turnover to keep the filter meaningful.",
+    "Symmetric TP/SL geometry only protects expectancy if slippage on entry is <0.10% — short entries during a vertical pump bar often fill 0.2-0.5% worse than mark, which converts a +0.4 lift into break-even."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "trades_per_day_actual_vs_predicted",
+      "alert_threshold": "outside [0.8, 3.5] for 5 consecutive days",
+      "rationale": "Either filter is misimplemented (too loose → trap-shaped distribution returns) or funding/taker-buy regime has shifted enough to invalidate the premise."
+    },
+    {
+      "metric": "median_trade_pct_rolling_20",
+      "alert_threshold": "<0 for 3 consecutive days OR <-0.15 once",
+      "rationale": "This is a mean-reversion short; median (not mean) is the cleanest read on whether the typical fade is still working — mean is dominated by the rare runaway pump losses."
+    },
+    {
+      "metric": "entry_slippage_bps_p75",
+      "alert_threshold": ">15 bps",
+      "rationale": "Fades into vertical bars are slippage-prone; if p75 slippage exceeds 15 bps the symmetric TP/SL geometry no longer holds and edge collapses."
+    },
+    {
+      "metric": "funding_at_entry_distribution_p25",
+      "alert_threshold": "<0.0003",
+      "rationale": "If a quarter of triggers come in below the intended funding floor, the filter is admitting non-crowded setups and the archetype is drifting toward a generic momentum short."
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">6",
+      "rationale": "At ~1.8 trades/day with TP≈SL geometry expected win rate ~55-60%; consecutive losses >6 indicates regime breakdown (trending pumps), not random variance."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling Sharpe < 0 AND median_trade_pct < 0 simultaneously for 5 trading days",
+      "rationale": "Both central-tendency and risk-adjusted metrics negative rules out variance — the mean-reversion premise is no longer present in the current market."
+    },
+    {
+      "condition": "Realized max drawdown on paper account exceeds 8% within first 30 days",
+      "rationale": "Backtest expectation is ~5% paper-window DD; exceeding 8% means tail risk is materially worse than backtest, almost certainly from execution gap on vertical-bar entries."
+    },
+    {
+      "condition": "Three consecutive trades where funding flipped negative within 15m of entry",
+      "rationale": "Funding regime change in real time means the crowded-long thesis evaporated mid-trade; this is the single observable kill-signal that the structural edge has disappeared."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 5.0,
+  "expected_max_dd_basis": "Symmetric TP=SL geometry with backtest win rate ~55-60% and ~1.8 trades/day implies a worst-case streak of 4-5 losses per 30d window, ≈ 5×1.0% per-trade loss on 5-10% sizing ≈ 5% account DD.",
+  "compare_to_existing": "Closest live/top peer is E126 pc_pump_taker_buy_extreme_long inverted — same pricechange channel, same taker-flow construct, but flipped sign and side; this archetype should mirror E126's frequency profile (~3k/30d before filters) shrunk by funding+ratio gates, and should specifically NOT exhibit the asymmetric TP/SL trap that made E126's 0.3946 backtest compound to -13.5% paper, because TP=SL by construction here.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 46.36
+}

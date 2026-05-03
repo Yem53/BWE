@@ -1,0 +1,20 @@
+{
+  "summary": "Pure time_only 60s exit paired with a taker_buy_ratio_5m filter — no leakage, no live conflict, acceptable as a paper-shadow exit experiment despite the family's poor historical track record.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "x101_quick_cut_60s_time_exit",
+      "leakage_risk": "none",
+      "leakage_notes": "novel_dim uses taker_buy_ratio_5m>=0.65, which is a backward-looking 5m aggregate observable at T0. No forward_*, confirm_after_*, or post_event_* fields. The 60s time exit is a future holding window (deliberate, not leakage). Field is on the SUPPORTED_FIELDS allowlist per R1 lesson.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Exit-only archetype with NA channel/side; cannot itself open a position conflicting with the live BWE_OI_Price pump-long strategy. Only conflict surface is if it gets paired in backtest with a short entry on a symbol the live system is long — a pairing-layer concern, not an exit-rule concern.",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "acceptable",
+      "remediation": "None required for integrity. Advisory: when paired in backtest, restrict to entries whose side matches live posture (long) on overlapping symbols to avoid offsetting the live book; flag in scorecard that time_only family has 0/2745 positives historically so the 60s+taker-ratio combo must clear a higher bar (e.g. require mean and p25_capped_tail both > 0, not just legacy p25) before promotion."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.84
+}

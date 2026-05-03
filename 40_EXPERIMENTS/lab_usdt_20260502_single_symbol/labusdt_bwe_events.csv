@@ -1,0 +1,178 @@
+event_ts_ms,event_minute_ms,source,post_id,event_side,text
+1776942892626,1776942840000,BWE_pricechange_monitor,77069,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 3.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3.6% in the past 3 seconds 💰 市值 LAB MarketCap: 143M
+1776957123692,1776957120000,BWE_tier2_monitor,3542,down,"📢 Bitget公告 | 🕒 2026-04-23 23:08:09 🔗 [Source] 🇨🇳 关于调整LABUSDT永续期货交易对杠杆、持仓层级和维持保证金率的公告 🇺🇸 Announcement on adjustment of leverage, position tiers and maintenance margin rate for LABUSDT perpetual futures trading pair 💰 市值 LAB MarketCap: 160M"
+1776995578778,1776995520000,BWE_pricechange_monitor,77191,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内上涨 4.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) +4.3% in the past 30 seconds 💰 市值 LAB MarketCap: 171M
+1776996286454,1776996240000,BWE_pricechange_monitor,77193,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 179M
+1776997099056,1776997080000,BWE_pricechange_monitor,77198,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 179M
+1777003149035,1777003140000,BWE_pricechange_monitor,77210,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 3 seconds 💰 市值 LAB MarketCap: 193M
+1777003339263,1777003320000,BWE_pricechange_monitor,77211,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.4% in the past 3 seconds 💰 市值 LAB MarketCap: 194M
+1777005197604,1777005180000,BWE_OI_Price_monitor,12992,up,"🇨🇳 🟢 LABUSDT 币安未平仓合约量 +8.6%，过去 3600 秒价格上涨 12.0%，未平仓合约量：1960 万美元，未平仓合约量/市值比率：9.9%，24 小时价格变动：+56.5% 🇺🇸 🟢 LABUSDT Binance openinterest +8.6%, Price +12.0% in the past 3600 seconds, OI: $19.6M, OI/Marketcap ratio: 9.9%, 24H Price Change: +56.5% 💰 市值 LAB MarketCap: 194M"
+1777008864204,1777008840000,BWE_pricechange_monitor,77213,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 3.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.1% in the past 10 seconds 💰 市值 LAB MarketCap: 211M
+1777009096213,1777009080000,BWE_pricechange_monitor,77214,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 3.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.1% in the past 10 seconds 💰 市值 LAB MarketCap: 211M
+1777009264598,1777009260000,BWE_pricechange_monitor,77215,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 211M
+1777009509933,1777009500000,BWE_pricechange_monitor,77216,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2.9%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.9% in the past 3 seconds 💰 市值 LAB MarketCap: 211M
+1777009685246,1777009680000,BWE_pricechange_monitor,77218,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.4% in the past 3 seconds 💰 市值 LAB MarketCap: 211M
+1777009808816,1777009800000,BWE_pricechange_monitor,77219,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2% in the past 3 seconds 💰 市值 LAB MarketCap: 211M
+1777010008493,1777009980000,BWE_pricechange_monitor,77220,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2% in the past 3 seconds 💰 市值 LAB MarketCap: 211M
+1777010560214,1777010520000,BWE_pricechange_monitor,77223,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 5.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +5.2% in the past 60 seconds 💰 市值 LAB MarketCap: 207M
+1777011105760,1777011060000,BWE_pricechange_monitor,77225,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2% in the past 3 seconds 💰 市值 LAB MarketCap: 207M
+1777011139519,1777011120000,BWE_OI_Price_monitor,12993,up,"🇨🇳 🔻 LABUSDT 币安未平仓合约量 -8.0%，过去 3600 秒价格下跌 27.3%，未平仓合约量：1380 万美元，未平仓合约量/市值比率：6.7%，24 小时价格变动：+12.7% 🇺🇸 🔻 LABUSDT Binance openinterest -8.0%, Price -27.3% in the past 3600 seconds, OI: $13.8M, OI/Marketcap ratio: 6.7%, 24H Price Change: +12.7% 💰 市值 LAB MarketCap: 207M"
+1777011693237,1777011660000,BWE_pricechange_monitor,77231,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内下跌 4%。 🇺🇸 Price Monitor: LABUSDT (LAB) -4% in the past 30 seconds 💰 市值 LAB MarketCap: 207M
+1777022921877,1777022880000,BWE_pricechange_monitor,77257,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 7.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) +7.3% in the past 60 seconds 💰 市值 LAB MarketCap: 151M
+1777145202422,1777145160000,BWE_pricechange_monitor,77616,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 7.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -7.1% in the past 60 seconds 💰 市值 LAB MarketCap: 191M
+1777145282020,1777145280000,BWE_Reserved6,385,down,🇨🇳 🔻 LABUSDT 币安期货价格在过去 180 秒内下跌了 20.1%。 🇺🇸 🔻 LABUSDT Binance futures price dropped 20.1% in the past 180 seconds 💰 市值 LAB MarketCap: 191M
+1777145285593,1777145280000,BWE_pricechange_monitor,77617,down,"🇨🇳 Bybit.P 监控：LABUSDT 在过去 10 秒内下跌了 6.7%，买价：0.63162，卖价：0.63297，最新价：0.63296。 🇺🇸 Bybit.P Monitor: LABUSDT -6.7% in the past 10 seconds, bid: 0.63162, ask: 0.63297, last: 0.63296. 💰 市值 LAB MarketCap: 191M"
+1777145334586,1777145280000,BWE_pricechange_monitor,77618,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内上涨 6.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +6.2% in the past 30 seconds 💰 市值 LAB MarketCap: 191M
+1777146278405,1777146240000,BWE_pricechange_monitor,77619,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 3.9%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3.9% in the past 3 seconds 💰 市值 LAB MarketCap: 191M
+1777146279493,1777146240000,BWE_pricechange_monitor,77620,up,"🇨🇳 Bybit.P 监控：LABUSDT 在过去 10 秒内上涨了 7.9%，买价：0.71601，卖价：0.71727，最新价：0.71727。 🇺🇸 Bybit.P Monitor: LABUSDT +7.9% in the past 10 seconds, bid: 0.71601, ask: 0.71727, last: 0.71727. 💰 市值 LAB MarketCap: 191M"
+1777147108132,1777147080000,BWE_pricechange_monitor,77622,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 5.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) -5.3% in the past 3 seconds 💰 市值 LAB MarketCap: 191M
+1777147111803,1777147080000,BWE_pricechange_monitor,77623,down,"🇨🇳 Bybit.P 监控：LABUSDT 在过去 10 秒内下跌了 7.7%，买价：0.85651，卖价：0.85878，最新价：0.85682。 🇺🇸 Bybit.P Monitor: LABUSDT -7.7% in the past 10 seconds, bid: 0.85651, ask: 0.85878, last: 0.85682. 💰 市值 LAB MarketCap: 191M"
+1777151390300,1777151340000,BWE_pricechange_monitor,77634,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 3%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3% in the past 3 seconds 💰 市值 LAB MarketCap: 186M
+1777151418912,1777151400000,BWE_pricechange_monitor,77635,down,"🇨🇳 Bybit.P 监控：LABUSDT 在过去 10 秒内下跌了 6.1%，买价：0.7216，卖价：0.72295，最新价：0.72217。 🇺🇸 Bybit.P Monitor: LABUSDT -6.1% in the past 10 seconds, bid: 0.7216, ask: 0.72295, last: 0.72217. 💰 市值 LAB MarketCap: 186M"
+1777151645535,1777151640000,BWE_pricechange_monitor,77637,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 3.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.4% in the past 3 seconds 💰 市值 LAB MarketCap: 186M
+1777153639720,1777153620000,BWE_pricechange_monitor,77638,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内下跌 6.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -6.1% in the past 30 seconds 💰 市值 LAB MarketCap: 186M
+1777155072942,1777155060000,BWE_pricechange_monitor,77641,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 3.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3.2% in the past 3 seconds 💰 市值 LAB MarketCap: 166M
+1777155482686,1777155480000,BWE_pricechange_monitor,77643,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 5.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) +5.4% in the past 10 seconds 💰 市值 LAB MarketCap: 166M
+1777155484779,1777155480000,BWE_pricechange_monitor,77644,up,"🇨🇳 Bybit.P 监控：LABUSDT 在过去 10 秒内上涨了 6.1%，买价：0.76621，卖价：0.7683，最新价：0.76754。 🇺🇸 Bybit.P Monitor: LABUSDT +6.1% in the past 10 seconds, bid: 0.76621, ask: 0.7683, last: 0.76754. 💰 市值 LAB MarketCap: 166M"
+1777184983023,1777184940000,BWE_pricechange_monitor,77693,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 3 seconds 💰 市值 LAB MarketCap: 189M
+1777191394056,1777191360000,BWE_pricechange_monitor,77715,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.7% in the past 3 seconds 💰 市值 LAB MarketCap: 210M
+1777193348579,1777193340000,BWE_pricechange_monitor,77728,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 210M
+1777214824915,1777214820000,BWE_pricechange_monitor,77762,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 5.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +5.2% in the past 60 seconds 💰 市值 LAB MarketCap: 206M
+1777225400423,1777225380000,BWE_pricechange_monitor,77793,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 3.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3.4% in the past 3 seconds 💰 市值 LAB MarketCap: 190M
+1777666296827,1777666260000,BWE_OI_Price_monitor,13338,up,"🇨🇳 🟢 LABUSDT 币安未平仓合约量 +9.4%，过去 3600 秒价格上涨 20.9%，未平仓合约量：1750 万美元，未平仓合约量/市值比率：9.7%，24 小时价格变动：+29.4% 🇺🇸 🟢 LABUSDT Binance openinterest +9.4%, Price +20.9% in the past 3600 seconds, OI: $17.5M, OI/Marketcap ratio: 9.7%, 24H Price Change: +29.4% 💰 市值 LAB MarketCap: 179M"
+1777668277272,1777668240000,BWE_OI_Price_monitor,13340,up,"🇨🇳 🟢 LABUSDT 币安未平仓合约量 +9.3%，过去 3600 秒价格上涨 16.5%，未平仓合约量：1830 万美元，未平仓合约量/市值比率：9.7%，24 小时价格变动：+31.5% 🇺🇸 🟢 LABUSDT Binance openinterest +9.3%, Price +16.5% in the past 3600 seconds, OI: $18.3M, OI/Marketcap ratio: 9.7%, 24H Price Change: +31.5% 💰 市值 LAB MarketCap: 179M"
+1777676746612,1777676700000,BWE_pricechange_monitor,78627,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.7% in the past 3 seconds 💰 市值 LAB MarketCap: 214M
+1777677370537,1777677360000,BWE_OI_Price_monitor,13342,up,"🇨🇳 🟢 LABUSDT 币安未平仓合约量 +8.1%，过去 3600 秒价格上涨 16.4%，未平仓合约量：2330 万美元，未平仓合约量/市值比率：10.9%，24 小时价格变动：+50.5% 🇺🇸 🟢 LABUSDT Binance openinterest +8.1%, Price +16.4% in the past 3600 seconds, OI: $23.3M, OI/Marketcap ratio: 10.9%, 24H Price Change: +50.5% 💰 市值 LAB MarketCap: 214M"
+1777677425188,1777677420000,BWE_pricechange_monitor,78628,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.4% in the past 3 seconds 💰 市值 LAB MarketCap: 214M
+1777678349303,1777678320000,BWE_pricechange_monitor,78629,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 214M
+1777679104324,1777679100000,BWE_pricechange_monitor,78630,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.2% in the past 3 seconds 💰 市值 LAB MarketCap: 214M
+1777679171779,1777679160000,BWE_OI_Price_monitor,13343,up,"🇨🇳 🟢 LABUSDT 币安未平仓合约量 +9.8%，过去 3600 秒价格上涨 21.6%，未平仓合约量：2680 万美元，未平仓合约量/市值比率：12.0%，24 小时价格变动：+67.3% 🇺🇸 🟢 LABUSDT Binance openinterest +9.8%, Price +21.6% in the past 3600 seconds, OI: $26.8M, OI/Marketcap ratio: 12.0%, 24H Price Change: +67.3% 💰 市值 LAB MarketCap: 214M"
+1777679392831,1777679340000,BWE_pricechange_monitor,78633,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 214M
+1777681163248,1777681140000,BWE_pricechange_monitor,78637,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 249M
+1777682176351,1777682160000,BWE_pricechange_monitor,78638,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 5.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -5.1% in the past 60 seconds 💰 市值 LAB MarketCap: 249M
+1777682634075,1777682580000,BWE_pricechange_monitor,78639,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 6%。 🇺🇸 Price Monitor: LABUSDT (LAB) +6% in the past 60 seconds 💰 市值 LAB MarketCap: 249M
+1777686446858,1777686420000,BWE_pricechange_monitor,78642,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内下跌 4.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) -4.4% in the past 30 seconds 💰 市值 LAB MarketCap: 292M
+1777686566505,1777686540000,BWE_pricechange_monitor,78644,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 5.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) +5.5% in the past 60 seconds 💰 市值 LAB MarketCap: 292M
+1777686881577,1777686840000,BWE_pricechange_monitor,78645,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.4% in the past 3 seconds 💰 市值 LAB MarketCap: 292M
+1777692559657,1777692540000,BWE_pricechange_monitor,78649,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.5% in the past 3 seconds 💰 市值 LAB MarketCap: 267M
+1777695283235,1777695240000,BWE_pricechange_monitor,78652,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.6% in the past 3 seconds 💰 市值 LAB MarketCap: 314M
+1777695317567,1777695300000,BWE_OI_Price_monitor,13347,up,"🇨🇳 🟢 LABUSDT 币安未平仓合约量 +5.4%，过去 3600 秒价格上涨 20.2%，未平仓合约量：3920 万美元，未平仓合约量/市值比率：12.5%，24 小时价格变动：+121.5% 🇺🇸 🟢 LABUSDT Binance openinterest +5.4%, Price +20.2% in the past 3600 seconds, OI: $39.2M, OI/Marketcap ratio: 12.5%, 24H Price Change: +121.5% 💰 市值 LAB MarketCap: 314M"
+1777696286335,1777696260000,BWE_pricechange_monitor,78655,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.2% in the past 10 seconds 💰 市值 LAB MarketCap: 314M
+1777697139305,1777697100000,BWE_pricechange_monitor,78657,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.7% in the past 3 seconds 💰 市值 LAB MarketCap: 314M
+1777698109227,1777698060000,BWE_pricechange_monitor,78659,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 3 seconds 💰 市值 LAB MarketCap: 365M
+1777698444706,1777698420000,BWE_pricechange_monitor,78660,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.9%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.9% in the past 3 seconds 💰 市值 LAB MarketCap: 365M
+1777698565299,1777698540000,BWE_pricechange_monitor,78661,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.8% in the past 3 seconds 💰 市值 LAB MarketCap: 365M
+1777698997925,1777698960000,BWE_pricechange_monitor,78662,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内下跌 3.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.2% in the past 30 seconds 💰 市值 LAB MarketCap: 365M
+1777699000089,1777698960000,BWE_pricechange_monitor,78663,down,"🇨🇳 Bybit.P 监控：LABUSDT 在过去 10 秒内下跌了 6.1%，买价：1.80644，卖价：1.80872，最新价：1.80567。 🇺🇸 Bybit.P Monitor: LABUSDT -6.1% in the past 10 seconds, bid: 1.80644, ask: 1.80872, last: 1.80567. 💰 市值 LAB MarketCap: 365M"
+1777699032216,1777699020000,BWE_Reserved6,396,down,🇨🇳 🔻 LABUSDT 币安期货价格在过去 180 秒内下跌了 13.0%。 🇺🇸 🔻 LABUSDT Binance futures price dropped 13.0% in the past 180 seconds 💰 市值 LAB MarketCap: 365M
+1777699118817,1777699080000,BWE_pricechange_monitor,78665,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 90 秒内下跌 5.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) -5.4% in the past 90 seconds 💰 市值 LAB MarketCap: 365M
+1777699238905,1777699200000,BWE_pricechange_monitor,78666,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 90 秒内上涨 6.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +6.2% in the past 90 seconds 💰 市值 LAB MarketCap: 365M
+1777699367259,1777699320000,BWE_pricechange_monitor,78669,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 3.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.6% in the past 60 seconds 💰 市值 LAB MarketCap: 365M
+1777699494543,1777699440000,BWE_pricechange_monitor,78671,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.2% in the past 10 seconds 💰 市值 LAB MarketCap: 365M
+1777699675052,1777699620000,BWE_pricechange_monitor,78672,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 10 seconds 💰 市值 LAB MarketCap: 365M
+1777699870348,1777699860000,BWE_pricechange_monitor,78673,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.2% in the past 3 seconds 💰 市值 LAB MarketCap: 365M
+1777699996909,1777699980000,BWE_pricechange_monitor,78674,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.1% in the past 10 seconds 💰 市值 LAB MarketCap: 365M
+1777700168928,1777700160000,BWE_pricechange_monitor,78675,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.2% in the past 10 seconds 💰 市值 LAB MarketCap: 365M
+1777700465131,1777700460000,BWE_pricechange_monitor,78676,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.6% in the past 3 seconds 💰 市值 LAB MarketCap: 365M
+1777700765502,1777700760000,BWE_pricechange_monitor,78677,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.5% in the past 3 seconds 💰 市值 LAB MarketCap: 365M
+1777700878605,1777700820000,BWE_Reserved6,397,up,🇨🇳 🟢 LABUSDT 币安期货价格在过去 180 秒内飙升 13.9% 🇺🇸 🟢 LABUSDT Binance futures price surged 13.9% in the past 180 seconds 💰 市值 LAB MarketCap: 365M
+1777700885998,1777700880000,BWE_pricechange_monitor,78679,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.7% in the past 3 seconds 💰 市值 LAB MarketCap: 365M
+1777701131768,1777701120000,BWE_pricechange_monitor,78680,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2% in the past 3 seconds 💰 市值 LAB MarketCap: 365M
+1777701251495,1777701240000,BWE_pricechange_monitor,78681,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 90 秒内上涨 8.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) +8.4% in the past 90 seconds 💰 市值 LAB MarketCap: 365M
+1777701374412,1777701360000,BWE_pricechange_monitor,78682,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.6% in the past 3 seconds 💰 市值 LAB MarketCap: 365M
+1777701494033,1777701480000,BWE_pricechange_monitor,78683,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内下跌 4.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) -4.7% in the past 30 seconds 💰 市值 LAB MarketCap: 365M
+1777701643850,1777701600000,BWE_pricechange_monitor,78684,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 10 seconds 💰 市值 LAB MarketCap: 418M
+1777701765266,1777701720000,BWE_pricechange_monitor,78685,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 90 秒内上涨 5.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) +5.7% in the past 90 seconds 💰 市值 LAB MarketCap: 418M
+1777701884973,1777701840000,BWE_pricechange_monitor,78686,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.1% in the past 10 seconds 💰 市值 LAB MarketCap: 418M
+1777702005153,1777701960000,BWE_pricechange_monitor,78687,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内下跌 3%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3% in the past 30 seconds 💰 市值 LAB MarketCap: 418M
+1777702144096,1777702140000,BWE_pricechange_monitor,78688,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.8% in the past 3 seconds 💰 市值 LAB MarketCap: 418M
+1777702270736,1777702260000,BWE_pricechange_monitor,78689,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.5% in the past 3 seconds 💰 市值 LAB MarketCap: 418M
+1777702391090,1777702380000,BWE_pricechange_monitor,78691,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.3% in the past 10 seconds 💰 市值 LAB MarketCap: 418M
+1777702544979,1777702500000,BWE_pricechange_monitor,78692,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.4% in the past 10 seconds 💰 市值 LAB MarketCap: 418M
+1777702664803,1777702620000,BWE_pricechange_monitor,78693,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 3.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.6% in the past 60 seconds 💰 市值 LAB MarketCap: 418M
+1777702827015,1777702800000,BWE_pricechange_monitor,78694,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.1% in the past 10 seconds 💰 市值 LAB MarketCap: 418M
+1777702947004,1777702920000,BWE_pricechange_monitor,78695,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 4.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +4.1% in the past 60 seconds 💰 市值 LAB MarketCap: 418M
+1777703142366,1777703100000,BWE_pricechange_monitor,78697,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.4% in the past 10 seconds 💰 市值 LAB MarketCap: 418M
+1777703240414,1777703220000,BWE_OI_Price_monitor,13349,up,"🇨🇳 🔻 LABUSDT 币安未平仓合约量 -5.2%，过去 3600 秒价格下跌 6.6%，未平仓合约量：4110 万美元，未平仓合约量/市值比率：9.8%，24 小时价格变动：+141.7% 🇺🇸 🔻 LABUSDT Binance openinterest -5.2%, Price -6.6% in the past 3600 seconds, OI: $41.1M, OI/Marketcap ratio: 9.8%, 24H Price Change: +141.7% 💰 市值 LAB MarketCap: 418M"
+1777703261967,1777703220000,BWE_pricechange_monitor,78699,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.7% in the past 3 seconds 💰 市值 LAB MarketCap: 418M
+1777703460152,1777703460000,BWE_pricechange_monitor,78700,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.1% in the past 10 seconds 💰 市值 LAB MarketCap: 418M
+1777703645025,1777703640000,BWE_pricechange_monitor,78702,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 3.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.6% in the past 60 seconds 💰 市值 LAB MarketCap: 418M
+1777703876860,1777703820000,BWE_pricechange_monitor,78704,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2% in the past 3 seconds 💰 市值 LAB MarketCap: 418M
+1777703997804,1777703940000,BWE_pricechange_monitor,78705,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 3.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.7% in the past 60 seconds 💰 市值 LAB MarketCap: 418M
+1777704162922,1777704120000,BWE_pricechange_monitor,78706,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 3.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.8% in the past 60 seconds 💰 市值 LAB MarketCap: 418M
+1777704359330,1777704300000,BWE_pricechange_monitor,78707,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 3.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.6% in the past 60 seconds 💰 市值 LAB MarketCap: 418M
+1777704478993,1777704420000,BWE_pricechange_monitor,78708,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 3.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.6% in the past 60 seconds 💰 市值 LAB MarketCap: 418M
+1777704649996,1777704600000,BWE_pricechange_monitor,78709,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.5% in the past 3 seconds 💰 市值 LAB MarketCap: 418M
+1777704707078,1777704660000,BWE_Reserved6,398,up,🇨🇳 🟢 LABUSDT 币安期货价格在过去 180 秒内上涨了 10.8%。 🇺🇸 🟢 LABUSDT Binance futures price surged 10.8% in the past 180 seconds 💰 市值 LAB MarketCap: 418M
+1777704793719,1777704780000,BWE_pricechange_monitor,78710,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 4.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) +4.6% in the past 60 seconds 💰 市值 LAB MarketCap: 418M
+1777704916694,1777704900000,BWE_pricechange_monitor,78712,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.2% in the past 10 seconds 💰 市值 LAB MarketCap: 418M
+1777705225994,1777705200000,BWE_pricechange_monitor,78715,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 3 seconds 💰 市值 LAB MarketCap: 397M
+1777705685115,1777705680000,BWE_pricechange_monitor,78716,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 4.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -4.2% in the past 3 seconds 💰 市值 LAB MarketCap: 397M
+1777705685116,1777705680000,BWE_pricechange_monitor,78717,down,"🇨🇳 Bybit.P 监控：LABUSDT 在过去 10 秒内下跌了 6.6%，买价：1.7075，卖价：1.70939，最新价：1.70715。 🇺🇸 Bybit.P Monitor: LABUSDT -6.6% in the past 10 seconds, bid: 1.7075, ask: 1.70939, last: 1.70715. 💰 市值 LAB MarketCap: 397M"
+1777705809422,1777705800000,BWE_pricechange_monitor,78718,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内下跌 4.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) -4.2% in the past 30 seconds 💰 市值 LAB MarketCap: 397M
+1777705930359,1777705920000,BWE_pricechange_monitor,78719,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 3%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3% in the past 3 seconds 💰 市值 LAB MarketCap: 397M
+1777706054569,1777706040000,BWE_pricechange_monitor,78720,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.3% in the past 3 seconds 💰 市值 LAB MarketCap: 397M
+1777706199474,1777706160000,BWE_pricechange_monitor,78721,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内上涨 4.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) +4.3% in the past 30 seconds 💰 市值 LAB MarketCap: 397M
+1777706656987,1777706640000,BWE_pricechange_monitor,78722,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.6% in the past 3 seconds 💰 市值 LAB MarketCap: 397M
+1777706659238,1777706640000,BWE_pricechange_monitor,78723,down,"🇨🇳 Bybit.P 监控：LABUSDT 在过去 10 秒内下跌了 6.8%，买价：1.51688，卖价：1.51908，最新价：1.51908。 🇺🇸 Bybit.P Monitor: LABUSDT -6.8% in the past 10 seconds, bid: 1.51688, ask: 1.51908, last: 1.51908. 💰 市值 LAB MarketCap: 397M"
+1777706777893,1777706760000,BWE_pricechange_monitor,78724,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 3.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3.1% in the past 10 seconds 💰 市值 LAB MarketCap: 397M
+1777707369033,1777707360000,BWE_pricechange_monitor,78725,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.8% in the past 3 seconds 💰 市值 LAB MarketCap: 397M
+1777707611147,1777707600000,BWE_pricechange_monitor,78726,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.5% in the past 3 seconds 💰 市值 LAB MarketCap: 397M
+1777707821320,1777707780000,BWE_pricechange_monitor,78727,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 3.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3.6% in the past 60 seconds 💰 市值 LAB MarketCap: 397M
+1777707944550,1777707900000,BWE_pricechange_monitor,78728,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 3.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3.6% in the past 60 seconds 💰 市值 LAB MarketCap: 397M
+1777708078048,1777708020000,BWE_pricechange_monitor,78729,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.5% in the past 3 seconds 💰 市值 LAB MarketCap: 397M
+1777708202271,1777708200000,BWE_pricechange_monitor,78730,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.5% in the past 10 seconds 💰 市值 LAB MarketCap: 397M
+1777708396108,1777708380000,BWE_pricechange_monitor,78731,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 10 seconds 💰 市值 LAB MarketCap: 397M
+1777708518086,1777708500000,BWE_pricechange_monitor,78732,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 10 seconds 💰 市值 LAB MarketCap: 397M
+1777708828379,1777708800000,BWE_pricechange_monitor,78733,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.6% in the past 3 seconds 💰 市值 LAB MarketCap: 372M
+1777709022476,1777708980000,BWE_pricechange_monitor,78734,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.5% in the past 3 seconds 💰 市值 LAB MarketCap: 372M
+1777709470774,1777709460000,BWE_pricechange_monitor,78735,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.9%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.9% in the past 3 seconds 💰 市值 LAB MarketCap: 372M
+1777709698576,1777709640000,BWE_pricechange_monitor,78736,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.6% in the past 10 seconds 💰 市值 LAB MarketCap: 372M
+1777710612295,1777710600000,BWE_pricechange_monitor,78737,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 372M
+1777711024461,1777711020000,BWE_pricechange_monitor,78738,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.8% in the past 3 seconds 💰 市值 LAB MarketCap: 372M
+1777711179335,1777711140000,BWE_pricechange_monitor,78739,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.3% in the past 10 seconds 💰 市值 LAB MarketCap: 372M
+1777711305946,1777711260000,BWE_pricechange_monitor,78740,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.9%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.9% in the past 3 seconds 💰 市值 LAB MarketCap: 372M
+1777711512653,1777711500000,BWE_pricechange_monitor,78741,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.5% in the past 3 seconds 💰 市值 LAB MarketCap: 372M
+1777711746419,1777711740000,BWE_pricechange_monitor,78742,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内下跌 3.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.1% in the past 30 seconds 💰 市值 LAB MarketCap: 372M
+1777711878787,1777711860000,BWE_pricechange_monitor,78743,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.8% in the past 3 seconds 💰 市值 LAB MarketCap: 372M
+1777712227841,1777712220000,BWE_pricechange_monitor,78744,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.1% in the past 10 seconds 💰 市值 LAB MarketCap: 372M
+1777712413977,1777712400000,BWE_pricechange_monitor,78745,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.6% in the past 3 seconds 💰 市值 LAB MarketCap: 372M
+1777712534035,1777712520000,BWE_pricechange_monitor,78746,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2.5%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.5% in the past 10 seconds 💰 市值 LAB MarketCap: 446M
+1777713362870,1777713360000,BWE_pricechange_monitor,78747,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.2% in the past 3 seconds 💰 市值 LAB MarketCap: 446M
+1777713789237,1777713780000,BWE_pricechange_monitor,78748,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.3% in the past 3 seconds 💰 市值 LAB MarketCap: 446M
+1777713908921,1777713900000,BWE_pricechange_monitor,78749,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 446M
+1777714509219,1777714500000,BWE_pricechange_monitor,78751,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 10 seconds 💰 市值 LAB MarketCap: 446M
+1777715495359,1777715460000,BWE_pricechange_monitor,78752,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.1% in the past 10 seconds 💰 市值 LAB MarketCap: 446M
+1777716038066,1777716000000,BWE_pricechange_monitor,78753,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.2% in the past 10 seconds 💰 市值 LAB MarketCap: 460M
+1777716524190,1777716480000,BWE_pricechange_monitor,78754,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 3.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.6% in the past 60 seconds 💰 市值 LAB MarketCap: 460M
+1777717055363,1777717020000,BWE_pricechange_monitor,78757,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.4%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.4% in the past 3 seconds 💰 市值 LAB MarketCap: 460M
+1777721711120,1777721700000,BWE_pricechange_monitor,78761,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 3.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) -3.3% in the past 10 seconds 💰 市值 LAB MarketCap: 495M
+1777722002803,1777722000000,BWE_pricechange_monitor,78762,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.8% in the past 3 seconds 💰 市值 LAB MarketCap: 495M
+1777722269848,1777722240000,BWE_pricechange_monitor,78763,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 10 seconds 💰 市值 LAB MarketCap: 495M
+1777724151732,1777724100000,BWE_pricechange_monitor,78768,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 479M
+1777730471573,1777730460000,BWE_pricechange_monitor,78776,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.9%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.9% in the past 3 seconds 💰 市值 LAB MarketCap: 518M
+1777731273704,1777731240000,BWE_pricechange_monitor,78777,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 30 秒内上涨 4.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) +4.6% in the past 30 seconds 💰 市值 LAB MarketCap: 518M
+1777731485333,1777731480000,BWE_pricechange_monitor,78778,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 4.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +4.2% in the past 3 seconds 💰 市值 LAB MarketCap: 518M
+1777731650945,1777731600000,BWE_pricechange_monitor,78782,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 3 seconds 💰 市值 LAB MarketCap: 518M
+1777732458243,1777732440000,BWE_pricechange_monitor,78785,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 5%。 🇺🇸 Price Monitor: LABUSDT (LAB) +5% in the past 60 seconds 💰 市值 LAB MarketCap: 518M
+1777732881379,1777732860000,BWE_pricechange_monitor,78786,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.7% in the past 3 seconds 💰 市值 LAB MarketCap: 518M
+1777733836681,1777733820000,BWE_pricechange_monitor,78787,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.2% in the past 10 seconds 💰 市值 LAB MarketCap: 518M
+1777733960808,1777733940000,BWE_pricechange_monitor,78788,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内下跌 4%。 🇺🇸 Price Monitor: LABUSDT (LAB) -4% in the past 60 seconds 💰 市值 LAB MarketCap: 518M
+1777735568962,1777735560000,BWE_pricechange_monitor,78791,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 3%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3% in the past 3 seconds 💰 市值 LAB MarketCap: 608M
+1777735841982,1777735800000,BWE_pricechange_monitor,78792,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.7% in the past 3 seconds 💰 市值 LAB MarketCap: 608M
+1777737628499,1777737600000,BWE_pricechange_monitor,78798,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2.2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.2% in the past 10 seconds 💰 市值 LAB MarketCap: 664M
+1777737761877,1777737720000,BWE_pricechange_monitor,78799,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2% in the past 3 seconds 💰 市值 LAB MarketCap: 664M
+1777738266861,1777738260000,BWE_pricechange_monitor,78801,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.8% in the past 3 seconds 💰 市值 LAB MarketCap: 664M
+1777738403257,1777738380000,BWE_pricechange_monitor,78802,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 3 seconds 💰 市值 LAB MarketCap: 664M
+1777738582857,1777738560000,BWE_pricechange_monitor,78804,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 10 seconds 💰 市值 LAB MarketCap: 664M
+1777738927015,1777738920000,BWE_pricechange_monitor,78808,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内上涨 2.1%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.1% in the past 10 seconds 💰 市值 LAB MarketCap: 664M
+1777739012473,1777738980000,BWE_OI_Price_monitor,13363,up,"🇨🇳 🟢 LABUSDT 币安未平仓合约量 -5.0%，过去 3600 秒价格上涨 23.7%，未平仓合约量：8780 万美元，未平仓合约量/市值比率：13.2%，24 小时价格变动：+386.2% 🇺🇸 🟢 LABUSDT Binance openinterest -5.0%, Price +23.7% in the past 3600 seconds, OI: $87.8M, OI/Marketcap ratio: 13.2%, 24H Price Change: +386.2% 💰 市值 LAB MarketCap: 664M"
+1777739286206,1777739280000,BWE_pricechange_monitor,78809,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 1.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) -1.8% in the past 3 seconds 💰 市值 LAB MarketCap: 664M
+1777739383627,1777739340000,BWE_Reserved6,399,down,🇨🇳 🔻 LABUSDT 币安期货价格在过去 180 秒内下跌了 10.8%。 🇺🇸 🔻 LABUSDT Binance futures price dropped 10.8% in the past 180 seconds 💰 市值 LAB MarketCap: 664M
+1777739406611,1777739400000,BWE_pricechange_monitor,78810,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 90 秒内下跌 8.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) -8.7% in the past 90 seconds 💰 市值 LAB MarketCap: 664M
+1777739526061,1777739520000,BWE_pricechange_monitor,78812,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.7%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.7% in the past 3 seconds 💰 市值 LAB MarketCap: 664M
+1777740059781,1777740000000,BWE_pricechange_monitor,78813,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 2.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) +2.3% in the past 3 seconds 💰 市值 LAB MarketCap: 664M
+1777740799471,1777740780000,BWE_pricechange_monitor,78814,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内下跌 2.6%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.6% in the past 3 seconds 💰 市值 LAB MarketCap: 664M
+1777741536115,1777741500000,BWE_pricechange_monitor,78815,down,🇨🇳 价格监测：LABUSDT (LAB) 在过去 10 秒内下跌 2.3%。 🇺🇸 Price Monitor: LABUSDT (LAB) -2.3% in the past 10 seconds 💰 市值 LAB MarketCap: 709M
+1777741686616,1777741680000,BWE_pricechange_monitor,78816,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 3 秒内上涨 1.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) +1.8% in the past 3 seconds 💰 市值 LAB MarketCap: 709M
+1777741814092,1777741800000,BWE_pricechange_monitor,78817,up,🇨🇳 价格监测：LABUSDT (LAB) 在过去 60 秒内上涨 3.8%。 🇺🇸 Price Monitor: LABUSDT (LAB) +3.8% in the past 60 seconds 💰 市值 LAB MarketCap: 709M

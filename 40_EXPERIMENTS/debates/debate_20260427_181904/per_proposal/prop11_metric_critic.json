@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "weekday_weekend_avoid_long",
+  "predicted_tp_pct": 0.6,
+  "predicted_sl_pct": 1.5,
+  "predicted_tp_sl_ratio": 0.4,
+  "predicted_win_rate": 0.62,
+  "predicted_mean_per_trade_pct": 0.13,
+  "predicted_kelly_pct": 3.7,
+  "trap_risk": "low",
+  "trap_reasoning": "This is a FILTER archetype, not an entry — it does not itself dictate TP/SL geometry. It gates trades to Mon-Fri only, removing thin weekend liquidity where slippage spikes and overshoot SL hits are more common. Because it is regime-symmetric (just excludes weekends, not directional), the GPU optimizer paired with downstream entries should converge on more symmetric TP/SL ratios than the E126-style pump traps (which had 12× SL/TP). Weekday-only sessions historically show tighter spreads, more two-sided book depth, and shorter mean-reversion time, so a TP≈0.6 / SL≈1.5 (ratio 0.4) is the plausible neighborhood — far from the 0.085 ratio of the E126 trap. Win rate ~62% is a defensible mid-range guess: the filter is narrow enough to remove genuinely degraded weekend tape but not so narrow that triggers collapse. Main uncertainty: as a standalone filter it has no entry trigger, so its contribution is realized only when composed; expectancy here is conditional on the paired entry. Net: low trap risk, modest positive Kelly when paired with a non-pathological entry.",
+  "recommended_constraint": "",
+  "metric_score_estimate": 3.7,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 23.96
+}

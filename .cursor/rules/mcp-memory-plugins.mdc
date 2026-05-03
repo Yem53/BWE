@@ -1,0 +1,12 @@
+---
+description: Prefer ClaudeMEM and Superpower MCP plugins for context discovery
+alwaysApply: true
+---
+
+# MCP Memory Plugins
+
+- When exploring prior context, project memory, or broad code knowledge, prefer MCP memory/search plugins before falling back to raw filesystem search.
+- ClaudeMEM is available as `plugin-claude-mem-mcp-search`. Follow its three-layer workflow: `search` first, then `timeline`, then `get_observations` only for filtered IDs.
+- If a Superpower MCP server becomes visible in the enabled MCP list, use it for relevant memory/context tasks as well.
+- Always inspect an MCP tool descriptor before calling the tool.
+- If a requested plugin is not visible or callable, say so briefly and continue with available tools.

@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "x104_breakeven_strict_30s_exit",
+  "predicted_tp_pct": 1.2,
+  "predicted_sl_pct": 0.0,
+  "predicted_tp_sl_ratio": null,
+  "predicted_win_rate": 0.42,
+  "predicted_mean_per_trade_pct": -0.05,
+  "predicted_kelly_pct": 0.0,
+  "trap_risk": "medium",
+  "trap_reasoning": "This is an EXIT archetype using the breakeven kernel, not an entry. The breakeven family currently clusters at a -0.08 floor (median -0.0805, max -0.080519, n_positive=0 across 1923 results) — a structural ceiling, not a TP/SL geometry trap. Tightening BE activation to 30s with strict trigger reduces the SL to ~0 (BE moves stop to entry once activated), so geometry is asymmetric in the OPPOSITE direction of E126: capped downside, open upside via TP or runner. Risk: BE activation at 30s is short — many trades won't have moved enough to lock in, and premature BE cuts winners that would have reverted-then-resumed, dragging mean toward small negatives near the -0.08 family floor. Win rate likely 40-45% (BE flat-outs count as ~0, true wins need TP hit). Kelly = 0 because expected per-trade likely still slightly negative net of -8 bps cost; this archetype probably IMPROVES on the breakeven floor but unlikely to break into positive expectancy without pairing with a selective entry filter. The trap-risk dimension here is 'looks novel but stays in negative-expectancy cluster' rather than the E126 asymmetric-TP/SL trap.",
+  "recommended_constraint": "pair this exit archetype with entry filter requiring liquidity_bucket=high AND trigger_strength≥p75; also test BE activation at 60s/90s in variant grid to find whether 30s is too aggressive",
+  "metric_score_estimate": 0.5,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 28.97
+}

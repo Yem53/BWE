@@ -1,0 +1,22 @@
+{
+  "archetype_ref": "X101_fixed_symmetric_tight",
+  "best_case_thesis": "A 1:1 symmetric tight fixed exit (TP=0.5%/SL=0.5%) directly attacks the structural pathology that killed E126 in paper: asymmetric TP/SL pairs with TP=0.51 and SL=6.00 produced an 80% win rate that masked a catastrophic left tail (one loss erased 12 wins). By forcing payoff symmetry, the strategy's expectancy becomes a pure function of directional hit-rate above 50%, which is exactly what BWE 'pricechange' triggers like E126/E064/E066 demonstrably possess (lift_vs_median +0.42 to +0.48 over 3000+ triggers). On 0.5% bands, BWE pump/crash signals — which typically deliver 0.8-2% intraday moves within minutes — should resolve to TP fast, before mean-reversion or wick-out can drag price through SL.",
+  "expected_alpha_source": "Microstructure exhaust after BWE-flagged taker-buy/sell extremes: the first 30-90 seconds post-signal show high directional persistence at small magnitudes (sub-1%), but degrade past that — a tight symmetric band harvests this short-horizon persistence while capping the fat-tail reversals that destroyed E126.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-volatility, high-taker-imbalance regimes where BWE pricechange/OI signals fire frequently (3000+ triggers/year) and short-horizon directional follow-through is structurally present — i.e., normal-to-elevated crypto vol regimes, not deep ranges.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E066",
+    "E051",
+    "E148"
+  ],
+  "if_paper_works_likely_reason": "The kelly_capped and p25_capped_tail v2 metrics will finally reflect realized expectancy because the symmetric payoff structure removes the legacy p25-blind-spot that made E126 look like 0.3946 while compounding to -13.5%.",
+  "could_compound_with": "Any sibling X10x exit proposing symmetric or near-symmetric fixed bands at different scales (e.g., X102 at 1.0/1.0, X103 at 0.3/0.3) — together they form a tightness-sweep that lets the synthesizer find the optimal symmetric band per channel, finally giving the exit-side pipeline the same depth as the entry side flagged in R2.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 31.29
+}

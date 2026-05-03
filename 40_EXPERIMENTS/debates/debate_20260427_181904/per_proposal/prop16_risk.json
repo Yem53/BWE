@@ -1,0 +1,20 @@
+{
+  "summary": "Exit-side breakeven variant with high-liquidity filter; no integrity issues identified, standard advisory monitoring only.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "x104_breakeven_strict_30s_exit",
+      "leakage_risk": "none",
+      "leakage_notes": "novel_dim is liquidity_bucket=high (a static/contemporaneous regime tag, not post-T0); 30s activation timer is forward-running from T0, which is causal not leaky. No forward_*, confirm_after_*, or post_event_* fields present.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "none",
+      "live_conflict_notes": "Exit-side archetype with NA channel/side does not generate entry positions and cannot conflict with the live BWE_OI_Price_monitor pump long strategy.",
+      "concentration_risk": "low",
+      "adversarial_risk": "none",
+      "overall_severity": "acceptable",
+      "remediation": "None required. Advisory: confirm the 30s breakeven activation clock is computed from T0 forward (not retroactively) at implementation time, and that liquidity_bucket=high is bucketed using only data available at or before T0."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 18.94
+}

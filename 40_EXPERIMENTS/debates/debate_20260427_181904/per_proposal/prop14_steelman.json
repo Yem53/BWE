@@ -1,0 +1,22 @@
+{
+  "archetype_ref": "x102_wide_trail_2pct_exit",
+  "best_case_thesis": "In crypto perp markets dominated by pricechange/long pump regimes, the dominant winning entries (E126, E064, E148) ride taker-buy aggression that produces extended fat-right-tail moves with intra-move pullbacks of 0.8–1.5%. The current trail max of -0.006 sits exactly at the boundary where a tighter step (likely 0.5–1.0%) is being knocked out by normal noise oscillations rather than true reversals — widening to 2.0% lets the position survive the natural breath of a pump leg while still locking in gains on genuine momentum exhaustion. This is a parameter-space gap, not a concept failure, and the pattern_miner's explicit recommendation plus the near-zero (not deeply negative) max strongly suggest the trail family is one step-size sweep away from joining fixed as a profitable exit family.",
+  "expected_alpha_source": "Pump-leg pullback noise on taker-buy-driven longs has a characteristic amplitude (~1–1.5%) that swallows tight trails but is bounded below 2%, so a 2pct trail captures the asymmetric right tail while filtering out reversion-mean wiggles.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-liquidity, taker-buy-dominant pump regimes on pricechange/long where moves extend multiple legs with shallow intra-leg pullbacks — exactly the regime where the top-7 keep entries fired.",
+  "complementary_exit_families": [
+    "trail"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E148",
+    "E051",
+    "E066"
+  ],
+  "if_paper_works_likely_reason": "Trail-2pct will outperform fixed TP=0.51 because it removes the asymmetric-TP/SL trap identified in R2 (E126 paper -13.5%) by letting winners run past the fixed cap while still cutting losers via trailing stop rather than the fatal SL=6.0.",
+  "could_compound_with": "Any x10x exit-side proposal pairing 2pct trail with a time-stop floor (truncates the rare no-move-then-fade case) or with a breakeven-after-1pct trigger (eliminates the giveback-to-zero failure mode that plagues pure trails).",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.84
+}

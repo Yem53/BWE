@@ -1,0 +1,142 @@
+{
+  "n_symbols": 529,
+  "n_events": 1425,
+  "params": {
+    "event_pct": 8.0,
+    "hold_min": 360.0,
+    "naive_tp": 20.0,
+    "naive_sl": 5.0
+  },
+  "aggregates": {
+    "L1 \u2014 naive (-5% SL / +20% TP)": {
+      "label": "L1 \u2014 naive (-5% SL / +20% TP)",
+      "n_total": 1425,
+      "n_traded": 1424,
+      "trade_rate": 99.9298245614035,
+      "total_raw": -68.63758420249036,
+      "total_cap": -3.4318792101245132,
+      "win_rate": 27.598314606741575,
+      "mean_raw": -0.04820055070399604,
+      "mean_cap": -0.0024100275351997985,
+      "best": 20.0,
+      "worst": -5.0,
+      "big_w": 238,
+      "cat": 0
+    },
+    "L2 \u2014 exit_v2 only (5% pos)": {
+      "label": "L2 \u2014 exit_v2 only (5% pos)",
+      "n_total": 1425,
+      "n_traded": 1425,
+      "trade_rate": 100.0,
+      "total_raw": 1005.1245304630805,
+      "total_cap": 50.25622652315403,
+      "win_rate": 64.63157894736841,
+      "mean_raw": 0.7053505476933899,
+      "mean_cap": 0.03526752738466949,
+      "best": 70.06467508469356,
+      "worst": -44.25190194420964,
+      "big_w": 154,
+      "cat": 56
+    },
+    "L3 \u2014 exit_v2 + rule SKIP strict E (5% pos)": {
+      "label": "L3 \u2014 exit_v2 + rule SKIP strict E (5% pos)",
+      "n_total": 1425,
+      "n_traded": 1017,
+      "trade_rate": 71.36842105263158,
+      "total_raw": 670.961397677534,
+      "total_cap": 33.5480698838767,
+      "win_rate": 65.68338249754179,
+      "mean_raw": 0.6597457204302203,
+      "mean_cap": 0.03298728602151101,
+      "best": 70.06467508469356,
+      "worst": -44.25190194420964,
+      "big_w": 100,
+      "cat": 45
+    },
+    "L3.5 \u2014 relaxed E + var pos (5/8%)": {
+      "label": "L3.5 \u2014 relaxed E + var pos (5/8%)",
+      "n_total": 1425,
+      "n_traded": 1019,
+      "trade_rate": 71.50877192982456,
+      "total_raw": 707.5030998379324,
+      "total_cap": 52.79239841208613,
+      "win_rate": 66.43768400392541,
+      "mean_raw": 0.6943111872796196,
+      "mean_cap": 0.05180804554669885,
+      "best": 70.06467508469356,
+      "worst": -44.25190194420964,
+      "big_w": 102,
+      "cat": 46
+    },
+    "L3.5b \u2014 strict E + var pos (5/8%) \u2b50\ufe0f": {
+      "label": "L3.5b \u2014 strict E + var pos (5/8%) \u2b50\ufe0f",
+      "n_total": 1425,
+      "n_traded": 940,
+      "trade_rate": 65.96491228070175,
+      "total_raw": 723.2641887155581,
+      "total_cap": 53.580452855967415,
+      "win_rate": 66.48936170212765,
+      "mean_raw": 0.7694299879952746,
+      "mean_cap": 0.057000481761667464,
+      "best": 70.06467508469356,
+      "worst": -44.25190194420964,
+      "big_w": 94,
+      "cat": 41
+    },
+    "L4 \u2014 directional rule (var pos)": {
+      "label": "L4 \u2014 directional rule (var pos)",
+      "n_total": 1425,
+      "n_traded": 1017,
+      "trade_rate": 71.36842105263158,
+      "total_raw": 1147.5704042844789,
+      "total_cap": 74.79576363441345,
+      "win_rate": 66.86332350049165,
+      "mean_raw": 1.128387811489163,
+      "mean_cap": 0.07354549029932492,
+      "best": 80.81024349286317,
+      "worst": -44.25190194420964,
+      "big_w": 109,
+      "cat": 41
+    }
+  },
+  "rule_breakdown": {
+    "L1 \u2014 naive (-5% SL / +20% TP)": {},
+    "L2 \u2014 exit_v2 only (5% pos)": {},
+    "L3 \u2014 exit_v2 + rule SKIP strict E (5% pos)": {
+      "A": 266,
+      "G": 467,
+      "F-FOLLOW": 77,
+      "E": 142,
+      "C": 195,
+      "D": 269,
+      "B": 9
+    },
+    "L3.5 \u2014 relaxed E + var pos (5/8%)": {
+      "A": 266,
+      "G": 546,
+      "F": 96,
+      "E": 44,
+      "C": 195,
+      "D": 269,
+      "B": 9
+    },
+    "L3.5b \u2014 strict E + var pos (5/8%) \u2b50\ufe0f": {
+      "A": 266,
+      "G": 467,
+      "F": 77,
+      "E": 142,
+      "C": 195,
+      "D": 269,
+      "B": 9
+    },
+    "L4 \u2014 directional rule (var pos)": {
+      "A": 266,
+      "G": 467,
+      "F": 77,
+      "E": 142,
+      "C": 195,
+      "D": 269,
+      "B": 9
+    }
+  }
+}

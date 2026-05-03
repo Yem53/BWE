@@ -1,0 +1,3502 @@
+[
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5910",
+    "longShortRatio": "1.4452",
+    "shortAccount": "0.4090",
+    "timestamp": 1777606800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5910",
+    "longShortRatio": "1.4452",
+    "shortAccount": "0.4090",
+    "timestamp": 1777607100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5916",
+    "longShortRatio": "1.4485",
+    "shortAccount": "0.4084",
+    "timestamp": 1777607400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5913",
+    "longShortRatio": "1.4467",
+    "shortAccount": "0.4087",
+    "timestamp": 1777607700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5913",
+    "longShortRatio": "1.4470",
+    "shortAccount": "0.4087",
+    "timestamp": 1777608000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5913",
+    "longShortRatio": "1.4467",
+    "shortAccount": "0.4087",
+    "timestamp": 1777608300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5910",
+    "longShortRatio": "1.4450",
+    "shortAccount": "0.4090",
+    "timestamp": 1777608600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5910",
+    "longShortRatio": "1.4449",
+    "shortAccount": "0.4090",
+    "timestamp": 1777608900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4431",
+    "shortAccount": "0.4093",
+    "timestamp": 1777609200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4429",
+    "shortAccount": "0.4093",
+    "timestamp": 1777609500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5906",
+    "longShortRatio": "1.4425",
+    "shortAccount": "0.4094",
+    "timestamp": 1777609800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5905",
+    "longShortRatio": "1.4422",
+    "shortAccount": "0.4095",
+    "timestamp": 1777610100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5905",
+    "longShortRatio": "1.4419",
+    "shortAccount": "0.4095",
+    "timestamp": 1777610400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5905",
+    "longShortRatio": "1.4421",
+    "shortAccount": "0.4095",
+    "timestamp": 1777610700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5905",
+    "longShortRatio": "1.4420",
+    "shortAccount": "0.4095",
+    "timestamp": 1777611000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5904",
+    "longShortRatio": "1.4417",
+    "shortAccount": "0.4096",
+    "timestamp": 1777611300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5903",
+    "longShortRatio": "1.4408",
+    "shortAccount": "0.4097",
+    "timestamp": 1777611600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5903",
+    "longShortRatio": "1.4407",
+    "shortAccount": "0.4097",
+    "timestamp": 1777611900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5904",
+    "longShortRatio": "1.4417",
+    "shortAccount": "0.4096",
+    "timestamp": 1777612200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5904",
+    "longShortRatio": "1.4417",
+    "shortAccount": "0.4096",
+    "timestamp": 1777612500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5905",
+    "longShortRatio": "1.4418",
+    "shortAccount": "0.4095",
+    "timestamp": 1777612800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5903",
+    "longShortRatio": "1.4408",
+    "shortAccount": "0.4097",
+    "timestamp": 1777613100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5904",
+    "longShortRatio": "1.4416",
+    "shortAccount": "0.4096",
+    "timestamp": 1777613400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5905",
+    "longShortRatio": "1.4421",
+    "shortAccount": "0.4095",
+    "timestamp": 1777613700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5904",
+    "longShortRatio": "1.4417",
+    "shortAccount": "0.4096",
+    "timestamp": 1777614000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5906",
+    "longShortRatio": "1.4428",
+    "shortAccount": "0.4094",
+    "timestamp": 1777614300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4430",
+    "shortAccount": "0.4093",
+    "timestamp": 1777614600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4433",
+    "shortAccount": "0.4093",
+    "timestamp": 1777614900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4431",
+    "shortAccount": "0.4093",
+    "timestamp": 1777615200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4431",
+    "shortAccount": "0.4093",
+    "timestamp": 1777615500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5908",
+    "longShortRatio": "1.4437",
+    "shortAccount": "0.4092",
+    "timestamp": 1777615800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5908",
+    "longShortRatio": "1.4437",
+    "shortAccount": "0.4092",
+    "timestamp": 1777616100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4431",
+    "shortAccount": "0.4093",
+    "timestamp": 1777616400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4430",
+    "shortAccount": "0.4093",
+    "timestamp": 1777616700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5906",
+    "longShortRatio": "1.4426",
+    "shortAccount": "0.4094",
+    "timestamp": 1777617000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4429",
+    "shortAccount": "0.4093",
+    "timestamp": 1777617300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4429",
+    "shortAccount": "0.4093",
+    "timestamp": 1777617600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4433",
+    "shortAccount": "0.4093",
+    "timestamp": 1777617900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5908",
+    "longShortRatio": "1.4436",
+    "shortAccount": "0.4092",
+    "timestamp": 1777618200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4432",
+    "shortAccount": "0.4093",
+    "timestamp": 1777618500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4435",
+    "shortAccount": "0.4093",
+    "timestamp": 1777618800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5909",
+    "longShortRatio": "1.4446",
+    "shortAccount": "0.4091",
+    "timestamp": 1777619100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5909",
+    "longShortRatio": "1.4445",
+    "shortAccount": "0.4091",
+    "timestamp": 1777619400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5908",
+    "longShortRatio": "1.4439",
+    "shortAccount": "0.4092",
+    "timestamp": 1777619700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4430",
+    "shortAccount": "0.4093",
+    "timestamp": 1777620000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5908",
+    "longShortRatio": "1.4439",
+    "shortAccount": "0.4092",
+    "timestamp": 1777620300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4430",
+    "shortAccount": "0.4093",
+    "timestamp": 1777620600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4432",
+    "shortAccount": "0.4093",
+    "timestamp": 1777620900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5905",
+    "longShortRatio": "1.4420",
+    "shortAccount": "0.4095",
+    "timestamp": 1777621200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5906",
+    "longShortRatio": "1.4424",
+    "shortAccount": "0.4094",
+    "timestamp": 1777621500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5906",
+    "longShortRatio": "1.4424",
+    "shortAccount": "0.4094",
+    "timestamp": 1777621800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4429",
+    "shortAccount": "0.4093",
+    "timestamp": 1777622100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4431",
+    "shortAccount": "0.4093",
+    "timestamp": 1777622400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5904",
+    "longShortRatio": "1.4417",
+    "shortAccount": "0.4096",
+    "timestamp": 1777622700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5905",
+    "longShortRatio": "1.4417",
+    "shortAccount": "0.4095",
+    "timestamp": 1777623000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5909",
+    "longShortRatio": "1.4443",
+    "shortAccount": "0.4091",
+    "timestamp": 1777623300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5908",
+    "longShortRatio": "1.4440",
+    "shortAccount": "0.4092",
+    "timestamp": 1777623600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5909",
+    "longShortRatio": "1.4441",
+    "shortAccount": "0.4091",
+    "timestamp": 1777623900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5909",
+    "longShortRatio": "1.4446",
+    "shortAccount": "0.4091",
+    "timestamp": 1777624200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5911",
+    "longShortRatio": "1.4455",
+    "shortAccount": "0.4089",
+    "timestamp": 1777624500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5914",
+    "longShortRatio": "1.4471",
+    "shortAccount": "0.4086",
+    "timestamp": 1777624800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5914",
+    "longShortRatio": "1.4476",
+    "shortAccount": "0.4086",
+    "timestamp": 1777625100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5913",
+    "longShortRatio": "1.4466",
+    "shortAccount": "0.4087",
+    "timestamp": 1777625400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5914",
+    "longShortRatio": "1.4471",
+    "shortAccount": "0.4086",
+    "timestamp": 1777625700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5915",
+    "longShortRatio": "1.4479",
+    "shortAccount": "0.4085",
+    "timestamp": 1777626000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5913",
+    "longShortRatio": "1.4469",
+    "shortAccount": "0.4087",
+    "timestamp": 1777626300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5914",
+    "longShortRatio": "1.4477",
+    "shortAccount": "0.4086",
+    "timestamp": 1777626600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5914",
+    "longShortRatio": "1.4475",
+    "shortAccount": "0.4086",
+    "timestamp": 1777626900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5914",
+    "longShortRatio": "1.4474",
+    "shortAccount": "0.4086",
+    "timestamp": 1777627200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5915",
+    "longShortRatio": "1.4482",
+    "shortAccount": "0.4085",
+    "timestamp": 1777627500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5916",
+    "longShortRatio": "1.4486",
+    "shortAccount": "0.4084",
+    "timestamp": 1777627800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5916",
+    "longShortRatio": "1.4485",
+    "shortAccount": "0.4084",
+    "timestamp": 1777628100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5915",
+    "longShortRatio": "1.4482",
+    "shortAccount": "0.4085",
+    "timestamp": 1777628400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5915",
+    "longShortRatio": "1.4480",
+    "shortAccount": "0.4085",
+    "timestamp": 1777628700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5914",
+    "longShortRatio": "1.4473",
+    "shortAccount": "0.4086",
+    "timestamp": 1777629000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5912",
+    "longShortRatio": "1.4465",
+    "shortAccount": "0.4088",
+    "timestamp": 1777629300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5912",
+    "longShortRatio": "1.4461",
+    "shortAccount": "0.4088",
+    "timestamp": 1777629600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5911",
+    "longShortRatio": "1.4458",
+    "shortAccount": "0.4089",
+    "timestamp": 1777629900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5909",
+    "longShortRatio": "1.4445",
+    "shortAccount": "0.4091",
+    "timestamp": 1777630200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5910",
+    "longShortRatio": "1.4449",
+    "shortAccount": "0.4090",
+    "timestamp": 1777630500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5911",
+    "longShortRatio": "1.4455",
+    "shortAccount": "0.4089",
+    "timestamp": 1777630800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5909",
+    "longShortRatio": "1.4443",
+    "shortAccount": "0.4091",
+    "timestamp": 1777631100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5909",
+    "longShortRatio": "1.4442",
+    "shortAccount": "0.4091",
+    "timestamp": 1777631400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4432",
+    "shortAccount": "0.4093",
+    "timestamp": 1777631700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5913",
+    "longShortRatio": "1.4469",
+    "shortAccount": "0.4087",
+    "timestamp": 1777632000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5912",
+    "longShortRatio": "1.4461",
+    "shortAccount": "0.4088",
+    "timestamp": 1777632300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5914",
+    "longShortRatio": "1.4475",
+    "shortAccount": "0.4086",
+    "timestamp": 1777632600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5915",
+    "longShortRatio": "1.4482",
+    "shortAccount": "0.4085",
+    "timestamp": 1777632900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5917",
+    "longShortRatio": "1.4494",
+    "shortAccount": "0.4083",
+    "timestamp": 1777633200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5920",
+    "longShortRatio": "1.4508",
+    "shortAccount": "0.4080",
+    "timestamp": 1777633500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5920",
+    "longShortRatio": "1.4510",
+    "shortAccount": "0.4080",
+    "timestamp": 1777633800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5921",
+    "longShortRatio": "1.4513",
+    "shortAccount": "0.4079",
+    "timestamp": 1777634100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5925",
+    "longShortRatio": "1.4538",
+    "shortAccount": "0.4075",
+    "timestamp": 1777634400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5927",
+    "longShortRatio": "1.4554",
+    "shortAccount": "0.4073",
+    "timestamp": 1777634700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5930",
+    "longShortRatio": "1.4567",
+    "shortAccount": "0.4070",
+    "timestamp": 1777635000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5932",
+    "longShortRatio": "1.4580",
+    "shortAccount": "0.4068",
+    "timestamp": 1777635300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5934",
+    "longShortRatio": "1.4593",
+    "shortAccount": "0.4066",
+    "timestamp": 1777635600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5934",
+    "longShortRatio": "1.4594",
+    "shortAccount": "0.4066",
+    "timestamp": 1777635900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5931",
+    "longShortRatio": "1.4574",
+    "shortAccount": "0.4069",
+    "timestamp": 1777636200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5931",
+    "longShortRatio": "1.4574",
+    "shortAccount": "0.4069",
+    "timestamp": 1777636500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5931",
+    "longShortRatio": "1.4575",
+    "shortAccount": "0.4069",
+    "timestamp": 1777636800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5929",
+    "longShortRatio": "1.4565",
+    "shortAccount": "0.4071",
+    "timestamp": 1777637100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5928",
+    "longShortRatio": "1.4561",
+    "shortAccount": "0.4072",
+    "timestamp": 1777637400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5929",
+    "longShortRatio": "1.4561",
+    "shortAccount": "0.4071",
+    "timestamp": 1777637700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5929",
+    "longShortRatio": "1.4564",
+    "shortAccount": "0.4071",
+    "timestamp": 1777638000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5929",
+    "longShortRatio": "1.4566",
+    "shortAccount": "0.4071",
+    "timestamp": 1777638300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5930",
+    "longShortRatio": "1.4568",
+    "shortAccount": "0.4070",
+    "timestamp": 1777638600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5930",
+    "longShortRatio": "1.4568",
+    "shortAccount": "0.4070",
+    "timestamp": 1777638900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5930",
+    "longShortRatio": "1.4570",
+    "shortAccount": "0.4070",
+    "timestamp": 1777639200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5931",
+    "longShortRatio": "1.4574",
+    "shortAccount": "0.4069",
+    "timestamp": 1777639500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5929",
+    "longShortRatio": "1.4563",
+    "shortAccount": "0.4071",
+    "timestamp": 1777639800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5927",
+    "longShortRatio": "1.4549",
+    "shortAccount": "0.4073",
+    "timestamp": 1777640100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5928",
+    "longShortRatio": "1.4557",
+    "shortAccount": "0.4072",
+    "timestamp": 1777640400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5922",
+    "longShortRatio": "1.4524",
+    "shortAccount": "0.4078",
+    "timestamp": 1777640700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5923",
+    "longShortRatio": "1.4525",
+    "shortAccount": "0.4077",
+    "timestamp": 1777641000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5925",
+    "longShortRatio": "1.4538",
+    "shortAccount": "0.4075",
+    "timestamp": 1777641300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5923",
+    "longShortRatio": "1.4530",
+    "shortAccount": "0.4077",
+    "timestamp": 1777641600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5924",
+    "longShortRatio": "1.4533",
+    "shortAccount": "0.4076",
+    "timestamp": 1777641900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5923",
+    "longShortRatio": "1.4525",
+    "shortAccount": "0.4077",
+    "timestamp": 1777642200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5922",
+    "longShortRatio": "1.4524",
+    "shortAccount": "0.4078",
+    "timestamp": 1777642500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5924",
+    "longShortRatio": "1.4535",
+    "shortAccount": "0.4076",
+    "timestamp": 1777642800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5924",
+    "longShortRatio": "1.4533",
+    "shortAccount": "0.4076",
+    "timestamp": 1777643100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5923",
+    "longShortRatio": "1.4530",
+    "shortAccount": "0.4077",
+    "timestamp": 1777643400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5926",
+    "longShortRatio": "1.4546",
+    "shortAccount": "0.4074",
+    "timestamp": 1777643700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5929",
+    "longShortRatio": "1.4565",
+    "shortAccount": "0.4071",
+    "timestamp": 1777644000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5930",
+    "longShortRatio": "1.4573",
+    "shortAccount": "0.4070",
+    "timestamp": 1777644300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5937",
+    "longShortRatio": "1.4610",
+    "shortAccount": "0.4063",
+    "timestamp": 1777644600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5937",
+    "longShortRatio": "1.4615",
+    "shortAccount": "0.4063",
+    "timestamp": 1777644900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5936",
+    "longShortRatio": "1.4608",
+    "shortAccount": "0.4064",
+    "timestamp": 1777645200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5939",
+    "longShortRatio": "1.4626",
+    "shortAccount": "0.4061",
+    "timestamp": 1777645500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5939",
+    "longShortRatio": "1.4625",
+    "shortAccount": "0.4061",
+    "timestamp": 1777645800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5943",
+    "longShortRatio": "1.4647",
+    "shortAccount": "0.4057",
+    "timestamp": 1777646100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5943",
+    "longShortRatio": "1.4647",
+    "shortAccount": "0.4057",
+    "timestamp": 1777646400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5944",
+    "longShortRatio": "1.4653",
+    "shortAccount": "0.4056",
+    "timestamp": 1777646700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5943",
+    "longShortRatio": "1.4649",
+    "shortAccount": "0.4057",
+    "timestamp": 1777647000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5943",
+    "longShortRatio": "1.4647",
+    "shortAccount": "0.4057",
+    "timestamp": 1777647300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5944",
+    "longShortRatio": "1.4652",
+    "shortAccount": "0.4056",
+    "timestamp": 1777647600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5944",
+    "longShortRatio": "1.4656",
+    "shortAccount": "0.4056",
+    "timestamp": 1777647900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5945",
+    "longShortRatio": "1.4658",
+    "shortAccount": "0.4055",
+    "timestamp": 1777648200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5946",
+    "longShortRatio": "1.4665",
+    "shortAccount": "0.4054",
+    "timestamp": 1777648500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5946",
+    "longShortRatio": "1.4668",
+    "shortAccount": "0.4054",
+    "timestamp": 1777648800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5947",
+    "longShortRatio": "1.4671",
+    "shortAccount": "0.4053",
+    "timestamp": 1777649100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5945",
+    "longShortRatio": "1.4661",
+    "shortAccount": "0.4055",
+    "timestamp": 1777649400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5944",
+    "longShortRatio": "1.4654",
+    "shortAccount": "0.4056",
+    "timestamp": 1777649700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5945",
+    "longShortRatio": "1.4658",
+    "shortAccount": "0.4055",
+    "timestamp": 1777650000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5945",
+    "longShortRatio": "1.4658",
+    "shortAccount": "0.4055",
+    "timestamp": 1777650300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5946",
+    "longShortRatio": "1.4665",
+    "shortAccount": "0.4054",
+    "timestamp": 1777650600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5945",
+    "longShortRatio": "1.4661",
+    "shortAccount": "0.4055",
+    "timestamp": 1777650900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5945",
+    "longShortRatio": "1.4662",
+    "shortAccount": "0.4055",
+    "timestamp": 1777651200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5946",
+    "longShortRatio": "1.4665",
+    "shortAccount": "0.4054",
+    "timestamp": 1777651500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5946",
+    "longShortRatio": "1.4666",
+    "shortAccount": "0.4054",
+    "timestamp": 1777651800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5948",
+    "longShortRatio": "1.4678",
+    "shortAccount": "0.4052",
+    "timestamp": 1777652100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5948",
+    "longShortRatio": "1.4681",
+    "shortAccount": "0.4052",
+    "timestamp": 1777652400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5948",
+    "longShortRatio": "1.4680",
+    "shortAccount": "0.4052",
+    "timestamp": 1777652700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5947",
+    "longShortRatio": "1.4675",
+    "shortAccount": "0.4053",
+    "timestamp": 1777653000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5950",
+    "longShortRatio": "1.4692",
+    "shortAccount": "0.4050",
+    "timestamp": 1777653300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5950",
+    "longShortRatio": "1.4691",
+    "shortAccount": "0.4050",
+    "timestamp": 1777653600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4687",
+    "shortAccount": "0.4051",
+    "timestamp": 1777653900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5947",
+    "longShortRatio": "1.4672",
+    "shortAccount": "0.4053",
+    "timestamp": 1777654200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5948",
+    "longShortRatio": "1.4678",
+    "shortAccount": "0.4052",
+    "timestamp": 1777654500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4687",
+    "shortAccount": "0.4051",
+    "timestamp": 1777654800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4686",
+    "shortAccount": "0.4051",
+    "timestamp": 1777655100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4684",
+    "shortAccount": "0.4051",
+    "timestamp": 1777655400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4685",
+    "shortAccount": "0.4051",
+    "timestamp": 1777655700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4687",
+    "shortAccount": "0.4051",
+    "timestamp": 1777656000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4685",
+    "shortAccount": "0.4051",
+    "timestamp": 1777656300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4688",
+    "shortAccount": "0.4051",
+    "timestamp": 1777656600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5950",
+    "longShortRatio": "1.4694",
+    "shortAccount": "0.4050",
+    "timestamp": 1777656900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5950",
+    "longShortRatio": "1.4694",
+    "shortAccount": "0.4050",
+    "timestamp": 1777657200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5950",
+    "longShortRatio": "1.4689",
+    "shortAccount": "0.4050",
+    "timestamp": 1777657500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4685",
+    "shortAccount": "0.4051",
+    "timestamp": 1777657800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5949",
+    "longShortRatio": "1.4686",
+    "shortAccount": "0.4051",
+    "timestamp": 1777658100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5948",
+    "longShortRatio": "1.4682",
+    "shortAccount": "0.4052",
+    "timestamp": 1777658400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5954",
+    "longShortRatio": "1.4713",
+    "shortAccount": "0.4046",
+    "timestamp": 1777658700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5952",
+    "longShortRatio": "1.4701",
+    "shortAccount": "0.4048",
+    "timestamp": 1777659000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5952",
+    "longShortRatio": "1.4706",
+    "shortAccount": "0.4048",
+    "timestamp": 1777659300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5952",
+    "longShortRatio": "1.4704",
+    "shortAccount": "0.4048",
+    "timestamp": 1777659600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5953",
+    "longShortRatio": "1.4712",
+    "shortAccount": "0.4047",
+    "timestamp": 1777659900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5952",
+    "longShortRatio": "1.4706",
+    "shortAccount": "0.4048",
+    "timestamp": 1777660200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5957",
+    "longShortRatio": "1.4736",
+    "shortAccount": "0.4043",
+    "timestamp": 1777660500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5924",
+    "longShortRatio": "1.4533",
+    "shortAccount": "0.4076",
+    "timestamp": 1777660800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5927",
+    "longShortRatio": "1.4550",
+    "shortAccount": "0.4073",
+    "timestamp": 1777661100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5931",
+    "longShortRatio": "1.4576",
+    "shortAccount": "0.4069",
+    "timestamp": 1777661400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5934",
+    "longShortRatio": "1.4594",
+    "shortAccount": "0.4066",
+    "timestamp": 1777661700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5934",
+    "longShortRatio": "1.4592",
+    "shortAccount": "0.4066",
+    "timestamp": 1777662000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5937",
+    "longShortRatio": "1.4612",
+    "shortAccount": "0.4063",
+    "timestamp": 1777662300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5936",
+    "longShortRatio": "1.4608",
+    "shortAccount": "0.4064",
+    "timestamp": 1777662600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5935",
+    "longShortRatio": "1.4602",
+    "shortAccount": "0.4065",
+    "timestamp": 1777662900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5928",
+    "longShortRatio": "1.4559",
+    "shortAccount": "0.4072",
+    "timestamp": 1777663200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5923",
+    "longShortRatio": "1.4527",
+    "shortAccount": "0.4077",
+    "timestamp": 1777663500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5907",
+    "longShortRatio": "1.4435",
+    "shortAccount": "0.4093",
+    "timestamp": 1777663800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5887",
+    "longShortRatio": "1.4314",
+    "shortAccount": "0.4113",
+    "timestamp": 1777664100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5878",
+    "longShortRatio": "1.4262",
+    "shortAccount": "0.4122",
+    "timestamp": 1777664400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5898",
+    "longShortRatio": "1.4376",
+    "shortAccount": "0.4102",
+    "timestamp": 1777664700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5855",
+    "longShortRatio": "1.4125",
+    "shortAccount": "0.4145",
+    "timestamp": 1777665000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5839",
+    "longShortRatio": "1.4034",
+    "shortAccount": "0.4161",
+    "timestamp": 1777665300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5816",
+    "longShortRatio": "1.3899",
+    "shortAccount": "0.4184",
+    "timestamp": 1777665600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5812",
+    "longShortRatio": "1.3878",
+    "shortAccount": "0.4188",
+    "timestamp": 1777665900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5798",
+    "longShortRatio": "1.3798",
+    "shortAccount": "0.4202",
+    "timestamp": 1777666200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5763",
+    "longShortRatio": "1.3603",
+    "shortAccount": "0.4237",
+    "timestamp": 1777666500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5731",
+    "longShortRatio": "1.3426",
+    "shortAccount": "0.4269",
+    "timestamp": 1777666800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5761",
+    "longShortRatio": "1.3588",
+    "shortAccount": "0.4239",
+    "timestamp": 1777667100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5790",
+    "longShortRatio": "1.3751",
+    "shortAccount": "0.4210",
+    "timestamp": 1777667400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5800",
+    "longShortRatio": "1.3807",
+    "shortAccount": "0.4200",
+    "timestamp": 1777667700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5821",
+    "longShortRatio": "1.3930",
+    "shortAccount": "0.4179",
+    "timestamp": 1777668000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5754",
+    "longShortRatio": "1.3553",
+    "shortAccount": "0.4246",
+    "timestamp": 1777668300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5743",
+    "longShortRatio": "1.3493",
+    "shortAccount": "0.4257",
+    "timestamp": 1777668600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5733",
+    "longShortRatio": "1.3434",
+    "shortAccount": "0.4267",
+    "timestamp": 1777668900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5753",
+    "longShortRatio": "1.3548",
+    "shortAccount": "0.4247",
+    "timestamp": 1777669200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5800",
+    "longShortRatio": "1.3811",
+    "shortAccount": "0.4200",
+    "timestamp": 1777669500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5832",
+    "longShortRatio": "1.3993",
+    "shortAccount": "0.4168",
+    "timestamp": 1777669800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5862",
+    "longShortRatio": "1.4167",
+    "shortAccount": "0.4138",
+    "timestamp": 1777670100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5916",
+    "longShortRatio": "1.4487",
+    "shortAccount": "0.4084",
+    "timestamp": 1777670400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5979",
+    "longShortRatio": "1.4868",
+    "shortAccount": "0.4021",
+    "timestamp": 1777670700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6018",
+    "longShortRatio": "1.5115",
+    "shortAccount": "0.3982",
+    "timestamp": 1777671000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6035",
+    "longShortRatio": "1.5221",
+    "shortAccount": "0.3965",
+    "timestamp": 1777671300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6037",
+    "longShortRatio": "1.5235",
+    "shortAccount": "0.3963",
+    "timestamp": 1777671600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6031",
+    "longShortRatio": "1.5197",
+    "shortAccount": "0.3969",
+    "timestamp": 1777671900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6030",
+    "longShortRatio": "1.5187",
+    "shortAccount": "0.3970",
+    "timestamp": 1777672200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6027",
+    "longShortRatio": "1.5170",
+    "shortAccount": "0.3973",
+    "timestamp": 1777672500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6010",
+    "longShortRatio": "1.5062",
+    "shortAccount": "0.3990",
+    "timestamp": 1777672800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6005",
+    "longShortRatio": "1.5029",
+    "shortAccount": "0.3995",
+    "timestamp": 1777673100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6005",
+    "longShortRatio": "1.5031",
+    "shortAccount": "0.3995",
+    "timestamp": 1777673400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5997",
+    "longShortRatio": "1.4983",
+    "shortAccount": "0.4003",
+    "timestamp": 1777673700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5981",
+    "longShortRatio": "1.4884",
+    "shortAccount": "0.4019",
+    "timestamp": 1777674000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5963",
+    "longShortRatio": "1.4769",
+    "shortAccount": "0.4037",
+    "timestamp": 1777674300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5927",
+    "longShortRatio": "1.4555",
+    "shortAccount": "0.4073",
+    "timestamp": 1777674600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5926",
+    "longShortRatio": "1.4545",
+    "shortAccount": "0.4074",
+    "timestamp": 1777674900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5918",
+    "longShortRatio": "1.4496",
+    "shortAccount": "0.4082",
+    "timestamp": 1777675200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5899",
+    "longShortRatio": "1.4386",
+    "shortAccount": "0.4101",
+    "timestamp": 1777675500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5879",
+    "longShortRatio": "1.4265",
+    "shortAccount": "0.4121",
+    "timestamp": 1777675800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5857",
+    "longShortRatio": "1.4138",
+    "shortAccount": "0.4143",
+    "timestamp": 1777676100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5862",
+    "longShortRatio": "1.4168",
+    "shortAccount": "0.4138",
+    "timestamp": 1777676400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5826",
+    "longShortRatio": "1.3956",
+    "shortAccount": "0.4174",
+    "timestamp": 1777676700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5816",
+    "longShortRatio": "1.3900",
+    "shortAccount": "0.4184",
+    "timestamp": 1777677000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5806",
+    "longShortRatio": "1.3844",
+    "shortAccount": "0.4194",
+    "timestamp": 1777677300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5748",
+    "longShortRatio": "1.3519",
+    "shortAccount": "0.4252",
+    "timestamp": 1777677600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5724",
+    "longShortRatio": "1.3387",
+    "shortAccount": "0.4276",
+    "timestamp": 1777677900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5714",
+    "longShortRatio": "1.3332",
+    "shortAccount": "0.4286",
+    "timestamp": 1777678200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5702",
+    "longShortRatio": "1.3265",
+    "shortAccount": "0.4298",
+    "timestamp": 1777678500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5684",
+    "longShortRatio": "1.3170",
+    "shortAccount": "0.4316",
+    "timestamp": 1777678800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5678",
+    "longShortRatio": "1.3137",
+    "shortAccount": "0.4322",
+    "timestamp": 1777679100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5649",
+    "longShortRatio": "1.2983",
+    "shortAccount": "0.4351",
+    "timestamp": 1777679400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5629",
+    "longShortRatio": "1.2876",
+    "shortAccount": "0.4371",
+    "timestamp": 1777679700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5610",
+    "longShortRatio": "1.2778",
+    "shortAccount": "0.4390",
+    "timestamp": 1777680000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5618",
+    "longShortRatio": "1.2823",
+    "shortAccount": "0.4382",
+    "timestamp": 1777680300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5605",
+    "longShortRatio": "1.2755",
+    "shortAccount": "0.4395",
+    "timestamp": 1777680600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5610",
+    "longShortRatio": "1.2782",
+    "shortAccount": "0.4390",
+    "timestamp": 1777680900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5594",
+    "longShortRatio": "1.2696",
+    "shortAccount": "0.4406",
+    "timestamp": 1777681200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5585",
+    "longShortRatio": "1.2650",
+    "shortAccount": "0.4415",
+    "timestamp": 1777681500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5580",
+    "longShortRatio": "1.2625",
+    "shortAccount": "0.4420",
+    "timestamp": 1777681800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5589",
+    "longShortRatio": "1.2669",
+    "shortAccount": "0.4411",
+    "timestamp": 1777682100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5560",
+    "longShortRatio": "1.2525",
+    "shortAccount": "0.4440",
+    "timestamp": 1777682400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5564",
+    "longShortRatio": "1.2542",
+    "shortAccount": "0.4436",
+    "timestamp": 1777682700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5554",
+    "longShortRatio": "1.2491",
+    "shortAccount": "0.4446",
+    "timestamp": 1777683000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5537",
+    "longShortRatio": "1.2407",
+    "shortAccount": "0.4463",
+    "timestamp": 1777683300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5525",
+    "longShortRatio": "1.2349",
+    "shortAccount": "0.4475",
+    "timestamp": 1777683600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5508",
+    "longShortRatio": "1.2261",
+    "shortAccount": "0.4492",
+    "timestamp": 1777683900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5501",
+    "longShortRatio": "1.2228",
+    "shortAccount": "0.4499",
+    "timestamp": 1777684200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5500",
+    "longShortRatio": "1.2223",
+    "shortAccount": "0.4500",
+    "timestamp": 1777684500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5505",
+    "longShortRatio": "1.2248",
+    "shortAccount": "0.4495",
+    "timestamp": 1777684800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5495",
+    "longShortRatio": "1.2197",
+    "shortAccount": "0.4505",
+    "timestamp": 1777685100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5501",
+    "longShortRatio": "1.2228",
+    "shortAccount": "0.4499",
+    "timestamp": 1777685400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5532",
+    "longShortRatio": "1.2383",
+    "shortAccount": "0.4468",
+    "timestamp": 1777685700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5551",
+    "longShortRatio": "1.2475",
+    "shortAccount": "0.4449",
+    "timestamp": 1777686000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5595",
+    "longShortRatio": "1.2702",
+    "shortAccount": "0.4405",
+    "timestamp": 1777686300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5630",
+    "longShortRatio": "1.2881",
+    "shortAccount": "0.4370",
+    "timestamp": 1777686600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5642",
+    "longShortRatio": "1.2949",
+    "shortAccount": "0.4358",
+    "timestamp": 1777686900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5666",
+    "longShortRatio": "1.3076",
+    "shortAccount": "0.4334",
+    "timestamp": 1777687200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5688",
+    "longShortRatio": "1.3190",
+    "shortAccount": "0.4312",
+    "timestamp": 1777687500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5720",
+    "longShortRatio": "1.3363",
+    "shortAccount": "0.4280",
+    "timestamp": 1777687800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5757",
+    "longShortRatio": "1.3570",
+    "shortAccount": "0.4243",
+    "timestamp": 1777688100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5792",
+    "longShortRatio": "1.3763",
+    "shortAccount": "0.4208",
+    "timestamp": 1777688400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5839",
+    "longShortRatio": "1.4035",
+    "shortAccount": "0.4161",
+    "timestamp": 1777688700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5856",
+    "longShortRatio": "1.4132",
+    "shortAccount": "0.4144",
+    "timestamp": 1777689000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5848",
+    "longShortRatio": "1.4083",
+    "shortAccount": "0.4152",
+    "timestamp": 1777689300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5821",
+    "longShortRatio": "1.3929",
+    "shortAccount": "0.4179",
+    "timestamp": 1777689600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5821",
+    "longShortRatio": "1.3929",
+    "shortAccount": "0.4179",
+    "timestamp": 1777689900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5923",
+    "longShortRatio": "1.4527",
+    "shortAccount": "0.4077",
+    "timestamp": 1777690200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5904",
+    "longShortRatio": "1.4416",
+    "shortAccount": "0.4096",
+    "timestamp": 1777690500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5900",
+    "longShortRatio": "1.4388",
+    "shortAccount": "0.4100",
+    "timestamp": 1777690800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5877",
+    "longShortRatio": "1.4254",
+    "shortAccount": "0.4123",
+    "timestamp": 1777691100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5858",
+    "longShortRatio": "1.4142",
+    "shortAccount": "0.4142",
+    "timestamp": 1777691400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5854",
+    "longShortRatio": "1.4119",
+    "shortAccount": "0.4146",
+    "timestamp": 1777691700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5844",
+    "longShortRatio": "1.4059",
+    "shortAccount": "0.4156",
+    "timestamp": 1777692000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5838",
+    "longShortRatio": "1.4029",
+    "shortAccount": "0.4162",
+    "timestamp": 1777692300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5829",
+    "longShortRatio": "1.3976",
+    "shortAccount": "0.4171",
+    "timestamp": 1777692600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5814",
+    "longShortRatio": "1.3891",
+    "shortAccount": "0.4186",
+    "timestamp": 1777692900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5798",
+    "longShortRatio": "1.3801",
+    "shortAccount": "0.4202",
+    "timestamp": 1777693200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5796",
+    "longShortRatio": "1.3786",
+    "shortAccount": "0.4204",
+    "timestamp": 1777693500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5790",
+    "longShortRatio": "1.3753",
+    "shortAccount": "0.4210",
+    "timestamp": 1777693800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5766",
+    "longShortRatio": "1.3616",
+    "shortAccount": "0.4234",
+    "timestamp": 1777694100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5759",
+    "longShortRatio": "1.3577",
+    "shortAccount": "0.4241",
+    "timestamp": 1777694400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5742",
+    "longShortRatio": "1.3487",
+    "shortAccount": "0.4258",
+    "timestamp": 1777694700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5734",
+    "longShortRatio": "1.3444",
+    "shortAccount": "0.4266",
+    "timestamp": 1777695000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5738",
+    "longShortRatio": "1.3461",
+    "shortAccount": "0.4262",
+    "timestamp": 1777695300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5711",
+    "longShortRatio": "1.3317",
+    "shortAccount": "0.4289",
+    "timestamp": 1777695600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5696",
+    "longShortRatio": "1.3236",
+    "shortAccount": "0.4304",
+    "timestamp": 1777695900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5690",
+    "longShortRatio": "1.3200",
+    "shortAccount": "0.4310",
+    "timestamp": 1777696200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5696",
+    "longShortRatio": "1.3232",
+    "shortAccount": "0.4304",
+    "timestamp": 1777696500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5683",
+    "longShortRatio": "1.3163",
+    "shortAccount": "0.4317",
+    "timestamp": 1777696800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5674",
+    "longShortRatio": "1.3117",
+    "shortAccount": "0.4326",
+    "timestamp": 1777697100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5660",
+    "longShortRatio": "1.3040",
+    "shortAccount": "0.4340",
+    "timestamp": 1777697400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5663",
+    "longShortRatio": "1.3057",
+    "shortAccount": "0.4337",
+    "timestamp": 1777697700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5656",
+    "longShortRatio": "1.3021",
+    "shortAccount": "0.4344",
+    "timestamp": 1777698000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5659",
+    "longShortRatio": "1.3034",
+    "shortAccount": "0.4341",
+    "timestamp": 1777698300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5681",
+    "longShortRatio": "1.3156",
+    "shortAccount": "0.4319",
+    "timestamp": 1777698600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5667",
+    "longShortRatio": "1.3078",
+    "shortAccount": "0.4333",
+    "timestamp": 1777698900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5690",
+    "longShortRatio": "1.3204",
+    "shortAccount": "0.4310",
+    "timestamp": 1777699200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5668",
+    "longShortRatio": "1.3084",
+    "shortAccount": "0.4332",
+    "timestamp": 1777699500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5653",
+    "longShortRatio": "1.3002",
+    "shortAccount": "0.4347",
+    "timestamp": 1777699800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5629",
+    "longShortRatio": "1.2878",
+    "shortAccount": "0.4371",
+    "timestamp": 1777700100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5638",
+    "longShortRatio": "1.2925",
+    "shortAccount": "0.4362",
+    "timestamp": 1777700400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5624",
+    "longShortRatio": "1.2854",
+    "shortAccount": "0.4376",
+    "timestamp": 1777700700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5687",
+    "longShortRatio": "1.3188",
+    "shortAccount": "0.4313",
+    "timestamp": 1777701000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5678",
+    "longShortRatio": "1.3138",
+    "shortAccount": "0.4322",
+    "timestamp": 1777701300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5654",
+    "longShortRatio": "1.3010",
+    "shortAccount": "0.4346",
+    "timestamp": 1777701600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5671",
+    "longShortRatio": "1.3101",
+    "shortAccount": "0.4329",
+    "timestamp": 1777701900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5705",
+    "longShortRatio": "1.3283",
+    "shortAccount": "0.4295",
+    "timestamp": 1777702200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5708",
+    "longShortRatio": "1.3301",
+    "shortAccount": "0.4292",
+    "timestamp": 1777702500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5696",
+    "longShortRatio": "1.3232",
+    "shortAccount": "0.4304",
+    "timestamp": 1777702800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5713",
+    "longShortRatio": "1.3324",
+    "shortAccount": "0.4287",
+    "timestamp": 1777703100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5768",
+    "longShortRatio": "1.3631",
+    "shortAccount": "0.4232",
+    "timestamp": 1777703400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5786",
+    "longShortRatio": "1.3730",
+    "shortAccount": "0.4214",
+    "timestamp": 1777703700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5810",
+    "longShortRatio": "1.3865",
+    "shortAccount": "0.4190",
+    "timestamp": 1777704000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5841",
+    "longShortRatio": "1.4047",
+    "shortAccount": "0.4159",
+    "timestamp": 1777704300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5917",
+    "longShortRatio": "1.4489",
+    "shortAccount": "0.4083",
+    "timestamp": 1777704600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6036",
+    "longShortRatio": "1.5226",
+    "shortAccount": "0.3964",
+    "timestamp": 1777704900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6020",
+    "longShortRatio": "1.5126",
+    "shortAccount": "0.3980",
+    "timestamp": 1777705200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5988",
+    "longShortRatio": "1.4923",
+    "shortAccount": "0.4012",
+    "timestamp": 1777705500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6036",
+    "longShortRatio": "1.5230",
+    "shortAccount": "0.3964",
+    "timestamp": 1777705800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6041",
+    "longShortRatio": "1.5262",
+    "shortAccount": "0.3959",
+    "timestamp": 1777706100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6025",
+    "longShortRatio": "1.5159",
+    "shortAccount": "0.3975",
+    "timestamp": 1777706400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5990",
+    "longShortRatio": "1.4936",
+    "shortAccount": "0.4010",
+    "timestamp": 1777706700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5968",
+    "longShortRatio": "1.4800",
+    "shortAccount": "0.4032",
+    "timestamp": 1777707000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5961",
+    "longShortRatio": "1.4760",
+    "shortAccount": "0.4039",
+    "timestamp": 1777707300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5954",
+    "longShortRatio": "1.4713",
+    "shortAccount": "0.4046",
+    "timestamp": 1777707600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5930",
+    "longShortRatio": "1.4567",
+    "shortAccount": "0.4070",
+    "timestamp": 1777707900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5871",
+    "longShortRatio": "1.4219",
+    "shortAccount": "0.4129",
+    "timestamp": 1777708200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5877",
+    "longShortRatio": "1.4255",
+    "shortAccount": "0.4123",
+    "timestamp": 1777708500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5844",
+    "longShortRatio": "1.4061",
+    "shortAccount": "0.4156",
+    "timestamp": 1777708800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5840",
+    "longShortRatio": "1.4039",
+    "shortAccount": "0.4160",
+    "timestamp": 1777709100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5824",
+    "longShortRatio": "1.3947",
+    "shortAccount": "0.4176",
+    "timestamp": 1777709400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5837",
+    "longShortRatio": "1.4022",
+    "shortAccount": "0.4163",
+    "timestamp": 1777709700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5814",
+    "longShortRatio": "1.3890",
+    "shortAccount": "0.4186",
+    "timestamp": 1777710000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5806",
+    "longShortRatio": "1.3842",
+    "shortAccount": "0.4194",
+    "timestamp": 1777710300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5778",
+    "longShortRatio": "1.3685",
+    "shortAccount": "0.4222",
+    "timestamp": 1777710600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5773",
+    "longShortRatio": "1.3658",
+    "shortAccount": "0.4227",
+    "timestamp": 1777710900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5776",
+    "longShortRatio": "1.3677",
+    "shortAccount": "0.4224",
+    "timestamp": 1777711200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5827",
+    "longShortRatio": "1.3961",
+    "shortAccount": "0.4173",
+    "timestamp": 1777711500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5825",
+    "longShortRatio": "1.3954",
+    "shortAccount": "0.4175",
+    "timestamp": 1777711800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5842",
+    "longShortRatio": "1.4051",
+    "shortAccount": "0.4158",
+    "timestamp": 1777712100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5853",
+    "longShortRatio": "1.4116",
+    "shortAccount": "0.4147",
+    "timestamp": 1777712400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5851",
+    "longShortRatio": "1.4104",
+    "shortAccount": "0.4149",
+    "timestamp": 1777712700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5864",
+    "longShortRatio": "1.4181",
+    "shortAccount": "0.4136",
+    "timestamp": 1777713000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5861",
+    "longShortRatio": "1.4158",
+    "shortAccount": "0.4139",
+    "timestamp": 1777713300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5836",
+    "longShortRatio": "1.4013",
+    "shortAccount": "0.4164",
+    "timestamp": 1777713600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5795",
+    "longShortRatio": "1.3784",
+    "shortAccount": "0.4205",
+    "timestamp": 1777713900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5782",
+    "longShortRatio": "1.3705",
+    "shortAccount": "0.4218",
+    "timestamp": 1777714200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5777",
+    "longShortRatio": "1.3681",
+    "shortAccount": "0.4223",
+    "timestamp": 1777714500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5764",
+    "longShortRatio": "1.3608",
+    "shortAccount": "0.4236",
+    "timestamp": 1777714800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5752",
+    "longShortRatio": "1.3539",
+    "shortAccount": "0.4248",
+    "timestamp": 1777715100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5726",
+    "longShortRatio": "1.3398",
+    "shortAccount": "0.4274",
+    "timestamp": 1777715400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5702",
+    "longShortRatio": "1.3265",
+    "shortAccount": "0.4298",
+    "timestamp": 1777715700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5687",
+    "longShortRatio": "1.3188",
+    "shortAccount": "0.4313",
+    "timestamp": 1777716000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5718",
+    "longShortRatio": "1.3354",
+    "shortAccount": "0.4282",
+    "timestamp": 1777716300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5692",
+    "longShortRatio": "1.3212",
+    "shortAccount": "0.4308",
+    "timestamp": 1777716600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5701",
+    "longShortRatio": "1.3262",
+    "shortAccount": "0.4299",
+    "timestamp": 1777716900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5708",
+    "longShortRatio": "1.3298",
+    "shortAccount": "0.4292",
+    "timestamp": 1777717200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5709",
+    "longShortRatio": "1.3304",
+    "shortAccount": "0.4291",
+    "timestamp": 1777717500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5699",
+    "longShortRatio": "1.3252",
+    "shortAccount": "0.4301",
+    "timestamp": 1777717800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5699",
+    "longShortRatio": "1.3250",
+    "shortAccount": "0.4301",
+    "timestamp": 1777718100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5689",
+    "longShortRatio": "1.3199",
+    "shortAccount": "0.4311",
+    "timestamp": 1777718400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5678",
+    "longShortRatio": "1.3138",
+    "shortAccount": "0.4322",
+    "timestamp": 1777718700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5660",
+    "longShortRatio": "1.3043",
+    "shortAccount": "0.4340",
+    "timestamp": 1777719000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5659",
+    "longShortRatio": "1.3036",
+    "shortAccount": "0.4341",
+    "timestamp": 1777719300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5653",
+    "longShortRatio": "1.3003",
+    "shortAccount": "0.4347",
+    "timestamp": 1777719600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5651",
+    "longShortRatio": "1.2992",
+    "shortAccount": "0.4349",
+    "timestamp": 1777719900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5650",
+    "longShortRatio": "1.2989",
+    "shortAccount": "0.4350",
+    "timestamp": 1777720200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5649",
+    "longShortRatio": "1.2984",
+    "shortAccount": "0.4351",
+    "timestamp": 1777720500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5651",
+    "longShortRatio": "1.2992",
+    "shortAccount": "0.4349",
+    "timestamp": 1777720800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5662",
+    "longShortRatio": "1.3052",
+    "shortAccount": "0.4338",
+    "timestamp": 1777721100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5649",
+    "longShortRatio": "1.2985",
+    "shortAccount": "0.4351",
+    "timestamp": 1777721400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5642",
+    "longShortRatio": "1.2945",
+    "shortAccount": "0.4358",
+    "timestamp": 1777721700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5658",
+    "longShortRatio": "1.3033",
+    "shortAccount": "0.4342",
+    "timestamp": 1777722000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5671",
+    "longShortRatio": "1.3101",
+    "shortAccount": "0.4329",
+    "timestamp": 1777722300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5651",
+    "longShortRatio": "1.2995",
+    "shortAccount": "0.4349",
+    "timestamp": 1777722600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5645",
+    "longShortRatio": "1.2961",
+    "shortAccount": "0.4355",
+    "timestamp": 1777722900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5649",
+    "longShortRatio": "1.2982",
+    "shortAccount": "0.4351",
+    "timestamp": 1777723200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5649",
+    "longShortRatio": "1.2985",
+    "shortAccount": "0.4351",
+    "timestamp": 1777723500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5661",
+    "longShortRatio": "1.3048",
+    "shortAccount": "0.4339",
+    "timestamp": 1777723800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5652",
+    "longShortRatio": "1.2997",
+    "shortAccount": "0.4348",
+    "timestamp": 1777724100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5667",
+    "longShortRatio": "1.3079",
+    "shortAccount": "0.4333",
+    "timestamp": 1777724400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5654",
+    "longShortRatio": "1.3011",
+    "shortAccount": "0.4346",
+    "timestamp": 1777724700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5649",
+    "longShortRatio": "1.2981",
+    "shortAccount": "0.4351",
+    "timestamp": 1777725000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5653",
+    "longShortRatio": "1.3006",
+    "shortAccount": "0.4347",
+    "timestamp": 1777725300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5648",
+    "longShortRatio": "1.2979",
+    "shortAccount": "0.4352",
+    "timestamp": 1777725600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5644",
+    "longShortRatio": "1.2958",
+    "shortAccount": "0.4356",
+    "timestamp": 1777725900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5645",
+    "longShortRatio": "1.2963",
+    "shortAccount": "0.4355",
+    "timestamp": 1777726200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5650",
+    "longShortRatio": "1.2988",
+    "shortAccount": "0.4350",
+    "timestamp": 1777726500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5647",
+    "longShortRatio": "1.2972",
+    "shortAccount": "0.4353",
+    "timestamp": 1777726800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5645",
+    "longShortRatio": "1.2960",
+    "shortAccount": "0.4355",
+    "timestamp": 1777727100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5650",
+    "longShortRatio": "1.2988",
+    "shortAccount": "0.4350",
+    "timestamp": 1777727400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5656",
+    "longShortRatio": "1.3019",
+    "shortAccount": "0.4344",
+    "timestamp": 1777727700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5653",
+    "longShortRatio": "1.3007",
+    "shortAccount": "0.4347",
+    "timestamp": 1777728000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5646",
+    "longShortRatio": "1.2966",
+    "shortAccount": "0.4354",
+    "timestamp": 1777728300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5638",
+    "longShortRatio": "1.2926",
+    "shortAccount": "0.4362",
+    "timestamp": 1777728600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5633",
+    "longShortRatio": "1.2897",
+    "shortAccount": "0.4367",
+    "timestamp": 1777728900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5614",
+    "longShortRatio": "1.2802",
+    "shortAccount": "0.4386",
+    "timestamp": 1777729200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5611",
+    "longShortRatio": "1.2782",
+    "shortAccount": "0.4389",
+    "timestamp": 1777729500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5587",
+    "longShortRatio": "1.2661",
+    "shortAccount": "0.4413",
+    "timestamp": 1777729800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5561",
+    "longShortRatio": "1.2530",
+    "shortAccount": "0.4439",
+    "timestamp": 1777730100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5559",
+    "longShortRatio": "1.2517",
+    "shortAccount": "0.4441",
+    "timestamp": 1777730400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5581",
+    "longShortRatio": "1.2630",
+    "shortAccount": "0.4419",
+    "timestamp": 1777730700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5569",
+    "longShortRatio": "1.2567",
+    "shortAccount": "0.4431",
+    "timestamp": 1777731000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5595",
+    "longShortRatio": "1.2704",
+    "shortAccount": "0.4405",
+    "timestamp": 1777731300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5588",
+    "longShortRatio": "1.2663",
+    "shortAccount": "0.4412",
+    "timestamp": 1777731600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5593",
+    "longShortRatio": "1.2689",
+    "shortAccount": "0.4407",
+    "timestamp": 1777731900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5600",
+    "longShortRatio": "1.2729",
+    "shortAccount": "0.4400",
+    "timestamp": 1777732200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5608",
+    "longShortRatio": "1.2771",
+    "shortAccount": "0.4392",
+    "timestamp": 1777732500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5602",
+    "longShortRatio": "1.2738",
+    "shortAccount": "0.4398",
+    "timestamp": 1777732800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5613",
+    "longShortRatio": "1.2795",
+    "shortAccount": "0.4387",
+    "timestamp": 1777733100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5573",
+    "longShortRatio": "1.2590",
+    "shortAccount": "0.4427",
+    "timestamp": 1777733400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5564",
+    "longShortRatio": "1.2540",
+    "shortAccount": "0.4436",
+    "timestamp": 1777733700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5547",
+    "longShortRatio": "1.2459",
+    "shortAccount": "0.4453",
+    "timestamp": 1777734000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5545",
+    "longShortRatio": "1.2449",
+    "shortAccount": "0.4455",
+    "timestamp": 1777734300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5532",
+    "longShortRatio": "1.2381",
+    "shortAccount": "0.4468",
+    "timestamp": 1777734600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5534",
+    "longShortRatio": "1.2391",
+    "shortAccount": "0.4466",
+    "timestamp": 1777734900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5524",
+    "longShortRatio": "1.2344",
+    "shortAccount": "0.4476",
+    "timestamp": 1777735200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5530",
+    "longShortRatio": "1.2370",
+    "shortAccount": "0.4470",
+    "timestamp": 1777735500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5544",
+    "longShortRatio": "1.2441",
+    "shortAccount": "0.4456",
+    "timestamp": 1777735800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5529",
+    "longShortRatio": "1.2368",
+    "shortAccount": "0.4471",
+    "timestamp": 1777736100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5513",
+    "longShortRatio": "1.2288",
+    "shortAccount": "0.4487",
+    "timestamp": 1777736400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5499",
+    "longShortRatio": "1.2218",
+    "shortAccount": "0.4501",
+    "timestamp": 1777736700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5506",
+    "longShortRatio": "1.2251",
+    "shortAccount": "0.4494",
+    "timestamp": 1777737000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5505",
+    "longShortRatio": "1.2247",
+    "shortAccount": "0.4495",
+    "timestamp": 1777737300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5502",
+    "longShortRatio": "1.2234",
+    "shortAccount": "0.4498",
+    "timestamp": 1777737600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5523",
+    "longShortRatio": "1.2337",
+    "shortAccount": "0.4477",
+    "timestamp": 1777737900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5522",
+    "longShortRatio": "1.2330",
+    "shortAccount": "0.4478",
+    "timestamp": 1777738200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5536",
+    "longShortRatio": "1.2400",
+    "shortAccount": "0.4464",
+    "timestamp": 1777738500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5553",
+    "longShortRatio": "1.2487",
+    "shortAccount": "0.4447",
+    "timestamp": 1777738800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5551",
+    "longShortRatio": "1.2477",
+    "shortAccount": "0.4449",
+    "timestamp": 1777739100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5555",
+    "longShortRatio": "1.2497",
+    "shortAccount": "0.4445",
+    "timestamp": 1777739400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5563",
+    "longShortRatio": "1.2538",
+    "shortAccount": "0.4437",
+    "timestamp": 1777739700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5570",
+    "longShortRatio": "1.2573",
+    "shortAccount": "0.4430",
+    "timestamp": 1777740000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5576",
+    "longShortRatio": "1.2603",
+    "shortAccount": "0.4424",
+    "timestamp": 1777740300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5579",
+    "longShortRatio": "1.2622",
+    "shortAccount": "0.4421",
+    "timestamp": 1777740600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5591",
+    "longShortRatio": "1.2681",
+    "shortAccount": "0.4409",
+    "timestamp": 1777740900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5590",
+    "longShortRatio": "1.2675",
+    "shortAccount": "0.4410",
+    "timestamp": 1777741200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5557",
+    "longShortRatio": "1.2505",
+    "shortAccount": "0.4443",
+    "timestamp": 1777741500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5555",
+    "longShortRatio": "1.2500",
+    "shortAccount": "0.4445",
+    "timestamp": 1777741800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5568",
+    "longShortRatio": "1.2564",
+    "shortAccount": "0.4432",
+    "timestamp": 1777742100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5588",
+    "longShortRatio": "1.2668",
+    "shortAccount": "0.4412",
+    "timestamp": 1777742400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5599",
+    "longShortRatio": "1.2720",
+    "shortAccount": "0.4401",
+    "timestamp": 1777742700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5609",
+    "longShortRatio": "1.2774",
+    "shortAccount": "0.4391",
+    "timestamp": 1777743000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5585",
+    "longShortRatio": "1.2651",
+    "shortAccount": "0.4415",
+    "timestamp": 1777743300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5659",
+    "longShortRatio": "1.3038",
+    "shortAccount": "0.4341",
+    "timestamp": 1777743600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5732",
+    "longShortRatio": "1.3428",
+    "shortAccount": "0.4268",
+    "timestamp": 1777743900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5823",
+    "longShortRatio": "1.3943",
+    "shortAccount": "0.4177",
+    "timestamp": 1777744200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5825",
+    "longShortRatio": "1.3950",
+    "shortAccount": "0.4175",
+    "timestamp": 1777744500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5819",
+    "longShortRatio": "1.3919",
+    "shortAccount": "0.4181",
+    "timestamp": 1777744800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5811",
+    "longShortRatio": "1.3870",
+    "shortAccount": "0.4189",
+    "timestamp": 1777745100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5878",
+    "longShortRatio": "1.4259",
+    "shortAccount": "0.4122",
+    "timestamp": 1777745400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5941",
+    "longShortRatio": "1.4636",
+    "shortAccount": "0.4059",
+    "timestamp": 1777745700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5974",
+    "longShortRatio": "1.4839",
+    "shortAccount": "0.4026",
+    "timestamp": 1777746000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6040",
+    "longShortRatio": "1.5249",
+    "shortAccount": "0.3960",
+    "timestamp": 1777746300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6041",
+    "longShortRatio": "1.5261",
+    "shortAccount": "0.3959",
+    "timestamp": 1777746600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6133",
+    "longShortRatio": "1.5858",
+    "shortAccount": "0.3867",
+    "timestamp": 1777746900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6178",
+    "longShortRatio": "1.6164",
+    "shortAccount": "0.3822",
+    "timestamp": 1777747200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6174",
+    "longShortRatio": "1.6136",
+    "shortAccount": "0.3826",
+    "timestamp": 1777747500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6076",
+    "longShortRatio": "1.5483",
+    "shortAccount": "0.3924",
+    "timestamp": 1777747800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6029",
+    "longShortRatio": "1.5180",
+    "shortAccount": "0.3971",
+    "timestamp": 1777748100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6031",
+    "longShortRatio": "1.5195",
+    "shortAccount": "0.3969",
+    "timestamp": 1777748400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6038",
+    "longShortRatio": "1.5243",
+    "shortAccount": "0.3962",
+    "timestamp": 1777748700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6008",
+    "longShortRatio": "1.5052",
+    "shortAccount": "0.3992",
+    "timestamp": 1777749000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6009",
+    "longShortRatio": "1.5056",
+    "shortAccount": "0.3991",
+    "timestamp": 1777749300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.6044",
+    "longShortRatio": "1.5276",
+    "shortAccount": "0.3956",
+    "timestamp": 1777749600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5980",
+    "longShortRatio": "1.4873",
+    "shortAccount": "0.4020",
+    "timestamp": 1777749900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5987",
+    "longShortRatio": "1.4918",
+    "shortAccount": "0.4013",
+    "timestamp": 1777750200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5906",
+    "longShortRatio": "1.4423",
+    "shortAccount": "0.4094",
+    "timestamp": 1777750500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5889",
+    "longShortRatio": "1.4328",
+    "shortAccount": "0.4111",
+    "timestamp": 1777750800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5877",
+    "longShortRatio": "1.4257",
+    "shortAccount": "0.4123",
+    "timestamp": 1777751100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5834",
+    "longShortRatio": "1.4006",
+    "shortAccount": "0.4166",
+    "timestamp": 1777751400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5808",
+    "longShortRatio": "1.3855",
+    "shortAccount": "0.4192",
+    "timestamp": 1777751700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5817",
+    "longShortRatio": "1.3905",
+    "shortAccount": "0.4183",
+    "timestamp": 1777752000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5817",
+    "longShortRatio": "1.3906",
+    "shortAccount": "0.4183",
+    "timestamp": 1777752300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5828",
+    "longShortRatio": "1.3969",
+    "shortAccount": "0.4172",
+    "timestamp": 1777752600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5811",
+    "longShortRatio": "1.3875",
+    "shortAccount": "0.4189",
+    "timestamp": 1777752900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5804",
+    "longShortRatio": "1.3831",
+    "shortAccount": "0.4196",
+    "timestamp": 1777753200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5765",
+    "longShortRatio": "1.3612",
+    "shortAccount": "0.4235",
+    "timestamp": 1777753500000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5702",
+    "longShortRatio": "1.3269",
+    "shortAccount": "0.4298",
+    "timestamp": 1777753800000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5661",
+    "longShortRatio": "1.3047",
+    "shortAccount": "0.4339",
+    "timestamp": 1777754100000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5630",
+    "longShortRatio": "1.2884",
+    "shortAccount": "0.4370",
+    "timestamp": 1777754400000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5623",
+    "longShortRatio": "1.2847",
+    "shortAccount": "0.4377",
+    "timestamp": 1777754700000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5606",
+    "longShortRatio": "1.2757",
+    "shortAccount": "0.4394",
+    "timestamp": 1777755000000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5648",
+    "longShortRatio": "1.2980",
+    "shortAccount": "0.4352",
+    "timestamp": 1777755300000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5657",
+    "longShortRatio": "1.3025",
+    "shortAccount": "0.4343",
+    "timestamp": 1777755600000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5673",
+    "longShortRatio": "1.3109",
+    "shortAccount": "0.4327",
+    "timestamp": 1777755900000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5643",
+    "longShortRatio": "1.2953",
+    "shortAccount": "0.4357",
+    "timestamp": 1777756200000
+  },
+  {
+    "symbol": "LABUSDT",
+    "longAccount": "0.5627",
+    "longShortRatio": "1.2868",
+    "shortAccount": "0.4373",
+    "timestamp": 1777756500000
+  }
+]

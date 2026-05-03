@@ -1,0 +1,86 @@
+{
+  "summary": [
+    {
+      "strategy": "oi_overcrowded_crash_follow_short",
+      "horizon_min": 60,
+      "n": 26,
+      "mean": 4.227442714665697,
+      "win_rate": 50.0,
+      "sum_raw": 109.91351058130815,
+      "p25": -2.856293359762148,
+      "p75": 10.428305400372448
+    },
+    {
+      "strategy": "oi_overcrowded_crash_follow_short",
+      "horizon_min": 120,
+      "n": 26,
+      "mean": 2.5723794522716874,
+      "win_rate": 42.30769230769231,
+      "sum_raw": 66.88186575906388,
+      "p25": -11.898800104164593,
+      "p75": 14.338919925512105
+    },
+    {
+      "strategy": "pc_pump_cont_long",
+      "horizon_min": 60,
+      "n": 338,
+      "mean": -0.9394390076868272,
+      "win_rate": 45.26627218934911,
+      "sum_raw": -317.53038459814763,
+      "p25": -8.347553562864574,
+      "p75": 5.5932507876844895
+    },
+    {
+      "strategy": "pc_pump_cont_long",
+      "horizon_min": 120,
+      "n": 338,
+      "mean": -0.6525825709279529,
+      "win_rate": 40.532544378698226,
+      "sum_raw": -220.57290897364788,
+      "p25": -10.94470046082949,
+      "p75": 7.351786415390653
+    },
+    {
+      "strategy": "reserved6_extreme_dump_meanrevert_long",
+      "horizon_min": 60,
+      "n": 43,
+      "mean": 4.123634464805928,
+      "win_rate": 62.7906976744186,
+      "sum_raw": 177.31628198665484,
+      "p25": -1.8662519440124377,
+      "p75": 13.86995564210754
+    },
+    {
+      "strategy": "reserved6_extreme_dump_meanrevert_long",
+      "horizon_min": 120,
+      "n": 43,
+      "mean": 3.7971804226853005,
+      "win_rate": 65.11627906976744,
+      "sum_raw": 163.27875817546789,
+      "p25": -4.302747537584241,
+      "p75": 15.707876302280452
+    },
+    {
+      "strategy": "reserved6_extreme_pump_fade_short",
+      "horizon_min": 60,
+      "n": 51,
+      "mean": 1.2708175736518657,
+      "win_rate": 54.90196078431373,
+      "sum_raw": 64.81169625624517,
+      "p25": -7.977736549165117,
+      "p75": 8.258550360840914
+    },
+    {
+      "strategy": "reserved6_extreme_pump_fade_short",
+      "horizon_min": 120,
+      "n": 51,
+      "mean": 2.2164438612396187,
+      "win_rate": 62.745098039215684,
+      "sum_raw": 113.03863692322054,
+      "p25": -8.372861242292485,
+      "p75": 11.310258044754248
+    }
+  ],
+  "n_triggers": 464,
+  "n_enriched": 916
+}

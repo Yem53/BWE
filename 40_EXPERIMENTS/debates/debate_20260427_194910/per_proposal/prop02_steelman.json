@@ -1,0 +1,22 @@
+{
+  "archetype_ref": "X103_fixed_2x_long_favored",
+  "best_case_thesis": "This proposal directly addresses the R2 E126 paper-shadow disaster where TP=0.51%/SL=6.00% (an ~12x asymmetric ratio) won 80% of the time but compounded to -13.5% because the rare losers were 12x the size of typical winners. By capping the SL/TP ratio at exactly 2:1, X103 forces the strategy into a regime where left-tail blowups cannot dominate the equity curve — even a 50% win rate stays roughly breakeven, and any modest edge from BWE entry signals translates linearly into PnL. This is the structurally safest asymmetric exit that still concedes the empirical reality that pump-driven longs need slightly more SL room than TP room to survive normal microstructure noise.",
+  "expected_alpha_source": "Bounded asymmetric exit prevents the kelly-negative left-tail compounding that destroyed E126 in paper-shadow, while still respecting that BWE pump signals have noisier entry timing than exit timing — capturing a 1.5% move is reachable on most pump signals, while 3.0% SL is below the typical post-pump retracement.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Most effective in normal-volatility pump regimes where the BWE signal arrives mid-impulse and the asset has already absorbed initial taker-buy pressure but has 1-2% of momentum remaining before mean reversion — i.e., the typical pricechange/long setup behind E126/E064/E148.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E148",
+    "E051",
+    "E066"
+  ],
+  "if_paper_works_likely_reason": "The 2:1 cap survives the journal penalty / p25_capped_tail metric that killed E126's 12:1 ratio, so a strategy that previously scored high on legacy mean but blew up on capped tail will now score consistently on both — meaning paper-shadow PnL tracks backtest PnL instead of diverging negatively.",
+  "could_compound_with": "Any X-series exit proposal at 1.5x or 2.5x ratio in the same batch — together they let the Synthesizer interpolate the optimal asymmetry curve. Also synergizes with any breakeven-trigger risk wrapper that fires after +0.75% (half of TP), turning X103 into a quasi-multi_tp without abandoning the bounded-loss guarantee.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 30.5
+}

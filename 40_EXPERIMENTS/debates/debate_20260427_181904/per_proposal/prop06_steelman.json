@@ -1,0 +1,20 @@
+{
+  "archetype_ref": "pc_pump_top_trader_short_funding_high_short",
+  "best_case_thesis": "This proposal targets the classic 'crowded long squeeze' setup: when retail-driven price pumps coincide with top_trader_position_ratio skewed short AND funding in the top decile, you have explicit smart-money/dumb-money divergence with a measurable funding cost burning longs. The mechanism is well-documented — overheated funding plus institutional short positioning historically precedes mean-reversion or liquidation cascades on perp pairs, because longs are paying to hold while informed flow is on the other side. The triple-confirmation (pump + smart-money short + extreme funding) is structurally rare, which means low trigger count but high edge per trigger.",
+  "expected_alpha_source": "Funding-rate-driven long liquidation cascade amplified by smart-money positioning divergence — longs are forced to close as funding bleeds them and informed shorts apply pressure.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "Late-stage retail-driven rallies in altcoins where funding has decoupled from spot demand and top traders have already rotated to shorts — typical of euphoric local tops.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E148"
+  ],
+  "if_paper_works_likely_reason": "The funding_pct_top_decile filter will have selected only the most asymmetric setups where the funding bleed itself becomes a tailwind, so even modest mean-reversion produces high win-rate fixed-TP captures.",
+  "could_compound_with": "Any short-side proposal that uses liquidation_heatmap or open_interest_divergence — the smart-money signal here would confirm the mechanical liquidation thesis those propose.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 25.9
+}

@@ -1,0 +1,641 @@
+{
+  "comparison": {
+    "Rule Engine v1.1 (F cond)": {
+      "label": "Rule Engine v1.1 (F cond)",
+      "total_waves": 1407,
+      "n_skip": 309,
+      "n_trade": 1098,
+      "trade_rate_pct": 78.03837953091684,
+      "total_capital_pnl_pct": 249.13297088403897,
+      "mean_cap_pnl_per_trade": 0.22689705909293167,
+      "win_rate_traded": 79.96357012750455,
+      "mean_raw_pnl_traded": 3.2956318113186462,
+      "best_raw": 109.46428571428575,
+      "worst_raw": -27.561102444097756,
+      "big_wins_10pct": 147,
+      "catastrophes_15pct": 19
+    },
+    "Rule Engine v1 (F=FOLLOW)": {
+      "label": "Rule Engine v1 (F=FOLLOW)",
+      "total_waves": 1407,
+      "n_skip": 268,
+      "n_trade": 1139,
+      "trade_rate_pct": 80.95238095238095,
+      "total_capital_pnl_pct": 250.05332259676618,
+      "mean_cap_pnl_per_trade": 0.21953759666090095,
+      "win_rate_traded": 79.4556628621598,
+      "mean_raw_pnl_traded": 3.1931613372102,
+      "best_raw": 109.46428571428575,
+      "worst_raw": -27.561102444097756,
+      "big_wins_10pct": 150,
+      "catastrophes_15pct": 19
+    },
+    "Rule Engine v1 (F=SKIP)": {
+      "label": "Rule Engine v1 (F=SKIP)",
+      "total_waves": 1407,
+      "n_skip": 335,
+      "n_trade": 1072,
+      "trade_rate_pct": 76.19047619047619,
+      "total_capital_pnl_pct": 248.5392214579416,
+      "mean_cap_pnl_per_trade": 0.231846288673453,
+      "win_rate_traded": 80.22388059701493,
+      "mean_raw_pnl_traded": 3.3644857652107523,
+      "best_raw": 109.46428571428575,
+      "worst_raw": -27.561102444097756,
+      "big_wins_10pct": 145,
+      "catastrophes_15pct": 19
+    },
+    "Always FADE 5%": {
+      "label": "Always FADE 5%",
+      "total_waves": 1407,
+      "n_skip": 0,
+      "n_trade": 1407,
+      "trade_rate_pct": 100.0,
+      "total_capital_pnl_pct": 202.01548541904373,
+      "mean_cap_pnl_per_trade": 0.14357888089484275,
+      "win_rate_traded": 78.96233120113718,
+      "mean_raw_pnl_traded": 2.871577617896855,
+      "best_raw": 109.46428571428575,
+      "worst_raw": -29.857215706272306,
+      "big_wins_10pct": 161,
+      "catastrophes_15pct": 23
+    },
+    "Always FADE 8%": {
+      "label": "Always FADE 8%",
+      "total_waves": 1407,
+      "n_skip": 0,
+      "n_trade": 1407,
+      "trade_rate_pct": 100.0,
+      "total_capital_pnl_pct": 323.22477667046996,
+      "mean_cap_pnl_per_trade": 0.22972620943174837,
+      "win_rate_traded": 78.96233120113718,
+      "mean_raw_pnl_traded": 2.871577617896855,
+      "best_raw": 109.46428571428575,
+      "worst_raw": -29.857215706272306,
+      "big_wins_10pct": 161,
+      "catastrophes_15pct": 23
+    },
+    "Always FOLLOW 5%": {
+      "label": "Always FOLLOW 5%",
+      "total_waves": 1407,
+      "n_skip": 0,
+      "n_trade": 1407,
+      "trade_rate_pct": 100.0,
+      "total_capital_pnl_pct": -74.22726269855549,
+      "mean_cap_pnl_per_trade": -0.05275569488170255,
+      "win_rate_traded": 58.35110163468372,
+      "mean_raw_pnl_traded": -1.0551138976340513,
+      "best_raw": 80.81024349286317,
+      "worst_raw": -41.71083163835334,
+      "big_wins_10pct": 106,
+      "catastrophes_15pct": 95
+    },
+    "Rule Engine (no SKIPs)": {
+      "label": "Rule Engine (no SKIPs)",
+      "total_waves": 1407,
+      "n_skip": 0,
+      "n_trade": 1407,
+      "trade_rate_pct": 100.0,
+      "total_capital_pnl_pct": 280.3824589489938,
+      "mean_cap_pnl_per_trade": 0.19927680095877315,
+      "win_rate_traded": 79.317697228145,
+      "mean_raw_pnl_traded": 3.016057917645324,
+      "best_raw": 109.46428571428575,
+      "worst_raw": -29.857215706272306,
+      "big_wins_10pct": 166,
+      "catastrophes_15pct": 22
+    },
+    "Random skip 50% + FADE": {
+      "label": "Random skip 50% + FADE",
+      "total_waves": 1407,
+      "n_skip": 691,
+      "n_trade": 716,
+      "trade_rate_pct": 50.888415067519546,
+      "total_capital_pnl_pct": 112.42584298517158,
+      "mean_cap_pnl_per_trade": 0.1570193337781726,
+      "win_rate_traded": 77.93296089385476,
+      "mean_raw_pnl_traded": 3.140386675563452,
+      "best_raw": 109.46428571428575,
+      "worst_raw": -27.561102444097756,
+      "big_wins_10pct": 98,
+      "catastrophes_15pct": 15
+    }
+  },
+  "by_symbol": [
+    {
+      "symbol": "RAVEUSDT",
+      "n": 100,
+      "n_trade": 96,
+      "cap_pnl": 28.202827302105376,
+      "rules_used": {
+        "D": 80,
+        "E": 3,
+        "G": 16,
+        "F2": 1
+      }
+    },
+    {
+      "symbol": "SIRENUSDT",
+      "n": 61,
+      "n_trade": 61,
+      "cap_pnl": 26.200173361838043,
+      "rules_used": {
+        "C": 61
+      }
+    },
+    {
+      "symbol": "AIOTUSDT",
+      "n": 77,
+      "n_trade": 71,
+      "cap_pnl": 24.760480384381367,
+      "rules_used": {
+        "E": 5,
+        "D": 62,
+        "G": 9,
+        "F2": 1
+      }
+    },
+    {
+      "symbol": "ARIAUSDT",
+      "n": 52,
+      "n_trade": 49,
+      "cap_pnl": 21.244337281298243,
+      "rules_used": {
+        "D": 41,
+        "G": 8,
+        "E": 3
+      }
+    },
+    {
+      "symbol": "BLESSUSDT",
+      "n": 45,
+      "n_trade": 44,
+      "cap_pnl": 16.094621012242513,
+      "rules_used": {
+        "G": 6,
+        "D": 38,
+        "E": 1
+      }
+    },
+    {
+      "symbol": "TRADOORUSDT",
+      "n": 42,
+      "n_trade": 36,
+      "cap_pnl": 15.548898672199176,
+      "rules_used": {
+        "D": 25,
+        "G": 11,
+        "E": 5,
+        "F2": 1
+      }
+    },
+    {
+      "symbol": "DUSDT",
+      "n": 32,
+      "n_trade": 25,
+      "cap_pnl": 9.973101883880656,
+      "rules_used": {
+        "F2": 2,
+        "D": 18,
+        "E": 5,
+        "G": 7
+      }
+    },
+    {
+      "symbol": "AKEUSDT",
+      "n": 30,
+      "n_trade": 30,
+      "cap_pnl": 9.77811792075298,
+      "rules_used": {
+        "C": 30
+      }
+    },
+    {
+      "symbol": "STOUSDT",
+      "n": 43,
+      "n_trade": 40,
+      "cap_pnl": 5.842534638619348,
+      "rules_used": {
+        "D": 37,
+        "G": 3,
+        "E": 3
+      }
+    },
+    {
+      "symbol": "QUSDT",
+      "n": 16,
+      "n_trade": 16,
+      "cap_pnl": 5.3740715961587044,
+      "rules_used": {
+        "C": 16
+      }
+    },
+    {
+      "symbol": "BASUSDT",
+      "n": 16,
+      "n_trade": 16,
+      "cap_pnl": 4.915520934616264,
+      "rules_used": {
+        "C": 16
+      }
+    },
+    {
+      "symbol": "\u6211\u8e0f\u9a6c\u6765\u4e86USDT",
+      "n": 17,
+      "n_trade": 15,
+      "cap_pnl": 4.545870948648279,
+      "rules_used": {
+        "E": 1,
+        "G": 15,
+        "F2": 1
+      }
+    },
+    {
+      "symbol": "PLAYUSDT",
+      "n": 20,
+      "n_trade": 20,
+      "cap_pnl": 3.965327461830162,
+      "rules_used": {
+        "B": 8,
+        "G": 11,
+        "F1": 1
+      }
+    },
+    {
+      "symbol": "DAMUSDT",
+      "n": 19,
+      "n_trade": 13,
+      "cap_pnl": 3.938872722917239,
+      "rules_used": {
+        "E": 6,
+        "G": 13
+      }
+    },
+    {
+      "symbol": "NOMUSDT",
+      "n": 28,
+      "n_trade": 24,
+      "cap_pnl": 3.871462045407897,
+      "rules_used": {
+        "D": 16,
+        "F2": 1,
+        "E": 3,
+        "G": 8
+      }
+    },
+    {
+      "symbol": "PIEVERSEUSDT",
+      "n": 16,
+      "n_trade": 13,
+      "cap_pnl": 3.731255052842841,
+      "rules_used": {
+        "G": 13,
+        "E": 3
+      }
+    },
+    {
+      "symbol": "ZKJUSDT",
+      "n": 27,
+      "n_trade": 20,
+      "cap_pnl": 3.399274602309683,
+      "rules_used": {
+        "F1": 2,
+        "E": 7,
+        "G": 18
+      }
+    },
+    {
+      "symbol": "BSBUSDT",
+      "n": 28,
+      "n_trade": 18,
+      "cap_pnl": 3.1528873023573354,
+      "rules_used": {
+        "E": 10,
+        "G": 18
+      }
+    },
+    {
+      "symbol": "VICUSDT",
+      "n": 6,
+      "n_trade": 6,
+      "cap_pnl": 3.0107311372400254,
+      "rules_used": {
+        "C": 6
+      }
+    },
+    {
+      "symbol": "\u9f99\u867eUSDT",
+      "n": 11,
+      "n_trade": 10,
+      "cap_pnl": 2.9360233715408395,
+      "rules_used": {
+        "G": 10,
+        "E": 1
+      }
+    },
+    {
+      "symbol": "ONUSDT",
+      "n": 18,
+      "n_trade": 11,
+      "cap_pnl": 2.7820942066420598,
+      "rules_used": {
+        "G": 11,
+        "E": 7
+      }
+    },
+    {
+      "symbol": "ENJUSDT",
+      "n": 7,
+      "n_trade": 7,
+      "cap_pnl": 2.330279031152761,
+      "rules_used": {
+        "C": 7
+      }
+    },
+    {
+      "symbol": "AIAUSDT",
+      "n": 7,
+      "n_trade": 7,
+      "cap_pnl": 2.272469673659138,
+      "rules_used": {
+        "C": 7
+      }
+    },
+    {
+      "symbol": "LABUSDT",
+      "n": 12,
+      "n_trade": 12,
+      "cap_pnl": 2.2617225021206226,
+      "rules_used": {
+        "C": 12
+      }
+    },
+    {
+      "symbol": "BROCCOLIF3BUSDT",
+      "n": 6,
+      "n_trade": 6,
+      "cap_pnl": 2.087009214386883,
+      "rules_used": {
+        "C": 6
+      }
+    },
+    {
+      "symbol": "BLUAIUSDT",
+      "n": 6,
+      "n_trade": 6,
+      "cap_pnl": 2.081085504199842,
+      "rules_used": {
+        "C": 6
+      }
+    },
+    {
+      "symbol": "PUMPBTCUSDT",
+      "n": 6,
+      "n_trade": 6,
+      "cap_pnl": 2.054258730558453,
+      "rules_used": {
+        "B": 3,
+        "G": 2,
+        "F1": 1
+      }
+    },
+    {
+      "symbol": "MOVRUSDT",
+      "n": 15,
+      "n_trade": 11,
+      "cap_pnl": 1.9165532244654946,
+      "rules_used": {
+        "G": 11,
+        "E": 4
+      }
+    },
+    {
+      "symbol": "BASEDUSDT",
+      "n": 21,
+      "n_trade": 15,
+      "cap_pnl": 1.8556685198486258,
+      "rules_used": {
+        "G": 14,
+        "E": 6,
+        "F1": 1
+      }
+    },
+    {
+      "symbol": "NAORISUSDT",
+      "n": 7,
+      "n_trade": 7,
+      "cap_pnl": 1.7898338368236735,
+      "rules_used": {
+        "C": 7
+      }
+    },
+    {
+      "symbol": "GENIUSUSDT",
+      "n": 10,
+      "n_trade": 7,
+      "cap_pnl": 1.7775616890300432,
+      "rules_used": {
+        "G": 7,
+        "E": 3
+      }
+    },
+    {
+      "symbol": "GRIFFAINUSDT",
+      "n": 6,
+      "n_trade": 4,
+      "cap_pnl": 1.7439884529419813,
+      "rules_used": {
+        "G": 3,
+        "E": 2,
+        "F1": 1
+      }
+    },
+    {
+      "symbol": "APEUSDT",
+      "n": 5,
+      "n_trade": 5,
+      "cap_pnl": 1.6889108209446455,
+      "rules_used": {
+        "F1": 1,
+        "B": 2,
+        "G": 2
+      }
+    },
+    {
+      "symbol": "SKYAIUSDT",
+      "n": 18,
+      "n_trade": 11,
+      "cap_pnl": 1.389069970018171,
+      "rules_used": {
+        "G": 11,
+        "E": 5,
+        "F2": 2
+      }
+    },
+    {
+      "symbol": "BELUSDT",
+      "n": 4,
+      "n_trade": 2,
+      "cap_pnl": 1.3841337802690998,
+      "rules_used": {
+        "F1": 1,
+        "E": 2,
+        "G": 1
+      }
+    },
+    {
+      "symbol": "HIGHUSDT",
+      "n": 33,
+      "n_trade": 22,
+      "cap_pnl": 1.338645681738978,
+      "rules_used": {
+        "G": 21,
+        "E": 11,
+        "F1": 1
+      }
+    },
+    {
+      "symbol": "GTCUSDT",
+      "n": 7,
+      "n_trade": 4,
+      "cap_pnl": 1.314933858248391,
+      "rules_used": {
+        "F1": 1,
+        "G": 3,
+        "E": 3
+      }
+    },
+    {
+      "symbol": "JOEUSDT",
+      "n": 3,
+      "n_trade": 3,
+      "cap_pnl": 1.3083074699582022,
+      "rules_used": {
+        "B": 2,
+        "G": 1
+      }
+    },
+    {
+      "symbol": "HEMIUSDT",
+      "n": 4,
+      "n_trade": 3,
+      "cap_pnl": 1.2657528841492143,
+      "rules_used": {
+        "E": 1,
+        "G": 3
+      }
+    },
+    {
+      "symbol": "TAKEUSDT",
+      "n": 16,
+      "n_trade": 5,
+      "cap_pnl": 1.1679725051728913,
+      "rules_used": {
+        "F1": 1,
+        "G": 4,
+        "E": 11
+      }
+    },
+    {
+      "symbol": "XNYUSDT",
+      "n": 8,
+      "n_trade": 8,
+      "cap_pnl": 1.163543236693335,
+      "rules_used": {
+        "C": 8
+      }
+    },
+    {
+      "symbol": "JCTUSDT",
+      "n": 7,
+      "n_trade": 4,
+      "cap_pnl": 1.1494874866790519,
+      "rules_used": {
+        "G": 4,
+        "E": 2,
+        "F2": 1
+      }
+    },
+    {
+      "symbol": "ONGUSDT",
+      "n": 5,
+      "n_trade": 4,
+      "cap_pnl": 1.0178127244330448,
+      "rules_used": {
+        "G": 4,
+        "E": 1
+      }
+    },
+    {
+      "symbol": "PTBUSDT",
+      "n": 11,
+      "n_trade": 5,
+      "cap_pnl": 0.962859027014274,
+      "rules_used": {
+        "E": 4,
+        "G": 5,
+        "F2": 2
+      }
+    },
+    {
+      "symbol": "PHBUSDT",
+      "n": 14,
+      "n_trade": 11,
+      "cap_pnl": 0.8864915120241466,
+      "rules_used": {
+        "G": 9,
+        "E": 3,
+        "F1": 2
+      }
+    },
+    {
+      "symbol": "MAGMAUSDT",
+      "n": 18,
+      "n_trade": 10,
+      "cap_pnl": 0.8716855064406991,
+      "rules_used": {
+        "E": 8,
+        "G": 10
+      }
+    },
+    {
+      "symbol": "COAIUSDT",
+      "n": 6,
+      "n_trade": 4,
+      "cap_pnl": 0.8412889129605047,
+      "rules_used": {
+        "G": 4,
+        "E": 2
+      }
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "n": 20,
+      "n_trade": 20,
+      "cap_pnl": 0.7643310411325743,
+      "rules_used": {
+        "C": 20
+      }
+    },
+    {
+      "symbol": "SOLVUSDT",
+      "n": 11,
+      "n_trade": 11,
+      "cap_pnl": 0.7571366329185254,
+      "rules_used": {
+        "G": 3,
+        "D": 8
+      }
+    },
+    {
+      "symbol": "OPGUSDT",
+      "n": 8,
+      "n_trade": 6,
+      "cap_pnl": 0.7280125484303017,
+      "rules_used": {
+        "G": 6,
+        "E": 2
+      }
+    }
+  ]
+}

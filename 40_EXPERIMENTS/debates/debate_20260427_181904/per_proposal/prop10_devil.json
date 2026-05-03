@@ -1,0 +1,19 @@
+{
+  "summary": "Single proposal review: session-gated US-hours pricechange long with taker_buy + high liquidity — directionally sensible but worth monitoring for sample-size and session-regime fragility.",
+  "critiques": [
+    {
+      "archetype_ref": "hour_session_us_pump_long",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Triple-gate (session=US AND taker_buy_ratio_5m>=0.60 AND liquidity_bucket=high) likely shrinks trigger count below the ~1000 floor seen in top E148 (988 trig); on a 30-day window, US-hour subset is ~1/3 of bars, then taker_buy>=0.60 and high-liquidity further compound — risk of <300 triggers, putting score variance in single-symbol-outlier territory.",
+        "Session=US overlaps with US equity macro events (CPI/FOMC/NFP windows in the 30-day sample); if the data window contains 1–2 strong macro pump days, the archetype may be a fitted artifact of those days rather than a session regime — test by holding out specific calendar days.",
+        "High-liquidity bucket + taker_buy>=0.60 long during US session could correlate with BTC's own daytime drift; if BTC regime in the 30-day window was net-up during US hours, this archetype inherits beta rather than alpha — generalization past the window is uncertain.",
+        "Potential conflict with the live BWE_OI_Price_monitor pump long: pricechange/long during US high-liquidity hours likely overlaps OI_Price pump triggers on the same symbols/timeframes, so paper-shadow PnL may double-count rather than represent independent edge."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log trigger count and ensure >=500 to trust the score; (2) bucket results by US-session sub-windows (open 13:30 UTC, midday, close 20:00 UTC) to confirm edge isn't concentrated in one hour; (3) compute overlap rate with live OI_Price pump long fires on the same (symbol, minute) — flag if >30% overlap; (4) check left-tail with kelly_capped and p25_capped_tail (per R2 lesson) since high-liquidity longs can still suffer asymmetric TP/SL traps."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 31.63
+}

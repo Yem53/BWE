@@ -1,0 +1,20 @@
+{
+  "archetype_ref": "x101_quick_cut_60s_time_exit",
+  "best_case_thesis": "Pure time-only exits have failed across 2745 runs because they were paired with directional entries that need drift to pay off — but a 60s hard cut on extreme taker-buy-ratio (>=0.65) entries is structurally different: it harvests the well-documented short-horizon overreaction snap-back where aggressive market-buy bursts exhaust local liquidity and revert within 30-90s before the broader trend asserts. The Generator's insight is that time_only's 0/2745 record is a SELECTION artifact, not a kernel failure — no one tested it on mean-reversion-shaped entries. A deterministic 60s cut also dodges the asymmetric TP/SL trap that destroyed E126 in paper-shadow (R2 lesson), because there is no SL fat tail to bleed into.",
+  "expected_alpha_source": "Aggressive taker-buy exhaustion: when 5m taker_buy_ratio spikes >=0.65, marginal liquidity is consumed and price mean-reverts on a 30-90s horizon before directional flow re-engages — a microstructure liquidity-replenishment cycle, not generic momentum.",
+  "edge_strength_estimate": "strong",
+  "regime_match": "High-frequency chop / range-bound regimes with elevated taker aggression but no sustained directional conviction — exactly the conditions where E126-style trend-following entries paper-fail because the drift never materializes.",
+  "complementary_exit_families": [
+    "time_only"
+  ],
+  "complementary_existing_archetypes": [
+    "E126",
+    "E064",
+    "E066"
+  ],
+  "if_paper_works_likely_reason": "The 60s deterministic cut bounds left-tail risk symmetrically, so kelly_capped and p25_capped_tail will reward the bounded-loss profile that asymmetric TP/SL configs cannot match — winning by NOT losing the tail rather than by capturing more upside.",
+  "could_compound_with": "Any other x101+ exit-side proposal that pairs time_only with a confirmation filter (e.g. an x10x breakeven-at-30s variant) — together they would form an exit-kernel ablation grid that finally tests the 'quick-revert' hypothesis the pattern_miner flagged as untested.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 26.38
+}

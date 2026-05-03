@@ -1,0 +1,20 @@
+{
+  "summary": "Single multi_tp 60/40 exit ladder proposal — no leakage, no integrity risk; standard exit-side parameter exploration with mild concentration concern from the taker_buy_ratio_5m gate.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "x103_multi_tp_60_40_ladder_exit",
+      "leakage_risk": "none",
+      "leakage_notes": "novel_dim uses taker_buy_ratio_5m>=0.60, which is a trailing-window aggregate measured up to T0 — no forward_*, confirm_after_*, or post_event_* fields. TP ladder levels (0.5% / 1.5%) are forward price targets evaluated bar-by-bar in simulation, which is the standard exit-kernel pattern, not future-snooping. No integrity violation.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "Exit-side archetype with no channel/side binding (NA/NA) — only conflicts with the live OI_Price pump-long strategy if paired with a long entry on the same symbol within the same window. Even then, an earlier 60/40 TP harvest would close the paper position sooner than live, reducing rather than amplifying directional overlap. Paper-shadow only.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "No blocking issue. Advisory: (a) when X-series exit pipeline expands, track family-wise FDR across the multi_tp ladder grid (50/30/20, 60/40, and any further shapes) so the best ladder isn't a multiple-comparisons artifact; (b) monitor concurrent-position count when this exit is paired with the top pricechange/long entries (E126, E064, E051) under the 5–10% sizing rule, since the taker_buy_ratio_5m>=0.60 gate clusters on momentum bursts and could stack positions in brief windows. Both are paper-shadow monitoring items, not blockers."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 27.96
+}

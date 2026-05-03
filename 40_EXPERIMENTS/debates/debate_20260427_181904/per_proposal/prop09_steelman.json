@@ -1,0 +1,20 @@
+{
+  "archetype_ref": "r6_pump_high_liq_only_long",
+  "best_case_thesis": "Reserved6 is a sparse channel where existing 2+ filter archetypes uniformly crash from over-specification on thin trigger counts. A single high-liquidity gate on R6 long isolates the one structural condition that matters in sparse-signal regimes: the venue/asset has enough depth that pump signals reflect real taker aggression rather than spoofing or wash-prints, which is the dominant failure mode for low-liquidity pump signals. By stripping all secondary filters, this archetype trades specificity for statistical power and avoids the R1/R2 over-fit trap where multi-filter R6 entries collapsed to channel-baseline duplicates.",
+  "expected_alpha_source": "Liquidity-gated pump signals on sparse channels filter out manipulation/microstructure noise, isolating real directional flow that institutional participants cannot fade quickly enough.",
+  "edge_strength_estimate": "moderate",
+  "regime_match": "High-volatility trending regimes where deep-book venues see genuine directional taker pressure that propagates before market-makers can rebalance inventory.",
+  "complementary_exit_families": [
+    "fixed"
+  ],
+  "complementary_existing_archetypes": [
+    "E051",
+    "E126",
+    "E064"
+  ],
+  "if_paper_works_likely_reason": "The high-liquidity gate suppressed the false-positive pumps that destroyed multi-filter R6 variants, leaving a cleaner trigger set whose right-tail mean survives kelly_capped and p25_capped_tail penalization.",
+  "could_compound_with": "Any other R6 single-dim sparse-channel proposals in this batch — together they would form a coherent 'sparse channel = single structural gate' family that the synthesizer could promote as a deliberate design pattern, addressing R2's identified gap in disciplined sparse-channel coverage.",
+  "_role": "steelman",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 22.34
+}

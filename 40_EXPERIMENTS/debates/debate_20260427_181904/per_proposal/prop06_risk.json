@@ -1,0 +1,20 @@
+{
+  "summary": "Single short-side pricechange entry combining smart-money positioning and funding extremes — research-integrity is clean; minor advisory caution on multi-test inflation given the 523-archetype registry.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "pc_pump_top_trader_short_funding_high_short",
+      "leakage_risk": "none",
+      "leakage_notes": "All three novel_dim fields (top_trader_position_ratio_low, funding_pct_top_decile, move_pct>=3) are point-in-time observables at T0 — no forward_*, confirm_after_*, or post_event_* tokens. top_trader_position_ratio is a Binance-published snapshot and funding is a contemporaneous rate; both are queryable at signal time without future-snooping.",
+      "multitest_inflation_risk": "low",
+      "live_conflict_risk": "low",
+      "live_conflict_notes": "User's live system runs OI_Price pump-long; this proposal is pricechange-channel short, so no same-symbol same-side collision. Theoretical opposite-side overlap if a symbol triggers both pump-long live and this fade-short in paper, but paper-shadow only — monitoring item, not a blocker.",
+      "concentration_risk": "low",
+      "adversarial_risk": "low",
+      "overall_severity": "acceptable",
+      "remediation": "None required. For monitoring: track concurrent-position count if this rule co-fires with other pricechange/short archetypes on the same symbol within a 5m window, and log any cases where the symbol simultaneously satisfies the live OI_Price pump-long entry to study cross-strategy interaction."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 20.38
+}

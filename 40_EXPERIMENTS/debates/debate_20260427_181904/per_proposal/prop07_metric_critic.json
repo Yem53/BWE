@@ -1,0 +1,16 @@
+{
+  "archetype_ref": "pc_crash_oversold_global_long_extreme_long",
+  "predicted_tp_pct": 0.6,
+  "predicted_sl_pct": 4.0,
+  "predicted_tp_sl_ratio": 0.15,
+  "predicted_win_rate": 0.7,
+  "predicted_mean_per_trade_pct": -0.86,
+  "predicted_kelly_pct": 0.0,
+  "trap_risk": "high",
+  "trap_reasoning": "Crash counter-trend longs (move_pct<=-4 with capitulation/taker-buy filter) share the structural geometry that produced the E126 trap: bounces tend to be small and fast (TP ~0.5-1.0%) while crash continuations are brutal and slow to invalidate (SL needs ~3-6% to avoid being whipped). The GPU optimizer will likely converge on TP≈0.6 / SL≈4.0 with win_rate ~70% because that maximizes legacy p25 (most trades clip the small TP). E[trade] ≈ 0.70*0.6 - 0.30*4.0 - 0.08 = -0.86% per trade — negative expectancy. Kelly = 0.70 - 0.30/(0.6/4.0) = -1.30 → capped at 0. The tight 3-AND filter (global_long_extreme + move<=-4 + taker_buy_ratio>=0.55) raises selectivity which pushes win-rate up but does NOT fix the asymmetric payoff geometry — that is exactly the E126 failure mode. Counter-trend reversion thesis is sound, but without an explicit TP/SL ratio constraint this is the highest-priority trap candidate from the seed pool. High uncertainty on win_rate (could be 0.62-0.78); low uncertainty that natural geometry is asymmetric.",
+  "recommended_constraint": "force SL <= 2 * TP_pct in variant grid; additionally require TP_pct >= 0.8 to prevent degenerate scalp-the-bounce configurations. With SL<=2*TP and W~0.65 the strategy can clear positive expectancy; without it kelly_capped will rank ~0.",
+  "metric_score_estimate": 1.8,
+  "_role": "metric_critic",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 38.73
+}

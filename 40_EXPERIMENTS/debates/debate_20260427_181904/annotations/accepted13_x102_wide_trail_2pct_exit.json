@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "x102_wide_trail_2pct_exit",
+  "expected_trades_per_day": 34.5,
+  "expected_trades_per_day_basis": "Top entries this exit pairs with carry trig≈3000-5000 over 30d data window (e.g., E126 trig=3443, E066 trig=3684, E036/E038/E039/E040/E041 trig=5000); using a representative trig≈3500 ÷ 30d = ~117/day raw, but liquidity_bucket=high filter typically cuts ~70% of small-cap symbols → ~35/day net.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC trending sessions with realized vol >3% daily on majors",
+      "sustained 30-60min directional moves on high-liquidity pairs (BTC/ETH/SOL/BNB)",
+      "funding-divergent regimes where pump_taker_buy entries get follow-through"
+    ],
+    "worst_in": [
+      "chop / mean-reverting ranges where 2% trail repeatedly gets clipped on retracement",
+      "low-vol weekends (BTC daily range <1.5%) — trail never activates meaningfully, degenerates to time/SL exit",
+      "sharp V-reversal regimes (e.g. macro headline whipsaws) where 2% give-back from peak swallows the entire run"
+    ],
+    " explanation": "A 2% trailing step is wide enough to survive normal noise on liquid majors but is geometrically vulnerable in chop: every 2% retrace stops out, then re-entry is impossible. The high-liquidity filter narrows the universe to symbols where 2% reflects real structure rather than book-thin spikes, so edge concentrates in trending regimes on majors."
+  },
+  "live_readiness_caveats": [
+    "Trail family in R3 grid showed max≈-0.006 across 3111 combos (all negative-mean) — the synthesizer hypothesis that this is parameter mis-tune is UNVERIFIED until the {1.5, 2.0, 2.5}% sweep + activation_threshold map confirms a positive-mean island. Do NOT promote to paper-shadow on a single 2.0% point estimate.",
+    "2% trail on high-liquidity symbols implies ~$20 give-back per $1000 notional per trade vs fixed TP — at 5-10% sizing ($50-$100) that's $1-$2 of slippage absorption headroom; live execution latency >2s on trail-trigger fills will routinely eat the entire buffer.",
+    "Concurrent positions are likely: top paired entries (E036/E038/E039/E040/E041 all trig=5000) fire on overlapping signal windows on the same channel — same-symbol stack risk needs explicit dedupe or position-cap before any live consideration."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "trail_activation_rate (% of trades where trail actually moved from initial SL before exit)",
+      "alert_threshold": "<40%",
+      "rationale": "If trail rarely activates, the exit degenerates to a fixed SL/time exit and the 'wide trail' hypothesis is falsified — the edge claim is then about the entry, not this exit."
+    },
+    {
+      "metric": "median give-back from peak unrealized PnL to exit fill",
+      "alert_threshold": ">2.5% (i.e. trail step + slippage exceeds design)",
+      "rationale": "Directly measures whether the 2.0% step is being honored in live execution; persistent overshoot means the trail is too tight relative to fill latency on the liquidity_bucket=high venues."
+    },
+    {
+      "metric": "live trades/day vs predicted ~35/day",
+      "alert_threshold": "deviation >40% in either direction over 5 rolling days",
+      "rationale": "Under-firing means the high-liquidity filter is stricter live than in backtest (symbol universe drift); over-firing means duplicate fills from concurrent entry signals are not being deduped."
+    },
+    {
+      "metric": "7-day rolling mean trade % (not p25 — R2 lesson: p25 was blind to left tail)",
+      "alert_threshold": "<0 for 3 consecutive days",
+      "rationale": "Mean-based per R2 morning_brief lesson where E126 had p25=+0.395 but compounded -13.5% on paper; trail family is even more asymmetric so mean is the correct compounding proxy."
+    },
+    {
+      "metric": "max consecutive losing trades",
+      "alert_threshold": ">8",
+      "rationale": "Trail exits cluster losses in chop regimes (every retrace = loss); a streak >8 signals regime mismatch before drawdown shows in P&L."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling mean trade % < 0 AND trail_activation_rate < 40% simultaneously",
+      "rationale": "Joint condition isolates the failure mode this archetype is most exposed to: trail not activating + losses accumulating = the wide-trail thesis is falsified, not just a vol regime dip."
+    },
+    {
+      "condition": "Single-trade drawdown >4% on any one position (i.e. 2x the trail step without trail activating)",
+      "rationale": "Indicates trail logic or fill path is broken — the design ceiling per trade is ~2% give-back; a 4% loss means the stop didn't trigger as designed and execution risk is unbounded."
+    },
+    {
+      "condition": "3 consecutive days where realized BTC daily range <1.5% AND archetype mean trade % <0",
+      "rationale": "Confirms the 'worst-in low-vol' sensitivity is materializing; rather than ride out chop, pause until vol regime returns since trail family is structurally negative in low-vol per R3 grid."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 11.0,
+  "expected_max_dd_basis": "R3 grid trail family max≈-0.006 (effectively zero edge) on similar entries; combined with R2 E126 paper precedent of -13.5% compounding on a higher-scoring archetype, a wider trail on the same entry pool with unverified parameter tuning should be modeled at ~10-12% paper DD over a 30d window at 5-10% sizing.",
+  "compare_to_existing": "Closest analog is E126 pc_pump_taker_buy_extreme_long (R2 paper-tested winner-in-backtest, -13.5% in paper) since X103 layers a trail exit onto exactly that entry family — expect similar entry-side regime dependence but with the loss profile shifted from asymmetric fixed-TP-trap toward symmetric chop-bleed; triangulate the trail_activation_rate against any existing fixed-exit baseline on E126 to isolate the exit's marginal contribution.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 56.04
+}

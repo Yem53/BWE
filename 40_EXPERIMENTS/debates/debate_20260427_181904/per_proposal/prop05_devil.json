@@ -1,0 +1,19 @@
+{
+  "summary": "Single-proposal deep review: short-fade-on-crowded-pump with funding+taker_sell+move filters is structurally novel and worth testing, with specific monitoring concerns around field semantics and rarity.",
+  "critiques": [
+    {
+      "archetype_ref": "pc_pump_funding_positive_taker_sell_short",
+      "verdict": "possibly_fail",
+      "concerns": [
+        "Field-semantics risk: `funding>=0.0005` must be the funding rate snapshot at T0 (last settled rate), not next-period predicted/realized funding — if the field is forward-looking it introduces look-ahead leakage. Verify the registry's `funding` field is a backward-looking observation.",
+        "Triple-AND rarity: requiring funding>=0.0005 AND taker_buy_ratio_5m<=0.40 AND move_pct>=3 simultaneously on the pricechange channel may collapse trigger count below statistical-significance threshold (compare to E148 trig=988 which is already on the low end of the top-10); the conjunction of crowded-long funding with taker SELL dominance during an active pump is mechanically uncommon.",
+        "Definitional tension worth verifying: a >=3% pump (move_pct>=3) co-occurring with taker_buy_ratio_5m<=0.40 is plausible (squeeze fading mid-pump) but not guaranteed to be a clean co-occurrence — the 5m taker window may lag the pump trigger and reflect post-peak selling rather than the entry condition the archetype intends.",
+        "Cost sensitivity for shorts: at $1000 size with 8–16 bps round-trip plus borrow/funding cost on the short leg, mean-reversion fades on a 3% move have thin TP headroom; pair this with the R2 lesson that asymmetric TP/SL inflates legacy scores — ensure mean / kelly_capped / p25_capped_tail are the gating metrics, not p25."
+      ],
+      "monitoring_advice": "During paper-shadow: (1) log realized trigger count vs. trig>=500 floor and drop the archetype if rarity bites; (2) verify funding field timestamp is at-or-before T0; (3) prefer symmetric TP/SL exit kernels (fixed or breakeven) and judge with kelly_capped + p25_capped_tail to avoid the E126-style left-tail trap; (4) bucket by BTC regime — crowded-long fades historically degrade in strong trend regimes, so flag if hits cluster in only one regime."
+    }
+  ],
+  "_role": "devil",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 28.94
+}

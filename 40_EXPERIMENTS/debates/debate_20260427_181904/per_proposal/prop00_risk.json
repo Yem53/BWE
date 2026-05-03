@@ -1,0 +1,23 @@
+{
+  "summary": "Single proposal ports E126's winning template to OI_Price channel using three supported, T0-safe fields; no integrity issues identified — caution on live-overlap with the existing OI_Price pump-long live strategy.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "oi_pump_taker_buy_extreme_high_liq_long",
+      "leakage_risk": "low",
+      "leakage_notes": "All three novel_dim fields are T0-observable: taker_buy_ratio_5m is a trailing 5m window ending at T0 (not forward-looking), liquidity_bucket is a static/slow classification, and oi_change_pct is a point-in-time delta. No forward_*, confirm_after_*, or post_event_* fields present. Minor caveat: ensure taker_buy_ratio_5m is implemented as the trailing [T0-5m, T0] window and not [T0, T0+5m] — naming is ambiguous but matches E126's convention which has been validated as T0-safe.",
+      "multitest_inflation_risk": "medium",
+      "multitest_inflation_notes": "This is the 524th archetype in a registry of 523, with 61 already on OI_Price channel. Triple-AND on supported fields is structurally distinct, but the family-wise FDR across 20k results is non-trivial. Mitigated by Round 3 metrics (mean, kelly_capped, p25_capped_tail) that already penalize asymmetric TP/SL traps surfaced in R2. Acceptable with current metric stack.",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "User runs 'BWE_OI_Price_monitor pump long' live. This proposal is OI_Price + long + OI-burst + taker-buy-extreme — same channel, same side, similar trigger geometry. In paper-shadow mode this is a monitoring item, not a blocker; concurrent live deployment would risk position pile-on / effective leverage above intended sizing on the same symbol set.",
+      "concentration_risk": "medium",
+      "concentration_notes": "liquidity_bucket=high restricts the universe to a small set of top-liquidity symbols (likely BTC/ETH/SOL-tier). Combined with oi_change_pct>=10 and taker_buy_ratio_5m>=0.65, triggers will cluster on 1–3 symbols during correlated OI bursts. At 5–10% per trade on $1000 capital, 2–3 concurrent triggers within minutes is plausible — advisory only in paper-shadow.",
+      "adversarial_risk": "low",
+      "adversarial_notes": "Anyone observing the BWE OI_Price stream could anticipate triggers, but $1000 capital makes front-running economically irrelevant. No mass-symbol manipulation enabler.",
+      "overall_severity": "caution",
+      "remediation": "Proceed to backtest. For paper-shadow monitoring: (1) tag results with overlap-flag against the live OI_Price pump-long strategy and report concurrent-trigger frequency, (2) verify taker_buy_ratio_5m is implemented as trailing window in the kernel before scoring, (3) report symbol-concentration (top-1 and top-3 symbol share of triggers) alongside the standard metric stack so single-symbol dependence is visible."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 29.55
+}

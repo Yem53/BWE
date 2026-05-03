@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "x103_multi_tp_60_40_ladder_exit",
+  "expected_trades_per_day": 3.5,
+  "expected_trades_per_day_basis": "Exit archetype inherits trigger frequency from paired entry; assuming pairing with mid-volume pricechange/long entries (~3000 triggers/30d) filtered by taker_buy_ratio_5m>=0.60 (~35% pass-through) yields ~35 entries/30d ≈ 1.2/day per entry, scaled across 2-3 likely entry pairings = ~3.5/day.",
+  "regime_sensitivity": {
+    "best_in": [
+      "trending pricechange/long pumps where price reaches +0.5% within 5-15min before mean-reverting",
+      "high taker-buy-ratio sessions (US/EU overlap, post-CPI momentum windows)",
+      "mid-volatility regimes where 1.5% second-leg TP is reachable but not trivially blown through"
+    ],
+    "worst_in": [
+      "chop regimes where price oscillates around entry without hitting 0.5% TP1, leaving residual 40% leg to bleed via SL",
+      "low-vol Asian sessions where taker_buy_ratio_5m>=0.60 filter rarely fires",
+      "violent reversal regimes where TP1 fills then second leg reverses hard before 1.5% — exactly the multi_tp historical failure mode"
+    ],
+    "explanation": "The 60/40 front-loaded ladder is built to extract value before mean reversion kills the residual leg, so it thrives when momentum carries to TP1 reliably but stalls before TP2. It dies in the same conditions that killed the parent multi_tp family (0/3111 positive): trending-then-reversing tape where residual leg gets stopped after the easy money is gone."
+  },
+  "live_readiness_caveats": [
+    "Novel_dim taker_buy_ratio_5m>=0.60 is an ENTRY-side filter applied to an EXIT archetype — verify the kernel actually gates on it at trigger time, not at exit evaluation; if mis-wired, this collapses to vanilla 60/40 multi_tp which historically scored 0/3111 positive.",
+    "Residual 40% leg targeting 1.5% requires symbols with realistic 1.5% reach in the post-trigger window — micro-cap alts may slip both TPs and the implicit SL, while BTC/ETH may rarely move 1.5% in the holding window, starving leg 2 of fills.",
+    "Two-leg fills double the exchange-fee drag vs single-TP exits; at 5-10% sizing on $1000 ($50-100 notional), partial-fill rounding on minor pairs may leave dust positions that the kernel must handle cleanly."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "TP1 hit rate (% of trades where 60% leg fills at +0.5%)",
+      "alert_threshold": "<55% over rolling 20 trades",
+      "rationale": "Front-loaded thesis requires TP1 to fire frequently; if <55% the 60/40 weighting is wasted and this degenerates toward the failed multi_tp baseline."
+    },
+    {
+      "metric": "Residual-leg isolated PnL (40% leg P&L tracked separately from 60% leg)",
+      "alert_threshold": "residual leg cumulative <-0.3% per trade over 20 trades",
+      "rationale": "Synthesizer's devil flag explicitly: residual-leg failure is the multi_tp killer. Isolating it lets you see if leg 2 is salvageable or just dead weight."
+    },
+    {
+      "metric": "Median trade % (combined 60+40 weighted realized)",
+      "alert_threshold": "flips negative for >5 consecutive trading days",
+      "rationale": "E126 trap proved backtest score ≠ live expectancy; live median is the ground-truth signal that the asymmetric TP shape is or isn't working."
+    },
+    {
+      "metric": "Trades/day vs prediction (3.5/day)",
+      "alert_threshold": "<1.5/day or >7/day for 5+ days",
+      "rationale": "Deviation indicates taker_buy_ratio_5m>=0.60 filter is mis-wired or regime has shifted away from the conditions this archetype was designed for."
+    },
+    {
+      "metric": "Average time-to-TP1 (seconds)",
+      "alert_threshold": ">300s median",
+      "rationale": "Front-loaded 60% only pays off if TP1 fills fast; slow TP1 fills mean entry timing is off and the 0.5% target is being reached after mean-reversion already started."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "Residual 40% leg shows cumulative negative PnL across 30+ trades AND removing it would push combined PnL positive",
+      "rationale": "Confirms the multi_tp residual-leg curse persists; at that point the archetype is strictly worse than a single 100% TP at 0.5% and should be killed or reduced to single-leg."
+    },
+    {
+      "condition": "7-day rolling Sharpe <0 OR max consecutive losses >=8",
+      "rationale": "Multi_tp family historical track record (0/3111 positive) means any sustained negative drift is more likely structural than variance — the prior is too damning to give long benefit-of-the-doubt windows."
+    },
+    {
+      "condition": "Live median trade % flips sign vs paper-shadow median for >3 consecutive days",
+      "rationale": "Same failure mode as E126: backtest/paper edge that disappears in live indicates microstructure (fill quality, slippage on TP1, fee drag from two fills) eating the thin 0.5% first-leg margin."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 8.0,
+  "expected_max_dd_basis": "Multi_tp family max in registry was -0.094 (best case); applying the E126 backtest-to-paper degradation factor (~3-4x worse than score suggests) and accounting for 5-10% sizing on $1000 over a 30d paper window with ~105 trades, an 8% drawdown is the realistic tail given the family's 0/3111 positive prior.",
+  "compare_to_existing": "Most resembles the parent x103 multi_tp_60_40_ladder baseline (which sits in the failed multi_tp cohort, mean -0.276, max -0.094); the taker_buy_ratio_5m>=0.60 entry-side filter is the only differentiator and is the entire thesis — without it, this is a known loser. For triangulation, also compare against E126 pc_pump_taker_buy_extreme_long since both rely on taker-buy dominance as the edge signal, and E126's paper-trading failure (-13.5% on $1000) is the most relevant cautionary precedent.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 51.43
+}

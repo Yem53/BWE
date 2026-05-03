@@ -1,0 +1,130 @@
+project: bwe_complete_strategy_v6
+round: 2
+mode: paper_sandbox
+source_stage: max_alpha_gpu_fused_strong
+source_run: 'H:\data\bwe\v6\runs\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115'
+source_pack: 'H:\data\bwe\v6\runs\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115\llm_round_notes\deep_round1_autoresearch_expanded_20260426_134801\expanded_source_pack.json'
+policy:
+  one_hypothesis_per_iteration: true
+  baseline_first: true
+  reject_log_driven: true
+  stability_first: true
+  minimum_sample_for_alpha_review: 16
+  sample_tiers:
+    early_alpha: [16, 29]
+    exploratory_watchlist: [30, 49]
+    validated_watchlist: [50, 99]
+    higher_confidence_watchlist: [100, 1000000000]
+cost_model:
+  fee: true
+  slippage: true
+  latency: true
+  missed_fill: true
+data:
+  path_resolution: 1m_trade_kline
+research_queue:
+  - hypothesis_id: HYP_c984bb352d
+    discovery_type: complete_strategy
+    entry_family: premium_basis_overheat
+    exit_family: indicator_invalidation
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.84093217
+    next_action: "Freeze this complete module, then mutate only one parameter neighborhood in the next pass."
+  - hypothesis_id: HYP_b2ca5a77a3
+    discovery_type: entry
+    entry_family: premium_basis_overheat
+    exit_family: ANY
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.81625630
+    next_action: "Run one entry-family ablation with the top two stable exits and unchanged cost model."
+  - hypothesis_id: HYP_a5add7218f
+    discovery_type: entry
+    entry_family: oi_funding_continuation
+    exit_family: ANY
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.81496170
+    next_action: "Run one entry-family ablation with the top two stable exits and unchanged cost model."
+  - hypothesis_id: HYP_c3c0449ddf
+    discovery_type: complete_strategy
+    entry_family: freshness_strict_confirmation
+    exit_family: breakeven_ratchet
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.80928016
+    next_action: "Freeze this complete module, then mutate only one parameter neighborhood in the next pass."
+  - hypothesis_id: HYP_40cb1e9511
+    discovery_type: complete_strategy
+    entry_family: premium_basis_overheat
+    exit_family: state_machine
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.80620456
+    next_action: "Freeze this complete module, then mutate only one parameter neighborhood in the next pass."
+  - hypothesis_id: HYP_96fb583667
+    discovery_type: complete_strategy
+    entry_family: oi_funding_continuation
+    exit_family: breakeven_ratchet
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.80572878
+    next_action: "Freeze this complete module, then mutate only one parameter neighborhood in the next pass."
+  - hypothesis_id: HYP_0bc89253af
+    discovery_type: complete_strategy
+    entry_family: premium_basis_overheat
+    exit_family: breakeven_ratchet
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.80202568
+    next_action: "Freeze this complete module, then mutate only one parameter neighborhood in the next pass."
+  - hypothesis_id: HYP_bb1fb15b32
+    discovery_type: complete_strategy
+    entry_family: premium_basis_overheat
+    exit_family: runner_trail
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.80057177
+    next_action: "Freeze this complete module, then mutate only one parameter neighborhood in the next pass."
+  - hypothesis_id: HYP_bdef076c7d
+    discovery_type: complete_strategy
+    entry_family: oi_funding_continuation
+    exit_family: breakeven_ratchet
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.79879070
+    next_action: "Freeze this complete module, then mutate only one parameter neighborhood in the next pass."
+  - hypothesis_id: HYP_f69f5554cf
+    discovery_type: complete_strategy
+    entry_family: oi_funding_continuation
+    exit_family: runner_trail
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.79585854
+    next_action: "Freeze this complete module, then mutate only one parameter neighborhood in the next pass."
+  - hypothesis_id: HYP_5535c835bc
+    discovery_type: exit
+    entry_family: ANY
+    exit_family: indicator_invalidation
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.79465057
+    next_action: "Run one exit-family swap test across the strongest entry family and a neutral fixed baseline."
+  - hypothesis_id: HYP_0b7b2a6bd0
+    discovery_type: complete_strategy
+    entry_family: freshness_strict_confirmation
+    exit_family: time_decay
+    direction: long
+    sample_tier: higher_confidence_watchlist
+    discovery_score: 0.79131106
+    next_action: "Freeze this complete module, then mutate only one parameter neighborhood in the next pass."
+outputs:
+  append_hypothesis_ledger: true
+  append_experiment_journal: true
+  refresh_component_catalogs: true
+  refresh_neighborhood_stability: true
+stop_conditions:
+  complete_one_queue_item_before_next: true
+  stop_on_future_safety_failure: true
+  stop_on_negative_stressed_median: true

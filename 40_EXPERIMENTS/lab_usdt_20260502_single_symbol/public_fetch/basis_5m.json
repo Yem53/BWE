@@ -1,0 +1,5002 @@
+[
+  {
+    "indexPrice": "0.68763661",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0015",
+    "futuresPrice": "0.6887000",
+    "annualizedBasisRate": "",
+    "basis": "0.00106339",
+    "pair": "LABUSDT",
+    "timestamp": 1777606500000
+  },
+  {
+    "indexPrice": "0.68719517",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0028",
+    "futuresPrice": "0.6891000",
+    "annualizedBasisRate": "",
+    "basis": "0.00190483",
+    "pair": "LABUSDT",
+    "timestamp": 1777606800000
+  },
+  {
+    "indexPrice": "0.68871415",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "0.6904000",
+    "annualizedBasisRate": "",
+    "basis": "0.00168585",
+    "pair": "LABUSDT",
+    "timestamp": 1777607100000
+  },
+  {
+    "indexPrice": "0.68780137",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0012",
+    "futuresPrice": "0.6886000",
+    "annualizedBasisRate": "",
+    "basis": "0.00079863",
+    "pair": "LABUSDT",
+    "timestamp": 1777607400000
+  },
+  {
+    "indexPrice": "0.68921717",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0022",
+    "futuresPrice": "0.6907000",
+    "annualizedBasisRate": "",
+    "basis": "0.00148283",
+    "pair": "LABUSDT",
+    "timestamp": 1777607700000
+  },
+  {
+    "indexPrice": "0.68545395",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.6866000",
+    "annualizedBasisRate": "",
+    "basis": "0.00114605",
+    "pair": "LABUSDT",
+    "timestamp": 1777608000000
+  },
+  {
+    "indexPrice": "0.68584647",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.6870000",
+    "annualizedBasisRate": "",
+    "basis": "0.00115353",
+    "pair": "LABUSDT",
+    "timestamp": 1777608300000
+  },
+  {
+    "indexPrice": "0.68282555",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.6840000",
+    "annualizedBasisRate": "",
+    "basis": "0.00117445",
+    "pair": "LABUSDT",
+    "timestamp": 1777608600000
+  },
+  {
+    "indexPrice": "0.68347632",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0021",
+    "futuresPrice": "0.6849000",
+    "annualizedBasisRate": "",
+    "basis": "0.00142368",
+    "pair": "LABUSDT",
+    "timestamp": 1777608900000
+  },
+  {
+    "indexPrice": "0.68446488",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "0.6865000",
+    "annualizedBasisRate": "",
+    "basis": "0.00203512",
+    "pair": "LABUSDT",
+    "timestamp": 1777609200000
+  },
+  {
+    "indexPrice": "0.68236493",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.6841000",
+    "annualizedBasisRate": "",
+    "basis": "0.00173507",
+    "pair": "LABUSDT",
+    "timestamp": 1777609500000
+  },
+  {
+    "indexPrice": "0.68439075",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6862000",
+    "annualizedBasisRate": "",
+    "basis": "0.00180925",
+    "pair": "LABUSDT",
+    "timestamp": 1777609800000
+  },
+  {
+    "indexPrice": "0.68421158",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0014",
+    "futuresPrice": "0.6852000",
+    "annualizedBasisRate": "",
+    "basis": "0.00098842",
+    "pair": "LABUSDT",
+    "timestamp": 1777610100000
+  },
+  {
+    "indexPrice": "0.68504026",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0007",
+    "futuresPrice": "0.6855000",
+    "annualizedBasisRate": "",
+    "basis": "0.00045974",
+    "pair": "LABUSDT",
+    "timestamp": 1777610400000
+  },
+  {
+    "indexPrice": "0.68481847",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "0.6869000",
+    "annualizedBasisRate": "",
+    "basis": "0.00208153",
+    "pair": "LABUSDT",
+    "timestamp": 1777610700000
+  },
+  {
+    "indexPrice": "0.68607619",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0041",
+    "futuresPrice": "0.6889000",
+    "annualizedBasisRate": "",
+    "basis": "0.00282381",
+    "pair": "LABUSDT",
+    "timestamp": 1777611000000
+  },
+  {
+    "indexPrice": "0.68565843",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0031",
+    "futuresPrice": "0.6878000",
+    "annualizedBasisRate": "",
+    "basis": "0.00214157",
+    "pair": "LABUSDT",
+    "timestamp": 1777611300000
+  },
+  {
+    "indexPrice": "0.68285175",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "0.6845000",
+    "annualizedBasisRate": "",
+    "basis": "0.00164825",
+    "pair": "LABUSDT",
+    "timestamp": 1777611600000
+  },
+  {
+    "indexPrice": "0.68012488",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.6813000",
+    "annualizedBasisRate": "",
+    "basis": "0.00117512",
+    "pair": "LABUSDT",
+    "timestamp": 1777611900000
+  },
+  {
+    "indexPrice": "0.68062727",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0042",
+    "futuresPrice": "0.6835000",
+    "annualizedBasisRate": "",
+    "basis": "0.00287273",
+    "pair": "LABUSDT",
+    "timestamp": 1777612200000
+  },
+  {
+    "indexPrice": "0.68111894",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0036",
+    "futuresPrice": "0.6836000",
+    "annualizedBasisRate": "",
+    "basis": "0.00248106",
+    "pair": "LABUSDT",
+    "timestamp": 1777612500000
+  },
+  {
+    "indexPrice": "0.68048261",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "0.6823000",
+    "annualizedBasisRate": "",
+    "basis": "0.00181739",
+    "pair": "LABUSDT",
+    "timestamp": 1777612800000
+  },
+  {
+    "indexPrice": "0.68005441",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "0.6819000",
+    "annualizedBasisRate": "",
+    "basis": "0.00184559",
+    "pair": "LABUSDT",
+    "timestamp": 1777613100000
+  },
+  {
+    "indexPrice": "0.67822968",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0014",
+    "futuresPrice": "0.6792000",
+    "annualizedBasisRate": "",
+    "basis": "0.00097032",
+    "pair": "LABUSDT",
+    "timestamp": 1777613400000
+  },
+  {
+    "indexPrice": "0.68027566",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0022",
+    "futuresPrice": "0.6818000",
+    "annualizedBasisRate": "",
+    "basis": "0.00152434",
+    "pair": "LABUSDT",
+    "timestamp": 1777613700000
+  },
+  {
+    "indexPrice": "0.67641977",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0023",
+    "futuresPrice": "0.6780000",
+    "annualizedBasisRate": "",
+    "basis": "0.00158023",
+    "pair": "LABUSDT",
+    "timestamp": 1777614000000
+  },
+  {
+    "indexPrice": "0.67502659",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "0.6764000",
+    "annualizedBasisRate": "",
+    "basis": "0.00137341",
+    "pair": "LABUSDT",
+    "timestamp": 1777614300000
+  },
+  {
+    "indexPrice": "0.67553586",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0022",
+    "futuresPrice": "0.6770000",
+    "annualizedBasisRate": "",
+    "basis": "0.00146414",
+    "pair": "LABUSDT",
+    "timestamp": 1777614600000
+  },
+  {
+    "indexPrice": "0.67734212",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0041",
+    "futuresPrice": "0.6801000",
+    "annualizedBasisRate": "",
+    "basis": "0.00275788",
+    "pair": "LABUSDT",
+    "timestamp": 1777614900000
+  },
+  {
+    "indexPrice": "0.68125657",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0055",
+    "futuresPrice": "0.6850000",
+    "annualizedBasisRate": "",
+    "basis": "0.00374343",
+    "pair": "LABUSDT",
+    "timestamp": 1777615200000
+  },
+  {
+    "indexPrice": "0.68369263",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6855000",
+    "annualizedBasisRate": "",
+    "basis": "0.00180737",
+    "pair": "LABUSDT",
+    "timestamp": 1777615500000
+  },
+  {
+    "indexPrice": "0.68365536",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0018",
+    "futuresPrice": "0.6849000",
+    "annualizedBasisRate": "",
+    "basis": "0.00124464",
+    "pair": "LABUSDT",
+    "timestamp": 1777615800000
+  },
+  {
+    "indexPrice": "0.68516679",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0014",
+    "futuresPrice": "0.6861000",
+    "annualizedBasisRate": "",
+    "basis": "0.00093321",
+    "pair": "LABUSDT",
+    "timestamp": 1777616100000
+  },
+  {
+    "indexPrice": "0.68115580",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "0.6825000",
+    "annualizedBasisRate": "",
+    "basis": "0.00134420",
+    "pair": "LABUSDT",
+    "timestamp": 1777616400000
+  },
+  {
+    "indexPrice": "0.68022716",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.6813000",
+    "annualizedBasisRate": "",
+    "basis": "0.00107284",
+    "pair": "LABUSDT",
+    "timestamp": 1777616700000
+  },
+  {
+    "indexPrice": "0.67870235",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.6798000",
+    "annualizedBasisRate": "",
+    "basis": "0.00109765",
+    "pair": "LABUSDT",
+    "timestamp": 1777617000000
+  },
+  {
+    "indexPrice": "0.68009843",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0012",
+    "futuresPrice": "0.6809000",
+    "annualizedBasisRate": "",
+    "basis": "0.00080157",
+    "pair": "LABUSDT",
+    "timestamp": 1777617300000
+  },
+  {
+    "indexPrice": "0.67922570",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "0.6806000",
+    "annualizedBasisRate": "",
+    "basis": "0.00137430",
+    "pair": "LABUSDT",
+    "timestamp": 1777617600000
+  },
+  {
+    "indexPrice": "0.68133054",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0014",
+    "futuresPrice": "0.6823000",
+    "annualizedBasisRate": "",
+    "basis": "0.00096946",
+    "pair": "LABUSDT",
+    "timestamp": 1777617900000
+  },
+  {
+    "indexPrice": "0.68049892",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.6816000",
+    "annualizedBasisRate": "",
+    "basis": "0.00110108",
+    "pair": "LABUSDT",
+    "timestamp": 1777618200000
+  },
+  {
+    "indexPrice": "0.67921268",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0022",
+    "futuresPrice": "0.6807000",
+    "annualizedBasisRate": "",
+    "basis": "0.00148732",
+    "pair": "LABUSDT",
+    "timestamp": 1777618500000
+  },
+  {
+    "indexPrice": "0.67655955",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0004",
+    "futuresPrice": "0.6768000",
+    "annualizedBasisRate": "",
+    "basis": "0.00024045",
+    "pair": "LABUSDT",
+    "timestamp": 1777618800000
+  },
+  {
+    "indexPrice": "0.67541507",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0028",
+    "futuresPrice": "0.6773000",
+    "annualizedBasisRate": "",
+    "basis": "0.00188493",
+    "pair": "LABUSDT",
+    "timestamp": 1777619100000
+  },
+  {
+    "indexPrice": "0.67597570",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6777000",
+    "annualizedBasisRate": "",
+    "basis": "0.00172430",
+    "pair": "LABUSDT",
+    "timestamp": 1777619400000
+  },
+  {
+    "indexPrice": "0.67578235",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.6775000",
+    "annualizedBasisRate": "",
+    "basis": "0.00171765",
+    "pair": "LABUSDT",
+    "timestamp": 1777619700000
+  },
+  {
+    "indexPrice": "0.67572378",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0029",
+    "futuresPrice": "0.6777000",
+    "annualizedBasisRate": "",
+    "basis": "0.00197622",
+    "pair": "LABUSDT",
+    "timestamp": 1777620000000
+  },
+  {
+    "indexPrice": "0.67423561",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "0.6756000",
+    "annualizedBasisRate": "",
+    "basis": "0.00136439",
+    "pair": "LABUSDT",
+    "timestamp": 1777620300000
+  },
+  {
+    "indexPrice": "0.67334970",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "0.6757000",
+    "annualizedBasisRate": "",
+    "basis": "0.00235030",
+    "pair": "LABUSDT",
+    "timestamp": 1777620600000
+  },
+  {
+    "indexPrice": "0.67259737",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "0.6748000",
+    "annualizedBasisRate": "",
+    "basis": "0.00220263",
+    "pair": "LABUSDT",
+    "timestamp": 1777620900000
+  },
+  {
+    "indexPrice": "0.67235275",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "0.6746000",
+    "annualizedBasisRate": "",
+    "basis": "0.00224725",
+    "pair": "LABUSDT",
+    "timestamp": 1777621200000
+  },
+  {
+    "indexPrice": "0.67297179",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "0.6743000",
+    "annualizedBasisRate": "",
+    "basis": "0.00132821",
+    "pair": "LABUSDT",
+    "timestamp": 1777621500000
+  },
+  {
+    "indexPrice": "0.67191314",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "0.6737000",
+    "annualizedBasisRate": "",
+    "basis": "0.00178686",
+    "pair": "LABUSDT",
+    "timestamp": 1777621800000
+  },
+  {
+    "indexPrice": "0.67114542",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0022",
+    "futuresPrice": "0.6726000",
+    "annualizedBasisRate": "",
+    "basis": "0.00145458",
+    "pair": "LABUSDT",
+    "timestamp": 1777622100000
+  },
+  {
+    "indexPrice": "0.67168292",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0042",
+    "futuresPrice": "0.6745000",
+    "annualizedBasisRate": "",
+    "basis": "0.00281708",
+    "pair": "LABUSDT",
+    "timestamp": 1777622400000
+  },
+  {
+    "indexPrice": "0.67606488",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6778000",
+    "annualizedBasisRate": "",
+    "basis": "0.00173512",
+    "pair": "LABUSDT",
+    "timestamp": 1777622700000
+  },
+  {
+    "indexPrice": "0.67991071",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "0.6813000",
+    "annualizedBasisRate": "",
+    "basis": "0.00138929",
+    "pair": "LABUSDT",
+    "timestamp": 1777623000000
+  },
+  {
+    "indexPrice": "0.67540300",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.6765000",
+    "annualizedBasisRate": "",
+    "basis": "0.00109700",
+    "pair": "LABUSDT",
+    "timestamp": 1777623300000
+  },
+  {
+    "indexPrice": "0.67623843",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0023",
+    "futuresPrice": "0.6778000",
+    "annualizedBasisRate": "",
+    "basis": "0.00156157",
+    "pair": "LABUSDT",
+    "timestamp": 1777623600000
+  },
+  {
+    "indexPrice": "0.67899495",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "0.6813000",
+    "annualizedBasisRate": "",
+    "basis": "0.00230505",
+    "pair": "LABUSDT",
+    "timestamp": 1777623900000
+  },
+  {
+    "indexPrice": "0.67744053",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0029",
+    "futuresPrice": "0.6794000",
+    "annualizedBasisRate": "",
+    "basis": "0.00195947",
+    "pair": "LABUSDT",
+    "timestamp": 1777624200000
+  },
+  {
+    "indexPrice": "0.68149941",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.6826000",
+    "annualizedBasisRate": "",
+    "basis": "0.00110059",
+    "pair": "LABUSDT",
+    "timestamp": 1777624500000
+  },
+  {
+    "indexPrice": "0.68198517",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0028",
+    "futuresPrice": "0.6839000",
+    "annualizedBasisRate": "",
+    "basis": "0.00191483",
+    "pair": "LABUSDT",
+    "timestamp": 1777624800000
+  },
+  {
+    "indexPrice": "0.68304196",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "0.6847000",
+    "annualizedBasisRate": "",
+    "basis": "0.00165804",
+    "pair": "LABUSDT",
+    "timestamp": 1777625100000
+  },
+  {
+    "indexPrice": "0.68252415",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.6842000",
+    "annualizedBasisRate": "",
+    "basis": "0.00167585",
+    "pair": "LABUSDT",
+    "timestamp": 1777625400000
+  },
+  {
+    "indexPrice": "0.68440109",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0029",
+    "futuresPrice": "0.6864000",
+    "annualizedBasisRate": "",
+    "basis": "0.00199891",
+    "pair": "LABUSDT",
+    "timestamp": 1777625700000
+  },
+  {
+    "indexPrice": "0.69108904",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0019",
+    "futuresPrice": "0.6924000",
+    "annualizedBasisRate": "",
+    "basis": "0.00131096",
+    "pair": "LABUSDT",
+    "timestamp": 1777626000000
+  },
+  {
+    "indexPrice": "0.68986982",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "0.6915000",
+    "annualizedBasisRate": "",
+    "basis": "0.00163018",
+    "pair": "LABUSDT",
+    "timestamp": 1777626300000
+  },
+  {
+    "indexPrice": "0.68654002",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "0.6879000",
+    "annualizedBasisRate": "",
+    "basis": "0.00135998",
+    "pair": "LABUSDT",
+    "timestamp": 1777626600000
+  },
+  {
+    "indexPrice": "0.68322008",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "0.6853000",
+    "annualizedBasisRate": "",
+    "basis": "0.00207992",
+    "pair": "LABUSDT",
+    "timestamp": 1777626900000
+  },
+  {
+    "indexPrice": "0.68407058",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.6858000",
+    "annualizedBasisRate": "",
+    "basis": "0.00172942",
+    "pair": "LABUSDT",
+    "timestamp": 1777627200000
+  },
+  {
+    "indexPrice": "0.68154373",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "0.6832000",
+    "annualizedBasisRate": "",
+    "basis": "0.00165627",
+    "pair": "LABUSDT",
+    "timestamp": 1777627500000
+  },
+  {
+    "indexPrice": "0.68442820",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0036",
+    "futuresPrice": "0.6869000",
+    "annualizedBasisRate": "",
+    "basis": "0.00247180",
+    "pair": "LABUSDT",
+    "timestamp": 1777627800000
+  },
+  {
+    "indexPrice": "0.68545587",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0018",
+    "futuresPrice": "0.6867000",
+    "annualizedBasisRate": "",
+    "basis": "0.00124413",
+    "pair": "LABUSDT",
+    "timestamp": 1777628100000
+  },
+  {
+    "indexPrice": "0.68762642",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0039",
+    "futuresPrice": "0.6903000",
+    "annualizedBasisRate": "",
+    "basis": "0.00267358",
+    "pair": "LABUSDT",
+    "timestamp": 1777628400000
+  },
+  {
+    "indexPrice": "0.68729314",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6891000",
+    "annualizedBasisRate": "",
+    "basis": "0.00180686",
+    "pair": "LABUSDT",
+    "timestamp": 1777628700000
+  },
+  {
+    "indexPrice": "0.68510551",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0019",
+    "futuresPrice": "0.6864000",
+    "annualizedBasisRate": "",
+    "basis": "0.00129449",
+    "pair": "LABUSDT",
+    "timestamp": 1777629000000
+  },
+  {
+    "indexPrice": "0.68430896",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0013",
+    "futuresPrice": "0.6852000",
+    "annualizedBasisRate": "",
+    "basis": "0.00089104",
+    "pair": "LABUSDT",
+    "timestamp": 1777629300000
+  },
+  {
+    "indexPrice": "0.68453079",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "0.6859000",
+    "annualizedBasisRate": "",
+    "basis": "0.00136921",
+    "pair": "LABUSDT",
+    "timestamp": 1777629600000
+  },
+  {
+    "indexPrice": "0.68802367",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "0.6901000",
+    "annualizedBasisRate": "",
+    "basis": "0.00207633",
+    "pair": "LABUSDT",
+    "timestamp": 1777629900000
+  },
+  {
+    "indexPrice": "0.68538598",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0012",
+    "futuresPrice": "0.6862000",
+    "annualizedBasisRate": "",
+    "basis": "0.00081402",
+    "pair": "LABUSDT",
+    "timestamp": 1777630200000
+  },
+  {
+    "indexPrice": "0.68302000",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6848000",
+    "annualizedBasisRate": "",
+    "basis": "0.00178000",
+    "pair": "LABUSDT",
+    "timestamp": 1777630500000
+  },
+  {
+    "indexPrice": "0.68350049",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0031",
+    "futuresPrice": "0.6856000",
+    "annualizedBasisRate": "",
+    "basis": "0.00209951",
+    "pair": "LABUSDT",
+    "timestamp": 1777630800000
+  },
+  {
+    "indexPrice": "0.68776660",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "0.6896000",
+    "annualizedBasisRate": "",
+    "basis": "0.00183340",
+    "pair": "LABUSDT",
+    "timestamp": 1777631100000
+  },
+  {
+    "indexPrice": "0.69049418",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.6922000",
+    "annualizedBasisRate": "",
+    "basis": "0.00170582",
+    "pair": "LABUSDT",
+    "timestamp": 1777631400000
+  },
+  {
+    "indexPrice": "0.69841749",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0044",
+    "futuresPrice": "0.7015000",
+    "annualizedBasisRate": "",
+    "basis": "0.00308251",
+    "pair": "LABUSDT",
+    "timestamp": 1777631700000
+  },
+  {
+    "indexPrice": "0.70338610",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "0.7058000",
+    "annualizedBasisRate": "",
+    "basis": "0.00241390",
+    "pair": "LABUSDT",
+    "timestamp": 1777632000000
+  },
+  {
+    "indexPrice": "0.70217353",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.7034000",
+    "annualizedBasisRate": "",
+    "basis": "0.00122647",
+    "pair": "LABUSDT",
+    "timestamp": 1777632300000
+  },
+  {
+    "indexPrice": "0.70543250",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "0.7078000",
+    "annualizedBasisRate": "",
+    "basis": "0.00236750",
+    "pair": "LABUSDT",
+    "timestamp": 1777632600000
+  },
+  {
+    "indexPrice": "0.70120983",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "0.7036000",
+    "annualizedBasisRate": "",
+    "basis": "0.00239017",
+    "pair": "LABUSDT",
+    "timestamp": 1777632900000
+  },
+  {
+    "indexPrice": "0.70150859",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0001",
+    "futuresPrice": "0.7016000",
+    "annualizedBasisRate": "",
+    "basis": "0.00009141",
+    "pair": "LABUSDT",
+    "timestamp": 1777633200000
+  },
+  {
+    "indexPrice": "0.70263390",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0044",
+    "futuresPrice": "0.7057000",
+    "annualizedBasisRate": "",
+    "basis": "0.00306610",
+    "pair": "LABUSDT",
+    "timestamp": 1777633500000
+  },
+  {
+    "indexPrice": "0.70600717",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.7078000",
+    "annualizedBasisRate": "",
+    "basis": "0.00179283",
+    "pair": "LABUSDT",
+    "timestamp": 1777633800000
+  },
+  {
+    "indexPrice": "0.70799433",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "0.7105000",
+    "annualizedBasisRate": "",
+    "basis": "0.00250567",
+    "pair": "LABUSDT",
+    "timestamp": 1777634100000
+  },
+  {
+    "indexPrice": "0.70759337",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0010",
+    "futuresPrice": "0.7083000",
+    "annualizedBasisRate": "",
+    "basis": "0.00070663",
+    "pair": "LABUSDT",
+    "timestamp": 1777634400000
+  },
+  {
+    "indexPrice": "0.69686128",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0009",
+    "futuresPrice": "0.6975000",
+    "annualizedBasisRate": "",
+    "basis": "0.00063872",
+    "pair": "LABUSDT",
+    "timestamp": 1777634700000
+  },
+  {
+    "indexPrice": "0.69421616",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0031",
+    "futuresPrice": "0.6964000",
+    "annualizedBasisRate": "",
+    "basis": "0.00218384",
+    "pair": "LABUSDT",
+    "timestamp": 1777635000000
+  },
+  {
+    "indexPrice": "0.69364099",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0018",
+    "futuresPrice": "0.6949000",
+    "annualizedBasisRate": "",
+    "basis": "0.00125901",
+    "pair": "LABUSDT",
+    "timestamp": 1777635300000
+  },
+  {
+    "indexPrice": "0.69590140",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "0.6976000",
+    "annualizedBasisRate": "",
+    "basis": "0.00169860",
+    "pair": "LABUSDT",
+    "timestamp": 1777635600000
+  },
+  {
+    "indexPrice": "0.69580215",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6976000",
+    "annualizedBasisRate": "",
+    "basis": "0.00179785",
+    "pair": "LABUSDT",
+    "timestamp": 1777635900000
+  },
+  {
+    "indexPrice": "0.69425869",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "0.6959000",
+    "annualizedBasisRate": "",
+    "basis": "0.00164131",
+    "pair": "LABUSDT",
+    "timestamp": 1777636200000
+  },
+  {
+    "indexPrice": "0.69553447",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "0.6976000",
+    "annualizedBasisRate": "",
+    "basis": "0.00206553",
+    "pair": "LABUSDT",
+    "timestamp": 1777636500000
+  },
+  {
+    "indexPrice": "0.69594103",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "0.6984000",
+    "annualizedBasisRate": "",
+    "basis": "0.00245897",
+    "pair": "LABUSDT",
+    "timestamp": 1777636800000
+  },
+  {
+    "indexPrice": "0.69818377",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0036",
+    "futuresPrice": "0.7007000",
+    "annualizedBasisRate": "",
+    "basis": "0.00251623",
+    "pair": "LABUSDT",
+    "timestamp": 1777637100000
+  },
+  {
+    "indexPrice": "0.70270644",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "0.7052000",
+    "annualizedBasisRate": "",
+    "basis": "0.00249356",
+    "pair": "LABUSDT",
+    "timestamp": 1777637400000
+  },
+  {
+    "indexPrice": "0.69818564",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0013",
+    "futuresPrice": "0.6991000",
+    "annualizedBasisRate": "",
+    "basis": "0.00091436",
+    "pair": "LABUSDT",
+    "timestamp": 1777637700000
+  },
+  {
+    "indexPrice": "0.69797143",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0009",
+    "futuresPrice": "0.6986000",
+    "annualizedBasisRate": "",
+    "basis": "0.00062857",
+    "pair": "LABUSDT",
+    "timestamp": 1777638000000
+  },
+  {
+    "indexPrice": "0.70263145",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0032",
+    "futuresPrice": "0.7049000",
+    "annualizedBasisRate": "",
+    "basis": "0.00226855",
+    "pair": "LABUSDT",
+    "timestamp": 1777638300000
+  },
+  {
+    "indexPrice": "0.70251062",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "0.7049000",
+    "annualizedBasisRate": "",
+    "basis": "0.00238938",
+    "pair": "LABUSDT",
+    "timestamp": 1777638600000
+  },
+  {
+    "indexPrice": "0.70378281",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "0.7055000",
+    "annualizedBasisRate": "",
+    "basis": "0.00171719",
+    "pair": "LABUSDT",
+    "timestamp": 1777638900000
+  },
+  {
+    "indexPrice": "0.70093299",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.7021000",
+    "annualizedBasisRate": "",
+    "basis": "0.00116701",
+    "pair": "LABUSDT",
+    "timestamp": 1777639200000
+  },
+  {
+    "indexPrice": "0.69846251",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0011",
+    "futuresPrice": "0.6992000",
+    "annualizedBasisRate": "",
+    "basis": "0.00073749",
+    "pair": "LABUSDT",
+    "timestamp": 1777639500000
+  },
+  {
+    "indexPrice": "0.69660664",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0006",
+    "futuresPrice": "0.6970000",
+    "annualizedBasisRate": "",
+    "basis": "0.00039336",
+    "pair": "LABUSDT",
+    "timestamp": 1777639800000
+  },
+  {
+    "indexPrice": "0.69510817",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "0.6972000",
+    "annualizedBasisRate": "",
+    "basis": "0.00209183",
+    "pair": "LABUSDT",
+    "timestamp": 1777640100000
+  },
+  {
+    "indexPrice": "0.69519715",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0012",
+    "futuresPrice": "0.6960000",
+    "annualizedBasisRate": "",
+    "basis": "0.00080285",
+    "pair": "LABUSDT",
+    "timestamp": 1777640400000
+  },
+  {
+    "indexPrice": "0.69469433",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0032",
+    "futuresPrice": "0.6969000",
+    "annualizedBasisRate": "",
+    "basis": "0.00220567",
+    "pair": "LABUSDT",
+    "timestamp": 1777640700000
+  },
+  {
+    "indexPrice": "0.69781610",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "0.6997000",
+    "annualizedBasisRate": "",
+    "basis": "0.00188390",
+    "pair": "LABUSDT",
+    "timestamp": 1777641000000
+  },
+  {
+    "indexPrice": "0.70071769",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0047",
+    "futuresPrice": "0.7040000",
+    "annualizedBasisRate": "",
+    "basis": "0.00328231",
+    "pair": "LABUSDT",
+    "timestamp": 1777641300000
+  },
+  {
+    "indexPrice": "0.69762565",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0031",
+    "futuresPrice": "0.6998000",
+    "annualizedBasisRate": "",
+    "basis": "0.00217435",
+    "pair": "LABUSDT",
+    "timestamp": 1777641600000
+  },
+  {
+    "indexPrice": "0.69474815",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0022",
+    "futuresPrice": "0.6963000",
+    "annualizedBasisRate": "",
+    "basis": "0.00155185",
+    "pair": "LABUSDT",
+    "timestamp": 1777641900000
+  },
+  {
+    "indexPrice": "0.69617457",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0039",
+    "futuresPrice": "0.6989000",
+    "annualizedBasisRate": "",
+    "basis": "0.00272543",
+    "pair": "LABUSDT",
+    "timestamp": 1777642200000
+  },
+  {
+    "indexPrice": "0.69475303",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.6965000",
+    "annualizedBasisRate": "",
+    "basis": "0.00174697",
+    "pair": "LABUSDT",
+    "timestamp": 1777642500000
+  },
+  {
+    "indexPrice": "0.69648170",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "0.6988000",
+    "annualizedBasisRate": "",
+    "basis": "0.00231830",
+    "pair": "LABUSDT",
+    "timestamp": 1777642800000
+  },
+  {
+    "indexPrice": "0.69732081",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6991000",
+    "annualizedBasisRate": "",
+    "basis": "0.00177919",
+    "pair": "LABUSDT",
+    "timestamp": 1777643100000
+  },
+  {
+    "indexPrice": "0.70068666",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0044",
+    "futuresPrice": "0.7038000",
+    "annualizedBasisRate": "",
+    "basis": "0.00311334",
+    "pair": "LABUSDT",
+    "timestamp": 1777643400000
+  },
+  {
+    "indexPrice": "0.70652933",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.7083000",
+    "annualizedBasisRate": "",
+    "basis": "0.00177067",
+    "pair": "LABUSDT",
+    "timestamp": 1777643700000
+  },
+  {
+    "indexPrice": "0.70495625",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.7068000",
+    "annualizedBasisRate": "",
+    "basis": "0.00184375",
+    "pair": "LABUSDT",
+    "timestamp": 1777644000000
+  },
+  {
+    "indexPrice": "0.70619110",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "0.7079000",
+    "annualizedBasisRate": "",
+    "basis": "0.00170890",
+    "pair": "LABUSDT",
+    "timestamp": 1777644300000
+  },
+  {
+    "indexPrice": "0.70546095",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0023",
+    "futuresPrice": "0.7071000",
+    "annualizedBasisRate": "",
+    "basis": "0.00163905",
+    "pair": "LABUSDT",
+    "timestamp": 1777644600000
+  },
+  {
+    "indexPrice": "0.70427489",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0019",
+    "futuresPrice": "0.7056000",
+    "annualizedBasisRate": "",
+    "basis": "0.00132511",
+    "pair": "LABUSDT",
+    "timestamp": 1777644900000
+  },
+  {
+    "indexPrice": "0.70702003",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "0.7095000",
+    "annualizedBasisRate": "",
+    "basis": "0.00247997",
+    "pair": "LABUSDT",
+    "timestamp": 1777645200000
+  },
+  {
+    "indexPrice": "0.70612378",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.7079000",
+    "annualizedBasisRate": "",
+    "basis": "0.00177622",
+    "pair": "LABUSDT",
+    "timestamp": 1777645500000
+  },
+  {
+    "indexPrice": "0.70681412",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.7086000",
+    "annualizedBasisRate": "",
+    "basis": "0.00178588",
+    "pair": "LABUSDT",
+    "timestamp": 1777645800000
+  },
+  {
+    "indexPrice": "0.71142962",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.7126000",
+    "annualizedBasisRate": "",
+    "basis": "0.00117038",
+    "pair": "LABUSDT",
+    "timestamp": 1777646100000
+  },
+  {
+    "indexPrice": "0.70941123",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0013",
+    "futuresPrice": "0.7103000",
+    "annualizedBasisRate": "",
+    "basis": "0.00088877",
+    "pair": "LABUSDT",
+    "timestamp": 1777646400000
+  },
+  {
+    "indexPrice": "0.70683056",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "0.7092000",
+    "annualizedBasisRate": "",
+    "basis": "0.00236944",
+    "pair": "LABUSDT",
+    "timestamp": 1777646700000
+  },
+  {
+    "indexPrice": "0.70675387",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.7079000",
+    "annualizedBasisRate": "",
+    "basis": "0.00114613",
+    "pair": "LABUSDT",
+    "timestamp": 1777647000000
+  },
+  {
+    "indexPrice": "0.70760670",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "0.7101000",
+    "annualizedBasisRate": "",
+    "basis": "0.00249330",
+    "pair": "LABUSDT",
+    "timestamp": 1777647300000
+  },
+  {
+    "indexPrice": "0.70796186",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "0.7099000",
+    "annualizedBasisRate": "",
+    "basis": "0.00193814",
+    "pair": "LABUSDT",
+    "timestamp": 1777647600000
+  },
+  {
+    "indexPrice": "0.70931822",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0028",
+    "futuresPrice": "0.7113000",
+    "annualizedBasisRate": "",
+    "basis": "0.00198178",
+    "pair": "LABUSDT",
+    "timestamp": 1777647900000
+  },
+  {
+    "indexPrice": "0.70787082",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0031",
+    "futuresPrice": "0.7101000",
+    "annualizedBasisRate": "",
+    "basis": "0.00222918",
+    "pair": "LABUSDT",
+    "timestamp": 1777648200000
+  },
+  {
+    "indexPrice": "0.70618018",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0014",
+    "futuresPrice": "0.7072000",
+    "annualizedBasisRate": "",
+    "basis": "0.00101982",
+    "pair": "LABUSDT",
+    "timestamp": 1777648500000
+  },
+  {
+    "indexPrice": "0.70503380",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0022",
+    "futuresPrice": "0.7066000",
+    "annualizedBasisRate": "",
+    "basis": "0.00156620",
+    "pair": "LABUSDT",
+    "timestamp": 1777648800000
+  },
+  {
+    "indexPrice": "0.70201261",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0007",
+    "futuresPrice": "0.7025000",
+    "annualizedBasisRate": "",
+    "basis": "0.00048739",
+    "pair": "LABUSDT",
+    "timestamp": 1777649100000
+  },
+  {
+    "indexPrice": "0.69735804",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0039",
+    "futuresPrice": "0.7001000",
+    "annualizedBasisRate": "",
+    "basis": "0.00274196",
+    "pair": "LABUSDT",
+    "timestamp": 1777649400000
+  },
+  {
+    "indexPrice": "0.69705039",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.6982000",
+    "annualizedBasisRate": "",
+    "basis": "0.00114961",
+    "pair": "LABUSDT",
+    "timestamp": 1777649700000
+  },
+  {
+    "indexPrice": "0.69613924",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0015",
+    "futuresPrice": "0.6972000",
+    "annualizedBasisRate": "",
+    "basis": "0.00106076",
+    "pair": "LABUSDT",
+    "timestamp": 1777650000000
+  },
+  {
+    "indexPrice": "0.69542385",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0015",
+    "futuresPrice": "0.6965000",
+    "annualizedBasisRate": "",
+    "basis": "0.00107615",
+    "pair": "LABUSDT",
+    "timestamp": 1777650300000
+  },
+  {
+    "indexPrice": "0.69675795",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0018",
+    "futuresPrice": "0.6980000",
+    "annualizedBasisRate": "",
+    "basis": "0.00124205",
+    "pair": "LABUSDT",
+    "timestamp": 1777650600000
+  },
+  {
+    "indexPrice": "0.69616351",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0012",
+    "futuresPrice": "0.6970000",
+    "annualizedBasisRate": "",
+    "basis": "0.00083649",
+    "pair": "LABUSDT",
+    "timestamp": 1777650900000
+  },
+  {
+    "indexPrice": "0.69511828",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0013",
+    "futuresPrice": "0.6960000",
+    "annualizedBasisRate": "",
+    "basis": "0.00088172",
+    "pair": "LABUSDT",
+    "timestamp": 1777651200000
+  },
+  {
+    "indexPrice": "0.69363763",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0015",
+    "futuresPrice": "0.6947000",
+    "annualizedBasisRate": "",
+    "basis": "0.00106237",
+    "pair": "LABUSDT",
+    "timestamp": 1777651500000
+  },
+  {
+    "indexPrice": "0.69174669",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0009",
+    "futuresPrice": "0.6924000",
+    "annualizedBasisRate": "",
+    "basis": "0.00065331",
+    "pair": "LABUSDT",
+    "timestamp": 1777651800000
+  },
+  {
+    "indexPrice": "0.68923458",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6910000",
+    "annualizedBasisRate": "",
+    "basis": "0.00176542",
+    "pair": "LABUSDT",
+    "timestamp": 1777652100000
+  },
+  {
+    "indexPrice": "0.69041062",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.6916000",
+    "annualizedBasisRate": "",
+    "basis": "0.00118938",
+    "pair": "LABUSDT",
+    "timestamp": 1777652400000
+  },
+  {
+    "indexPrice": "0.68793789",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0014",
+    "futuresPrice": "0.6889000",
+    "annualizedBasisRate": "",
+    "basis": "0.00096211",
+    "pair": "LABUSDT",
+    "timestamp": 1777652700000
+  },
+  {
+    "indexPrice": "0.68574640",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0031",
+    "futuresPrice": "0.6879000",
+    "annualizedBasisRate": "",
+    "basis": "0.00215360",
+    "pair": "LABUSDT",
+    "timestamp": 1777653000000
+  },
+  {
+    "indexPrice": "0.68698434",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0013",
+    "futuresPrice": "0.6879000",
+    "annualizedBasisRate": "",
+    "basis": "0.00091566",
+    "pair": "LABUSDT",
+    "timestamp": 1777653300000
+  },
+  {
+    "indexPrice": "0.68676246",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.6885000",
+    "annualizedBasisRate": "",
+    "basis": "0.00173754",
+    "pair": "LABUSDT",
+    "timestamp": 1777653600000
+  },
+  {
+    "indexPrice": "0.68573185",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0008",
+    "futuresPrice": "0.6863000",
+    "annualizedBasisRate": "",
+    "basis": "0.00056815",
+    "pair": "LABUSDT",
+    "timestamp": 1777653900000
+  },
+  {
+    "indexPrice": "0.68626222",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0031",
+    "futuresPrice": "0.6884000",
+    "annualizedBasisRate": "",
+    "basis": "0.00213778",
+    "pair": "LABUSDT",
+    "timestamp": 1777654200000
+  },
+  {
+    "indexPrice": "0.68414454",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.6853000",
+    "annualizedBasisRate": "",
+    "basis": "0.00115546",
+    "pair": "LABUSDT",
+    "timestamp": 1777654500000
+  },
+  {
+    "indexPrice": "0.68445677",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "0.6863000",
+    "annualizedBasisRate": "",
+    "basis": "0.00184323",
+    "pair": "LABUSDT",
+    "timestamp": 1777654800000
+  },
+  {
+    "indexPrice": "0.68289085",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.6840000",
+    "annualizedBasisRate": "",
+    "basis": "0.00110915",
+    "pair": "LABUSDT",
+    "timestamp": 1777655100000
+  },
+  {
+    "indexPrice": "0.68233937",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0018",
+    "futuresPrice": "0.6836000",
+    "annualizedBasisRate": "",
+    "basis": "0.00126063",
+    "pair": "LABUSDT",
+    "timestamp": 1777655400000
+  },
+  {
+    "indexPrice": "0.68414640",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "0.6864000",
+    "annualizedBasisRate": "",
+    "basis": "0.00225360",
+    "pair": "LABUSDT",
+    "timestamp": 1777655700000
+  },
+  {
+    "indexPrice": "0.68241017",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.6835000",
+    "annualizedBasisRate": "",
+    "basis": "0.00108983",
+    "pair": "LABUSDT",
+    "timestamp": 1777656000000
+  },
+  {
+    "indexPrice": "0.68177738",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0019",
+    "futuresPrice": "0.6831000",
+    "annualizedBasisRate": "",
+    "basis": "0.00132262",
+    "pair": "LABUSDT",
+    "timestamp": 1777656300000
+  },
+  {
+    "indexPrice": "0.68262325",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "0.6847000",
+    "annualizedBasisRate": "",
+    "basis": "0.00207675",
+    "pair": "LABUSDT",
+    "timestamp": 1777656600000
+  },
+  {
+    "indexPrice": "0.68058521",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0013",
+    "futuresPrice": "0.6815000",
+    "annualizedBasisRate": "",
+    "basis": "0.00091479",
+    "pair": "LABUSDT",
+    "timestamp": 1777656900000
+  },
+  {
+    "indexPrice": "0.68296791",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0040",
+    "futuresPrice": "0.6857000",
+    "annualizedBasisRate": "",
+    "basis": "0.00273209",
+    "pair": "LABUSDT",
+    "timestamp": 1777657200000
+  },
+  {
+    "indexPrice": "0.68464874",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.6864000",
+    "annualizedBasisRate": "",
+    "basis": "0.00175126",
+    "pair": "LABUSDT",
+    "timestamp": 1777657500000
+  },
+  {
+    "indexPrice": "0.68619296",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.6879000",
+    "annualizedBasisRate": "",
+    "basis": "0.00170704",
+    "pair": "LABUSDT",
+    "timestamp": 1777657800000
+  },
+  {
+    "indexPrice": "0.68614404",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0023",
+    "futuresPrice": "0.6877000",
+    "annualizedBasisRate": "",
+    "basis": "0.00155596",
+    "pair": "LABUSDT",
+    "timestamp": 1777658100000
+  },
+  {
+    "indexPrice": "0.68668660",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.6884000",
+    "annualizedBasisRate": "",
+    "basis": "0.00171340",
+    "pair": "LABUSDT",
+    "timestamp": 1777658400000
+  },
+  {
+    "indexPrice": "0.69101788",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0039",
+    "futuresPrice": "0.6937000",
+    "annualizedBasisRate": "",
+    "basis": "0.00268212",
+    "pair": "LABUSDT",
+    "timestamp": 1777658700000
+  },
+  {
+    "indexPrice": "0.68857724",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0001",
+    "futuresPrice": "0.6885000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00007724",
+    "pair": "LABUSDT",
+    "timestamp": 1777659000000
+  },
+  {
+    "indexPrice": "0.68723319",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0002",
+    "futuresPrice": "0.6871000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00013319",
+    "pair": "LABUSDT",
+    "timestamp": 1777659300000
+  },
+  {
+    "indexPrice": "0.68882566",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0010",
+    "futuresPrice": "0.6895000",
+    "annualizedBasisRate": "",
+    "basis": "0.00067434",
+    "pair": "LABUSDT",
+    "timestamp": 1777659600000
+  },
+  {
+    "indexPrice": "0.69254367",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0041",
+    "futuresPrice": "0.6954000",
+    "annualizedBasisRate": "",
+    "basis": "0.00285633",
+    "pair": "LABUSDT",
+    "timestamp": 1777659900000
+  },
+  {
+    "indexPrice": "0.68964056",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.6908000",
+    "annualizedBasisRate": "",
+    "basis": "0.00115944",
+    "pair": "LABUSDT",
+    "timestamp": 1777660200000
+  },
+  {
+    "indexPrice": "0.69360245",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0059",
+    "futuresPrice": "0.6977000",
+    "annualizedBasisRate": "",
+    "basis": "0.00409755",
+    "pair": "LABUSDT",
+    "timestamp": 1777660500000
+  },
+  {
+    "indexPrice": "0.71264009",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0022",
+    "futuresPrice": "0.7142000",
+    "annualizedBasisRate": "",
+    "basis": "0.00155991",
+    "pair": "LABUSDT",
+    "timestamp": 1777660800000
+  },
+  {
+    "indexPrice": "0.71269353",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0051",
+    "futuresPrice": "0.7163000",
+    "annualizedBasisRate": "",
+    "basis": "0.00360647",
+    "pair": "LABUSDT",
+    "timestamp": 1777661100000
+  },
+  {
+    "indexPrice": "0.71548257",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0049",
+    "futuresPrice": "0.7190000",
+    "annualizedBasisRate": "",
+    "basis": "0.00351743",
+    "pair": "LABUSDT",
+    "timestamp": 1777661400000
+  },
+  {
+    "indexPrice": "0.71307145",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "0.7152000",
+    "annualizedBasisRate": "",
+    "basis": "0.00212855",
+    "pair": "LABUSDT",
+    "timestamp": 1777661700000
+  },
+  {
+    "indexPrice": "0.71256902",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0037",
+    "futuresPrice": "0.7152000",
+    "annualizedBasisRate": "",
+    "basis": "0.00263098",
+    "pair": "LABUSDT",
+    "timestamp": 1777662000000
+  },
+  {
+    "indexPrice": "0.71611008",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0031",
+    "futuresPrice": "0.7183000",
+    "annualizedBasisRate": "",
+    "basis": "0.00218992",
+    "pair": "LABUSDT",
+    "timestamp": 1777662300000
+  },
+  {
+    "indexPrice": "0.71929022",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0054",
+    "futuresPrice": "0.7232000",
+    "annualizedBasisRate": "",
+    "basis": "0.00390978",
+    "pair": "LABUSDT",
+    "timestamp": 1777662600000
+  },
+  {
+    "indexPrice": "0.71946692",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "0.7220000",
+    "annualizedBasisRate": "",
+    "basis": "0.00253308",
+    "pair": "LABUSDT",
+    "timestamp": 1777662900000
+  },
+  {
+    "indexPrice": "0.73312613",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0041",
+    "futuresPrice": "0.7361000",
+    "annualizedBasisRate": "",
+    "basis": "0.00297387",
+    "pair": "LABUSDT",
+    "timestamp": 1777663200000
+  },
+  {
+    "indexPrice": "0.73925364",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0059",
+    "futuresPrice": "0.7436000",
+    "annualizedBasisRate": "",
+    "basis": "0.00434636",
+    "pair": "LABUSDT",
+    "timestamp": 1777663500000
+  },
+  {
+    "indexPrice": "0.75609503",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0045",
+    "futuresPrice": "0.7595000",
+    "annualizedBasisRate": "",
+    "basis": "0.00340497",
+    "pair": "LABUSDT",
+    "timestamp": 1777663800000
+  },
+  {
+    "indexPrice": "0.77649284",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0037",
+    "futuresPrice": "0.7794000",
+    "annualizedBasisRate": "",
+    "basis": "0.00290716",
+    "pair": "LABUSDT",
+    "timestamp": 1777664100000
+  },
+  {
+    "indexPrice": "0.80087958",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0071",
+    "futuresPrice": "0.8066000",
+    "annualizedBasisRate": "",
+    "basis": "0.00572042",
+    "pair": "LABUSDT",
+    "timestamp": 1777664400000
+  },
+  {
+    "indexPrice": "0.76612870",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0064",
+    "futuresPrice": "0.7710000",
+    "annualizedBasisRate": "",
+    "basis": "0.00487130",
+    "pair": "LABUSDT",
+    "timestamp": 1777664700000
+  },
+  {
+    "indexPrice": "0.79530128",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0041",
+    "futuresPrice": "0.7986000",
+    "annualizedBasisRate": "",
+    "basis": "0.00329872",
+    "pair": "LABUSDT",
+    "timestamp": 1777665000000
+  },
+  {
+    "indexPrice": "0.82771709",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0042",
+    "futuresPrice": "0.8312000",
+    "annualizedBasisRate": "",
+    "basis": "0.00348291",
+    "pair": "LABUSDT",
+    "timestamp": 1777665300000
+  },
+  {
+    "indexPrice": "0.81505302",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0003",
+    "futuresPrice": "0.8153000",
+    "annualizedBasisRate": "",
+    "basis": "0.00024698",
+    "pair": "LABUSDT",
+    "timestamp": 1777665600000
+  },
+  {
+    "indexPrice": "0.81964175",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0045",
+    "futuresPrice": "0.8233000",
+    "annualizedBasisRate": "",
+    "basis": "0.00365825",
+    "pair": "LABUSDT",
+    "timestamp": 1777665900000
+  },
+  {
+    "indexPrice": "0.85262099",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0067",
+    "futuresPrice": "0.8583000",
+    "annualizedBasisRate": "",
+    "basis": "0.00567901",
+    "pair": "LABUSDT",
+    "timestamp": 1777666200000
+  },
+  {
+    "indexPrice": "0.86296196",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0004",
+    "futuresPrice": "0.8633000",
+    "annualizedBasisRate": "",
+    "basis": "0.00033804",
+    "pair": "LABUSDT",
+    "timestamp": 1777666500000
+  },
+  {
+    "indexPrice": "0.85076962",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0011",
+    "futuresPrice": "0.8517000",
+    "annualizedBasisRate": "",
+    "basis": "0.00093038",
+    "pair": "LABUSDT",
+    "timestamp": 1777666800000
+  },
+  {
+    "indexPrice": "0.83577399",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0045",
+    "futuresPrice": "0.8395000",
+    "annualizedBasisRate": "",
+    "basis": "0.00372601",
+    "pair": "LABUSDT",
+    "timestamp": 1777667100000
+  },
+  {
+    "indexPrice": "0.86476510",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "0.8669000",
+    "annualizedBasisRate": "",
+    "basis": "0.00213490",
+    "pair": "LABUSDT",
+    "timestamp": 1777667400000
+  },
+  {
+    "indexPrice": "0.82647553",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0014",
+    "futuresPrice": "0.8276000",
+    "annualizedBasisRate": "",
+    "basis": "0.00112447",
+    "pair": "LABUSDT",
+    "timestamp": 1777667700000
+  },
+  {
+    "indexPrice": "0.85027966",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0078",
+    "futuresPrice": "0.8569000",
+    "annualizedBasisRate": "",
+    "basis": "0.00662034",
+    "pair": "LABUSDT",
+    "timestamp": 1777668000000
+  },
+  {
+    "indexPrice": "0.89356218",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0046",
+    "futuresPrice": "0.8977000",
+    "annualizedBasisRate": "",
+    "basis": "0.00413782",
+    "pair": "LABUSDT",
+    "timestamp": 1777668300000
+  },
+  {
+    "indexPrice": "0.90577540",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0110",
+    "futuresPrice": "0.9157000",
+    "annualizedBasisRate": "",
+    "basis": "0.00992460",
+    "pair": "LABUSDT",
+    "timestamp": 1777668600000
+  },
+  {
+    "indexPrice": "0.94133994",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0043",
+    "futuresPrice": "0.9454000",
+    "annualizedBasisRate": "",
+    "basis": "0.00406006",
+    "pair": "LABUSDT",
+    "timestamp": 1777668900000
+  },
+  {
+    "indexPrice": "0.90679240",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0021",
+    "futuresPrice": "0.9049000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00189240",
+    "pair": "LABUSDT",
+    "timestamp": 1777669200000
+  },
+  {
+    "indexPrice": "0.88914993",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0005",
+    "futuresPrice": "0.8896000",
+    "annualizedBasisRate": "",
+    "basis": "0.00045007",
+    "pair": "LABUSDT",
+    "timestamp": 1777669500000
+  },
+  {
+    "indexPrice": "0.87328323",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0019",
+    "futuresPrice": "0.8749000",
+    "annualizedBasisRate": "",
+    "basis": "0.00161677",
+    "pair": "LABUSDT",
+    "timestamp": 1777669800000
+  },
+  {
+    "indexPrice": "0.87857241",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0037",
+    "futuresPrice": "0.8753000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00327241",
+    "pair": "LABUSDT",
+    "timestamp": 1777670100000
+  },
+  {
+    "indexPrice": "0.87027580",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "0.8732000",
+    "annualizedBasisRate": "",
+    "basis": "0.00292420",
+    "pair": "LABUSDT",
+    "timestamp": 1777670400000
+  },
+  {
+    "indexPrice": "0.86201550",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0007",
+    "futuresPrice": "0.8626000",
+    "annualizedBasisRate": "",
+    "basis": "0.00058450",
+    "pair": "LABUSDT",
+    "timestamp": 1777670700000
+  },
+  {
+    "indexPrice": "0.83925839",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0004",
+    "futuresPrice": "0.8396000",
+    "annualizedBasisRate": "",
+    "basis": "0.00034161",
+    "pair": "LABUSDT",
+    "timestamp": 1777671000000
+  },
+  {
+    "indexPrice": "0.85000000",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0004",
+    "futuresPrice": "0.8503000",
+    "annualizedBasisRate": "",
+    "basis": "0.00030000",
+    "pair": "LABUSDT",
+    "timestamp": 1777671300000
+  },
+  {
+    "indexPrice": "0.86292832",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "0.8643000",
+    "annualizedBasisRate": "",
+    "basis": "0.00137168",
+    "pair": "LABUSDT",
+    "timestamp": 1777671600000
+  },
+  {
+    "indexPrice": "0.86896879",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0018",
+    "futuresPrice": "0.8674000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00156879",
+    "pair": "LABUSDT",
+    "timestamp": 1777671900000
+  },
+  {
+    "indexPrice": "0.87219935",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0037",
+    "futuresPrice": "0.8754000",
+    "annualizedBasisRate": "",
+    "basis": "0.00320065",
+    "pair": "LABUSDT",
+    "timestamp": 1777672200000
+  },
+  {
+    "indexPrice": "0.88337182",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "0.8863000",
+    "annualizedBasisRate": "",
+    "basis": "0.00292818",
+    "pair": "LABUSDT",
+    "timestamp": 1777672500000
+  },
+  {
+    "indexPrice": "0.89256586",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0042",
+    "futuresPrice": "0.8963000",
+    "annualizedBasisRate": "",
+    "basis": "0.00373414",
+    "pair": "LABUSDT",
+    "timestamp": 1777672800000
+  },
+  {
+    "indexPrice": "0.88775568",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0005",
+    "futuresPrice": "0.8882000",
+    "annualizedBasisRate": "",
+    "basis": "0.00044432",
+    "pair": "LABUSDT",
+    "timestamp": 1777673100000
+  },
+  {
+    "indexPrice": "0.89736353",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "0.9003000",
+    "annualizedBasisRate": "",
+    "basis": "0.00293647",
+    "pair": "LABUSDT",
+    "timestamp": 1777673400000
+  },
+  {
+    "indexPrice": "0.89282077",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0037",
+    "futuresPrice": "0.8961000",
+    "annualizedBasisRate": "",
+    "basis": "0.00327923",
+    "pair": "LABUSDT",
+    "timestamp": 1777673700000
+  },
+  {
+    "indexPrice": "0.90334741",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0059",
+    "futuresPrice": "0.9087000",
+    "annualizedBasisRate": "",
+    "basis": "0.00535259",
+    "pair": "LABUSDT",
+    "timestamp": 1777674000000
+  },
+  {
+    "indexPrice": "0.91845821",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0054",
+    "futuresPrice": "0.9234000",
+    "annualizedBasisRate": "",
+    "basis": "0.00494179",
+    "pair": "LABUSDT",
+    "timestamp": 1777674300000
+  },
+  {
+    "indexPrice": "0.93225778",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "0.9353000",
+    "annualizedBasisRate": "",
+    "basis": "0.00304222",
+    "pair": "LABUSDT",
+    "timestamp": 1777674600000
+  },
+  {
+    "indexPrice": "0.93361527",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.9360000",
+    "annualizedBasisRate": "",
+    "basis": "0.00238473",
+    "pair": "LABUSDT",
+    "timestamp": 1777674900000
+  },
+  {
+    "indexPrice": "0.95595437",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0044",
+    "futuresPrice": "0.9602000",
+    "annualizedBasisRate": "",
+    "basis": "0.00424563",
+    "pair": "LABUSDT",
+    "timestamp": 1777675200000
+  },
+  {
+    "indexPrice": "0.95841440",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "0.9613000",
+    "annualizedBasisRate": "",
+    "basis": "0.00288560",
+    "pair": "LABUSDT",
+    "timestamp": 1777675500000
+  },
+  {
+    "indexPrice": "0.96727089",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "0.9698000",
+    "annualizedBasisRate": "",
+    "basis": "0.00252911",
+    "pair": "LABUSDT",
+    "timestamp": 1777675800000
+  },
+  {
+    "indexPrice": "0.95923262",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "0.9609000",
+    "annualizedBasisRate": "",
+    "basis": "0.00166738",
+    "pair": "LABUSDT",
+    "timestamp": 1777676100000
+  },
+  {
+    "indexPrice": "0.97244171",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0016",
+    "futuresPrice": "0.9709000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00154171",
+    "pair": "LABUSDT",
+    "timestamp": 1777676400000
+  },
+  {
+    "indexPrice": "0.99225865",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0004",
+    "futuresPrice": "0.9927000",
+    "annualizedBasisRate": "",
+    "basis": "0.00044135",
+    "pair": "LABUSDT",
+    "timestamp": 1777676700000
+  },
+  {
+    "indexPrice": "1.02817502",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0053",
+    "futuresPrice": "1.0336000",
+    "annualizedBasisRate": "",
+    "basis": "0.00542498",
+    "pair": "LABUSDT",
+    "timestamp": 1777677000000
+  },
+  {
+    "indexPrice": "1.04355750",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0058",
+    "futuresPrice": "1.0496000",
+    "annualizedBasisRate": "",
+    "basis": "0.00604250",
+    "pair": "LABUSDT",
+    "timestamp": 1777677300000
+  },
+  {
+    "indexPrice": "1.05266810",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0019",
+    "futuresPrice": "1.0507000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00196810",
+    "pair": "LABUSDT",
+    "timestamp": 1777677600000
+  },
+  {
+    "indexPrice": "1.08140310",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0049",
+    "futuresPrice": "1.0867000",
+    "annualizedBasisRate": "",
+    "basis": "0.00529690",
+    "pair": "LABUSDT",
+    "timestamp": 1777677900000
+  },
+  {
+    "indexPrice": "1.08892292",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0050",
+    "futuresPrice": "1.0944000",
+    "annualizedBasisRate": "",
+    "basis": "0.00547708",
+    "pair": "LABUSDT",
+    "timestamp": 1777678200000
+  },
+  {
+    "indexPrice": "1.07043710",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0003",
+    "futuresPrice": "1.0708000",
+    "annualizedBasisRate": "",
+    "basis": "0.00036290",
+    "pair": "LABUSDT",
+    "timestamp": 1777678500000
+  },
+  {
+    "indexPrice": "1.04157293",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "1.0451000",
+    "annualizedBasisRate": "",
+    "basis": "0.00352707",
+    "pair": "LABUSDT",
+    "timestamp": 1777678800000
+  },
+  {
+    "indexPrice": "1.12822696",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0189",
+    "futuresPrice": "1.1496000",
+    "annualizedBasisRate": "",
+    "basis": "0.02137304",
+    "pair": "LABUSDT",
+    "timestamp": 1777679100000
+  },
+  {
+    "indexPrice": "1.20649450",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0084",
+    "futuresPrice": "1.2166000",
+    "annualizedBasisRate": "",
+    "basis": "0.01010550",
+    "pair": "LABUSDT",
+    "timestamp": 1777679400000
+  },
+  {
+    "indexPrice": "1.21151283",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0068",
+    "futuresPrice": "1.2197000",
+    "annualizedBasisRate": "",
+    "basis": "0.00818717",
+    "pair": "LABUSDT",
+    "timestamp": 1777679700000
+  },
+  {
+    "indexPrice": "1.21547076",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0008",
+    "futuresPrice": "1.2164000",
+    "annualizedBasisRate": "",
+    "basis": "0.00092924",
+    "pair": "LABUSDT",
+    "timestamp": 1777680000000
+  },
+  {
+    "indexPrice": "1.20732938",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "1.2093000",
+    "annualizedBasisRate": "",
+    "basis": "0.00197062",
+    "pair": "LABUSDT",
+    "timestamp": 1777680300000
+  },
+  {
+    "indexPrice": "1.19844980",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0057",
+    "futuresPrice": "1.2053000",
+    "annualizedBasisRate": "",
+    "basis": "0.00685020",
+    "pair": "LABUSDT",
+    "timestamp": 1777680600000
+  },
+  {
+    "indexPrice": "1.17782764",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0074",
+    "futuresPrice": "1.1866000",
+    "annualizedBasisRate": "",
+    "basis": "0.00877236",
+    "pair": "LABUSDT",
+    "timestamp": 1777680900000
+  },
+  {
+    "indexPrice": "1.26876693",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0100",
+    "futuresPrice": "1.2814000",
+    "annualizedBasisRate": "",
+    "basis": "0.01263307",
+    "pair": "LABUSDT",
+    "timestamp": 1777681200000
+  },
+  {
+    "indexPrice": "1.28012316",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0051",
+    "futuresPrice": "1.2867000",
+    "annualizedBasisRate": "",
+    "basis": "0.00657684",
+    "pair": "LABUSDT",
+    "timestamp": 1777681500000
+  },
+  {
+    "indexPrice": "1.27122180",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0042",
+    "futuresPrice": "1.2765000",
+    "annualizedBasisRate": "",
+    "basis": "0.00527820",
+    "pair": "LABUSDT",
+    "timestamp": 1777681800000
+  },
+  {
+    "indexPrice": "1.28550378",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0075",
+    "futuresPrice": "1.2951000",
+    "annualizedBasisRate": "",
+    "basis": "0.00959622",
+    "pair": "LABUSDT",
+    "timestamp": 1777682100000
+  },
+  {
+    "indexPrice": "1.21860524",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0057",
+    "futuresPrice": "1.2256000",
+    "annualizedBasisRate": "",
+    "basis": "0.00699476",
+    "pair": "LABUSDT",
+    "timestamp": 1777682400000
+  },
+  {
+    "indexPrice": "1.26613036",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0119",
+    "futuresPrice": "1.2812000",
+    "annualizedBasisRate": "",
+    "basis": "0.01506964",
+    "pair": "LABUSDT",
+    "timestamp": 1777682700000
+  },
+  {
+    "indexPrice": "1.28388161",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0089",
+    "futuresPrice": "1.2953000",
+    "annualizedBasisRate": "",
+    "basis": "0.01141839",
+    "pair": "LABUSDT",
+    "timestamp": 1777683000000
+  },
+  {
+    "indexPrice": "1.25570798",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0039",
+    "futuresPrice": "1.2606000",
+    "annualizedBasisRate": "",
+    "basis": "0.00489202",
+    "pair": "LABUSDT",
+    "timestamp": 1777683300000
+  },
+  {
+    "indexPrice": "1.24232911",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0056",
+    "futuresPrice": "1.2493000",
+    "annualizedBasisRate": "",
+    "basis": "0.00697089",
+    "pair": "LABUSDT",
+    "timestamp": 1777683600000
+  },
+  {
+    "indexPrice": "1.25110010",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0106",
+    "futuresPrice": "1.2643000",
+    "annualizedBasisRate": "",
+    "basis": "0.01319990",
+    "pair": "LABUSDT",
+    "timestamp": 1777683900000
+  },
+  {
+    "indexPrice": "1.23693170",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0052",
+    "futuresPrice": "1.2434000",
+    "annualizedBasisRate": "",
+    "basis": "0.00646830",
+    "pair": "LABUSDT",
+    "timestamp": 1777684200000
+  },
+  {
+    "indexPrice": "1.24960005",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0089",
+    "futuresPrice": "1.2607000",
+    "annualizedBasisRate": "",
+    "basis": "0.01109995",
+    "pair": "LABUSDT",
+    "timestamp": 1777684500000
+  },
+  {
+    "indexPrice": "1.26623978",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0094",
+    "futuresPrice": "1.2782000",
+    "annualizedBasisRate": "",
+    "basis": "0.01196022",
+    "pair": "LABUSDT",
+    "timestamp": 1777684800000
+  },
+  {
+    "indexPrice": "1.29085348",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0042",
+    "futuresPrice": "1.2963000",
+    "annualizedBasisRate": "",
+    "basis": "0.00544652",
+    "pair": "LABUSDT",
+    "timestamp": 1777685100000
+  },
+  {
+    "indexPrice": "1.31189545",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0095",
+    "futuresPrice": "1.3244000",
+    "annualizedBasisRate": "",
+    "basis": "0.01250455",
+    "pair": "LABUSDT",
+    "timestamp": 1777685400000
+  },
+  {
+    "indexPrice": "1.28977073",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "1.2920000",
+    "annualizedBasisRate": "",
+    "basis": "0.00222927",
+    "pair": "LABUSDT",
+    "timestamp": 1777685700000
+  },
+  {
+    "indexPrice": "1.22559304",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0013",
+    "futuresPrice": "1.2240000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00159304",
+    "pair": "LABUSDT",
+    "timestamp": 1777686000000
+  },
+  {
+    "indexPrice": "1.18138706",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0045",
+    "futuresPrice": "1.1867000",
+    "annualizedBasisRate": "",
+    "basis": "0.00531294",
+    "pair": "LABUSDT",
+    "timestamp": 1777686300000
+  },
+  {
+    "indexPrice": "1.21009070",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0003",
+    "futuresPrice": "1.2104000",
+    "annualizedBasisRate": "",
+    "basis": "0.00030930",
+    "pair": "LABUSDT",
+    "timestamp": 1777686600000
+  },
+  {
+    "indexPrice": "1.16023781",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "1.1630000",
+    "annualizedBasisRate": "",
+    "basis": "0.00276219",
+    "pair": "LABUSDT",
+    "timestamp": 1777686900000
+  },
+  {
+    "indexPrice": "1.16258634",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0029",
+    "futuresPrice": "1.1660000",
+    "annualizedBasisRate": "",
+    "basis": "0.00341366",
+    "pair": "LABUSDT",
+    "timestamp": 1777687200000
+  },
+  {
+    "indexPrice": "1.13737582",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0002",
+    "futuresPrice": "1.1371000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00027582",
+    "pair": "LABUSDT",
+    "timestamp": 1777687500000
+  },
+  {
+    "indexPrice": "1.11229190",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0014",
+    "futuresPrice": "1.1139000",
+    "annualizedBasisRate": "",
+    "basis": "0.00160810",
+    "pair": "LABUSDT",
+    "timestamp": 1777687800000
+  },
+  {
+    "indexPrice": "1.08075688",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "1.0826000",
+    "annualizedBasisRate": "",
+    "basis": "0.00184312",
+    "pair": "LABUSDT",
+    "timestamp": 1777688100000
+  },
+  {
+    "indexPrice": "1.13252880",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0032",
+    "futuresPrice": "1.1362000",
+    "annualizedBasisRate": "",
+    "basis": "0.00367120",
+    "pair": "LABUSDT",
+    "timestamp": 1777688400000
+  },
+  {
+    "indexPrice": "1.12773738",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0001",
+    "futuresPrice": "1.1279000",
+    "annualizedBasisRate": "",
+    "basis": "0.00016262",
+    "pair": "LABUSDT",
+    "timestamp": 1777688700000
+  },
+  {
+    "indexPrice": "1.16224609",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0050",
+    "futuresPrice": "1.1680000",
+    "annualizedBasisRate": "",
+    "basis": "0.00575391",
+    "pair": "LABUSDT",
+    "timestamp": 1777689000000
+  },
+  {
+    "indexPrice": "1.17902231",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0054",
+    "futuresPrice": "1.1854000",
+    "annualizedBasisRate": "",
+    "basis": "0.00637769",
+    "pair": "LABUSDT",
+    "timestamp": 1777689300000
+  },
+  {
+    "indexPrice": "1.20636628",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0067",
+    "futuresPrice": "1.2145000",
+    "annualizedBasisRate": "",
+    "basis": "0.00813372",
+    "pair": "LABUSDT",
+    "timestamp": 1777689600000
+  },
+  {
+    "indexPrice": "1.21022758",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0066",
+    "futuresPrice": "1.2182000",
+    "annualizedBasisRate": "",
+    "basis": "0.00797242",
+    "pair": "LABUSDT",
+    "timestamp": 1777689900000
+  },
+  {
+    "indexPrice": "1.23357761",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "1.2360000",
+    "annualizedBasisRate": "",
+    "basis": "0.00242239",
+    "pair": "LABUSDT",
+    "timestamp": 1777690200000
+  },
+  {
+    "indexPrice": "1.21663223",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0069",
+    "futuresPrice": "1.2250000",
+    "annualizedBasisRate": "",
+    "basis": "0.00836777",
+    "pair": "LABUSDT",
+    "timestamp": 1777690500000
+  },
+  {
+    "indexPrice": "1.25367982",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0040",
+    "futuresPrice": "1.2587000",
+    "annualizedBasisRate": "",
+    "basis": "0.00502018",
+    "pair": "LABUSDT",
+    "timestamp": 1777690800000
+  },
+  {
+    "indexPrice": "1.27410305",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "1.2779000",
+    "annualizedBasisRate": "",
+    "basis": "0.00379695",
+    "pair": "LABUSDT",
+    "timestamp": 1777691100000
+  },
+  {
+    "indexPrice": "1.27081318",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0008",
+    "futuresPrice": "1.2698000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00101318",
+    "pair": "LABUSDT",
+    "timestamp": 1777691400000
+  },
+  {
+    "indexPrice": "1.24911605",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0061",
+    "futuresPrice": "1.2567000",
+    "annualizedBasisRate": "",
+    "basis": "0.00758395",
+    "pair": "LABUSDT",
+    "timestamp": 1777691700000
+  },
+  {
+    "indexPrice": "1.29752470",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0046",
+    "futuresPrice": "1.3035000",
+    "annualizedBasisRate": "",
+    "basis": "0.00597530",
+    "pair": "LABUSDT",
+    "timestamp": 1777692000000
+  },
+  {
+    "indexPrice": "1.32061071",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0048",
+    "futuresPrice": "1.3270000",
+    "annualizedBasisRate": "",
+    "basis": "0.00638929",
+    "pair": "LABUSDT",
+    "timestamp": 1777692300000
+  },
+  {
+    "indexPrice": "1.35269154",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0098",
+    "futuresPrice": "1.3660000",
+    "annualizedBasisRate": "",
+    "basis": "0.01330846",
+    "pair": "LABUSDT",
+    "timestamp": 1777692600000
+  },
+  {
+    "indexPrice": "1.36036668",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0013",
+    "futuresPrice": "1.3621000",
+    "annualizedBasisRate": "",
+    "basis": "0.00173332",
+    "pair": "LABUSDT",
+    "timestamp": 1777692900000
+  },
+  {
+    "indexPrice": "1.37085670",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0076",
+    "futuresPrice": "1.3813000",
+    "annualizedBasisRate": "",
+    "basis": "0.01044330",
+    "pair": "LABUSDT",
+    "timestamp": 1777693200000
+  },
+  {
+    "indexPrice": "1.41914408",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0067",
+    "futuresPrice": "1.4286000",
+    "annualizedBasisRate": "",
+    "basis": "0.00945592",
+    "pair": "LABUSDT",
+    "timestamp": 1777693500000
+  },
+  {
+    "indexPrice": "1.42427099",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0066",
+    "futuresPrice": "1.4337000",
+    "annualizedBasisRate": "",
+    "basis": "0.00942901",
+    "pair": "LABUSDT",
+    "timestamp": 1777693800000
+  },
+  {
+    "indexPrice": "1.41698024",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0049",
+    "futuresPrice": "1.4239000",
+    "annualizedBasisRate": "",
+    "basis": "0.00691976",
+    "pair": "LABUSDT",
+    "timestamp": 1777694100000
+  },
+  {
+    "indexPrice": "1.43374487",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0049",
+    "futuresPrice": "1.4408000",
+    "annualizedBasisRate": "",
+    "basis": "0.00705513",
+    "pair": "LABUSDT",
+    "timestamp": 1777694400000
+  },
+  {
+    "indexPrice": "1.45283214",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0100",
+    "futuresPrice": "1.4674000",
+    "annualizedBasisRate": "",
+    "basis": "0.01456786",
+    "pair": "LABUSDT",
+    "timestamp": 1777694700000
+  },
+  {
+    "indexPrice": "1.46900340",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "1.4742000",
+    "annualizedBasisRate": "",
+    "basis": "0.00519660",
+    "pair": "LABUSDT",
+    "timestamp": 1777695000000
+  },
+  {
+    "indexPrice": "1.50431840",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0061",
+    "futuresPrice": "1.5135000",
+    "annualizedBasisRate": "",
+    "basis": "0.00918160",
+    "pair": "LABUSDT",
+    "timestamp": 1777695300000
+  },
+  {
+    "indexPrice": "1.49356970",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0075",
+    "futuresPrice": "1.5048000",
+    "annualizedBasisRate": "",
+    "basis": "0.01123030",
+    "pair": "LABUSDT",
+    "timestamp": 1777695600000
+  },
+  {
+    "indexPrice": "1.52973482",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0057",
+    "futuresPrice": "1.5385000",
+    "annualizedBasisRate": "",
+    "basis": "0.00876518",
+    "pair": "LABUSDT",
+    "timestamp": 1777695900000
+  },
+  {
+    "indexPrice": "1.56957703",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0045",
+    "futuresPrice": "1.5767000",
+    "annualizedBasisRate": "",
+    "basis": "0.00712297",
+    "pair": "LABUSDT",
+    "timestamp": 1777696200000
+  },
+  {
+    "indexPrice": "1.60890394",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0068",
+    "futuresPrice": "1.6199000",
+    "annualizedBasisRate": "",
+    "basis": "0.01099606",
+    "pair": "LABUSDT",
+    "timestamp": 1777696500000
+  },
+  {
+    "indexPrice": "1.62388172",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0039",
+    "futuresPrice": "1.6302000",
+    "annualizedBasisRate": "",
+    "basis": "0.00631828",
+    "pair": "LABUSDT",
+    "timestamp": 1777696800000
+  },
+  {
+    "indexPrice": "1.65972304",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0058",
+    "futuresPrice": "1.6693000",
+    "annualizedBasisRate": "",
+    "basis": "0.00957696",
+    "pair": "LABUSDT",
+    "timestamp": 1777697100000
+  },
+  {
+    "indexPrice": "1.74333118",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0006",
+    "futuresPrice": "1.7422000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00113118",
+    "pair": "LABUSDT",
+    "timestamp": 1777697400000
+  },
+  {
+    "indexPrice": "1.73753370",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0066",
+    "futuresPrice": "1.7490000",
+    "annualizedBasisRate": "",
+    "basis": "0.01146630",
+    "pair": "LABUSDT",
+    "timestamp": 1777697700000
+  },
+  {
+    "indexPrice": "1.75892030",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0092",
+    "futuresPrice": "1.7751000",
+    "annualizedBasisRate": "",
+    "basis": "0.01617970",
+    "pair": "LABUSDT",
+    "timestamp": 1777698000000
+  },
+  {
+    "indexPrice": "1.82114307",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0077",
+    "futuresPrice": "1.8352000",
+    "annualizedBasisRate": "",
+    "basis": "0.01405693",
+    "pair": "LABUSDT",
+    "timestamp": 1777698300000
+  },
+  {
+    "indexPrice": "1.92334565",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0053",
+    "futuresPrice": "1.9335000",
+    "annualizedBasisRate": "",
+    "basis": "0.01015435",
+    "pair": "LABUSDT",
+    "timestamp": 1777698600000
+  },
+  {
+    "indexPrice": "1.93265172",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0005",
+    "futuresPrice": "1.9317000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00095172",
+    "pair": "LABUSDT",
+    "timestamp": 1777698900000
+  },
+  {
+    "indexPrice": "1.68781992",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "1.6936000",
+    "annualizedBasisRate": "",
+    "basis": "0.00578008",
+    "pair": "LABUSDT",
+    "timestamp": 1777699200000
+  },
+  {
+    "indexPrice": "1.70312082",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0029",
+    "futuresPrice": "1.6982000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00492082",
+    "pair": "LABUSDT",
+    "timestamp": 1777699500000
+  },
+  {
+    "indexPrice": "1.80139251",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0054",
+    "futuresPrice": "1.8111000",
+    "annualizedBasisRate": "",
+    "basis": "0.00970749",
+    "pair": "LABUSDT",
+    "timestamp": 1777699800000
+  },
+  {
+    "indexPrice": "1.76485591",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "1.7694000",
+    "annualizedBasisRate": "",
+    "basis": "0.00454409",
+    "pair": "LABUSDT",
+    "timestamp": 1777700100000
+  },
+  {
+    "indexPrice": "1.73294962",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "1.7377000",
+    "annualizedBasisRate": "",
+    "basis": "0.00475038",
+    "pair": "LABUSDT",
+    "timestamp": 1777700400000
+  },
+  {
+    "indexPrice": "1.81267830",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0077",
+    "futuresPrice": "1.8267000",
+    "annualizedBasisRate": "",
+    "basis": "0.01402170",
+    "pair": "LABUSDT",
+    "timestamp": 1777700700000
+  },
+  {
+    "indexPrice": "2.08254662",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0113",
+    "futuresPrice": "2.1060000",
+    "annualizedBasisRate": "",
+    "basis": "0.02345338",
+    "pair": "LABUSDT",
+    "timestamp": 1777701000000
+  },
+  {
+    "indexPrice": "2.26665536",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0155",
+    "futuresPrice": "2.3018000",
+    "annualizedBasisRate": "",
+    "basis": "0.03514464",
+    "pair": "LABUSDT",
+    "timestamp": 1777701300000
+  },
+  {
+    "indexPrice": "2.04218922",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "2.0478000",
+    "annualizedBasisRate": "",
+    "basis": "0.00561078",
+    "pair": "LABUSDT",
+    "timestamp": 1777701600000
+  },
+  {
+    "indexPrice": "2.04476157",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0158",
+    "futuresPrice": "2.0770000",
+    "annualizedBasisRate": "",
+    "basis": "0.03223843",
+    "pair": "LABUSDT",
+    "timestamp": 1777701900000
+  },
+  {
+    "indexPrice": "1.94601599",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "1.9525000",
+    "annualizedBasisRate": "",
+    "basis": "0.00648401",
+    "pair": "LABUSDT",
+    "timestamp": 1777702200000
+  },
+  {
+    "indexPrice": "1.88627716",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0001",
+    "futuresPrice": "1.8860000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00027716",
+    "pair": "LABUSDT",
+    "timestamp": 1777702500000
+  },
+  {
+    "indexPrice": "1.87232847",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0032",
+    "futuresPrice": "1.8784000",
+    "annualizedBasisRate": "",
+    "basis": "0.00607153",
+    "pair": "LABUSDT",
+    "timestamp": 1777702800000
+  },
+  {
+    "indexPrice": "1.72441164",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0040",
+    "futuresPrice": "1.7313000",
+    "annualizedBasisRate": "",
+    "basis": "0.00688836",
+    "pair": "LABUSDT",
+    "timestamp": 1777703100000
+  },
+  {
+    "indexPrice": "1.73275510",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "1.7385000",
+    "annualizedBasisRate": "",
+    "basis": "0.00574490",
+    "pair": "LABUSDT",
+    "timestamp": 1777703400000
+  },
+  {
+    "indexPrice": "1.70313488",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0034",
+    "futuresPrice": "1.6974000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00573488",
+    "pair": "LABUSDT",
+    "timestamp": 1777703700000
+  },
+  {
+    "indexPrice": "1.57609745",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0058",
+    "futuresPrice": "1.5670000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00909745",
+    "pair": "LABUSDT",
+    "timestamp": 1777704000000
+  },
+  {
+    "indexPrice": "1.53442810",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0047",
+    "futuresPrice": "1.5417000",
+    "annualizedBasisRate": "",
+    "basis": "0.00727190",
+    "pair": "LABUSDT",
+    "timestamp": 1777704300000
+  },
+  {
+    "indexPrice": "1.45357371",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0011",
+    "futuresPrice": "1.4552000",
+    "annualizedBasisRate": "",
+    "basis": "0.00162629",
+    "pair": "LABUSDT",
+    "timestamp": 1777704600000
+  },
+  {
+    "indexPrice": "1.60274962",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "1.6066000",
+    "annualizedBasisRate": "",
+    "basis": "0.00385038",
+    "pair": "LABUSDT",
+    "timestamp": 1777704900000
+  },
+  {
+    "indexPrice": "1.66677872",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0084",
+    "futuresPrice": "1.6808000",
+    "annualizedBasisRate": "",
+    "basis": "0.01402128",
+    "pair": "LABUSDT",
+    "timestamp": 1777705200000
+  },
+  {
+    "indexPrice": "1.73954526",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0045",
+    "futuresPrice": "1.7473000",
+    "annualizedBasisRate": "",
+    "basis": "0.00775474",
+    "pair": "LABUSDT",
+    "timestamp": 1777705500000
+  },
+  {
+    "indexPrice": "1.55197763",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0010",
+    "futuresPrice": "1.5536000",
+    "annualizedBasisRate": "",
+    "basis": "0.00162237",
+    "pair": "LABUSDT",
+    "timestamp": 1777705800000
+  },
+  {
+    "indexPrice": "1.44489107",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0029",
+    "futuresPrice": "1.4407000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00419107",
+    "pair": "LABUSDT",
+    "timestamp": 1777706100000
+  },
+  {
+    "indexPrice": "1.56743258",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0008",
+    "futuresPrice": "1.5687000",
+    "annualizedBasisRate": "",
+    "basis": "0.00126742",
+    "pair": "LABUSDT",
+    "timestamp": 1777706400000
+  },
+  {
+    "indexPrice": "1.53668923",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0092",
+    "futuresPrice": "1.5226000",
+    "annualizedBasisRate": "",
+    "basis": "-0.01408923",
+    "pair": "LABUSDT",
+    "timestamp": 1777706700000
+  },
+  {
+    "indexPrice": "1.60990184",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0075",
+    "futuresPrice": "1.6220000",
+    "annualizedBasisRate": "",
+    "basis": "0.01209816",
+    "pair": "LABUSDT",
+    "timestamp": 1777707000000
+  },
+  {
+    "indexPrice": "1.65098940",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0046",
+    "futuresPrice": "1.6586000",
+    "annualizedBasisRate": "",
+    "basis": "0.00761060",
+    "pair": "LABUSDT",
+    "timestamp": 1777707300000
+  },
+  {
+    "indexPrice": "1.72290370",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0092",
+    "futuresPrice": "1.7388000",
+    "annualizedBasisRate": "",
+    "basis": "0.01589630",
+    "pair": "LABUSDT",
+    "timestamp": 1777707600000
+  },
+  {
+    "indexPrice": "1.75804635",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0026",
+    "futuresPrice": "1.7626000",
+    "annualizedBasisRate": "",
+    "basis": "0.00455365",
+    "pair": "LABUSDT",
+    "timestamp": 1777707900000
+  },
+  {
+    "indexPrice": "1.75080924",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0078",
+    "futuresPrice": "1.7644000",
+    "annualizedBasisRate": "",
+    "basis": "0.01359076",
+    "pair": "LABUSDT",
+    "timestamp": 1777708200000
+  },
+  {
+    "indexPrice": "1.75720554",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0152",
+    "futuresPrice": "1.7840000",
+    "annualizedBasisRate": "",
+    "basis": "0.02679446",
+    "pair": "LABUSDT",
+    "timestamp": 1777708500000
+  },
+  {
+    "indexPrice": "1.81960998",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0015",
+    "futuresPrice": "1.8223000",
+    "annualizedBasisRate": "",
+    "basis": "0.00269002",
+    "pair": "LABUSDT",
+    "timestamp": 1777708800000
+  },
+  {
+    "indexPrice": "1.88017153",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0046",
+    "futuresPrice": "1.8889000",
+    "annualizedBasisRate": "",
+    "basis": "0.00872847",
+    "pair": "LABUSDT",
+    "timestamp": 1777709100000
+  },
+  {
+    "indexPrice": "1.88455266",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0062",
+    "futuresPrice": "1.8962000",
+    "annualizedBasisRate": "",
+    "basis": "0.01164734",
+    "pair": "LABUSDT",
+    "timestamp": 1777709400000
+  },
+  {
+    "indexPrice": "1.83499141",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0087",
+    "futuresPrice": "1.8191000",
+    "annualizedBasisRate": "",
+    "basis": "-0.01589141",
+    "pair": "LABUSDT",
+    "timestamp": 1777709700000
+  },
+  {
+    "indexPrice": "1.90540830",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0015",
+    "futuresPrice": "1.9083000",
+    "annualizedBasisRate": "",
+    "basis": "0.00289170",
+    "pair": "LABUSDT",
+    "timestamp": 1777710000000
+  },
+  {
+    "indexPrice": "1.89691342",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0068",
+    "futuresPrice": "1.9099000",
+    "annualizedBasisRate": "",
+    "basis": "0.01298658",
+    "pair": "LABUSDT",
+    "timestamp": 1777710300000
+  },
+  {
+    "indexPrice": "1.90756107",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0054",
+    "futuresPrice": "1.9179000",
+    "annualizedBasisRate": "",
+    "basis": "0.01033893",
+    "pair": "LABUSDT",
+    "timestamp": 1777710600000
+  },
+  {
+    "indexPrice": "1.95119217",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0045",
+    "futuresPrice": "1.9600000",
+    "annualizedBasisRate": "",
+    "basis": "0.00880783",
+    "pair": "LABUSDT",
+    "timestamp": 1777710900000
+  },
+  {
+    "indexPrice": "1.79480453",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0011",
+    "futuresPrice": "1.7968000",
+    "annualizedBasisRate": "",
+    "basis": "0.00199547",
+    "pair": "LABUSDT",
+    "timestamp": 1777711200000
+  },
+  {
+    "indexPrice": "1.81208463",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "1.8165000",
+    "annualizedBasisRate": "",
+    "basis": "0.00441537",
+    "pair": "LABUSDT",
+    "timestamp": 1777711500000
+  },
+  {
+    "indexPrice": "1.78786807",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "1.7924000",
+    "annualizedBasisRate": "",
+    "basis": "0.00453193",
+    "pair": "LABUSDT",
+    "timestamp": 1777711800000
+  },
+  {
+    "indexPrice": "1.69523682",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0004",
+    "futuresPrice": "1.6945000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00073682",
+    "pair": "LABUSDT",
+    "timestamp": 1777712100000
+  },
+  {
+    "indexPrice": "1.72025174",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0058",
+    "futuresPrice": "1.7303000",
+    "annualizedBasisRate": "",
+    "basis": "0.01004826",
+    "pair": "LABUSDT",
+    "timestamp": 1777712400000
+  },
+  {
+    "indexPrice": "1.79888610",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0051",
+    "futuresPrice": "1.8081000",
+    "annualizedBasisRate": "",
+    "basis": "0.00921390",
+    "pair": "LABUSDT",
+    "timestamp": 1777712700000
+  },
+  {
+    "indexPrice": "1.83222501",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0070",
+    "futuresPrice": "1.8450000",
+    "annualizedBasisRate": "",
+    "basis": "0.01277499",
+    "pair": "LABUSDT",
+    "timestamp": 1777713000000
+  },
+  {
+    "indexPrice": "1.88003084",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0029",
+    "futuresPrice": "1.8854000",
+    "annualizedBasisRate": "",
+    "basis": "0.00536916",
+    "pair": "LABUSDT",
+    "timestamp": 1777713300000
+  },
+  {
+    "indexPrice": "1.97195985",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0043",
+    "futuresPrice": "1.9805000",
+    "annualizedBasisRate": "",
+    "basis": "0.00854015",
+    "pair": "LABUSDT",
+    "timestamp": 1777713600000
+  },
+  {
+    "indexPrice": "2.03187303",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0052",
+    "futuresPrice": "2.0424000",
+    "annualizedBasisRate": "",
+    "basis": "0.01052697",
+    "pair": "LABUSDT",
+    "timestamp": 1777713900000
+  },
+  {
+    "indexPrice": "2.00499456",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0013",
+    "futuresPrice": "2.0077000",
+    "annualizedBasisRate": "",
+    "basis": "0.00270544",
+    "pair": "LABUSDT",
+    "timestamp": 1777714200000
+  },
+  {
+    "indexPrice": "2.05512334",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0099",
+    "futuresPrice": "2.0755000",
+    "annualizedBasisRate": "",
+    "basis": "0.02037666",
+    "pair": "LABUSDT",
+    "timestamp": 1777714500000
+  },
+  {
+    "indexPrice": "2.04685292",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0020",
+    "futuresPrice": "2.0509000",
+    "annualizedBasisRate": "",
+    "basis": "0.00404708",
+    "pair": "LABUSDT",
+    "timestamp": 1777714800000
+  },
+  {
+    "indexPrice": "2.09380064",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0109",
+    "futuresPrice": "2.1167000",
+    "annualizedBasisRate": "",
+    "basis": "0.02289936",
+    "pair": "LABUSDT",
+    "timestamp": 1777715100000
+  },
+  {
+    "indexPrice": "2.08609531",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0080",
+    "futuresPrice": "2.1027000",
+    "annualizedBasisRate": "",
+    "basis": "0.01660469",
+    "pair": "LABUSDT",
+    "timestamp": 1777715400000
+  },
+  {
+    "indexPrice": "2.00811984",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0075",
+    "futuresPrice": "2.0232000",
+    "annualizedBasisRate": "",
+    "basis": "0.01508016",
+    "pair": "LABUSDT",
+    "timestamp": 1777715700000
+  },
+  {
+    "indexPrice": "2.05774074",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0062",
+    "futuresPrice": "2.0704000",
+    "annualizedBasisRate": "",
+    "basis": "0.01265926",
+    "pair": "LABUSDT",
+    "timestamp": 1777716000000
+  },
+  {
+    "indexPrice": "2.13001738",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0045",
+    "futuresPrice": "2.1395000",
+    "annualizedBasisRate": "",
+    "basis": "0.00948262",
+    "pair": "LABUSDT",
+    "timestamp": 1777716300000
+  },
+  {
+    "indexPrice": "2.07628610",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0099",
+    "futuresPrice": "2.0969000",
+    "annualizedBasisRate": "",
+    "basis": "0.02061390",
+    "pair": "LABUSDT",
+    "timestamp": 1777716600000
+  },
+  {
+    "indexPrice": "2.09915162",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0042",
+    "futuresPrice": "2.1080000",
+    "annualizedBasisRate": "",
+    "basis": "0.00884838",
+    "pair": "LABUSDT",
+    "timestamp": 1777716900000
+  },
+  {
+    "indexPrice": "2.17855325",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0007",
+    "futuresPrice": "2.1800000",
+    "annualizedBasisRate": "",
+    "basis": "0.00144675",
+    "pair": "LABUSDT",
+    "timestamp": 1777717200000
+  },
+  {
+    "indexPrice": "2.15251006",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0020",
+    "futuresPrice": "2.1482000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00431006",
+    "pair": "LABUSDT",
+    "timestamp": 1777717500000
+  },
+  {
+    "indexPrice": "2.14810227",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0052",
+    "futuresPrice": "2.1592000",
+    "annualizedBasisRate": "",
+    "basis": "0.01109773",
+    "pair": "LABUSDT",
+    "timestamp": 1777717800000
+  },
+  {
+    "indexPrice": "2.15849076",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0036",
+    "futuresPrice": "2.1662000",
+    "annualizedBasisRate": "",
+    "basis": "0.00770924",
+    "pair": "LABUSDT",
+    "timestamp": 1777718100000
+  },
+  {
+    "indexPrice": "2.13544133",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0040",
+    "futuresPrice": "2.1440000",
+    "annualizedBasisRate": "",
+    "basis": "0.00855867",
+    "pair": "LABUSDT",
+    "timestamp": 1777718400000
+  },
+  {
+    "indexPrice": "2.11689798",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0054",
+    "futuresPrice": "2.1283000",
+    "annualizedBasisRate": "",
+    "basis": "0.01140202",
+    "pair": "LABUSDT",
+    "timestamp": 1777718700000
+  },
+  {
+    "indexPrice": "2.08040236",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0015",
+    "futuresPrice": "2.0836000",
+    "annualizedBasisRate": "",
+    "basis": "0.00319764",
+    "pair": "LABUSDT",
+    "timestamp": 1777719000000
+  },
+  {
+    "indexPrice": "2.06367819",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0038",
+    "futuresPrice": "2.0716000",
+    "annualizedBasisRate": "",
+    "basis": "0.00792181",
+    "pair": "LABUSDT",
+    "timestamp": 1777719300000
+  },
+  {
+    "indexPrice": "2.12648913",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0061",
+    "futuresPrice": "2.1394000",
+    "annualizedBasisRate": "",
+    "basis": "0.01291087",
+    "pair": "LABUSDT",
+    "timestamp": 1777719600000
+  },
+  {
+    "indexPrice": "2.12185040",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0019",
+    "futuresPrice": "2.1259000",
+    "annualizedBasisRate": "",
+    "basis": "0.00404960",
+    "pair": "LABUSDT",
+    "timestamp": 1777719900000
+  },
+  {
+    "indexPrice": "2.09608840",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0003",
+    "futuresPrice": "2.0967000",
+    "annualizedBasisRate": "",
+    "basis": "0.00061160",
+    "pair": "LABUSDT",
+    "timestamp": 1777720200000
+  },
+  {
+    "indexPrice": "2.09691510",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0030",
+    "futuresPrice": "2.1033000",
+    "annualizedBasisRate": "",
+    "basis": "0.00638490",
+    "pair": "LABUSDT",
+    "timestamp": 1777720500000
+  },
+  {
+    "indexPrice": "2.07682531",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "2.0818000",
+    "annualizedBasisRate": "",
+    "basis": "0.00497469",
+    "pair": "LABUSDT",
+    "timestamp": 1777720800000
+  },
+  {
+    "indexPrice": "2.09200573",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "2.0953000",
+    "annualizedBasisRate": "",
+    "basis": "0.00329427",
+    "pair": "LABUSDT",
+    "timestamp": 1777721100000
+  },
+  {
+    "indexPrice": "2.11437041",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0045",
+    "futuresPrice": "2.1239000",
+    "annualizedBasisRate": "",
+    "basis": "0.00952959",
+    "pair": "LABUSDT",
+    "timestamp": 1777721400000
+  },
+  {
+    "indexPrice": "2.04704573",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0014",
+    "futuresPrice": "2.0441000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00294573",
+    "pair": "LABUSDT",
+    "timestamp": 1777721700000
+  },
+  {
+    "indexPrice": "2.06022751",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0099",
+    "futuresPrice": "2.0806000",
+    "annualizedBasisRate": "",
+    "basis": "0.02037249",
+    "pair": "LABUSDT",
+    "timestamp": 1777722000000
+  },
+  {
+    "indexPrice": "2.14290692",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0073",
+    "futuresPrice": "2.1585000",
+    "annualizedBasisRate": "",
+    "basis": "0.01559308",
+    "pair": "LABUSDT",
+    "timestamp": 1777722300000
+  },
+  {
+    "indexPrice": "2.12781440",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0070",
+    "futuresPrice": "2.1427000",
+    "annualizedBasisRate": "",
+    "basis": "0.01488560",
+    "pair": "LABUSDT",
+    "timestamp": 1777722600000
+  },
+  {
+    "indexPrice": "2.14309859",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0032",
+    "futuresPrice": "2.1500000",
+    "annualizedBasisRate": "",
+    "basis": "0.00690141",
+    "pair": "LABUSDT",
+    "timestamp": 1777722900000
+  },
+  {
+    "indexPrice": "2.12769756",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0047",
+    "futuresPrice": "2.1378000",
+    "annualizedBasisRate": "",
+    "basis": "0.01010244",
+    "pair": "LABUSDT",
+    "timestamp": 1777723200000
+  },
+  {
+    "indexPrice": "2.10606022",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0062",
+    "futuresPrice": "2.1191000",
+    "annualizedBasisRate": "",
+    "basis": "0.01303978",
+    "pair": "LABUSDT",
+    "timestamp": 1777723500000
+  },
+  {
+    "indexPrice": "2.16241378",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0029",
+    "futuresPrice": "2.1686000",
+    "annualizedBasisRate": "",
+    "basis": "0.00618622",
+    "pair": "LABUSDT",
+    "timestamp": 1777723800000
+  },
+  {
+    "indexPrice": "2.19887710",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0029",
+    "futuresPrice": "2.2053000",
+    "annualizedBasisRate": "",
+    "basis": "0.00642290",
+    "pair": "LABUSDT",
+    "timestamp": 1777724100000
+  },
+  {
+    "indexPrice": "2.25777439",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0051",
+    "futuresPrice": "2.2694000",
+    "annualizedBasisRate": "",
+    "basis": "0.01162561",
+    "pair": "LABUSDT",
+    "timestamp": 1777724400000
+  },
+  {
+    "indexPrice": "2.20731348",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0048",
+    "futuresPrice": "2.2178000",
+    "annualizedBasisRate": "",
+    "basis": "0.01048652",
+    "pair": "LABUSDT",
+    "timestamp": 1777724700000
+  },
+  {
+    "indexPrice": "2.21041323",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0066",
+    "futuresPrice": "2.2251000",
+    "annualizedBasisRate": "",
+    "basis": "0.01468677",
+    "pair": "LABUSDT",
+    "timestamp": 1777725000000
+  },
+  {
+    "indexPrice": "2.20667500",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0039",
+    "futuresPrice": "2.2152000",
+    "annualizedBasisRate": "",
+    "basis": "0.00852500",
+    "pair": "LABUSDT",
+    "timestamp": 1777725300000
+  },
+  {
+    "indexPrice": "2.14806467",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0069",
+    "futuresPrice": "2.1628000",
+    "annualizedBasisRate": "",
+    "basis": "0.01473533",
+    "pair": "LABUSDT",
+    "timestamp": 1777725600000
+  },
+  {
+    "indexPrice": "2.16325658",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0042",
+    "futuresPrice": "2.1723000",
+    "annualizedBasisRate": "",
+    "basis": "0.00904342",
+    "pair": "LABUSDT",
+    "timestamp": 1777725900000
+  },
+  {
+    "indexPrice": "2.16337709",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0024",
+    "futuresPrice": "2.1685000",
+    "annualizedBasisRate": "",
+    "basis": "0.00512291",
+    "pair": "LABUSDT",
+    "timestamp": 1777726200000
+  },
+  {
+    "indexPrice": "2.18221729",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0071",
+    "futuresPrice": "2.1978000",
+    "annualizedBasisRate": "",
+    "basis": "0.01558271",
+    "pair": "LABUSDT",
+    "timestamp": 1777726500000
+  },
+  {
+    "indexPrice": "2.14158319",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0027",
+    "futuresPrice": "2.1474000",
+    "annualizedBasisRate": "",
+    "basis": "0.00581681",
+    "pair": "LABUSDT",
+    "timestamp": 1777726800000
+  },
+  {
+    "indexPrice": "2.16248930",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0011",
+    "futuresPrice": "2.1601000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00238930",
+    "pair": "LABUSDT",
+    "timestamp": 1777727100000
+  },
+  {
+    "indexPrice": "2.15059401",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0048",
+    "futuresPrice": "2.1610000",
+    "annualizedBasisRate": "",
+    "basis": "0.01040599",
+    "pair": "LABUSDT",
+    "timestamp": 1777727400000
+  },
+  {
+    "indexPrice": "2.17978991",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0021",
+    "futuresPrice": "2.1843000",
+    "annualizedBasisRate": "",
+    "basis": "0.00451009",
+    "pair": "LABUSDT",
+    "timestamp": 1777727700000
+  },
+  {
+    "indexPrice": "2.17754779",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0006",
+    "futuresPrice": "2.1788000",
+    "annualizedBasisRate": "",
+    "basis": "0.00125221",
+    "pair": "LABUSDT",
+    "timestamp": 1777728000000
+  },
+  {
+    "indexPrice": "2.19974672",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0042",
+    "futuresPrice": "2.2090000",
+    "annualizedBasisRate": "",
+    "basis": "0.00925328",
+    "pair": "LABUSDT",
+    "timestamp": 1777728300000
+  },
+  {
+    "indexPrice": "2.25185806",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0041",
+    "futuresPrice": "2.2612000",
+    "annualizedBasisRate": "",
+    "basis": "0.00934194",
+    "pair": "LABUSDT",
+    "timestamp": 1777728600000
+  },
+  {
+    "indexPrice": "2.22940361",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0057",
+    "futuresPrice": "2.2421000",
+    "annualizedBasisRate": "",
+    "basis": "0.01269639",
+    "pair": "LABUSDT",
+    "timestamp": 1777728900000
+  },
+  {
+    "indexPrice": "2.28442602",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "2.2922000",
+    "annualizedBasisRate": "",
+    "basis": "0.00777398",
+    "pair": "LABUSDT",
+    "timestamp": 1777729200000
+  },
+  {
+    "indexPrice": "2.28352840",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0017",
+    "futuresPrice": "2.2875000",
+    "annualizedBasisRate": "",
+    "basis": "0.00397160",
+    "pair": "LABUSDT",
+    "timestamp": 1777729500000
+  },
+  {
+    "indexPrice": "2.26159020",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0011",
+    "futuresPrice": "2.2641000",
+    "annualizedBasisRate": "",
+    "basis": "0.00250980",
+    "pair": "LABUSDT",
+    "timestamp": 1777729800000
+  },
+  {
+    "indexPrice": "2.25028186",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0044",
+    "futuresPrice": "2.2601000",
+    "annualizedBasisRate": "",
+    "basis": "0.00981814",
+    "pair": "LABUSDT",
+    "timestamp": 1777730100000
+  },
+  {
+    "indexPrice": "2.29030332",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0058",
+    "futuresPrice": "2.3037000",
+    "annualizedBasisRate": "",
+    "basis": "0.01339668",
+    "pair": "LABUSDT",
+    "timestamp": 1777730400000
+  },
+  {
+    "indexPrice": "2.38403587",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0043",
+    "futuresPrice": "2.3942000",
+    "annualizedBasisRate": "",
+    "basis": "0.01016413",
+    "pair": "LABUSDT",
+    "timestamp": 1777730700000
+  },
+  {
+    "indexPrice": "2.33914208",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0039",
+    "futuresPrice": "2.3483000",
+    "annualizedBasisRate": "",
+    "basis": "0.00915792",
+    "pair": "LABUSDT",
+    "timestamp": 1777731000000
+  },
+  {
+    "indexPrice": "2.47441410",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0083",
+    "futuresPrice": "2.4949000",
+    "annualizedBasisRate": "",
+    "basis": "0.02048590",
+    "pair": "LABUSDT",
+    "timestamp": 1777731300000
+  },
+  {
+    "indexPrice": "2.65129929",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0064",
+    "futuresPrice": "2.6684000",
+    "annualizedBasisRate": "",
+    "basis": "0.01710071",
+    "pair": "LABUSDT",
+    "timestamp": 1777731600000
+  },
+  {
+    "indexPrice": "2.67652124",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0078",
+    "futuresPrice": "2.6974000",
+    "annualizedBasisRate": "",
+    "basis": "0.02087876",
+    "pair": "LABUSDT",
+    "timestamp": 1777731900000
+  },
+  {
+    "indexPrice": "2.60827014",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0077",
+    "futuresPrice": "2.6283000",
+    "annualizedBasisRate": "",
+    "basis": "0.02002986",
+    "pair": "LABUSDT",
+    "timestamp": 1777732200000
+  },
+  {
+    "indexPrice": "2.67864145",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0049",
+    "futuresPrice": "2.6917000",
+    "annualizedBasisRate": "",
+    "basis": "0.01305855",
+    "pair": "LABUSDT",
+    "timestamp": 1777732500000
+  },
+  {
+    "indexPrice": "2.65785171",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0037",
+    "futuresPrice": "2.6677000",
+    "annualizedBasisRate": "",
+    "basis": "0.00984829",
+    "pair": "LABUSDT",
+    "timestamp": 1777732800000
+  },
+  {
+    "indexPrice": "2.69280654",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0028",
+    "futuresPrice": "2.7003000",
+    "annualizedBasisRate": "",
+    "basis": "0.00749346",
+    "pair": "LABUSDT",
+    "timestamp": 1777733100000
+  },
+  {
+    "indexPrice": "2.64121662",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0040",
+    "futuresPrice": "2.6518000",
+    "annualizedBasisRate": "",
+    "basis": "0.01058338",
+    "pair": "LABUSDT",
+    "timestamp": 1777733400000
+  },
+  {
+    "indexPrice": "2.64127145",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0049",
+    "futuresPrice": "2.6543000",
+    "annualizedBasisRate": "",
+    "basis": "0.01302855",
+    "pair": "LABUSDT",
+    "timestamp": 1777733700000
+  },
+  {
+    "indexPrice": "2.72093194",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0007",
+    "futuresPrice": "2.7229000",
+    "annualizedBasisRate": "",
+    "basis": "0.00196806",
+    "pair": "LABUSDT",
+    "timestamp": 1777734000000
+  },
+  {
+    "indexPrice": "2.71481217",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0078",
+    "futuresPrice": "2.7360000",
+    "annualizedBasisRate": "",
+    "basis": "0.02118783",
+    "pair": "LABUSDT",
+    "timestamp": 1777734300000
+  },
+  {
+    "indexPrice": "2.70674984",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0025",
+    "futuresPrice": "2.7135000",
+    "annualizedBasisRate": "",
+    "basis": "0.00675016",
+    "pair": "LABUSDT",
+    "timestamp": 1777734600000
+  },
+  {
+    "indexPrice": "2.71313706",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0041",
+    "futuresPrice": "2.7243000",
+    "annualizedBasisRate": "",
+    "basis": "0.01116294",
+    "pair": "LABUSDT",
+    "timestamp": 1777734900000
+  },
+  {
+    "indexPrice": "2.69461400",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0003",
+    "futuresPrice": "2.6953000",
+    "annualizedBasisRate": "",
+    "basis": "0.00068600",
+    "pair": "LABUSDT",
+    "timestamp": 1777735200000
+  },
+  {
+    "indexPrice": "2.73532700",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0053",
+    "futuresPrice": "2.7499000",
+    "annualizedBasisRate": "",
+    "basis": "0.01457300",
+    "pair": "LABUSDT",
+    "timestamp": 1777735500000
+  },
+  {
+    "indexPrice": "2.82021781",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "2.8300000",
+    "annualizedBasisRate": "",
+    "basis": "0.00978219",
+    "pair": "LABUSDT",
+    "timestamp": 1777735800000
+  },
+  {
+    "indexPrice": "2.85868709",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0046",
+    "futuresPrice": "2.8719000",
+    "annualizedBasisRate": "",
+    "basis": "0.01321291",
+    "pair": "LABUSDT",
+    "timestamp": 1777736100000
+  },
+  {
+    "indexPrice": "2.80169415",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0041",
+    "futuresPrice": "2.8131000",
+    "annualizedBasisRate": "",
+    "basis": "0.01140585",
+    "pair": "LABUSDT",
+    "timestamp": 1777736400000
+  },
+  {
+    "indexPrice": "2.74666809",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0007",
+    "futuresPrice": "2.7487000",
+    "annualizedBasisRate": "",
+    "basis": "0.00203191",
+    "pair": "LABUSDT",
+    "timestamp": 1777736700000
+  },
+  {
+    "indexPrice": "2.81719578",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0036",
+    "futuresPrice": "2.8272000",
+    "annualizedBasisRate": "",
+    "basis": "0.01000422",
+    "pair": "LABUSDT",
+    "timestamp": 1777737000000
+  },
+  {
+    "indexPrice": "2.81975262",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0034",
+    "futuresPrice": "2.8294000",
+    "annualizedBasisRate": "",
+    "basis": "0.00964738",
+    "pair": "LABUSDT",
+    "timestamp": 1777737300000
+  },
+  {
+    "indexPrice": "2.78754721",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0016",
+    "futuresPrice": "2.7921000",
+    "annualizedBasisRate": "",
+    "basis": "0.00455279",
+    "pair": "LABUSDT",
+    "timestamp": 1777737600000
+  },
+  {
+    "indexPrice": "2.90230046",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0088",
+    "futuresPrice": "2.9277000",
+    "annualizedBasisRate": "",
+    "basis": "0.02539954",
+    "pair": "LABUSDT",
+    "timestamp": 1777737900000
+  },
+  {
+    "indexPrice": "2.90513822",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0041",
+    "futuresPrice": "2.9170000",
+    "annualizedBasisRate": "",
+    "basis": "0.01186178",
+    "pair": "LABUSDT",
+    "timestamp": 1777738200000
+  },
+  {
+    "indexPrice": "3.12271817",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0097",
+    "futuresPrice": "3.1531000",
+    "annualizedBasisRate": "",
+    "basis": "0.03038183",
+    "pair": "LABUSDT",
+    "timestamp": 1777738500000
+  },
+  {
+    "indexPrice": "3.23136357",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0166",
+    "futuresPrice": "3.2849000",
+    "annualizedBasisRate": "",
+    "basis": "0.05353643",
+    "pair": "LABUSDT",
+    "timestamp": 1777738800000
+  },
+  {
+    "indexPrice": "3.32134215",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0167",
+    "futuresPrice": "3.3769000",
+    "annualizedBasisRate": "",
+    "basis": "0.05555785",
+    "pair": "LABUSDT",
+    "timestamp": 1777739100000
+  },
+  {
+    "indexPrice": "3.00256847",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0091",
+    "futuresPrice": "3.0300000",
+    "annualizedBasisRate": "",
+    "basis": "0.02743153",
+    "pair": "LABUSDT",
+    "timestamp": 1777739400000
+  },
+  {
+    "indexPrice": "3.06399198",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0051",
+    "futuresPrice": "3.0795000",
+    "annualizedBasisRate": "",
+    "basis": "0.01550802",
+    "pair": "LABUSDT",
+    "timestamp": 1777739700000
+  },
+  {
+    "indexPrice": "3.13868807",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0073",
+    "futuresPrice": "3.1617000",
+    "annualizedBasisRate": "",
+    "basis": "0.02301193",
+    "pair": "LABUSDT",
+    "timestamp": 1777740000000
+  },
+  {
+    "indexPrice": "3.26275783",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0058",
+    "futuresPrice": "3.2818000",
+    "annualizedBasisRate": "",
+    "basis": "0.01904217",
+    "pair": "LABUSDT",
+    "timestamp": 1777740300000
+  },
+  {
+    "indexPrice": "3.27451960",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0076",
+    "futuresPrice": "3.2993000",
+    "annualizedBasisRate": "",
+    "basis": "0.02478040",
+    "pair": "LABUSDT",
+    "timestamp": 1777740600000
+  },
+  {
+    "indexPrice": "3.13569638",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0077",
+    "futuresPrice": "3.1599000",
+    "annualizedBasisRate": "",
+    "basis": "0.02420362",
+    "pair": "LABUSDT",
+    "timestamp": 1777740900000
+  },
+  {
+    "indexPrice": "3.20346359",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0125",
+    "futuresPrice": "3.2436000",
+    "annualizedBasisRate": "",
+    "basis": "0.04013641",
+    "pair": "LABUSDT",
+    "timestamp": 1777741200000
+  },
+  {
+    "indexPrice": "3.09505422",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0006",
+    "futuresPrice": "3.0931000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00195422",
+    "pair": "LABUSDT",
+    "timestamp": 1777741500000
+  },
+  {
+    "indexPrice": "3.01768207",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0172",
+    "futuresPrice": "3.0697000",
+    "annualizedBasisRate": "",
+    "basis": "0.05201793",
+    "pair": "LABUSDT",
+    "timestamp": 1777741800000
+  },
+  {
+    "indexPrice": "3.03366768",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0036",
+    "futuresPrice": "3.0446000",
+    "annualizedBasisRate": "",
+    "basis": "0.01093232",
+    "pair": "LABUSDT",
+    "timestamp": 1777742100000
+  },
+  {
+    "indexPrice": "3.11958335",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0066",
+    "futuresPrice": "3.1402000",
+    "annualizedBasisRate": "",
+    "basis": "0.02061665",
+    "pair": "LABUSDT",
+    "timestamp": 1777742400000
+  },
+  {
+    "indexPrice": "3.13778102",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0097",
+    "futuresPrice": "3.1682000",
+    "annualizedBasisRate": "",
+    "basis": "0.03041898",
+    "pair": "LABUSDT",
+    "timestamp": 1777742700000
+  },
+  {
+    "indexPrice": "3.07545976",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0002",
+    "futuresPrice": "3.0760000",
+    "annualizedBasisRate": "",
+    "basis": "0.00054024",
+    "pair": "LABUSDT",
+    "timestamp": 1777743000000
+  },
+  {
+    "indexPrice": "2.93271366",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0248",
+    "futuresPrice": "2.8600000",
+    "annualizedBasisRate": "",
+    "basis": "-0.07271366",
+    "pair": "LABUSDT",
+    "timestamp": 1777743300000
+  },
+  {
+    "indexPrice": "2.75408802",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0034",
+    "futuresPrice": "2.7447000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00938802",
+    "pair": "LABUSDT",
+    "timestamp": 1777743600000
+  },
+  {
+    "indexPrice": "2.47838820",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0033",
+    "futuresPrice": "2.4866000",
+    "annualizedBasisRate": "",
+    "basis": "0.00821180",
+    "pair": "LABUSDT",
+    "timestamp": 1777743900000
+  },
+  {
+    "indexPrice": "2.66524237",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0033",
+    "futuresPrice": "2.6565000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00874237",
+    "pair": "LABUSDT",
+    "timestamp": 1777744200000
+  },
+  {
+    "indexPrice": "2.47659865",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0019",
+    "futuresPrice": "2.4720000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00459865",
+    "pair": "LABUSDT",
+    "timestamp": 1777744500000
+  },
+  {
+    "indexPrice": "2.23712869",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0084",
+    "futuresPrice": "2.2559000",
+    "annualizedBasisRate": "",
+    "basis": "0.01877131",
+    "pair": "LABUSDT",
+    "timestamp": 1777744800000
+  },
+  {
+    "indexPrice": "2.06684283",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "2.0740000",
+    "annualizedBasisRate": "",
+    "basis": "0.00715717",
+    "pair": "LABUSDT",
+    "timestamp": 1777745100000
+  },
+  {
+    "indexPrice": "2.14522166",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0113",
+    "futuresPrice": "2.1694000",
+    "annualizedBasisRate": "",
+    "basis": "0.02417834",
+    "pair": "LABUSDT",
+    "timestamp": 1777745400000
+  },
+  {
+    "indexPrice": "2.44021330",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0010",
+    "futuresPrice": "2.4427000",
+    "annualizedBasisRate": "",
+    "basis": "0.00248670",
+    "pair": "LABUSDT",
+    "timestamp": 1777745700000
+  },
+  {
+    "indexPrice": "2.20760497",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0035",
+    "futuresPrice": "2.2153000",
+    "annualizedBasisRate": "",
+    "basis": "0.00769503",
+    "pair": "LABUSDT",
+    "timestamp": 1777746000000
+  },
+  {
+    "indexPrice": "1.88823427",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0088",
+    "futuresPrice": "1.8717000",
+    "annualizedBasisRate": "",
+    "basis": "-0.01653427",
+    "pair": "LABUSDT",
+    "timestamp": 1777746300000
+  },
+  {
+    "indexPrice": "1.88282103",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0090",
+    "futuresPrice": "1.8998000",
+    "annualizedBasisRate": "",
+    "basis": "0.01697897",
+    "pair": "LABUSDT",
+    "timestamp": 1777746600000
+  },
+  {
+    "indexPrice": "1.81560059",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0048",
+    "futuresPrice": "1.8069000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00870059",
+    "pair": "LABUSDT",
+    "timestamp": 1777746900000
+  },
+  {
+    "indexPrice": "1.82218420",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0070",
+    "futuresPrice": "1.8350000",
+    "annualizedBasisRate": "",
+    "basis": "0.01281580",
+    "pair": "LABUSDT",
+    "timestamp": 1777747200000
+  },
+  {
+    "indexPrice": "1.63005366",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0002",
+    "futuresPrice": "1.6298000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00025366",
+    "pair": "LABUSDT",
+    "timestamp": 1777747500000
+  },
+  {
+    "indexPrice": "1.68312196",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0008",
+    "futuresPrice": "1.6844000",
+    "annualizedBasisRate": "",
+    "basis": "0.00127804",
+    "pair": "LABUSDT",
+    "timestamp": 1777747800000
+  },
+  {
+    "indexPrice": "1.67814232",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0106",
+    "futuresPrice": "1.6960000",
+    "annualizedBasisRate": "",
+    "basis": "0.01785768",
+    "pair": "LABUSDT",
+    "timestamp": 1777748100000
+  },
+  {
+    "indexPrice": "1.76913321",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0109",
+    "futuresPrice": "1.7885000",
+    "annualizedBasisRate": "",
+    "basis": "0.01936679",
+    "pair": "LABUSDT",
+    "timestamp": 1777748400000
+  },
+  {
+    "indexPrice": "1.88343730",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0108",
+    "futuresPrice": "1.9037000",
+    "annualizedBasisRate": "",
+    "basis": "0.02026270",
+    "pair": "LABUSDT",
+    "timestamp": 1777748700000
+  },
+  {
+    "indexPrice": "1.92542328",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0135",
+    "futuresPrice": "1.9515000",
+    "annualizedBasisRate": "",
+    "basis": "0.02607672",
+    "pair": "LABUSDT",
+    "timestamp": 1777749000000
+  },
+  {
+    "indexPrice": "1.77068922",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0013",
+    "futuresPrice": "1.7684000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00228922",
+    "pair": "LABUSDT",
+    "timestamp": 1777749300000
+  },
+  {
+    "indexPrice": "1.67214506",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0138",
+    "futuresPrice": "1.6952000",
+    "annualizedBasisRate": "",
+    "basis": "0.02305494",
+    "pair": "LABUSDT",
+    "timestamp": 1777749600000
+  },
+  {
+    "indexPrice": "1.85498835",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0080",
+    "futuresPrice": "1.8699000",
+    "annualizedBasisRate": "",
+    "basis": "0.01491165",
+    "pair": "LABUSDT",
+    "timestamp": 1777749900000
+  },
+  {
+    "indexPrice": "1.69216191",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0132",
+    "futuresPrice": "1.7145000",
+    "annualizedBasisRate": "",
+    "basis": "0.02233809",
+    "pair": "LABUSDT",
+    "timestamp": 1777750200000
+  },
+  {
+    "indexPrice": "1.74390880",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0116",
+    "futuresPrice": "1.7642000",
+    "annualizedBasisRate": "",
+    "basis": "0.02029120",
+    "pair": "LABUSDT",
+    "timestamp": 1777750500000
+  },
+  {
+    "indexPrice": "1.75662482",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0252",
+    "futuresPrice": "1.8009000",
+    "annualizedBasisRate": "",
+    "basis": "0.04427518",
+    "pair": "LABUSDT",
+    "timestamp": 1777750800000
+  },
+  {
+    "indexPrice": "1.87297434",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0248",
+    "futuresPrice": "1.9194000",
+    "annualizedBasisRate": "",
+    "basis": "0.04642566",
+    "pair": "LABUSDT",
+    "timestamp": 1777751100000
+  },
+  {
+    "indexPrice": "1.91665869",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0230",
+    "futuresPrice": "1.9607000",
+    "annualizedBasisRate": "",
+    "basis": "0.04404131",
+    "pair": "LABUSDT",
+    "timestamp": 1777751400000
+  },
+  {
+    "indexPrice": "2.03043546",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0241",
+    "futuresPrice": "2.0793000",
+    "annualizedBasisRate": "",
+    "basis": "0.04886454",
+    "pair": "LABUSDT",
+    "timestamp": 1777751700000
+  },
+  {
+    "indexPrice": "2.11065016",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0177",
+    "futuresPrice": "2.1480000",
+    "annualizedBasisRate": "",
+    "basis": "0.03734984",
+    "pair": "LABUSDT",
+    "timestamp": 1777752000000
+  },
+  {
+    "indexPrice": "2.12643588",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0154",
+    "futuresPrice": "2.1592000",
+    "annualizedBasisRate": "",
+    "basis": "0.03276412",
+    "pair": "LABUSDT",
+    "timestamp": 1777752300000
+  },
+  {
+    "indexPrice": "2.15801099",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0091",
+    "futuresPrice": "2.1776000",
+    "annualizedBasisRate": "",
+    "basis": "0.01958901",
+    "pair": "LABUSDT",
+    "timestamp": 1777752600000
+  },
+  {
+    "indexPrice": "2.09638741",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0054",
+    "futuresPrice": "2.1078000",
+    "annualizedBasisRate": "",
+    "basis": "0.01141259",
+    "pair": "LABUSDT",
+    "timestamp": 1777752900000
+  },
+  {
+    "indexPrice": "2.15911652",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0101",
+    "futuresPrice": "2.1809000",
+    "annualizedBasisRate": "",
+    "basis": "0.02178348",
+    "pair": "LABUSDT",
+    "timestamp": 1777753200000
+  },
+  {
+    "indexPrice": "2.22079765",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0056",
+    "futuresPrice": "2.2333000",
+    "annualizedBasisRate": "",
+    "basis": "0.01250235",
+    "pair": "LABUSDT",
+    "timestamp": 1777753500000
+  },
+  {
+    "indexPrice": "2.36524303",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0182",
+    "futuresPrice": "2.4082000",
+    "annualizedBasisRate": "",
+    "basis": "0.04295697",
+    "pair": "LABUSDT",
+    "timestamp": 1777753800000
+  },
+  {
+    "indexPrice": "2.47329946",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0089",
+    "futuresPrice": "2.4952000",
+    "annualizedBasisRate": "",
+    "basis": "0.02190054",
+    "pair": "LABUSDT",
+    "timestamp": 1777754100000
+  },
+  {
+    "indexPrice": "2.47715867",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0100",
+    "futuresPrice": "2.5019000",
+    "annualizedBasisRate": "",
+    "basis": "0.02474133",
+    "pair": "LABUSDT",
+    "timestamp": 1777754400000
+  },
+  {
+    "indexPrice": "2.70130274",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0123",
+    "futuresPrice": "2.7345000",
+    "annualizedBasisRate": "",
+    "basis": "0.03319726",
+    "pair": "LABUSDT",
+    "timestamp": 1777754700000
+  },
+  {
+    "indexPrice": "2.71481739",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0009",
+    "futuresPrice": "2.7123000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00251739",
+    "pair": "LABUSDT",
+    "timestamp": 1777755000000
+  },
+  {
+    "indexPrice": "2.61188385",
+    "contractType": "PERPETUAL",
+    "basisRate": "-0.0018",
+    "futuresPrice": "2.6071000",
+    "annualizedBasisRate": "",
+    "basis": "-0.00478385",
+    "pair": "LABUSDT",
+    "timestamp": 1777755300000
+  },
+  {
+    "indexPrice": "2.57956569",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0100",
+    "futuresPrice": "2.6054000",
+    "annualizedBasisRate": "",
+    "basis": "0.02583431",
+    "pair": "LABUSDT",
+    "timestamp": 1777755600000
+  },
+  {
+    "indexPrice": "2.79768744",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0098",
+    "futuresPrice": "2.8250000",
+    "annualizedBasisRate": "",
+    "basis": "0.02731256",
+    "pair": "LABUSDT",
+    "timestamp": 1777755900000
+  },
+  {
+    "indexPrice": "2.77635376",
+    "contractType": "PERPETUAL",
+    "basisRate": "0.0099",
+    "futuresPrice": "2.8038000",
+    "annualizedBasisRate": "",
+    "basis": "0.02744624",
+    "pair": "LABUSDT",
+    "timestamp": 1777756200000
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "r6_pump_high_liq_only_long",
+  "expected_trades_per_day": 1.2,
+  "expected_trades_per_day_basis": "Reserved6 channel emits ~180s extreme-move alerts; with high-liquidity gate (top quartile) and long-only side, estimated ~35-40 triggers per 30-day window based on R6's 35 entry archetypes baseline density and ~50% high-liq pass rate, yielding ~1.2/day.",
+  "regime_sensitivity": {
+    "best_in": [
+      "BTC trend-up days with broad alt participation",
+      "periods of negative funding on majors (short squeeze fuel)",
+      "post-crash V-recovery sessions where R6 fires on the rebound leg"
+    ],
+    "worst_in": [
+      "sustained BTC downtrend where R6 'extreme moves' are crash continuations not reversals",
+      "low-vol consolidation weeks (R6 barely fires, surviving fires are noise)",
+      "high-funding-positive regimes (long-side edge compressed by funding cost)"
+    ],
+    "explanation": "R6 long with only a liquidity gate has no directional micro-filter, so it inherits raw channel bias. Reserved6 historically skews short-favorable (180s 8-15% moves are usually crashes), so a long-only variant will be regime-fragile and only shine when the broader tape supports mean-reversion or continuation-up."
+  },
+  "live_readiness_caveats": [
+    "High-liquidity bucket still includes mid-caps with 5-15bps slippage on market entry — assume 0.20% round-trip cost floor, not the backtest's frictionless fill.",
+    "Devil's warning is load-bearing: with only liquidity_bucket=high as the novel_dim, lift vs plain R6/long baseline must exceed +0.05 or this is a silent-fallthrough duplicate (R1 bug echo) — kill on first weekly review if delta is inside noise.",
+    "R6 alerts cluster in time (multiple symbols firing within minutes during market-wide moves) — expect concurrent positions and size each entry at 5% not 10% to keep aggregate risk bounded."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "lift_vs_r6_long_baseline (rolling 7d)",
+      "alert_threshold": "<+0.05",
+      "rationale": "This archetype's ENTIRE thesis is that high-liquidity gating adds edge over raw R6/long. If lift collapses to baseline, the filter is cosmetic and the strategy has no reason to exist separately."
+    },
+    {
+      "metric": "trades_per_day actual vs predicted (1.2)",
+      "alert_threshold": "<0.5 or >3.0 sustained 5d",
+      "rationale": "Under-firing means liquidity bucket definition drifted (universe changed); over-firing means the filter is too loose and you're trading raw R6 noise."
+    },
+    {
+      "metric": "median_trade_pct (live, capped at TP/SL)",
+      "alert_threshold": "flips negative for >3 consecutive days",
+      "rationale": "R6 long is structurally fighting channel bias; once the median goes red the asymmetric TP/SL trap from E126 paper repeats — left tail will drain account before mean recovers."
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">6",
+      "rationale": "Win rate on R6 long is expected ~55-60%; a 6-loss streak is a 1-in-100 event and signals regime has flipped against the long bias."
+    },
+    {
+      "metric": "fill_rate on high-liq symbols at signal+1s",
+      "alert_threshold": "<85%",
+      "rationale": "R6 fires on already-extreme 180s moves; if fills at +1s are missing, you're chasing and the backtest entry price is fiction."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling Sharpe < 0 AND lift_vs_r6_baseline < +0.03",
+      "rationale": "Confirms both absolute drawdown and the specific filter-edge thesis have failed simultaneously — no path to recovery without re-derivation."
+    },
+    {
+      "condition": "Cumulative paper-shadow PnL < -8% on $1000 over any 14-day window",
+      "rationale": "Mirrors the E126 compounding trap: asymmetric TP/SL with left-tail blindness drained -13.5% in R2; -8% is the early-exit line before unrecoverable damage."
+    },
+    {
+      "condition": "liquidity_bucket=high universe shrinks <30 symbols (Binance delisting wave or volume collapse)",
+      "rationale": "The filter's statistical basis disappears; remaining symbols are not the same population the archetype was scored on."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 9.0,
+  "expected_max_dd_basis": "Anchored to E126's observed -13.5% compounding loss as the worst-case sibling (asymmetric TP/SL, long-side, similar trigger density); liquidity gate should reduce slip-driven tail by ~30%, projecting ~9% max DD over a 30-day paper window.",
+  "compare_to_existing": "E051 pc_high_liquidity_long (best=+0.347, lift=+0.427, trig=2157) — same filter philosophy (liquidity-only gate, long side) but on pricechange channel where long bias is supported; E211 is the R6-channel sibling and should be triangulated against E051 weekly. If E211 lift sits >0.10 below E051's, the R6 channel is the bottleneck not the filter.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 42.51
+}

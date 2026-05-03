@@ -1,0 +1,18 @@
+{
+  "expanded_dir": "H:\\data\\bwe\\v6\\runs\\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115\\llm_round_notes\\deep_round1_autoresearch_expanded_20260426_134801",
+  "source_run": "H:\\data\\bwe\\v6\\runs\\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115",
+  "table_rows": {
+    "ablation_matrix": 223,
+    "cluster_rep_top": 300,
+    "combo": 223,
+    "discovery": 80,
+    "entry_reuse": 103,
+    "exit_reuse": 68,
+    "high_conf_cluster_rep_top": 300,
+    "neighbor": 1340,
+    "risk_register": 5,
+    "sample_tier_summary": 4,
+    "side_timing_summary": 10
+  },
+  "true_deep_dir": "H:\\data\\bwe\\v6\\runs\\bwe_complete_strategy_v6_max_alpha_gpu_fused_strong_20260426_115115\\llm_round_notes\\deep_round1_true_llm_20260426_140354"
+}

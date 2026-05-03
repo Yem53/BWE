@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "basis_curvature_pump_short",
+  "expected_trades_per_day": 2.8,
+  "expected_trades_per_day_basis": "pricechange channel emits ~120 events/day; basis_rate>=0.001 AND premium_bps>=20 AND move_pct>=3 is a triple-conjunction gate — empirically ~2-3% of pricechange pumps satisfy all three simultaneously (basis dislocation requires funding-cycle stress + active perp premium + meaningful move), yielding ~2.8 triggers/day before symbol/cooldown dedup.",
+  "regime_sensitivity": {
+    "best_in": [
+      "funding-rate divergence regimes (basis_rate above session 90th percentile)",
+      "retail-driven altcoin pump-and-fade days where perp leads spot by >20bps",
+      "high-OI symbols where premium decay is mechanically forced by funding settlement"
+    ],
+    "worst_in": [
+      "BTC-led structural rallies where basis stays stretched for hours (no mean-reversion)",
+      "low-volume periods where premium_bps>=20 reflects thin book rather than real dislocation",
+      "pre-funding-flip windows where basis is about to invert and short pays funding"
+    ],
+    "explanation": "The thesis is perp-spot dislocation fade: when basis AND premium are simultaneously extreme on a pump, the perp is mechanically overpriced relative to spot and funding pressure should compress the gap. This works in mean-reverting altcoin pumps but fails when macro flow keeps basis stretched (BTC bull legs) or when the basis signal is noise from illiquidity rather than real positioning."
+  },
+  "live_readiness_caveats": [
+    "Basis_rate and premium_bps must be computed from the SAME 1-minute bar as the trigger — staleness >30s will cause entries after the dislocation has already collapsed (the edge decays in seconds, not minutes).",
+    "Symbol liquidity filter is mandatory: premium_bps>=20 on micro-caps (top-200 by volume) reflects book thinness, not real dislocation — restrict to top-50 perp pairs by 24h volume to avoid false positives.",
+    "Funding settlement windows (00:00/08:00/16:00 UTC ±5min) should be EXCLUDED — basis collapses mechanically at those times regardless of strategy thesis, contaminating attribution."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "Spearman(basis_rate, premium_bps) on triggered events, rolling 7-day",
+      "alert_threshold": ">=0.85",
+      "rationale": "Synthesizer flagged this — if the two filter dimensions become collinear, the 'joint signal' collapses to a single-factor trigger and the archetype is a duplicate of premium-fade shorts (E-class baseline). Below 0.85 confirms genuine joint novelty."
+    },
+    {
+      "metric": "Median time-to-mean-reversion (seconds from entry until basis_rate returns to <0.0005)",
+      "alert_threshold": ">300s sustained 5-day median",
+      "rationale": "The thesis depends on mechanical funding-driven compression. If the half-life stretches beyond 5 minutes, the perp dislocation is being absorbed by sustained directional flow, not mean-reversion — edge has decayed."
+    },
+    {
+      "metric": "Live trades/day vs predicted 2.8",
+      "alert_threshold": "<1.0 or >6.0 over 5-day window",
+      "rationale": "Triple-conjunction filters are notoriously brittle to data-distribution drift. Frequency drift in either direction signals filter calibration is off (drift up = thresholds too loose post-regime-shift; drift down = market structure changed and basis dislocations are no longer triggering)."
+    },
+    {
+      "metric": "Realized fill slippage (bps) vs backtest assumption",
+      "alert_threshold": ">15 bps median adverse",
+      "rationale": "Shorts on pumps face borrow availability + adverse-selection in maker book. If slippage exceeds backtest by >15bps, the bounded mean-reversion edge (likely 30-50bps gross) is half-erased before exit kernel fires."
+    },
+    {
+      "metric": "Concurrent open positions (same archetype, different symbols)",
+      "alert_threshold": ">3 simultaneous",
+      "rationale": "Basis dislocations cluster across correlated alts during sector pumps — a 'safe' diversified short can become a single concentrated bet on funding-rate compression failing. Cap exposure to avoid tail correlation."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling mean trade return flips negative AND basis_rate-to-mean-reversion median half-life >300s for 5 consecutive days",
+      "rationale": "Joint condition isolates regime change (mean-reversion thesis broken) from noise. Either alone is recoverable; both together means perp-spot mechanics have shifted (likely sustained directional bid) and the archetype's core thesis is invalidated."
+    },
+    {
+      "condition": "Maximum drawdown on paper account exceeds 8% within first 14 days",
+      "rationale": "R2's E126 lesson: asymmetric short trades can compound surprisingly fast even with positive backtest score. 8% on $1000 ($80) is 1.6× the 5% per-trade sizing cap, indicating multiple back-to-back losers — symmetric geometry claim from synthesizer is failing in live."
+    },
+    {
+      "condition": "Realized win-rate drops below 55% over 30 trades AND median winner < median loser in absolute terms",
+      "rationale": "Mean-reversion shorts must win frequently with bounded gains; if win-rate degrades while loss magnitude grows, the geometry has flipped from the synthesizer's 'naturally symmetric' assumption to the E126-class trap (rare but catastrophic SL hits)."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 6.5,
+  "expected_max_dd_basis": "At 2.8 trades/day × 30 days = ~84 trades, with synthesizer-claimed symmetric geometry and 5% sizing, worst-case 4-5 consecutive losers at ~1.5% each compounds to ~6-7% — adjusted upward from a naive 5% to account for short-side adverse-selection and basis-thesis regime risk highlighted in worst_in regimes.",
+  "compare_to_existing": "E126 pc_pump_taker_buy_extreme_long (inverse side, same channel, same pump-context) — triangulate by checking whether E213's short triggers cluster on the SAME events where E126 longs would have fired; if overlap >40%, this is a contrarian fade of E126's signal and should be paper-traded as a hedged pair to expose true edge separation rather than a standalone short.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 54.59
+}

@@ -1,0 +1,4 @@
+﻿PID=329008
+OUT=H:\BWE\20_CODE\Autoresearch\.codex_runs\debate_20260426_211606.out.log
+ERR=H:\BWE\20_CODE\Autoresearch\.codex_runs\debate_20260426_211606.err.log
+START=2026-04-26T21:16:06.4096919-04:00

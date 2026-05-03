@@ -1,0 +1,70 @@
+{
+  "archetype_ref": "cc_three_signal_funding_neutral_long",
+  "expected_trades_per_day": 2.0,
+  "expected_trades_per_day_basis": "Synthesizer flagged ~60 triggers in the data window; assuming the standard 30-day window that's ~2.0/day, but the funding-neutral + taker-buy + high-liquidity gates can compress this to ~1/day in trending regimes.",
+  "regime_sensitivity": {
+    "best_in": [
+      "funding rate hovering in [-0.01%, +0.01%] (neutral perpetual carry)",
+      "BTC realized vol in mid-band (30-60% annualized)",
+      "high-liquidity majors (BTC/ETH/SOL/BNB and top-10 alts) when taker-buy ratio is genuinely elevated, not just spoofed"
+    ],
+    "worst_in": [
+      "strongly negative funding regimes (crowded short squeezes already priced in — this filter excludes them by design, so coverage drops to zero)",
+      "extreme funding extremes (>+0.05% or <-0.05%) where the funding-neutral gate kills all entries",
+      "low-liquidity / micro-cap symbols where taker_buy_ratio_5m is noisy and easily manipulated"
+    ],
+    "explanation": "The funding-neutral gate is the defining feature: it deliberately excludes the asymmetric-payoff regime that produced the E126 paper-trading -13.5% trap, but it also means coverage collapses whenever the market enters a strong directional funding regime. Expect long flat stretches punctuated by clusters of trades when funding mean-reverts through zero."
+  },
+  "live_readiness_caveats": [
+    "Three-channel alignment requirement means signals are SPARSE — expect 0-trade days for 30-50% of the paper window; do not panic-tune after a quiet week.",
+    "Funding rate is sampled at 8h Binance epochs but archetype reads it as a continuous gate — verify the loop uses the most-recent funding snapshot at signal time, not the next epoch's value (look-ahead risk).",
+    "taker_buy_ratio_5m=0.60 threshold on high-liquidity symbols is common during normal up-drift; the edge depends on the JOINT condition with three-channel alignment, so single-condition slippage analysis will mislead."
+  ],
+  "monitoring_metrics": [
+    {
+      "metric": "trades_per_day_7d_rolling",
+      "alert_threshold": "<0.3 or >5.0",
+      "rationale": "Synthesizer estimated ~2/day; sustained drift outside this band means either the funding-neutral regime has vanished (under) or a filter degraded and is letting through non-aligned signals (over)."
+    },
+    {
+      "metric": "funding_rate_at_entry_distribution",
+      "alert_threshold": "any entry with |funding| > 0.0001 (10bps)",
+      "rationale": "This is the defining gate. Any leakage means the entry filter is broken and the archetype is silently mutating into a generic long, reintroducing the E126 trap risk."
+    },
+    {
+      "metric": "median_trade_pct_live_vs_backtest",
+      "alert_threshold": "live_median < 0.5 * backtest_median for >30 trades",
+      "rationale": "Cross-channel alignment is fragile to timestamp drift across the three Telegram channels; significant median shrinkage suggests channel-clock misalignment is causing late entries."
+    },
+    {
+      "metric": "max_consecutive_losses",
+      "alert_threshold": ">5",
+      "rationale": "With ~60 total triggers, a 5-loss streak is ~8% of sample — unusual for a funding-neutral edge and would invalidate the 'low trap risk' synthesizer claim."
+    },
+    {
+      "metric": "fill_rate_on_high_liquidity_symbols",
+      "alert_threshold": "<95%",
+      "rationale": "Filter explicitly requires liquidity_bucket=high, so fills should be near-perfect; anything lower means the liquidity classifier is stale."
+    }
+  ],
+  "stop_trading_triggers": [
+    {
+      "condition": "7-day rolling Sharpe < 0 AND >=10 trades observed",
+      "rationale": "With only ~60 expected triggers per 30 days, 10 trades is a meaningful sample; sustained negative Sharpe means the funding-neutral premise (mean-reversion edge in the neutral-carry regime) has broken."
+    },
+    {
+      "condition": "Two consecutive funding-rate-anomaly entries (|funding|>0.0001 at entry time)",
+      "rationale": "Indicates the gate has failed at the data layer — strategy is no longer the archetype the user approved and must halt before it morphs into an unguarded long."
+    },
+    {
+      "condition": "Live cumulative return < -3% on $1000 paper account (i.e. -$30) within first 30 trades",
+      "rationale": "E126 trap precedent: paper compounded to -13.5% from a 'positive' backtest; killing at -3% caps damage well before that scenario can repeat, given the explicit low-trap-risk claim."
+    }
+  ],
+  "expected_max_dd_pct_paper_window": 4.0,
+  "expected_max_dd_basis": "Funding-neutral gate excludes the asymmetric-TP/SL regime that drove E126's -13.5% paper DD; with sparse trades (~60) and high-liquidity-only execution, expected worst-case cluster of 3-4 consecutive losses at 5-10% sizing implies ~3-5% account DD.",
+  "compare_to_existing": "Closest analogue is E051 pc_high_liquidity_long (best=+0.347, trig=2157) — same liquidity gate and long bias, but E051 lacks the funding-neutral and three-channel alignment filters. Expect this archetype to be a much-lower-frequency, lower-DD cousin of E051; if their daily PnL correlation in paper-shadow is >0.7, the funding+cross-channel filters are not adding orthogonal edge and the archetype should be deprecated in favor of E051.",
+  "_role": "behavior_annotator",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 49.62
+}

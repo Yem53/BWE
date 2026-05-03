@@ -1,0 +1,159 @@
+{
+  "summary": "3 of 7 proposals contain novel dimensions that will fall through the filter parser (listing_age_days, marketcap_bucket, volume_pct_top_decile, oi_pct_top_decile are not in SUPPORTED_FIELDS), collapsing those archetypes to near-existing baselines; 2 viable proposals clear the trigger bar; 2 are trigger-tight and unlikely to survive statistical screening.",
+  "analyses": [
+    {
+      "archetype_ref": "pc_pump_oversold_bounce_taker_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E126",
+        "E064",
+        "E141",
+        "E149"
+      ],
+      "distinctness_notes": "E126 and E064 both combine event_type=pump with taker_buy_ratio thresholds but carry no prior-day context; day_change_pct<=-5 as an oversold-context gate is not present in any of the 201 existing entry archetypes and is orthogonal to all pump+taker variants tested in E141–E150.",
+      "expected_triggers_30d": 430,
+      "triggers_estimate_method": "Anchor to E126 (pump + taker>=0.6 → 3443 triggers). day_change_pct<=-5 filters to events where the asset is already down 5%+ on the day; crypto altcoins meet that threshold on roughly 12–15% of all event-days across the mixed-period dataset → 3443 × 0.125 ≈ 430 triggers.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Fixed TP/SL (X001) and breakeven (X003-class) both viable at this trigger volume; multi_tp feasible but marginal; trail only if forward-return distribution is right-skewed."
+    },
+    {
+      "archetype_ref": "oi_pump_new_listing_taker_long",
+      "distinct": false,
+      "distinct_from_existing_ids": [
+        "E126"
+      ],
+      "distinctness_notes": "listing_age_days has never appeared in any of the 523 existing archetypes, which is the primary signal it is absent from SUPPORTED_FIELDS. When it falls through the parser, the archetype reduces to oi_change_pct>=15 + taker_buy_ratio_5m>=0.55 — a parameter delta of E126 (pc_pump_taker_buy_extreme_long) with only the channel differing, which does not constitute structural distinctness.",
+      "expected_triggers_30d": 280,
+      "triggers_estimate_method": "Without listing_age_days filter (fall-through): 1400 OI_Price events × 0.40 (oi_change>=15 pump subset) × 0.50 (taker>=0.55) ≈ 280. With listing_age_days active it would be 280 × 0.15 (new listings fraction) ≈ 42 — but the field is inoperative.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": false,
+      "uncomputable_fields": [
+        "listing_age_days"
+      ],
+      "fall_through_conditions": [
+        "listing_age_days<=180"
+      ],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 3,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Would only be evaluable as a novel archetype if listing_age_days is confirmed in SUPPORTED_FIELDS first; in current state it is a redundant near-duplicate of OI taker longs and should be rejected pending field verification."
+    },
+    {
+      "archetype_ref": "pc_pump_short_squeeze_oi_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E147",
+        "E148"
+      ],
+      "distinctness_notes": "E147 used global_long_ratio_high (long crowding proxy) and E148 used global_short_ratio_high without an OI growth gate; adding oi_change_pct>=10 as a confirmation that new longs are actively entering creates a squeeze-confirmation logic absent from both. The combination is a ≥4-parameter delta from the closest neighbor.",
+      "expected_triggers_30d": 470,
+      "triggers_estimate_method": "E147/E148 each showed ~988 triggers (pump + global_short/long_ratio_high ≈ 20% of ~5000 pricechange events). Adding oi_change_pct>=10 cuts by ~50% (OI growing on roughly half of pump events) → 988 × 0.48 ≈ 475.",
+      "sample_size_verdict": "adequate",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "All five exit families viable at ~470 triggers; breakeven and trail exits are best-motivated by the squeeze narrative (initial squeeze momentum then fade); fixed TP/SL as baseline."
+    },
+    {
+      "archetype_ref": "pc_pump_funding_negative_squeeze_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E154",
+        "E155"
+      ],
+      "distinctness_notes": "E154/E155 targeted the Reserved6 channel and crashed with no_events_for_channel — the funding-negative concept was never executed on pricechange. Negative directional gate (funding<=-0.005) is structurally different from funding_abs_high (magnitude-only), which tests crowding intensity regardless of direction. No existing pricechange archetype uses a signed funding threshold.",
+      "expected_triggers_30d": 115,
+      "triggers_estimate_method": "Anchor to E126 (pump + taker>=0.6 → 3443 triggers). funding<=-0.005 as a signed threshold (shorts paying longs): in the mixed-period dataset funding is negative roughly 8–10% of pump events → 3443 × 0.033 (joint: funding<=-0.005 AND already filtered by taker>=0.6 vs base pump events) estimated as 5000 pump × 0.30 pump_rate × 0.10 funding_neg × 0.35 taker_confirm ≈ 53–115; using midpoint 85 with wider range acknowledged.",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "Tight trigger count favors fixed TP/SL only (X001); multi_tp and trail exit families require >300 triggers for reliable optimization. Recommend pairing with X001 exclusively in first run."
+    },
+    {
+      "archetype_ref": "oi_pump_premium_discount_long",
+      "distinct": true,
+      "distinct_from_existing_ids": [
+        "E181",
+        "E187",
+        "E188"
+      ],
+      "distinctness_notes": "E181 applied premium_diverge as a short-side filter on pricechange; E187/E188 used basis_align/diverge on cross-channel cc_ archetypes. premium_bps<=-10 as a long-entry gate on OI_Price (perp below spot implies real spot demand) is directionally opposite to all tested premium conditions and has not been paired with oi_change_pct>=15 + taker confirmation.",
+      "expected_triggers_30d": 39,
+      "triggers_estimate_method": "1400 OI_Price events × 0.40 (oi_change>=15 subset) = 560 × 0.11 (premium<=-10bps occurs on ~11% of OI pump events; negative premium is uncommon and often fleeting) = 62 × 0.50 (taker>=0.55) ≈ 31–47; midpoint 39.",
+      "sample_size_verdict": "tight",
+      "computable_at_T0": true,
+      "uncomputable_fields": [],
+      "fall_through_conditions": [],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 3,
+      "exit_compatibility": "narrow",
+      "exit_compatibility_notes": "At ~39 triggers only fixed TP/SL (X001) is optimizable with any statistical confidence; all other exit families require more events. Flag for quick-screen only; do not invest multi_tp optimization slots."
+    },
+    {
+      "archetype_ref": "pc_pump_small_cap_volume_surge_long",
+      "distinct": false,
+      "distinct_from_existing_ids": [
+        "E051",
+        "E064",
+        "E126"
+      ],
+      "distinctness_notes": "Both novel dimensions (marketcap_bucket=small and volume_pct_top_decile) are cross-asset percentile rank fields that do not appear in any of the 523 existing archetypes, indicating they are absent from SUPPORTED_FIELDS. With both falling through, the archetype reduces to event_type=pump + taker_buy_ratio_5m>=0.55, which is a parameter delta of E064 (pc_pump_taker_buy_dominant_long, 3619 triggers, score=0.357). Fall-through rate: 2 of 4 conditions = 50%, at the rejection threshold; the 2 falling conditions are the only novel signal, making this structurally equivalent to a baseline.",
+      "expected_triggers_30d": 1800,
+      "triggers_estimate_method": "Without both novel dims: 5000 pricechange × 0.40 pump_rate × 0.55 taker>=0.55 ≈ 1100–1800 (consistent with E064 at 3619 with slightly lower taker threshold). With marketcap_bucket + volume_pct_top_decile active it would be ~1800 × 0.20 × 0.10 ≈ 36 — but both fields are inoperative.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": false,
+      "uncomputable_fields": [
+        "marketcap_bucket",
+        "volume_pct_top_decile"
+      ],
+      "fall_through_conditions": [
+        "marketcap_bucket=small",
+        "volume_pct_top_decile"
+      ],
+      "n_supported_conditions": 2,
+      "n_total_conditions": 4,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Rejected on distinctness grounds; if marketcap_bucket and volume_pct_top_decile are ever confirmed in SUPPORTED_FIELDS, re-evaluate — the tight-trigger version (~36) would be narrow exit only."
+    },
+    {
+      "archetype_ref": "pc_pump_oi_historically_extreme_long",
+      "distinct": false,
+      "distinct_from_existing_ids": [
+        "E051",
+        "E064",
+        "E126"
+      ],
+      "distinctness_notes": "oi_pct_top_decile is a cross-time per-asset historical OI percentile flag that has never appeared in any of the 523 archetypes, indicating it is absent from SUPPORTED_FIELDS. With it falling through, the archetype reduces to event_type=pump + taker_buy_ratio_5m>=0.55 + liquidity_bucket=high — a ≤2-parameter delta of E051 (pc_high_liquidity_long, 2157 triggers, score=0.347). Although the fall-through rate is only 1 of 4 conditions (25%), the one falling condition IS the sole novel dimension, making the archetype a functional duplicate of E051.",
+      "expected_triggers_30d": 1100,
+      "triggers_estimate_method": "Without oi_pct_top_decile: 5000 pricechange × 0.40 pump × 0.55 taker>=0.55 × 0.50 liquidity_bucket=high ≈ 550–1100 (E051 had 2157 on a less restrictive filter, consistent with a 2× reduction for taker gate). With oi_pct_top_decile active it would be ~1100 × 0.10 (top-decile OI fraction) ≈ 110 — but field is inoperative.",
+      "sample_size_verdict": "ample",
+      "computable_at_T0": false,
+      "uncomputable_fields": [
+        "oi_pct_top_decile"
+      ],
+      "fall_through_conditions": [
+        "oi_pct_top_decile"
+      ],
+      "n_supported_conditions": 3,
+      "n_total_conditions": 4,
+      "exit_compatibility": "broad",
+      "exit_compatibility_notes": "Rejected on distinctness grounds due to collapse to E051 equivalent; if oi_pct_top_decile is confirmed in SUPPORTED_FIELDS the tight version (~110) is adequate for fixed TP/SL and breakeven, but not multi_tp."
+    }
+  ],
+  "_role": "quant",
+  "_model": "claude-sonnet-4-6",
+  "_elapsed_s": 160.35
+}

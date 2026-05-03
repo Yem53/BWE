@@ -1,0 +1,20 @@
+{
+  "summary": "Funding-neutral OI pump with extreme taker buying — all novel_dim fields are at-T0 observable (taker_buy_ratio_5m, funding, oi_change_pct), no leakage; concentration and live-overlap with existing pump-long strategy warrant monitoring but not blocking.",
+  "risk_assessments": [
+    {
+      "archetype_ref": "oi_pump_funding_neutral_taker_extreme_long",
+      "leakage_risk": "none",
+      "leakage_notes": "All four novel_dim fields are evaluated at T0: taker_buy_ratio_5m is a trailing 5-minute aggregate (backward-looking), funding is the current funding rate snapshot, and oi_change_pct is the OI burst that defines the signal. No 'forward_*', 'confirm_after_*', or post-T0 suffix detected. Field names are in the SUPPORTED_FIELDS set per the R1 bug fix.",
+      "multitest_inflation_risk": "medium",
+      "live_conflict_risk": "medium",
+      "live_conflict_notes": "Channel=OI_Price, side=long directly overlaps with the user's live BWE_OI_Price_monitor pump-long strategy. The funding-neutral filter (|funding|<=1e-4) plus taker_buy_ratio_5m>=0.65 plus oi_change_pct>=10 will produce a strict subset of triggers that the live system also fires on — same-side same-symbol stacking, not opposing trades. At $1000 capital this is paper-shadow monitoring, not a blocker.",
+      "concentration_risk": "medium",
+      "adversarial_risk": "low",
+      "overall_severity": "caution",
+      "remediation": "Paper-shadow only: tag proposals on OI_Price/long with a 'live_overlap=BWE_OI_Price_pump_long' annotation in the registry so downstream sizing logic can de-duplicate against the live strategy before any capital allocation. Track concurrent-trigger count vs. live signal in the shadow sim; if oi_change_pct>=10 + funding-neutral + taker>=0.65 fires on a narrow symbol set (e.g. >40% of triggers concentrated in 1–2 tickers), demote to 'caution-hold' before promotion. No code change required for the proposal itself."
+    }
+  ],
+  "_role": "risk",
+  "_model": "claude-opus-4-7",
+  "_elapsed_s": 24.43
+}

@@ -1,0 +1,8 @@
+Your message is just the heading — could you clarify what you'd like me to do? A few likely possibilities:
+
+1. **Draft/edit `prompts/role_generator.md`** — write the system prompt for the Hypothesis Generator role in the BWE Autoresearch loop
+2. **Review the existing draft** — you've already written it and want feedback
+3. **Wire it into `bwe_autoresearch/bwe_loop_llm_team.py`** — connect the prompt to the loop runner
+4. **Something else** — pasted as preamble before more instructions
+
+If helpful, I can first read the existing `prompts/role_generator.md` and `bwe_autoresearch/bwe_loop_llm_team.py` to ground my understanding, then ask follow-ups. Want me to do that?
