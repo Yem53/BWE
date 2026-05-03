@@ -1,6 +1,8 @@
 # BWE — Binance Whale Event Trading Research
 
-> **🪟 Setting up on Windows / new machine?** Read [`infrastructure/windows-setup/SETUP_PROMPT.md`](infrastructure/windows-setup/SETUP_PROMPT.md) first. Paste it as your first message to Claude Code on the new machine — it bootstraps everything.
+> **🪟 Setting up on Windows / new machine?** Paste [`MASTER_CONTROL_PROMPT.md`](MASTER_CONTROL_PROMPT.md) (top-level) as your first message to Claude Code on the new machine — it bootstraps everything end-to-end.
+>
+> Older alternative (less complete): [`infrastructure/windows-setup/SETUP_PROMPT.md`](infrastructure/windows-setup/SETUP_PROMPT.md)
 
 > **🛠 Infrastructure overview**: [`infrastructure/README.md`](infrastructure/README.md) — what runs where, geographic constraints (US block on binance fstream), how OKX+Bybit fill the gap.
 
