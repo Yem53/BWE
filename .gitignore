@@ -20,6 +20,12 @@ id_rsa*
 *_dsa
 *_ed25519
 
+# Exception: explicit secrets-private/ dir (user opted to commit; repo MUST stay private)
+!infrastructure/secrets-private/
+!infrastructure/secrets-private/**
+!infrastructure/clashverge/private/
+!infrastructure/clashverge/private/**
+
 # === Huge data dirs (regenerable from collectors) ===
 30_DATA/cache/
 30_DATA/reference/
