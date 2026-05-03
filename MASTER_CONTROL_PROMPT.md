@@ -153,21 +153,26 @@ If `fapi` returns 451, Clash Verge / Tun mode not active. Don't proceed until 20
 
 ---
 
-## 5. .env file (the only secret you must transfer manually)
+## 5. .env + Telegram session — already in repo
 
-Copy `~/.hermes/.env` from your Mac (encrypted USB, 1Password, Bitwarden, signal note-to-self, etc.).
+Repo includes `infrastructure/secrets-private/` with **actual** Mac credentials. One-line copy:
 
 ```powershell
-mkdir $env:USERPROFILE\.hermes -Force
-notepad $env:USERPROFILE\.hermes\.env
-# Paste contents from Mac's ~/.hermes/.env
+# Create .hermes dirs
+mkdir $env:USERPROFILE\.hermes\state -Force
+
+# Copy .env
+copy D:\BWE\infrastructure\secrets-private\hermes.env $env:USERPROFILE\.hermes\.env -Force
+
+# Copy Telegram session (already authenticated, no SMS code needed)
+copy D:\BWE\infrastructure\secrets-private\bwe_matrix_monitor_state.json `
+    $env:USERPROFILE\.hermes\state\bwe_matrix_monitor_state.json -Force
+
+# Verify
+type $env:USERPROFILE\.hermes\.env | Select-String -Pattern "BINANCE|OKX|TELEGRAM" | Select-Object -First 5
 ```
 
-The template is at `D:\BWE\infrastructure\.env.example`. Required keys for collectors:
-- `BWE_TRADE_TEST_BOT_TOKEN`, `BWE_TRADE_TEST_CHAT_ID` (Telegram alerts)
-- `TG_API_ID`, `TG_API_HASH`, `TG_PHONE` (BWE matrix listener)
-- `HTTP_PROXY=http://127.0.0.1:7897` (Clash Verge mixed port)
-- `BINANCE_TESTNET_API_KEY`, `BINANCE_TESTNET_SECRET` (only if running paper-LIVE)
+⚠ **Repo MUST stay private**. If accidentally exposed, rotate all keys per `infrastructure/secrets-private/_WARNING.md`.
 
 ---
 
@@ -199,27 +204,11 @@ mkdir D:\BWE\30_DATA\bwe_logs -Force
 
 ---
 
-## 7. Telegram session (BWE matrix monitor first run)
+## 7. Telegram session — already done (section 5)
 
-Mac's Telegram session file (`bwe_matrix_state.json`) contains a phone-authenticated session token. Either:
+Session file copied from `secrets-private/` in step 5. **No re-auth needed** — same session as Mac.
 
-**Option A: copy from Mac**
-```powershell
-# scp from Mac (if Tailscale / SSH set up)
-scp ye@mac:/Users/ye/.hermes/state/bwe_matrix_monitor_state.json `
-    $env:USERPROFILE\.hermes\state\
-```
-
-**Option B: re-authenticate on Windows** (Telegram allows multiple sessions)
-```powershell
-mkdir $env:USERPROFILE\.hermes\state -Force
-.\runtime-venv\Scripts\python.exe D:\BWE\infrastructure\collectors\bwe_matrix_monitor.py `
-    --interval 1 --heartbeat-seconds 30 `
-    --state $env:USERPROFILE\.hermes\state\bwe_matrix_monitor_state.json `
-    --posts-log D:\BWE\30_DATA\bwe_logs\bwe_matrix_posts.jsonl `
-    --health-log D:\BWE\30_DATA\bwe_logs\bwe_matrix_health.jsonl
-# First run: enter phone code from Telegram SMS, then ctrl+c
-```
+Note: if both Mac and Windows run `bwe_matrix_monitor.py` simultaneously with the same session file, Telegram may invalidate one. Pick **one machine** to be the listener (Mirror mode = Mac listens; Replica mode = pick one).
 
 ---
 
