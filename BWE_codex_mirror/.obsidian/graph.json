@@ -1,0 +1,38 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "colorGroups": [
+    {
+      "query": "tag:#strategy",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "tag:#short",
+      "color": {
+        "a": 1,
+        "rgb": 15742765
+      }
+    },
+    {
+      "query": "tag:#long",
+      "color": {
+        "a": 1,
+        "rgb": 54238
+      }
+    },
+    {
+      "query": "tag:#run",
+      "color": {
+        "a": 1,
+        "rgb": 6656200
+      }
+    }
+  ]
+}

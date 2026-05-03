@@ -1,0 +1,144 @@
+{
+  "portfolio": {
+    "max_concurrent_total": 16,
+    "max_concurrent_per_strategy": 5,
+    "notional_usdt": 100,
+    "scanner_interval_s": 60,
+    "one_position_per_symbol": true,
+    "same_strategy_symbol_cooldown_min": 60,
+    "enable_binance_fallback": true,
+    "fallback_timeout_seconds": 5,
+    "ticker_max_age_ms": 600000
+  },
+  "strategies": [
+    {
+      "strategy_id": "v6_982b322524d6a28283",
+      "label": "PS0_V6_982_ORIG",
+      "side": "long",
+      "trigger": "bwe",
+      "event_type": "pump",
+      "entry_delay_s": 180,
+      "conditions": [
+        {"field": "marketcap", "op": "<=", "threshold": 71000000.0},
+        {"field": "top_ratio", "op": ">=", "threshold": 2.2404000759124756, "max_age_ms": 600000},
+        {"field": "global_ratio", "op": ">=", "threshold": 1.6828899383544922, "max_age_ms": 600000}
+      ],
+      "exit": {"kind": "failed_continuation", "horizon": 240, "sl_pct": 0.05, "failed_check_min": 10, "failed_threshold_fraction_of_sl": 0.35}
+    },
+    {
+      "strategy_id": "v6_d9cf2c20ba340e99e0",
+      "label": "L1_TAKER_TOP_QV",
+      "side": "long",
+      "trigger": "bwe",
+      "event_type": "pump",
+      "entry_delay_s": 180,
+      "conditions": [
+        {"field": "quote_volume_24h", "op": "<=", "threshold": 299412896.0},
+        {"field": "top_ratio", "op": ">=", "threshold": 2.2404000759124756, "max_age_ms": 600000},
+        {"field": "mark_1m_age_ms", "op": "<=", "threshold": 300000}
+      ],
+      "exit": {"kind": "failed_continuation", "horizon": 240, "sl_pct": 0.05, "failed_check_min": 10, "failed_threshold_fraction_of_sl": 0.35}
+    },
+    {
+      "strategy_id": "v6_c39030b4ccb01728ad",
+      "label": "L2_MOVE_TOP_300S",
+      "side": "long",
+      "trigger": "bwe",
+      "event_type": "ANY",
+      "entry_delay_s": 300,
+      "conditions": [
+        {"field": "move_pct", "op": ">=", "threshold": 3.700000047683716},
+        {"field": "top_ratio", "op": ">=", "threshold": 2.2404000759124756, "max_age_ms": 600000},
+        {"field": "mark_1m_age_ms", "op": "<=", "threshold": 600000}
+      ],
+      "exit": {"kind": "failed_continuation", "horizon": 240, "sl_pct": 0.05, "failed_check_min": 10, "failed_threshold_fraction_of_sl": 0.35}
+    },
+    {
+      "strategy_id": "v6_06b895dde0945b26dc",
+      "label": "L3_MOVE7_GLOBAL",
+      "side": "long",
+      "trigger": "bwe",
+      "event_type": "ANY",
+      "entry_delay_s": 30,
+      "conditions": [
+        {"field": "listing_age_days", "op": ">=", "threshold": 193.07305908203125},
+        {"field": "move_pct", "op": ">=", "threshold": 7.0},
+        {"field": "global_ratio", "op": ">=", "threshold": 1.6828899383544922, "max_age_ms": 600000}
+      ],
+      "exit": {"kind": "failed_continuation", "horizon": 240, "sl_pct": 0.05, "failed_check_min": 10, "failed_threshold_fraction_of_sl": 0.35}
+    },
+    {
+      "strategy_id": "v6_86fa63ef06d4bfacc5",
+      "label": "L4_LOW_QV_TOP",
+      "side": "long",
+      "trigger": "bwe",
+      "event_type": "pump",
+      "entry_delay_s": 30,
+      "conditions": [
+        {"field": "quote_volume_24h", "op": "<=", "threshold": 27782064.0},
+        {"field": "top_ratio", "op": ">=", "threshold": 2.2404000759124756, "max_age_ms": 600000}
+      ],
+      "exit": {"kind": "failed_continuation", "horizon": 240, "sl_pct": 0.05, "failed_check_min": 10, "failed_threshold_fraction_of_sl": 0.35}
+    },
+    {
+      "strategy_id": "SHORT_COMBO_417M9",
+      "label": "S1_COMBO_MEAN9",
+      "side": "short",
+      "trigger": "scanner",
+      "entry_delay_s": 0,
+      "conditions": [],
+      "components": [
+        {"label": "C25", "entry": {"trigger": "bwe60", "vol_min": 3.0, "ret60_min": 24, "ret15_min": 10, "upper_wick_min": 0.5, "body_ret_max": -0.5}, "exit": {"kind": "adaptive_trail", "horizon": 120, "arm": 20, "trail": 3, "lock": 0, "sl": 0}},
+        {"label": "C5", "entry": {"trigger": "market", "vol_min": 1.5, "ret60_min": 24, "ret15_min": 6, "upper_wick_min": 0.5, "body_ret_max": 0.0, "taker_max": 0.9}, "exit": {"kind": "adaptive_trail", "horizon": 120, "arm": 20, "trail": 3, "lock": 0, "sl": 0}},
+        {"label": "C153", "entry": {"trigger": "market", "vol_min": 1.5, "ret60_min": 24, "pullback60_max": -2.5, "ret3_max": -1.0}, "exit": {"kind": "adaptive_trail", "horizon": 120, "arm": 20, "trail": 3, "lock": 0, "sl": 0}}
+      ],
+      "exit": {"kind": "component"}
+    },
+    {
+      "strategy_id": "SHORT_COMBO_875M5",
+      "label": "S2_COMBO_FREQ",
+      "side": "short",
+      "trigger": "scanner",
+      "entry_delay_s": 0,
+      "conditions": [],
+      "components": [
+        {"label": "C25", "entry": {"trigger": "bwe60", "vol_min": 3.0, "ret60_min": 24, "ret15_min": 10, "upper_wick_min": 0.5, "body_ret_max": -0.5}, "exit": {"kind": "adaptive_trail", "horizon": 120, "arm": 20, "trail": 3, "lock": 0, "sl": 0}},
+        {"label": "C1", "entry": {"trigger": "market", "vol_min": 3.0, "ret60_min": 24, "ret15_min": 6, "upper_wick_min": 0.5, "body_ret_max": 0.0, "taker_max": 0.9}, "exit": {"kind": "adaptive_trail", "horizon": 120, "arm": 20, "trail": 3, "lock": 0, "sl": 0}},
+        {"label": "C243", "entry": {"trigger": "market", "vol_min": 1.5, "ret60_min": 24, "ret15_min": 6, "upper_wick_min": 0.8, "body_ret_max": -0.5, "top_position_min": 1.3}, "exit": {"kind": "adaptive_trail", "horizon": 240, "arm": 20, "trail": 3, "lock": 0, "sl": 0}},
+        {"label": "C90", "entry": {"trigger": "market", "vol_min": 1.5, "ret60_min": 24, "pullback60_max": -2.5, "ret3_max": -1.0}, "exit": {"kind": "adaptive_trail", "horizon": 240, "arm": 8, "trail": 3, "lock": 8, "sl": 0}}
+      ],
+      "exit": {"kind": "component"}
+    },
+    {
+      "strategy_id": "SHORT_FAILED_WICK_566",
+      "label": "S3_FAILED_WICK",
+      "side": "short",
+      "trigger": "scanner",
+      "entry_delay_s": 0,
+      "conditions": [
+        {"field": "qv_5m_ratio", "op": ">=", "threshold": 1.5},
+        {"field": "ret_60m", "op": ">=", "threshold": 16.0},
+        {"field": "ret_15m", "op": ">=", "threshold": 6.0},
+        {"field": "upper_wick_pct", "op": ">=", "threshold": 0.5},
+        {"field": "body_ret_1m", "op": "<=", "threshold": -0.5},
+        {"field": "oi_chg_60m", "op": ">=", "threshold": 5.0},
+        {"field": "taker_ratio", "op": "<=", "threshold": 0.9}
+      ],
+      "exit": {"kind": "adaptive_trail", "horizon": 240, "arm": 8, "trail": 3, "lock": 8, "sl": 0}
+    },
+    {
+      "strategy_id": "SHORT_PULLBACK_557",
+      "label": "S4_PULLBACK",
+      "side": "short",
+      "trigger": "scanner",
+      "entry_delay_s": 0,
+      "conditions": [
+        {"field": "qv_5m_ratio", "op": ">=", "threshold": 1.5},
+        {"field": "ret_60m", "op": ">=", "threshold": 24.0},
+        {"field": "pullback_from_high_60m", "op": "<=", "threshold": -2.5},
+        {"field": "ret_3m", "op": "<=", "threshold": -1.0}
+      ],
+      "exit": {"kind": "adaptive_trail", "horizon": 120, "arm": 8, "trail": 3, "lock": 8, "sl": 0}
+    }
+  ]
+}
