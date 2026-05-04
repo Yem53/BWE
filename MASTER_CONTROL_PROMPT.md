@@ -128,11 +128,13 @@ Copy-Item D:\BWE\infrastructure\clashverge\private\clash-verge-main.yaml `
 Start-Process "C:\Program Files\Clash Verge\Clash Verge.exe"
 Start-Sleep 8
 
-# 4.5 Enable Tun mode via API (port 9090 default for clashverge ext-controller)
-# OR open GUI → Settings → Tun Mode → ON
+# 4.5 Use Rule mode (NOT Tun mode)
+# Rule mode = clashverge listens on port 7897, scripts use HTTP_PROXY env to route through it.
+# Tun mode is unnecessary here (was tried for binance fstream WS but didn't help — binance blocks all commercial cloud).
+# In Clash Verge GUI → Settings → System Proxy: ON   |   Tun Mode: OFF
 ```
 
-If GUI shows the imported profile but Tun isn't enabled, manually toggle: **Settings → Tun Mode → ON → Restart core**.
+In GUI: open Clash Verge → **Settings → System Proxy → ON, Tun Mode → OFF**. Then **Profiles → activate `LProtonCrypto`**.
 
 ### Verify proxy works
 
@@ -279,6 +281,56 @@ foreach ($itv in '1m','3m','5m','15m','1h') {
 }
 # Repeat similarly for metric / ticker / OKX / Bybit / BWE matrix
 ```
+
+---
+
+## 8.5. 30-day historical backfill (CRITICAL — must run after collectors are stable)
+
+After collectors are running for ~5 min (so DB schema + symbol_meta is populated), run **the backfill orchestrator** to fetch 30 days of historical klines + metric for the entire perp universe (640 symbols). Without this, Windows DB only has data from collector startup time (no history).
+
+```powershell
+# Stop heavy collectors temporarily so backfill has full rate budget
+# (Continuous collectors keep running on real-time data; backfill fills history)
+$env:HTTP_PROXY = "http://127.0.0.1:7897"
+$env:HTTPS_PROXY = "http://127.0.0.1:7897"
+
+# Phase A+B+C orchestrator: BWE syms first, then rest TRADING, then SETTLING
+.\runtime-venv\Scripts\python.exe `
+    D:\BWE\infrastructure\collectors\backfill\backfill_orchestrator.py `
+    --skip-aggtrades `
+    --rate 800 `
+    --days 30 `
+    2>&1 | Tee-Object -FilePath D:\BWE\30_DATA\binance_collectors_runtime\logs\backfill_orchestrator.log
+```
+
+Estimated runtime: **2-3 hours** for full 30-day × 640 syms × 5 intervals (1m / 3m / 5m / 15m / 1h).
+
+The orchestrator is **gap-aware**: if it dies and restarts, it queries DB for existing min/max(open_time_ms) per (symbol, interval) and only fills missing windows. Safe to interrupt + resume.
+
+Watch progress:
+```powershell
+Get-Content D:\BWE\30_DATA\binance_collectors_runtime\logs\backfill_orchestrator.log -Tail 5 -Wait
+# Look for "phase_A_progress" → "phase_B_progress" → "phase_C_progress" → "orchestrator_done"
+```
+
+Verify after done:
+```powershell
+sqlite3 D:\BWE\30_DATA\binance_collectors_runtime\binance_futures_1m.sqlite3 `
+    "SELECT interval, COUNT(DISTINCT symbol), COUNT(*) FROM klines_1m GROUP BY interval"
+# Expect:
+# 1m   | 640 | ~28M rows
+# 3m   | 640 | ~9M rows
+# 5m   | 640 | ~5.5M rows
+# 15m  | 640 | ~1.85M rows
+# 1h   | 640 | ~463k rows
+```
+
+If WAL gets large (>500MB during backfill), stop briefly + checkpoint:
+```powershell
+.\runtime-venv\Scripts\python.exe -c "import sqlite3; c=sqlite3.connect('D:/BWE/30_DATA/binance_collectors_runtime/binance_futures_1m.sqlite3', timeout=120); c.execute('PRAGMA wal_checkpoint(TRUNCATE)').fetchone()"
+```
+
+⚠ **Do NOT** run backfill orchestrator AND continuous kline collectors at full rate simultaneously — total weight would exceed Binance's 2400/min limit and trigger 418 ban. The script's `--rate 800` keeps backfill at safe budget while continuous collectors use the rest.
 
 ---
 
