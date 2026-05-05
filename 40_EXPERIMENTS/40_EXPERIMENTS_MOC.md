@@ -36,6 +36,9 @@ created: 2026-05-02
 - runtime_live/ — paper-LIVE state + logs (跑步中)
 - runtime/ — old kline-mode paper (停了)
 
+### V8 5090 Paper-Shadow
+- [[v8_5090_paper_shadow_20260504_2347/paper_gate_summary|V8 5090 paper gate summary]] — 20 signal-only candidates, no order endpoints.
+
 ### Plans
 - [[round5/plans/2026-04-30-layer-a-v3-plan|Layer A v3 Plan]]
 

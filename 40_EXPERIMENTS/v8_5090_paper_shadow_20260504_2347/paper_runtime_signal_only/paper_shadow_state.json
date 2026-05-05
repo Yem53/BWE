@@ -1,0 +1,14 @@
+{
+  "schema": "bwe_v8_5090_signal_only_paper_state_v1",
+  "run_id": "v8_5090_paper_shadow_20260504_2347",
+  "started_at_local": "2026-05-04T23:49:03-04:00",
+  "status": "queued_signal_only_paper_shadow",
+  "order_endpoints_allowed": false,
+  "open_positions": [],
+  "closed_positions": [],
+  "skip_reasons": {},
+  "historical_replay_generated_at": "2026-05-04T23:53:44-04:00",
+  "historical_replay_trades": 7991,
+  "historical_replay_summary": "paper_shadow_historical_replay_summary.csv",
+  "historical_replay_journal": "paper_runtime_signal_only/historical_replay_journal.csv"
+}

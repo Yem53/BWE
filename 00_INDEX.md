@@ -35,6 +35,7 @@ status: active
 - [[40_EXPERIMENTS/round5/paper_shadow/MORNING_BRIEFING|Morning Briefing]] — 整夜运行总结
 - [[40_EXPERIMENTS/round5/specs/PAPER_BACKTEST_DRIFT_LOG|Paper-Backtest Drift Log]] — 14+ drift 持续追踪
 - [[30_DATA/binance_collectors_runtime/MIGRATION_LOG|Migration Log]] — Mac → T9 迁移记录
+- [[40_EXPERIMENTS/v8_5090_paper_shadow_20260504_2347/paper_gate_summary|V8 5090 paper gate]] — 20 signal-only candidates; no order endpoints
 
 ### 📋 当前 Round 计划
 - [[40_EXPERIMENTS/round5/specs/2026-05-01-v5-search-prompt|V5 Search Prompt]] — 下一轮 30d backtest 设计
