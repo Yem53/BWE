@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import math
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 
@@ -24,7 +25,10 @@ def pct_change_over_window(
     if past_price is None or past_price == 0:
         return None
     now_price = samples[-1][1]
-    return round((now_price / past_price - 1.0) * 100.0, 1)
+    # Guard glitchy external feed values (NaN → silent false-suppress; Inf → false-fire).
+    if not math.isfinite(past_price) or not math.isfinite(now_price):
+        return None
+    return (now_price / past_price - 1.0) * 100.0
 
 
 @dataclass(frozen=True)
@@ -92,7 +96,7 @@ def detect_oi_price_1h(
     """Fire if |1h price Δ| >= price_thr OR |1h OI Δ| >= oi_thr."""
     price_chg = pct_change_over_window(price_samples, now_ms, 3600)
     price_hit = price_chg is not None and abs(price_chg) >= price_thr
-    oi_hit = oi_chg_pct is not None and abs(oi_chg_pct) >= oi_thr
+    oi_hit = oi_chg_pct is not None and math.isfinite(oi_chg_pct) and abs(oi_chg_pct) >= oi_thr
     if not (price_hit or oi_hit):
         return None
     return Detection(
@@ -124,7 +128,7 @@ class Alert:
 def to_alert(det: Detection, ctx: dict, market_cap_usd: float | None) -> Alert:
     """Combine a Detection with 24h context + market cap into a storable Alert."""
     oi_mc = None
-    if market_cap_usd and det.oi_usd:
+    if market_cap_usd and det.oi_usd is not None:
         oi_mc = det.oi_usd / market_cap_usd * 100.0
     return Alert(
         ts_ms=det.ts_ms, symbol=det.symbol, window_type=det.window_type,

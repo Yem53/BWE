@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from detectors import (
     Alert,
     Detection,
@@ -14,12 +16,12 @@ from detectors import (
 
 def test_pct_change_basic_rise():
     samples = [(4000, 100.0), (7000, 100.0), (8000, 105.0), (10000, 110.0)]
-    assert pct_change_over_window(samples, now_ms=10000, window_sec=3) == 10.0
+    assert pct_change_over_window(samples, now_ms=10000, window_sec=3) == pytest.approx(10.0)
 
 
 def test_pct_change_negative():
     samples = [(0, 200.0), (5000, 180.0)]
-    assert pct_change_over_window(samples, now_ms=5000, window_sec=5) == -10.0
+    assert pct_change_over_window(samples, now_ms=5000, window_sec=5) == pytest.approx(-10.0)
 
 
 def test_pct_change_insufficient_history_returns_none():
@@ -138,3 +140,17 @@ def test_alert_to_dict_is_json_round_trippable():
     d = alert_to_dict(a)
     assert json.loads(json.dumps(d))["symbol"] == "ABCUSDT"
     assert set(d) >= {"ts_ms", "symbol", "window_type", "price_chg_pct", "fired_at"}
+
+
+def test_pct_change_rejects_nan_and_inf_prices():
+    # NaN/Inf from a glitchy feed must not silently false-suppress or false-fire
+    assert pct_change_over_window([(0, float("nan")), (5000, 100.0)], now_ms=5000, window_sec=5) is None
+    assert pct_change_over_window([(0, 100.0), (5000, float("inf"))], now_ms=5000, window_sec=5) is None
+
+
+def test_to_alert_oi_zero_keeps_ratio_zero():
+    # oi_usd == 0.0 is a real reading (OI emptied out), not "missing" → ratio should be 0.0, not None
+    det = Detection(ts_ms=1, symbol="ABCUSDT", window_type="oi_price_1h", window_sec=3600,
+                    price_chg_pct=1.0, price=0.5, oi_usd=0.0)
+    a = to_alert(det, {"chg_24h_pct": None, "quote_vol_24h": None}, market_cap_usd=8_000_000.0)
+    assert a.oi_mc_ratio_pct == 0.0
