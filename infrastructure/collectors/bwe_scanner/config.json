@@ -25,5 +25,5 @@
   "ws_url": "wss://fstream.binance.com/ws/!markPrice@arr@1s",
   "fapi_base": "https://fapi.binance.com",
   "paths": {"jsonl_dir": "/home/ubuntu/bwe-scanner/data", "cg_map": "symbol_cg_map.json"},
-  "telegram": {"enabled": true, "chat_id_env": "BWE_SCANNER_TELEGRAM_CHAT_ID", "token_env": "BWE_LIVE_TELEGRAM_BOT_TOKEN"}
+  "telegram": {"enabled": true, "chat_id_env": "BWE_SCANNER_TELEGRAM_CHAT_ID", "token_env": "BWE_SCANNER_TELEGRAM_BOT_TOKEN"}
 }
