@@ -5,6 +5,7 @@ import json
 import os
 import signal
 import sys
+import threading
 import time
 
 import detectors
@@ -66,9 +67,13 @@ class Scanner:
         if now - self._last_24h >= self.cfg.get("ticker24h_poll_sec", 60):
             try:
                 self.ticker.refresh()
-                self.oi.set_universe([s for s in self.buffers.symbols()])
             except Exception as e:
                 self._log(f"24h refresh err: {e}")
+            try:
+                # decoupled: a ticker failure must not starve the OI universe
+                self.oi.set_universe(list(self.buffers.symbols()))
+            except Exception as e:
+                self._log(f"oi set_universe err: {e}")
             self._last_24h = now
         if now - self._last_supply >= self.cfg.get("supply_refresh_sec", 86400):
             try:
@@ -104,7 +109,12 @@ class Scanner:
                 if (prev is None or (now_ms - prev) >= self.cfg["push_cooldown_sec"] * 1000) \
                         and self._tg_token and self._tg_chat:
                     self.last_fired_push[key] = now_ms
-                    notify.send_telegram(self._tg_token, self._tg_chat, notify.format_alert_msg(a))
+                    # fire-and-forget: never let a slow Telegram POST block the 1s tick loop
+                    threading.Thread(
+                        target=notify.send_telegram,
+                        args=(self._tg_token, self._tg_chat, notify.format_alert_msg(a)),
+                        daemon=True,
+                    ).start()
 
     def _heartbeat(self, now: float) -> None:
         if now - self._last_hb >= 300:
@@ -139,7 +149,8 @@ def main(argv=None) -> int:
     ap.add_argument("--config", default="config.json")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
-    cfg = json.load(open(args.config))
+    with open(args.config) as f:
+        cfg = json.load(f)
     return Scanner(cfg, dry_run=args.dry_run).run()
 
 
