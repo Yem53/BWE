@@ -8,7 +8,6 @@ Type=simple
 User=ubuntu
 WorkingDirectory=/home/ubuntu/bwe-scanner
 EnvironmentFile=/home/ubuntu/bwe-scanner/secrets.env
-ExecStartPre=/bin/bash -c 'pkill -9 -f "scanner.py --config" 2>/dev/null || true; sleep 1'
 ExecStart=/usr/bin/python3 -u scanner.py --config config.json
 Restart=on-failure
 RestartSec=5
