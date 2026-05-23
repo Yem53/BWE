@@ -1,0 +1,27 @@
+{
+  "windows": {
+    "price_3s":  {"sec": 3,   "thr_pct": 2.0},
+    "price_5s":  {"sec": 5,   "thr_pct": 3.0},
+    "price_10s": {"sec": 10,  "thr_pct": 3.0},
+    "price_30s": {"sec": 30,  "thr_pct": 4.0},
+    "price_60s": {"sec": 60,  "thr_pct": 5.0},
+    "price_90s": {"sec": 90,  "thr_pct": 5.0},
+    "price_180s_extreme": {"sec": 180, "thr_pct": 8.0}
+  },
+  "oi_price_1h": {"sec": 3600, "price_thr_pct": 5.0, "oi_thr_pct": 5.0},
+  "store_cooldown_sec": 600,
+  "push_cooldown_sec": 600,
+  "push_filter": {
+    "types": ["price_180s_extreme", "oi_price_1h"],
+    "short_window_types": ["price_60s", "price_90s"],
+    "short_window_min_pct": 8.0
+  },
+  "exclude_mainstream": false,
+  "oi_poll_sec": 300,
+  "ticker24h_poll_sec": 60,
+  "supply_refresh_sec": 86400,
+  "ws_url": "wss://fstream.binance.com/ws/!markPrice@arr@1s",
+  "fapi_base": "https://fapi.binance.com",
+  "paths": {"jsonl_dir": "/home/ubuntu/bwe-scanner/data", "cg_map": "symbol_cg_map.json"},
+  "telegram": {"enabled": true, "chat_id_env": "BWE_SCANNER_TELEGRAM_CHAT_ID", "token_env": "BWE_LIVE_TELEGRAM_BOT_TOKEN"}
+}
