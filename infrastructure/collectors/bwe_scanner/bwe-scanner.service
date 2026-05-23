@@ -1,0 +1,19 @@
+[Unit]
+Description=BWE Self-Hosted Scanner (Binance all-perp anomaly detector)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/bwe-scanner
+EnvironmentFile=/home/ubuntu/bwe-scanner/secrets.env
+ExecStartPre=/bin/bash -c 'pkill -9 -f "scanner.py --config" 2>/dev/null || true; sleep 1'
+ExecStart=/usr/bin/python3 -u scanner.py --config config.json
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/home/ubuntu/bwe-scanner/logs/stdout.log
+StandardError=append:/home/ubuntu/bwe-scanner/logs/stderr.log
+
+[Install]
+WantedBy=multi-user.target
