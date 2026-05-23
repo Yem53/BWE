@@ -1,4 +1,9 @@
-from ws_feed import parse_markprice_array, PriceBuffers, oi_chg_from_hist
+from ws_feed import (
+    parse_markprice_array,
+    PriceBuffers,
+    oi_chg_from_hist,
+    parse_ticker_price_array,
+)
 
 
 def test_parse_markprice_array_extracts_symbol_price_ts():
@@ -46,3 +51,18 @@ def test_oi_chg_from_hist_computes_1h_change_and_usd():
 def test_oi_chg_from_hist_empty_returns_none():
     assert oi_chg_from_hist([]) == (None, None)
     assert oi_chg_from_hist([{"sumOpenInterest": "0", "sumOpenInterestValue": "0"}]) == (None, None)
+
+
+def test_parse_ticker_price_array_usdt_perps_only():
+    rows = [{"symbol": "ABCUSDT", "price": "0.5", "time": 1700000000000},
+            {"symbol": "XYZUSDT", "price": "2.0", "time": 1700000000000},
+            {"symbol": "BTCUSDC", "price": "60000", "time": 1700000000000}]
+    out = parse_ticker_price_array(rows, now_ms=1700000000000)
+    assert {r[0] for r in out} == {"ABCUSDT", "XYZUSDT"}
+    abc = [r for r in out if r[0] == "ABCUSDT"][0]
+    assert abc == ("ABCUSDT", 1700000000000, 0.5)
+
+
+def test_parse_ticker_price_array_falls_back_to_now_ms():
+    out = parse_ticker_price_array([{"symbol": "ABCUSDT", "price": "0.5"}], now_ms=999)
+    assert out == [("ABCUSDT", 999, 0.5)]

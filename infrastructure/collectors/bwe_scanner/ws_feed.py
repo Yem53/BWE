@@ -85,6 +85,23 @@ def oi_chg_from_hist(rows: list[dict]) -> tuple[float | None, float | None]:
     return (last / first - 1.0) * 100.0, oi_usd
 
 
+def parse_ticker_price_array(rows: list[dict], now_ms: int) -> list[tuple[str, int, float]]:
+    """Parse /fapi/v1/ticker/price response → [(symbol, ts_ms, price)] for USDT perps.
+
+    Uses each row's exchange `time` if present, else the supplied poll `now_ms`."""
+    out = []
+    for x in rows:
+        try:
+            sym = x["symbol"]
+            if not sym.endswith("USDT"):
+                continue
+            ts = int(x.get("time") or now_ms)
+            out.append((sym, ts, float(x["price"])))
+        except (KeyError, TypeError, ValueError):
+            continue
+    return out
+
+
 class WSFeed:
     """Subscribes !markPrice@arr@1s; pushes (symbol, ts, price) into PriceBuffers.
     Auto-reconnect with exponential backoff. Runs its own thread via start()."""
@@ -170,6 +187,48 @@ class OIPoller:
                 time.sleep(0.3)
             elapsed = time.time() - t0
             self._stop.wait(max(1.0, self._poll_sec - elapsed))
+
+    def start(self) -> threading.Thread:
+        t = threading.Thread(target=self._run, daemon=True)
+        t.start()
+        return t
+
+    def stop(self) -> None:
+        self._stop.set()
+
+
+class RestPriceFeed:
+    """Polls /fapi/v1/ticker/price every poll_sec; pushes (symbol, ts, price) into
+    PriceBuffers. Drop-in alternative to WSFeed (same start/stop/last_msg_ms interface)
+    for environments where the futures websocket won't deliver data frames (e.g. this EC2)."""
+
+    def __init__(self, fapi_base: str, buffers: PriceBuffers, poll_sec: float = 1.0, on_tick=None):
+        self._base = fapi_base
+        self._buffers = buffers
+        self._poll_sec = poll_sec
+        self._on_tick = on_tick
+        self._stop = threading.Event()
+        self.last_msg_ms = 0
+
+    def _poll_once(self) -> None:
+        r = requests.get(f"{self._base}/fapi/v1/ticker/price", timeout=10)
+        now_ms = int(time.time() * 1000)
+        rows = parse_ticker_price_array(r.json(), now_ms)
+        for sym, ts, price in rows:
+            self._buffers.add(sym, ts, price)
+        if rows:
+            self.last_msg_ms = int(time.time() * 1000)
+            if self._on_tick:
+                self._on_tick(now_ms)
+
+    def _run(self) -> None:
+        while not self._stop.is_set():
+            t0 = time.time()
+            try:
+                self._poll_once()
+            except Exception:
+                pass
+            self._stop.wait(max(0.1, self._poll_sec - (time.time() - t0)))
 
     def start(self) -> threading.Thread:
         t = threading.Thread(target=self._run, daemon=True)

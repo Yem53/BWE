@@ -20,6 +20,8 @@
   "oi_poll_sec": 300,
   "ticker24h_poll_sec": 60,
   "supply_refresh_sec": 86400,
+  "feed_mode": "rest",
+  "price_poll_sec": 1.0,
   "ws_url": "wss://fstream.binance.com/ws/!markPrice@arr@1s",
   "fapi_base": "https://fapi.binance.com",
   "paths": {"jsonl_dir": "/home/ubuntu/bwe-scanner/data", "cg_map": "symbol_cg_map.json"},

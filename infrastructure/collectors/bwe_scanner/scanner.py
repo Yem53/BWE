@@ -12,7 +12,7 @@ import detectors
 import notify
 import store
 from enrich import MarketCapCache, Ticker24hCache
-from ws_feed import OIPoller, PriceBuffers, WSFeed
+from ws_feed import OIPoller, PriceBuffers, RestPriceFeed, WSFeed
 
 
 def run_detection_tick(cfg, samples, ctx, oi, mc, now_ms, last_fired):
@@ -49,7 +49,12 @@ class Scanner:
         self.ticker = Ticker24hCache(cfg["fapi_base"])
         self.mc = MarketCapCache.from_file(cfg["paths"]["cg_map"])
         self.oi = OIPoller(cfg["fapi_base"], cfg.get("oi_poll_sec", 300))
-        self.feed = WSFeed(cfg["ws_url"], self.buffers)
+        # feed_mode "rest" (default) polls fapi /ticker/price; "ws" uses the fstream
+        # websocket (kept for environments where futures WS delivers data — this EC2 does not).
+        if cfg.get("feed_mode", "rest") == "ws":
+            self.feed = WSFeed(cfg["ws_url"], self.buffers)
+        else:
+            self.feed = RestPriceFeed(cfg["fapi_base"], self.buffers, cfg.get("price_poll_sec", 1.0))
         self.last_fired_store: dict = {}
         self.last_fired_push: dict = {}
         self._stop = False
