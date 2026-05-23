@@ -10,9 +10,10 @@
   },
   "oi_price_1h": {"sec": 3600, "price_thr_pct": 5.0, "oi_thr_pct": 5.0},
   "store_cooldown_sec": 600,
-  "push_cooldown_sec": 600,
+  "push_cooldown_sec": 1800,
   "push_filter": {
     "types": ["price_180s_extreme", "oi_price_1h"],
+    "min_pct_by_type": {"oi_price_1h": 10.0},
     "short_window_types": ["price_60s", "price_90s"],
     "short_window_min_pct": 8.0
   },

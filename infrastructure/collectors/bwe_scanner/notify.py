@@ -8,10 +8,19 @@ _LABEL = {"price_3s": "3s", "price_5s": "5s", "price_10s": "10s", "price_30s": "
 
 
 def should_push(alert: dict, push_filter: dict) -> bool:
-    """High-signal subset: always-push types, plus short windows only when |Δ| is big."""
+    """High-signal subset for Telegram (archive keeps everything; pushes are selective).
+
+    - A `types` window pushes when its magnitude >= min_pct_by_type[type] (default 0 = always).
+      Magnitude = max(|price_chg_pct|, |oi_chg_pct|) so a big move on either dimension counts.
+    - A `short_window_types` window pushes only when |price_chg_pct| >= short_window_min_pct.
+    """
     wtype = alert.get("window_type", "")
     if wtype in push_filter.get("types", []):
-        return True
+        mag = abs(alert.get("price_chg_pct", 0.0) or 0.0)
+        oi = alert.get("oi_chg_pct")
+        if oi is not None:
+            mag = max(mag, abs(oi))
+        return mag >= push_filter.get("min_pct_by_type", {}).get(wtype, 0.0)
     if wtype in push_filter.get("short_window_types", []):
         return abs(alert.get("price_chg_pct", 0.0)) >= push_filter.get("short_window_min_pct", 1e9)
     return False
