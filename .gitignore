@@ -31,3 +31,8 @@ __pycache__/
 60_NEXT_ROUND/
 90_SOURCE_POINTERS/
 20_CODE/
+# --- AI workspace machinery (methodology stays in docs; operational prompts stay out) ---
+00_PROJECT_REQUIREMENTS/prompts/
+**/04_codex_tasks/
+**/CODEX_*.md
+**/docs/superpowers/

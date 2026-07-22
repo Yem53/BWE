@@ -1,1 +1,0 @@
-"""BWE sandbox AutoResearch helpers."""
