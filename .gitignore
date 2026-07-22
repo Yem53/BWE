@@ -36,3 +36,6 @@ __pycache__/
 **/04_codex_tasks/
 **/CODEX_*.md
 **/docs/superpowers/
+BWE_codex_mirror/
+MASTER_CONTROL_PROMPT.md
+**/SETUP_PROMPT.md
