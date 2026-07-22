@@ -39,3 +39,4 @@ __pycache__/
 BWE_codex_mirror/
 MASTER_CONTROL_PROMPT.md
 **/SETUP_PROMPT.md
+**/AGENTS.md
