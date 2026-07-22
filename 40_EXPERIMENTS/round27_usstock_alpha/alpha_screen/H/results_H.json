@@ -1,0 +1,747 @@
+{
+ "family": "H_new_listing",
+ "design": "event=perp listing day0 (panel first day); trading-day RTH close series; resid = r - beta_hat*mkt (fair strip, beta_hat from own days 11+, leave-self-out mature EW market, >=3 mature names); clustered t by listing-batch date; costs 0.18%/0.30% RT (+1.5x stress) + real funding",
+ "n_events_dev": 50,
+ "n_batches_dev": 17,
+ "n_events_val": 37,
+ "n_batches_val": 6,
+ "n_listings_post_holdout_untouched": 18,
+ "n_cells": 27,
+ "beta_hat": {
+  "n_estimated": 26,
+  "fallback_median": 0.751,
+  "cross_sec_median": 0.751
+ },
+ "dev_cells": {
+  "PATH|resid|d1": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": -1.2122,
+   "t_clust": -2.983,
+   "win": 40.5,
+   "side_from_dev_sign": -1,
+   "lobo_min_mean": -1.4513,
+   "max_batch_share": 0.239,
+   "max_batch": "2026-05-18",
+   "max_sym_share": 0.083,
+   "max_sym": "FLNCUSDT",
+   "net_mean": 0.9649,
+   "net_mean_stress": 0.8149,
+   "p_raw": 0.00285
+  },
+  "PATH|resid|d2": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 1.419,
+   "t_clust": 2.876,
+   "win": 64.3,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 1.0951,
+   "max_batch_share": 0.225,
+   "max_batch": "2026-04-07",
+   "max_sym_share": 0.086,
+   "max_sym": "SNDKUSDT",
+   "net_mean": 1.0336,
+   "net_mean_stress": 0.8836,
+   "p_raw": 0.00403
+  },
+  "PATH|resid|d3": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 0.3212,
+   "t_clust": 0.608,
+   "win": 59.5,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": -0.0688,
+   "max_batch_share": 0.245,
+   "max_batch": "2026-05-15",
+   "max_sym_share": 0.098,
+   "max_sym": "SOXLUSDT",
+   "net_mean": -0.0451,
+   "net_mean_stress": -0.1951,
+   "p_raw": 0.54319
+  },
+  "PATH|resid|d5": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 0.278,
+   "t_clust": 0.404,
+   "win": 35.7,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": -0.2754,
+   "max_batch_share": 0.267,
+   "max_batch": "2026-05-26",
+   "max_sym_share": 0.123,
+   "max_sym": "COHRUSDT",
+   "net_mean": 0.0072,
+   "net_mean_stress": -0.1428,
+   "p_raw": 0.68621
+  },
+  "PATH|resid|d10": {
+   "n": 47,
+   "n_batches": 15,
+   "gross_mean": 0.4472,
+   "t_clust": 0.499,
+   "win": 55.3,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": -0.2701,
+   "max_batch_share": 0.27,
+   "max_batch": "2026-05-15",
+   "max_sym_share": 0.072,
+   "max_sym": "ORCLUSDT",
+   "net_mean": 0.1757,
+   "net_mean_stress": 0.0257,
+   "p_raw": 0.61778
+  },
+  "WIN|raw|e0|h1": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": -1.7337,
+   "t_clust": -3.348,
+   "win": 34.0,
+   "side_from_dev_sign": -1,
+   "lobo_min_mean": -2.174,
+   "max_batch_share": 0.181,
+   "max_batch": "2026-05-15",
+   "max_sym_share": 0.065,
+   "max_sym": "SNDKUSDT",
+   "net_mean": 1.6037,
+   "net_mean_stress": 1.5137,
+   "p_raw": 0.00081
+  },
+  "WIN|raw|e0|h2": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": -0.1875,
+   "t_clust": -0.167,
+   "win": 36.0,
+   "side_from_dev_sign": -1,
+   "lobo_min_mean": -0.8257,
+   "max_batch_share": 0.182,
+   "max_batch": "2026-04-07",
+   "max_sym_share": 0.089,
+   "max_sym": "SNDKUSDT",
+   "net_mean": 0.1327,
+   "net_mean_stress": 0.0427,
+   "p_raw": 0.86737
+  },
+  "WIN|raw|e0|h3": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": -0.08,
+   "t_clust": -0.057,
+   "win": 50.0,
+   "side_from_dev_sign": -1,
+   "lobo_min_mean": -0.7111,
+   "max_batch_share": 0.256,
+   "max_batch": "2026-02-09",
+   "max_sym_share": 0.071,
+   "max_sym": "QCOMUSDT",
+   "net_mean": 0.0621,
+   "net_mean_stress": -0.0279,
+   "p_raw": 0.95455
+  },
+  "WIN|raw|e0|h5": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": 2.4546,
+   "t_clust": 1.291,
+   "win": 64.0,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 1.2116,
+   "max_batch_share": 0.217,
+   "max_batch": "2026-05-26",
+   "max_sym_share": 0.108,
+   "max_sym": "QNTXUSDT",
+   "net_mean": 2.1704,
+   "net_mean_stress": 2.0804,
+   "p_raw": 0.1967
+  },
+  "WIN|raw|e0|h10": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": 1.7535,
+   "t_clust": 0.676,
+   "win": 54.0,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 0.0984,
+   "max_batch_share": 0.19,
+   "max_batch": "2026-05-15",
+   "max_sym_share": 0.078,
+   "max_sym": "FLNCUSDT",
+   "net_mean": 1.4102,
+   "net_mean_stress": 1.3202,
+   "p_raw": 0.49904
+  },
+  "WIN|raw|e1|h1": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": 1.5461,
+   "t_clust": 1.846,
+   "win": 60.0,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 1.1767,
+   "max_batch_share": 0.149,
+   "max_batch": "2026-05-06",
+   "max_sym_share": 0.067,
+   "max_sym": "AMDUSDT",
+   "net_mean": 1.291,
+   "net_mean_stress": 1.201,
+   "p_raw": 0.06489
+  },
+  "WIN|raw|e1|h2": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": 1.6537,
+   "t_clust": 1.301,
+   "win": 60.0,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 1.1503,
+   "max_batch_share": 0.171,
+   "max_batch": "2026-02-09",
+   "max_sym_share": 0.061,
+   "max_sym": "HOODUSDT",
+   "net_mean": 1.3616,
+   "net_mean_stress": 1.2716,
+   "p_raw": 0.19326
+  },
+  "WIN|raw|e1|h3": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": 3.0732,
+   "t_clust": 2.365,
+   "win": 72.0,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 2.3411,
+   "max_batch_share": 0.175,
+   "max_batch": "2026-05-26",
+   "max_sym_share": 0.092,
+   "max_sym": "ARMUSDT",
+   "net_mean": 2.8195,
+   "net_mean_stress": 2.7295,
+   "p_raw": 0.01803
+  },
+  "WIN|raw|e1|h5": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": 4.0129,
+   "t_clust": 2.267,
+   "win": 62.0,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 2.8293,
+   "max_batch_share": 0.216,
+   "max_batch": "2026-05-26",
+   "max_sym_share": 0.101,
+   "max_sym": "SOXLUSDT",
+   "net_mean": 3.7722,
+   "net_mean_stress": 3.6822,
+   "p_raw": 0.02339
+  },
+  "WIN|raw|e1|h10": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": 5.9291,
+   "t_clust": 1.863,
+   "win": 60.0,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 3.0184,
+   "max_batch_share": 0.303,
+   "max_batch": "2026-05-15",
+   "max_sym_share": 0.089,
+   "max_sym": "SOXLUSDT",
+   "net_mean": 5.6785,
+   "net_mean_stress": 5.5885,
+   "p_raw": 0.06246
+  },
+  "WIN|resid|e0|h1": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": -1.2122,
+   "t_clust": -2.983,
+   "win": 40.5,
+   "side_from_dev_sign": -1,
+   "lobo_min_mean": -1.4513,
+   "max_batch_share": 0.239,
+   "max_batch": "2026-05-18",
+   "max_sym_share": 0.083,
+   "max_sym": "FLNCUSDT",
+   "net_mean": 0.9649,
+   "net_mean_stress": 0.8149,
+   "p_raw": 0.00285
+  },
+  "WIN|resid|e0|h2": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 0.2069,
+   "t_clust": 0.251,
+   "win": 45.2,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": -0.3562,
+   "max_batch_share": 0.251,
+   "max_batch": "2026-04-07",
+   "max_sym_share": 0.101,
+   "max_sym": "SNDKUSDT",
+   "net_mean": -0.2313,
+   "net_mean_stress": -0.3813,
+   "p_raw": 0.80181
+  },
+  "WIN|resid|e0|h3": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 0.5281,
+   "t_clust": 0.598,
+   "win": 59.5,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": -0.0332,
+   "max_batch_share": 0.243,
+   "max_batch": "2026-04-07",
+   "max_sym_share": 0.081,
+   "max_sym": "CBRSUSDT",
+   "net_mean": 0.0237,
+   "net_mean_stress": -0.1263,
+   "p_raw": 0.54984
+  },
+  "WIN|resid|e0|h5": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 1.1228,
+   "t_clust": 0.682,
+   "win": 59.5,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": -0.136,
+   "max_batch_share": 0.27,
+   "max_batch": "2026-05-26",
+   "max_sym_share": 0.121,
+   "max_sym": "QNTXUSDT",
+   "net_mean": 0.7002,
+   "net_mean_stress": 0.5502,
+   "p_raw": 0.49524
+  },
+  "WIN|resid|e0|h10": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": -0.0699,
+   "t_clust": -0.034,
+   "win": 47.6,
+   "side_from_dev_sign": -1,
+   "lobo_min_mean": -1.4404,
+   "max_batch_share": 0.188,
+   "max_batch": "2026-05-15",
+   "max_sym_share": 0.083,
+   "max_sym": "QNTXUSDT",
+   "net_mean": -0.0659,
+   "net_mean_stress": -0.2159,
+   "p_raw": 0.97288
+  },
+  "WIN|resid|e1|h1": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 1.419,
+   "t_clust": 2.876,
+   "win": 64.3,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 1.0951,
+   "max_batch_share": 0.225,
+   "max_batch": "2026-04-07",
+   "max_sym_share": 0.086,
+   "max_sym": "SNDKUSDT",
+   "net_mean": 1.0336,
+   "net_mean_stress": 0.8836,
+   "p_raw": 0.00403
+  },
+  "WIN|resid|e1|h2": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 1.7402,
+   "t_clust": 2.802,
+   "win": 61.9,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 1.4181,
+   "max_batch_share": 0.158,
+   "max_batch": "2026-04-07",
+   "max_sym_share": 0.059,
+   "max_sym": "SOXLUSDT",
+   "net_mean": 1.2886,
+   "net_mean_stress": 1.1386,
+   "p_raw": 0.00508
+  },
+  "WIN|resid|e1|h3": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 2.0569,
+   "t_clust": 1.597,
+   "win": 64.3,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 1.3523,
+   "max_batch_share": 0.182,
+   "max_batch": "2026-05-26",
+   "max_sym_share": 0.103,
+   "max_sym": "QNTXUSDT",
+   "net_mean": 1.6579,
+   "net_mean_stress": 1.5079,
+   "p_raw": 0.11027
+  },
+  "WIN|resid|e1|h5": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 1.733,
+   "t_clust": 0.938,
+   "win": 50.0,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 0.2831,
+   "max_batch_share": 0.254,
+   "max_batch": "2026-05-26",
+   "max_sym_share": 0.108,
+   "max_sym": "SOXLUSDT",
+   "net_mean": 1.3558,
+   "net_mean_stress": 1.2058,
+   "p_raw": 0.34824
+  },
+  "WIN|resid|e1|h10": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": 2.0637,
+   "t_clust": 0.729,
+   "win": 52.4,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": -0.8422,
+   "max_batch_share": 0.386,
+   "max_batch": "2026-05-15",
+   "max_sym_share": 0.102,
+   "max_sym": "SOXLUSDT",
+   "net_mean": 1.7057,
+   "net_mean_stress": 1.5557,
+   "p_raw": 0.466
+  },
+  "FUND|abs|d0_2": {
+   "n": 29,
+   "n_batches": 13,
+   "gross_mean": 0.0225,
+   "t_clust": 1.65,
+   "win": 58.6,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 0.014,
+   "max_batch_share": 0.258,
+   "max_batch": "2026-05-26",
+   "max_sym_share": 0.154,
+   "max_sym": "PAYPUSDT",
+   "p_raw": 0.09894
+  },
+  "FUND|signed|d0_2": {
+   "n": 29,
+   "n_batches": 13,
+   "gross_mean": 0.0211,
+   "t_clust": 1.516,
+   "win": 72.4,
+   "side_from_dev_sign": 1,
+   "lobo_min_mean": 0.0124,
+   "max_batch_share": 0.241,
+   "max_batch": "2026-05-26",
+   "max_sym_share": 0.161,
+   "max_sym": "PAYPUSDT",
+   "p_raw": 0.12952
+  }
+ },
+ "bh_fdr_q10_significant": [
+  [
+   "WIN|raw|e0|h1",
+   0.00081
+  ],
+  [
+   "PATH|resid|d1",
+   0.00285
+  ],
+  [
+   "WIN|resid|e0|h1",
+   0.00285
+  ],
+  [
+   "PATH|resid|d2",
+   0.00403
+  ],
+  [
+   "WIN|resid|e1|h1",
+   0.00403
+  ],
+  [
+   "WIN|resid|e1|h2",
+   0.00508
+  ],
+  [
+   "WIN|raw|e1|h3",
+   0.01803
+  ],
+  [
+   "WIN|raw|e1|h5",
+   0.02339
+  ]
+ ],
+ "candidates_dev_gate": [
+  "PATH|resid|d1",
+  "PATH|resid|d2",
+  "WIN|raw|e0|h1",
+  "WIN|raw|e1|h3",
+  "WIN|raw|e1|h5",
+  "WIN|resid|e0|h1",
+  "WIN|resid|e1|h1",
+  "WIN|resid|e1|h2"
+ ],
+ "val_rescore": {
+  "PATH|resid|d1": {
+   "n": 37,
+   "gross_mean": -0.6983,
+   "t_clust": -1.3,
+   "net_mean_devside": 0.4392,
+   "net_mean_stress": 0.2892
+  },
+  "PATH|resid|d2": {
+   "n": 37,
+   "gross_mean": -0.184,
+   "t_clust": -0.224,
+   "net_mean_devside": -0.5001,
+   "net_mean_stress": -0.6501
+  },
+  "WIN|raw|e0|h1": {
+   "n": 37,
+   "gross_mean": -0.5052,
+   "t_clust": -0.609,
+   "net_mean_devside": 0.3662,
+   "net_mean_stress": 0.2762
+  },
+  "WIN|raw|e1|h3": {
+   "n": 25,
+   "gross_mean": -1.4669,
+   "t_clust": 0.0,
+   "net_mean_devside": -1.6963,
+   "net_mean_stress": -1.7863
+  },
+  "WIN|raw|e1|h5": {
+   "n": 12,
+   "gross_mean": -10.7525,
+   "t_clust": 0.0,
+   "net_mean_devside": -10.9713,
+   "net_mean_stress": -11.0613
+  },
+  "WIN|resid|e0|h1": {
+   "n": 37,
+   "gross_mean": -0.6983,
+   "t_clust": -1.3,
+   "net_mean_devside": 0.4392,
+   "net_mean_stress": 0.2892
+  },
+  "WIN|resid|e1|h1": {
+   "n": 37,
+   "gross_mean": -0.184,
+   "t_clust": -0.224,
+   "net_mean_devside": -0.5001,
+   "net_mean_stress": -0.6501
+  },
+  "WIN|resid|e1|h2": {
+   "n": 31,
+   "gross_mean": -0.671,
+   "t_clust": -0.401,
+   "net_mean_devside": -1.0006,
+   "net_mean_stress": -1.1506
+  }
+ },
+ "permutation": {
+  "n_perm": 1000,
+  "best_cell": "WIN|raw|e0|h1",
+  "best_abs_t": 3.348,
+  "p_best_vs_null_max_t": 0.246,
+  "null_max_t_p50": 2.789,
+  "null_max_t_p90": 4.002,
+  "null_max_t_p99": 5.345,
+  "n_perm_batches": 10,
+  "n_perm_events": 23,
+  "note": "placebo anchors restricted to mature windows fully inside dev (exit<=05-31) => only early batches eligible; placebo periods have lower vol than true listing windows (t is scale-free; caveat noted)"
+ },
+ "q1_path_descriptive": {
+  "day0_intraday": {
+   "n": 50,
+   "mean": 0.6169,
+   "median": 0.4424,
+   "note": "day0 RTH open->close; open ~= listing minute for 09:30 batches"
+  },
+  "per_day": {
+   "d1": {
+    "n_resid": 42,
+    "resid_mean": -1.2122,
+    "resid_median": -0.8393,
+    "raw_mean": -1.7337
+   },
+   "d2": {
+    "n_resid": 42,
+    "resid_mean": 1.419,
+    "resid_median": 1.2119,
+    "raw_mean": 1.5461
+   },
+   "d3": {
+    "n_resid": 42,
+    "resid_mean": 0.3212,
+    "resid_median": 0.5744,
+    "raw_mean": 0.1076
+   },
+   "d4": {
+    "n_resid": 42,
+    "resid_mean": 0.3167,
+    "resid_median": 0.5978,
+    "raw_mean": 1.4195
+   },
+   "d5": {
+    "n_resid": 42,
+    "resid_mean": 0.278,
+    "resid_median": -0.4875,
+    "raw_mean": 1.1151
+   },
+   "d6": {
+    "n_resid": 47,
+    "resid_mean": -0.4256,
+    "resid_median": -0.5353,
+    "raw_mean": -0.1753
+   },
+   "d7": {
+    "n_resid": 47,
+    "resid_mean": -0.3067,
+    "resid_median": -0.1415,
+    "raw_mean": -0.2618
+   },
+   "d8": {
+    "n_resid": 47,
+    "resid_mean": -1.6017,
+    "resid_median": -0.6321,
+    "raw_mean": -1.8014
+   },
+   "d9": {
+    "n_resid": 47,
+    "resid_mean": 0.8194,
+    "resid_median": -0.4973,
+    "raw_mean": 1.0045
+   },
+   "d10": {
+    "n_resid": 47,
+    "resid_mean": 0.4472,
+    "resid_median": 0.2494,
+    "raw_mean": 0.5329
+   }
+  }
+ },
+ "q2_funding_path": {
+  "n_dev_events_with_funding": 30,
+  "coverage_caveat": "funding table covers 58/105 symbols only",
+  "by_day_bucket": {
+   "d0_0": {
+    "n_settles": 31,
+    "mean_pct": 0.03523,
+    "median_pct": 0.0,
+    "mean_abs_pct": 0.03523,
+    "p90_abs_pct": 0.14319
+   },
+   "d1_1": {
+    "n_settles": 129,
+    "mean_pct": 0.01938,
+    "median_pct": 0.0,
+    "mean_abs_pct": 0.04325,
+    "p90_abs_pct": 0.12055
+   },
+   "d2_2": {
+    "n_settles": 119,
+    "mean_pct": 0.03157,
+    "median_pct": 0.005,
+    "mean_abs_pct": 0.03792,
+    "p90_abs_pct": 0.1394
+   },
+   "d3_3": {
+    "n_settles": 108,
+    "mean_pct": 0.01711,
+    "median_pct": 0.0,
+    "mean_abs_pct": 0.04381,
+    "p90_abs_pct": 0.1554
+   },
+   "d4_5": {
+    "n_settles": 306,
+    "mean_pct": -0.00947,
+    "median_pct": 0.0,
+    "mean_abs_pct": 0.05505,
+    "p90_abs_pct": 0.16075
+   },
+   "d6_10": {
+    "n_settles": 696,
+    "mean_pct": 0.00424,
+    "median_pct": 0.0,
+    "mean_abs_pct": 0.029,
+    "p90_abs_pct": 0.0943
+   },
+   "mature_11plus": {
+    "n_settles": 3841,
+    "mean_pct": 0.00672,
+    "median_pct": 0.0,
+    "mean_abs_pct": 0.03283,
+    "p90_abs_pct": 0.07214
+   }
+  }
+ },
+ "q3_liquidity_evolution": {
+  "amp_ratio_median_by_day": {
+   "d0": 1.133,
+   "d1": 1.219,
+   "d2": 1.074,
+   "d3": 0.99,
+   "d4": 1.078,
+   "d5": 1.012,
+   "d6": 0.917,
+   "d7": 1.007,
+   "d8": 0.929,
+   "d9": 1.018,
+   "d10": 0.966
+  },
+  "qv_ratio_median_by_day": {
+   "d0": 0.628,
+   "d1": 0.623,
+   "d2": 0.692,
+   "d3": 0.565,
+   "d4": 0.603,
+   "d5": 0.634,
+   "d6": 0.543,
+   "d7": 0.639,
+   "d8": 0.605,
+   "d9": 0.665,
+   "d10": 0.703
+  },
+  "dev_event_qv_day0_3_median_usd": 4894711.0,
+  "dev_event_qv_day0_3_p25_usd": 1879044.0
+ },
+ "caveats": [
+  "n=50 dev events / 17 batches (<100 => EXPLORATORY per protocol).",
+  "beta_hat uses post-event mature days (no pre-listing data exists for a new listing); mild look-ahead in the risk model, none in the signal.",
+  "June val events have <=10 trading days before the 06-15 wall; long-horizon val cells lose n mechanically.",
+  "Early-Feb events (TSLA/INTC/HOOD/Feb-09 batch) drop out of resid cells: no mature universe existed to strip against.",
+  "Funding pnl assumed 0 for the 47 symbols missing from the funding table.",
+  "Permutation null drawn from mature (calmer) periods -- distribution-shape caveat; t is scale-free which mitigates but does not remove it."
+ ],
+ "diag_val_d1_by_batch": {
+  "2026-06-01": 2.87,
+  "2026-06-03": -0.56,
+  "2026-06-08": -2.86,
+  "2026-06-09": -1.66,
+  "2026-06-10": 1.24,
+  "2026-06-11": -1.47,
+  "note": "val day1 raw mean -0.51%, 4/6 batches negative (dev: 14/17 negative)"
+ },
+ "final_verdict": {
+  "survivor": false,
+  "reason": "Permutation search-null kills the headline: best cell WIN|raw|e0|h1 |t_clust|=3.35 sits at p=0.246 in the null max-|t| distribution of the same 27-cell grid on placebo anchors (null median max-|t|=2.79, p90=4.00) \u2014 a grid this size 'finds' t=3.3 a quarter of the time. Caveat: null grid had only 10 batches vs 17 real (fewer clusters => fatter t) so the test is conservative, but family-E precedent (1/3 null prob => downgraded) applies. Val: day2-bounce candidates FLIPPED sign (dead); day1-short cells kept sign but val t only -0.6..-1.3 and val net at stress just +0.28%.",
+  "what_is_real": "Direction-consistent structure worth a forward monitor: new equity perps list long-crowded (day0-2 funding +0.035%/8h = 5x mature +0.007%, sign not magnitude is the anomaly) and the day0-close premium decays on day1 (dev -1.73% raw, 14/17 batches negative; val -0.51%, 4/6 negative; resid version same sign both periods; short nets positive after 1.5x thin-book costs in BOTH periods: dev +1.51%, val +0.28%, funding tailwind included). No listing volume pump exists (day0 qv = 0.63x mature median \u2014 opposite of crypto listings); amplitude normalizes by day3.",
+  "frozen_forward_rule": {
+   "name": "H_list_d1_short_v1",
+   "status": "forward-monitor only (NOT tradable claim); same tier as E_afterhours_drift_v1",
+   "event": "any new Binance US-stock perp listing (first kline day)",
+   "entry": "short at day0 16:00 ET RTH close",
+   "exit": "day1 16:00 ET RTH close (next trading day)",
+   "costs": "0.18% RT (taker 0.08 + 5bp/side thin book); short collects the positive early funding",
+   "forward_pass_gate": "n>=15 listings: net mean > 0 at 1.5x cost AND >=60% of listing batches day1-negative",
+   "kill": "n>=10 and net <= 0, or early-funding sign regime flips negative",
+   "first_forward_sample": "18 listings 2026-06-22..07-02 (3 batches) already in holdout \u2014 never touched here, evaluable by the forward recorder"
+  }
+ }
+}

@@ -1,0 +1,4 @@
+{
+  "both_touched_note": "~63% touch both +/-3% in 240m -> bracket exit unresolvable from extrema-only data",
+  "resolvable": "time-stop + one-sided early lock"
+}

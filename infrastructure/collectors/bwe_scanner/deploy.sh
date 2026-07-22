@@ -3,7 +3,7 @@
 # Run from the Mac. Does NOT enable the service (that's a separate manual step
 # after the Telegram chat id is set).
 set -euo pipefail
-EC2=ubuntu@13.159.69.106
+EC2=ubuntu@<EC2_HOST>
 KEY=~/.ssh/bwe-tokyo.pem
 SRC=/Volumes/T9/BWE/infrastructure/collectors/bwe_scanner
 DST=/home/ubuntu/bwe-scanner

@@ -1,0 +1,201 @@
+{
+ "a_split": {
+  "n_panel_syms": 87,
+  "n_dev": 50,
+  "n_dev_batches": 17,
+  "n_val": 37,
+  "n_val_batches": 6,
+  "n_post_holdout": 18,
+  "claim": "87 total, dev 50/17, val 37/6, 18 untouched"
+ },
+ "e_timestamps": {
+  "dst_probe": {
+   "2026-03-05": {
+    "open_ET": "09:30",
+    "lastbar_ET": "15:59",
+    "open_UTC": "14:30"
+   },
+   "2026-03-06": {
+    "open_ET": "09:30",
+    "lastbar_ET": "15:59",
+    "open_UTC": "14:30"
+   },
+   "2026-03-09": {
+    "open_ET": "09:30",
+    "lastbar_ET": "15:59",
+    "open_UTC": "13:30"
+   },
+   "2026-03-10": {
+    "open_ET": "09:30",
+    "lastbar_ET": "15:59",
+    "open_UTC": "13:30"
+   }
+  },
+  "panel_max_close_ts_lte_cutoff": true,
+  "panel_max_date": "2026-06-15",
+  "n_firstkline_vs_panelday0_mismatch": 0,
+  "mismatches_first10": []
+ },
+ "b_beta": {
+  "n_estimated": 26,
+  "fallback_median": 0.751,
+  "claim": "26 estimated, fallback 0.751"
+ },
+ "b_cells": {
+  "dev_day1_raw": {
+   "n": 50,
+   "n_batches": 17,
+   "gross_mean": -1.7337,
+   "t_clust_CR0": -3.348,
+   "t_clust_G_corr": -3.248,
+   "batches_negative": 15,
+   "lobo_min_mean": -2.174,
+   "max_batch_share": 0.181
+  },
+  "dev_day1_resid": {
+   "n": 42,
+   "n_batches": 14,
+   "gross_mean": -1.2122,
+   "t_clust_CR0": -2.983,
+   "t_clust_G_corr": -2.874,
+   "batches_negative": 11,
+   "lobo_min_mean": -1.4513,
+   "max_batch_share": 0.239
+  },
+  "val_day1_raw": {
+   "n": 37,
+   "n_batches": 6,
+   "gross_mean": -0.5052,
+   "t_clust_CR0": -0.609,
+   "t_clust_G_corr": -0.556,
+   "batches_negative": 4,
+   "lobo_min_mean": -1.1581,
+   "max_batch_share": 0.337
+  },
+  "val_day1_resid": {
+   "n": 37,
+   "n_batches": 6,
+   "gross_mean": -0.6983,
+   "t_clust_CR0": -1.3,
+   "t_clust_G_corr": -1.186,
+   "batches_negative": 4,
+   "lobo_min_mean": -1.1551,
+   "max_batch_share": 0.263
+  },
+  "val_d1_raw_by_batch": {
+   "2026-06-01": 2.87,
+   "2026-06-03": -0.56,
+   "2026-06-08": -2.86,
+   "2026-06-09": -1.65,
+   "2026-06-10": 1.24,
+   "2026-06-11": -1.47
+  },
+  "claims": {
+   "dev_raw": "-1.7337 t=-3.348 14/17 neg",
+   "dev_resid": "-1.2122 t=-2.983",
+   "val_raw": "-0.5052 t=-0.609 4/6 neg",
+   "val_resid": "-0.6983 t=-1.30"
+  },
+  "beta_variants_dev_resid_d1": {
+   "spec_replica": {
+    "n": 42,
+    "mean": -1.2122,
+    "t": -2.983
+   },
+   "all_beta_1": {
+    "n": 42,
+    "mean": -1.1189,
+    "t": -2.857
+   },
+   "all_beta_fallback": {
+    "n": 42,
+    "mean": -1.2122,
+    "t": -2.983
+   },
+   "all_beta_0.5": {
+    "n": 42,
+    "mean": -1.3061,
+    "t": -3.057
+   }
+  }
+ },
+ "d_net": {
+  "dev_raw_short_net_0.18": [
+   1.6037,
+   50
+  ],
+  "dev_raw_short_net_stress_0.27": [
+   1.5137,
+   50
+  ],
+  "dev_resid_short_net_0.30": [
+   0.9649,
+   42
+  ],
+  "val_raw_short_net_stress_0.27": [
+   0.2762,
+   37
+  ],
+  "val_resid_short_net_0.30": [
+   0.4392,
+   37
+  ],
+  "claims": {
+   "dev_raw_net": 1.6037,
+   "dev_raw_stress": 1.5137,
+   "dev_resid_net": 0.9649,
+   "val_raw_stress": 0.2762,
+   "val_resid_net": 0.4392
+  }
+ },
+ "d_liquidity_funding": {
+  "qv_day0_3_median_usd": 4894711.0,
+  "qv_day0_3_p25_usd": 1879044.0,
+  "n_dev_syms_with_funding": 30,
+  "funding_day0_mean_pct": 0.03523,
+  "funding_mature_mean_pct": 0.00672,
+  "funding_coverage": "45/105",
+  "claims": {
+   "qv_median": 4894711,
+   "day0": 0.03523,
+   "mature": 0.00672,
+   "coverage": "58/105"
+  }
+ },
+ "c_permutation": {
+  "n_perm": 1000,
+  "seed": 918273645,
+  "obs_best_cell": "Wr01",
+  "obs_best_abs_t": 3.348,
+  "p_best_vs_null_max_t": 0.192,
+  "null_p50": 2.661,
+  "null_p90": 3.743,
+  "n_perm_batches": 10,
+  "n_perm_events": 23,
+  "apples_to_apples_obs_subset_max_t": 3.484,
+  "apples_to_apples_subset_cell": "Ws13",
+  "p_subset_vs_null": 0.147,
+  "per_cell_day1_raw_null_p": 0.011,
+  "per_cell_day1_null_p90_abs_t": 2.154,
+  "claims": {
+   "p": 0.246,
+   "null_p50": 2.789,
+   "null_p90": 4.002
+  },
+  "confirm_with_fund_cells_seed555": {
+   "p_best_vs_null_max_t": 0.24,
+   "null_p50": 2.806,
+   "null_p90": 4.0,
+   "note": "matches submitted 0.246/2.789/4.002 within MC error; earlier 0.192 was ret-cells-only null (FUND cells omitted)"
+  }
+ },
+ "discrepancies": [
+  "dev day1-negative batches = 15/17, headline claims 14/17 -> understates own consistency (error against their favor, immaterial)",
+  "'funding covers 58/105' is full-table; within <=06-15 cutoff only 45/105 symbols have funding rows (dev n=30 with funding still matches)",
+  "val WIN|raw|e1|h3/h5 report t_clust=0.0 (an artifact of <5 clusters -> t set to 0), but those cells flipped sign anyway"
+ ],
+ "verdict": {
+  "holds": true,
+  "summary": "All headline numbers reproduce exactly (split 87/50/37/18, dev raw d1 -1.7337/t -3.348, resid -1.2122/t -2.983, val -0.5052/t -0.609 raw & -0.6983/t -1.30 resid, 4/6 val batches neg, nets incl funding leg exact, qv $4.89M median, funding day0 5.2x mature). Beta strip fair and immaterial (beta=1/0.5/median variants keep t in -2.86..-3.06). Permutation p=0.246 reproduced (0.240, independent code+seed); apples-to-apples subset check gives p=0.147 -- still far above threshold, kill stands. Per-cell day1-only null p=0.011 supports the 'structure real, dies to search-honesty' framing. DST/timestamps clean; holdout wall respected; day0=first kline ET day for 87/87. Zero-survivor + forward-monitor-only freeze is the correct disposition."
+ }
+}

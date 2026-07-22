@@ -1,6 +1,0 @@
-{
-  "format": "YYYY-MM-DD",
-  "folder": "99_ADMIN/daily",
-  "template": "Templates/Daily_Note_Template",
-  "autorun": false
-}

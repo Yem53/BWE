@@ -1,0 +1,240 @@
+{
+ "family": "D_PEAD_verify",
+ "checks": {
+  "replication": {
+   "n_matched": 79,
+   "n_dropped_unlisted": 53,
+   "n_events": 26,
+   "n_dev": 23,
+   "n_val": 3,
+   "ALL_S_rxn_h2_recomputed": {
+    "n": 23,
+    "mean": 2.1301,
+    "t": 2.255,
+    "win": 60.9
+   },
+   "reported": {
+    "n": 23,
+    "mean": 2.1301,
+    "t": 2.255,
+    "win": 60.9
+   },
+   "match": true,
+   "panel_max_date": "2026-06-15",
+   "panel_max_ts_lte_cutoff": true
+  },
+  "a_beta_disguise": {
+   "reported_strip": {
+    "n": 23,
+    "mean": 2.1301,
+    "t": 2.255,
+    "win": 60.9
+   },
+   "beta_hat_regression": 1.233,
+   "strip_beta_hat": {
+    "n": 23,
+    "mean": 2.24,
+    "t": 2.357,
+    "win": 73.9
+   },
+   "strip_self_excluded_mkt": {
+    "n": 23,
+    "mean": 2.2165,
+    "t": 2.251,
+    "win": 60.9
+   },
+   "strip_median_mkt": {
+    "n": 23,
+    "mean": 2.0864,
+    "t": 2.196,
+    "win": 78.3
+   },
+   "no_strip_net": {
+    "mean": 1.6588,
+    "t": 1.41
+   },
+   "mean_mkt_long_events": 1.1904,
+   "mean_mkt_short_events": 2.284,
+   "side_x_mkt_mean_(beta_pnl_at_beta1)": -0.4713,
+   "strip_beta_2x": {
+    "n": 23,
+    "mean": 2.6014,
+    "t": 2.305,
+    "win": 73.9
+   }
+  },
+  "b_concentration": {
+   "loso_symbol": {
+    "left_out": "SNDKUSDT",
+    "min_mean": 1.5989,
+    "t_at_min": 1.956
+   },
+   "lodo_date": {
+    "left_out": "2026-05-01",
+    "min_mean": 1.7719,
+    "t_at_min": 2.114
+   },
+   "loeo_event_min_mean": 1.5989,
+   "dup_symbols_in_dev": {},
+   "top2_events_abs_share": 0.272,
+   "top2_events": [
+    {
+     "symbol": "SNDKUSDT",
+     "date": "2026-05-01",
+     "pnl": 13.817
+    },
+    {
+     "symbol": "USARUSDT",
+     "date": "2026-05-14",
+     "pnl": 9.421
+    }
+   ]
+  },
+  "c_permutation": {
+   "B": 5000,
+   "note": "signal tuples permuted across the 23 dev events; legs/funding recomputed per side",
+   "obs_candidate_t": 2.255,
+   "perm_p_candidate_cell_one_sided": 0.0054,
+   "obs_max_t_gate_eligible_n>=20": 2.255,
+   "perm_p_family_gate_eligible": 0.0318,
+   "obs_min_p_all_64_cells": 0.0,
+   "perm_p_min_p_family_all_cells": 0.0548,
+   "perm_p_any_gate_cell_t>=2": 0.072,
+   "obs_horizon_monotone_positive_S_rxn": true,
+   "perm_p_horizon_monotone_positive_either_ALL_signal": 0.1996
+  },
+  "d_cost_realism": {
+   "n_events": 23,
+   "entry_1m_bar_range_pct": {
+    "median": 0.1928,
+    "p90": 0.2706,
+    "max": 0.5923
+   },
+   "entry_qv_pm5min_usd": {
+    "median": 181200.0,
+    "min": 1359.0
+   },
+   "events_with_entry_pm5min_qv_below_100k": 8,
+   "assumed_cost_rt_pct": 0.12,
+   "breakeven_rt_cost_pct_h2": 2.25,
+   "mean_at_0.5pct_rt_cost": 1.75,
+   "worst_rows": [
+    {
+     "symbol": "HDUSDT",
+     "anchor": "2026-05-19",
+     "entry_bar_range_pct": 0.0496,
+     "entry_bar_qv_usd": 67.0,
+     "entry_qv_pm5min_usd": 1359.0,
+     "exit_bar_range_pct": 0.0127,
+     "exit_bar_qv_usd": 35.0,
+     "exit_qv_pm5min_usd": 3352.0
+    },
+    {
+     "symbol": "TSMUSDT",
+     "anchor": "2026-04-16",
+     "entry_bar_range_pct": 0.1072,
+     "entry_bar_qv_usd": 1684.0,
+     "entry_qv_pm5min_usd": 10390.0,
+     "exit_bar_range_pct": 0.1036,
+     "exit_bar_qv_usd": 198.0,
+     "exit_qv_pm5min_usd": 9458.0
+    },
+    {
+     "symbol": "WMTUSDT",
+     "anchor": "2026-05-21",
+     "entry_bar_range_pct": 0.1318,
+     "entry_bar_qv_usd": 242.0,
+     "entry_qv_pm5min_usd": 13217.0,
+     "exit_bar_range_pct": 0.059,
+     "exit_bar_qv_usd": 97.0,
+     "exit_qv_pm5min_usd": 1859.0
+    },
+    {
+     "symbol": "CSCOUSDT",
+     "anchor": "2026-05-15",
+     "entry_bar_range_pct": 0.2108,
+     "entry_bar_qv_usd": 928.0,
+     "entry_qv_pm5min_usd": 13853.0,
+     "exit_bar_range_pct": 0.1906,
+     "exit_bar_qv_usd": 1096.0,
+     "exit_qv_pm5min_usd": 24474.0
+    }
+   ]
+  },
+  "e_causality": {
+   "report_time_values_matched79": {
+    "postmarket": 61,
+    "premarket": 18
+   },
+   "n_report_time_unknown": 0,
+   "post_earnings_date_equals_anchor_all_used": false,
+   "signal_completes_at_entry_instant": "yes \u2014 sign(reaction) uses the 16:00 close print, entry is the same print",
+   "implementable_sign_test": {
+    "proxy": "perp 15:55 ET bar close vs pre-earnings-date perp RTH close",
+    "n_with_proxy": 21,
+    "n_missing_proxy": 2,
+    "sign_flips_vs_uw_reaction": [
+     {
+      "symbol": "MSTRUSDT",
+      "anchor": "2026-05-06",
+      "uw_reaction": -0.0004,
+      "perp_proxy_1555": 0.0005
+     }
+    ],
+    "candidate_cell_recomputed_with_implementable_sign": {
+     "n": 21,
+     "mean": 1.8963,
+     "t": 1.839,
+     "win": 57.1
+    }
+   },
+   "drop_audit": {
+    "n_drops": 53,
+    "drops_where_perp_actually_listed_before_report": [],
+    "kept_min_days_since_listing": -0.6,
+    "kept_within_7d_of_listing": [
+     {
+      "symbol": "AMDUSDT",
+      "anchor": "2026-05-06",
+      "days_since_listing": -0.6
+     },
+     {
+      "symbol": "CSCOUSDT",
+      "anchor": "2026-05-15",
+      "days_since_listing": -0.6
+     },
+     {
+      "symbol": "HDUSDT",
+      "anchor": "2026-05-19",
+      "days_since_listing": 3.4
+     },
+     {
+      "symbol": "WMTUSDT",
+      "anchor": "2026-05-21",
+      "days_since_listing": 2.4
+     },
+     {
+      "symbol": "ADBEUSDT",
+      "anchor": "2026-06-12",
+      "days_since_listing": 0.6
+     }
+    ]
+   },
+   "post_dt_neq_anchor_detail": {
+    "n_violations": 1,
+    "detail": "CSCO afterhours 2026-05-13: stock day-0 = 05-14 but perp listed mid-day 05-15, so anchor=05-15 (entry one day later than design). Signal fully known before entry -> no lookahead; one-event design deviation only."
+   },
+   "frozen_rule_text_mismatch": {
+    "issue": "frozen rule says \"perp listed at REPORT time\", but implementation only requires a panel row within 4 calendar days; AMDUSDT (anchor 05-06) and CSCOUSDT (05-15) perps listed mid-RTH ON the anchor day, ADBEUSDT (06-12) 0.6d after listing \u2014 perp did NOT exist at report time for these. Entry itself was executable (perp live at 16:00 ET), so no lookahead, but first-day books are near-dead (see d_cost_realism) and the rule text must be aligned before July forward."
+   }
+  }
+ },
+ "verdict_summary": {
+  "replication": "exact (+2.1301 / t 2.255 / n 23 / win 60.9; 79 matched, 53 unlisted-drops all legitimate)",
+  "a": "not beta in disguise: beta_hat=1.23 strip -> +2.24 (t 2.36); beta=2 -> +2.60; self-excluded/median baskets ~unchanged; shorts fought a RISING market (side*mkt = -0.47, strip penalized not flattered)",
+  "b": "no dup symbols; LOSO min +1.60 (t 1.96, SNDK out); LODO(date) min +1.77 reproduces; top-2 events 27% of |pnl|",
+  "c": "B=5000 sign-permutation: candidate cell perm p=0.0054; max-t over gate-eligible (n>=20) family p=0.032; full 64-cell min-p family p=0.055; horizon-monotone-positive pattern appears in 20% of nulls (weak supporting evidence, as suspected)",
+  "d": "cost is the weak axis for SIZE not for sign: median entry 1m range 0.19%, 8/23 entries have <$100k qv in \u00b15min (HD $1.4k, TSM $10k, WMT $13k, CSCO $14k); breakeven RT cost 2.25%; at 0.5% RT cost mean +1.75 (t~1.85). Fine at user $50-100 clips; not scalable.",
+  "e": "no report_time=unknown; no lookahead; sign uses the entry print itself -> implementable 15:55-proxy version: 1/21 knife-edge flip (MSTR rxn -0.04%), recompute +1.90%/t 1.84 (direction intact); rule-text vs implementation mismatch on listing-day perps must be fixed pre-forward"
+ }
+}

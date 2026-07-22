@@ -1,0 +1,388 @@
+{
+  "replication_note": "Engine reproduces audited headline to <0.01pp on all horizons (f1 +0.470, f2 -0.023, f3 +0.050, f5 +0.788; perm-p f5=0.163; beta f1 +0.301 f5 +0.325). Faithful.",
+  "a_momentum": {
+    "desc": "Momentum disguise: does combined_score L/S add anything beyond free momentum_20d_pct?",
+    "A1_momentum_only_vs_combined": {
+      "f1": {
+        "combined_net_perday": 0.47,
+        "momentum_only_net_perday": -0.486,
+        "n": 17
+      },
+      "f2": {
+        "combined_net_perday": -0.023,
+        "momentum_only_net_perday": -0.489,
+        "n": 16
+      },
+      "f3": {
+        "combined_net_perday": 0.05,
+        "momentum_only_net_perday": -0.36,
+        "n": 16
+      },
+      "f5": {
+        "combined_net_perday": 0.788,
+        "momentum_only_net_perday": -0.032,
+        "n": 14
+      }
+    },
+    "A2_combined_LS_on_momentum_residual": {
+      "f1": {
+        "combined_LS_on_mom_residual_net_perday": 0.662,
+        "n": 17
+      },
+      "f2": {
+        "combined_LS_on_mom_residual_net_perday": 0.206,
+        "n": 16
+      },
+      "f3": {
+        "combined_LS_on_mom_residual_net_perday": 0.188,
+        "n": 16
+      },
+      "f5": {
+        "combined_LS_on_mom_residual_net_perday": 0.75,
+        "n": 14
+      }
+    },
+    "A3_avg_daily_spearman_combined_vs_momentum": 0.598
+  },
+  "b_single_day_name": {
+    "desc": "Single-day / single-name fragility (leave-one-out).",
+    "per_horizon": {
+      "f1": {
+        "full_net_perday": 0.47,
+        "LODO_worst": {
+          "removed_day": "2026-06-01",
+          "net_perday": -0.394,
+          "day_contrib_total": 14.293
+        },
+        "LODO_best": {
+          "removed_day": "2026-05-28",
+          "net_perday": 1.0,
+          "day_contrib_total": -8.015
+        },
+        "LODO_sign_flips": 2,
+        "LODO_n_days": 17,
+        "LONO_worst": {
+          "removed_ticker": "MRVL",
+          "net_perday": -0.51
+        },
+        "LONO_best": {
+          "removed_ticker": "ORCL",
+          "net_perday": 0.818
+        },
+        "LONO_sign_flips": 2,
+        "LONO_n_names": 30
+      },
+      "f2": {
+        "full_net_perday": -0.023,
+        "LODO_worst": {
+          "removed_day": "2026-06-10",
+          "net_perday": -0.5,
+          "day_contrib_total": 14.254
+        },
+        "LODO_best": {
+          "removed_day": "2026-05-27",
+          "net_perday": 0.302,
+          "day_contrib_total": -9.799
+        },
+        "LODO_sign_flips": 6,
+        "LODO_n_days": 16,
+        "LONO_worst": {
+          "removed_ticker": "MRVL",
+          "net_perday": -0.447
+        },
+        "LONO_best": {
+          "removed_ticker": "ORCL",
+          "net_perday": 0.137
+        },
+        "LONO_sign_flips": 4,
+        "LONO_n_names": 30
+      },
+      "f3": {
+        "full_net_perday": 0.05,
+        "LODO_worst": {
+          "removed_day": "2026-06-01",
+          "net_perday": -0.249,
+          "day_contrib_total": 13.621
+        },
+        "LODO_best": {
+          "removed_day": "2026-05-26",
+          "net_perday": 0.303,
+          "day_contrib_total": -11.226
+        },
+        "LODO_sign_flips": 6,
+        "LODO_n_days": 16,
+        "LONO_worst": {
+          "removed_ticker": "MRVL",
+          "net_perday": -0.376
+        },
+        "LONO_best": {
+          "removed_ticker": "ORCL",
+          "net_perday": 0.295
+        },
+        "LONO_sign_flips": 8,
+        "LONO_n_names": 30
+      },
+      "f5": {
+        "full_net_perday": 0.788,
+        "LODO_worst": {
+          "removed_day": "2026-06-10",
+          "net_perday": 0.567,
+          "day_contrib_total": 18.308
+        },
+        "LODO_best": {
+          "removed_day": "2026-05-26",
+          "net_perday": 1.034,
+          "day_contrib_total": -12.031
+        },
+        "LODO_sign_flips": 0,
+        "LODO_n_days": 14,
+        "LONO_worst": {
+          "removed_ticker": "MRVL",
+          "net_perday": 0.312
+        },
+        "LONO_best": {
+          "removed_ticker": "ORCL",
+          "net_perday": 1.044
+        },
+        "LONO_sign_flips": 0,
+        "LONO_n_names": 30
+      }
+    },
+    "day_concentration": {
+      "f1": {
+        "sum_net_total": 7.991,
+        "top1_day": [
+          "2026-06-01",
+          14.293
+        ],
+        "top1_share_of_positive_sum": 0.402
+      },
+      "f2": {
+        "sum_net_total": -0.747,
+        "top1_day": [
+          "2026-06-10",
+          14.254
+        ],
+        "top1_share_of_positive_sum": 0.334
+      },
+      "f3": {
+        "sum_net_total": 2.413,
+        "top1_day": [
+          "2026-06-01",
+          13.621
+        ],
+        "top1_share_of_positive_sum": 0.252
+      },
+      "f5": {
+        "sum_net_total": 55.158,
+        "top1_day": [
+          "2026-06-10",
+          18.308
+        ],
+        "top1_share_of_positive_sum": 0.206
+      }
+    }
+  },
+  "c_effective_n": {
+    "desc": "Effective N under overlapping holds.",
+    "per_horizon": {
+      "f1": {
+        "n_obs_overlap": 17,
+        "n_nonoverlap": 17,
+        "eff_N_calendar_div_hold": 18.0,
+        "naive_t_total": 0.35,
+        "overlap_deflated_t": 0.35,
+        "blockboot_95CI_mean_net_total": [
+          -1.837,
+          3.152
+        ],
+        "blockboot_two_sided_p": 0.737
+      },
+      "f2": {
+        "n_obs_overlap": 16,
+        "n_nonoverlap": 8,
+        "eff_N_calendar_div_hold": 9.0,
+        "naive_t_total": -0.03,
+        "overlap_deflated_t": -0.02,
+        "blockboot_95CI_mean_net_total": [
+          -4.122,
+          4.186
+        ],
+        "blockboot_two_sided_p": 0.964
+      },
+      "f3": {
+        "n_obs_overlap": 16,
+        "n_nonoverlap": 6,
+        "eff_N_calendar_div_hold": 6.0,
+        "naive_t_total": 0.07,
+        "overlap_deflated_t": 0.04,
+        "blockboot_95CI_mean_net_total": [
+          -4.782,
+          4.896
+        ],
+        "blockboot_two_sided_p": 0.946
+      },
+      "f5": {
+        "n_obs_overlap": 14,
+        "n_nonoverlap": 3,
+        "eff_N_calendar_div_hold": 3.6,
+        "naive_t_total": 1.48,
+        "overlap_deflated_t": 0.66,
+        "blockboot_95CI_mean_net_total": [
+          -0.477,
+          8.04
+        ],
+        "blockboot_two_sided_p": 0.086
+      }
+    }
+  },
+  "d_survivorship": {
+    "desc": "Survivorship/tradability: result sensitivity to the 30-name perp-mappable universe.",
+    "D1_ticker_bootstrap": {
+      "f1": {
+        "median_net_perday": 0.313,
+        "p05": -1.282,
+        "p95": 1.761,
+        "frac_positive": 0.641
+      },
+      "f5": {
+        "median_net_perday": 0.772,
+        "p05": -0.192,
+        "p95": 1.676,
+        "frac_positive": 0.908
+      }
+    },
+    "D2_f5_leg_theme_membership": {
+      "hardware": {
+        "long": 56,
+        "short": 22
+      },
+      "software": {
+        "long": 2,
+        "short": 36
+      }
+    },
+    "D3_distinct_names_f5": {
+      "long_names": [
+        "AMAT",
+        "AMD",
+        "ARM",
+        "COHR",
+        "MRVL",
+        "MU",
+        "ORCL",
+        "QCOM",
+        "SNDK",
+        "TSM",
+        "WDC"
+      ],
+      "short_names": [
+        "AMZN",
+        "AVGO",
+        "COHR",
+        "CRM",
+        "GOOGL",
+        "INTC",
+        "LITE",
+        "MSFT",
+        "NOW",
+        "ORCL",
+        "PLTR",
+        "QCOM"
+      ],
+      "n_long": 11,
+      "n_short": 12
+    }
+  },
+  "e_cost_stress": {
+    "desc": "Cost stress: per-leg 0.10% -> 0.15% -> 0.20%.",
+    "by_cost": {
+      "0.10_per_leg": {
+        "f1": {
+          "net_perday": 0.47,
+          "win": 0.35,
+          "t": 0.35,
+          "n": 17
+        },
+        "f2": {
+          "net_perday": -0.023,
+          "win": 0.38,
+          "t": -0.03,
+          "n": 16
+        },
+        "f3": {
+          "net_perday": 0.05,
+          "win": 0.56,
+          "t": 0.07,
+          "n": 16
+        },
+        "f5": {
+          "net_perday": 0.788,
+          "win": 0.64,
+          "t": 1.48,
+          "n": 14
+        }
+      },
+      "0.15_per_leg": {
+        "f1": {
+          "net_perday": 0.37,
+          "win": 0.29,
+          "t": 0.28,
+          "n": 17
+        },
+        "f2": {
+          "net_perday": -0.073,
+          "win": 0.38,
+          "t": -0.08,
+          "n": 16
+        },
+        "f3": {
+          "net_perday": 0.017,
+          "win": 0.56,
+          "t": 0.02,
+          "n": 16
+        },
+        "f5": {
+          "net_perday": 0.768,
+          "win": 0.64,
+          "t": 1.45,
+          "n": 14
+        }
+      },
+      "0.20_per_leg": {
+        "f1": {
+          "net_perday": 0.27,
+          "win": 0.29,
+          "t": 0.2,
+          "n": 17
+        },
+        "f2": {
+          "net_perday": -0.123,
+          "win": 0.38,
+          "t": -0.13,
+          "n": 16
+        },
+        "f3": {
+          "net_perday": -0.016,
+          "win": 0.56,
+          "t": -0.02,
+          "n": 16
+        },
+        "f5": {
+          "net_perday": 0.748,
+          "win": 0.64,
+          "t": 1.41,
+          "n": 14
+        }
+      }
+    }
+  },
+  "VERDICT": {
+    "verdict": "refuted (as a tradeable neutral L/S signal); confirms audit",
+    "a_momentum": "IS momentum/sector disguise. Long leg 95% tech_score==1.0; long-leg 20d-momentum exceeds short-leg EVERY day by avg +27pp. The free-momentum tilt is structural. Raw-momentum tercile L/S earns NEGATIVE only because combined adds a hardware-long/software-short SECTOR overlay (D2: long 56 hw/2 sw, short 36 sw/22 hw) on top of the momentum tilt. A2 residual-survival is an artifact of a weak 13-name single-factor control inside a momentum-clustered tercile, not independent alpha.",
+    "b_single_day_name": "Driven by single names/days. f5 LS sum +57.96 of which MRVL alone = +48.12 (83%); top-3 names >100%. Leave-one-name MRVL drops f5 from +0.79 to +0.31 (long-leg only). f1/f2/f3 flip sign on leave-one-day (2026-06-01) and leave-one-name (MRVL/ORCL). Only f5 has 0 sign-flips, but that is because the SAME concentrated long winners dominate.",
+    "c_effective_n": "Effective N tiny. f5 non-overlap n=3, calendar/hold=3.6. Naive t=1.48 deflates to 0.66 after overlap correction; block-bootstrap 2-sided p=0.086 (f5 best), 0.74/0.96/0.95 (f1/f2/f3). All 95% CIs straddle 0. No statistical power. Matches audit perm-p f5=0.156.",
+    "d_survivorship": "Tradability/sector bias confirmed. The 30 perp-mappable names ARE a hardware-vs-software split; the win is a sector bet. Ticker-bootstrap f5 frac-positive 0.91 but that just resamples the SAME MRVL-heavy universe; p05 dips to -0.19. Conclusion would not survive a different/larger universe and is not a name-agnostic signal.",
+    "e_cost_stress": "At 0.20%/leg: f1 0.47->0.27, f3 0.05->-0.02 (flips neg), f2 stays neg; only f5 survives nominally (0.788->0.748) but f5 IS the MRVL-driven, statistically-insignificant horizon. Cost erodes the already-marginal short horizons; the surviving one is the unreliable one."
+  }
+}

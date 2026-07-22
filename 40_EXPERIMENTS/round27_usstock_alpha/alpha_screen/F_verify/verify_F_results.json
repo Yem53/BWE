@@ -1,0 +1,507 @@
+{
+ "checks": {
+  "sample": {
+   "dev": {
+    "rows": 834,
+    "symbols": 29,
+    "days": 84,
+    "days_by_month": {
+     "2026-01": 2,
+     "2026-02": 19,
+     "2026-03": 22,
+     "2026-04": 21,
+     "2026-05": 20
+    },
+    "days_cs_ge9": 38,
+    "days_cs_ge20": 9
+   },
+   "val": {
+    "rows": 404,
+    "symbols": 45,
+    "days": 11,
+    "days_by_month": {
+     "2026-06": 11
+    },
+    "days_cs_ge9": 11,
+    "days_cs_ge20": 11
+   },
+   "panel_rows": 2262,
+   "rows_fund_overnight": 1238,
+   "rows_fund_pctile": 1238
+  },
+  "recompute": {
+   "tercile|harvest|rth": {
+    "dev": {
+     "n_days": 38,
+     "mean_net": 0.1114,
+     "sum_net": 4.232,
+     "t": 0.32,
+     "win": 0.474,
+     "mean_gross": 0.3932,
+     "mean_price": 0.3603,
+     "mean_fund": 0.0329,
+     "mean_cost": 0.2819,
+     "lag1_autocorr": -0.148
+    },
+    "lodo": {
+     "total": 4.232,
+     "max_day": "2026-04-20",
+     "max_day_frac": 1.052,
+     "max_name": "PAYPUSDT",
+     "max_name_frac": 2.813,
+     "top5": [
+      [
+       "PAYPUSDT",
+       11.906
+      ],
+      [
+       "MSTRUSDT",
+       6.772
+      ],
+      [
+       "CBRSUSDT",
+       1.831
+      ],
+      [
+       "FLNCUSDT",
+       1.786
+      ],
+      [
+       "QQQUSDT",
+       1.434
+      ]
+     ],
+     "verdict": "FAIL"
+    },
+    "cost15": {
+     "mean_net": -0.0296,
+     "sum_net": -1.123
+    }
+   },
+   "tercile|harvest|overnight": {
+    "dev": {
+     "n_days": 38,
+     "mean_net": -0.6757,
+     "sum_net": -25.675,
+     "t": -2.84,
+     "win": 0.316,
+     "mean_gross": -0.3938,
+     "mean_price": -0.4341,
+     "mean_fund": 0.0403,
+     "mean_cost": 0.2819,
+     "lag1_autocorr": -0.015
+    },
+    "lodo": {
+     "total": -25.675,
+     "verdict": "n/a"
+    },
+    "cost15": {
+     "mean_net": -0.8166,
+     "sum_net": -31.031
+    }
+   },
+   "tercile|momentum|rth": {
+    "dev": {
+     "n_days": 38,
+     "mean_net": -0.6751,
+     "sum_net": -25.654,
+     "t": -1.92,
+     "win": 0.447,
+     "mean_gross": -0.3932,
+     "mean_price": -0.3603,
+     "mean_fund": -0.0329,
+     "mean_cost": 0.2819,
+     "lag1_autocorr": -0.148
+    },
+    "lodo": {
+     "total": -25.654,
+     "verdict": "n/a"
+    },
+    "cost15": {
+     "mean_net": -0.816,
+     "sum_net": -31.01
+    }
+   },
+   "tercile|momentum|overnight": {
+    "dev": {
+     "n_days": 38,
+     "mean_net": 0.1119,
+     "sum_net": 4.254,
+     "t": 0.47,
+     "win": 0.605,
+     "mean_gross": 0.3938,
+     "mean_price": 0.4341,
+     "mean_fund": -0.0403,
+     "mean_cost": 0.2819,
+     "lag1_autocorr": -0.009
+    },
+    "lodo": {
+     "total": 4.254,
+     "max_day": "2026-05-07",
+     "max_day_frac": 0.839,
+     "max_name": "MUUSDT",
+     "max_name_frac": 1.653,
+     "top5": [
+      [
+       "MUUSDT",
+       7.032
+      ],
+      [
+       "SNDKUSDT",
+       2.387
+      ],
+      [
+       "PAYPUSDT",
+       2.253
+      ],
+      [
+       "RKLBUSDT",
+       2.04
+      ],
+      [
+       "NBISUSDT",
+       1.129
+      ]
+     ],
+     "verdict": "FAIL"
+    },
+    "cost15": {
+     "mean_net": -0.029,
+     "sum_net": -1.102
+    }
+   },
+   "decile|harvest|rth": {
+    "dev": {
+     "n_days": 9,
+     "mean_net": 0.188,
+     "sum_net": 1.692,
+     "t": 0.15,
+     "win": 0.667,
+     "mean_gross": 0.4913,
+     "mean_price": 0.4466,
+     "mean_fund": 0.0447,
+     "mean_cost": 0.3033,
+     "lag1_autocorr": -0.254
+    },
+    "lodo": {
+     "total": 1.692,
+     "max_day": "2026-05-18",
+     "max_day_frac": 2.116,
+     "max_name": "FLNCUSDT",
+     "max_name_frac": 1.779,
+     "top5": [
+      [
+       "FLNCUSDT",
+       3.009
+      ],
+      [
+       "MRVLUSDT",
+       2.389
+      ],
+      [
+       "HDUSDT",
+       1.689
+      ],
+      [
+       "WDCUSDT",
+       1.471
+      ],
+      [
+       "QCOMUSDT",
+       1.042
+      ]
+     ],
+     "verdict": "FAIL"
+    },
+    "cost15": {
+     "mean_net": 0.0363,
+     "sum_net": 0.327
+    }
+   },
+   "decile|harvest|overnight": {
+    "dev": {
+     "n_days": 9,
+     "mean_net": -1.073,
+     "sum_net": -9.657,
+     "t": -0.52,
+     "win": 0.222,
+     "mean_gross": -0.7696,
+     "mean_price": -0.8295,
+     "mean_fund": 0.0599,
+     "mean_cost": 0.3033,
+     "lag1_autocorr": -0.152
+    },
+    "lodo": {
+     "total": -9.657,
+     "verdict": "n/a"
+    },
+    "cost15": {
+     "mean_net": -1.2246,
+     "sum_net": -11.022
+    }
+   },
+   "decile|momentum|rth": {
+    "dev": {
+     "n_days": 9,
+     "mean_net": -0.7946,
+     "sum_net": -7.152,
+     "t": -0.65,
+     "win": 0.333,
+     "mean_gross": -0.4913,
+     "mean_price": -0.4466,
+     "mean_fund": -0.0447,
+     "mean_cost": 0.3033,
+     "lag1_autocorr": -0.264
+    },
+    "lodo": {
+     "total": -7.152,
+     "verdict": "n/a"
+    },
+    "cost15": {
+     "mean_net": -0.9463,
+     "sum_net": -8.517
+    }
+   },
+   "decile|momentum|overnight": {
+    "dev": {
+     "n_days": 9,
+     "mean_net": 0.4663,
+     "sum_net": 4.197,
+     "t": 0.23,
+     "win": 0.778,
+     "mean_gross": 0.7696,
+     "mean_price": 0.8295,
+     "mean_fund": -0.0599,
+     "mean_cost": 0.3033,
+     "lag1_autocorr": -0.156
+    },
+    "lodo": {
+     "total": 4.197,
+     "max_day": "2026-05-27",
+     "max_day_frac": 1.145,
+     "max_name": "NBISUSDT",
+     "max_name_frac": 1.211,
+     "top5": [
+      [
+       "NBISUSDT",
+       5.082
+      ],
+      [
+       "MRVLUSDT",
+       4.167
+      ],
+      [
+       "SOXLUSDT",
+       2.76
+      ],
+      [
+       "MUUSDT",
+       1.924
+      ],
+      [
+       "RKLBUSDT",
+       1.755
+      ]
+     ],
+     "verdict": "FAIL"
+    },
+    "cost15": {
+     "mean_net": 0.3146,
+     "sum_net": 2.832
+    }
+   }
+  },
+  "beta_strip": {
+   "tercile_harvest_rth": {
+    "n": 38,
+    "mean_beta_adj_price": 0.4671,
+    "t": 1.48,
+    "mean_long_beta": 0.91,
+    "mean_short_beta": 1.03
+   },
+   "tercile_momentum_overnight": {
+    "n": 38,
+    "mean_beta_adj_price": 0.3916,
+    "t": 1.76,
+    "mean_long_beta": 1.01,
+    "mean_short_beta": 0.83
+   },
+   "note": "beta est per-symbol OLS vs universe EW on dev; adj = LS_price - (betaL-betaS)*EW_day"
+  },
+  "momentum_proxy": {
+   "n_days_rho": 38,
+   "mean_rho_fund_vs_same_overnight_ret": 0.094,
+   "mean_rho_fund_vs_prev_rth_ret": -0.01,
+   "strategy_with_overnightret_signal": {
+    "n_days": 38,
+    "mean_net": -0.3295,
+    "sum_net": -12.521,
+    "t": -1.04,
+    "win": 0.526,
+    "mean_gross": -0.0528,
+    "mean_price": -0.0728,
+    "mean_fund": 0.02,
+    "mean_cost": 0.2767,
+    "lag1_autocorr": -0.119
+   },
+   "leg_overlap_fund_vs_ret_signal": 0.356
+  },
+  "lodo_rerun": {
+   "tercile_harvest_rth_dropPAYP": {
+    "drop": "PAYPUSDT",
+    "mean_net": -0.3416,
+    "sum_net": -12.982,
+    "t": -0.98,
+    "cost15_mean_net": -0.4779
+   },
+   "tercile_momentum_on_dropMU": {
+    "drop": "MUUSDT",
+    "mean_net": -0.1051,
+    "sum_net": -3.995,
+    "t": -0.53,
+    "cost15_mean_net": -0.2463
+   },
+   "decile_harvest_rth_dropFLNC": {
+    "drop": "FLNCUSDT",
+    "mean_net": -0.164,
+    "sum_net": -1.476,
+    "t": -0.13,
+    "cost15_mean_net": -0.309
+   },
+   "decile_momentum_on_dropNBIS": {
+    "drop": "NBISUSDT",
+    "mean_net": -0.3734,
+    "sum_net": -3.36,
+    "t": -0.15,
+    "cost15_mean_net": -0.5234
+   }
+  },
+  "lodo_day": {
+   "tercile_harvest_rth_drop_0420": {
+    "n_days": 37,
+    "mean_net": -0.0059,
+    "sum_net": -0.219,
+    "t": -0.02,
+    "win": 0.459,
+    "mean_gross": 0.2763,
+    "mean_price": 0.2437,
+    "mean_fund": 0.0326,
+    "mean_cost": 0.2822,
+    "lag1_autocorr": -0.262
+   },
+   "tercile_momentum_on_drop_0507": {
+    "n_days": 37,
+    "mean_net": 0.0185,
+    "sum_net": 0.686,
+    "t": 0.08,
+    "win": 0.595,
+    "mean_gross": 0.3002,
+    "mean_price": 0.3377,
+    "mean_fund": -0.0375,
+    "mean_cost": 0.2817,
+    "lag1_autocorr": -0.027
+   }
+  },
+  "overlap": {
+   "n_overnight_intervals": 38,
+   "n_overlapping_pairs": 0,
+   "lag1_autocorr_harvest_rth": -0.148,
+   "lag1_autocorr_momentum_on": -0.009,
+   "note": "overnight hold D_close->D+1_open; consecutive intervals disjoint if no overlap pairs"
+  },
+  "listing_bias": {
+   "tercile_days_by_month": {
+    "2026-04": 18,
+    "2026-05": 20
+   },
+   "n_symbols_funding_start_by_month": {
+    "2026-01": 1,
+    "2026-02": 3,
+    "2026-03": 4,
+    "2026-04": 6,
+    "2026-05": 16,
+    "2026-06": 15
+   },
+   "median_qv_early": 7490855.0,
+   "median_qv_late": 11444110.0,
+   "harvest_rth_early": {
+    "n": 18,
+    "mean_net": 0.8112
+   },
+   "harvest_rth_late": {
+    "n": 20,
+    "mean_net": -0.5184
+   },
+   "momentum_on_early": {
+    "n": 18,
+    "mean_net": -0.2885
+   },
+   "momentum_on_late": {
+    "n": 20,
+    "mean_net": 0.4723
+   }
+  },
+  "dst_spot": {
+   "events": [
+    {
+     "symbol": "TSLAUSDT",
+     "date": "2026-02-02",
+     "open_ET": "2026-02-02 09:30:00",
+     "close_ET": "2026-02-02 15:59:00",
+     "panel_fund_overnight": -0.9401020000000001,
+     "sqlite_fund_prevclose_to_open": -0.940102,
+     "match": true,
+     "n_settle_overnight": 8,
+     "n_settle_rth": 1
+    },
+    {
+     "symbol": "COINUSDT",
+     "date": "2026-03-02",
+     "open_ET": "2026-03-02 09:30:00",
+     "close_ET": "2026-03-02 15:59:00",
+     "panel_fund_overnight": -0.27094399999999996,
+     "sqlite_fund_prevclose_to_open": -0.270944,
+     "match": true,
+     "n_settle_overnight": 8,
+     "n_settle_rth": 1
+    },
+    {
+     "symbol": "COINUSDT",
+     "date": "2026-05-01",
+     "open_ET": "2026-05-01 09:30:00",
+     "close_ET": "2026-05-01 15:59:00",
+     "panel_fund_overnight": 0.0,
+     "sqlite_fund_prevclose_to_open": 0.0,
+     "match": true,
+     "n_settle_overnight": 2,
+     "n_settle_rth": 1
+    },
+    {
+     "symbol": "COINUSDT",
+     "date": "2026-03-09",
+     "open_ET": "2026-03-09 09:30:00",
+     "close_ET": "2026-03-09 15:59:00",
+     "panel_fund_overnight": -1.9215240000000002,
+     "sqlite_fund_prevclose_to_open": -1.921524,
+     "match": true,
+     "n_settle_overnight": 8,
+     "n_settle_rth": 1
+    }
+   ],
+   "funding_gap_ms_top": [
+    [
+     28800000,
+     2095
+    ],
+    [
+     28799999,
+     249
+    ],
+    [
+     28800001,
+     246
+    ]
+   ]
+  }
+ }
+}

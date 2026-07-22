@@ -1,0 +1,330 @@
+{
+  "meta": {
+    "n_rows": 297,
+    "n_dates": 18,
+    "universe": {
+      "distinct_tickers": 30,
+      "median_names_per_day": 13.0,
+      "min": 8,
+      "max": 30
+    }
+  },
+  "horizons": {
+    "f1": {
+      "perm_combined": {
+        "observed": 0.8258063375468041,
+        "null_mean": -0.01713560941087362,
+        "p_right": 0.20789605197401298,
+        "n_days": 17,
+        "n_perm": 2000
+      },
+      "perm_combined_winsor": {
+        "observed": 0.1675030913458558,
+        "null_mean": -0.007991148531991548,
+        "p_right": 0.40729635182408797,
+        "n_days": 17,
+        "n_perm": 2000
+      },
+      "perm_momentum": {
+        "observed": -0.28570131824978984,
+        "null_mean": -0.01713560941087362,
+        "p_right": 0.6021989005497251,
+        "n_days": 17,
+        "n_perm": 2000
+      },
+      "baselines": {
+        "combined": 0.8258063375468041,
+        "momentum": -0.28570131824978984,
+        "sentiment": 0.9167458949472141,
+        "tech": -0.4719314809670357,
+        "combined_winsor_headline": 0.1675030913458558,
+        "combined_minus_momentum": 1.111507655796594,
+        "combined_minus_sentiment": -0.09093955740041004
+      },
+      "lodo": {
+        "full": 0.8258063375468041,
+        "biggest_day": "2026-06-01",
+        "biggest_day_ls": 14.492672087448982,
+        "biggest_day_share_of_sum": 1.032336619410842,
+        "mean_without_biggest": -0.028372771822081755,
+        "any_sign_flip": true
+      },
+      "leave_one_name": {
+        "raw_mean": 0.8258063375468041,
+        "drop_largest_abs_mean": 0.4857406349796753,
+        "drop_dev_from_median_mean": 0.9937711399391008
+      },
+      "single_name_share": {
+        "median_share_vs_LS": 0.8142128975549155,
+        "median_share_vs_sumabs": 0.30133578055507415,
+        "n_days": 17
+      },
+      "block_boot": {
+        "mean": 0.8258063375468041,
+        "ci_lo": -1.2348177423739994,
+        "ci_hi": 3.367196061434512,
+        "excludes_zero": false
+      },
+      "cost_stress": {
+        "cpl_0.1": {
+          "daily_rebal_net_total_mean": 0.6258063375468043,
+          "win_rate": 0.35294117647058826,
+          "nonoverlap_net_mean": 0.6258063375468043,
+          "nonoverlap_n_books": 17,
+          "nonoverlap_net_t": 0.5206157229086054
+        },
+        "cpl_0.2": {
+          "daily_rebal_net_total_mean": 0.4258063375468041,
+          "win_rate": 0.29411764705882354,
+          "nonoverlap_net_mean": 0.4258063375468041,
+          "nonoverlap_n_books": 17,
+          "nonoverlap_net_t": 0.35423334814728596
+        },
+        "cpl_0.3": {
+          "daily_rebal_net_total_mean": 0.22580633754680432,
+          "win_rate": 0.29411764705882354,
+          "nonoverlap_net_mean": 0.22580633754680432,
+          "nonoverlap_n_books": 17,
+          "nonoverlap_net_t": 0.18785097338596682
+        }
+      }
+    },
+    "f2": {
+      "perm_combined": {
+        "observed": 0.5773719819413752,
+        "null_mean": 0.0010499641125472428,
+        "p_right": 0.2768615692153923,
+        "n_days": 16,
+        "n_perm": 2000
+      },
+      "perm_combined_winsor": {
+        "observed": 0.11088411724870317,
+        "null_mean": 0.005252948902646838,
+        "p_right": 0.44677661169415295,
+        "n_days": 16,
+        "n_perm": 2000
+      },
+      "perm_momentum": {
+        "observed": -0.7770097782219537,
+        "null_mean": 0.0010499641125472428,
+        "p_right": 0.7891054472763618,
+        "n_days": 16,
+        "n_perm": 2000
+      },
+      "baselines": {
+        "combined": 0.5773719819413752,
+        "momentum": -0.7770097782219537,
+        "sentiment": 0.21480988575833937,
+        "tech": 1.0549592011102034,
+        "combined_winsor_headline": 0.11088411724870317,
+        "combined_minus_momentum": 1.3543817601633288,
+        "combined_minus_sentiment": 0.3625620961830358
+      },
+      "lodo": {
+        "full": 0.5773719819413752,
+        "biggest_day": "2026-06-01",
+        "biggest_day_ls": 13.93435290333643,
+        "biggest_day_share_of_sum": 1.5083812233669411,
+        "mean_without_biggest": -0.3130934128182951,
+        "any_sign_flip": true
+      },
+      "leave_one_name": {
+        "raw_mean": 0.5773719819413752,
+        "drop_largest_abs_mean": 0.1500323964648178,
+        "drop_dev_from_median_mean": 0.5508710372281702
+      },
+      "single_name_share": {
+        "median_share_vs_LS": 0.8874968804878597,
+        "median_share_vs_sumabs": 0.21785561617842378,
+        "n_days": 16
+      },
+      "block_boot": {
+        "mean": 0.5773719819413752,
+        "ci_lo": -3.030017484738856,
+        "ci_hi": 4.481657295016864,
+        "excludes_zero": false
+      },
+      "cost_stress": {
+        "cpl_0.1": {
+          "daily_rebal_net_total_mean": 0.37737198194137567,
+          "win_rate": 0.375,
+          "nonoverlap_net_mean": -0.3677798917359455,
+          "nonoverlap_n_books": 8,
+          "nonoverlap_net_t": -0.2015975110273826
+        },
+        "cpl_0.2": {
+          "daily_rebal_net_total_mean": 0.17737198194137482,
+          "win_rate": 0.3125,
+          "nonoverlap_net_mean": -0.5677798917359456,
+          "nonoverlap_n_books": 8,
+          "nonoverlap_net_t": -0.31122694730560274
+        },
+        "cpl_0.3": {
+          "daily_rebal_net_total_mean": -0.022628018058624466,
+          "win_rate": 0.3125,
+          "nonoverlap_net_mean": -0.7677798917359456,
+          "nonoverlap_n_books": 8,
+          "nonoverlap_net_t": -0.4208563835838229
+        }
+      }
+    },
+    "f3": {
+      "perm_combined": {
+        "observed": 0.5014785603879992,
+        "null_mean": 0.007545698862894272,
+        "p_right": 0.3503248375812094,
+        "n_days": 16,
+        "n_perm": 2000
+      },
+      "perm_combined_winsor": {
+        "observed": -0.21577643968656113,
+        "null_mean": 0.006804664124563284,
+        "p_right": 0.5982008995502249,
+        "n_days": 16,
+        "n_perm": 2000
+      },
+      "perm_momentum": {
+        "observed": -0.8795267243018131,
+        "null_mean": 0.007545698862894272,
+        "p_right": 0.7621189405297352,
+        "n_days": 16,
+        "n_perm": 2000
+      },
+      "baselines": {
+        "combined": 0.5014785603879992,
+        "momentum": -0.8795267243018131,
+        "sentiment": -0.3669199334861091,
+        "tech": 1.3697399974511186,
+        "combined_winsor_headline": -0.21577643968656113,
+        "combined_minus_momentum": 1.3810052846898122,
+        "combined_minus_sentiment": 0.8683984938741083
+      },
+      "lodo": {
+        "full": 0.5014785603879992,
+        "biggest_day": "2026-06-01",
+        "biggest_day_ls": 13.821453438936596,
+        "biggest_day_share_of_sum": 1.7225877797550797,
+        "mean_without_biggest": -0.38651976484857387,
+        "any_sign_flip": true
+      },
+      "leave_one_name": {
+        "raw_mean": 0.5014785603879992,
+        "drop_largest_abs_mean": 0.28806558283186834,
+        "drop_dev_from_median_mean": 0.04488934998952754
+      },
+      "single_name_share": {
+        "median_share_vs_LS": 0.8552322063175344,
+        "median_share_vs_sumabs": 0.25501152899890867,
+        "n_days": 16
+      },
+      "block_boot": {
+        "mean": 0.5014785603879992,
+        "ci_lo": -3.8556817546426005,
+        "ci_hi": 4.754036801585041,
+        "excludes_zero": false
+      },
+      "cost_stress": {
+        "cpl_0.1": {
+          "daily_rebal_net_total_mean": 0.30147856038799903,
+          "win_rate": 0.5,
+          "nonoverlap_net_mean": 1.3452069455370246,
+          "nonoverlap_n_books": 6,
+          "nonoverlap_net_t": 0.5502618756427389
+        },
+        "cpl_0.2": {
+          "daily_rebal_net_total_mean": 0.1014785603879993,
+          "win_rate": 0.5,
+          "nonoverlap_net_mean": 1.1452069455370244,
+          "nonoverlap_n_books": 6,
+          "nonoverlap_net_t": 0.4684511360434029
+        },
+        "cpl_0.3": {
+          "daily_rebal_net_total_mean": -0.09852143961200088,
+          "win_rate": 0.5,
+          "nonoverlap_net_mean": 0.9452069455370246,
+          "nonoverlap_n_books": 6,
+          "nonoverlap_net_t": 0.3866403964440669
+        }
+      }
+    },
+    "f5": {
+      "perm_combined": {
+        "observed": 3.810103837977677,
+        "null_mean": -0.02641859955640819,
+        "p_right": 0.031984007996002,
+        "n_days": 14,
+        "n_perm": 2000
+      },
+      "perm_combined_winsor": {
+        "observed": 1.7241482950102573,
+        "null_mean": -0.01914517256472941,
+        "p_right": 0.10294852573713144,
+        "n_days": 14,
+        "n_perm": 2000
+      },
+      "perm_momentum": {
+        "observed": 0.03756597199463802,
+        "null_mean": -0.02641859955640819,
+        "p_right": 0.4917541229385307,
+        "n_days": 14,
+        "n_perm": 2000
+      },
+      "baselines": {
+        "combined": 3.810103837977677,
+        "momentum": 0.03756597199463802,
+        "sentiment": 3.7610427885753857,
+        "tech": -1.663245666859502,
+        "combined_winsor_headline": 1.7241482950102573,
+        "combined_minus_momentum": 3.772537865983039,
+        "combined_minus_sentiment": 0.04906104940229117
+      },
+      "lodo": {
+        "full": 3.810103837977677,
+        "biggest_day": "2026-06-10",
+        "biggest_day_ls": 17.17737028210032,
+        "biggest_day_share_of_sum": 0.3220266618248559,
+        "mean_without_biggest": 2.7818525730451658,
+        "any_sign_flip": false
+      },
+      "leave_one_name": {
+        "raw_mean": 3.810103837977677,
+        "drop_largest_abs_mean": 1.4933342246193266,
+        "drop_dev_from_median_mean": 1.5893709963577582
+      },
+      "single_name_share": {
+        "median_share_vs_LS": 0.8142525879385991,
+        "median_share_vs_sumabs": 0.26416279505975515,
+        "n_days": 14
+      },
+      "block_boot": {
+        "mean": 3.810103837977677,
+        "ci_lo": -0.2593394707027647,
+        "ci_hi": 7.4253085831659815,
+        "excludes_zero": false
+      },
+      "cost_stress": {
+        "cpl_0.1": {
+          "daily_rebal_net_total_mean": 3.6101038379776775,
+          "win_rate": 0.5714285714285714,
+          "nonoverlap_net_mean": 6.871252245410797,
+          "nonoverlap_n_books": 3,
+          "nonoverlap_net_t": 3.307877932720721
+        },
+        "cpl_0.2": {
+          "daily_rebal_net_total_mean": 3.4101038379776765,
+          "win_rate": 0.5714285714285714,
+          "nonoverlap_net_mean": 6.671252245410795,
+          "nonoverlap_n_books": 3,
+          "nonoverlap_net_t": 3.2115962706720014
+        },
+        "cpl_0.3": {
+          "daily_rebal_net_total_mean": 3.2101038379776767,
+          "win_rate": 0.5,
+          "nonoverlap_net_mean": 6.4712522454107955,
+          "nonoverlap_n_books": 3,
+          "nonoverlap_net_t": 3.1153146086232826
+        }
+      }
+    }
+  }
+}

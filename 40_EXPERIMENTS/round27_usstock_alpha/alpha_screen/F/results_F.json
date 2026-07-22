@@ -1,0 +1,345 @@
+{
+ "cells": {
+  "tercile|harvest|rth": {
+   "dev": {
+    "n_days": 38,
+    "mean_net": 0.1114,
+    "sum_net": 4.232,
+    "t": 0.32,
+    "win": 0.474,
+    "mean_gross": 0.3932,
+    "mean_price_comp": 0.3603,
+    "mean_fund_comp": 0.0329,
+    "mean_cost": 0.2819,
+    "mean_long_excess": 0.284,
+    "mean_short_excess": 0.0763,
+    "mean_k": 5.2,
+    "mean_cs": 17.0
+   },
+   "dev_lodo": {
+    "total": 4.232,
+    "max_day": "2026-04-20",
+    "max_day_frac": 1.052,
+    "max_name": "PAYPUSDT",
+    "max_name_frac": 2.813,
+    "top5_names": [
+     [
+      "PAYPUSDT",
+      11.906
+     ],
+     [
+      "MSTRUSDT",
+      6.772
+     ],
+     [
+      "CBRSUSDT",
+      1.831
+     ],
+     [
+      "FLNCUSDT",
+      1.786
+     ],
+     [
+      "QQQUSDT",
+      1.434
+     ]
+    ],
+    "verdict": "FAIL"
+   },
+   "dev_cost1_5x": {
+    "mean_net": -0.0296,
+    "sum_net": -1.123
+   }
+  },
+  "tercile|harvest|overnight": {
+   "dev": {
+    "n_days": 38,
+    "mean_net": -0.6757,
+    "sum_net": -25.675,
+    "t": -2.84,
+    "win": 0.316,
+    "mean_gross": -0.3938,
+    "mean_price_comp": -0.4341,
+    "mean_fund_comp": 0.0403,
+    "mean_cost": 0.2819,
+    "mean_long_excess": -0.1952,
+    "mean_short_excess": -0.2388,
+    "mean_k": 5.2,
+    "mean_cs": 17.0
+   },
+   "dev_lodo": {
+    "total": -25.675,
+    "verdict": "n/a (total<=0)"
+   },
+   "dev_cost1_5x": {
+    "mean_net": -0.8166,
+    "sum_net": -31.031
+   }
+  },
+  "tercile|momentum|rth": {
+   "dev": {
+    "n_days": 38,
+    "mean_net": -0.6751,
+    "sum_net": -25.654,
+    "t": -1.92,
+    "win": 0.447,
+    "mean_gross": -0.3932,
+    "mean_price_comp": -0.3603,
+    "mean_fund_comp": -0.0329,
+    "mean_cost": 0.2819,
+    "mean_long_excess": -0.0763,
+    "mean_short_excess": -0.284,
+    "mean_k": 5.2,
+    "mean_cs": 17.0
+   },
+   "dev_lodo": {
+    "total": -25.654,
+    "verdict": "n/a (total<=0)"
+   },
+   "dev_cost1_5x": {
+    "mean_net": -0.816,
+    "sum_net": -31.01
+   }
+  },
+  "tercile|momentum|overnight": {
+   "dev": {
+    "n_days": 38,
+    "mean_net": 0.1119,
+    "sum_net": 4.254,
+    "t": 0.47,
+    "win": 0.605,
+    "mean_gross": 0.3938,
+    "mean_price_comp": 0.4341,
+    "mean_fund_comp": -0.0403,
+    "mean_cost": 0.2819,
+    "mean_long_excess": 0.2388,
+    "mean_short_excess": 0.1952,
+    "mean_k": 5.2,
+    "mean_cs": 17.0
+   },
+   "dev_lodo": {
+    "total": 4.254,
+    "max_day": "2026-05-07",
+    "max_day_frac": 0.839,
+    "max_name": "MUUSDT",
+    "max_name_frac": 1.653,
+    "top5_names": [
+     [
+      "MUUSDT",
+      7.032
+     ],
+     [
+      "SNDKUSDT",
+      2.387
+     ],
+     [
+      "PAYPUSDT",
+      2.253
+     ],
+     [
+      "RKLBUSDT",
+      2.04
+     ],
+     [
+      "NBISUSDT",
+      1.129
+     ]
+    ],
+    "verdict": "FAIL"
+   },
+   "dev_cost1_5x": {
+    "mean_net": -0.029,
+    "sum_net": -1.102
+   }
+  },
+  "decile|harvest|rth": {
+   "dev": {
+    "n_days": 9,
+    "mean_net": 0.188,
+    "sum_net": 1.692,
+    "t": 0.15,
+    "win": 0.667,
+    "mean_gross": 0.4913,
+    "mean_price_comp": 0.4466,
+    "mean_fund_comp": 0.0447,
+    "mean_cost": 0.3033,
+    "mean_long_excess": 0.2791,
+    "mean_short_excess": 0.1675,
+    "mean_k": 2.0,
+    "mean_cs": 26.6
+   },
+   "dev_lodo": {
+    "total": 1.692,
+    "max_day": "2026-05-18",
+    "max_day_frac": 2.116,
+    "max_name": "FLNCUSDT",
+    "max_name_frac": 1.779,
+    "top5_names": [
+     [
+      "FLNCUSDT",
+      3.009
+     ],
+     [
+      "MRVLUSDT",
+      2.389
+     ],
+     [
+      "HDUSDT",
+      1.689
+     ],
+     [
+      "WDCUSDT",
+      1.471
+     ],
+     [
+      "QCOMUSDT",
+      1.042
+     ]
+    ],
+    "verdict": "FAIL"
+   },
+   "dev_cost1_5x": {
+    "mean_net": 0.0363,
+    "sum_net": 0.327
+   }
+  },
+  "decile|harvest|overnight": {
+   "dev": {
+    "n_days": 9,
+    "mean_net": -1.073,
+    "sum_net": -9.657,
+    "t": -0.52,
+    "win": 0.222,
+    "mean_gross": -0.7696,
+    "mean_price_comp": -0.8295,
+    "mean_fund_comp": 0.0599,
+    "mean_cost": 0.3033,
+    "mean_long_excess": 0.9755,
+    "mean_short_excess": -1.805,
+    "mean_k": 2.0,
+    "mean_cs": 26.6
+   },
+   "dev_lodo": {
+    "total": -9.657,
+    "verdict": "n/a (total<=0)"
+   },
+   "dev_cost1_5x": {
+    "mean_net": -1.2246,
+    "sum_net": -11.022
+   }
+  },
+  "decile|momentum|rth": {
+   "dev": {
+    "n_days": 9,
+    "mean_net": -0.7946,
+    "sum_net": -7.152,
+    "t": -0.65,
+    "win": 0.333,
+    "mean_gross": -0.4913,
+    "mean_price_comp": -0.4466,
+    "mean_fund_comp": -0.0447,
+    "mean_cost": 0.3033,
+    "mean_long_excess": -0.1675,
+    "mean_short_excess": -0.2791,
+    "mean_k": 2.0,
+    "mean_cs": 26.6
+   },
+   "dev_lodo": {
+    "total": -7.152,
+    "verdict": "n/a (total<=0)"
+   },
+   "dev_cost1_5x": {
+    "mean_net": -0.9463,
+    "sum_net": -8.517
+   }
+  },
+  "decile|momentum|overnight": {
+   "dev": {
+    "n_days": 9,
+    "mean_net": 0.4663,
+    "sum_net": 4.197,
+    "t": 0.23,
+    "win": 0.778,
+    "mean_gross": 0.7696,
+    "mean_price_comp": 0.8295,
+    "mean_fund_comp": -0.0599,
+    "mean_cost": 0.3033,
+    "mean_long_excess": 1.805,
+    "mean_short_excess": -0.9755,
+    "mean_k": 2.0,
+    "mean_cs": 26.6
+   },
+   "dev_lodo": {
+    "total": 4.197,
+    "max_day": "2026-05-27",
+    "max_day_frac": 1.145,
+    "max_name": "NBISUSDT",
+    "max_name_frac": 1.211,
+    "top5_names": [
+     [
+      "NBISUSDT",
+      5.082
+     ],
+     [
+      "MRVLUSDT",
+      4.167
+     ],
+     [
+      "SOXLUSDT",
+      2.76
+     ],
+     [
+      "MUUSDT",
+      1.924
+     ],
+     [
+      "RKLBUSDT",
+      1.755
+     ]
+    ],
+    "verdict": "FAIL"
+   },
+   "dev_cost1_5x": {
+    "mean_net": 0.3146,
+    "sum_net": 2.832
+   }
+  }
+ },
+ "n_cells": 8,
+ "persistence": {
+  "n_day_pairs": 43,
+  "mean_rho": 0.31,
+  "median_rho": 0.297,
+  "pct_positive": 0.767
+ },
+ "tercile_leg_retention_dev": 0.452,
+ "sample": {
+  "dev": {
+   "rows": 834,
+   "symbols": 29,
+   "days": 84,
+   "days_by_month": {
+    "2026-01": 2,
+    "2026-02": 19,
+    "2026-03": 22,
+    "2026-04": 21,
+    "2026-05": 20
+   },
+   "days_cs_ge9": 38,
+   "days_cs_ge20": 9
+  },
+  "val": {
+   "rows": 404,
+   "symbols": 45,
+   "days": 11,
+   "days_by_month": {
+    "2026-06": 11
+   },
+   "days_cs_ge9": 11,
+   "days_cs_ge20": 11
+  },
+  "panel_rows_total": 2262,
+  "rows_with_funding": 1238
+ },
+ "frozen_for_val": []
+}

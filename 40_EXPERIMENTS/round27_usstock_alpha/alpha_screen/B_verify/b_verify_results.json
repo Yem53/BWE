@@ -1,0 +1,585 @@
+{
+ "funding_syms_with_records": 45,
+ "f_tz_dst_checks": {
+  "2026-03-01 18:00 ET (EST)": {
+   "utc": "2026-03-01 23:00",
+   "expect_utc_hour": 23,
+   "ok": true
+  },
+  "2026-03-08 18:00 ET (EDT, DST day)": {
+   "utc": "2026-03-08 22:00",
+   "expect_utc_hour": 22,
+   "ok": true
+  },
+  "2026-06-07 18:00 ET (EDT)": {
+   "utc": "2026-06-07 22:00",
+   "expect_utc_hour": 22,
+   "ok": true
+  },
+  "2026-02-08 18:00 ET (EST)": {
+   "utc": "2026-02-08 23:00",
+   "expect_utc_hour": 23,
+   "ok": true
+  },
+  "panel_open_2026-01-28": {
+   "et": "09:30",
+   "utc": "14:30",
+   "ok": true
+  },
+  "panel_open_2026-02-02": {
+   "et": "09:45",
+   "utc": "14:45",
+   "ok": false
+  },
+  "panel_open_2026-03-09": {
+   "et": "09:30",
+   "utc": "13:30",
+   "ok": true
+  },
+  "panel_open_2026-04-13": {
+   "et": "09:30",
+   "utc": "13:30",
+   "ok": true
+  },
+  "panel_open_2026-06-08": {
+   "et": "09:30",
+   "utc": "13:30",
+   "ok": true
+  }
+ },
+ "paths": {
+  "dev": 206,
+  "val": 199,
+  "anchor_stale_min_median": 0.0,
+  "anchor_stale_min_p90": 0.0,
+  "preopen_vs_open_bp_median": 0.0
+ },
+ "survivor_cell_P2TS_fade_thr1_leg_o60": {
+  "dev_reproduce": {
+   "n": 53,
+   "mean": 1.2098,
+   "t_iid": 2.18,
+   "n_dates": 11,
+   "date_mean": 1.0538,
+   "t_clustered_by_date": 1.32,
+   "sum": 64.12
+  },
+  "val_reproduce": {
+   "n": 124,
+   "mean": 0.1136,
+   "t_iid": 0.28,
+   "n_dates": 3,
+   "date_mean": 0.4781,
+   "t_clustered_by_date": 0.47,
+   "sum": 14.09
+  },
+  "audited_claim": {
+   "dev": {
+    "n": 53,
+    "mean_net": 1.2098,
+    "t": 2.18,
+    "strip": 0.5276
+   },
+   "val": {
+    "n": 124,
+    "mean_net": 0.1136,
+    "t": 0.28,
+    "strip": 0.0826
+   }
+  },
+  "a_dev_stripped": {
+   "n": 53,
+   "mean": 0.5276,
+   "t_iid": 1.07,
+   "n_dates": 11,
+   "date_mean": 0.2503,
+   "t_clustered_by_date": 0.44,
+   "sum": 27.96
+  },
+  "a_val_stripped": {
+   "n": 124,
+   "mean": 0.0826,
+   "t_iid": 0.22,
+   "n_dates": 3,
+   "date_mean": 0.1624,
+   "t_clustered_by_date": 0.26,
+   "sum": 10.24
+  },
+  "b_lodo_dev_date": {
+   "best": "2026-04-13",
+   "best_contrib": 21.55,
+   "total": 64.12,
+   "share": 0.336,
+   "wo_best_mean": 0.8869,
+   "wo_best_t": 1.54,
+   "per_key": {
+    "2026-02-09": -2.15,
+    "2026-03-02": 1.97,
+    "2026-03-09": 19.21,
+    "2026-03-23": 10.89,
+    "2026-03-30": -1.66,
+    "2026-04-13": 21.55,
+    "2026-04-20": 6.19,
+    "2026-04-27": 0.52,
+    "2026-05-04": -16.82,
+    "2026-05-11": 13.12,
+    "2026-05-18": 11.29
+   }
+  },
+  "b_lodo_dev_sym": {
+   "best": "MSTRUSDT",
+   "best_contrib": 17.58,
+   "total": 64.12,
+   "share": 0.274,
+   "wo_best_mean": 0.9903,
+   "wo_best_t": 1.69,
+   "per_key": {
+    "AMZNUSDT": 0.0,
+    "COINUSDT": 12.12,
+    "CRCLUSDT": 5.09,
+    "EWJUSDT": 0.69,
+    "EWYUSDT": -2.21,
+    "GOOGLUSDT": 0.77,
+    "HOODUSDT": 1.6,
+    "INTCUSDT": 1.29,
+    "MSTRUSDT": 17.58,
+    "MUUSDT": 1.25,
+    "NVDAUSDT": 1.82,
+    "PAYPUSDT": -0.76,
+    "PLTRUSDT": -0.63,
+    "QCOMUSDT": 14.21,
+    "SNDKUSDT": 0.62,
+    "TSLAUSDT": -1.73,
+    "TSMUSDT": 0.56,
+    "USARUSDT": 11.86
+   }
+  },
+  "b_lodo_val_date": {
+   "best": "2026-06-08",
+   "best_contrib": 80.12,
+   "total": 14.09,
+   "share": 5.686,
+   "wo_best_mean": -0.7256,
+   "wo_best_t": -1.72,
+   "per_key": {
+    "2026-06-01": 0.97,
+    "2026-06-08": 80.12,
+    "2026-06-15": -67.0
+   }
+  },
+  "b_lodo_val_sym": {
+   "best": "CBRSUSDT",
+   "best_contrib": 27.48,
+   "total": 14.09,
+   "share": 1.95,
+   "wo_best_mean": -0.1106,
+   "wo_best_t": -0.28,
+   "per_key": {
+    "AAOIUSDT": -5.8,
+    "ADBEUSDT": -0.53,
+    "AMATUSDT": 0.54,
+    "AMDUSDT": 0.6,
+    "ARMUSDT": -8.91,
+    "ASMLUSDT": 0.36,
+    "ASTSUSDT": 9.18,
+    "AVGOUSDT": 2.12,
+    "AXTIUSDT": -4.87,
+    "BABAUSDT": 2.16,
+    "BBXUSDT": -0.91,
+    "BEUSDT": -1.57,
+    "BMNRUSDT": -4.09,
+    "BXUSDT": -2.46,
+    "CBRSUSDT": 27.48,
+    "COHRUSDT": -5.53,
+    "COINUSDT": -3.36,
+    "CRCLUSDT": -6.93,
+    "CRMUSDT": 6.06,
+    "CRWDUSDT": 0.53,
+    "CRWVUSDT": -8.36,
+    "CSCOUSDT": 0.86,
+    "DELLUSDT": -2.86,
+    "DISUSDT": 1.53,
+    "DRAMUSDT": -7.18,
+    "EWJUSDT": 3.0,
+    "EWTUSDT": 2.96,
+    "EWYUSDT": -3.7,
+    "FLNCUSDT": 16.05,
+    "GLWUSDT": -1.73,
+    "GMEUSDT": 2.15,
+    "GOOGLUSDT": -0.93,
+    "HDUSDT": 2.95,
+    "HIMSUSDT": -3.23,
+    "HOODUSDT": -1.51,
+    "IBMUSDT": 4.73,
+    "INTCUSDT": -0.73,
+    "IRENUSDT": 0.8,
+    "IWMUSDT": 0.77,
+    "JPMUSDT": 2.39,
+    "LITEUSDT": 2.64,
+    "METAUSDT": -2.63,
+    "MRVLUSDT": -5.69,
+    "MSFTUSDT": 0.41,
+    "MSTRUSDT": -0.69,
+    "MUUSDT": -11.51,
+    "NBISUSDT": -15.2,
+    "NOKUSDT": 12.49,
+    "NOWUSDT": 3.44,
+    "NVDAUSDT": -2.84,
+    "NVOUSDT": 4.85,
+    "ONDSUSDT": 7.8,
+    "ORCLUSDT": -1.81,
+    "PAYPUSDT": 2.12,
+    "PLTRUSDT": 1.1,
+    "QCOMUSDT": 3.46,
+    "QNTXUSDT": 13.75,
+    "QQQUSDT": -0.87,
+    "RIVNUSDT": 2.51,
+    "RKLBUSDT": 22.08,
+    "SNDKUSDT": -7.3,
+    "SOXLUSDT": -0.01,
+    "SPCXUSDT": 3.62,
+    "SPYUSDT": -0.73,
+    "STXXUSDT": -7.89,
+    "TSMUSDT": 0.13,
+    "UBERUSDT": -3.72,
+    "USARUSDT": -5.2,
+    "UVXYUSDT": -6.17,
+    "VUSDT": 0.39,
+    "WDCUSDT": -9.8,
+    "WMTUSDT": 2.45,
+    "ZMUSDT": 0.88
+   }
+  },
+  "d_dev_cost15": {
+   "n": 53,
+   "mean": 1.1453,
+   "t_iid": 2.07,
+   "n_dates": 11,
+   "date_mean": 0.9889,
+   "t_clustered_by_date": 1.24,
+   "sum": 60.7
+  },
+  "d_val_cost15": {
+   "n": 124,
+   "mean": 0.0413,
+   "t_iid": 0.1,
+   "n_dates": 3,
+   "date_mean": 0.4065,
+   "t_clustered_by_date": 0.4,
+   "sum": 5.12
+  },
+  "d_dev_cost2x": {
+   "n": 53,
+   "mean": 1.0808,
+   "t_iid": 1.95,
+   "n_dates": 11,
+   "date_mean": 0.924,
+   "t_clustered_by_date": 1.16,
+   "sum": 57.28
+  },
+  "d_dev_weekend_spread_10bp_side": {
+   "n": 53,
+   "mean": 1.0498,
+   "t_iid": 1.89,
+   "n_dates": 11,
+   "date_mean": 0.8938,
+   "t_clustered_by_date": 1.12,
+   "sum": 55.64
+  },
+  "d_dev_stripped_cost15": {
+   "n": 53,
+   "mean": 0.4631,
+   "t_iid": 0.94,
+   "n_dates": 11,
+   "date_mean": 0.1854,
+   "t_clustered_by_date": 0.33,
+   "sum": 24.54
+  },
+  "e_dev_by_month": {
+   "2026-02": {
+    "n": 1,
+    "mean": -2.1536,
+    "t_iid": null,
+    "n_dates": 1,
+    "date_mean": -2.1536,
+    "t_clustered_by_date": null,
+    "sum": -2.15
+   },
+   "2026-03": {
+    "n": 14,
+    "mean": 2.1721,
+    "t_iid": 2.36,
+    "n_dates": 4,
+    "date_mean": 2.0774,
+    "t_clustered_by_date": 1.48,
+    "sum": 30.41
+   },
+   "2026-04": {
+    "n": 19,
+    "mean": 1.4875,
+    "t_iid": 2.2,
+    "n_dates": 3,
+    "date_mean": 1.7702,
+    "t_clustered_by_date": 1.39,
+    "sum": 28.26
+   },
+   "2026-05": {
+    "n": 19,
+    "mean": 0.4001,
+    "t_iid": 0.33,
+    "n_dates": 3,
+    "date_mean": 0.0417,
+    "t_clustered_by_date": 0.02,
+    "sum": 7.6
+   }
+  },
+  "e_dev_syms_per_date": {
+   "2026-02-09": 1,
+   "2026-03-02": 4,
+   "2026-03-09": 6,
+   "2026-03-23": 2,
+   "2026-03-30": 2,
+   "2026-04-13": 5,
+   "2026-04-20": 13,
+   "2026-04-27": 1,
+   "2026-05-04": 5,
+   "2026-05-11": 7,
+   "2026-05-18": 7
+  },
+  "e_dev_apr_may_only": {
+   "n": 38,
+   "mean": 0.9438,
+   "t_iid": 1.37,
+   "n_dates": 6,
+   "date_mean": 0.9059,
+   "t_clustered_by_date": 0.88,
+   "sum": 35.86
+  },
+  "e_dev_apr_may_stripped": {
+   "n": 38,
+   "mean": 0.8259,
+   "t_iid": 1.39,
+   "n_dates": 6,
+   "date_mean": 0.8079,
+   "t_clustered_by_date": 1.26,
+   "sum": 31.38
+  },
+  "f_dev_fresh_anchor_only(<=5min)": {
+   "n": 53,
+   "mean": 1.2098,
+   "t_iid": 2.18,
+   "n_dates": 11,
+   "date_mean": 1.0538,
+   "t_clustered_by_date": 1.32,
+   "sum": 64.12
+  },
+  "f_dev_stale_anchor(>5min)": {
+   "n": 0
+  }
+ },
+ "cell_P2TS_fade_thr1_leg_close": {
+  "dev_reproduce": {
+   "n": 53,
+   "mean": 1.5793,
+   "t_iid": 2.06,
+   "n_dates": 11,
+   "date_mean": 1.1651,
+   "t_clustered_by_date": 1.11,
+   "sum": 83.7
+  },
+  "a_dev_stripped": {
+   "n": 53,
+   "mean": 0.2925,
+   "t_iid": 0.45,
+   "n_dates": 11,
+   "date_mean": 0.036,
+   "t_clustered_by_date": 0.06,
+   "sum": 15.5
+  },
+  "b_lodo_dev_date": {
+   "best": "2026-03-09",
+   "best_contrib": 35.55,
+   "total": 83.7,
+   "share": 0.425,
+   "wo_best_mean": 1.0246,
+   "wo_best_t": 1.26,
+   "per_key": {
+    "2026-02-09": -2.48,
+    "2026-03-02": 8.22,
+    "2026-03-09": 35.55,
+    "2026-03-23": 9.71,
+    "2026-03-30": -5.46,
+    "2026-04-13": 31.0,
+    "2026-04-20": 18.16,
+    "2026-04-27": 0.12,
+    "2026-05-04": -16.3,
+    "2026-05-11": -11.47,
+    "2026-05-18": 16.65
+   }
+  }
+ },
+ "cell_P1TS_fade_thr1_r_o_close": {
+  "dev_reproduce": {
+   "n": 156,
+   "mean": 0.5114,
+   "t_iid": 1.52,
+   "n_dates": 17,
+   "date_mean": 0.864,
+   "t_clustered_by_date": 1.73,
+   "sum": 79.77
+  },
+  "a_dev_stripped": {
+   "n": 156,
+   "mean": 0.0967,
+   "t_iid": 0.35,
+   "n_dates": 17,
+   "date_mean": 0.1463,
+   "t_clustered_by_date": 0.56,
+   "sum": 15.09
+  },
+  "b_lodo_dev_date": {
+   "best": "2026-03-02",
+   "best_contrib": 36.9,
+   "total": 79.77,
+   "share": 0.463,
+   "wo_best_mean": 0.2877,
+   "wo_best_t": 0.88,
+   "per_key": {
+    "2026-02-02": 0.9,
+    "2026-02-09": 2.49,
+    "2026-02-17": 11.31,
+    "2026-02-23": -15.11,
+    "2026-03-02": 36.9,
+    "2026-03-09": 10.75,
+    "2026-03-16": 3.02,
+    "2026-03-23": -5.54,
+    "2026-03-30": 29.3,
+    "2026-04-06": 0.77,
+    "2026-04-13": 8.92,
+    "2026-04-20": 21.64,
+    "2026-04-27": -6.71,
+    "2026-05-04": -21.54,
+    "2026-05-11": 10.29,
+    "2026-05-18": 33.29,
+    "2026-05-26": -40.91
+   }
+  }
+ },
+ "a_market_level_weekends": [
+  {
+   "date": "2026-02-02",
+   "ew_drift": -0.504,
+   "ew_leg_o60": -2.07
+  },
+  {
+   "date": "2026-02-09",
+   "ew_drift": 0.948,
+   "ew_leg_o60": 0.328
+  },
+  {
+   "date": "2026-02-23",
+   "ew_drift": -0.055,
+   "ew_leg_o60": -2.656
+  },
+  {
+   "date": "2026-03-02",
+   "ew_drift": -0.927,
+   "ew_leg_o60": 3.839
+  },
+  {
+   "date": "2026-03-09",
+   "ew_drift": -1.368,
+   "ew_leg_o60": 1.792
+  },
+  {
+   "date": "2026-03-16",
+   "ew_drift": 0.182,
+   "ew_leg_o60": 2.742
+  },
+  {
+   "date": "2026-03-23",
+   "ew_drift": -0.399,
+   "ew_leg_o60": 3.527
+  },
+  {
+   "date": "2026-03-30",
+   "ew_drift": -0.517,
+   "ew_leg_o60": -0.581
+  },
+  {
+   "date": "2026-04-13",
+   "ew_drift": -0.635,
+   "ew_leg_o60": 1.744
+  },
+  {
+   "date": "2026-04-20",
+   "ew_drift": -1.38,
+   "ew_leg_o60": 0.099
+  },
+  {
+   "date": "2026-04-27",
+   "ew_drift": 0.164,
+   "ew_leg_o60": 0.064
+  },
+  {
+   "date": "2026-05-04",
+   "ew_drift": 0.608,
+   "ew_leg_o60": 1.436
+  },
+  {
+   "date": "2026-05-11",
+   "ew_drift": -0.169,
+   "ew_leg_o60": 0.038
+  },
+  {
+   "date": "2026-05-18",
+   "ew_drift": -0.053,
+   "ew_leg_o60": -1.757
+  },
+  {
+   "date": "2026-06-01",
+   "ew_drift": 1.517,
+   "ew_leg_o60": -0.619
+  },
+  {
+   "date": "2026-06-08",
+   "ew_drift": -0.336,
+   "ew_leg_o60": 3.149
+  },
+  {
+   "date": "2026-06-15",
+   "ew_drift": 2.501,
+   "ew_leg_o60": 0.744
+  }
+ ],
+ "a_market_drift_vs_leg_corr_dev": -0.164,
+ "fdr_note": "64 cells tested; best dev t_iid=2.18 (n=53, two-sided p~0.034); expected false survivors at p<0.05 over 64 correlated cells >> 1",
+ "a_regression_beta_strip_dev_survivor": {
+  "method": "per-symbol beta estimated on dev weekday r_o60 vs universe EW (n>=15), strip beta*EW instead of 1.0*EW",
+  "n": 53,
+  "mean": 0.2013,
+  "t_iid": 0.45,
+  "t_clustered_by_date": -0.36,
+  "note": "audited beta=1 strip was CONSERVATIVE; proper beta strip kills dev entirely. High-beta names dominate trades: COIN 1.78, CRCL 1.59, MU 1.55, HOOD 1.52, MSTR 1.23"
+ },
+ "val_0608_decomposition": {
+  "paths": 62,
+  "traded": 33,
+  "long": 22,
+  "short": 11,
+  "ew_market_leg_o60": 3.149,
+  "gross_fade_pnl": 2.573,
+  "stripped_fade_pnl": 1.524,
+  "note": "~41% of the single good val day was pure beta (net-long tilt x market bounce)"
+ },
+ "panel_open_anomaly": {
+  "rows_open_not_0930ET": 40,
+  "of_which_weekend_gap": 0,
+  "max_open": "10:50",
+  "note": "first-available-bar effect; zero weekend rows affected — irrelevant to family B"
+ },
+ "verdict": {
+  "family_B_no_alpha_finding": "HOLDS (strengthened)",
+  "key": "all audited numbers reproduce to 4 decimals; date-clustered t kills even the dev pass (2.18->1.32); regression-beta strip kills dev (mean 0.20, t_clust -0.36); ex-06-08 val mean -0.73%/trade t=-1.72; TZ/DST clean; costs not the binding constraint"
+ }
+}

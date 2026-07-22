@@ -1,0 +1,26 @@
+{
+  "family": "fam_A — 警报触发后方向性 (角度1-25)",
+  "n_cells_tested_FDR_family": 310,
+  "cost_model": "roundtrip taker 0.14% + slippage oneside*2 (atr>=1.5:0.4, atr>=3:0.6)",
+  "gates": "q<0.10 AND net_mean>0 AND n>=100 AND max_one_day_frac<=0.40 AND lodo_mean>0 AND (long: net_median>0)",
+  "dev_candidates_passing_gates": 4,
+  "val_confirmed": 0,
+  "VERDICT": "DEAD — 0 个可交易策略。无 cell 同时满足 (扣成本净正 + q<0.10 + LODO过 + val同号)。",
+  "why": [
+    "4 个 dev 候选全是 f1440(24h持有)做空, 均值靠 dev 期 altcoin 单边阴跌; val 期反弹 -> 净均值翻负, val_max_one_day_frac>4 (单日吊打全样本), 极不稳定。",
+    "24h 持有非家族目标的 intraday 触发反应; 且 val 仅~14天+24h重叠 -> val_n 105-331 几乎全重叠, 统计上是抛硬币。",
+    "核心短horizon反应(f5/f15/f60/f240): 几乎所有 cell 扣成本后 net_mean<0。极少数为正(price_5s short ~+0.5%)的 q>=0.43, 远不达标。",
+    "prompt 点名的 fade 假设全死: 180s_extreme short f60 net=-0.94%(p=0.76); 90s short f60 net=-0.07% 但 odf=16.7(纯单日); 60s short f60 net=-0.78%。raw 扫的 -0.7~-0.9% f60 是 gross, 被 0.14% taker + 高ATR(2.3-2.6%)的 ~0.8% 往返滑点吃光。",
+    "block-bootstrap(按 symbol|day 聚类, 尊重 burst 相关)确认: IID bootstrap 已偏宽松仍无幸存; 180s_extreme short f240 的 p 从 IID 升到 0.36, 证伪。",
+    "lag 敏感: 加速进场不解锁任何盈利方向, 每窗口 net_short/net_long 在快/慢两半都为负 -> 成本主导, 拼速度无意义。"
+  ],
+  "best_shorthorizon_cell_for_record": {
+    "wt": "price_5s",
+    "horizon": "f240",
+    "side": "short",
+    "n": 755,
+    "net_mean": 0.7127,
+    "q": 0.7577777777777778,
+    "note": "即使是短horizon里净均值最高的 cell 也 q=0.758 (不达标)"
+  }
+}

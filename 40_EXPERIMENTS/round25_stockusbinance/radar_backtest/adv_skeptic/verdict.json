@@ -1,0 +1,66 @@
+{
+  "code_name": "adv_skeptic",
+  "stance": "default-guilty adversarial re-audit; LS reconstructed from scratch, not trusting audited numbers",
+  "reproduction_check": "PASS - independent rebuild matches audited daily-rebal LS net within rounding (momentum negative all horizons; sentiment positive only f1/f5; f5 sentiment +49.855 net; residual spearman f1 -0.0776 / f2 -0.0697 / f3 +0.0098 / f5 +0.1671 reproduced exactly)",
+  "verdict": "weakened",
+  "verdict_meaning": "The ORIGINAL FINDING (is_tradeable_signal=false; sentiment cannot prove incremental alpha over free momentum; only f5 fires and it is single-name + right-tail driven; exploratory with no statistical power) is itself CONFIRMED and arguably strengthened by this adversarial pass. The thing that is 'weakened' is any temptation to read f5 as a real signal: it does NOT survive the falsification battery as tradeable alpha. So as a candidate alpha it is weakened-to-refuted; as a skeptical conclusion it holds.",
+  "a_momentum_disguise": {
+    "free_momentum_is_not_alpha": "momentum_20d_pct single-factor LS net is NEGATIVE every horizon (f1 -8.26 sum / f2 -15.63 / f3 -17.27 / f5 -2.27). High-momentum names underperform in-sample.",
+    "sentiment_steals_momentum": "pearson(sentiment,momentum)=+0.524, pearson(sentiment,tech)=+0.560, so raw sentiment LS partially borrows the cross-section. Must residualize.",
+    "incremental_after_momentum_residual_spearman": {"f1": -0.0776, "f2": -0.0697, "f3": 0.0098, "f5": 0.1671, "pooled_f5": 0.1171},
+    "incremental_residual_LS_net": {"f1": 9.676, "f2": 1.154, "f3": -1.839, "f5": 54.408},
+    "momentum_controlled_double_sort_net": {"f1": -7.118, "f2": -15.666, "f3": -19.385, "f5": 22.377},
+    "incremental_perm_p_1sided": {"f1": 0.1968, "f5": 0.0090},
+    "conclusion": "3 of 4 horizons show wrong-sign or near-zero incremental sentiment. Only f5 is positive. Momentum-controlled double sort is NEGATIVE for f1/f2/f3 and only positive at f5. No stable incremental edge."
+  },
+  "b_single_day_single_name": {
+    "f5_sentiment_full_net": 49.855,
+    "drop_MRVL": 15.411,
+    "winsor10pct": 16.648,
+    "drop_MRVL_and_winsor10": 13.177,
+    "drop_MRVL_and_top2_days": 10.766,
+    "MRVL_net_contrib_to_f5_sum": 48.811,
+    "MRVL_extreme_days": {"2026-05-28": "f5 +58.53% (LONG)", "2026-05-29": "f5 +39.32% (LONG)"},
+    "biggest_single_day_f5": {"2026-05-29": 17.574, "2026-05-28": 16.367},
+    "conclusion": "DECISIVE. Removing the single name MRVL cuts the f5 edge by ~69% (49.9->15.4). MRVL's contribution is itself two extreme right-tail LONG days (+58.5%, +39.3%). Edge is single-name + right-tail driven, exactly as the audit claimed."
+  },
+  "c_overlap_effective_n": {
+    "f5_daily_rebal_days": 14,
+    "f5_nonoverlap_rebals": 3,
+    "f3_nonoverlap_rebals": 6,
+    "f2_nonoverlap_rebals": 8,
+    "lag1_autocorr_sentiment_f5": 0.225,
+    "N_eff_sentiment_f5": 8.9,
+    "N_eff_combined_f5": 6.8,
+    "conclusion": "f5 daily-rebal n=14 is heavily overlapping (5d holds). Non-overlapping gives only 3 independent rebalances. Autocorr-adjusted N_eff ~7-9 but the non-overlap reality is ~3. Any p-value is exploratory; CI is meaninglessly wide. Confirms audit's 'effective N ~3-4'."
+  },
+  "d_survivorship_tradeability": {
+    "note": "Panel is constructed-restricted to 30 perp-mappable tickers; dropped names have no perp price so cannot be added back - this is an UNFALSIFIABLE-from-data limitation, flag it.",
+    "universe_regime_shift": "11 names early -> 22-30 names late; f5 only has 14 realized days and the 3 late days are unrealized for f5.",
+    "f5_sentiment_early_vs_late": {"early_n11_sum": 41.893, "late_n3_sum": 7.962},
+    "cross_sectional_dispersion": "median within-day std of f1 = 3.187%; single-theme (AI/semis) cluster -> low dispersion makes the tercile spread fragile.",
+    "conclusion": "f5 edge is concentrated in the EARLY regime (small 11-name universe) and shrinks late. Single-theme cluster means the long/short is not really diversified. Tradeability/survivorship bias is real and cannot be ruled out from this panel."
+  },
+  "e_cost_stress": {
+    "f5_sentiment": {"gross": 52.655, "net_010": 49.855, "net_020": 47.055, "status_at_020": "ALIVE"},
+    "f1_sentiment": {"gross": 15.585, "net_010": 12.185, "net_020": 8.785, "status_at_020": "ALIVE"},
+    "f2_sentiment": {"net_010": 0.237, "net_020": -2.963, "status_at_020": "DEAD"},
+    "f3_sentiment": {"net_010": -9.071, "net_020": -12.271, "status_at_020": "DEAD"},
+    "combined_all_horizons": "ALIVE at 0.20",
+    "conclusion": "Cost is NOT what kills it. Longer horizons (f5) incur cost only once per 5d hold, so the gross/net gap is tiny (~2.8 over 14 days). f5 and combined survive 0.20%/leg comfortably. f2/f3 sentiment die at 0.20 but they were already weak/negative. Cost is not the binding constraint - the binding constraint is single-name concentration + tiny N."
+  },
+  "permutation_daily_rebal": {
+    "sentiment_f1": {"obs_mean_net": 0.717, "p_1sided": 0.1950},
+    "sentiment_f5": {"obs_mean_net": 3.561, "p_1sided": 0.0116},
+    "combined_f1": {"obs_mean_net": 0.626, "p_1sided": 0.2749},
+    "combined_f5": {"obs_mean_net": 3.610, "p_1sided": 0.0234},
+    "multiple_comparison": "4 horizons x 2 score families = 8 tests; only f5 family passes p<0.05. With ~3 independent f5 rebalances and an obvious single-name driver, the low p is a small-sample artifact, not evidence of tradeable alpha."
+  },
+  "final": {
+    "is_momentum_in_disguise": false,
+    "is_single_name_driven": true,
+    "ci_inflated_by_overlap": true,
+    "survives_cost_020": true,
+    "tradeable": false
+  }
+}

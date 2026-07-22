@@ -1,0 +1,56 @@
+{
+  "family": "C — microstructure / OI / funding / basis / exit",
+  "data": "alert_panel.sqlite3 panel (131925 rows); dev ts_ms<=1778803200000, val>; val window is only ~2026-05-23..05-29 (single short stretch, high single-day concentration).",
+  "cost_model": "round-trip 0.14% + yaobi slippage 2*(atr>=1.5%:+0.4%/side, atr>=3%:+0.6%/side); SHORT=-f, short uses mean.",
+  "headline": "ONE tradeable survivor (C2 OI-direction reversal short). The funding/f1440 family is mostly MARKET BETA, not alpha — it blew up on val. Bracket TP/SL exit is UNRESOLVABLE from extrema-only data. Time-stop answer: hold-to-close, the right horizon is signal-specific.",
+
+  "tradeable": [
+    {
+      "id": "C2_oichg_gt15_short_f1440",
+      "name": "OI-build reversal short (L17 mechanism)",
+      "rule": "wt=oi_price_1h AND oi_chg>15 (price-up build of fresh longs) -> SHORT, hold to 1440m (24h) close. Optional: also require chg>0. Optional: stronger threshold = bigger edge (monotone).",
+      "dev":  {"n": 5140, "net_pct": 1.534, "median": 5.403, "win": 0.669, "t": 4.22, "p": 0.0000, "lodo_drop1010": 1.981, "lodo_minLO": 1.287, "maxDayFrac": 0.03},
+      "val":  {"n": 757,  "net_pct": 2.538, "median": 5.339, "win": 0.756, "t": 3.28, "p": 0.0010, "lodo_drop1010": 2.538, "lodo_minLO": 1.534, "maxDayFrac": 0.16},
+      "pooled": {"n": 5897, "net_pct": 1.663, "win": 0.680, "t": 5.00, "p": 0.0000, "lodo_minLO": 1.453, "maxDayFrac": 0.03},
+      "excess_vs_all_short_baseline_pct": {"dev": 1.330, "val": 1.495},
+      "dose_response_net_dev_val": {">8": [0.26,0.90], ">12":[0.96,1.71], ">15":[1.53,2.54], ">20":[1.95,3.42], ">25":[2.41,4.18]},
+      "verdict": "TRADEABLE. Positive dev AND val, FDR-significant, LODO-clean (maxDayFrac 3% pooled), monotone dose-response on both segments, mechanism-consistent (crowded fresh longs -> reversal). Holdout 05-30+ still to be revealed by main agent."
+    }
+  ],
+
+  "rejected": [
+    {"id": "C1_fund_top10_short_f1440", "dev_net": 2.058, "val_net": -14.811, "reason": "Looked best on dev (t=6.75) but COLLAPSED on val (-14.8, minLO -17.6, maxDayFrac 35%). Dev edge was overnight SHORT-BETA in a falling dev market, not alert alpha. The dev all-short f1440 baseline ranges -1.4% to +14.8% by month -> f1440 short is beta-contaminated."},
+    {"id": "C3_fund_top10_AND_revertwin_short_f1440", "dev_net": 5.064, "val_net": -27.441, "reason": "Spectacular on dev (+5.06, excess +4.48) but -27.4 on val, maxDayFrac 55% -> fails LODO outright. Same beta trap as C1, amplified by smaller n. REJECTED."},
+    {"id": "C4_fund_top5_short_f240", "dev_net": 1.142, "val_net": 6.014, "reason": "Direction held (positive dev+val) and f240 is NOT beta-contaminated, BUT val maxDayFrac=36% -> fails the LODO <40%-single-day rule on the tiny val window. Promising but NOT confirmable on this val. Re-test when more val data exists."},
+    {"id": "oimc_top10_short", "dev_net": -2.162, "reason": "oi/mc over-leverage SHORT is significantly NEGATIVE (loses). High oimc does NOT predict cleaner reversal. Anti-signal."},
+    {"id": "prem_top10_short_f240 / ttls extremes / fund_bot10_long", "reason": "All FDR-significant but NEGATIVE net = losing strategies (correct fade direction would be opposite, but those flips are just the C2/beta structure already captured). fund_bot10 LONG = -2.7 to -5.4 (strong anti-signal: shorts-crowded does NOT squeeze up here)."},
+    {"id": "oi_chg<-15 LONG f240", "dev_net": 3.418, "reason": "n=199, maxDayFrac=39% (single day 2025-10-10 carries it); drop-1010 -> +1.87 and f1440 version is -2.1. Exploratory only, fails LODO spirit."}
+  ],
+
+  "exit_study": {
+    "bracket_tp_sl": "UNRESOLVABLE from this dataset. ~63% of short trades touch BOTH +3% and -3% within 240m (only extrema mfe/mae available, not path). Worst-case(SL-first) demolishes every TP/SL grid cell (all negative); optimistic(TP-first) flatters them. Cannot honestly score path-dependent brackets. Do NOT deploy a TP/SL bracket based on this data.",
+    "time_stop_resolvable": {
+      "finding": "On DEV, hold-to-1440 beat 60m/240m for every short universe (alpha is a slow ~24h post-pump decay). BUT this 24h superiority is partly beta — on VAL (up week) the 1440 hold flipped negative for the funding universe (-14.8) while 240m stayed positive (+5.5). For the surviving C2 signal specifically, 1440 hold is robust on BOTH dev(+1.53) and val(+2.54), so 24h hold is correct FOR C2.",
+      "recommendation": "Horizon is signal-specific. For C2 (OI-build reversal): hold to 24h close, NO TP, NO SL. For funding-tilt shorts: do not hold overnight (beta risk) — 4h max, but those aren't tradeable anyway."
+    },
+    "early_profit_lock": "One-sided 'bank +K% if reached in first 60m else hold' STRICTLY UNDERPERFORMS plain hold at every K (K=5 -> net 0.00 vs hold +2.06). Capping the early favorable excursion throws away the slow-decay tail. Do not use early profit-taking.",
+    "giveback": "31% of favorable (short_mfe240>=5%) trades give it all back by 1440 close, but holding the full basket still nets +7.22 on the favorable subset vs +4.22 if locked at +5 -> the non-giveback winners more than pay for the givebacks. Confirms: do not lock early."
+  },
+
+  "key_methodology_findings": [
+    "f1440 (24h) short carries heavy MARKET BETA: all-alerts-short f1440 net ranges -1.4% (May) to +14.8% (Sep) by month. Any f1440 short candidate MUST be judged on excess-over-same-month-baseline, else you just measure market direction.",
+    "f240 (4h) is far less beta-contaminated (monthly all-short hovers near 0) -> safer horizon for honest alpha measurement, but the alert reversal alpha is weaker at 4h.",
+    "val window here is only ~7 days (05-23..05-29) with high single-day concentration -> LODO maxDayFrac is the binding gate; most candidates fail it on val regardless of mean. Treat val as a coarse direction check, not a precise estimate.",
+    "lag: C1/derivatives short edge is stronger at lag 0-30s (+2.78) than 30-120s (+1.68) -> fresher fill = better; data has no trades beyond 120s lag."
+  ],
+
+  "files": {
+    "harness.py": "stats core: cost model, t/p, BH-FDR, LODO, dev/val loader",
+    "explore_dev.py": "32-cell dev sweep across all 8 angles + BH-FDR",
+    "stability.py": "monthly stability + baseline-excess decontamination",
+    "exit_sim.py": "TP/SL bracket grid (worst vs optimistic) -> proves unresolvable",
+    "exit_time.py": "time-stop + one-sided lock + giveback (the resolvable exit questions)",
+    "refine_dev.py": "lag, fund x oi combo, final candidate defs with excess",
+    "val_confirm.py": "one-shot frozen-threshold val confirmation"
+  }
+}

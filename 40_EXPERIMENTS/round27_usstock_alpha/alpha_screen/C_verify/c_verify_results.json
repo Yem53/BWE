@@ -1,0 +1,814 @@
+{
+ "family": "C_verify",
+ "generated": "2026-07-06T04:54:58.176575+00:00",
+ "hard_cap_ms": 1781654399000,
+ "attacks": {
+  "f_tz_conversion": {
+   "all_match": true,
+   "rows": [
+    {
+     "type": "CPI",
+     "date": "2026-02-13",
+     "zoneinfo_ms": 1770989400000,
+     "manual_ms": 1770989400000,
+     "match": true,
+     "utc": "13:30"
+    },
+    {
+     "type": "CPI",
+     "date": "2026-03-11",
+     "zoneinfo_ms": 1773232200000,
+     "manual_ms": 1773232200000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "CPI",
+     "date": "2026-04-10",
+     "zoneinfo_ms": 1775824200000,
+     "manual_ms": 1775824200000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "CPI",
+     "date": "2026-05-12",
+     "zoneinfo_ms": 1778589000000,
+     "manual_ms": 1778589000000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "CPI",
+     "date": "2026-06-10",
+     "zoneinfo_ms": 1781094600000,
+     "manual_ms": 1781094600000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "NFP",
+     "date": "2026-02-11",
+     "zoneinfo_ms": 1770816600000,
+     "manual_ms": 1770816600000,
+     "match": true,
+     "utc": "13:30"
+    },
+    {
+     "type": "NFP",
+     "date": "2026-03-06",
+     "zoneinfo_ms": 1772803800000,
+     "manual_ms": 1772803800000,
+     "match": true,
+     "utc": "13:30"
+    },
+    {
+     "type": "NFP",
+     "date": "2026-04-03",
+     "zoneinfo_ms": 1775219400000,
+     "manual_ms": 1775219400000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "NFP",
+     "date": "2026-05-08",
+     "zoneinfo_ms": 1778243400000,
+     "manual_ms": 1778243400000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "NFP",
+     "date": "2026-06-05",
+     "zoneinfo_ms": 1780662600000,
+     "manual_ms": 1780662600000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "PCE",
+     "date": "2026-02-20",
+     "zoneinfo_ms": 1771594200000,
+     "manual_ms": 1771594200000,
+     "match": true,
+     "utc": "13:30"
+    },
+    {
+     "type": "PCE",
+     "date": "2026-03-13",
+     "zoneinfo_ms": 1773405000000,
+     "manual_ms": 1773405000000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "PCE",
+     "date": "2026-04-09",
+     "zoneinfo_ms": 1775737800000,
+     "manual_ms": 1775737800000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "PCE",
+     "date": "2026-04-30",
+     "zoneinfo_ms": 1777552200000,
+     "manual_ms": 1777552200000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "PCE",
+     "date": "2026-05-28",
+     "zoneinfo_ms": 1779971400000,
+     "manual_ms": 1779971400000,
+     "match": true,
+     "utc": "12:30"
+    },
+    {
+     "type": "FOMC",
+     "date": "2026-01-28",
+     "zoneinfo_ms": 1769626800000,
+     "manual_ms": 1769626800000,
+     "match": true,
+     "utc": "19:00"
+    },
+    {
+     "type": "FOMC",
+     "date": "2026-03-18",
+     "zoneinfo_ms": 1773856800000,
+     "manual_ms": 1773856800000,
+     "match": true,
+     "utc": "18:00"
+    },
+    {
+     "type": "FOMC",
+     "date": "2026-04-29",
+     "zoneinfo_ms": 1777485600000,
+     "manual_ms": 1777485600000,
+     "match": true,
+     "utc": "18:00"
+    }
+   ]
+  },
+  "f_empirical_spike": {
+   "n_events_with_data": 18,
+   "n_peak_in_0_to_5": 3,
+   "n_t0_beats_pm60": 3,
+   "rows": [
+    {
+     "type": "CPI",
+     "date": "2026-02-13",
+     "n_sym": 8,
+     "peak_offset_min": 75,
+     "peak_val": 0.9294,
+     "mean_abs_r_t0_5": 0.3704,
+     "mean_abs_r_minus60": 0.0498,
+     "mean_abs_r_plus60": 0.4495,
+     "bg_mean_abs_r": 0.1335,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "CPI",
+     "date": "2026-03-11",
+     "n_sym": 8,
+     "peak_offset_min": 60,
+     "peak_val": 0.5982,
+     "mean_abs_r_t0_5": 0.133,
+     "mean_abs_r_minus60": 0.0371,
+     "mean_abs_r_plus60": 0.368,
+     "bg_mean_abs_r": 0.0851,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "CPI",
+     "date": "2026-04-10",
+     "n_sym": 20,
+     "peak_offset_min": 61,
+     "peak_val": 0.37,
+     "mean_abs_r_t0_5": 0.0736,
+     "mean_abs_r_minus60": 0.0289,
+     "mean_abs_r_plus60": 0.3139,
+     "bg_mean_abs_r": 0.0634,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "CPI",
+     "date": "2026-05-12",
+     "n_sym": 26,
+     "peak_offset_min": 60,
+     "peak_val": 0.4518,
+     "mean_abs_r_t0_5": 0.1259,
+     "mean_abs_r_minus60": 0.0337,
+     "mean_abs_r_plus60": 0.3391,
+     "bg_mean_abs_r": 0.0863,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "CPI",
+     "date": "2026-06-10",
+     "n_sym": 81,
+     "peak_offset_min": 0,
+     "peak_val": 0.7855,
+     "mean_abs_r_t0_5": 0.4989,
+     "mean_abs_r_minus60": 0.0736,
+     "mean_abs_r_plus60": 0.4635,
+     "bg_mean_abs_r": 0.1395,
+     "t0_wins_vs_pm60": true
+    },
+    {
+     "type": "NFP",
+     "date": "2026-02-11",
+     "n_sym": 8,
+     "peak_offset_min": 60,
+     "peak_val": 0.6871,
+     "mean_abs_r_t0_5": 0.2387,
+     "mean_abs_r_minus60": 0.0196,
+     "mean_abs_r_plus60": 0.4573,
+     "bg_mean_abs_r": 0.1035,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "NFP",
+     "date": "2026-03-06",
+     "n_sym": 8,
+     "peak_offset_min": 0,
+     "peak_val": 0.6389,
+     "mean_abs_r_t0_5": 0.2476,
+     "mean_abs_r_minus60": 0.0661,
+     "mean_abs_r_plus60": 0.332,
+     "bg_mean_abs_r": 0.1053,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "NFP",
+     "date": "2026-04-03",
+     "n_sym": 14,
+     "peak_offset_min": 1,
+     "peak_val": 0.0695,
+     "mean_abs_r_t0_5": 0.0388,
+     "mean_abs_r_minus60": 0.0132,
+     "mean_abs_r_plus60": 0.0225,
+     "bg_mean_abs_r": 0.0134,
+     "t0_wins_vs_pm60": true
+    },
+    {
+     "type": "NFP",
+     "date": "2026-05-08",
+     "n_sym": 26,
+     "peak_offset_min": 60,
+     "peak_val": 0.5363,
+     "mean_abs_r_t0_5": 0.0794,
+     "mean_abs_r_minus60": 0.0313,
+     "mean_abs_r_plus60": 0.2751,
+     "bg_mean_abs_r": 0.0722,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "NFP",
+     "date": "2026-06-05",
+     "n_sym": 62,
+     "peak_offset_min": 60,
+     "peak_val": 0.6476,
+     "mean_abs_r_t0_5": 0.109,
+     "mean_abs_r_minus60": 0.0484,
+     "mean_abs_r_plus60": 0.4068,
+     "bg_mean_abs_r": 0.1058,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "PCE",
+     "date": "2026-02-20",
+     "n_sym": 8,
+     "peak_offset_min": 60,
+     "peak_val": 0.643,
+     "mean_abs_r_t0_5": 0.1495,
+     "mean_abs_r_minus60": 0.0391,
+     "mean_abs_r_plus60": 0.3903,
+     "bg_mean_abs_r": 0.0865,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "PCE",
+     "date": "2026-03-13",
+     "n_sym": 8,
+     "peak_offset_min": 60,
+     "peak_val": 0.583,
+     "mean_abs_r_t0_5": 0.0744,
+     "mean_abs_r_minus60": 0.0378,
+     "mean_abs_r_plus60": 0.383,
+     "bg_mean_abs_r": 0.085,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "PCE",
+     "date": "2026-04-09",
+     "n_sym": 20,
+     "peak_offset_min": 62,
+     "peak_val": 0.4774,
+     "mean_abs_r_t0_5": 0.0628,
+     "mean_abs_r_minus60": 0.0334,
+     "mean_abs_r_plus60": 0.3127,
+     "bg_mean_abs_r": 0.0679,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "PCE",
+     "date": "2026-04-30",
+     "n_sym": 23,
+     "peak_offset_min": 60,
+     "peak_val": 0.4996,
+     "mean_abs_r_t0_5": 0.0608,
+     "mean_abs_r_minus60": 0.0443,
+     "mean_abs_r_plus60": 0.3384,
+     "bg_mean_abs_r": 0.0804,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "PCE",
+     "date": "2026-05-28",
+     "n_sym": 49,
+     "peak_offset_min": 60,
+     "peak_val": 0.5423,
+     "mean_abs_r_t0_5": 0.1113,
+     "mean_abs_r_minus60": 0.0494,
+     "mean_abs_r_plus60": 0.3689,
+     "bg_mean_abs_r": 0.0942,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "FOMC",
+     "date": "2026-01-28",
+     "n_sym": 1,
+     "peak_offset_min": 29,
+     "peak_val": 0.2874,
+     "mean_abs_r_t0_5": 0.0865,
+     "mean_abs_r_minus60": 0.0462,
+     "mean_abs_r_plus60": 0.0869,
+     "bg_mean_abs_r": 0.0445,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "FOMC",
+     "date": "2026-03-18",
+     "n_sym": 9,
+     "peak_offset_min": 36,
+     "peak_val": 0.3188,
+     "mean_abs_r_t0_5": 0.1011,
+     "mean_abs_r_minus60": 0.0837,
+     "mean_abs_r_plus60": 0.1056,
+     "bg_mean_abs_r": 0.0788,
+     "t0_wins_vs_pm60": false
+    },
+    {
+     "type": "FOMC",
+     "date": "2026-04-29",
+     "n_sym": 23,
+     "peak_offset_min": 8,
+     "peak_val": 0.1789,
+     "mean_abs_r_t0_5": 0.0906,
+     "mean_abs_r_minus60": 0.0852,
+     "mean_abs_r_plus60": 0.062,
+     "bg_mean_abs_r": 0.0623,
+     "t0_wins_vs_pm60": true
+    }
+   ]
+  },
+  "a_beta_hat": {
+   "n_baseline_days": 31,
+   "window": "t0+5 -> t0+120 clock-matched 8:30ET",
+   "beta_hat_qqq_vs_ew_exqqq_5to120": 0.358,
+   "corr": 0.821,
+   "beta_hat_r0_5": 0.529,
+   "note": "beta<1 → 被审的 beta=1 全额剥离是过度剥离(对候选更严); beta>1 → 剥离不足"
+  },
+  "a_b_d_cells_recomputed": [
+   {
+    "rule": "NFP_momo_5to120",
+    "dev": {
+     "n": 1,
+     "mean_net": 0.4619,
+     "mean_net_1p5x": 0.4019,
+     "mean_strip_beta1": 0.0336,
+     "mean_strip_betahat": 0.3107,
+     "lodo_max_share": 1.0,
+     "per_event": {
+      "2026-05-08": {
+       "net": 0.4619,
+       "strip_beta1": 0.0336,
+       "strip_betahat": 0.3107,
+       "cost": 0.12
+      }
+     }
+    },
+    "val": {
+     "n": 1,
+     "mean_net": 0.6513,
+     "mean_net_1p5x": 0.5913,
+     "mean_strip_beta1": -1.5958,
+     "mean_strip_betahat": -0.162,
+     "lodo_max_share": 1.0,
+     "per_event": {
+      "2026-06-05": {
+       "net": 0.6513,
+       "strip_beta1": -1.5958,
+       "strip_betahat": -0.162,
+       "cost": 0.12
+      }
+     }
+    }
+   },
+   {
+    "rule": "PCE_momo_5to120",
+    "dev": {
+     "n": 3,
+     "mean_net": 0.3905,
+     "mean_net_1p5x": 0.3205,
+     "mean_strip_beta1": -0.6227,
+     "mean_strip_betahat": 0.0196,
+     "lodo_max_share": 0.649,
+     "per_event": {
+      "2026-04-09": {
+       "net": 0.0351,
+       "strip_beta1": -1.0107,
+       "strip_betahat": -0.3551,
+       "cost": 0.18
+      },
+      "2026-04-30": {
+       "net": 0.7608,
+       "strip_beta1": -0.566,
+       "strip_betahat": 0.2784,
+       "cost": 0.12
+      },
+      "2026-05-28": {
+       "net": 0.3755,
+       "strip_beta1": -0.2915,
+       "strip_betahat": 0.1354,
+       "cost": 0.12
+      }
+     }
+    },
+    "val": {
+     "n": 0
+    }
+   },
+   {
+    "rule": "CPI_fade_5to120",
+    "dev": {
+     "n": 2,
+     "mean_net": 0.0503,
+     "mean_net_1p5x": -0.0247,
+     "mean_strip_beta1": -0.2817,
+     "mean_strip_betahat": -0.0699,
+     "lodo_max_share": 1.813,
+     "per_event": {
+      "2026-04-10": {
+       "net": -0.0819,
+       "strip_beta1": 0.0596,
+       "strip_betahat": -0.0267,
+       "cost": 0.18
+      },
+      "2026-05-12": {
+       "net": 0.1825,
+       "strip_beta1": -0.623,
+       "strip_betahat": -0.1132,
+       "cost": 0.12
+      }
+     }
+    },
+    "val": {
+     "n": 1,
+     "mean_net": -0.9762,
+     "mean_net_1p5x": -1.0362,
+     "mean_strip_beta1": 0.746,
+     "mean_strip_betahat": -0.3556,
+     "lodo_max_share": 1.0,
+     "per_event": {
+      "2026-06-10": {
+       "net": -0.9762,
+       "strip_beta1": 0.746,
+       "strip_betahat": -0.3556,
+       "cost": 0.12
+      }
+     }
+    }
+   },
+   {
+    "rule": "FOMC_fade_5to120",
+    "dev": {
+     "n": 1,
+     "mean_net": 0.299,
+     "mean_net_1p5x": 0.239,
+     "mean_strip_beta1": -0.1869,
+     "mean_strip_betahat": 0.1239,
+     "lodo_max_share": 1.0,
+     "per_event": {
+      "2026-04-29": {
+       "net": 0.299,
+       "strip_beta1": -0.1869,
+       "strip_betahat": 0.1239,
+       "cost": 0.12
+      }
+     }
+    },
+    "val": {
+     "n": 0
+    }
+   },
+   {
+    "rule": "ALL830_momo_5to120",
+    "dev": {
+     "n": 6,
+     "mean_net": 0.1554,
+     "mean_net_1p5x": 0.0854,
+     "mean_strip_beta1": -0.3119,
+     "mean_strip_betahat": -0.0151,
+     "lodo_max_share": 0.816,
+     "per_event": {
+      "2026-04-10": {
+       "net": -0.2781,
+       "strip_beta1": -0.4196,
+       "strip_betahat": -0.3333,
+       "cost": 0.18
+      },
+      "2026-05-12": {
+       "net": -0.4225,
+       "strip_beta1": 0.383,
+       "strip_betahat": -0.1268,
+       "cost": 0.12
+      },
+      "2026-05-08": {
+       "net": 0.4619,
+       "strip_beta1": 0.0336,
+       "strip_betahat": 0.3107,
+       "cost": 0.12
+      },
+      "2026-04-09": {
+       "net": 0.0351,
+       "strip_beta1": -1.0107,
+       "strip_betahat": -0.3551,
+       "cost": 0.18
+      },
+      "2026-04-30": {
+       "net": 0.7608,
+       "strip_beta1": -0.566,
+       "strip_betahat": 0.2784,
+       "cost": 0.12
+      },
+      "2026-05-28": {
+       "net": 0.3755,
+       "strip_beta1": -0.2915,
+       "strip_betahat": 0.1354,
+       "cost": 0.12
+      }
+     }
+    },
+    "val": {
+     "n": 2,
+     "mean_net": 0.6937,
+     "mean_net_1p5x": 0.6337,
+     "mean_strip_beta1": -1.2909,
+     "mean_strip_betahat": -0.0232,
+     "lodo_max_share": 0.531,
+     "per_event": {
+      "2026-06-10": {
+       "net": 0.7362,
+       "strip_beta1": -0.986,
+       "strip_betahat": 0.1156,
+       "cost": 0.12
+      },
+      "2026-06-05": {
+       "net": 0.6513,
+       "strip_beta1": -1.5958,
+       "strip_betahat": -0.162,
+       "cost": 0.12
+      }
+     }
+    }
+   },
+   {
+    "rule": "PCE_print2open_r_o120",
+    "dev": {
+     "n": 3,
+     "mean_net": 0.0386,
+     "mean_net_1p5x": -0.0314,
+     "mean_strip_beta1": -0.1855,
+     "lodo_max_share": 3.469,
+     "per_event": {
+      "2026-04-09": -0.2394,
+      "2026-04-30": -0.0462,
+      "2026-05-28": 0.4013
+     }
+    },
+    "val": {
+     "n": 0
+    }
+   }
+  ],
+  "c_overlap": {
+   "cells": [
+    {
+     "rule": "NFP_momo_5to120",
+     "split": "dev",
+     "n": 1,
+     "n_unique_dates": 1,
+     "dates_distinct": true
+    },
+    {
+     "rule": "NFP_momo_5to120",
+     "split": "val",
+     "n": 1,
+     "n_unique_dates": 1,
+     "dates_distinct": true
+    },
+    {
+     "rule": "PCE_momo_5to120",
+     "split": "dev",
+     "n": 3,
+     "n_unique_dates": 3,
+     "dates_distinct": true
+    },
+    {
+     "rule": "CPI_fade_5to120",
+     "split": "dev",
+     "n": 2,
+     "n_unique_dates": 2,
+     "dates_distinct": true
+    },
+    {
+     "rule": "CPI_fade_5to120",
+     "split": "val",
+     "n": 1,
+     "n_unique_dates": 1,
+     "dates_distinct": true
+    },
+    {
+     "rule": "FOMC_fade_5to120",
+     "split": "dev",
+     "n": 1,
+     "n_unique_dates": 1,
+     "dates_distinct": true
+    },
+    {
+     "rule": "ALL830_momo_5to120",
+     "split": "dev",
+     "n": 6,
+     "n_unique_dates": 6,
+     "dates_distinct": true
+    },
+    {
+     "rule": "ALL830_momo_5to120",
+     "split": "val",
+     "n": 2,
+     "n_unique_dates": 2,
+     "dates_distinct": true
+    },
+    {
+     "rule": "PCE_print2open_r_o120",
+     "split": "dev",
+     "n": 3,
+     "n_unique_dates": 3,
+     "dates_distinct": true
+    }
+   ],
+   "cross_type_same_day": [],
+   "note": "持有窗均为单日内 115min, 不同事件在不同日 → 无跨事件持有重叠; 但 ALL830 与各单类型 cell 共用同一批事件 → 96 cells 高度相关, 有效独立检验远少于 96"
+  },
+  "e_listing_bias": {
+   "note": "基线日全在 04-06 后(QQQ时代), 早期事件(2-3月)只有 8 只 → 原 EW 倍数口径不匹配; 此处 per-symbol listing-matched 复算",
+   "cpi_matched_ratio_rows": [
+    {
+     "date": "2026-02-13",
+     "n_sym_event": 8,
+     "n_sym_matched": 8,
+     "median_per_sym_ratio": 7.3,
+     "mean_per_sym_ratio": 6.94
+    },
+    {
+     "date": "2026-03-11",
+     "n_sym_event": 8,
+     "n_sym_matched": 8,
+     "median_per_sym_ratio": 2.58,
+     "mean_per_sym_ratio": 2.85
+    },
+    {
+     "date": "2026-04-10",
+     "n_sym_event": 20,
+     "n_sym_matched": 20,
+     "median_per_sym_ratio": 0.75,
+     "mean_per_sym_ratio": 1.06
+    },
+    {
+     "date": "2026-05-12",
+     "n_sym_event": 26,
+     "n_sym_matched": 26,
+     "median_per_sym_ratio": 1.42,
+     "mean_per_sym_ratio": 1.57
+    },
+    {
+     "date": "2026-06-10",
+     "n_sym_event": 81,
+     "n_sym_matched": 26,
+     "median_per_sym_ratio": 8.33,
+     "mean_per_sym_ratio": 8.76
+    }
+   ],
+   "qqq_cpi_events_abs_r0_5": [
+    0.0768,
+    0.0523,
+    0.6388
+   ],
+   "qqq_baseline_mean_abs_r0_5": 0.0541,
+   "qqq_cpi_multiple_recomputed": 4.73,
+   "candidate_cells_all_post_qqq_listing": true,
+   "audited_metric_reproduced": {
+    "ew_cum_abs_r0_5_cpi_mean": 0.6009,
+    "baseline": 0.0823,
+    "multiple": 7.3,
+    "note": "被审的7.1x算术无误, 但口径=早期8只事件EW vs 04-06后宽universe基线 → 成分不匹配; listing-matched per-symbol复算: 每事件中位比 7.3/2.58/0.75/1.42/8.33, 均值口径约4.2x; QQQ口径4.73x与被审4.7x一致"
+   }
+  },
+  "d_cost_tiers_qqq_event_days": [
+   {
+    "date": "2026-04-10",
+    "qv_day_usd": 3270701,
+    "tier": "5bp",
+    "roundtrip_cost_pct": 0.18
+   },
+   {
+    "date": "2026-05-12",
+    "qv_day_usd": 19728648,
+    "tier": "2bp",
+    "roundtrip_cost_pct": 0.12
+   },
+   {
+    "date": "2026-06-10",
+    "qv_day_usd": 244347758,
+    "tier": "2bp",
+    "roundtrip_cost_pct": 0.12
+   },
+   {
+    "date": "2026-05-08",
+    "qv_day_usd": 17069805,
+    "tier": "2bp",
+    "roundtrip_cost_pct": 0.12
+   },
+   {
+    "date": "2026-06-05",
+    "qv_day_usd": 161586458,
+    "tier": "2bp",
+    "roundtrip_cost_pct": 0.12
+   },
+   {
+    "date": "2026-04-09",
+    "qv_day_usd": 3693449,
+    "tier": "5bp",
+    "roundtrip_cost_pct": 0.18
+   },
+   {
+    "date": "2026-04-30",
+    "qv_day_usd": 7343084,
+    "tier": "2bp",
+    "roundtrip_cost_pct": 0.12
+   },
+   {
+    "date": "2026-05-28",
+    "qv_day_usd": 41472833,
+    "tier": "2bp",
+    "roundtrip_cost_pct": 0.12
+   },
+   {
+    "date": "2026-04-29",
+    "qv_day_usd": 10068866,
+    "tier": "2bp",
+    "roundtrip_cost_pct": 0.12
+   }
+  ],
+  "f_open_vs_print_control": {
+   "nonevent_days_n": 32,
+   "ew_perminute_abs_r_0830_window": 0.0501,
+   "ew_perminute_abs_r_0930_open": 0.3135,
+   "event_days_ew_perminute_abs_r_print": 0.1583,
+   "event_days_ew_perminute_abs_r_open": 0.3481,
+   "print_ratio_event_over_nonevent": 3.16,
+   "open_ratio_event_over_nonevent": 1.11,
+   "conclusion": "+60m峰=9:30现货开盘(非事件日同样存在,1.11x), print窗仅事件日抬升(3.16x) → t0换算正确, 无DST错位假信号; NFP 03-06(EST)与CPI 06-10(EDT)峰值均正好落@t0, DST边界两侧均经验确认; FOMC峰@+8/+29/+36min与14:00声明+14:30发布会结构一致"
+  }
+ },
+ "summary": {
+  "verdict": "holds",
+  "reproduction": "6个候选cell逐事件净值/β=1剥离/LODO/1.5x成本全部独立复算并对上(差异<0.01pp, 价格约定不同): NFP dev +0.4619 vs 被审+0.4576; PCE dev +0.3905 vs +0.393; ALL830 dev +0.1554 vs +0.1569; strip_beta1与LODO share一致",
+  "a_beta": "被审β=1全额EW剥离是过度剥离: 非事件日31个clock-matched窗估计β̂(QQQ vs EW-exQQQ)=0.358(corr 0.82)。β̂剥离后残差: PCE dev +0.02, ALL830 dev -0.02 / val -0.02 → '剥离后转负'的表述应改为'公平β调整后≈0', 但实质结论不变: momo正收益全部是市场暴露, 无残差alpha。NFP: dev残差+0.31(n=1)但val残差-0.16(反号) → 被审'唯一未被β剥离杀死'的表述偏宽松, val的+0.649同号支持完全来自β",
+  "b_lodo": "LODO独立复算一致: PCE 0.649, ALL830 dev 0.816/val 0.531, CPI_fade 1.813, 全部>40%; n=1的cell天然100%。单名维度: 候选全是单名QQQ, 无从分散",
+  "c_overlap": "cell内无重叠持有: 全部事件日期唯一, 持有窗115min单日内, 无同日跨类型事件。但96个cell复用同9个QQQ时代事件(ALL830=CPI∪NFP∪PCE, 5to30与5to120同一行情) → 有效独立检验远少于96, 只会强化按纪律毙的判断",
+  "d_cost": "成本档核对panel qv_day无误(04-09/04-10正确落5bp档=0.18%往返)。raw momo净值确实过1.5x(PCE +0.32, ALL830 dev +0.085/val +0.63), 与被审一致; 但β̂剥离后残差≈0, 再加1.5x成本全部转负 → 无真alpha过成本压力",
+  "e_listing": "候选cell全部落在QQQ时代(04-06后), 无早期regime污染可交易结论。结构地图的'EW CPI 7.1x'被上市偏差抬高: listing-matched复算≈4.2x且逐事件极不均匀(1.06x~8.76x, CPI 04-10几乎没动); QQQ口径4.7x复现无误 → 结构方向成立, 幅度上限该打折",
+  "f_tz": "18/18事件 zoneinfo(America/New_York) 与手工DST规则毫秒级一致; 经验尖峰: print窗事件日/非事件日=3.16x, +60m峰=现货开盘(非事件日1.11x同在); DST边界两侧(NFP 03-06 EST, CPI 06-10 EDT)峰值均@t0 → 无时区假信号",
+  "residual_caveats": [
+   "'β伪装转负'应表述为'β̂调整后≈0'(β=1过度剥离~3x)",
+   "EW 7.1x结构倍数含上市偏差, matched≈4.2x",
+   "NFP forward假设的val同号支持=纯β, 比被审摘要更弱"
+  ]
+ }
+}

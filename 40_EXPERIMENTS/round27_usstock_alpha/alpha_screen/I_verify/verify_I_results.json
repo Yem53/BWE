@@ -1,0 +1,193 @@
+{
+ "family": "I_verify",
+ "checks": {
+  "holdout_guard": {
+   "db_max_ot": 1783312080000,
+   "db_extends_past_guard": true,
+   "max_ot_fetched": 1781567940000,
+   "fetch_capped_below_guard": true,
+   "audited_script_sql_caps": "both queries in family_I_leadlag.py use ot<1781568000000 (< guard)"
+  },
+  "timestamps_dst": {
+   "utc_offsets_seen_in_window_h": [
+    -4.0
+   ],
+   "expect": "only -4.0 (EDT) \u2014 DST began 2026-03-08, window starts 04-06",
+   "dst_transition_0308": "06:30Z->01:30-0500 (EST), 07:30Z->03:30-0400 (EDT) \u2014 zoneinfo handles skip",
+   "qqq_mean_1m_dollarvol_by_session_dev": {
+    "rth": 21314.0,
+    "afterhours": 6166.0,
+    "overnight": 7974.0,
+    "weekend": 5330.0
+   },
+   "rth_vs_overnight_vol_ratio": 2.7,
+   "memorial_day_rthhours_vol_vs_next_day": 0.233,
+   "session_label_match_vs_audited": true
+  },
+  "universe": {
+   "n_single_names": 74,
+   "ref": 74,
+   "n_tradeable_qv200k": 43,
+   "ref_tradeable": 43,
+   "n_thin_5bp_within_tradeable": 23
+  },
+  "ccf_k1_recompute": {
+   "mine": {
+    "rth": 0.0154,
+    "afterhours": 0.0546,
+    "overnight": 0.0491,
+    "weekend": 0.0283
+   },
+   "ref": {
+    "rth": 0.0154,
+    "afterhours": 0.0546,
+    "overnight": 0.0491,
+    "weekend": 0.0283
+   }
+  },
+  "lag20_overlap": {
+   "n_overlap_of_20": 20,
+   "mine_only": [],
+   "ref_only": []
+  },
+  "event_counts": {
+   "mine": {
+    "closed|thr0.15": 198,
+    "closed|thr0.25": 55,
+    "closed|thr0.4": 18,
+    "rth_control|thr0.15": 202,
+    "rth_control|thr0.25": 79,
+    "rth_control|thr0.4": 18
+   },
+   "ref": {
+    "closed|thr0.15": 198,
+    "closed|thr0.25": 55,
+    "closed|thr0.4": 18,
+    "rth_control|thr0.15": 202,
+    "rth_control|thr0.25": 79,
+    "rth_control|thr0.4": 18
+   }
+  },
+  "beta_recompute": {
+   "median_beta_mine": 0.933,
+   "median_beta_ref": 0.933,
+   "n_clipped": 1,
+   "beta_range_tradeable": [
+    -0.04,
+    3.0
+   ]
+  },
+  "cell_replication": {
+   "n_cells_recomputed": 96,
+   "n_trading_cells_with_stats": 48,
+   "n_discrepancies": 0,
+   "discrepancies": [],
+   "all_trading_cells_net_negative": true,
+   "max_net": [
+    -0.1749,
+    "closed|weekend|thr0.25|h30|ALL|follow"
+   ],
+   "max_gross_strip_follow": [
+    0.0942,
+    "closed|weekend|thr0.25|h30|LAG20|follow"
+   ]
+  },
+  "best_cell_recompute": {
+   "cell": "closed|overnight|thr0.15|h30|LAG20|follow",
+   "mine": {
+    "n": 63,
+    "n_dates": 25,
+    "gross_dn_mean": 0.0737,
+    "gross_strip_mean": 0.073,
+    "gross_beta1_mean": 0.0737,
+    "gross_unclipped_mean": 0.073,
+    "cost_mean": 0.2714,
+    "net_mean": -0.1977,
+    "stress_net_mean": -0.3334,
+    "t_clust_gross_strip": 3.6,
+    "t_clust_stripnet": -9.78,
+    "leg_name_tclust": 2.59
+   },
+   "ref": {
+    "n": 63,
+    "gross_strip_mean": 0.073,
+    "net_mean": -0.1977,
+    "t_clust_gross_strip": 3.6,
+    "cost_mean": 0.2714
+   }
+  },
+  "beta_stripping_variants_best_cell": {
+   "gross_betahat": 0.073,
+   "gross_beta1_full_subtract": 0.0737,
+   "gross_beta_unclipped": 0.073,
+   "cost_mean": 0.2714,
+   "conclusion": "any variant still ~3-4x below two-leg cost"
+  },
+  "lodo_best_cell_gross": {
+   "n_dates": 25,
+   "lodo_mean_range": [
+    0.061,
+    0.0798
+   ],
+   "lodo_t_range": [
+    3.26,
+    3.95
+   ],
+   "max_date_share_gross": 0.204,
+   "t_clustered_by_date": 3.6,
+   "t_clustered_by_isoweek": 3.52
+  },
+  "best_cell_drop_top_symbol_CRCL": {
+   "n": 62,
+   "gross_strip_mean": 0.067,
+   "t_clust": 3.65
+  },
+  "permutation_rerun": {
+   "n_perm": 4000,
+   "seed": 990427,
+   "self_test_fast_vs_eventlevel_t": "max diff < 1e-9 over 3 random flips",
+   "gross_follow36": {
+    "best_cell": "closed|overnight|thr0.15|h30|LAG20|follow",
+    "t": 3.6,
+    "p_maxT_mine": 0.0553,
+    "p_maxT_ref": 0.06,
+    "null_p50": 2.35,
+    "null_p90": 3.33
+   },
+   "per_cell_p_best_gross": {
+    "mine": 0.0003,
+    "ref": 0.0005
+   },
+   "name_leg_follow36": {
+    "t": 2.59,
+    "p_maxT_mine": 0.4422,
+    "p_maxT_ref": 0.4475
+   },
+   "stripnet_all72": {
+    "best_cell": "closed|overnight|thr0.15|h10|LAG20|fade",
+    "t": -23.43,
+    "p_maxT_mine": 0.0,
+    "note": "mechanical (constant cost) \u2014 matches ref diagnosis"
+   }
+  },
+  "cost_realism": {
+   "model": "taker 0.04%/side x2 legs (=0.16% RT) + spread 2bp/side liquid / 5bp thin x2 legs",
+   "best_cell_cost_rt": 0.2714,
+   "best_cell_gross": 0.073,
+   "cost_to_gross_ratio": 3.7,
+   "breakeven_needs_cost_below": 0.073,
+   "zero_qqq_leg_cost_name_leg_only_cost": 0.1521,
+   "reference_fees": "Binance USDS-M standard taker 0.05%/side (0.04 used = slightly generous); closed-hours US-stock-perp books realistically wider than 2-5bp/side => costs UNDER- not over-stated",
+   "all_48_evaluated_trading_cells_net_negative": true
+  }
+ },
+ "verdict": {
+  "claim_audited": "any_survivor=false \u2014 CCF structure real but untradeable; no dev survivor; val untouched",
+  "replication_clean": true,
+  "kill_reasons_confirmed": {
+   "cost_wall": true,
+   "gross_perm_marginal": true,
+   "name_leg_indistinguishable_from_noise": true
+  }
+ }
+}

@@ -1,0 +1,39 @@
+{
+  "family": "fam_D_crosssection_regime_timing_tier_position",
+  "angles": "86-110",
+  "n_cells_tested": 384,
+  "fdr_q_threshold": 0.10,
+  "cost_model": "roundtrip taker 0.14% + slippage oneside*2 (atr>=1.5:0.4, atr>=3:0.6); short=-f",
+  "split": {"dev_rows": 109652, "val_rows": 22273, "dev_days": 230, "val_days": 14, "val_window": "2026-05-15..05-29"},
+  "survivorship_note": "面板缺归零/下架死币 -> 'short 几乎全 family 正' 是幸存者偏差信号; 真实做空更好, 但 family 内 baseline 也被抬高, 必须看 edge-above-ALL-short 而非绝对值。f1440 (隔夜) 受此污染最重, f60/f240 较干净。",
+  "headline": "唯一有结构证据的 alpha = 对 chg24 (24h已涨幅) 越大的币做空越赚, net short mean 随 chg24 decile 单调上升 (dec0 -5.4% -> dec9 +0.9%, median -1.7% -> +2.4%)。这是行为性 mean-reversion (追高被套), 不是单日/崩盘/纯幸存者 artifact。",
+  "tradeable": [
+    {
+      "name": "FADE_EXTENDED_SHORT (主候选)",
+      "rule": "任一警报触发时 chg24>=30 -> 做空, 持有 4h (f240); atr>=1.5% 的妖币用 f240/f1440 更优但滑点更高",
+      "dev": {"n": 8581, "net_mean_pct": 0.80, "net_median_pct": 2.21, "winrate": 0.583, "lodo_frac": 0.0525, "days_net_pos_pct": 0.61},
+      "val": {"n": 1681, "net_mean_pct": 0.385, "net_median_pct": 1.83, "winrate": 0.576, "days_net_pos_pct": 0.71},
+      "edge_over_ALL_short_f240": {"dev_pct": 1.58, "val_pct": -0.18},
+      "robustness": "排除 2025-10-10 后 dev +0.78 / val +0.39 几乎不变; q<1e-5 (dev)。chg24 单调梯度成立。",
+      "verdict": "CAUTIOUS-TRADEABLE。中位强正 + 日度 61/71% 正 + 单调梯度 = 真信号。但 val 14 天里相对 'short-everything' baseline 的增量 edge 在 f240 上消失 (baseline 本身那两周很赚), f1440 上 +0.93。结论: 值得 paper, 但要明白它本质是 '极端追高 fade', 在 short 本就吃香的 regime 里相对优势会被压缩。",
+      "caveats": ["f60 (1h) 仅 break-even (+0.04 dev/+0.08 val) — 4h+ 持仓是 edge 来源", "f1440 数字虚高 (隔夜幸存者偏差)", "val 增量 edge 弱 -> 不是稳态超额, 是 regime-dependent"]
+    },
+    {
+      "name": "FADE_EXTENDED_HIVOL_SHORT (妖币加强, 探索)",
+      "rule": "chg24>=30 AND atr_pct>=1.5% -> 做空 f240/f1440",
+      "dev_f240": {"n": 3848, "net_mean_pct": 1.16, "net_median_pct": 2.29, "winrate": 0.571},
+      "val_f240": {"n": 457, "net_mean_pct": 2.31, "net_median_pct": 4.60, "winrate": 0.63},
+      "verdict": "dev+val 双正且 val 更强, 但 val n 偏小 (<500) + val_frac~0.29。妖币层 fade 在警报数据上确实存在 (呼应 round14/D), 与 regime 关系不大。探索性-偏可交易。"
+    }
+  ],
+  "rejected": [
+    {"name": "REBOUND_LONG (chg24 低 -> 抄底做多)", "why": "dev mean 很高 (chg24<=-20 long f1440 +8.2) 但 LODO frac 0.43-0.70 = 几乎全靠 2025-10-10 崩盘反弹那一天; val 中位转负, val 未确认。典型单日 artifact 陷阱, 正确毙掉 (呼应 round14 抄底 fade 警告)。"},
+    {"name": "FRESH-BREAKOUT FADE (dist_hi24>=-1/-2 刚破24h高 -> 空)", "why": "dev q<1e-6 但 val 全部未确认 (val mean 转负, frac 0.43-0.51)。'刚破新高' 这个位置信号 out-of-sample 不成立; chg24 (背景涨幅) 比 dist_hi24 (瞬时位置) 是更稳的同一现象代理。"},
+    {"name": "chg24>=50/80 极端档", "why": "dev 数字最大但 val n 骤减 (262/31) 且 val mean 转负 (-5.6/-9.4)。过度细分 -> 样本不够 -> 不稳。chg24>=20~30 是 sweet spot。"},
+    {"name": "regime (breg) 单独择时", "why": "breg_bull/chop short f1440 能 val 确认, 但 ALL short f1440 也确认 -> regime 本身不加 edge, 只是 '隔夜 short 普遍正' 的子集。呼应 round14: fade 与 regime 关系不大。"},
+    {"name": "dow 周内效应 (dow5/dow2 等)", "why": "dev 看着强 (dow5 f1440 +3.84) 但 dev LODO frac 0.22-0.26, val frac 飙到 0.55-0.76 (val 周五只有 2 个) -> 纯样本不足/日历巧合, 不可交易。"},
+    {"name": "截面相对强弱 (xs_strongest/weakest)", "why": "10min 桶内多币同触发场景, 两侧均未进入 q<0.10 候选 (信号被成本+噪声淹没)。round15 a02 在警报数据上不复现。"},
+    {"name": "qv24/mc 流动性-市值分层", "why": "覆盖仅 11%/9%, 探索性。mc_q1 (小市值) short 看着好但 val n=0 (val 几乎无 mc 数据), 无法验证。用 atr_pct 作妖币代理更可靠。"}
+  ],
+  "headline_for_other_agents": "fam_D 的可交易产出收敛到一条: chg24>=20~30 的警报做空、持有 4h+。这与 fam_A/方向类家族大概率重叠 (都是 short-the-pump), 建议主 agent 去重时把 chg24-extended 作为 short 候选的核心 regime filter, 而非独立策略。位置(dist_hi)、regime(breg)、时段(hour)、周内(dow)、截面强弱 这些轴在 OOS 上都没有独立的、可交易的 alpha。"
+}

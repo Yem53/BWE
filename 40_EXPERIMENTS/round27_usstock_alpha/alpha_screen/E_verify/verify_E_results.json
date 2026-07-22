@@ -1,0 +1,174 @@
+{
+ "recompute_mismatches": 0,
+ "headline_recompute": {
+  "n": 9,
+  "mean": -1.039,
+  "t": -2.62
+ },
+ "headline_raw": {
+  "n": 9,
+  "mean": -0.808,
+  "t": -1.63
+ },
+ "headline_beta_clean": {
+  "n": 9,
+  "mean": -1.016,
+  "t": -2.49
+ },
+ "val_headline": {
+  "n": 3,
+  "mean": -0.962
+ },
+ "loo_event_means": [
+  [
+   "INTC",
+   -0.859
+  ],
+  [
+   "HOOD",
+   -0.951
+  ],
+  [
+   "AMZN",
+   -1.085
+  ],
+  [
+   "GOOGL",
+   -1.149
+  ],
+  [
+   "META",
+   -0.99
+  ],
+  [
+   "AAPL",
+   -1.059
+  ],
+  [
+   "SNDK",
+   -1.348
+  ],
+  [
+   "PLTR",
+   -0.882
+  ],
+  [
+   "COIN",
+   -1.027
+  ]
+ ],
+ "lodo_date_means": {
+  "2026-04-23": -0.859,
+  "2026-04-28": -0.951,
+  "2026-04-29": -1.183,
+  "2026-04-30": -1.415,
+  "2026-05-04": -0.882,
+  "2026-05-07": -1.027
+ },
+ "drop_apr_cluster": {
+  "n": 4,
+  "mean": -1.913,
+  "t": -6.31
+ },
+ "permutation": {
+  "obs_max_t_n8": 2.62,
+  "obs_max_t_n6": 2.62,
+  "p_event_flip_n8": 0.3622,
+  "p_event_flip_n6": 0.3622,
+  "p_date_flip_n8": 0.3253,
+  "p_date_flip_n6": 0.3253,
+  "null_med_n8_event": 2.27,
+  "null_q95_n8_event": 4.48,
+  "null_med_n8_date": 2.23,
+  "null_q95_n8_date": 4.66
+ },
+ "funding": [
+  {
+   "symbol": "INTC",
+   "date": "2026-04-23",
+   "n_fund": 0,
+   "sym_fund_rows_total": 0
+  },
+  {
+   "symbol": "HOOD",
+   "date": "2026-04-28",
+   "n_fund": 0,
+   "sym_fund_rows_total": 0
+  },
+  {
+   "symbol": "AMZN",
+   "date": "2026-04-29",
+   "n_fund": 0,
+   "sym_fund_rows_total": 0
+  },
+  {
+   "symbol": "GOOGL",
+   "date": "2026-04-29",
+   "n_fund": 1,
+   "sum_rate_pct": 0.0194,
+   "funding_pnl_pct": -0.0194
+  },
+  {
+   "symbol": "META",
+   "date": "2026-04-29",
+   "n_fund": 1,
+   "sum_rate_pct": 0.0375,
+   "funding_pnl_pct": 0.0375
+  },
+  {
+   "symbol": "AAPL",
+   "date": "2026-04-30",
+   "n_fund": 0,
+   "sym_fund_rows_total": 0
+  },
+  {
+   "symbol": "SNDK",
+   "date": "2026-04-30",
+   "n_fund": 1,
+   "sum_rate_pct": 0.014,
+   "funding_pnl_pct": 0.014
+  },
+  {
+   "symbol": "PLTR",
+   "date": "2026-05-04",
+   "n_fund": 1,
+   "sum_rate_pct": 0.0,
+   "funding_pnl_pct": 0.0
+  },
+  {
+   "symbol": "COIN",
+   "date": "2026-05-07",
+   "n_fund": 1,
+   "sum_rate_pct": 0.0,
+   "funding_pnl_pct": 0.0
+  },
+  {
+   "symbol": "AVGO",
+   "date": "2026-06-03",
+   "n_fund": 0,
+   "sym_fund_rows_total": 0
+  },
+  {
+   "symbol": "ORCL",
+   "date": "2026-06-10",
+   "n_fund": 1,
+   "sum_rate_pct": 0.0,
+   "funding_pnl_pct": 0.0
+  },
+  {
+   "symbol": "ADBE",
+   "date": "2026-06-11",
+   "n_fund": 0,
+   "sym_fund_rows_total": 0
+  }
+ ],
+ "liquidity_entry_qv_per_min": {
+  "median": 7739.998880000001,
+  "min": 77.13846
+ },
+ "report_time_dist": {
+  "postmarket": 68
+ },
+ "session_mismatch": [],
+ "drop_audit_suspicious": []
+}

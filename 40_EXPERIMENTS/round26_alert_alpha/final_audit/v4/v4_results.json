@@ -1,0 +1,617 @@
+{
+ "meta": {
+  "window": [
+   "2025-09-28",
+   "2026-05-27"
+  ],
+  "cost_rt": 0.94,
+  "entry_tol_s": 180,
+  "exit_tol_s": 300,
+  "alerts_total": 219784,
+  "alerts_in_window": 142011,
+  "b_raw": 1853,
+  "b_dedup": 1447,
+  "oi_all": 75130,
+  "c2_selected": 7426,
+  "drops_b": {
+   "no_klines": 47,
+   "entry_miss": 0,
+   "exit_miss": 0,
+   "bad_price": 0
+  },
+  "drops_oi": {
+   "no_klines": 14214,
+   "entry_miss": 0,
+   "exit_miss": 0,
+   "bad_price": 0
+  },
+  "funding_coverage": [
+   "2025-10-01",
+   "2026-04-30"
+  ],
+  "c2_funding_uncovered": 2005,
+  "runtime_s": 285.0,
+  "max_rss_gb": 298.402
+ },
+ "B_full": {
+  "n": 1400,
+  "net_mean": 6.6976,
+  "net_median": 1.0684,
+  "win_rate": 0.6171,
+  "n_days": 25,
+  "day_mean": 0.9676,
+  "day_median": -0.0113,
+  "pos_day_ratio": 0.48,
+  "worst_day": "2026-04-24",
+  "worst_day_mean": -3.4928,
+  "best_day": "2025-10-10",
+  "best_day_mean": 14.8333
+ },
+ "B_monthly": {
+  "2025-10": {
+   "n": 590,
+   "net_mean": 14.8333,
+   "net_median": 6.1867,
+   "win_rate": 0.6763,
+   "n_days": 1,
+   "day_mean": 14.8333,
+   "day_median": 14.8333,
+   "pos_day_ratio": 1.0,
+   "worst_day": "2025-10-10",
+   "worst_day_mean": 14.8333,
+   "best_day": "2025-10-10",
+   "best_day_mean": 14.8333
+  },
+  "2025-11": {
+   "n": 9,
+   "net_mean": 0.5326,
+   "net_median": -1.8179,
+   "win_rate": 0.3333,
+   "n_days": 1,
+   "day_mean": 0.5326,
+   "day_median": 0.5326,
+   "pos_day_ratio": 1.0,
+   "worst_day": "2025-11-21",
+   "worst_day_mean": 0.5326,
+   "best_day": "2025-11-21",
+   "best_day_mean": 0.5326
+  },
+  "2026-01": {
+   "n": 108,
+   "net_mean": 2.3421,
+   "net_median": 2.9204,
+   "win_rate": 0.6574,
+   "n_days": 2,
+   "day_mean": 2.0037,
+   "day_median": 2.0037,
+   "pos_day_ratio": 1.0,
+   "worst_day": "2026-01-31",
+   "worst_day_mean": 1.042,
+   "best_day": "2026-01-19",
+   "best_day_mean": 2.9655
+  },
+  "2026-02": {
+   "n": 19,
+   "net_mean": 12.2274,
+   "net_median": 11.051,
+   "win_rate": 1.0,
+   "n_days": 1,
+   "day_mean": 12.2274,
+   "day_median": 12.2274,
+   "pos_day_ratio": 1.0,
+   "worst_day": "2026-02-06",
+   "worst_day_mean": 12.2274,
+   "best_day": "2026-02-06",
+   "best_day_mean": 12.2274
+  },
+  "2026-04": {
+   "n": 30,
+   "net_mean": -0.1039,
+   "net_median": -3.048,
+   "win_rate": 0.2,
+   "n_days": 3,
+   "day_mean": 0.8293,
+   "day_median": 0.1136,
+   "pos_day_ratio": 0.6667,
+   "worst_day": "2026-04-24",
+   "worst_day_mean": -3.4928,
+   "best_day": "2026-04-30",
+   "best_day_mean": 5.8672
+  },
+  "2026-05": {
+   "n": 644,
+   "net_mean": 0.2144,
+   "net_median": 0.3096,
+   "win_rate": 0.5683,
+   "n_days": 17,
+   "day_mean": -0.5823,
+   "day_median": -0.2943,
+   "pos_day_ratio": 0.2941,
+   "worst_day": "2026-05-21",
+   "worst_day_mean": -2.9106,
+   "best_day": "2026-05-08",
+   "best_day_mean": 1.4568
+  }
+ },
+ "B_per_day": {
+  "2025-10-10": {
+   "n": 590,
+   "mean": 14.833,
+   "sum": 8751.63
+  },
+  "2025-11-21": {
+   "n": 9,
+   "mean": 0.533,
+   "sum": 4.79
+  },
+  "2026-01-19": {
+   "n": 73,
+   "mean": 2.966,
+   "sum": 216.48
+  },
+  "2026-01-31": {
+   "n": 35,
+   "mean": 1.042,
+   "sum": 36.47
+  },
+  "2026-02-06": {
+   "n": 19,
+   "mean": 12.227,
+   "sum": 232.32
+  },
+  "2026-04-24": {
+   "n": 5,
+   "mean": -3.493,
+   "sum": -17.46
+  },
+  "2026-04-25": {
+   "n": 23,
+   "mean": 0.114,
+   "sum": 2.61
+  },
+  "2026-04-30": {
+   "n": 2,
+   "mean": 5.867,
+   "sum": 11.73
+  },
+  "2026-05-02": {
+   "n": 5,
+   "mean": -0.92,
+   "sum": -4.6
+  },
+  "2026-05-03": {
+   "n": 5,
+   "mean": -2.342,
+   "sum": -11.71
+  },
+  "2026-05-05": {
+   "n": 9,
+   "mean": -1.484,
+   "sum": -13.35
+  },
+  "2026-05-06": {
+   "n": 23,
+   "mean": 0.166,
+   "sum": 3.81
+  },
+  "2026-05-07": {
+   "n": 6,
+   "mean": -1.68,
+   "sum": -10.08
+  },
+  "2026-05-08": {
+   "n": 4,
+   "mean": 1.457,
+   "sum": 5.83
+  },
+  "2026-05-10": {
+   "n": 75,
+   "mean": -0.011,
+   "sum": -0.84
+  },
+  "2026-05-12": {
+   "n": 30,
+   "mean": -0.266,
+   "sum": -7.99
+  },
+  "2026-05-13": {
+   "n": 65,
+   "mean": -0.98,
+   "sum": -63.71
+  },
+  "2026-05-15": {
+   "n": 226,
+   "mean": 1.121,
+   "sum": 253.27
+  },
+  "2026-05-16": {
+   "n": 20,
+   "mean": -0.449,
+   "sum": -8.97
+  },
+  "2026-05-17": {
+   "n": 63,
+   "mean": 0.622,
+   "sum": 39.18
+  },
+  "2026-05-18": {
+   "n": 76,
+   "mean": -0.195,
+   "sum": -14.84
+  },
+  "2026-05-19": {
+   "n": 5,
+   "mean": -2.308,
+   "sum": -11.54
+  },
+  "2026-05-20": {
+   "n": 1,
+   "mean": 0.575,
+   "sum": 0.57
+  },
+  "2026-05-21": {
+   "n": 3,
+   "mean": -2.911,
+   "sum": -8.73
+  },
+  "2026-05-23": {
+   "n": 28,
+   "mean": -0.294,
+   "sum": -8.24
+  }
+ },
+ "B_lodo_ex_20251010": {
+  "n": 810,
+  "net_mean": 0.7716,
+  "net_median": 0.3957,
+  "win_rate": 0.5741,
+  "n_days": 24,
+  "day_mean": 0.3898,
+  "day_median": -0.1033,
+  "pos_day_ratio": 0.4583,
+  "worst_day": "2026-04-24",
+  "worst_day_mean": -3.4928,
+  "best_day": "2026-02-06",
+  "best_day_mean": 12.2274
+ },
+ "B_top_contrib_day": {
+  "day": "2025-10-10",
+  "sum_net": 8751.63
+ },
+ "B_lodo_ex_top_day": {
+  "n": 810,
+  "net_mean": 0.7716,
+  "net_median": 0.3957,
+  "win_rate": 0.5741,
+  "n_days": 24,
+  "day_mean": 0.3898,
+  "day_median": -0.1033,
+  "pos_day_ratio": 0.4583,
+  "worst_day": "2026-04-24",
+  "worst_day_mean": -3.4928,
+  "best_day": "2026-02-06",
+  "best_day_mean": 12.2274
+ },
+ "B_capacity_top3_per_30min": {
+  "n": 140,
+  "net_mean": 0.0709,
+  "net_median": -0.2143,
+  "win_rate": 0.4714,
+  "n_days": 25,
+  "day_mean": 0.3741,
+  "day_median": -0.1552,
+  "pos_day_ratio": 0.4,
+  "worst_day": "2026-04-24",
+  "worst_day_mean": -3.4405,
+  "best_day": "2026-02-06",
+  "best_day_mean": 17.0347
+ },
+ "B_capacity_top3_ex_20251010": {
+  "n": 119,
+  "net_mean": -0.2858,
+  "net_median": -0.2108,
+  "win_rate": 0.4706,
+  "n_days": 24,
+  "day_mean": 0.3025,
+  "day_median": -0.1594,
+  "pos_day_ratio": 0.375,
+  "worst_day": "2026-04-24",
+  "worst_day_mean": -3.4405,
+  "best_day": "2026-02-06",
+  "best_day_mean": 17.0347
+ },
+ "C2_full": {
+  "n": 5875,
+  "net_mean": 1.3098,
+  "net_median": 4.8477,
+  "win_rate": 0.6645,
+  "n_days": 240,
+  "day_mean": 1.2903,
+  "day_median": 3.1896,
+  "pos_day_ratio": 0.6875,
+  "worst_day": "2025-11-19",
+  "worst_day_mean": -170.8348,
+  "best_day": "2026-03-03",
+  "best_day_mean": 26.3477
+ },
+ "C2_monthly": {
+  "2025-09": {
+   "n": 45,
+   "net_mean": 12.3773,
+   "net_median": 11.2266,
+   "win_rate": 0.7333,
+   "n_days": 3,
+   "day_mean": 9.0049,
+   "day_median": 6.1888,
+   "pos_day_ratio": 1.0,
+   "worst_day": "2025-09-30",
+   "worst_day_mean": 2.2669,
+   "best_day": "2025-09-29",
+   "best_day_mean": 18.5589
+  },
+  "2025-10": {
+   "n": 837,
+   "net_mean": -0.6636,
+   "net_median": 5.6091,
+   "win_rate": 0.6392,
+   "n_days": 31,
+   "day_mean": 0.3301,
+   "day_median": 2.7397,
+   "pos_day_ratio": 0.7097,
+   "worst_day": "2025-10-26",
+   "worst_day_mean": -46.7844,
+   "best_day": "2025-10-21",
+   "best_day_mean": 15.5869
+  },
+  "2025-11": {
+   "n": 517,
+   "net_mean": 0.6203,
+   "net_median": 8.6844,
+   "win_rate": 0.7021,
+   "n_days": 30,
+   "day_mean": -0.934,
+   "day_median": 5.7992,
+   "pos_day_ratio": 0.8,
+   "worst_day": "2025-11-19",
+   "worst_day_mean": -170.8348,
+   "best_day": "2025-11-28",
+   "best_day_mean": 21.2959
+  },
+  "2025-12": {
+   "n": 380,
+   "net_mean": 0.5604,
+   "net_median": 5.3332,
+   "win_rate": 0.65,
+   "n_days": 31,
+   "day_mean": 1.0744,
+   "day_median": 2.8804,
+   "pos_day_ratio": 0.6452,
+   "worst_day": "2025-12-03",
+   "worst_day_mean": -16.2946,
+   "best_day": "2025-12-01",
+   "best_day_mean": 17.2562
+  },
+  "2026-01": {
+   "n": 331,
+   "net_mean": 1.2206,
+   "net_median": 5.8663,
+   "win_rate": 0.6677,
+   "n_days": 31,
+   "day_mean": 1.2261,
+   "day_median": 2.5185,
+   "pos_day_ratio": 0.6774,
+   "worst_day": "2026-01-24",
+   "worst_day_mean": -23.5286,
+   "best_day": "2026-01-28",
+   "best_day_mean": 16.3043
+  },
+  "2026-02": {
+   "n": 338,
+   "net_mean": 4.0894,
+   "net_median": 6.9986,
+   "win_rate": 0.713,
+   "n_days": 28,
+   "day_mean": 4.4624,
+   "day_median": 4.5761,
+   "pos_day_ratio": 0.8214,
+   "worst_day": "2026-02-02",
+   "worst_day_mean": -19.2818,
+   "best_day": "2026-02-01",
+   "best_day_mean": 17.6967
+  },
+  "2026-03": {
+   "n": 333,
+   "net_mean": 2.1159,
+   "net_median": 4.4805,
+   "win_rate": 0.6306,
+   "n_days": 30,
+   "day_mean": 0.5943,
+   "day_median": 1.2164,
+   "pos_day_ratio": 0.5667,
+   "worst_day": "2026-03-29",
+   "worst_day_mean": -28.4589,
+   "best_day": "2026-03-03",
+   "best_day_mean": 26.3477
+  },
+  "2026-04": {
+   "n": 1230,
+   "net_mean": 2.0984,
+   "net_median": 5.5973,
+   "win_rate": 0.6967,
+   "n_days": 30,
+   "day_mean": 1.8854,
+   "day_median": 3.3647,
+   "pos_day_ratio": 0.6333,
+   "worst_day": "2026-04-04",
+   "worst_day_mean": -19.6493,
+   "best_day": "2026-04-19",
+   "best_day_mean": 18.0025
+  },
+  "2026-05": {
+   "n": 1864,
+   "net_mean": 1.1203,
+   "net_median": 2.8644,
+   "win_rate": 0.6422,
+   "n_days": 26,
+   "day_mean": 1.1454,
+   "day_median": 2.2827,
+   "pos_day_ratio": 0.6154,
+   "worst_day": "2026-05-08",
+   "worst_day_mean": -7.7795,
+   "best_day": "2026-05-15",
+   "best_day_mean": 11.2942
+  }
+ },
+ "OI_base_full": {
+  "n": 60916,
+  "net_mean": -0.5802,
+  "net_median": 1.3843,
+  "win_rate": 0.5651,
+  "n_days": 240,
+  "day_mean": 0.3229,
+  "day_median": 1.0206,
+  "pos_day_ratio": 0.5875,
+  "worst_day": "2025-11-19",
+  "worst_day_mean": -50.257,
+  "best_day": "2026-04-18",
+  "best_day_mean": 21.895
+ },
+ "C2_excess_paired": {
+  "n_days": 240,
+  "excess_day_mean": 0.9674,
+  "excess_day_median": 1.7812,
+  "pos_day_ratio": 0.6333
+ },
+ "C2_excess_monthly": {
+  "2025-09": {
+   "n_days": 3,
+   "excess_mean": 1.3063,
+   "pos_day_ratio": 1.0
+  },
+  "2025-10": {
+   "n_days": 31,
+   "excess_mean": 0.562,
+   "pos_day_ratio": 0.5806
+  },
+  "2025-11": {
+   "n_days": 30,
+   "excess_mean": -1.362,
+   "pos_day_ratio": 0.6667
+  },
+  "2025-12": {
+   "n_days": 31,
+   "excess_mean": -0.027,
+   "pos_day_ratio": 0.5484
+  },
+  "2026-01": {
+   "n_days": 31,
+   "excess_mean": 1.6376,
+   "pos_day_ratio": 0.7097
+  },
+  "2026-02": {
+   "n_days": 28,
+   "excess_mean": 2.5812,
+   "pos_day_ratio": 0.75
+  },
+  "2026-03": {
+   "n_days": 30,
+   "excess_mean": -1.4137,
+   "pos_day_ratio": 0.4
+  },
+  "2026-04": {
+   "n_days": 30,
+   "excess_mean": 4.1784,
+   "pos_day_ratio": 0.6667
+  },
+  "2026-05": {
+   "n_days": 26,
+   "excess_mean": 1.7901,
+   "pos_day_ratio": 0.7308
+  }
+ },
+ "C2_funding": {
+  "n_covered": 3870,
+  "n_uncovered": 2005,
+  "mean_funding_adj_pct": -1.2688,
+  "pos_adj_ratio": 0.3522,
+  "pre": {
+   "n": 3870,
+   "net_mean": 1.5193,
+   "net_median": 6.1936,
+   "win_rate": 0.678,
+   "n_days": 210,
+   "day_mean": 1.3349,
+   "day_median": 3.3042,
+   "pos_day_ratio": 0.7048,
+   "worst_day": "2025-11-19",
+   "worst_day_mean": -170.8348,
+   "best_day": "2026-03-03",
+   "best_day_mean": 26.3477
+  },
+  "post": {
+   "n": 3870,
+   "net_mean": 0.2505,
+   "net_median": 5.1087,
+   "win_rate": 0.6517,
+   "n_days": 210,
+   "day_mean": -0.0894,
+   "day_median": 2.1112,
+   "pos_day_ratio": 0.6286,
+   "worst_day": "2025-11-19",
+   "worst_day_mean": -176.719,
+   "best_day": "2026-03-03",
+   "best_day_mean": 25.9961
+  }
+ },
+ "C2_lodo_ex_20251010": {
+  "n": 5794,
+  "net_mean": 1.6914,
+  "net_median": 4.9848,
+  "win_rate": 0.6703,
+  "n_days": 239,
+  "day_mean": 1.4044,
+  "day_median": 3.2119,
+  "pos_day_ratio": 0.6904,
+  "worst_day": "2025-11-19",
+  "worst_day_mean": -170.8348,
+  "best_day": "2026-03-03",
+  "best_day_mean": 26.3477
+ },
+ "C2_top_contrib_day": {
+  "day": "2026-04-24",
+  "sum_net": 1431.96
+ },
+ "C2_lodo_ex_top_day": {
+  "n": 5709,
+  "net_mean": 1.0971,
+  "net_median": 4.8262,
+  "win_rate": 0.6639,
+  "n_days": 239,
+  "day_mean": 1.2596,
+  "day_median": 3.1673,
+  "pos_day_ratio": 0.6862,
+  "worst_day": "2025-11-19",
+  "worst_day_mean": -170.8348,
+  "best_day": "2026-03-03",
+  "best_day_mean": 26.3477
+ },
+ "C2_lodo_ex_both": {
+  "n": 5628,
+  "net_mean": 1.4869,
+  "net_median": 4.9744,
+  "win_rate": 0.6699,
+  "n_days": 238,
+  "day_mean": 1.374,
+  "day_median": 3.1896,
+  "pos_day_ratio": 0.6891,
+  "worst_day": "2025-11-19",
+  "worst_day_mean": -170.8348,
+  "best_day": "2026-03-03",
+  "best_day_mean": 26.3477
+ },
+ "C2_excess_ex_20251010": {
+  "n_days": 239,
+  "excess_day_mean": 0.9957,
+  "pos_day_ratio": 0.636
+ }
+}

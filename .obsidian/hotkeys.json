@@ -1,8 +1,0 @@
-{
-  "templates:insert-template": [{ "modifiers": ["Mod"], "key": "T" }],
-  "global-search:open": [{ "modifiers": ["Mod", "Shift"], "key": "F" }],
-  "graph:open": [{ "modifiers": ["Mod"], "key": "G" }],
-  "backlink:open": [{ "modifiers": ["Mod", "Shift"], "key": "B" }],
-  "switcher:open": [{ "modifiers": ["Mod"], "key": "O" }],
-  "daily-notes": [{ "modifiers": ["Mod", "Alt"], "key": "D" }]
-}

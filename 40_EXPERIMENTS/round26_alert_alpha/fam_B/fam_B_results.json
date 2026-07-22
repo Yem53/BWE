@@ -1,0 +1,142 @@
+{
+  "family": "sequence/cluster/breadth (angles 26-55)",
+  "dev_max_ts": 1778803200000,
+  "n_dev": 109652,
+  "n_val": 22273,
+  "cost_model": "RT 0.14% + slip(atr>=1.5%:+0.8%RT, atr>=3%:+1.2%RT)",
+  "verdicts": [
+    {
+      "id": "breadth_headline_DEBUNK",
+      "claim": "breadth_min high -> f60 +1.33% (裸扫亮灯)",
+      "ruling": "FALSE as stated — single-day artifact (2025-10-10)",
+      "evidence": {
+        "cell": "breadth_min>=11 long f60 net (dev)",
+        "n": 7548,
+        "net_mean_with_1010": 2.157,
+        "max_one_day_frac": 0.792,
+        "top_day": "2025-10-10",
+        "mean_drop_topday": 0.144,
+        "val_mean": -0.017,
+        "note": "with 10-10: +2.16%; drop 10-10: -0.04% p=0.66; val: -0.02% flat. 82% of net PnL from 2025-10-10."
+      }
+    },
+    {
+      "id": "extreme_breadth_dipbuy",
+      "claim": "extreme market-wide breadth + alert coin dumping -> bounce (long)",
+      "ruling": "TRADEABLE (modest, val-confirmed). Best horizon ~4h (f240). 1-day horizon fails.",
+      "spec": "breadth_min>=16 AND chg<=-2.5 ; side=LONG ; hold ~4h (f240). Entry = alert coin's entry_px.",
+      "dev_f240": {
+        "n": 1181,
+        "net_mean": 8.62,
+        "net_median": 2.277,
+        "winrate": 0.634,
+        "p": 0.0,
+        "max_one_day_frac": 0.91,
+        "mean_drop_topday": 1.692,
+        "day_level_mean": 2.23,
+        "day_level_p": 0.05,
+        "pos_days": 10,
+        "tot_days": 17
+      },
+      "dev_no1010_f240": {
+        "n": 482,
+        "net_mean": 1.692,
+        "net_median": 0.705,
+        "winrate": 0.6,
+        "max_one_day_frac": 0.393,
+        "mean_drop_topday": 1.145
+      },
+      "val_f240": {
+        "n": 753,
+        "net_mean": 1.261,
+        "net_median": 1.173,
+        "winrate": 0.722,
+        "p": 0.0,
+        "max_one_day_frac": 0.59,
+        "mean_drop_topday": 0.844,
+        "day_level_mean": 0.147,
+        "day_level_p": 0.774,
+        "pos_days": 7,
+        "tot_days": 10
+      },
+      "val_f60_companion": {
+        "n": 753,
+        "net_mean": 0.314,
+        "net_median": 0.325,
+        "winrate": 0.588,
+        "p": 0.0,
+        "max_one_day_frac": 0.277
+      },
+      "control_breadth_isolation": {
+        "same_dump_HIGH_breadth(b16,no1010,f60)": {
+          "n": 482,
+          "mean": 1.597,
+          "win": 0.683
+        },
+        "same_dump_LOW_breadth(b<=5,no1010,f60)": {
+          "n": 24571,
+          "mean": -0.651,
+          "win": 0.461
+        },
+        "interpretation": "A -2.5% dump alone bleeds (low-breadth -0.65%); the SAME dump during a market-wide flush bounces (+1.60%). Breadth adds real info."
+      },
+      "honesty_caveats": [
+        "Per-TRADE val mean +1.26% (p<1e-4) is inflated by within-day clustering: extreme-breadth minutes fire dozens of correlated alerts. Independent events ≈ 10 val days.",
+        "Per-DAY val mean +0.15% (p=0.77) NOT significant — treat as 'few independent events, positive 7/10 val days, modest per-event edge', not 753 iid trades.",
+        "f1440 (24h) FAILS val (-0.15%): bounce is a 1-4h phenomenon, fades by next day.",
+        "dev maxday=0.91 (10-10) — would auto-fail the single-day rule on dev alone; rescued ONLY because val (no 10-10) independently confirms + control test isolates breadth."
+      ]
+    },
+    {
+      "id": "xwin_repeat_dense_TRAP",
+      "claim": "xwin=1 / n1h-n24h high / minsprev small = '真信号'值得做",
+      "ruling": "FALSE — classic left-tail trap. Positive median but NEGATIVE short mean (rare squeezes blow out the short). Not tradeable either side after cost.",
+      "evidence_short_f60": [
+        {
+          "cell": "xwin=1",
+          "n": 16484,
+          "short_net_mean": -0.997,
+          "short_net_median": 0.755,
+          "win": 0.532
+        },
+        {
+          "cell": "minsprev<=5m",
+          "n": 26173,
+          "short_net_mean": -1.159,
+          "short_net_median": 0.378,
+          "win": 0.518
+        },
+        {
+          "cell": "n1h>=8",
+          "n": 14968,
+          "short_net_mean": -1.962,
+          "short_net_median": -0.041,
+          "win": 0.499
+        },
+        {
+          "cell": "n24h>=16",
+          "n": 46103,
+          "short_net_mean": -0.897,
+          "short_net_median": -0.124,
+          "win": 0.491
+        }
+      ],
+      "note": "e.g. xwin=1 short: median +0.76% but mean -1.00%, win 53%. f240 median climbs to +2.7% while mean stays -1.2% = a few violent squeezes dominate. As LONG these have negative median. f5 immediate-dump shorts: gross only +0.08-0.15%, fully eaten by ~0.75% RT cost."
+    },
+    {
+      "id": "breadth_misc",
+      "claim": "various (breadth_1h thermometer, hb-strongest-mover, first_day)",
+      "ruling": "No additional tradeable edge. hb_strongest-mover long: mean +0.57% but median NEGATIVE + dropTop<0 (mirror trap). first_day/n1h=1 long ~flat. breadth_1h high subsumed by breadth_min signal.",
+      "tradeable": false
+    }
+  ],
+  "bottom_line": {
+    "tradeable_candidates": 1,
+    "candidate": "extreme_breadth_dipbuy (breadth_min>=16 & chg<=-2.5, LONG, ~4h hold): val +1.26% net/trade, win 72%, 7/10 val days positive — but few independent events (~10/2wk) and day-level not significant. Size accordingly.",
+    "debunked": [
+      "breadth_min headline +1.33% = 82% one-day(10-10) artifact",
+      "xwin/repeat/dense-spacing = left-tail squeeze traps, not alpha"
+    ],
+    "family_honest_summary": "One genuine but small/low-frequency edge (panic-flush dip-buy). The rest of the sequence/cluster/breadth family is either single-day artifact or left-tail trap. No high-frequency tradeable alpha found."
+  }
+}

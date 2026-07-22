@@ -8,7 +8,7 @@
     "price_90s": {"sec": 90,  "thr_pct": 5.0},
     "price_180s_extreme": {"sec": 180, "thr_pct": 8.0}
   },
-  "oi_price_1h": {"sec": 3600, "price_thr_pct": 5.0, "oi_thr_pct": 5.0},
+  "oi_price_1h": {"sec": 3600, "price_thr_pct": 5.0, "oi_thr_pct": 3.0},
   "store_cooldown_sec": 600,
   "push_cooldown_sec": 1800,
   "push_filter": {

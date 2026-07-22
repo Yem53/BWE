@@ -1,0 +1,453 @@
+{
+ "meta": {
+  "audit": "终审V2 执行现实性加压 (滞后衰减+滑点加压)",
+  "run_at": "2026-06-11T22:37:06+00:00",
+  "holdout_window": "2026-05-30T00:00Z <= ts < 2026-06-09T00:00Z",
+  "alerts_n": 52235,
+  "entry_rule": "第一根 ot+60000>ts 的bar收盘, tol 180s; 滞后+k=进场bar右移k根",
+  "exit_rule": "target=进场close_time+hold*60s, 第一根 ot>=target 收盘, tol 300s, 缺bar丢弃",
+  "cost_rule": "净=raw - (0.14%手续费往返 + 2×单边滑点); 基线0.4%/边 → 往返0.94%",
+  "lag_curve_note": "衰减曲线/滑点矩阵在'全lag均有效'公共事件集上算 (同批事件纯滞后效应)",
+  "criteria": {
+   "判死": "+1bar翻负=幻影alpha",
+   "判危": "0.6%/边扛不住 或 +2bar×0.6%翻负",
+   "判过": "+2bar×0.6%/边仍正"
+  }
+ },
+ "B": {
+  "strategy": "B",
+  "n_triggers": 2372,
+  "n_valid_entry": 2358,
+  "n_common_all_lags": 2358,
+  "entry_delay_s": {
+   "n": 2358,
+   "mean": 31.923,
+   "p10": 8.016,
+   "p25": 17.611,
+   "p50": 33.705,
+   "p75": 46.482,
+   "p90": 53.411,
+   "p95": 56.757,
+   "p99": 59.219
+  },
+  "lag0_fullset_slip0.4": {
+   "n": 2358,
+   "raw_mean": 2.371,
+   "net_mean": 1.431,
+   "net_median": 1.375,
+   "win_pct": 68.8,
+   "boot5_net": 1.288,
+   "boot95_net": 1.579
+  },
+  "lag0_fullset_day_stats": {
+   "day_net_means": {
+    "06-01": 4.141,
+    "06-02": -0.576,
+    "06-03": -4.148,
+    "06-04": 0.208,
+    "06-05": 1.288,
+    "06-06": 5.284,
+    "06-08": -2.08
+   },
+   "eqw_day_mean": 0.588,
+   "pos_days": "4/7"
+  },
+  "lag_curve_slip0.4_common": {
+   "lag+0": {
+    "n": 2358,
+    "raw_mean": 2.371,
+    "net_mean": 1.431,
+    "net_median": 1.375,
+    "win_pct": 68.8,
+    "boot5_net": 1.288,
+    "boot95_net": 1.579
+   },
+   "lag+1": {
+    "n": 2358,
+    "raw_mean": 2.562,
+    "net_mean": 1.622,
+    "net_median": 1.617,
+    "win_pct": 71.6,
+    "boot5_net": 1.48,
+    "boot95_net": 1.77
+   },
+   "lag+2": {
+    "n": 2358,
+    "raw_mean": 2.605,
+    "net_mean": 1.665,
+    "net_median": 1.751,
+    "win_pct": 72.5,
+    "boot5_net": 1.524,
+    "boot95_net": 1.815
+   },
+   "lag+5": {
+    "n": 2358,
+    "raw_mean": 2.432,
+    "net_mean": 1.492,
+    "net_median": 1.585,
+    "win_pct": 72.5,
+    "boot5_net": 1.351,
+    "boot95_net": 1.643
+   },
+   "lag+15": {
+    "n": 2358,
+    "raw_mean": 2.126,
+    "net_mean": 1.186,
+    "net_median": 1.24,
+    "win_pct": 69.3,
+    "boot5_net": 1.048,
+    "boot95_net": 1.332
+   }
+  },
+  "slip_matrix_lag0_common": {
+   "slip0.4": {
+    "n": 2358,
+    "raw_mean": 2.371,
+    "net_mean": 1.431,
+    "net_median": 1.375,
+    "win_pct": 68.8,
+    "boot5_net": 1.288,
+    "boot95_net": 1.579
+   },
+   "slip0.6": {
+    "n": 2358,
+    "raw_mean": 2.371,
+    "net_mean": 1.031,
+    "net_median": 0.975,
+    "win_pct": 64.0,
+    "boot5_net": 0.888,
+    "boot95_net": 1.179
+   },
+   "slip0.8": {
+    "n": 2358,
+    "raw_mean": 2.371,
+    "net_mean": 0.631,
+    "net_median": 0.575,
+    "win_pct": 59.2,
+    "boot5_net": 0.488,
+    "boot95_net": 0.779
+   },
+   "slip1.0": {
+    "n": 2358,
+    "raw_mean": 2.371,
+    "net_mean": 0.231,
+    "net_median": 0.175,
+    "win_pct": 52.8,
+    "boot5_net": 0.088,
+    "boot95_net": 0.379
+   }
+  },
+  "net_mean_grid_common": {
+   "lag+0": {
+    "slip0.4": 1.431,
+    "slip0.6": 1.031,
+    "slip0.8": 0.631,
+    "slip1.0": 0.231
+   },
+   "lag+1": {
+    "slip0.4": 1.622,
+    "slip0.6": 1.222,
+    "slip0.8": 0.822,
+    "slip1.0": 0.422
+   },
+   "lag+2": {
+    "slip0.4": 1.665,
+    "slip0.6": 1.265,
+    "slip0.8": 0.865,
+    "slip1.0": 0.465
+   },
+   "lag+5": {
+    "slip0.4": 1.492,
+    "slip0.6": 1.092,
+    "slip0.8": 0.692,
+    "slip1.0": 0.292
+   },
+   "lag+15": {
+    "slip0.4": 1.186,
+    "slip0.6": 0.786,
+    "slip0.8": 0.386,
+    "slip1.0": -0.014
+   }
+  },
+  "combo_lag2_slip0.6": {
+   "n": 2358,
+   "raw_mean": 2.605,
+   "net_mean": 1.265,
+   "net_median": 1.351,
+   "win_pct": 68.7,
+   "boot5_net": 1.124,
+   "boot95_net": 1.415
+  },
+  "combo_lag2_slip0.6_day_stats": {
+   "day_net_means": {
+    "06-01": 3.363,
+    "06-02": -1.333,
+    "06-03": -2.756,
+    "06-04": 0.911,
+    "06-05": 0.896,
+    "06-06": 4.526,
+    "06-08": -2.099
+   },
+   "eqw_day_mean": 0.501,
+   "pos_days": "4/7"
+  },
+  "entry_bar_amp_pct": {
+   "n": 2358,
+   "mean": 1.126,
+   "p10": 0.381,
+   "p25": 0.531,
+   "p50": 0.769,
+   "p75": 1.209,
+   "p90": 1.908,
+   "p95": 2.603,
+   "p99": 6.104
+  },
+  "entry_bar_amp_share": {
+   "amp>=0.8pct": 47.6,
+   "amp>=1.6pct": 14.7,
+   "amp>=3.0pct": 3.9,
+   "amp>=5.0pct": 1.6
+  },
+  "next_bar_open_gap_pct": {
+   "n": 2358,
+   "mean": 0.005,
+   "p10": -0.08,
+   "p25": -0.023,
+   "p50": 0.0,
+   "p75": 0.036,
+   "p90": 0.091,
+   "p95": 0.126,
+   "p99": 0.25
+  },
+  "adverse_open_gap": {
+   "mean": 0.005,
+   "p50": 0.0,
+   "p90": 0.091,
+   "p95": 0.126,
+   "share_gt_0.4pct": 0.1
+  },
+  "verdict": "判过",
+  "verdict_reason": "执行稳健: +2bar×0.6%/边仍正 (净均 +1.265%)"
+ },
+ "C2": {
+  "strategy": "C2",
+  "n_triggers": 1779,
+  "n_valid_entry": 1774,
+  "n_common_all_lags": 1774,
+  "entry_delay_s": {
+   "n": 1774,
+   "mean": 23.952,
+   "p10": 7.605,
+   "p25": 14.571,
+   "p50": 20.736,
+   "p75": 29.775,
+   "p90": 48.467,
+   "p95": 53.777,
+   "p99": 58.91
+  },
+  "lag0_fullset_slip0.4": {
+   "n": 1774,
+   "raw_mean": 1.557,
+   "net_mean": 0.617,
+   "net_median": 0.556,
+   "win_pct": 53.8,
+   "boot5_net": -0.059,
+   "boot95_net": 1.266
+  },
+  "lag0_fullset_day_stats": {
+   "day_net_means": {
+    "05-30": 2.131,
+    "05-31": 6.915,
+    "06-01": -1.013,
+    "06-02": -3.671,
+    "06-03": 5.962,
+    "06-04": -12.992,
+    "06-05": 9.347,
+    "06-06": -2.671,
+    "06-07": 0.839,
+    "06-08": -0.708
+   },
+   "eqw_day_mean": 0.414,
+   "pos_days": "5/10"
+  },
+  "lag_curve_slip0.4_common": {
+   "lag+0": {
+    "n": 1774,
+    "raw_mean": 1.557,
+    "net_mean": 0.617,
+    "net_median": 0.556,
+    "win_pct": 53.8,
+    "boot5_net": -0.059,
+    "boot95_net": 1.266
+   },
+   "lag+1": {
+    "n": 1774,
+    "raw_mean": 1.552,
+    "net_mean": 0.612,
+    "net_median": 0.581,
+    "win_pct": 54.2,
+    "boot5_net": -0.064,
+    "boot95_net": 1.266
+   },
+   "lag+2": {
+    "n": 1774,
+    "raw_mean": 1.577,
+    "net_mean": 0.637,
+    "net_median": 0.582,
+    "win_pct": 54.2,
+    "boot5_net": -0.042,
+    "boot95_net": 1.29
+   },
+   "lag+5": {
+    "n": 1774,
+    "raw_mean": 1.601,
+    "net_mean": 0.661,
+    "net_median": 0.585,
+    "win_pct": 54.2,
+    "boot5_net": -0.027,
+    "boot95_net": 1.304
+   },
+   "lag+15": {
+    "n": 1774,
+    "raw_mean": 1.679,
+    "net_mean": 0.739,
+    "net_median": 0.57,
+    "win_pct": 54.5,
+    "boot5_net": 0.07,
+    "boot95_net": 1.391
+   }
+  },
+  "slip_matrix_lag0_common": {
+   "slip0.4": {
+    "n": 1774,
+    "raw_mean": 1.557,
+    "net_mean": 0.617,
+    "net_median": 0.556,
+    "win_pct": 53.8,
+    "boot5_net": -0.059,
+    "boot95_net": 1.266
+   },
+   "slip0.6": {
+    "n": 1774,
+    "raw_mean": 1.557,
+    "net_mean": 0.217,
+    "net_median": 0.156,
+    "win_pct": 50.6,
+    "boot5_net": -0.459,
+    "boot95_net": 0.866
+   },
+   "slip0.8": {
+    "n": 1774,
+    "raw_mean": 1.557,
+    "net_mean": -0.183,
+    "net_median": -0.244,
+    "win_pct": 48.9,
+    "boot5_net": -0.859,
+    "boot95_net": 0.466
+   },
+   "slip1.0": {
+    "n": 1774,
+    "raw_mean": 1.557,
+    "net_mean": -0.583,
+    "net_median": -0.644,
+    "win_pct": 47.1,
+    "boot5_net": -1.259,
+    "boot95_net": 0.066
+   }
+  },
+  "net_mean_grid_common": {
+   "lag+0": {
+    "slip0.4": 0.617,
+    "slip0.6": 0.217,
+    "slip0.8": -0.183,
+    "slip1.0": -0.583
+   },
+   "lag+1": {
+    "slip0.4": 0.612,
+    "slip0.6": 0.212,
+    "slip0.8": -0.188,
+    "slip1.0": -0.588
+   },
+   "lag+2": {
+    "slip0.4": 0.637,
+    "slip0.6": 0.237,
+    "slip0.8": -0.163,
+    "slip1.0": -0.563
+   },
+   "lag+5": {
+    "slip0.4": 0.661,
+    "slip0.6": 0.261,
+    "slip0.8": -0.139,
+    "slip1.0": -0.539
+   },
+   "lag+15": {
+    "slip0.4": 0.739,
+    "slip0.6": 0.339,
+    "slip0.8": -0.061,
+    "slip1.0": -0.461
+   }
+  },
+  "combo_lag2_slip0.6": {
+   "n": 1774,
+   "raw_mean": 1.577,
+   "net_mean": 0.237,
+   "net_median": 0.182,
+   "win_pct": 51.1,
+   "boot5_net": -0.442,
+   "boot95_net": 0.89
+  },
+  "combo_lag2_slip0.6_day_stats": {
+   "day_net_means": {
+    "05-30": 1.731,
+    "05-31": 6.44,
+    "06-01": -1.376,
+    "06-02": -4.096,
+    "06-03": 5.597,
+    "06-04": -13.46,
+    "06-05": 9.055,
+    "06-06": -2.793,
+    "06-07": 0.378,
+    "06-08": -1.091
+   },
+   "eqw_day_mean": 0.039,
+   "pos_days": "5/10"
+  },
+  "entry_bar_amp_pct": {
+   "n": 1774,
+   "mean": 0.715,
+   "p10": 0.035,
+   "p25": 0.137,
+   "p50": 0.376,
+   "p75": 0.952,
+   "p90": 1.856,
+   "p95": 2.503,
+   "p99": 4.077
+  },
+  "entry_bar_amp_share": {
+   "amp>=0.8pct": 29.8,
+   "amp>=1.6pct": 13.2,
+   "amp>=3.0pct": 3.1,
+   "amp>=5.0pct": 0.5
+  },
+  "next_bar_open_gap_pct": {
+   "n": 1774,
+   "mean": 0.002,
+   "p10": -0.062,
+   "p25": -0.016,
+   "p50": 0.0,
+   "p75": 0.018,
+   "p90": 0.068,
+   "p95": 0.1,
+   "p99": 0.181
+  },
+  "adverse_open_gap": {
+   "mean": -0.002,
+   "p50": -0.0,
+   "p90": 0.062,
+   "p95": 0.092,
+   "share_gt_0.4pct": 0.0
+  },
+  "verdict": "判过",
+  "verdict_reason": "执行稳健: +2bar×0.6%/边仍正 (净均 +0.237%)"
+ }
+}
